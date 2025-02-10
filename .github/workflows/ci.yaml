@@ -1,0 +1,90 @@
+name: CI
+
+env:
+  PYTHON_VERSION: "3.12"
+  ENABLE_UPLOAD: "false"
+
+"on":
+  push:
+    branches-ignore:
+      # These should always correspond to pull requests, so ignore them for
+      # the push trigger and let them be triggered by the pull_request
+      # trigger, avoiding running the workflow twice. This is a minor
+      # optimization so there's no need to ensure this is comprehensive.
+      - "dependabot/**"
+      - "renovate/**"
+      - "tickets/**"
+      - "u/**"
+    tags:
+      - "*"
+  pull_request: {}
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Run pre-commit hooks
+        uses: pre-commit/action@v3.0.1
+
+  linkcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tox
+        uses: lsst-sqre/run-tox@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          tox-envs: "linkcheck"
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run tox
+        uses: lsst-sqre/run-tox@v1
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          tox-envs: "html"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: html
+          path: _build/html/
+          if-no-files-found: error
+
+  upload:
+    runs-on: ubuntu-latest
+    needs: [lint, build, linkcheck]
+    # Set to true to enable uploads
+    if: ${{ false }}
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: html
+          path: _build/html
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Upload to LSST the Docs
+        uses: lsst-sqre/ltd-upload@v1
+        with:
+          project: "dp1"
+          dir: "_build/html"
+          username: ${{ secrets.LTD_USERNAME }}
+          password: ${{ secrets.LTD_PASSWORD }}
