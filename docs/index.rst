@@ -1,4 +1,3 @@
-:html_theme.sidebar_secondary.remove:
 :og:description: The Data Preview 1 dataset is based on images from the Vera C. Rubin Observatory's Commissioning Camera.
 
 ##############################################
