@@ -1,0 +1,25 @@
+[project]
+title = "DP1"
+copyright = "2025 Association of Universities for Research in Astronomy, Inc. (AURA)"
+author = "Vera C. Rubin Observatory"
+base_url = "https://dp1.lsst.io"
+github_url = "https://github.com/lsst/dp1_lsst_io"
+github_default_branch = "main"
+version = "Current"
+
+[sphinx]
+rst_epilog_file = "rst_epilog.rst"
+exclude = [
+    "_static/README.md",
+]
+
+[sphinx.linkcheck]
+ignore = [
+    "https://arxiv.org/pdf/.*#",
+    "http://localhost",
+    "https://minorplanetcenter.net//iau/info/MPOrbitFormat.html",
+    "https://www.minorplanetcenter.net/iau/MPCORB.html",
+    "https://minorplanetcenter.net",
+    "https://docushare.lsstcorp.org/docushare/dsweb/Get/LSE-163/LSE-163_DataProductsDefinitionDocumentDPDD.pdf",
+    "http://ls.st/doc-29545"
+]
