@@ -6,6 +6,8 @@ Overview of Data Preview 1
 
 General information about the observations that comprise the DP1 dataset.
 
+*Add links to browsable, color HiPS maps when available.*
+
 .. _overview-comcam:
 
 Commissioning Camera (ComCam)
