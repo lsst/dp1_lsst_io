@@ -36,7 +36,7 @@ Source table
 *Five-sigma detections in all visit images ...*
 
 
-.. _images-forcedsource:
+.. _catalogs-forcedsource:
 
 ForcedSource table
 ==================
