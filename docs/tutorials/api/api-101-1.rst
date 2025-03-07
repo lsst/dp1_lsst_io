@@ -51,7 +51,7 @@ Introduction
 In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
 Follow the process to log in.
 
-**1.2. Select the X tab in the Portal.** 
+**1.2. Select the X tab in the Portal.**
 *Explanation of the setup, reference to Figure 1.*
 
 .. figure:: images/template_figure.png
