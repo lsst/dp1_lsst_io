@@ -26,7 +26,7 @@ Deblending
 *Scarlet etc.*
 
 
-.. _detection-measurement
+.. _detection-measurement:
 
 Measurement
 ===========
@@ -40,7 +40,7 @@ Measurement
 *Footprints*
 
 
-.. _detection-forcephot
+.. _detection-forcephot:
 
 Forced photometry
 =================
