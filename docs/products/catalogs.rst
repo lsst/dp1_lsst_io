@@ -35,6 +35,12 @@ Source table
 
 *Five-sigma detections in all visit images ...*
 
+.. _catalogs-visit:
+
+Visit table
+===========
+
+*Catalog of visits ...*
 
 .. _catalogs-forcedsource:
 
