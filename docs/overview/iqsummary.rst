@@ -14,6 +14,7 @@ Image quality (PSF FWHM)
 
 *Could show survey property maps for the seven fields.*
 
+Visit `SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`_ for more info about DP1 image quality.
 
 .. _iqsummary-depth:
 
