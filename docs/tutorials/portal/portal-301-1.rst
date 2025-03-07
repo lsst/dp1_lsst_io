@@ -51,7 +51,7 @@ Introduction
 In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
 Follow the process to log in.
 
-**1.2. Select the X tab in the Portal.** 
+**1.2. Select the X tab in the Portal.**
 *Explanation of the setup, reference to Figure 1.*
 
 .. figure:: images/template_figure.png
@@ -64,10 +64,10 @@ Follow the process to log in.
 **1.3. Execute the ADQL query.**
 *Explanation of the query, reference to the code block below.*
 
-.. code-block:: SQL 
-    
-    SELECT g_H, r_H, i_H, z_H 
-    FROM dp03_catalogs_10yr.SSObject 
+.. code-block:: SQL
+
+    SELECT g_H, r_H, i_H, z_H
+    FROM dp03_catalogs_10yr.SSObject
     WHERE ssObjectId > 8660000000000000000
 
 
@@ -83,7 +83,7 @@ Follow the process to log in.
 
 .. _portal-301-1-ex:
 
-X. Exercises for the learner 
+X. Exercises for the learner
 ============================
 
 **X.1. A clear, achievable task.**
