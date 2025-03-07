@@ -21,6 +21,7 @@ Key numbers
 
 *Add read noise, gain, detector size (on the sky), platescale, etc. for quick reference.*
 
+Visit Rubin Observatory's `Key Numbers <https://rubinobservatory.org/for-scientists/rubin-101/key-numbers>`_ page for further information.
 
 .. _comcam-knownissues:
 
