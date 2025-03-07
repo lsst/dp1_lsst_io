@@ -55,7 +55,7 @@ Follow the process to log in.
 *Explanation of the setup, reference to Figure 1.*
 
 .. figure:: images/template_figure.png
-    :name: template_figure
+    :name: template_figure_portal_301_1
     :alt: Alt-text goes here.
 
     Figure 1: Figure caption goes here.
