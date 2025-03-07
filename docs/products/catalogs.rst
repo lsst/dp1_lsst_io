@@ -42,6 +42,13 @@ Visit table
 
 *Catalog of visits ...*
 
+.. _catalogs-ccdvisit:
+
+ccdVisit table
+==============
+
+*Per-CCD catalog of visits ...*
+
 .. _catalogs-forcedsource:
 
 ForcedSource table
