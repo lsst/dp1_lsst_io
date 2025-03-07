@@ -64,10 +64,10 @@ Follow the process to log in.
 **1.3. Execute the ADQL query.**
 *Explanation of the query, reference to the code block below.*
 
-.. code-block:: SQL 
-    
-    SELECT g_H, r_H, i_H, z_H 
-    FROM dp03_catalogs_10yr.SSObject 
+.. code-block:: SQL
+
+    SELECT g_H, r_H, i_H, z_H
+    FROM dp03_catalogs_10yr.SSObject
     WHERE ssObjectId > 8660000000000000000
 
 
