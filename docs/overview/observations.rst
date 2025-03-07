@@ -40,7 +40,7 @@ Dates and filters
 
 *Table of number of exposures/filter and nights/filter, for each field.*
 
-
+Visit `SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`_ for more about DP1 fields, filters, and cadence.
 
 .. _observations-seeing:
 
