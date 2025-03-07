@@ -83,7 +83,7 @@ Follow the process to log in.
 
 .. _api-101-1-ex:
 
-X. Exercises for the learner 
+X. Exercises for the learner
 ============================
 
 **X.1. A clear, achievable task.**
