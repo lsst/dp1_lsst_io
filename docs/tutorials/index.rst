@@ -11,7 +11,7 @@ Tutorials demonstrating how to access and analyze data via the Rubin Science Pla
 Get started
 ===========
 
-To set up a new account in the RSP, visit the `RSP documentation <https://rsp.lsst.io/>`_.
+To set up a new account in the RSP, visit the `RSP documentation <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
 
 To learn more about the RSP's functionality, see the `RSP user guides <https://rsp.lsst.io/guides/index.html>`_ or work through any of the tutorials below.
 
