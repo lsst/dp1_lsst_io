@@ -15,7 +15,7 @@ Field centers
    :widths: 1 1
    :header-rows: 1
 
-   * - Field name 
+   * - Field name
      - RA, Dec (deg)
    * - 47 Tuc Globular Cluster
      - 6.02, -72.08
