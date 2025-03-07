@@ -27,7 +27,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
 -----------------------------
 
 104. Data access with the butler
--------------------------------
+--------------------------------
 
 105. Data (re)processing
 ------------------------
