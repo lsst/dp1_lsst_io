@@ -9,9 +9,7 @@ version = "Current"
 
 [sphinx]
 rst_epilog_file = "rst_epilog.rst"
-exclude = [
-    "_static/README.md",
-]
+exclude = []
 
 [sphinx.linkcheck]
 ignore = [
