@@ -44,7 +44,7 @@ Visit table
 
 .. _catalogs-ccdvisit:
 
-ccdVisit table
+CcdVisit table
 ==============
 
 *Per-CCD catalog of visits ...*
