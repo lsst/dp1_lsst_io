@@ -6,7 +6,7 @@ Object
 
 ``object``: *Detections in deep coadd images.*
 
-DOI: ``doi_object``
+DOI: |doi_object|
 
 
 Dimensions and storage class

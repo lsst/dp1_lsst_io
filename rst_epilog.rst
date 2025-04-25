@@ -3,18 +3,18 @@
    add common substitutions and links. See
    https://documenteer.lsst.io/guides/rst-epilog.html
 
-.. doi_raw: https://doi.org/12.3456/78901234.5678.9012345
+.. |doi_raw| replace:: ``https://doi.org/12.3456/78901234.5678.9012345``
 
-.. doi_visit_image: https://doi.org/12.3456/78901234.5678.9012346
+.. |doi_visit_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
 
-.. doi_deep_coadd: https://doi.org/12.3456/78901234.5678.9012347
+.. |doi_deep_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
 
-.. doi_visit_table: https://doi.org/12.3456/78901234.5678.9012348
+.. |doi_visit_table| replace:: ``https://doi.org/12.3456/78901234.5678.9012348``
 
-.. doi_source: https://doi.org/12.3456/78901234.5678.9012349
+.. |doi_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
 
-.. doi_object: https://doi.org/12.3456/78901234.5678.9012350
+.. |doi_object| replace:: ``https://doi.org/12.3456/78901234.5678.9012350``
 
-.. doi_spmaps: https://doi.org/12.3456/78901234.5678.9012351
+.. |doi_spmaps| replace:: ``https://doi.org/12.3456/78901234.5678.9012351``
 
-.. doi_calibrations: https://doi.org/12.3456/78901234.5678.9012352
+.. |doi_calibrations| replace:: ``https://doi.org/12.3456/78901234.5678.9012352``

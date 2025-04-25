@@ -6,7 +6,7 @@ Calibrations
 
 ``calibrations``: Calibration data products.
 
-DOI: ``doi_calibrations``
+DOI: |doi_calibrations|
 
 
 Dimensions and storage class

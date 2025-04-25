@@ -6,7 +6,7 @@ Raw
 
 ``raw``: *Unprocessed image from camera readout.*
 
-DOI: ``doi_raw``
+DOI: |doi_raw|
 
 
 Dimensions and storage class

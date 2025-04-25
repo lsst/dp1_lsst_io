@@ -6,7 +6,7 @@ Visit table
 
 ``visit_table``: *Visit metadata, observation dates and filters.*
 
-DOI: ``doi_visit_table``
+DOI: |doi_visit_table|
 
 
 Dimensions and storage class

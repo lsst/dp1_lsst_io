@@ -6,7 +6,7 @@ Source
 
 ``source``: *Detections in processed visit images.*
 
-DOI: ``doi_source``
+DOI: |doi_source|
 
 
 Dimensions and storage class

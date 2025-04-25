@@ -6,7 +6,7 @@ Survey property maps
 
 ``survey_property_maps``: Survey-level healsparse property maps.
 
-DOI: ``doi_spmaps``
+DOI: |doi_spmaps|
 
 
 Dimensions and storage class

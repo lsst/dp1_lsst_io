@@ -6,7 +6,7 @@ Visit image
 
 ``visit_image``: *Individual processed and calibrated sky image obtained in one filter.*
 
-DOI: ``doi_visit_image``
+DOI: |doi_visit_image|
 
 
 Dimensions and storage class
