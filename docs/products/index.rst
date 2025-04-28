@@ -6,8 +6,6 @@ Data products
 
 Descriptions and schema for the science-ready data products.
 
-.. _products-images:
-
 Images
 ======
 
@@ -15,10 +13,8 @@ Images
     :maxdepth: 2
     :glob:
 
-    images
+    images/index
 
-
-.. _products-catalogs:
 
 Catalogs
 ========
@@ -27,11 +23,9 @@ Catalogs
     :maxdepth: 2
     :glob:
 
-    catalogs
+    catalogs/index
 
 
-
-.. _products-spmaps:
 
 Survey property maps
 ====================
@@ -40,4 +34,17 @@ Survey property maps
     :maxdepth: 2
     :glob:
 
-    spmaps
+    spmaps/index
+
+
+Calibrations
+============
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    calibrations/index
+
+
+
