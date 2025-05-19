@@ -6,9 +6,6 @@ Data products
 
 Descriptions and schema for the science-ready data products.
 
-Familiar with Data Preview 0?
-Review this list of :doc:`/products/name_changes`.
-
 
 Images
 ======
@@ -50,5 +47,14 @@ Calibrations
 
     calibrations/index
 
+
+Auxiliary information
+=====================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    name_changes
 
 
