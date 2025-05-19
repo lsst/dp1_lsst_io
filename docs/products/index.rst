@@ -6,11 +6,8 @@ Data products
 
 Descriptions and schema for the science-ready data products.
 
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    name_changes
+Familiar with Data Preview 0?
+Review this list of :ref:`products_name_changes`.
 
 
 Images
