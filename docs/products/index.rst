@@ -7,7 +7,7 @@ Data products
 Descriptions and schema for the science-ready data products.
 
 Familiar with Data Preview 0?
-Review this list of :ref:`products_name_changes`.
+Review this list of :doc:`/docs/products/name_changes`.
 
 
 Images
