@@ -6,6 +6,7 @@ Data products
 
 Descriptions and schema for the science-ready data products.
 
+
 Images
 ======
 
@@ -46,5 +47,14 @@ Calibrations
 
     calibrations/index
 
+
+Auxiliary information
+=====================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    name_changes
 
 
