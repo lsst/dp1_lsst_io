@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** *Very brief description of tutorial's learning objective.*
+**Learning objective:** Learn to navigate the Portal's user interface (UI).
 
 **LSST data products:** *List the catalogs and images used.*
 
