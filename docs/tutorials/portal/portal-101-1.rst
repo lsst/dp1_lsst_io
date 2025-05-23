@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Learn to navigate the Portal's user interface (UI).
+**Learning objective:** This tutorial demonstrates how to navigate the Portal's user interface (UI), and provides a tour of the main components.
 
 **LSST data products:** *List the catalogs and images used.*
 
@@ -18,34 +18,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-*How-to tutorials should NOT need sections, and have a minimal number of very concise steps. How-tos should NOT have an introduction as this is covered by the learning objective above.*
-
-*Like the notebook template, italicized text should be removed or replaced.*
-
-
-.. _portal-101-1-intro:
-
-Introduction
-============
-
-*Provide a light narrative about this tutorial, e.g., "This tutorial will demonstrate how to...".*
-
-*Cite or link to any external information, documentation, or papers.*
-
-*Describe key scientific concepts.*
-
-**Related tutorials:**
-*If applicable, mention other relevant tutorials by name but do not link to them.*
-*Tutorials evolve continuously, there is no linkchecker for the notebook repo, and tutorial hotlinks will go stale quickly.*
-*It is not necessary to mention the preceeding/subsequent tutorials in the same series as this one - those are trivial for the user to find.*
-*But do use this section to mention related tutorials in other series.*
-
-
 
 .. _portal-101-1-S1:
 
-1. The first section
-====================
+1. Open the Portal Aspect on the RSP.
+=====================================
 
 **1.1. Log in to the Portal Aspect of the Rubin Science Platform.**
 In a browser, go to the URL `data.lsst.cloud <https://data.lsst.cloud>`_ and select the Portal Aspect.
