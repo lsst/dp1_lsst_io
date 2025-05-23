@@ -11,8 +11,8 @@ Portal tutorials
 
 Short tutorials with a learning objective of how to use a single RSP function or tool.
 
-101. Portal User Interface (UI)
--------------------------------
+101. User Interface (UI)
+------------------------
 
 .. toctree::
     :titlesonly:
@@ -21,20 +21,17 @@ Short tutorials with a learning objective of how to use a single RSP function or
     portal/portal-101-1.rst
 
 
-102. Portal ADQL interface
---------------------------
+102. Queries with the UI
+------------------------
 
-103. Portal results interface
------------------------------
+103. Queries with ADQL
+----------------------
 
-104. Portal results - table data
---------------------------------
+104. Tabular data results interface
+-----------------------------------
 
-105. Portal results - plotted data
-----------------------------------
-
-10X. Portal results - image data
---------------------------------
+105. Image data results interface
+---------------------------------
 
 106. User-uploaded tables
 -------------------------
