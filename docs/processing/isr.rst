@@ -15,18 +15,3 @@ Figure 1 illustrates the model of detector components and their impact on the si
     Figure 1: The model of the detector and readout board (REB) components, labeled with the effects that they impart on signal.
 
 The ISR processing pipeline for DP1 performs: dither- ing, serial overscan subtraction, saturation masking, gain normalization, crosstalk correction, parallel over- scan subtraction, linearity correction, serial charge transfer inefficiency (CTI) correction, image assembly, bias subtraction, dark subtraction, brighter-fatter cor- rection, defect masking and interpolation, variance plan construction, and flat fielding.
-
-.. _isr-tbd:
-
-To be determined
-================
-
-*Subsections by signature?*
-
-
-.. _isr-tbd2:
-
-To be determined2
-=================
-
-*Subsections by signature?*
