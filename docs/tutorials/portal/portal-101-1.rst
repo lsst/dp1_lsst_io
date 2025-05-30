@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** *yyyy-mm-dd*
+**Last verified to run:** 2025-05-30
 
 **Learning objective:** This tutorial demonstrates how to navigate the Portal's user interface (UI), and provides a tour of the main components.
 
-**LSST data products:** *List the catalogs and images used.*
+**LSST data products:** dp0.2 catalogs
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
