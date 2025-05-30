@@ -37,7 +37,7 @@ On the RSP landing page (Figure 1), if "Log in" appears at upper right instead o
 **3. Enter the Portal.**
 On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
-.. figure:: /images/portal-101-1-2.png
+.. figure:: images/portal-101-1-2.png
     :name: portal-howto-nav-2
     :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
 
@@ -55,7 +55,7 @@ Dismiss the window by clicking on the OK button or on the X in its upper right c
 **6. Open the sidebar menu.**
 On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
 
-.. figure:: /images/portal-101-1-3.png
+.. figure:: images/portal-101-1-3.png
     :name: portal-howto-nav-3
     :alt: The sidebar menu of the Portal Aspect, showing options in addition to the tabs.
     :width: 300
@@ -73,7 +73,7 @@ On the Portal landing page (Figure 2) click on the tab labeled DP0.2 Catalogs.
 **9. Mouse-over for pop-up notes.**
 In the Portal UI (Figure 4) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
 
-.. figure:: /images/portal-101-1-4.png
+.. figure:: images/portal-101-1-4.png
     :name: portal-howto-nav-4
     :alt: The graphical user interface for the Portal, offering drop-down menus to select catalogs and tables, entry fields for temporal and spatial constraints, and an interative view of the selected table schema.
 
@@ -91,7 +91,7 @@ In the Portal UI (Figure 4) review the 8 main components labeled A through H, wh
 * G: Toggle to switch between this graphical UI and the alternative ADQL UI.
 * H: Button to execute the query; to apply the search constraints and retrieve data into the results tab.
 
-.. figure:: /images/portal-101-1-5.png
+.. figure:: images/portal-101-1-5.png
     :name: portal-howto-nav-5
     :alt: The schema interface, showing how to select columns to include in the results, and how to place constraints on column values.
 
