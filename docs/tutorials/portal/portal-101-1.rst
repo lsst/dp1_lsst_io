@@ -24,8 +24,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **1. Go to the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-.. figure:: /_static/portal-howto-nav-1.png
-    :name: portal-howto-nav-1
+.. figure:: /portal-101-1-1.png
+    :name: portal-101-1-1
     :alt: The main landing page of the Rubin Science Platform, showing log in at upper right and three panels, one for each aspect: the Portal the Notebooks and the API.
 
     Figure 1: The main landing page of the Rubin Science Platform.
