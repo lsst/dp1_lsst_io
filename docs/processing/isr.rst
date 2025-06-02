@@ -17,4 +17,4 @@ After the image has integrated, the charge is shifted to the serial register and
 
     Figure 1: The model of the detector and readout board (REB) components, labeled with the effects that they impart on signal.
 
-The ISR processing pipeline for DP1 performs: dithering, serial overscan subtraction, saturation masking, gain normalization, crosstalk correction, parallel overscan subtraction, linearity correction, serial charge transfer inefficiency (CTI) correction, image assembly, bias subtraction, dark subtraction, brighter-fatter correction, defect masking and interpolation, variance plan construction, and flat fielding.
+The ISR processing pipeline for DP1 performs: dithering, serial overscan subtraction, saturation masking, gain normalization, crosstalk correction, parallel overscan subtraction, linearity correction, serial charge transfer inefficiency (CTI) correction, image assembly, bias subtraction, dark subtraction, brighter-fatter correction, defect masking and interpolation, variance plane construction, and flat fielding.
