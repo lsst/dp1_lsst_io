@@ -6,6 +6,14 @@ Image calibration
 
 On each post-ISR image, stars are detected to a 5-sigma threshold. These detections are then associated to identify a consistent set of isolated stars with multiple observations suitable for use in PSF modeling, photometric calibration, and astrometric calibration. An initial astrometric and photometric solution are fit using reference catalogs alone, and an initial PSF model is fit using PSFEx (E. Bertin 2011)) to serve as inputs to the calibration. These initial solutions are replaced as follows.
 
+.. _calibration-photmetric:
+
+Photometric
+===========
+
+Both photometric and astrometric calibration make use of a custom reference catalog referred to as "`the Monster <https://dmtn-277.lsst.io/>`_". The Monster is a whole-sky catalog built specifically for LSST, as no prior reference catalog had both the depth and coverage needed to calibrate LSST data. The Monster combines data from multiple previous reference catalogs, including Dark Energy Survey, Pan-STARRS, and Gaia, and contains only stellar sources. Photometric calibration uses the Forward Global Calibration Method (FGCM; Burke et al. 2018).
+
+
 .. _calibration-astrometric:
 
 Astrometric
@@ -18,14 +26,6 @@ The per-detector model is intended to capture quasi-static characteristics of th
 The per-visit model attempts to account for time-varying effects on the path of a photon from both atmospheric sources and those dependent on the telescope position. This model is also a polynomial mapping, in this case a degree 6 two-dimensional polynomial. Correction for differential chromatic refraction was not done for DP1, but will be included in LSSTCam processing during Operations. Future processing will also likely include a Gaussian Processes fit to better account for atmospheric turbulence, as was demonstrated in Fortino et al. (2021) and Léget et al. (2021).
 
 The last component of the astrometric calibration is the position of the isolated point sources included in the fit. The positions consist of five parameters: position on the sky, proper motion, and parallax. The reference epoch for the fit positions is 2024.9.
-
-.. _calibration-photmetric:
-
-Photometric
-===========
-
-*Briefly how the visit images are photometrically calibrated.*
-
 
 .. _calibration_psf:
 
