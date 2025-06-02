@@ -4,14 +4,14 @@
 Image calibration
 #################
 
-On each post-ISR image, stars are detected to a 5-sigma threshold. These detections are then associated to identify a consistent set of isolated stars with multiple observations suitable for use in PSF modeling, photometric calibration, and astrometric calibration. An initial astrometric and photometric solution are fit using reference catalogs alone, and an initial PSF model is fit using PSFEx (E. Bertin 2011)) to serve as inputs to the calibration. These initial solutions are replaced as follows.
+On each post-ISR image, stars are detected to a 5-sigma threshold. These detections are then associated to identify a consistent set of isolated stars with multiple observations suitable for use in PSF modeling, photometric calibration, and astrometric calibration. An initial astrometric and photometric solution are fit using reference catalogs alone, and an initial PSF model is fit using PSFEx (`Bertin 2011 <https://ui.adsabs.harvard.edu/abs/2011ASPC..442..435B/abstract>`_) to serve as inputs to the calibration. These initial solutions are replaced as follows.
 
 .. _calibration-photmetric:
 
 Photometric
 ===========
 
-Both photometric and astrometric calibration make use of a custom reference catalog referred to as "`the Monster <https://dmtn-277.lsst.io/>`_". The Monster is a whole-sky catalog built specifically for LSST, as no prior reference catalog had both the depth and coverage needed to calibrate LSST data. The Monster combines data from multiple previous reference catalogs, including Dark Energy Survey, Pan-STARRS, and Gaia, and contains only stellar sources. Photometric calibration uses the Forward Global Calibration Method (FGCM; Burke et al. 2018).
+Both photometric and astrometric calibration make use of a custom reference catalog referred to as "`the Monster <https://dmtn-277.lsst.io/>`_". The Monster is a whole-sky catalog built specifically for LSST, as no prior reference catalog had both the depth and coverage needed to calibrate LSST data. The Monster combines data from multiple previous reference catalogs, including Dark Energy Survey, Pan-STARRS, and Gaia, and contains only stellar sources. Photometric calibration uses the Forward Global Calibration Method (FGCM; `Burke et al. 2018 <https://ui.adsabs.harvard.edu/abs/2018AJ....155...41B/abstract>`_).
 
 
 .. _calibration-astrometric:
