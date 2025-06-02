@@ -4,11 +4,7 @@
 Image calibration
 #################
 
-*High-level descriptions of image calibration; start wherever ISR leaves off.*
-
-*Link to relevant technical documentation or publications.*
-
-*A nice flow chart would be a good addition here (or link to it).*
+On each post-ISR image, stars are detected to a 5-sigma threshold. These detections are then associated to identify a consistent set of isolated stars with multiple observations suitable for use in PSF modeling, photometric calibration, and astrometric calibration. An initial astrometric and photometric solution are fit using reference catalogs alone, and an initial PSF model is fit using PSFEx (E. Bertin 2011)) to serve as inputs to the calibration. These initial solutions are replaced as follows.
 
 .. _calibration-astrometric:
 
