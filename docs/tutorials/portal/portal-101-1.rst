@@ -85,7 +85,7 @@ In the Portal UI (Figure 4) review the 8 main components labeled A through H, wh
 * A: Drop-down menu of the collections available. The DP0.2 catalogs (``dp02_dc2_catalogs``) are selected by default.
 * B: Drop-down menu of the tables available for the selected catalog. The ``Object`` table is selected by default.
 * C: Schema interface to apply column constraints on, and select rows to be returned from the selected table.
-* D: Entry fields for spatial constraints to be applied to the selected table (e.g., cone or polygon areas).
+* D: Entry fields for spatial constraints to be applied to the selected table (e.g., coordinates, cone or polygon areas).
 * E: Entry field to set the maximum number of rows to return from the selected table.
 * F: Button to convert the search constraints set with C, D, and E into an ADQL statement.
 * G: Toggle to switch between this graphical UI and the alternative ADQL UI.
@@ -95,7 +95,7 @@ In the Portal UI (Figure 4) review the 8 main components labeled A through H, wh
     :name: portal-101-1-5
     :alt: The schema interface, showing how to select columns to include in the results, and how to place constraints on column values.
 
-    Figure 5: The schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
+    Figure 5: The example schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
 
 
 **11. Review the schema interface components.**
