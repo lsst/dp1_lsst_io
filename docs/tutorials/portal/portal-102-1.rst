@@ -1,8 +1,8 @@
-.. _portal-101-1:
+.. _portal-102-1:
 
-##############################################
-101.1. How to navigate the UI (user interface)
-##############################################
+########################################
+102.1. How to use the Portal Job Monitor
+########################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,16 +10,15 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-05-30
 
-**Learning objective:** This tutorial demonstrates how to navigate the Portal's user interface (UI), and provides a tour of the main components.
-
-**LSST data products:** dp0.2 catalogs
+**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Asoect of the Rubin Science Platform.
+**LSST data products:** dp1 catalogs
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 
-.. _portal-101-1-S1:
+.. _portal-102-1-S1:
 
 **1. Go to the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
