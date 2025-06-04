@@ -1,7 +1,7 @@
-.. _portal-102-1:
+.. _portal-102-4:
 
 ########################################
-102.1. How to use the Portal Job Monitor
+102.4. How to use the Portal Job Monitor
 ########################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-05-30
 
-**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Asoect of the Rubin Science Platform.
+**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform.
 **LSST data products:** dp1 catalogs
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -23,8 +23,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **1. Go to the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-.. figure:: images/portal-101-1-1.png
-    :name: portal-101-1-1
+.. figure:: images/portal-102-4-1.png
+    :name: portal-102-4-1
     :alt: The main landing page of the Rubin Science Platform, showing log in at upper right and three panels, one for each aspect: the Portal the Notebooks and the API.
 
     Figure 1: The main landing page of the Rubin Science Platform.
@@ -36,8 +36,8 @@ On the RSP landing page (Figure 1), if "Log in" appears at upper right instead o
 **3. Enter the Portal.**
 On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
-.. figure:: images/portal-101-1-2.png
-    :name: portal-101-1-2
+.. figure:: images/portal-102-4-2.png
+    :name: portal-102-4-2
     :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
 
     Figure 2: The main landing page of the Portal Aspect.
