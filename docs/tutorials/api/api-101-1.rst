@@ -85,5 +85,5 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
 
 **7. Explore.**
 At this stage, the Rubin DP1 data set can be explored via TOPCAT.  For an example, see the 
-:doc:`/tutorials-examples/api-topcat-beginner`.
+:doc:`api-101-2`.
 
