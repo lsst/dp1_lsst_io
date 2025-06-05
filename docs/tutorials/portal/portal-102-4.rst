@@ -1,24 +1,26 @@
 .. _portal-102-4:
 
-########################################
-102.4. How to use the Portal Job Monitor
-########################################
+##################################################################################################################
+102.4. How to use the Portal Job Monitor to determine the job ID and its status, and access the user query history
+##################################################################################################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-05-30
+**Last verified to run:** 2025-06-03
 
-**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform.
-**LSST data products:** dp1 catalogs
+**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
+It permits 
+
+**LSST data products:** dp1 catalogs and images
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 
-.. _portal-102-1-S1:
+.. _portal-102-4-S1:
 
 **1. Go to the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
@@ -42,6 +44,15 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 
     Figure 2: The main landing page of the Portal Aspect.
 
+**4. Create a sample job.**
+For the purpose of this tutorial, create any query using the default UI - an example is given below.
+
+**5.  Example of a sample job.**
+Select the DP0.2 Catalogs tab.
+Select dp1_v29.DiaObject from the drop-down in the "Tables" tab.
+Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
+In the "output selection and constraints", check dec, ra, and g_psfFluxMean.  
+Enter ``>300`` as the constraint for g_psfFluxMean.
 
 **4. Review the layout.**
 On the Portal landing page (Figure 2) notice the icons and tabs across the top of the screen, and that the default selected tab of the landing page is labeled Results.
