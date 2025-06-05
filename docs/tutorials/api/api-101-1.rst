@@ -19,8 +19,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 
-Get started with TOPCAT
------------------------
+
 
 **1. Create an RSP access token.**  
 See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ 
