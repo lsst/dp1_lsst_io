@@ -18,10 +18,6 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-*How-to tutorials should NOT need sections, and have a minimal number of very concise steps. How-tos should NOT have an introduction as this is covered by the learning objective above.*
-
-*Like the notebook template, italicized text should be removed or replaced.*
-
 
 Get started with TOPCAT
 -----------------------
