@@ -8,4 +8,4 @@ How to cite Data Preview 1
 
 `References for LSSTComCam <https://lsstcomcam.lsst.io/>`_.
 
-References for individual dataset types: every type of image and catalog should be referenced by its DOI, as listed in their :ref:`Data products` pages.
+References for individual dataset types: every type of image and catalog should be referenced by its DOI, as listed in their :ref:`products` pages.
