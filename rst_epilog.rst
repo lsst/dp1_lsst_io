@@ -11,7 +11,7 @@
 
 .. |doi_visit_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
 
-.. |doi_template_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
+.. |doi_difference_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
 
 .. |doi_raw| replace:: ``https://doi.org/12.3456/78901234.5678.9012345``
 
