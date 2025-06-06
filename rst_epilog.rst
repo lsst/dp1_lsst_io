@@ -3,6 +3,8 @@
    add common substitutions and links. See
    https://documenteer.lsst.io/guides/rst-epilog.html
 
+.. |doi_comcam| replace:: `doi.org/10.71929/rubin/2561361 <https://doi.org/10.71929/rubin/2561361>`_
+
 .. |doi_raw| replace:: ``https://doi.org/12.3456/78901234.5678.9012345``
 
 .. |doi_visit_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
