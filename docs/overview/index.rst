@@ -50,3 +50,17 @@ Key verification and validation metrics, in brief.
 
     iqsummary
 
+
+
+.. _overview-citedp1:
+
+How to cite Data Preview 1
+==========================
+
+How to cite Rubin Observatory and its Data Preview 1.
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    citedp1
