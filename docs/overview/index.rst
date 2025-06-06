@@ -10,10 +10,10 @@ General information about the observations that comprise the DP1 dataset.
 
 .. _overview-comcam:
 
-Commissioning Camera (ComCam)
-=============================
+LSST Commissioning Camera (LSSTComCam)
+======================================
 
-All DP1 observations were obtained with the Commissioning Camera (ComCam).
+All DP1 observations were obtained with the LSST Commissioning Camera (LSSTComCam).
 
 .. toctree::
     :maxdepth: 2
@@ -27,7 +27,7 @@ All DP1 observations were obtained with the Commissioning Camera (ComCam).
 Observations
 ============
 
-The fields, filters, and dates of the ComCam observations included in DP1.
+The fields, filters, and dates of the observations included in DP1.
 
 .. toctree::
     :maxdepth: 2
@@ -50,3 +50,17 @@ Key verification and validation metrics, in brief.
 
     iqsummary
 
+
+
+.. _overview-citedp1:
+
+How to cite Data Preview 1
+==========================
+
+How to cite Rubin Observatory and its Data Preview 1.
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    citedp1

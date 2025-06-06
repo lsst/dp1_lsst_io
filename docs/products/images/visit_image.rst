@@ -8,6 +8,8 @@ Visit image
 
 DOI: |doi_visit_image|
 
+IVOA calibration level: 2
+
 
 Dimensions and storage class
 ----------------------------
@@ -15,14 +17,6 @@ Dimensions and storage class
 *butler dimensions for query and retrieval*
 
 *storage class / format / python type*
-
-
-Schema
-------
-
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
 
 
 Description

@@ -1,12 +1,14 @@
-.. _images-raw:
+.. _catalogs-ss-source:
 
-###
-Raw
-###
+#########
+SS source
+#########
 
-``raw``: *Unprocessed image from camera readout.*
+``ss_source``: *TBD.*
 
-DOI: |doi_raw|
+DOI: |doi_ss_source|
+
+TAP name: ``SSSource``
 
 
 Dimensions and storage class
@@ -30,16 +32,8 @@ Description
 
 *Longer paragraph description.*
 
-Pixel data
-^^^^^^^^^^
-
-Metadata
-^^^^^^^^
-
 Processing
 ^^^^^^^^^^
-
-*calibration level 1, 2, or 3*
 
 *brief description of processing stage that generates them*
 

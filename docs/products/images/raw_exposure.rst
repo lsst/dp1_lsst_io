@@ -1,14 +1,14 @@
-.. _catalogs-visit-table:
+.. _images-raw:
 
-#####
-Visit
-#####
+#############
+Raw exposures
+#############
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+``raw``: *Unprocessed image from camera readout.*
 
-DOI: |doi_visit_table|
+DOI: |doi_raw|
 
-TAP name: ``Visit``
+IVOA calibration level: 1
 
 
 Dimensions and storage class
@@ -19,21 +19,21 @@ Dimensions and storage class
 *storage class / format / python type*
 
 
-Schema
-------
-
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
-
-
 Description
 -----------
 
 *Longer paragraph description.*
 
+Pixel data
+^^^^^^^^^^
+
+Metadata
+^^^^^^^^
+
 Processing
 ^^^^^^^^^^
+
+*calibration level 1, 2, or 3*
 
 *brief description of processing stage that generates them*
 

@@ -4,7 +4,7 @@
 Observations
 ############
 
-ComCam was mounted on the Simonyi Survey Telescope for seven weeks in late 2024.
+The LSSTComCam was mounted on the Simonyi Survey Telescope for seven weeks in late 2024.
 
 .. _observations-fields:
 

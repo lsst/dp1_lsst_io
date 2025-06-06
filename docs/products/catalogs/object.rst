@@ -4,9 +4,11 @@
 Object
 ######
 
-``object``: *Detections in deep coadd images.*
+``object``: *Forced measurements in deep coadd images.*
 
 DOI: |doi_object|
+
+TAP name: ``Object``
 
 
 Dimensions and storage class

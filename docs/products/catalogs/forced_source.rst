@@ -1,14 +1,14 @@
-.. _catalogs-visit-table:
+.. _catalogs-forced-source:
 
-#####
-Visit
-#####
+#############
+Forced source
+#############
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+``object_forced_source``: *TBD*
 
-DOI: |doi_visit_table|
+DOI: |doi_forced_source|
 
-TAP name: ``Visit``
+TAP name: ``ForcedSource``
 
 
 Dimensions and storage class

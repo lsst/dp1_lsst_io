@@ -1,10 +1,12 @@
 .. _comcam:
 
-#############################
-Commissioning Camera (ComCam)
-#############################
+######################################
+LSST Commissioning Camera (LSSTComCam)
+######################################
 
-ComCam is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_, with only the central raft of 9 CCDs.
+DOI: |doi_comcam|
+
+LSSTComCam (`lsstcomcam.lsst.io <https://lsstcomcam.lsst.io/>_) is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_, with only the central raft of 9 CCDs.
 
 .. _comcam-focalplane:
 
@@ -22,6 +24,7 @@ Key numbers
 *Add read noise, gain, detector size (on the sky), platescale, etc. for quick reference.*
 
 Visit Rubin Observatory's `Key Numbers <https://rubinobservatory.org/for-scientists/rubin-101/key-numbers>`_ page for further information.
+
 
 .. _comcam-knownissues:
 
