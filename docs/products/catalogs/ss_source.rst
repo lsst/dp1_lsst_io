@@ -1,14 +1,14 @@
-.. _catalogs-visit-table:
+.. _catalogs-ss-source:
 
-#####
-Visit
-#####
+#########
+SS source
+#########
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+``ss_source``: *TBD.*
 
-DOI: |doi_visit_table|
+DOI: |doi_ss_source|
 
-TAP name: ``Visit``
+TAP name: ``SSSource``
 
 
 Dimensions and storage class

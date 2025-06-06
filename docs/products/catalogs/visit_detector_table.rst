@@ -1,14 +1,14 @@
-.. _catalogs-visit-table:
+.. _catalogs-visit-detector-table:
 
-#####
-Visit
-#####
+#########################
+Visit detector (CcdVisit)
+#########################
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+``visit_detector_table``: *Visit metadata, observation dates and filters.*
 
-DOI: |doi_visit_table|
+DOI: |doi_visit_detector_table|
 
-TAP name: ``Visit``
+TAP name: ``CcdVisit``
 
 
 Dimensions and storage class

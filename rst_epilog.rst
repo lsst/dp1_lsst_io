@@ -7,7 +7,7 @@
 
 .. |doi_deep_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
 
-.. |doi_template_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
+.. |doi_template_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
 
 .. |doi_visit_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
 
@@ -17,9 +17,25 @@
 
 .. |doi_visit_table| replace:: ``https://doi.org/12.3456/78901234.5678.9012348``
 
-.. |doi_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+.. |doi_visit_detector_table| replace:: ``https://doi.org/12.3456/78901234.5678.9012348``
 
 .. |doi_object| replace:: ``https://doi.org/12.3456/78901234.5678.9012350``
+
+.. |doi_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+
+.. |doi_forced_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+
+.. |doi_dia_object| replace:: ``https://doi.org/12.3456/78901234.5678.9012350``
+
+.. |doi_dia_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+
+.. |dia_object_forced_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+
+.. |doi_ss_object| replace:: ``https://doi.org/12.3456/78901234.5678.9012350``
+
+.. |doi_ss_source| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
+
+.. |doi_mpcorb| replace:: ``https://doi.org/12.3456/78901234.5678.9012349``
 
 .. |doi_spmaps| replace:: ``https://doi.org/12.3456/78901234.5678.9012351``
 

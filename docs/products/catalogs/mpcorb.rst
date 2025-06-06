@@ -1,22 +1,14 @@
-.. _catalogs-visit-table:
+.. _catalogs-mpcorb:
 
-#####
-Visit
-#####
+######
+MPCORB
+######
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+Table not available via the butler.
 
-DOI: |doi_visit_table|
+DOI: |doi_mpcorb|
 
-TAP name: ``Visit``
-
-
-Dimensions and storage class
-----------------------------
-
-*butler dimensions for query and retrieval*
-
-*storage class / format / python type*
+TAP name: ``MPCORB``
 
 
 Schema

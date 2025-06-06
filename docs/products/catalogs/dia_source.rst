@@ -1,14 +1,14 @@
-.. _catalogs-visit-table:
+.. _catalogs-dia-source:
 
-#####
-Visit
-#####
+##########
+DIA source
+##########
 
-``visit_table``: *Visit metadata, observation dates and filters.*
+``dia_source``: *TBD.*
 
-DOI: |doi_visit_table|
+DOI: |doi_dia_source|
 
-TAP name: ``Visit``
+TAP name: ``DiaSource``
 
 
 Dimensions and storage class
