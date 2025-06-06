@@ -17,14 +17,6 @@ Dimensions and storage class
 *storage class / format / python type*
 
 
-Schema
-------
-
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
-
-
 Description
 -----------
 

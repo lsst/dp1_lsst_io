@@ -5,11 +5,15 @@
 
 .. |doi_comcam| replace:: ``https://doi.org/10.71929/rubin/2561361``
 
-.. |doi_raw| replace:: ``https://doi.org/12.3456/78901234.5678.9012345``
+.. |doi_deep_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
+
+.. |doi_template_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
 
 .. |doi_visit_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
 
-.. |doi_deep_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
+.. |doi_template_image| replace:: ``https://doi.org/12.3456/78901234.5678.9012346``
+
+.. |doi_raw| replace:: ``https://doi.org/12.3456/78901234.5678.9012345``
 
 .. |doi_visit_table| replace:: ``https://doi.org/12.3456/78901234.5678.9012348``
 
