@@ -1,12 +1,14 @@
 .. _images-raw:
 
-###
-Raw
-###
+#############
+Raw exposures
+#############
 
 ``raw``: *Unprocessed image from camera readout.*
 
 DOI: |doi_raw|
+
+IVOA calibration level: 1
 
 
 Dimensions and storage class

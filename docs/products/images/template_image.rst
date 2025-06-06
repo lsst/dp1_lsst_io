@@ -8,6 +8,7 @@ Template image
 
 DOI: |doi_template_image|
 
+IVOA calibration level: 3
 
 Dimensions and storage class
 ----------------------------

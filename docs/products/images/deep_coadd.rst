@@ -8,6 +8,7 @@ Deep coadd
 
 DOI: |doi_deep_coadd|
 
+IVOA calibration level: 3
 
 Dimensions and storage class
 ----------------------------

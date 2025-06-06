@@ -8,6 +8,7 @@ Difference image
 
 DOI: |doi_difference_image|
 
+IVOA calibration level: 3
 
 Dimensions and storage class
 ----------------------------

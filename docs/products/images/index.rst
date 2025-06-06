@@ -4,13 +4,14 @@
 Images
 ######
 
-Two-dimensional images of the sky.
+Images of the sky in the six LSST filters with a variety of calibration levels.
 
-Coadded images
-==============
+
+Deep coadds
+===========
 
 Combinations of multiple calibrated images of the same region of the sky to achieve
-greater sensitivity (i.e., “depth”) or a sharper image (i.e., by combining the best-seeing images).
+greater depth (to detect fainter objects).
 
 .. toctree::
     :maxdepth: 1
@@ -18,8 +19,6 @@ greater sensitivity (i.e., “depth”) or a sharper image (i.e., by combining t
     :glob:
 
     deep_coadd
-    template_image
-
 
 
 Visit images
@@ -33,6 +32,19 @@ Processed and calibrated images from individual vists (single observations).
     :glob:
 
     visit_image
+
+
+Template images
+===============
+
+Coadded images generated specifically to be used as templates in difference image analysis.
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+    :glob:
+
+    template_image
 
 
 Difference images

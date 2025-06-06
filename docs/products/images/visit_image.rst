@@ -8,6 +8,8 @@ Visit image
 
 DOI: |doi_visit_image|
 
+IVOA calibration level: 2
+
 
 Dimensions and storage class
 ----------------------------
