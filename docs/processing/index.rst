@@ -17,7 +17,7 @@ Instrument signature removal
     :maxdepth: 2
     :glob:
 
-    isr
+    isr/index
 
 
 .. _processing-calibration:
@@ -29,7 +29,7 @@ Calibration
     :maxdepth: 2
     :glob:
 
-    calibration
+    calibration/index
 
 
 .. _processing-coaddition:
@@ -41,7 +41,7 @@ Coaddition
     :maxdepth: 2
     :glob:
 
-    coaddition
+    coaddition/index
 
 
 .. _processing-detection:
@@ -53,8 +53,7 @@ Source detection
     :maxdepth: 2
     :glob:
 
-    detection
-
+    detection/index
 
 
 .. _processing-dia:
@@ -66,4 +65,17 @@ Difference image analysis
     :maxdepth: 2
     :glob:
 
-    dia
+    dia/index
+
+
+.. _processing-moving:
+
+Moving objects processing
+=========================
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    moving/index
+
