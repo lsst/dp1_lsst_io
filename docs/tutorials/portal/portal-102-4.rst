@@ -65,10 +65,28 @@ Click on the "funnel" on the uper left side of the table to restrict the table t
 **6. Execute the search.**
 Click "Search" on the lower left.
 
-The result of the search will be an image on the upper left, and a table of observations corresponding to your search on the bottom.  
+The result of the search will be an image on the upper left, and a table of observations corresponding to your search on the bottom.
+
+.. figure:: images/portal-102-4-4.png
+    :name: portal-102-4-4
+    :alt: The screenshot with the results of your sample search.
+
+    Figure 4: The screenshot with the results of your sample search.
 
 **7.  Examine the job monitor.**
 Click on the "Job Monitor" tab on the top.
 The job monitor will have all jobs submitted by you (created within the retention period).
 The jobs listed are in the chronological order (most recent first).
+You can return to any of those jobs by clicking the line corresponding to the particular job.
+
+.. figure:: images/portal-102-4-5.png
+    :name: portal-102-4-5
+    :alt: The screenshot illustrating the job monitor
+
+    Figure 5:  The screenshot illustrating the job monitor.
+
+**8. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
+Click on the circle with a letter "i" - this wkll show your search converted to an ADQL query.
+Clicking on the red "garbage can" will delete the job.
+
 
