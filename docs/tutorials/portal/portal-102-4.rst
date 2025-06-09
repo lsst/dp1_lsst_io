@@ -65,73 +65,10 @@ Click on the "funnel" on the uper left side of the table to restrict the table t
 **6. Execute the search.**
 Click "Search" on the lower left.
 
-**5. View the information window.**
-On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
-Dismiss the window by clicking on the OK button or on the X in its upper right corner.
-(Window is not shown in a figure in this tutorial.)
+The result of the search will be an image on the upper left, and a table of observations corresponding to your search on the bottom.  
 
-**6. Open the sidebar menu.**
-On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
-
-.. figure:: images/portal-101-1-3.png
-    :name: portal-101-1-3
-    :alt: The sidebar menu of the Portal Aspect, showing options in addition to the tabs.
-    :width: 300
-
-    Figure 3: The sidebar menu of the Portal Aspect.
-
-
-**7. Review the sidebar menu.**
-In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., DP0.2 Catalogs), and that which tabs you see are configurable with the "Hide Tab" option.
-Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
-
-**8. Select DP0.2 catalogs.**
-On the Portal landing page (Figure 2) click on the tab labeled DP0.2 Catalogs.
-
-**9. Mouse-over for pop-up notes.**
-In the Portal UI (Figure 4) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
-
-.. figure:: images/portal-101-1-4.png
-    :name: portal-101-1-4
-    :alt: The graphical user interface for the Portal, offering drop-down menus to select catalogs and tables, entry fields for temporal and spatial constraints, and an interative view of the selected table schema.
-
-    Figure 4: The Portal User Interface (UI) for querying the DP0.2 catalogs.
-
-**10. Review the UI components.**
-In the Portal UI (Figure 4) review the 8 main components labeled A through H, which are used together to query (search) and retrieve data.
-
-* A: Drop-down menu of the collections available. The DP0.2 catalogs (``dp02_dc2_catalogs``) are selected by default.
-* B: Drop-down menu of the tables available for the selected catalog. The ``Object`` table is selected by default.
-* C: Schema interface to apply column constraints on, and select rows to be returned from the selected table.
-* D: Entry fields for spatial constraints to be applied to the selected table (e.g., coordinates, cone or polygon areas).
-* E: Entry field to set the maximum number of rows to return from the selected table.
-* F: Button to convert the search constraints set with C, D, and E into an ADQL statement.
-* G: Toggle to switch between this graphical UI and the alternative ADQL UI.
-* H: Button to execute the query; to apply the search constraints and retrieve data into the results tab.
-
-.. figure:: images/portal-101-1-5.png
-    :name: portal-101-1-5
-    :alt: The schema interface, showing how to select columns to include in the results, and how to place constraints on column values.
-
-    Figure 5: The example schema interface for the DP0.2 ``Object`` table, with three columns selected (``coord_ra``, ``coord_dec``, and ``g_ap03Flux``), and a constraint that ``g_ap03Flux`` be greater than 360 nJy (nanoJanskies).
-
-
-**11. Review the schema interface components.**
-In the table schema interface (Figure 5) review the 8 components labeled A through H, which are used to apply search constraints on the table data.
-
-* A: Selection boxes. Click a box to include the column in the query. Click the funnel icon to view only selected columns.
-* B: Names. Column names are short, descriptive, and unique within a table. Click on "Name" to sort by name.
-* C: Constraints. Apply limits on column values by typing in desired constraints (e.g., :math:`>, <, =, !=`).
-* D: Units. For DP0.2, it is a known issue that some columns are missing their units.
-* E: Unified Content Descriptor (UCD). Vocabulary standards set by the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_.
-* F: Descriptions of the column's data.
-* G: Data type. E.g., integer (int), double precision (double), boolean.
-* H: Button to clear (reset) all column selections and constraints.
-
-**12. Interact with the table schema.**
-In the table schema interface (Figure 5) notice that the columns are searchable.
-Type a word, or use the drop-down menu, at the top of every column to find columns of interest.
-For example, in the entry field under "Name" type "Flux" and click "enter" or "return" to see all column names with "Flux" in them.
-Clear the entry field and click "enter" or "return" again to see all columns names (all rows of the schema interface).
-
+**7.  Examine the job monitor.**
+Click on the "Job Monitor" tab on the top.
+The job monitor will have all jobs submitted by you (created within the retention period).
+The jobs listed are in the chronological order (most recent first).
 
