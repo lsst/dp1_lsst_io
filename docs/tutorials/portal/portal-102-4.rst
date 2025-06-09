@@ -49,13 +49,21 @@ For the purpose of this tutorial, create any query using the default UI - an exa
 
 **5.  Example of a sample job.**
 Select the DP0.2 Catalogs tab.
-Select dp1_v29.DiaObject from the drop-down in the "Tables" tab.
+Select "dp1_v29" for the "Table Collection (Schema)".
+Select "dp1_v29.DiaObject" from the drop-down in the "Tables" tab.
 Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
-In the "output selection and constraints", check dec, ra, and g_psfFluxMean.  
+In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.  
 Enter ``>300`` as the constraint for g_psfFluxMean.
+Click on the "funnel" on the uper left side of the table to restrict the table to disay the selected entries, or those where constraints were set.  
 
-**4. Review the layout.**
-On the Portal landing page (Figure 2) notice the icons and tabs across the top of the screen, and that the default selected tab of the landing page is labeled Results.
+.. figure:: images/portal-102-4-3.png
+    :name: portal-102-4-3
+    :alt: The screenshot with the parameters entered for a sample search.
+
+    Figure 3: The screenshot with the parameters entered for a sample search.
+
+**6. Execute the search.**
+Click "Search" on the lower left.
 
 **5. View the information window.**
 On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
