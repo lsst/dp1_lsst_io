@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-03
+**Last verified to run:** 2025-06-09
 
 **Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
 The job monitor reveals the status and an information about a job submitted from your account, and allows for you to delete it.
@@ -54,7 +54,7 @@ Select "dp1_v29.DiaObject" from the drop-down in the "Tables" tab.
 Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
 In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.  
 Enter ``>300`` as the constraint for g_psfFluxMean.
-Click on the "funnel" on the uper left side of the table to restrict the table to disay the selected entries, or those where constraints were set.  
+Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.  
 
 .. figure:: images/portal-102-4-3.png
     :name: portal-102-4-3
@@ -86,7 +86,7 @@ You can return to any of those jobs by clicking the line corresponding to the pa
     Figure 5:  The screenshot illustrating the job monitor.
 
 **8. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
-Click on the circle with a letter "i" - this wkll show your search converted to an ADQL query.
+Click on the circle with a letter "i" - this will show your search converted to an ADQL query.
 Clicking on the red "garbage can" will delete the job.
 
 
