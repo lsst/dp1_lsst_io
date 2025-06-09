@@ -86,7 +86,7 @@ You can return to any of those jobs by clicking the line corresponding to the pa
     Figure 5:  The screenshot illustrating the job monitor.
 
 **8. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
-Click on the circle with a letter "i" - this will show your search converted to an ADQL query.
-Clicking on the red "garbage can" will delete the job.
+Click on the circle with a letter "i" - this will show your search converted to an ADQL query as well as the job ID.
 
+Clicking on the red "garbage can" will delete the job.
 
