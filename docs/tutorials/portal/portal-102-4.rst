@@ -11,7 +11,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Last verified to run:** 2025-06-03
 
 **Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
-It permits 
+The job monitor reveals the status and an information about a job submitted from your account, and allows for you to delete it.
 
 **LSST data products:** dp1 catalogs and images
 
