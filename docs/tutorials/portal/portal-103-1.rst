@@ -41,7 +41,7 @@ Navigate to the "DP0.2 Catalogs" tab in the Portal UI and set up a query in the 
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
 
-.. figure:: image/portal-103-1-2.png
+.. figure:: images/portal-103-1-2.png
     :name: portal-103-1-2
     :alt: The Portal UI with a spatial query for bright, extended objects converted from the UI to ADQL.
 
@@ -108,8 +108,8 @@ Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
 
-.. figure:: images/portal-103-1-4.png
-    :name: portal-103-1-4
+.. figure:: images/portal-103-1-5.png
+    :name: portal-103-1-5
     :alt: Default search results from a query.
 
     Figure 5: The default results view layout for the query described above. Interacting with query results is covered in a separate tutorial.
