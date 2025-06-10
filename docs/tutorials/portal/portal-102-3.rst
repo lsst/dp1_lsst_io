@@ -46,8 +46,7 @@ Leave "Spectral Coverage" and "Object ID Search" unchecked.
 
 figure:: images/portal-102-3-1.png
     :name: portal-102-3-1
-
-	:alt: Screenshot of the window containing all parameters and ready to execute the search.
+    :alt: Screenshot of the window containing all parameters and ready to execute the search.
 
 Figure 1:  The screenshot of the window containing all parameters and ready to execute the search.
 
@@ -59,7 +58,7 @@ The plot on the upper right will display the pointing directions of the telescop
 
 figure:: images/portal-102-3-2.png
     :name: portal-102-3-2
-	:alt: Screenshot of the window resulting from the execution of the search above.
+    :alt: Screenshot of the window resulting from the execution of the search above.
 
 Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
 
