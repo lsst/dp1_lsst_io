@@ -5,7 +5,6 @@
 ###################################################
 
 
-
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
@@ -32,19 +31,19 @@ The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude a
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag, 
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag, 
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag, 
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag, 
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag, 
+  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
+         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
+         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
+         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
+         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
+         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
+  FROM dp02_dc2_catalogs.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 62, -37, 0.167)) =1
+        AND (detect_isPrimary =1 AND refExtendedness =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
@@ -53,25 +52,25 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag, 
-         scisql_nanojanskyToAbMagSigma(u_cModelFlux, u_cModelFluxErr) AS u_cModelMagErr, 
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag, 
-         scisql_nanojanskyToAbMagSigma(g_cModelFlux, g_cModelFluxErr) AS g_cModelMagErr, 
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag, 
-         scisql_nanojanskyToAbMagSigma(r_cModelFlux, r_cModelFluxErr) AS r_cModelMagErr, 
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag, 
-         scisql_nanojanskyToAbMagSigma(i_cModelFlux, i_cModelFluxErr) AS i_cModelMagErr, 
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag, 
-         scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr, 
+  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
+         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
+         scisql_nanojanskyToAbMagSigma(u_cModelFlux, u_cModelFluxErr) AS u_cModelMagErr,
+         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
+         scisql_nanojanskyToAbMagSigma(g_cModelFlux, g_cModelFluxErr) AS g_cModelMagErr,
+         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
+         scisql_nanojanskyToAbMagSigma(r_cModelFlux, r_cModelFluxErr) AS r_cModelMagErr,
+         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
+         scisql_nanojanskyToAbMagSigma(i_cModelFlux, i_cModelFluxErr) AS i_cModelMagErr,
+         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
+         scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag,
-         scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
+         scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr
+  FROM dp02_dc2_catalogs.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 62, -37, 0.167)) =1
+        AND (detect_isPrimary =1 AND refExtendedness =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
