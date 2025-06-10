@@ -12,28 +12,13 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-05-30
 
-**Learning objective:** This tutorial demonstrates how to navigate the Portal's user interface (UI), and provides a tour of the main components.
+**Learning objective:** This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
 
 **LSST data products:** dp0.2 catalogs
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
-
-
-
-.. This section should provide a brief, top-level description of the page.
-
-**RSP Aspect:** Portal
-
-**Contact authors:** Greg Madejski and Melissa Graham
-
-**Last verified to run:** 2025-02-04
-
-**Targeted learning level:** beginner 
-
-**Introduction:**
-This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
 
 **Warning!** Fluxes measured in difference images can be negative.
 Negative fluxes should not be converted to magnitudes using this special ADQL function.
