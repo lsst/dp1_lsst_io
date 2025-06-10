@@ -106,5 +106,5 @@ and the columns have been renamed as specified in the ADQL statement.
 
 
 **Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
-see the `tutorial on how to use the results table data <https://dp0-2.lsst.io/tutorials-examples/portal-howto-table.html>`_.
+see the `tutorial on how to use the results table data.
 
