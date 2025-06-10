@@ -23,15 +23,15 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 .. _portal-102-3-S1:
 
-**1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
-(If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "General TAP" to add it as an additional tab.)
+**1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "DP0.2 Catalogs" tab.
+(If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "DP0.2 Catalogs" to add it as an additional tab.)
 For the "Table Collection (Schema)" select the “ivoa” from the menu (it should be the default).
 In the box for selecting tables, select "ivoa.ObsCore".
 
 **2. Select the location contained in the images to be retrieved.**
 Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
 In the "Coordinates or Object Name" enter the desired coordinates.
-This example uses 57.0, -28.0 for RA and Dec.
+This example uses 53.0, -28.0 for RA and Dec.
 
 **3.  Select the Observation Type and Source.**
 Check the box for the "Observation Type and Source".
@@ -40,7 +40,7 @@ For the "Data Product Type" select "image", and leave the  "Instrument Name" and
 
 **4.  Select the desired range of observation times.**
 Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
-Select "MJD values" and enter ``60000`` for the "Start Time" and ``60180`` for the "End Time".
+Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for the "End Time".
 Leave "Spectral Coverage" and "Object ID Search" unchecked.
 
 .. figure:: /_static/portal-howto-SIA-1.png
