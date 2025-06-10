@@ -91,5 +91,5 @@ and the columns have been renamed as specified in the ADQL statement.
 
 
 **Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
-see the `tutorial on how to use the results table data.
+see the tutorial on how to use the results table data.
 
