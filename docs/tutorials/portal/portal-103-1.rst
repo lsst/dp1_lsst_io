@@ -99,7 +99,7 @@ It is the same query as was used above in Option 1.
         AND (detect_isPrimary =1 AND refExtendedness =1
              AND u_cModelFlux >360 AND g_cModelFlux >360
              AND r_cModelFlux >360 AND i_cModelFlux >360
-             AND z_cModelFlux >360 AND y_cModelFlux >360
+             AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
 **2.4. Execute the ADQL query.**
