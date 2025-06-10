@@ -11,7 +11,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Last verified to run:** 2025-06-09
 
 **Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
-The job monitor reveals the status and an information about a job submitted from your accoun (including the job ID), and allows for you to delete it.
+The job monitor reveals the status and an information about a job submitted from your account (including the job ID), and allows for you to delete it.
 
 **LSST data products:** dp1 catalogs and images
 
@@ -48,12 +48,12 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 For the purpose of this tutorial, create any query using the default UI - an example is given below.
 
 **5.  Example of a sample job.**
-Select the DP0.2 Catalogs tab.
+Select the "'DP0.2 Catalogs" tab.
 Select "dp1_v29" for the "Table Collection (Schema)".
 Select "dp1_v29.DiaObject" from the drop-down in the "Tables" tab.
 Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
 In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.  
-Enter ``>300`` as the constraint for g_psfFluxMean.
+Enter ``>300`` as the constraint for ``g_psfFluxMean``.
 Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.  
 
 .. figure:: images/portal-102-4-3.png
