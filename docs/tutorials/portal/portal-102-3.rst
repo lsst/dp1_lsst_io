@@ -1,9 +1,9 @@
 
-.. _portal-102-2:
+.. _portal-102-3:
 
-#########################################
-102.2. How to query for images with SIAv2
-#########################################
+##########################################
+102.3. How to query for images with ObsTAP
+##########################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -11,7 +11,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-09
 
-**Learning objective:** This tutorial demonstrates how to use the Simple Image Access (SIA) service to retrieve DP1 images.
+**Learning objective:** This tutorial demonstrates how to use the ObsTAP service to retrieve DP1 images.
 Specifically it retrieves all “calexps” (Processed Visit Images) containing a specific location on the sky during the desired range of observation epochs.
 
 **LSST data products:** dp1 catalogs and images
@@ -21,7 +21,7 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-.. _portal-102-2-S1:
+.. _portal-102-3-S1:
 
 
 **1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
