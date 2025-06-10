@@ -44,7 +44,7 @@ Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for t
 Leave "Spectral Coverage" and "Object ID Search" unchecked.
 
 
-..figure:: images/portal-102-3-1.png
+.. figure:: images/portal-102-3-1.png
     :name: portal-102-3-1
     :alt: Screenshot of the window containing all parameters and ready to execute the search.
 
@@ -56,7 +56,7 @@ This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
 The plot on the upper right will display the pointing directions of the telescope for individual images.
 
-..figure:: images/portal-102-3-2.png
+.. figure:: images/portal-102-3-2.png
     :name: portal-102-3-2
     :alt: Screenshot of the window resulting from the execution of the search above.
 
