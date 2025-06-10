@@ -21,12 +21,11 @@ Rubin staff will respond to all questions posted there.
 
 
 .. _portal-103-1-S1:
-
-                                       
+             
 ====================================
 Option 1: Convert a UI query to ADQL
 ====================================
-                                        
+
 **1.1. Create a Portal UI query.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI and set up a query in the user interface (UI), as shown in Figure 1.
 
@@ -73,7 +72,7 @@ The interface should look like Figure 3.
     Figure 3: The Portal UI with no query constraints entered.
 
 
-**2.2. Switch to the ADQL interface.** 
+**2.2. Switch to the ADQL interface.**
 Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 4).
 Scroll down to see example queries and visit the /data-access-analysis-tools/adql-recipes page for more.
@@ -91,16 +90,16 @@ It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         u_cModelFlux, g_cModelFlux, r_cModelFlux, 
-         i_cModelFlux, z_cModelFlux, y_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
-             AND z_cModelFlux >360 AND y_cModelFlux >360)
+  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
+         u_cModelFlux, g_cModelFlux, r_cModelFlux,
+         i_cModelFlux, z_cModelFlux, y_cModelFlux
+  FROM dp02_dc2_catalogs.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 62, -37, 0.167)) =1
+        AND (detect_isPrimary =1 AND refExtendedness =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
+             AND z_cModelFlux >360 AND y_cModelFlux >360
 
 
 **2.4. Execute the ADQL query.**
