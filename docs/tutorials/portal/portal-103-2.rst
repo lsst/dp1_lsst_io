@@ -98,8 +98,8 @@ Figure 1 shows the table panel in the Results tab for the query above.
 Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
 and the columns have been renamed as specified in the ADQL statement.
 
-.. figure:: /_static/portal-howto-mags-1.png
-    :name: portal-howto-mags-1
+.. figure:: images/portal-103-2-1.png
+    :name: portal-103-2-1
     :alt: The table panel in the results tab shows the created magnitude columns.
 
     Figure 1: The table panel in the Results tab for the query above shows no flux columns, but magnitude and magnitude error columns.
@@ -108,4 +108,3 @@ and the columns have been renamed as specified in the ADQL statement.
 **Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
 see the `tutorial on how to use the results table data <https://dp0-2.lsst.io/tutorials-examples/portal-howto-table.html>`_.
 
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
