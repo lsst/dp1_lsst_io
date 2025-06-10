@@ -57,8 +57,8 @@ This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
 The plot on the upper right will display the pointing directions of the telescope for individual images.
 
-figure:: images/portal-102-3-1.png
-    :name: portal-102-3-1
+figure:: images/portal-102-3-2.png
+    :name: portal-102-3-2
 	:alt: Screenshot of the window resulting from the execution of the search above.
 
 Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
