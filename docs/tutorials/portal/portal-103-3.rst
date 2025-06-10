@@ -118,6 +118,6 @@ The default Results tab will display an empty panel instead of the coverage char
 
 
 **7. Find more join examples.**
-Visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more examples of table joins.
+Visit the /data-access-analysis-tools/adql-recipes page for more examples of table joins.
 Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
 
