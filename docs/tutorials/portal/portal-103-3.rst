@@ -20,7 +20,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 
-**Warning!** 
+**Warning!**
 Not all tables can be joined.
 Two tables must have a column in common in order to be joined.
 
