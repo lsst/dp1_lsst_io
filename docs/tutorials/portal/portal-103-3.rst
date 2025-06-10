@@ -36,10 +36,10 @@ Two columns are selected from "table2" ("colX" and "colY").
 
 .. code-block:: SQL
 
-   SELECT tab1.ra, tab1.dec, tab1.colA, tab1.colB, tab2.colX, tab2.colY 
-   FROM table1 AS tab1 
-   JOIN table2 AS tab2 
-   ON tab1.colID = tab2.colID 
+   SELECT tab1.ra, tab1.dec, tab1.colA, tab1.colB, tab2.colX, tab2.colY
+   FROM table1 AS tab1
+   JOIN table2 AS tab2
+   ON tab1.colID = tab2.colID
    WHERE CONTAINS(POINT('ICRS', tab1.ra, tab1.dec),
          CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
 
@@ -55,17 +55,17 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 
 .. code-block:: SQL
 
-   SELECT src.coord_ra, src.coord_dec, src.sourceId, src.band, 
+   SELECT src.coord_ra, src.coord_dec, src.sourceId, src.band,
           scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
-          src.ccdVisitId, cv.ccdVisitId, 
+          src.ccdVisitId, cv.ccdVisitId,
           cv.expMidptMJD, cv.seeing
    FROM dp02_dc2_catalogs.Source AS src
    JOIN dp02_dc2_catalogs.CcdVisit AS cv
    ON src.ccdVisitId = cv.ccdVisitId
    WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
-         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1 
+         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
          AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
-         AND src.band = 'i' 
+         AND src.band = 'i'
 
 
 **4. Review the two-table join results.**
@@ -88,21 +88,21 @@ Constraints can be applied on columns from any or all tables.
 
 .. code-block:: SQL
 
-   SELECT obj.coord_ra, obj.coord_dec, obj.objectId, obj.refExtendedness, 
+   SELECT obj.coord_ra, obj.coord_dec, obj.objectId, obj.refExtendedness,
           scisql_nanojanskyToAbMag(i_psfFlux) AS obj_i_psfAbMag,
           scisql_nanojanskyToAbMag(fs.psfFlux) AS fs_psfAbMag,
           cv.ccdVisitId, cv.expMidptMJD, cv.seeing
-   FROM dp02_dc2_catalogs.Object AS obj 
-   JOIN dp02_dc2_catalogs.ForcedSource AS fs 
+   FROM dp02_dc2_catalogs.Object AS obj
+   JOIN dp02_dc2_catalogs.ForcedSource AS fs
    ON obj.objectId = fs.objectId
    JOIN dp02_dc2_catalogs.CcdVisit AS cv
    ON fs.ccdVisitId = cv.ccdVisitId
    WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
-         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1 
-         AND obj.refExtendedness = 1 
-         AND obj.i_psfFlux > 3600 
+         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
+         AND obj.refExtendedness = 1
+         AND obj.i_psfFlux > 3600
          AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
-         AND fs.band = 'i' 
+         AND fs.band = 'i'
 
 
 **6. Review the three-table join results.**
