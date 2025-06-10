@@ -23,8 +23,8 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 .. _portal-102-3-S1:
 
-**1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "DP0.2 Catalogs" tab.
-(If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "DP0.2 Catalogs" to add it as an additional tab.)
+**1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
+(If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "General TAP" to add it as an additional tab.)
 For the "Table Collection (Schema)" select the “dp1_v29” from the menu (it should be the default).
 In the box for selecting tables, select "dp1_v29.ObsCore".
 
@@ -51,7 +51,7 @@ Figure 1:  The screenshot of the window containing all parameters and ready to e
 
 **5.  Retrieve the images.**  
 Click on the "Search" button.
-This will result in extracting 19 images meeting the selected criteria.
+This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
 The plot on the upper right will display the pointing directions of the telescope for individual images.
 
