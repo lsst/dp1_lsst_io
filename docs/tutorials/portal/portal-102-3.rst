@@ -25,8 +25,8 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 **1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "DP0.2 Catalogs" tab.
 (If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "DP0.2 Catalogs" to add it as an additional tab.)
-For the "Table Collection (Schema)" select the “ivoa” from the menu (it should be the default).
-In the box for selecting tables, select "ivoa.ObsCore".
+For the "Table Collection (Schema)" select the “dp1_v29” from the menu (it should be the default).
+In the box for selecting tables, select "dp1_v29.ObsCore".
 
 **2. Select the location contained in the images to be retrieved.**
 Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
