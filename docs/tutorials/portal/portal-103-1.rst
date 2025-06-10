@@ -76,7 +76,7 @@ The interface should look like Figure 3.
 **2.2. Switch to the ADQL interface.** 
 Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 4).
-Scroll down to see example queries and visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more.
+Scroll down to see example queries and visit the /data-access-analysis-tools/adql-recipes page for more.
 
 .. figure:: images/portal-103-1-4.png
     :name: portal-103-1-4
