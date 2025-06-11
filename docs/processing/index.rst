@@ -4,14 +4,15 @@
 Data processing
 ###############
 
-Summaries of the data processing steps that generated the data products.
+An overview of the Data Release Processing (DRP) steps which generated the data products.
 
-*Just enough detail to enable a basic understanding of the data products. Primarily high-level descriptions accompanyed by links to the relevant technical documents and publications. Not meant to duplicate LSST Science Pipelines descriptions or papers. Is meant to be a next-to-the-data-products reference.*
 
 .. _processing-isr:
 
-Instrument signature removal
-============================
+Instrument signature removal (ISR)
+==================================
+
+Corrects the raw images for the effects of the telescope and detector.
 
 .. toctree::
     :maxdepth: 2
@@ -25,6 +26,8 @@ Instrument signature removal
 Calibration
 ===========
 
+Generates the science-ready processed visit images.
+
 .. toctree::
     :maxdepth: 2
     :glob:
@@ -36,6 +39,8 @@ Calibration
 
 Coaddition
 ==========
+
+Generates the deeply coadded images.
 
 .. toctree::
     :maxdepth: 2
@@ -49,6 +54,8 @@ Coaddition
 Source detection
 ================
 
+Generates the catalogs of measurements for detected sources.
+
 .. toctree::
     :maxdepth: 2
     :glob:
@@ -61,6 +68,8 @@ Source detection
 Difference image analysis
 =========================
 
+Runs image substraction to generate difference images and associated detection catalogs.
+
 .. toctree::
     :maxdepth: 2
     :glob:
@@ -72,6 +81,8 @@ Difference image analysis
 
 Moving objects processing
 =========================
+
+Links detected sources into moving objects and generates Solar System catalogs.
 
 .. toctree::
     :maxdepth: 2
