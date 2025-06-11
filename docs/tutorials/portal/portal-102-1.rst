@@ -23,7 +23,10 @@ Option 1: Convert a UI query to ADQL
 ====================================
                                         
 **1.1. Create a Portal UI query.**
-Navigate to the "DP0.2 Catalogs" tab in the Portal UI and set up a query in the user interface (UI), as shown in Figure 1.
+Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
+In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
+
+and set up a query in the user interface (UI), as shown in Figure 1.
 
 .. figure:: /_static/portal-howto-adql-1.png
     :name: portal-howto-adql-1
@@ -87,17 +90,16 @@ It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         u_cModelFlux, g_cModelFlux, r_cModelFlux, 
-         i_cModelFlux, z_cModelFlux, y_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
-             AND z_cModelFlux >360 AND y_cModelFlux >360)
-
+  SELECT coord_dec, coord_ra, detect_isIsolated,
+       u_cModelFlux, g_cModelFlux, r_cModelFlux,
+       i_cModelFlux, z_cModelFlux, y_cModelFlux
+  FROM dp1_v29.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+      CIRCLE('ICRS', 53, -28, 0.167)) =1
+      AND (detect_isIsolated =1
+           AND u_cModelFlux >360 AND g_cModelFlux >360
+           AND r_cModelFlux >360 AND i_cModelFlux >360
+           AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 **2.4. Execute the ADQL query.**
 Click the Search button at lower left.
