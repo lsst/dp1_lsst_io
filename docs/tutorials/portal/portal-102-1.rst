@@ -37,7 +37,7 @@ Leave "Temporal" and Object ID Search" unchecked.
     :name: portal-102-1-1
     :alt: The Portal UI with a spatial query for bright objects set up.
 
-    Figure 1: The Portal UI set up for a simple cone search query for bright objects near in the selected region.
+    Figure 1: The Portal UI set up for a simple cone search query for bright objects in the selected region.
 
 **1.2. Convert UI to ADQL query.**
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
