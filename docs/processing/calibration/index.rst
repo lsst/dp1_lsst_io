@@ -4,7 +4,7 @@
 Image calibration
 #################
 
-The process of transforming a post-ISR image into a science-ready `visit_image`.
+The process of transforming a post-ISR image into a science-ready ``visit_image``.
 
 
 .. _calibration-monster:
