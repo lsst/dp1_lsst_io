@@ -66,20 +66,19 @@ Option 2: Enter an ADQL statement
 If needed, reload the webpage in the browser to clear any previously-entered constraints.
 The interface should look like Figure 3.
 
-.. figure:: /_static/portal-howto-adql-3.png
-    :name: portal-howto-adql-3
+.. figure:: images/portal-102-1-3.png
+    :name: portal-102-1-3
     :alt: The Portal UI with no constraints set.
 
     Figure 3: The Portal UI with no query constraints entered.
-
 
 **2.2. Switch to the ADQL interface.** 
 Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 4).
 Scroll down to see example queries and visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more.
 
-.. figure:: /_static/portal-howto-adql-4.png
-    :name: portal-howto-adql-4
+.. figure:: images/portal-102-1-4.png
+    :name: portal-102-1-4
     :alt: The ADQL interface with no query entered.
 
     Figure 4: The ADQL interface with no query entered.
@@ -106,8 +105,8 @@ It is the same query as was used above in Option 1.
 Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
-.. figure:: /_static/portal-howto-uiquery-5.png
-    :name: portal-howto-uiquery-5
+.. figure:: images/portal-102-1-5.png
+    :name: portal-102-1-5
     :alt: Default search results from a query.
 
     Figure 5: The default results view layout for the query described above. Interacting with query results is covered in a separate tutorial.
