@@ -1,3 +1,27 @@
+.. _portal-102-4:
+
+##################################################################################################################
+102.4. How to use the Portal Job Monitor to determine the job ID and its status, and access the user query history
+##################################################################################################################
+
+For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
+
+**Data Release:** DP1
+
+**Last verified to run:** 2025-06-09
+
+**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
+The job monitor reveals the status and an information about a job submitted from your account (including the job ID), and allows for you to delete it.
+
+**LSST data products:** dp1 catalogs and images
+
+**Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+
+
+.. _portal-102-4-S1:
+
 ################################
 03. How to execute an ADQL query
 ################################
