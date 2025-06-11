@@ -1,8 +1,8 @@
 .. _portal-102-1:
 
-################################################
-103.4. How to query / examine images via an ADQL
-################################################
+#############################################
+103.4. How to query / examine images via ADQL
+#############################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
