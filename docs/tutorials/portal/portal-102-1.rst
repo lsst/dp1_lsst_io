@@ -26,9 +26,12 @@ Option 1: Convert a UI query to ADQL
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
 In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
 Set up a query in the user interface (UI), as shown in Figure 1.
-Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux.
+Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for ``coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux``.
 For all flux rows, enter a constraint ``>360``.
 For the "detect_isIsolated" enter ``=1``.
+Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
+For "Radius" enter 3 arc minutes.
+Leave "Temporal" and Object ID Search" unchecked.
 
 .. figure:: images/portal-102-1-1.png
     :name: portal-102-1-1
@@ -45,7 +48,6 @@ The UI will switch to the ADQL interface and will populate the ADQL Query box wi
     :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
     Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
-
 
 **1.3. Execute query.**
 Click the Search button at lower left.
