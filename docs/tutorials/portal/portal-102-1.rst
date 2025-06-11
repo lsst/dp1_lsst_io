@@ -1,8 +1,8 @@
-.. _portal-102-4:
+.. _portal-102-1:
 
-##################################################################################################################
-102.4. How to use the Portal Job Monitor to determine the job ID and its status, and access the user query history
-##################################################################################################################
+###################################
+102.1. How to execute an ADQL query
+###################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,8 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-09
 
-**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
-The job monitor reveals the status and an information about a job submitted from your account (including the job ID), and allows for you to delete it.
+**Learning objective:** This tutorial demonstrates how to prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal Aspect of the Rubin Science Platform.
 
 **LSST data products:** dp1 catalogs and images
 
@@ -19,27 +18,6 @@ The job monitor reveals the status and an information about a job submitted from
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-
-.. _portal-102-4-S1:
-
-################################
-03. How to execute an ADQL query
-################################
-
-.. This section should provide a brief, top-level description of the page.
-
-**RSP Aspect:** Portal
-
-**Contact authors:** Greg Madejski and Melissa Graham
-
-**Last verified to run:** 2025-02-03
-
-**Targeted learning level:** beginner 
-
-**Introduction:**
-This tutorial demonstrates how to execute a simple Portal query for table data using the `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_.
-
-                                        
 ====================================
 Option 1: Convert a UI query to ADQL
 ====================================
