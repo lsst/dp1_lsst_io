@@ -90,16 +90,17 @@ It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isIsolated,
-       u_cModelFlux, g_cModelFlux, r_cModelFlux,
-       i_cModelFlux, z_cModelFlux, y_cModelFlux
-  FROM dp1_v29.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-      CIRCLE('ICRS', 53, -28, 0.167)) =1
+  SELECT coord_dec,coord_ra,detect_isIsolated,g_cModelFlux,i_cModelFlux,r_cModelFlux,u_cModelFlux,
+       y_cModelFlux,z_cModelFlux 
+  FROM dp1_v29.Object 
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53, -28, 0.05))=1
       AND (detect_isIsolated =1
-           AND u_cModelFlux >360 AND g_cModelFlux >360
-           AND r_cModelFlux >360 AND i_cModelFlux >360
-           AND z_cModelFlux >360 AND y_cModelFlux >360)
+           AND g_cModelFlux >360
+           AND i_cModelFlux >360
+           AND r_cModelFlux >360
+           AND u_cModelFlux >360
+           AND y_cModelFlux >360
+           AND z_cModelFlux >360)
 
 **2.4. Execute the ADQL query.**
 Click the Search button at lower left.
