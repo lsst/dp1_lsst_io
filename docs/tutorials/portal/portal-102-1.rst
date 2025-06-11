@@ -30,9 +30,9 @@ Specifically, in the "Output Column Selection and Constraints" check boxes by th
 For all flux rows, enter a constraint ``>360``.
 For the "detect_isIsolated" enter ``=1``.
 
-.. figure:: /_static/portal-howto-adql-1.png
-    :name: portal-howto-adql-1
-    :alt: The Portal UI with a spatial query for bright, extended objects set up.
+.. figure:: images/portal-102-1-1.png
+    :name: portal-102-1-1
+    :alt: The Portal UI with a spatial query for bright objects set up.
 
     Figure 1: The Portal UI set up for a simple cone search query for bright objects near in the selected region.
 
@@ -40,9 +40,9 @@ For the "detect_isIsolated" enter ``=1``.
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
 
-.. figure:: /_static/portal-howto-adql-2.png
-    :name: portal-howto-adql-2
-    :alt: The Portal UI with a spatial query for bright, extended objects converted from the UI to ADQL.
+.. figure:: images/portal-102-1-2.png
+    :name: portal-102-1-2
+    :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
     Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
 
@@ -52,8 +52,7 @@ Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab (Figure 5).
 
 **Warning!**
-If changes are made to the ADQL statement and then the interface is toggled back to the "Single Table (UI assisted)" interface using the button at lower right in Figure 2,
-those changes will not be reflected in the UI.
+If changes are made to the ADQL statement and then the interface is toggled back to the "Single Table (UI assisted)" interface using the button at lower right in Figure 2, those changes will not be reflected in the UI.
 The conversion only works in one direction: from the UI to ADQL.
 
 
