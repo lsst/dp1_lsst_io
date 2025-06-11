@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-09
+**Last verified to run:** 2025-06-11
 
 **Learning objective:** This tutorial demonstrates how to prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal Aspect of the Rubin Science Platform.
 
@@ -57,7 +57,6 @@ The query will be executed and the results will appear in the Results tab (Figur
 If changes are made to the ADQL statement and then the interface is toggled back to the "Single Table (UI assisted)" interface using the button at lower right in Figure 2, those changes will not be reflected in the UI.
 The conversion only works in one direction: from the UI to ADQL.
 
-
 =================================
 Option 2: Enter an ADQL statement
 =================================
@@ -82,7 +81,6 @@ Scroll down to see example queries and visit the :doc:`/data-access-analysis-too
     :alt: The ADQL interface with no query entered.
 
     Figure 4: The ADQL interface with no query entered.
-
 
 **2.3. Enter an ADQL statement in the box.**
 For example, copy paste the statement below.
@@ -110,7 +108,7 @@ The query will be executed and the results will appear in the Results tab.
     :name: portal-102-1-5
     :alt: Default search results from a query.
 
-    Figure 5: The default results view layout for the query described above. Interacting with query results is covered in a separate tutorial.
+    Figure 5: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
 
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
