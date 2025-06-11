@@ -25,8 +25,8 @@ Option 1: Convert a UI query to ADQL
 **1.1. Create a Portal UI query.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
 In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
-
-and set up a query in the user interface (UI), as shown in Figure 1.
+Set up a query in the user interface (UI), as shown in Figure 1.
+Specifically, check boxes by coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux
 
 .. figure:: /_static/portal-howto-adql-1.png
     :name: portal-howto-adql-1
