@@ -90,3 +90,11 @@ Click on the circle with a letter "i" - this will show your search converted to 
 
 Clicking on the red "garbage can" will delete the job.
 
+An example of informaton for a recent job is in the figure below.  
+
+.. figure:: images/portal-102-4-6.png
+    :name: portal-102-4-6
+    :alt: The screenshot illustrating information about a recent job, available from the job monitor.
+
+    Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.
+
