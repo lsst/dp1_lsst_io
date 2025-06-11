@@ -24,9 +24,8 @@ The steps of photometric calibration include:
 Overview
 ========
 
-All stars with observations with signal-to-noise greater than 10 are input into the FGCM solution,
-and associated stars from the global absolute reference catalog refered to as :doc:`/processing/calibration/monster`.
+Bright, isolated stars with signal-to-noise greater than 10 that are detected in post-ISR images,
+and associated with the global absolute reference catalog refered to as :doc:`/processing/calibration/monster`,
+are input into the FGCM solution.
 The FGCM model constrains the atmospheric parameters per night, as well as the absolute throughput.
-
-
 

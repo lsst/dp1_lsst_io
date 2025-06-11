@@ -4,12 +4,7 @@
 Image calibration
 #################
 
-Bright, isolated stars are detected in images and used for the photometric, astrometric, and PSF calibrations.
-
-On each post-ISR image, bright, isolated stars are detected to a 5-sigma threshold.
-These detections are then associated to identify a consistent set of isolated stars with multiple observations,
-suitable for use in modeling the point-spread function (PSF), and for performing photometric and astrometric calibrations.
-
+The process of transforming a post-ISR image into a science-ready `visit_image`.
 
 
 .. _calibration-monster:
@@ -17,6 +12,7 @@ suitable for use in modeling the point-spread function (PSF), and for performing
 The Monster catalog
 ===================
 
+A whole-sky standard star catalog built specifically for LSST.
 
 .. toctree::
     :maxdepth: 1
@@ -79,6 +75,7 @@ Characterizing how the optical system "blurs" a point source into a two-dimensio
 Background subtraction
 ======================
 
+Removing the atmospheric sky background flux from the image.
 
 .. toctree::
     :maxdepth: 1

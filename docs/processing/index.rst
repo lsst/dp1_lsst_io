@@ -15,7 +15,7 @@ Instrument signature removal (ISR)
 Corrects the raw images for the effects of the telescope and detector.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     isr/index

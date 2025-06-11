@@ -44,7 +44,7 @@ Summaries of the data processing steps that generated the data products.
    :maxdepth: 2
    :titlesonly:
 
-   Processing <processing/index>
+   Data processing <processing/index>
 
 Data access and analysis
 ========================
