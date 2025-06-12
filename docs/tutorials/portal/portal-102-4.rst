@@ -89,7 +89,7 @@ Click on the circle with a letter "i" - this will show your search converted to 
 
 Clicking on the red "garbage can" will delete the job.
 
-An example of informaton for a recent job is in the figure below.  
+An example of informaton for a recent job is in the figure below.
 
 .. figure:: images/portal-102-4-6.png
     :width:  400
