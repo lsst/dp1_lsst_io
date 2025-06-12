@@ -1,7 +1,7 @@
-.. _portal-102-1:
+.. _portal-103-1:
 
 ###################################
-102.1. How to execute an ADQL query
+103.1. How to execute an ADQL query
 ###################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
@@ -34,8 +34,8 @@ Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
 For "Radius" enter 3 arc minutes.
 Leave "Temporal" and Object ID Search" unchecked.
 
-.. figure:: images/portal-102-1-1.png
-    :name: portal-102-1-1
+.. figure:: images/portal-103-1-1.png
+    :name: portal-103-1-1
     :alt: The Portal UI with a spatial query for bright objects set up.
 
     Figure 1: The Portal UI set up for a simple cone search query for bright objects in the selected region.
@@ -44,8 +44,8 @@ Leave "Temporal" and Object ID Search" unchecked.
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
 
-.. figure:: images/portal-102-1-2.png
-    :name: portal-102-1-2
+.. figure:: images/portal-103-1-2.png
+    :name: portal-103-1-2
     :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
     Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
@@ -66,8 +66,8 @@ Option 2: Enter an ADQL statement
 If needed, reload the webpage in the browser to clear any previously-entered constraints.
 The interface should look like Figure 3.
 
-.. figure:: images/portal-102-1-3.png
-    :name: portal-102-1-3
+.. figure:: images/portal-103-1-3.png
+    :name: portal-103-1-3
     :alt: The Portal UI with no constraints set.
 
     Figure 3: The Portal UI with no query constraints entered.
@@ -77,8 +77,8 @@ Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 4).
 Scroll down to see example queries and visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more.
 
-.. figure:: images/portal-102-1-4.png
-    :name: portal-102-1-4
+.. figure:: images/portal-132-1-4.png
+    :name: portal-103-1-4
     :alt: The ADQL interface with no query entered.
 
     Figure 4: The ADQL interface with no query entered.
@@ -105,8 +105,8 @@ It is the same query as was used above in Option 1.
 Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
-.. figure:: images/portal-102-1-5.png
-    :name: portal-102-1-5
+.. figure:: images/portal-103-1-5.png
+    :name: portal-103-1-5
     :alt: Default search results from a query.
 
     Figure 5: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
