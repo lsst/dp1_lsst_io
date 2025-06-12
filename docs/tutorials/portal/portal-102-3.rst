@@ -50,7 +50,7 @@ Leave "Spectral Coverage" and "Object ID Search" unchecked.
 
 Figure 1:  The screenshot of the window containing all parameters and ready to execute the search.
 
-**5.  Retrieve the images.**  
+**5.  Retrieve the images.**
 Click on the "Search" button.
 This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
