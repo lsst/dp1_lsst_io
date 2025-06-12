@@ -1,4 +1,4 @@
-.. _portal-102-1:
+.. _portal-103-4:
 
 #############################################
 103.4. How to query / examine images via ADQL
@@ -20,7 +20,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 
 **1. Rationale for preparing the ADQL query using UI aspect of the Portal.**
-While it is possible to enter the ADQL query directly into the ADQL aspect of the Portal, if the goal is to query and examine images containing a given location - using the UI aspect to create the ADQL query is probably simpler as it involves only a few steps.  
+While it is possible to enter the ADQL query directly into the ADQL aspect of the Portal, if the goal is to query and examine images containing a given location - using the UI aspect to create the ADQL query is probably simpler as it involves only a few steps.
 
 **2.  Prepare the ADQL query using the UI aspect.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
