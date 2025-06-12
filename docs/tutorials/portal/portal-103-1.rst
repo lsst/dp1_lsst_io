@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-11
+**Last verified to run:** 2025-06-12
 
 **Learning objective:** This tutorial demonstrates how to prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal Aspect of the Rubin Science Platform.
 This example will extract fluxes in multiple bands of all bright objects in a selected region of the sky.
@@ -111,6 +111,5 @@ The query will be executed and the results will appear in the Results tab.
     :alt: Default search results from a query.
 
     Figure 5: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
-
 
 Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
