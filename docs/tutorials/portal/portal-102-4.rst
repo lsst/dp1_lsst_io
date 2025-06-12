@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-09
+**Last verified to run:** 2025-06-12
 
 **Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
 The job monitor reveals the status and an information about a job submitted from your account (including the job ID), and allows for you to delete it.
@@ -31,7 +31,6 @@ In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst
 
     Figure 1: The main landing page of the Rubin Science Platform.
 
-
 **2. Log in.**
 On the RSP landing page (Figure 1), if "Log in" appears at upper right instead of your username, click "Log in" and follow the prompts to authenticate.
 
@@ -52,9 +51,9 @@ Select the "'DP0.2 Catalogs" tab.
 Select "dp1_v29" for the "Table Collection (Schema)".
 Select "dp1_v29.DiaObject" from the drop-down in the "Tables" tab.
 Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
-In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.  
+In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.
 Enter ``>300`` as the constraint for ``g_psfFluxMean``.
-Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.  
+Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.
 
 .. figure:: images/portal-102-4-3.png
     :name: portal-102-4-3
@@ -98,4 +97,3 @@ An example of informaton for a recent job is in the figure below.
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
     Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.
-
