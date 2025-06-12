@@ -40,7 +40,7 @@ Generates the science-ready processed visit images.
 Coaddition
 ==========
 
-Generates the deeply coadded images.
+Generates the deep coadd and template images.
 
 .. toctree::
     :maxdepth: 2
@@ -51,8 +51,8 @@ Generates the deeply coadded images.
 
 .. _processing-detection:
 
-Source detection
-================
+Source detection and measurement
+================================
 
 Generates the catalogs of measurements for detected sources.
 
