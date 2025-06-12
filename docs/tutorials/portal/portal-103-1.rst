@@ -73,7 +73,7 @@ The interface should look like Figure 3.
 
     Figure 3: The Portal UI with no query constraints entered.
 
-**2.2. Switch to the ADQL interface.** 
+**2.2. Switch to the ADQL interface.**
 Select "Edit ADQL" at upper right in Figure 3 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 4).
 Scroll down to see example queries and visit the :doc:`/data-access-analysis-tools/adql-recipes` page for more.
