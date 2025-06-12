@@ -11,6 +11,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Last verified to run:** 2025-06-11
 
 **Learning objective:** This tutorial demonstrates how to prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal Aspect of the Rubin Science Platform.
+This example will extract fluxes in multiple bands of all bright objects in a selected region of the sky.
 
 **LSST data products:** dp1 catalogs and images
 
