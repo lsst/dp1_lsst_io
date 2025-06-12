@@ -33,6 +33,7 @@ For the "detect_isIsolated" enter ``=1``.
 Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
 For "Radius" enter 3 arc minutes.
 Leave "Temporal" and Object ID Search" unchecked.
+Restrict the entries in the "Output Column Selection and Constraints" table to those selected by you by clicking on the "funnel" icon on the upper left.
 
 .. figure:: images/portal-103-1-1.png
     :name: portal-103-1-1
