@@ -22,7 +22,7 @@ This example will extract fluxes in multiple bands of all bright objects in a se
 ====================================
 Option 1: Convert a UI query to ADQL
 ====================================
-                                        
+
 **1.1. Create a Portal UI query.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
 In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
