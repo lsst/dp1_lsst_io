@@ -18,14 +18,13 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-====================================
-Option 1: Convert a UI query to ADQL
-====================================
-                                        
-**1.1. Create a Portal UI query.**
+
+**1. Rationale for preparing the ADQL query using UI aspect of the Portal.**
+While it is possible to enter the ADQL query directly into the ADQL aspect of the Portal, if the goal is to query and examine images containing a given location - using the UI aspect to create the ADQL query is probably simpler as it involves only a few steps.  
+
+**2.  Prepare the ADQL query using the UI aspect.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
 In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
-Set up a query in the user interface (UI), as shown in Figure 1.
 Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for ``coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux``.
 For all flux rows, enter a constraint ``>360``.
 For the "detect_isIsolated" enter ``=1``.
