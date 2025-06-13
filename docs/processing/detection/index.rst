@@ -5,7 +5,7 @@ Source detection and measurement
 ################################
 
 Sources in the visit and deep coadd images are detected, deblended, and measured
-following (approximately) the process in `Bosch et al. (2018) <https://academic.oup.com/pasj/article/70/SP1/S5/4494136>`_,
+following (approximately) the process in `Bosch et al. (2018) <https://ui.adsabs.harvard.edu/abs/2018PASJ...70S...5B/abstract>`_,
 as described in
 "The LSST Science Pipelines Software: Optical Survey Pipeline Reduction and Analysis Environment"
 (`pstn-019.lsst.io <https://pstn-019.lsst.io/>`_).
