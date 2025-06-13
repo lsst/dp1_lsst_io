@@ -66,3 +66,4 @@ Figure 2:  The screenshot of the window resulting from the execution of the sear
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
 Click on any point on the scatter plot on the right - this also will display the corresponding image.
 
+Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.

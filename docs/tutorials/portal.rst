@@ -14,18 +14,15 @@ Short tutorials with a learning objective of how to use a single RSP function or
 101. User Interface (UI)
 ------------------------
 
-
-
-
-102. Queries with the UI
-------------------------
-
 .. toctree::
     :titlesonly:
     :glob:
 
-    portal/portal-102-3.rst
+    portal/portal-101-1.rst
 
+
+102. Queries with the UI
+------------------------
 
 103. Queries with ADQL
 ----------------------
@@ -54,6 +51,13 @@ Tutorials with a learning objective of understanding one of the data products.
 201. Survey metadata
 --------------------
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal/portal-201-1.rst
+
+
 202. Catalogs
 -------------
 
@@ -73,6 +77,11 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
 301. DP1 target exploration
 ---------------------------
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal/portal-301-1.rst
 
 302. Stars
 ----------
