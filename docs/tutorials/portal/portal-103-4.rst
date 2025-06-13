@@ -47,7 +47,7 @@ Of course you can enter the query manually (or edit it) if needed.
 
     Figure 2: The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
 
-*4.  Examine the resulting image(s)**
+**4.  Examine the resulting image(s)**
 Click on the "Search" button.  
 This will result in the image corresponding to the first entry in the table on the upper left, and the scatter point of telescope pointings on the upper right, as shown in the scfreenshot below.
 Other images can be examined by clicking other entries in the table on the bottom.
