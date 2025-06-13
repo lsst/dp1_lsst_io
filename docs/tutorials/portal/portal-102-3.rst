@@ -9,7 +9,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-09
+**Last verified to run:** 2025-06-013
 
 **Learning objective:** This tutorial demonstrates how to use the ObsTAP service to retrieve DP1 images.
 Specifically it retrieves all “calexps” (Processed Visit Images) containing a specific location on the sky during the desired range of observation epochs.
