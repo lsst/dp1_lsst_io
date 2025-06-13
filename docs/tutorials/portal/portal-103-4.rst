@@ -18,23 +18,31 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-
 **1. Rationale for preparing the ADQL query using UI aspect of the Portal.**
 While it is possible to enter the ADQL query directly into the ADQL aspect of the Portal, if the goal is to query and examine images containing a given location - using the UI aspect to create the ADQL query is probably simpler as it involves only a few steps.
 
 **2.  Prepare the ADQL query using the UI aspect.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
-In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
-Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for ``coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux``.
-For all flux rows, enter a constraint ``>360``.
-For the "detect_isIsolated" enter ``=1``.
-Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
+In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.ObsCore" table.
+Leave the blue checkmarks in the "Output Column Selection and Constrants" as defaulted.
+Under "Enter Constraints" check "Location" and enter ``53.0, -28.0``.
 For "Radius" enter 3 arc minutes.
-Leave "Temporal" and Object ID Search" unchecked.
+In "Observation Type and Source" check "PVI(2)" - this selects the individual calibrated exposures (Processed Visit Images).
+Leave "Temporal" and Object ID Search" unchecked, but of course it is possible to restrict the search to observations conducted durubng specific times.
 
-.. figure:: images/portal-102-1-1.png
-    :name: portal-102-1-1
-    :alt: The Portal UI with a spatial query for bright objects set up.
+.. figure:: images/portal-103-4-1.png
+    :name: portal-103-4-1
+    :alt: The Portal UI set up to search for images corresponding to the selected constraints.
 
-    Figure 1: The Portal UI set up for a simple cone search query for bright objects in the selected region.
+    Figure 1: The Portal UI set up to search for images corresponding to the constraints in the "Enter Constraints" area.
+
+**3.  Convert the parameters selected via UI to an ADQL query**
+Click on the box "Populate and edit ADQL".
+This will result in the ADQL aspect of the Portal, with the UI query above converted to an ADQL query.
+
+.. figure:: images/portal-103-4-2.png
+    :name: portal-103-4-2
+    :alt: The Portal ADQL aspect, illustratihn the query converted from UI to ADQL.
+
+    Figure 2: The The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
 
