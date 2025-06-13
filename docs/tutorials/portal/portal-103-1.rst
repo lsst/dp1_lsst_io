@@ -112,4 +112,3 @@ The query will be executed and the results will appear in the Results tab.
 
     Figure 5: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
 
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
