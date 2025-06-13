@@ -18,7 +18,7 @@ Key terminology:
 
 **Light curves:** the forced photometry fluxes should be used for light curves.
 
-All measurements are stored in the catalog `Data products`.
+All measurements are stored in the catalog :doc:`/products/index`.
 
 
 .. _dia-image:

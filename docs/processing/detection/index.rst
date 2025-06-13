@@ -10,7 +10,7 @@ as described in
 "The LSST Science Pipelines Software: Optical Survey Pipeline Reduction and Analysis Environment"
 (`pstn-019.lsst.io <https://pstn-019.lsst.io/>`_).
 
-All measurements are stored in the catalog `Data products`.
+All measurements are stored in the catalog :doc:`/products/index`.
 
 
 Sources and objects
