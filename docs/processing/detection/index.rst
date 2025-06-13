@@ -18,8 +18,8 @@ Sources and objects
 
 Key terminology:
 
- * ``source``: a detection in a single processed visit image
- * ``object``: an astrophysical object at a static sky coordinate
+* ``source``: a detection in a single processed visit image
+* ``object``: an astrophysical object at a static sky coordinate
 
 Measurements made on objects in a processed visit image are called "sources".
 

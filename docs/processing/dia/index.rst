@@ -12,8 +12,8 @@ and in the LSST Science Pipelines documentation for
 
 Key terminology:
 
- * ``DiaSource``: a detection, positive or negative, in a single difference image
- * ``DiaObject``: the astrophysical transient or variable object at a static sky coordinate
+* ``DiaSource``: a detection, positive or negative, in a single difference image
+* ``DiaObject``: the astrophysical transient or variable object at a static sky coordinate
 
 
 **Light curves:** the forced photometry fluxes should be used for light curves.
