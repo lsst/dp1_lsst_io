@@ -24,6 +24,13 @@ Short tutorials with a learning objective of how to use a single RSP function or
 102. Queries with the UI
 ------------------------
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal/portal-102-3rst
+
+
 103. Queries with ADQL
 ----------------------
 
