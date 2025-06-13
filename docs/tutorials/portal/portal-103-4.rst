@@ -37,7 +37,7 @@ Leave "Temporal" and Object ID Search" unchecked, but of course it is possible t
 
     Figure 1: The Portal UI set up to search for images corresponding to the constraints in the "Enter Constraints" area.
 
-**3.  Convert the parameters selected via UI to an ADQL query**
+**3.  Convert the parameters selected via UI to an ADQL query.**
 Click on the box "Populate and edit ADQL".
 This will result in the ADQL aspect of the Portal, with the UI query above converted to an ADQL query.
 You can enter the query manually (or edit it) if needed.
@@ -48,7 +48,7 @@ You can enter the query manually (or edit it) if needed.
 
     Figure 2: The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
 
-**4.  Examine the resulting image(s)**
+**4.  Examine the resulting image(s).**
 Click on the "Search" button.
 This will result in the image on the upper left corresponding to the first entry in the table on the bottom, and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
 Other images can be examined by clicking other entries in the table on the bottom.
