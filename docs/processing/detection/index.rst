@@ -5,7 +5,7 @@ Source detection and measurement
 ################################
 
 Sources in the visit and deep coadd images are detected, deblended, and measured
-following (approximately) the process in `Bosch et al. (2018) <https://academic.oup.com/pasj/article/70/SP1/S5/4494136>`_, 
+following (approximately) the process in `Bosch et al. (2018) <https://academic.oup.com/pasj/article/70/SP1/S5/4494136>`_,
 as described in
 "The LSST Science Pipelines Software: Optical Survey Pipeline Reduction and Analysis Environment"
 (`pstn-019.lsst.io <https://pstn-019.lsst.io/>`_).
@@ -19,7 +19,7 @@ Sources and objects
 Key terminology:
 
  * ``source``: a detection in a single processed visit image
- * ``object``: the astrophysical object at a static sky coordinate 
+ * ``object``: an astrophysical object at a static sky coordinate
 
 Measurements made on objects in a processed visit image are called "sources".
 
@@ -38,12 +38,20 @@ These regions are called ``Footprints``.
 The threshold used for detection is a signal-to-noise ratio > 5.
 
 
+Pixel flags
+-----------
+
+If the footprint contains one or more flagged pixels,
+e.g., for cosmic rays, detector edge, bad pixels, or flux saturation,
+the source is also flagged.
+
+
 .. _detection-deblend:
 
 Deblending
 ==========
 
-After detection, ``Footprints`` with multiple peaks are deblended into 
+After detection, ``Footprints`` with multiple peaks are deblended into
 "children" (with the original blended footprint called the "parent").
 
 The Scarlet Lite algorithm is used for deblending, as described in
@@ -66,7 +74,7 @@ In visit images, measurements of sources assume a PSF or Gaussian shape.
 The results are stored in the ``Source`` catalog.
 
 In deep coadd images, measurements of objects include both PSF and extended shapes.
-A wide variety of flux measurements are pre-calculated, such as the 
+A wide variety of flux measurements are pre-calculated, such as the
 composite model (cModel), Gaussian-aperture-and-PSF (GaaP), and Sersic models.
 The results are stored in the ``Object`` catalog.
 
@@ -84,6 +92,6 @@ are forced photometry measurements.
 The set of fixed coordinates is the union set of all detected objects and sources
 (even sources only detected in one visit, or one band).
 
-Forced PSF photometry measurements are also made on all visit images at the locations
-of all objects.
+Forced PSF photometry measurements are also made on all visit images
+and all difference images at the locations of all objects.
 The results are stored in the ``ForcedSource`` catalog.

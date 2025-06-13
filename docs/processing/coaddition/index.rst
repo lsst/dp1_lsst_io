@@ -39,7 +39,7 @@ no data flagged as "NO_DATA" in the mask plane.
 Input image selection
 =====================
 
-The selection criteria for coadd inputs for DP1 does not represent the 
+The selection criteria for coadd inputs for DP1 does not represent the
 selection criteria for future data release.
 
 For the DP1 deep coadds, an visit image had to have a PSF FWHM < 1.7 arcseconds
