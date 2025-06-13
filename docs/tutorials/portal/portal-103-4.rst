@@ -25,8 +25,8 @@ While it is possible to enter the ADQL query directly into the ADQL aspect of th
 **2.  Prepare the ADQL query using the UI aspect.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
 In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.ObsCore" table.
-Leave the blue checkmarks in the "Output Column Selection and Constrants" as defaulted.
-Under "Enter Constraints" for "Query Type" check "Observation boundary contains pont".
+Leave the blue checkmarks in the "Output Column Selection and Constraints" as defaulted.
+Under "Enter Constraints" for "Query Type" check "Observation boundary contains point".
 For coordinates, enter ``53.0, -28.0``.
 In "Observation Type and Source" check "PVI(2)" - this selects the individual calibrated exposures (Processed Visit Images).
 Leave "Temporal" and Object ID Search" unchecked, but of course it is possible to restrict the search to observations conducted during specific times.
@@ -44,18 +44,18 @@ You can enter the query manually (or edit it) if needed.
 
 .. figure:: images/portal-103-4-2.png
     :name: portal-103-4-2
-    :alt: The Portal ADQL aspect, illustratihn the query converted from UI to ADQL.
+    :alt: The Portal ADQL aspect, illustrating the query converted from UI to ADQL.
 
     Figure 2: The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
 
 **4.  Examine the resulting image(s)**
 Click on the "Search" button.
-This will result in the image on the upper left corresponding th the first entry in the table on the bottom, and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
+This will result in the image on the upper left corresponding to the first entry in the table on the bottom, and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
 Other images can be examined by clicking other entries in the table on the bottom.
 
 .. figure:: images/portal-103-4-3.png
     :name: portal-103-4-3
-    :alt: The Portal ADQL aspect, illustratihn the query converted from UI to ADQL.
+    :alt: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query above.
 
     Figure 3: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query in Figure 2.
 
