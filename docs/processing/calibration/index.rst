@@ -4,25 +4,29 @@
 Image calibration
 #################
 
-.. _calibration-stars:
+The process of transforming a post-ISR image into a science-ready ``visit_image``.
 
-Calibration stars
-=================
 
-Bright, isolated stars are detected in images and used for the photometric, astrometric, and PSF calibrations.
+.. _calibration-monster:
+
+The Monster catalog
+===================
+
+A whole-sky standard star catalog built specifically for LSST.
 
 .. toctree::
     :maxdepth: 1
     :titlesonly:
     :glob:
 
-    stars
+    monster
+
 
 
 .. _calibration-photmetric:
 
-Photometric
-===========
+Photometric calibration
+=======================
 
 Photometric calibrations correct the counts (electrons) measured by the camera to the incident flux from a source at Earth before it enters the atmosphere.
 
@@ -37,8 +41,8 @@ Photometric calibrations correct the counts (electrons) measured by the camera t
 
 .. _calibration-astrometric:
 
-Astrometric
-===========
+Astrometric calibration
+=======================
 
 Astrometric calibrations define the World Coordinate System (WCS) of an image, the relation between pixel coordinate and sky coordinate (Right Ascension and Declination).
 
@@ -53,8 +57,8 @@ Astrometric calibrations define the World Coordinate System (WCS) of an image, t
 
 .. _calibration_psf:
 
-Point spread function estimation
-================================
+Point spread function modeling
+==============================
 
 Characterizing how the optical system "blurs" a point source into a two-dimensional shape on the detector.
 
@@ -71,6 +75,7 @@ Characterizing how the optical system "blurs" a point source into a two-dimensio
 Background subtraction
 ======================
 
+Removing the atmospheric sky background flux from the image.
 
 .. toctree::
     :maxdepth: 1

@@ -4,23 +4,28 @@
 Photometric calibration
 #######################
 
-*Overview of what it means and the steps involved.*
-
-* input: post-ISR exposure
-* identify bright isolated stars
-* cross-match to the monster
-* other things happen
-* output: ``visit_image``
+Photometric calibration corrects the observed flux for attenuation from the atmosphere, filters, optics, and detector quantum efficiency.
 
 Photometric calibration uses the Forward Global Calibration Method (FGCM; `Burke et al. 2018 <https://ui.adsabs.harvard.edu/abs/2018AJ....155...41B/abstract>`_).
 
-.. _photometric-monster:
+For a description of the photometric calibration steps, refer to the "Rubin Baseline Calibration Plan" (`sitcomtn-086.lsst.io <https://sitcomtn-086.lsst.io/>`_).
 
-The Monster
-===========
+The steps of photometric calibration include:
 
-Both photometric and astrometric calibration make use of a custom reference catalog referred to as "`the Monster <https://dmtn-277.lsst.io/>`_".
-The Monster is a whole-sky catalog built specifically for LSST, as no prior reference catalog had both the depth and coverage needed to calibrate LSST data.
-The Monster combines data from multiple previous reference catalogs, including Dark Energy Survey, Pan-STARRS, and Gaia, and contains only stellar sources.
+* chromatic corrections
+* observed passbands
+* instrumental response (quantum efficiency)
+* opacity of the optical system
+* chromatic throughput
+* reference flux flats
+* atmospheric response
 
+
+Overview
+========
+
+Bright, isolated stars with signal-to-noise greater than 10 that are detected in post-ISR images,
+and associated with the global absolute reference catalog refered to as :doc:`/processing/calibration/monster`,
+are input into the FGCM solution.
+The FGCM model constrains the atmospheric parameters per night, as well as the absolute throughput.
 

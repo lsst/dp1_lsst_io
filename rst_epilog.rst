@@ -3,6 +3,8 @@
    add common substitutions and links. See
    https://documenteer.lsst.io/guides/rst-epilog.html
 
+.. |dp1_paper| replace:: ``DP1 paper reference``
+
 .. |doi_comcam| replace:: ``https://doi.org/10.71929/rubin/2561361``
 
 .. |doi_deep_coadd| replace:: ``https://doi.org/12.3456/78901234.5678.9012347``
