@@ -39,10 +39,23 @@ Leave "Temporal" and Object ID Search" unchecked, but of course it is possible t
 **3.  Convert the parameters selected via UI to an ADQL query**
 Click on the box "Populate and edit ADQL".
 This will result in the ADQL aspect of the Portal, with the UI query above converted to an ADQL query.
+Of course you can enter the query manually (or edit it) if needed.
 
 .. figure:: images/portal-103-4-2.png
     :name: portal-103-4-2
     :alt: The Portal ADQL aspect, illustratihn the query converted from UI to ADQL.
 
-    Figure 2: The The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
+    Figure 2: The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
+
+*4.  Examine the resulting image(s)**
+Click on the "Search" button.  
+This will result in the image corresponding to the first entry in the table on the upper left, and the scatter point of telescope pointings on the upper right, as shown in the scfreenshot below.
+Other images can be examined by clicking other entries in the table on the bottom.
+
+.. figure:: images/portal-103-4-3.png
+    :name: portal-103-4-3
+    :alt: The Portal ADQL aspect, illustratihn the query converted from UI to ADQL.
+
+    Figure 3: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query in Figure 2.
+
 
