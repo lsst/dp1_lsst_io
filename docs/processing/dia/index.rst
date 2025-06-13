@@ -69,7 +69,7 @@ Real and spurious DIA sources can both be detected with a signal-to-noise ratio 
 For DP1, a relatively simple machine learning reliability model was built,
 trained on simulated data and injected point sources labelled by Rubin staff,
 and applied to DIA sources.
-The reliability value is stored in the ``reliability`` column of the ``diaSource` catalog.
+The reliability value is stored in the ``reliability`` column of the ``DiaSource`` catalog.
 
 Bright stars and correlated noise are the main sources of spurious detections.
 
