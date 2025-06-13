@@ -28,7 +28,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    portal/portal-102-3rst
+    portal/portal-102-3.rst
 
 
 103. Queries with ADQL
