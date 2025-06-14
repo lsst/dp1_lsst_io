@@ -4,7 +4,7 @@
 Visit
 #####
 
-``visit_table``: Observation metadata for the full focal plane (date, time, band, coordinates).
+Observation metadata for the full focal plane (date, time, band, coordinates).
 
 DOI: |doi_visit_table|
 
@@ -17,7 +17,7 @@ Schema: `Visit table <https://sdm-schemas.lsst.io/dp1.html#Visit>`_
 Access
 ======
 
-The ``visit_table`` catalog is accessible via the TAP and butler services.
+The visit catalog is accessible via the TAP and butler services.
 
 **Recommended access service:** TAP
 
@@ -43,4 +43,4 @@ Tutorials
 ---------
 
 See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
-tutorials demonstrating how to access the ``Visit`` table.
+tutorials demonstrating how to access the visit table.

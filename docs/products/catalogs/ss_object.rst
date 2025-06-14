@@ -4,7 +4,7 @@
 SS object
 #########
 
-``ss_object``: *TBD.*
+Derived parameters for moving objects.
 
 DOI: |doi_ss_object|
 
@@ -17,7 +17,7 @@ Schema: `SSObject table <https://sdm-schemas.lsst.io/dp1.html#SSObject>`_
 Access
 ======
 
-The ``ss_object`` catalog is accessible via the TAP and butler services.
+The SS object catalog is accessible via the TAP and butler services.
 
 **Recommended access service:** TAP
 
@@ -37,17 +37,17 @@ Description
 
 A "Solar System object" is ...
 
-The ``ss_object`` table is created by ...
+The SS object table is created by ...
 
 *Details TBD.*
 
 Processing
 ----------
 
-The ``ss_object`` catalog is the result of :doc:`/processing/moving/index`.
+The SS object catalog is the result of :doc:`/processing/moving/index`.
 
 Tutorials
 ---------
 
 See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
-tutorials demonstrating how to access the ``ss_object`` table.
+tutorials demonstrating how to access the SS object table.
