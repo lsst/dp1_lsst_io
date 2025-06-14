@@ -22,7 +22,7 @@ Dataset type: ``('deep_coadd', {band, skymap, tract, patch}, ExposureF)``
 SIA and TAP
 -----------
 
-Schema: `ObsCore table<https://sdm-schemas.lsst.io/dp1.html#ObsCore>`_
+Schema: `ObsCore table <https://sdm-schemas.lsst.io/dp1.html#ObsCore>`_
 
 IVOA calibration level: 3
 
