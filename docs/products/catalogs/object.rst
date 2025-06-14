@@ -39,12 +39,12 @@ An "object" is an astrophysical object at a static sky coordinate.
 
 The ``object`` catalog contains forced measurements on the ``deep_coadd`` images
 at the coordinates of every object detected in the ``deep_coadd``
-and every source detected in the individual ``visit_images``. 
+and every source detected in the individual ``visit_images``.
 
 Processing
 ----------
 
-The ``object`` catalog is the result of :doc:`processing/detection/index`. 
+The ``object`` catalog is the result of :doc:`/processing/detection/index`.
 
 Tutorials
 ---------
