@@ -4,37 +4,52 @@
 Source
 ######
 
-``source``: *Detections in processed visit images.*
+``source``: Detections in processed visit images.
 
 DOI: |doi_source|
 
-TAP name: ``Source``
+Columns: 156
 
+Rows: 45,565,632
 
-Dimensions and storage class
-----------------------------
+Schema: `Source table <https://sdm-schemas.lsst.io/dp1.html#Source>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The ``source`` catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``Source``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+An "source" is a signal-to-noise ratio > 5 detection in a visit image.
+
+The ``source`` catalog contains measurements on a ``visit_image``
+at the coordinates of every source detected in that image.
+
+Measurements include PSF and Gaussian fluxes and sizes,
+as well as processing pixel flags.
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``source`` catalog is the result of :doc:`/processing/detection/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``source`` table.

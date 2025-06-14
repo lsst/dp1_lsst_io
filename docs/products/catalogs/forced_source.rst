@@ -4,37 +4,50 @@
 Forced source
 #############
 
-``object_forced_source``: *TBD*
+``object_forced_source``: Forced measurements in visit and difference images, at the coordinates of all objects.
 
 DOI: |doi_forced_source|
 
-TAP name: ``ForcedSource``
+Columns: 28
 
+Rows: 268,796,943
 
-Dimensions and storage class
-----------------------------
+Schema: `ForcedSource table <https://sdm-schemas.lsst.io/dp1.html#ForcedSource>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The ``object_forced_source`` catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``ForcedSource``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+"Forced" photometry means a measurement is made at a fixed coordinate in an image,
+regardless of whether an above-threshold region was detected there, in that particular image.
+
+The ``ForcedSource`` catalog contains forced PSF flux photometry on both the ``visit_image``
+and ``difference_image`` at the coordinates of every object in the ``object`` table.
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``ForcedSource`` catalog is the result of :doc:`/processing/detection/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``ForcedSource`` table.
