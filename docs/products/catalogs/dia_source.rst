@@ -4,37 +4,54 @@
 DIA source
 ##########
 
-``dia_source``: *TBD.*
+``dia_source``: Detections in difference images.
 
 DOI: |doi_dia_source|
 
-TAP name: ``DiaSource``
+Columns: 87
 
+Rows: 3,086,404
 
-Dimensions and storage class
-----------------------------
+Schema: `DiaSource table <https://sdm-schemas.lsst.io/dp1.html#DiaSource>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The ``dia_source`` catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``DiaSource``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('dia_source', {skymap, tract}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+A "DIA source" is a signal-to-noise ratio > 5 detection in a difference image.
+
+The ``dia_source`` catalog contains measurements on a ``difference_image``
+at the coordinates of every source detected in that difference image.
+These measurements include PSF-fit and forced PSF fluxes, and aperture and
+trailed-source fluxes.
+Forced PSF fluxes on the corresponding ``visit_image`` ("science" image)
+at the coordinates of the DIA source are also included.
+
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``dia_source`` catalog is the result of :doc:`/processing/dia/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``dia_source`` table.

@@ -35,7 +35,7 @@ Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, 
 Description
 ===========
 
-An "source" is a signal-to-noise ratio > 5 detection in a visit image.
+A "source" is a signal-to-noise ratio > 5 detection in a visit image.
 
 The ``source`` catalog contains measurements on a ``visit_image``
 at the coordinates of every source detected in that image.

@@ -4,29 +4,48 @@
 MPCORB
 ######
 
-Table not available via the butler.
+``MPCORB``: *TBD.*
 
 DOI: |doi_mpcorb|
 
-TAP name: ``MPCORB``
+Columns: 10
 
+Rows: 1,425,270
 
-Schema
+Schema: `MPCORB table <https://sdm-schemas.lsst.io/dp1.html#MPCORB>`_
+
+Access
+======
+
+The ``MPCORB`` catalog is accessible via the TAP service only.
+
+TAP
+---
+
+Table name: ``MPCORB``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Not available.
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+The `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC) ...
+
+The ``MPCORB`` table is created by ...
+
+*Details TBD.*
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``MPCORB`` catalog is the result of :doc:`/processing/moving/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``MPCORB`` table.

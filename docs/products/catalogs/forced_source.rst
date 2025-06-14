@@ -36,10 +36,10 @@ Description
 ===========
 
 "Forced" photometry means a measurement is made at a fixed coordinate in an image,
-regardless of whether an above-threshold region was detected there, in that particular image.
+regardless of whether an above-threshold region was detected there in that particular image.
 
 The ``ForcedSource`` catalog contains forced PSF flux photometry on both the ``visit_image``
-and ``difference_image`` at the coordinates of every object in the ``object`` table.
+and ``difference_image`` at the coordinates of every object in the ``Object`` table.
 
 Processing
 ----------

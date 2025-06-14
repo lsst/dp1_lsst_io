@@ -8,33 +8,46 @@ SS source
 
 DOI: |doi_ss_source|
 
-TAP name: ``SSSource``
+Columns: 23
 
+Rows: 5988
 
-Dimensions and storage class
-----------------------------
+Schema: `SSSource table <https://sdm-schemas.lsst.io/dp1.html#SSSource>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The ``ss_source`` catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``SSSource``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('ss_source', {}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+A "Solar System source" is ...
+
+The ``ss_source`` table is created by ...
+
+*Details TBD.*
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``ss_object`` catalog is the result of :doc:`/processing/moving/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``ss_source`` table.

@@ -8,33 +8,46 @@ SS object
 
 DOI: |doi_ss_object|
 
-TAP name: ``SSObject``
+Columns: 3
 
+Rows: 431
 
-Dimensions and storage class
-----------------------------
+Schema: `SSObject table <https://sdm-schemas.lsst.io/dp1.html#SSObject>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The ``ss_object`` catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``SSObject``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('ss_object', {}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+A "Solar System object" is ...
+
+The ``ss_object`` table is created by ...
+
+*Details TBD.*
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The ``ss_object`` catalog is the result of :doc:`/processing/moving/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the ``ss_object`` table.
