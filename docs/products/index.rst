@@ -28,16 +28,17 @@ Individual, difference, and coadded images of the sky in the six LSST filters.
 
     images/index
 
-Survey property maps
-====================
+Maps
+====
 
-All-sky maps of survey depth, image quality, and more.
+All-sky maps of deep coadded images, survey depth, image quality, and more.
 
 .. toctree::
     :maxdepth: 1
     :glob:
 
     spmaps/index
+    hips/index
 
 Calibrations
 ============
