@@ -4,45 +4,76 @@
 Difference image
 ################
 
-``difference_image``: *Created by subtracting a template image from a visit image..*
+The result of subtracting a template coadd from a visit image.
 
 DOI: |doi_difference_image|
 
+Access
+======
+
+The difference images are accessible via the butler, SIA, and TAP services.
+
+Butler
+------
+
+Dataset type: ``('difference_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+
+SIA and TAP
+-----------
+
+Schema: `ObsCore table <https://sdm-schemas.lsst.io/dp1.html#ObsCore>`_
+
 IVOA calibration level: 3
 
-Dimensions and storage class
-----------------------------
-
-*butler dimensions for query and retrieval*
-
-*storage class / format / python type*
+Dataproduct subtype: ``lsst.difference_image``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+Difference images are created by taking template coadd images, then
+resizing, warping, PSF-matching, and scaling them to a given visit image,
+and subtracting the result from the visit image.
+Each individual difference image contains data from one of the camera's detectors.
 
-*Visit images are fully processed, sky subtracted, and calibrated.*
+Difference images contain sources of residual flux from the subtraction,
+positive and negative.
+Real astrophyisical transients, variables, and moving objects appear as sources with
+a flux that is equal to the difference between their flux in the template and visit images.
 
-*The image for one individual detector is called a ``calexp``.*
+For *future* data releases, to save space, the difference images will not be stored.
+Instead, a tool for on-the-fly difference image recreation will be provided to users.
 
-Pixel data
-^^^^^^^^^^
-
-*Calibrated but not absolutely. Quote units, and how to convert to AB mags.*
-
-Metadata
-^^^^^^^^
-
-*Metadata includes PSF, photcalib, WCS, etc.*
+For DP1, the difference images are served and can be retrieved
+and displayed by users instantaneously, but the inputs and tools
+for their re-creation are not supplied.
 
 Processing
-^^^^^^^^^^
+----------
 
-*calibration level 1, 2, or 3*
+The difference images are the result of :doc:`/processing/dia/index`.
 
-*brief description of processing stage that generates them*
+Pixel data
+----------
 
-*maybe a pipeline graph snippet to illustrate production*
+The difference images have three planes of pixel data.
 
+Image: Sky pixel data in flux units of nJy.
+
+Variance: Uncertainty (noise) in the flux in units of nJy^2.
+
+Mask: An integer bitmask of representative flag values that indicate processing status or issues,
+similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
+
+Metadata
+--------
+
+The metadata for difference images retrieved from the butler include
+information about the observation (e.g., pointing, weather),
+and the derived PSF, photometric calibration, and WCS.
+
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the difference images.
