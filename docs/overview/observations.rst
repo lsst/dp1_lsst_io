@@ -19,7 +19,7 @@ Field centers
 
 
 .. list-table:: Table 1: Field names and central coordinates.
-   :widths: 2 1 1
+   :widths: 2 2 1
    :header-rows: 1
 
    * - Field name
@@ -54,32 +54,72 @@ Filters
 =======
 
 .. list-table:: Table 2: Number of visits per band per field.
-   :widths: 3 3 1
+   :widths: 4 1 1 1 1 1 1 1
    :header-rows: 1
 
    * - Field name
-     - u g r i z y
+     - u
+     - g
+     - r
+     - i
+     - z
+     - y
      - Total
    * - 47 Tuc Globular Cluster
-     - 0 10 32 19 0 5
+     - 0
+     - 10
+     - 32
+     - 19
+     - 0
+     - 5
      - 66
    * - Low Ecliptic Latitude Field
-     - 0 44 40 55 20 0
+     - 0
+     - 44
+     - 40
+     - 55
+     - 20
+     - 0
      - 159
    * - Fornax Dwarf Spheroidal Galaxy
-     - 0 5 25 12 0 0
+     - 0
+     - 5
+     - 25
+     - 12
+     - 0
+     - 0
      - 42
    * - Extended Chandra Deep Field South (ECDFS)
-     - 43 230 237 162 153 30
+     - 43
+     - 230
+     - 237
+     - 162
+     - 153
+     - 30
      - 855
    * - Euclid Deep Field South (EDFS)
-     - 20 61 87 42 42 20
+     - 20
+     - 61
+     - 87
+     - 42
+     - 42
+     - 20
      - 272
    * - Low Galactic Latitude Field
-     - 33 82 84 23 60 10
+     - 33
+     - 82
+     - 84
+     - 23
+     - 60
+     - 10
      - 292
    * - Seagull Nebula
-     - 10 37 43 0 10 0
+     - 10
+     - 37
+     - 43
+     - 0
+     - 10
+     - 0
      - 100
 
 
