@@ -51,7 +51,7 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
+  SELECT coord_ra, coord_dec, refExtendedness,
          scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
          scisql_nanojanskyToAbMagSigma(u_cModelFlux, u_cModelFluxErr) AS u_cModelMagErr,
          scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
@@ -64,13 +64,13 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
          scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag,
          scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr
-  FROM dp02_dc2_catalogs.Object
+  FROM dp1_v29.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 62, -37, 0.167)) =1
-        AND (detect_isPrimary =1 AND refExtendedness =1
-             AND u_cModelFlux >360 AND g_cModelFlux >360
-             AND r_cModelFlux >360 AND i_cModelFlux >360
-             AND z_cModelFlux >360 AND y_cModelFlux >360)
+        CIRCLE('ICRS', 53.13, -28.1, 0.167)) =1
+        AND (refExtendedness =1
+            AND u_cModelFlux >360 AND g_cModelFlux >360
+            AND r_cModelFlux >360 AND i_cModelFlux >360
+            AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
 **4. Notice the query constraints** on coordinate, extendedness, flux, and the ``detect_isPrimary`` flag are set in order to
