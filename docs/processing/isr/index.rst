@@ -6,7 +6,7 @@ Instrument signature removal (ISR)
 
 ISR corrects the raw images for the effects of the telescope and detector.
 
-For descriptions of the ISR steps, refer to the "Rubin Baseline Calibration Plan" (`sitcomtn-086.lsst.io <https://sitcomtn-086.lsst.io/>`_).
+For descriptions of the ISR steps, refer to the paper "Instrument Signature Removal and Calibration Products for the Rubin Legacy Survey of Space and Time" (`<https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_) and the "Rubin Baseline Calibration Plan" (`sitcomtn-086.lsst.io <https://sitcomtn-086.lsst.io/>`_).
 
 ISR is the first step of the image processing which leads to calibrated, science-ready images.
 
