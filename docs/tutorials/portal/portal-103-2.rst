@@ -26,7 +26,7 @@ Negative fluxes should not be converted to magnitudes using this special ADQL fu
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
 
 **2. To return magnitudes** use the ``scisql_nanojanskyToAbMag()`` function.
-This function will convert a flux value with the units of nanoJanskies (nJy) into an AB magnitude.
+This function will convert a flux value with the units of nanoJanskys (nJy) into an AB magnitude.
 The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude and :math:`f` is flux.
 
 .. code-block:: SQL
@@ -73,8 +73,8 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
             AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
-**4. Notice the query constraints** on coordinate, extendedness, flux, and the ``detect_isPrimary`` flag are set in order to
-retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
+**4. Notice the query constraints** on coordinate, extendedness, and flux are set in order to
+retrieve a sample of extended sources (galaxies) brighter than 25th magnitude.
 
 **5. View the results.**
 Figure 1 shows the table panel in the Results tab for the query above.
