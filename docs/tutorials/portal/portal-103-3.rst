@@ -107,7 +107,7 @@ Constraints can be applied on columns from any or all tables.
 
 **6. Review the three-table join results.**
 The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
-The default Results tab will display an empty panel instead of the coverage chart. To view the coverage chart, click the
+The default Results tab might display an empty panel instead of the coverage chart. To view the coverage chart, click the
 "Coverage" tab at the top of the upper left panel.
 
 .. figure:: images/portal-103-3-2.png
@@ -118,6 +118,6 @@ The default Results tab will display an empty panel instead of the coverage char
 
 
 **7. Find more join examples.**
-Visit the /data-access-analysis-tools/adql-recipes page for more examples of table joins.
+Visit the ``/data-access-analysis-tools/adql-recipes`` page for more examples of table joins.
 Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
 
