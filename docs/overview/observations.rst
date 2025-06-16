@@ -89,7 +89,7 @@ Epochs (nights)
 ===============
 
 .. list-table:: Table 3: Number of nights, mean visits per night.
-   :widths: 1 1
+   :widths: 3 1 1
    :header-rows: 1
 
    * - Field name

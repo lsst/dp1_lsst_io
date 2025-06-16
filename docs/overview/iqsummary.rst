@@ -20,7 +20,7 @@ Visit PSF size
      - Total
    * - 47 Tuc Globular Cluster
      - -- 1.47 1.26 1.11 -- 1.34
-     - 1.25 
+     - 1.25
    * - Low Ecliptic Latitude Field
      - -- 1.16 1.13 1.11 1.23 --
      - 1.14
