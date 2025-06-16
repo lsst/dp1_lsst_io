@@ -31,10 +31,10 @@ The steps of ISR include:
 * flat fielding
 
 
-.. figure:: images/isr_flowchart.png
+.. figure:: images/isr_model.png
     :width: 600
-    :name: isr_flowchart
-    :alt: A schematic diagram of various detector signatures relevant for LSSTCam images.
+    :name: isr_model
+    :alt: A schematic diagram of a model with various detector signatures relevant for LSSTCam images.
 
     Figure 1: The model of the detector and readout board (REB) components, labeled with the effects that they impart on signal (from |dp1_paper|).
 
