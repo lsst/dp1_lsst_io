@@ -42,7 +42,7 @@ Input image selection
 The selection criteria for coadd inputs for DP1 does not represent the
 selection criteria for future data release.
 
-For the DP1 deep coadds, an visit image had to have a PSF FWHM < 1.7 arcseconds
+For the DP1 deep coadds, a visit image had to have a PSF FWHM < 1.7 arcseconds
 to be selected as an input image.
 
 For template coadds, good seeing (low PSF FWHM) is more important than depth.

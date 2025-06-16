@@ -4,37 +4,55 @@
 Object
 ######
 
-``object``: *Forced measurements in deep coadd images.*
+Forced measurements in deep coadd images.
 
 DOI: |doi_object|
 
-TAP name: ``Object``
+Columns: 1272
 
+Rows: 2,299,757
 
-Dimensions and storage class
-----------------------------
+Schema: `Object table <https://sdm-schemas.lsst.io/dp1.html#Object>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The object catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``Object``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('object', {skymap, tract}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+An "object" is an astrophysical object at a static sky coordinate.
+
+The object catalog contains forced measurements on the deep coadd images
+at the coordinates of every object detected in the deep coadd image
+and every source detected in the individual visit images
+(except sources associated with moving objects).
+
+Measurements include PSF and extended fluxes, shapes, and sizes,
+as well as processing pixel flags.
+Photometry is calibrated, but not corrected for Milky Way dust extinction.
 
 Processing
-^^^^^^^^^^
+----------
 
-*brief description of processing stage that generates them*
+The object catalog is the result of :doc:`/processing/detection/index`.
 
-*maybe a pipeline graph snippet to illustrate production*
+Tutorials
+---------
+
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the object table.

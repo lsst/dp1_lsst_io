@@ -4,11 +4,9 @@
 Moving objects processing
 #########################
 
-*High-level descriptions.*
+*High-level descriptions with links to relevant publications or technical documentation.*
 
-*Link to relevant technical documentation or publications.*
-
-*A nice flow chart would be a good addition here (or link to it).*
+All measurements are stored in the moving objects :doc:`/products/catalogs/index`.
 
 
 .. _moving-detection:

@@ -13,7 +13,7 @@ The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column description
 Object
 ======
 
-Measurements on the deep coadd images at the locations of all detected sources.
+Measurements on the deep coadd images at the locations of all detected objects.
 
 .. toctree::
     :maxdepth: 1
@@ -27,7 +27,7 @@ Measurements on the deep coadd images at the locations of all detected sources.
 Source and forced source
 ========================
 
-Measurements on the visit images at the locations of all detected sources (or objects).
+Measurements on the individual images at the locations of all objects.
 
 .. toctree::
     :maxdepth: 1
@@ -41,7 +41,7 @@ Measurements on the visit images at the locations of all detected sources (or ob
 Difference image analysis
 =========================
 
-Measurements on difference and visit images at the locations of all detected sources in the difference images.
+Measurements on the difference and visit images at the locations of all variable or moving objects.
 
 .. toctree::
     :maxdepth: 1

@@ -4,19 +4,17 @@
 Overview of Data Preview 1
 ##########################
 
-General information about the observations that comprise the DP1 dataset.
-
-*Add links to browsable, color HiPS maps when available.*
+General information about the observations that comprise the dataset.
 
 .. _overview-comcam:
 
-LSST Commissioning Camera (LSSTComCam)
-======================================
+LSST Commissioning Camera
+=========================
 
-All DP1 observations were obtained with the LSST Commissioning Camera (LSSTComCam).
+All observations were obtained with the LSST Commissioning Camera (LSSTComCam).
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     comcam
@@ -27,10 +25,10 @@ All DP1 observations were obtained with the LSST Commissioning Camera (LSSTComCa
 Observations
 ============
 
-The fields, filters, and dates of the observations included in DP1.
+The fields, filters, and number of visits.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     observations
@@ -39,16 +37,17 @@ The fields, filters, and dates of the observations included in DP1.
 
 .. _overview-iqsummary:
 
-Image quality summary
-=====================
+Image quality
+=============
 
-Key verification and validation metrics, in brief.
+A summary of the mean PSF for visit images, and the coadded depth.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     iqsummary
+    artifacts
 
 
 
@@ -57,10 +56,10 @@ Key verification and validation metrics, in brief.
 How to cite Data Preview 1
 ==========================
 
-How to cite Rubin Observatory and its Data Preview 1.
+How to cite Rubin Observatory and Data Preview 1.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     citedp1

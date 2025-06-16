@@ -19,7 +19,7 @@ Overview
 General information about the observations that comprise the dataset.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
 
    Overview <overview/index>
@@ -30,7 +30,7 @@ Data products
 Descriptions and schema for the images and catalogs.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
 
    Data products <products/index>
@@ -41,7 +41,7 @@ Data processing
 Summaries of the data processing steps that generated the data products.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
 
    Data processing <processing/index>
@@ -52,7 +52,7 @@ Data access and analysis
 Tutorials demonstrating how to access and analyze data via the Rubin Science Platform (RSP).
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
 
    Tutorials <tutorials/index>

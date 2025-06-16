@@ -4,37 +4,45 @@
 Visit detector (CcdVisit)
 #########################
 
-``visit_detector_table``: *Visit metadata, observation dates and filters.*
+Observation metadata for individual detectors (CCDs; date, time, band, PSF, zeropoint).
 
 DOI: |doi_visit_detector_table|
 
-TAP name: ``CcdVisit``
+Columns: 51
 
+Rows: 16071
 
-Dimensions and storage class
-----------------------------
+Schema: `CcdVisit table <https://sdm-schemas.lsst.io/dp1.html#CcdVisit>`_
 
-*butler dimensions for query and retrieval*
+Access
+======
 
-*storage class / format / python type*
+The visit detector catalog is accessible via the TAP and butler services.
 
+**Recommended access service:** TAP
 
-Schema
+TAP
+---
+
+Table name: ``CcdVisit``
+
+Butler
 ------
 
-*link to schema browser (catalogs)*
-
-*link to Portal with UI set to this dataset type*
+Dataset type: ``('visit_detector_table', {instrument}, ArrowAstropy)``
 
 
 Description
------------
+===========
 
-*Longer paragraph description.*
+A "visit" is an observation in a single filter, obtained at a given time and sky coordinate.
+A "detector" is one of the LSSTCam's 189 CCDs (charge-coupled device).
+A "CcdVisit" refers to an observation with a single detector as the
+reference for the observational metadata (e.g., airmass, seeing).
 
-Processing
-^^^^^^^^^^
+Tutorials
+---------
 
-*brief description of processing stage that generates them*
+See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
+tutorials demonstrating how to access the visit detector (``CcdVisit``) table.
 
-*maybe a pipeline graph snippet to illustrate production*

@@ -6,53 +6,56 @@ Data products
 
 Descriptions and schema for the science-ready data products.
 
-
-Images
-======
-
-.. toctree::
-    :maxdepth: 2
-    :glob:
-
-    images/index
-
-
 Catalogs
 ========
 
+Tables of measurements made on detected sources, plus observational metadata.
+
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     catalogs/index
 
+Images
+======
 
-
-Survey property maps
-====================
+Individual, difference, and coadded images of the sky in the six LSST filters.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
+    :glob:
+
+    images/index
+
+Maps
+====
+
+All-sky maps of deep coadded images, survey depth, image quality, and more.
+
+.. toctree::
+    :maxdepth: 1
     :glob:
 
     spmaps/index
-
+    hips/index
 
 Calibrations
 ============
 
+Calibration images (bias, dark, and flat frames).
+
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     calibrations/index
-
 
 Auxiliary information
 =====================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     name_changes
