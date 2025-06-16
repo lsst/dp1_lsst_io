@@ -1,4 +1,4 @@
-.. _iqsummary:
+.. _artifacts:
 
 #########
 Artifacts
