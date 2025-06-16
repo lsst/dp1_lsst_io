@@ -43,7 +43,7 @@ All-sky maps of deep coadded images, survey depth, image quality, and more.
 Calibrations
 ============
 
-Pixel and table data used to process and calibrate individual images.
+Calibration images (bias, dark, and flat frames).
 
 .. toctree::
     :maxdepth: 1
