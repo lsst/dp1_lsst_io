@@ -1,12 +1,13 @@
 .. _comcam:
 
-######################################
-LSST Commissioning Camera (LSSTComCam)
-######################################
+#########################
+LSST Commissioning Camera
+#########################
 
 DOI: |doi_comcam|
 
-LSSTComCam (`lsstcomcam.lsst.io <https://lsstcomcam.lsst.io/>`_) is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_.
+The LSST Commissioning Camera, LSSTComCam (`lsstcomcam.lsst.io <https://lsstcomcam.lsst.io/>`_),
+is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_.
 LSSTComCam is also referred to as the engineering test camera.
 
 .. _comcam-focalplane:
@@ -22,7 +23,7 @@ All of LSSTComCam's CCDs are from ITL, one of the same two vendors that supplied
 
 .. figure:: images/comcam_focal_plane.png
     :name: comcam_focal_plane
-    :alt: A visual showing the relative size of the LSST Commmissioning Camera, with just 9 detectors, compared to the LSST Camera with 189 detectors..
+    :alt: A visual showing the relative size of the LSST Commmissioning Camera, with just 9 detectors, compared to the LSST Camera with 189 detectors.
 
     Figure 1: The LSSTComCam has only 9 CCDs compared to LSSTCam's 189 CCDs.
 

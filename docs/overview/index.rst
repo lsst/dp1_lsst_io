@@ -8,8 +8,8 @@ General information about the observations that comprise the dataset.
 
 .. _overview-comcam:
 
-LSST Commissioning Camera (LSSTComCam)
-======================================
+LSST Commissioning Camera
+=========================
 
 All observations were obtained with the LSST Commissioning Camera (LSSTComCam).
 
@@ -25,7 +25,7 @@ All observations were obtained with the LSST Commissioning Camera (LSSTComCam).
 Observations
 ============
 
-The fields, filters, and dates of the observations.
+The fields, filters, and number of visits.
 
 .. toctree::
     :maxdepth: 1
@@ -37,10 +37,10 @@ The fields, filters, and dates of the observations.
 
 .. _overview-iqsummary:
 
-Image quality summary
-=====================
+Image quality
+=============
 
-Key verification and validation metrics.
+A summary of the mean PSF for visit images, and the coadded depth.
 
 .. toctree::
     :maxdepth: 1
