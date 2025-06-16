@@ -9,13 +9,13 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-05-30
+**Last verified to run:** 2025-06-16
 
 **Learning objective:** This tutorial demonstrates how to join tables from a given catalog and retrieve results with ADQL.
 
-**LSST data products:** dp0.2 catalogs
+**LSST data products:** dp1 catalogs
 
-**Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science Team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
@@ -25,7 +25,7 @@ Not all tables can be joined.
 Two tables must have a column in common in order to be joined.
 
 **1. Go to the DP0.2 catalog ADQL interface.**
-Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
+Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by clicking on Edit ADQL.
 
 **2. The ADQL components of a JOIN...ON statment.**
 The generic example below illustrates a common join scenario.
@@ -48,25 +48,25 @@ Two columns are selected from "table2" ("colX" and "colY").
 
 **3. Execute a two-table join.**
 The ``Source`` table (detections in individual processed visit images) can be joined with the
-``CcdVisit`` table (metadata about individual visits) using a shared column, ``ccdVisitId``,
-which uniquely identifies an LSST visit.
+``CcdVisit`` table (metadata about individual visits) using a shared column, named ``Visit``
+in the ``Source`` table and ``VisitId`` in the ``CcdVisit`` table,
+which identifies an LSST visit.
 Constraints can be applied on columns from either or both tables.
 Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
 
 .. code-block:: SQL
 
-   SELECT src.coord_ra, src.coord_dec, src.sourceId, src.band,
-          scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
-          src.ccdVisitId, cv.ccdVisitId,
-          cv.expMidptMJD, cv.seeing
-   FROM dp02_dc2_catalogs.Source AS src
-   JOIN dp02_dc2_catalogs.CcdVisit AS cv
-   ON src.ccdVisitId = cv.ccdVisitId
-   WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
-         CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
-         AND cv.expMidptMJD > 60925 AND cv.expMidptMJD < 60955
-         AND src.band = 'i'
-
+  SELECT src.coord_ra, src.coord_dec, src.sourceId, src.band,
+         scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
+         src.Visit, cv.VisitId,
+         cv.expMidptMJD, cv.seeing
+  FROM dp1_v29.Source AS src
+  JOIN dp1_v29.CcdVisit AS cv
+  ON src.Visit = cv.VisitId
+  WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
+        CIRCLE('ICRS', 53.13, -28.10, 0.05)) = 1
+        AND cv.expMidptMJD > 60631 AND cv.expMidptMJD < 60637
+        AND src.band = 'i'
 
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
