@@ -31,7 +31,6 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    portal/portal-103-1.rst
     portal/portal-103-2.rst
     portal/portal-103-3.rst
 
