@@ -27,6 +27,13 @@ Short tutorials with a learning objective of how to use a single RSP function or
 103. Queries with ADQL
 ----------------------
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal/portal-103-2.rst
+    portal/portal-103-3.rst
+
 104. Tabular data results interface
 -----------------------------------
 
