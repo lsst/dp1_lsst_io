@@ -6,7 +6,7 @@ Image quality
 
 An overview of the image quality and coadded depth per field.
 
-.. _iqsummary-iq:
+.. _iqsummary-psf:
 
 Visit PSF size
 ==============
@@ -79,6 +79,9 @@ Visit PSF size
      - 1.21
      - --
      - 1.22
+
+
+.. _iqsummary-maglim:
 
 Visit magnitude limits
 ======================

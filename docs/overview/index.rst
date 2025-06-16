@@ -47,6 +47,7 @@ A summary of the mean PSF for visit images, and the coadded depth.
     :glob:
 
     iqsummary
+    artifacts
 
 
 
