@@ -31,20 +31,20 @@ The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude a
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness,
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
-         scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp02_dc2_catalogs.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 62, -37, 0.167)) =1
-        AND (detect_isPrimary =1 AND refExtendedness =1
-             AND u_cModelFlux >360 AND g_cModelFlux >360
-             AND r_cModelFlux >360 AND i_cModelFlux >360
-             AND z_cModelFlux >360 AND y_cModelFlux >360)
+SELECT coord_ra,coord_dec,refExtendedness,
+       scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
+       scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
+       scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
+       scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
+       scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
+       scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
+FROM dp1_v29.Object
+WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+       CIRCLE('ICRS', 53.13, -28.1, 0.167))=1
+      AND (refExtendedness =1
+           AND u_cModelFlux >360 AND g_cModelFlux >360
+           AND r_cModelFlux >360 AND i_cModelFlux >360
+           AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
 **3. To return magnitude errors** use the ``scisql_nanojanskyToAbMagSigma()`` function.
