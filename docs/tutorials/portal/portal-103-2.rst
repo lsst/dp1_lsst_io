@@ -9,11 +9,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-05-30
+**Last verified to run:** 2025-06-16
 
 **Learning objective:** This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
 
-**LSST data products:** dp0.2 catalogs
+**LSST data products:** dp1 catalogs
 
 **Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
