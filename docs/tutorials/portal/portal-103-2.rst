@@ -81,7 +81,7 @@ Figure 1 shows the table panel in the Results tab for the query above.
 Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
 and the columns have been renamed as specified in the ADQL statement.
 
-.. figure:: images/portal-103-2-1.PNG
+.. figure:: images/portal-103-2-1.png
     :name: portal-103-2-1
     :alt: The table panel in the results tab shows the created magnitude columns.
 
