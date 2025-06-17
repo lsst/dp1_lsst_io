@@ -45,7 +45,7 @@ There, go to the Portal's DP0.2 Catalogs tab, and switch to the ADQL interface.
              AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
-**2. Review the Results tab layout.**
+**3. Review the Results tab layout.**
 The default layout of the Results tab is shown in Figure 1.
 
 .. figure:: images/portal-104-1-1.png
@@ -68,29 +68,29 @@ The *Table results* (bottom box in Figure 1):
 A scrollable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
 
-**3. View layout options.**
+**4. View layout options.**
 At upper left, click on the menu icon (a "hamburger" icon = three horizontal lines) to open the sidebar menu.
 Under "Results Layout", click on the icon of the default layout ("up-down" arrows in Figure 2) to see all layout options.
 
 .. figure:: images/portal-104-1-2.png
-    :name: images/portal-104-1-2
+    :name: portal-104-1-2
     :alt: The sidebar menu with options for the results view layout.
     :width: 200
 
     Figure 2: The sidebar menu with options for the results view layout.
 
-**4. Change the layout.**
+**5. Change the layout.**
 In the sidebar menu in Figure 2, choose the two-panel view of coverage charts on the left and tables on the right.
 Notice that the active chart (the plot) is still available as a tab at upper left.
 Reopen the sidebar menu to try other layouts and return to the default three-panel view.
 
-**5. Execute another query.**
+**6. Execute another query.**
 Click on the tab "DP0.2 Catalogs" to return to the ADQL interface.
 Change the query to return objects with ``i_cModelFlux`` :math:`>` 3600 nJy (22.5 mag).
 Execute the query.
 
-.. figure:: /_static/portal-howto-results-3.png
-    :name: portal-howto-results-3
+.. figure:: images/portal-104-1-3.png
+    :name: portal-104-1-3
     :alt: The Results tab after a second query has been executed.
 
     Figure 3: Similar to Figure 2, but with the results of two queries.
