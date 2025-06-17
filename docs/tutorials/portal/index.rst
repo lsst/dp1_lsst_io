@@ -165,9 +165,5 @@ Longer tutorials demonstrating an end-to-end scientific workflow.
 
     301/portal-301-1.rst
 
-302. Stars
-----------
 
-303. Galaxies
--------------
-
+*More tutorials coming soon!*

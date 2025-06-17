@@ -1,8 +1,8 @@
 .. _portal-201-2:
 
-################################
+#################################
 201.2. Source table (Coming Soon)
-################################
+#################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 

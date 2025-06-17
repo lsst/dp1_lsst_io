@@ -1,8 +1,8 @@
 .. _portal-201-7:
 
-#################################
+####################################
 201.7. DiaSource table (Coming Soon)
-#################################
+####################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
