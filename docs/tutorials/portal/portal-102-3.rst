@@ -1,9 +1,9 @@
 
 .. _portal-102-3:
 
-##########################################
-102.3. How to query for images with ObsTAP
-##########################################
+###################################
+102.3. Query for images with ObsTAP
+###################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 

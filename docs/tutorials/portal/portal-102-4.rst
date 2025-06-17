@@ -1,8 +1,8 @@
 .. _portal-102-4:
 
-##################################################################################################################
-102.4. How to use the Portal Job Monitor to determine the job ID and its status, and access the user query history
-##################################################################################################################
+#############################################
+102.4. Use the query job monitor (get job ID)
+#############################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
