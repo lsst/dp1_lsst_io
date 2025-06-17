@@ -70,7 +70,7 @@ Note that the orange point in the active chart corresponds to the selected row.
 
 **2. View layout options.**
 At upper left, click on the menu icon (a "hamburger" icon = three horizontal lines) to open the sidebar menu.
-Under "Results Layout", click on the icon of the default layout (A in Figure 2) to see all layout options.
+Under "Results Layout", click on the icon of the default layout ("up-down" arrows in Figure 2) to see all layout options.
 
 .. figure:: images/portal-104-1-2.png
     :name: images/portal-104-1-2
