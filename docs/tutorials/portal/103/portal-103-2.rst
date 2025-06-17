@@ -1,95 +1,68 @@
 .. _portal-103-2:
 
-###################################################
-103.2 How to convert fluxes to magnitudes with ADQL
-###################################################
-
+#######################################
+103.2. Query for catalog data with ADQL
+#######################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-16
+**Last verified to run:** 2025-06-12
 
-**Learning objective:** This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
+**Learning objective:** Prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal.
 
-**LSST data products:** dp1 catalogs
+**LSST data products:** ``Object`` table
 
-**Credit:** Originally developed by the Rubin Community Science Team.
-Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
-Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-**Warning!** Fluxes measured in difference images can be negative.
-Negative fluxes should not be converted to magnitudes using this special ADQL function.
-
-**1. Go to the DP0.2 catalog ADQL interface.**
-Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
-
-**2. To return magnitudes** use the ``scisql_nanojanskyToAbMag()`` function.
-This function will convert a flux value with the units of nanoJanskys (nJy) into an AB magnitude.
-The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude and :math:`f` is flux.
-
-.. code-block:: SQL
-
-  SELECT coord_ra,coord_dec,refExtendedness,
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
-         scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp1_v29.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53.13, -28.1, 0.167))=1
-        AND (refExtendedness =1
-             AND u_cModelFlux >360 AND g_cModelFlux >360
-             AND r_cModelFlux >360 AND i_cModelFlux >360
-             AND z_cModelFlux >360 AND y_cModelFlux >360)
-
-**3. To return magnitude errors** use the ``scisql_nanojanskyToAbMagSigma()`` function.
-This funtion will convert the corresponding flux errors, in nJy, into AB magnitude errors.
-
-.. code-block:: SQL
-
-  SELECT coord_ra, coord_dec, refExtendedness,
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
-         scisql_nanojanskyToAbMagSigma(u_cModelFlux, u_cModelFluxErr) AS u_cModelMagErr,
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
-         scisql_nanojanskyToAbMagSigma(g_cModelFlux, g_cModelFluxErr) AS g_cModelMagErr,
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
-         scisql_nanojanskyToAbMagSigma(r_cModelFlux, r_cModelFluxErr) AS r_cModelMagErr,
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
-         scisql_nanojanskyToAbMagSigma(i_cModelFlux, i_cModelFluxErr) AS i_cModelMagErr,
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
-         scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr,
-         scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag,
-         scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr
-  FROM dp1_v29.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53.13, -28.1, 0.167)) =1
-        AND (refExtendedness =1
-            AND u_cModelFlux >360 AND g_cModelFlux >360
-            AND r_cModelFlux >360 AND i_cModelFlux >360
-            AND z_cModelFlux >360 AND y_cModelFlux >360)
-
-
-**4. Notice the query constraints** on coordinate, extendedness, and flux are set in order to
-retrieve a sample of extended sources (galaxies) brighter than 25th magnitude.
-
-**5. View the results.**
-Figure 1 shows the table panel in the Results tab for the query above.
-Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
-and the columns have been renamed as specified in the ADQL statement.
+**1. Go to the Portal's DP0.2 Catalogs tab.**
+If needed, reload the webpage in the browser to clear any previously-entered constraints.
+The interface should look like Figure 1.
 
 .. figure:: images/portal-103-2-1.png
     :name: portal-103-2-1
-    :alt: The table panel in the results tab shows the created magnitude columns.
+    :alt: The Portal UI with no constraints set.
 
-    Figure 1: The table panel in the Results tab for the query above shows no flux columns, but magnitude and magnitude error columns.
+    Figure 1: The Portal UI with no query constraints entered.
 
+**2. Switch to the ADQL interface.**
+Select "Edit ADQL" at upper right in Figure 1 to go to the ADQL interface.
+The ADQL Query box will be empty (Figure 2).
 
-**Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
-see the tutorial on how to use the results table data.
+.. figure:: images/portal-103-2-2.png
+    :name: portal-103-2-2
+    :alt: The ADQL interface with no query entered.
+
+    Figure 2: The ADQL interface with no query entered.
+
+**3. Enter an ADQL statement in the box.**
+For example, copy paste the statement below.
+It is the same query as was used above in Option 1.
+
+.. code-block:: SQL
+
+  SELECT coord_dec,coord_ra,detect_isIsolated,g_cModelFlux,i_cModelFlux,r_cModelFlux,u_cModelFlux,
+       y_cModelFlux,z_cModelFlux
+  FROM dp1_v29.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53, -28, 0.05))=1
+      AND (detect_isIsolated =1
+           AND g_cModelFlux >360
+           AND i_cModelFlux >360
+           AND r_cModelFlux >360
+           AND u_cModelFlux >360
+           AND y_cModelFlux >360
+           AND z_cModelFlux >360)
+
+**4. Execute the ADQL query.**
+Click the Search button at lower left.
+The query will be executed and the results will appear in the Results tab.
+
+.. figure:: images/portal-103-2-3.png
+    :name: portal-103-2-3
+    :alt: Default search results from a query.
+
+    Figure 3: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
 

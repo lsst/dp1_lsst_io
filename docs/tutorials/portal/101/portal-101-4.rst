@@ -1,7 +1,7 @@
-.. _portal-102-4:
+.. _portal-101-4:
 
 #############################################
-102.4. Use the query job monitor (get job ID)
+101.4. Use the query job monitor (get job ID)
 #############################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
@@ -10,23 +10,19 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-12
 
-**Learning objective:** This tutorial demonstrates how to use the Job Monitor in the Portal Aspect of the Rubin Science Platform and illustrates its main features.
-The job monitor reveals the status and an information about a job submitted from your account (including the job ID), and allows for you to delete it.
+**Learning objective:** Use the Job Monitor to obtain the status and ID of, and delete, submitted query jobs.
 
-**LSST data products:** dp1 catalogs and images
+**LSST data products:** ``DiaObject`` table
 
-**Credit:** Originally developed by Greg Madejski and Melissa Graham. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
-
-
-.. _portal-102-4-S1:
 
 **1. Go to the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-.. figure:: images/portal-102-4-1.png
-    :name: portal-102-4-1
+.. figure:: images/portal-101-4-1.png
+    :name: portal-101-4-1
     :alt: The main landing page of the Rubin Science Platform, showing log in at upper right and three panels, one for each aspect: the Portal the Notebooks and the API.
 
     Figure 1: The main landing page of the Rubin Science Platform.
@@ -37,8 +33,8 @@ On the RSP landing page (Figure 1), if "Log in" appears at upper right instead o
 **3. Enter the Portal.**
 On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
-.. figure:: images/portal-102-4-2.png
-    :name: portal-102-4-2
+.. figure:: images/portal-101-4-2.png
+    :name: portal-101-4-2
     :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
 
     Figure 2: The main landing page of the Portal Aspect.
@@ -55,8 +51,8 @@ In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g
 Enter ``>300`` as the constraint for ``g_psfFluxMean``.
 Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.
 
-.. figure:: images/portal-102-4-3.png
-    :name: portal-102-4-3
+.. figure:: images/portal-101-4-3.png
+    :name: portal-101-4-3
     :alt: The screenshot with the parameters entered for a sample search.
 
     Figure 3: The screenshot with the parameters entered for a sample search.
@@ -66,8 +62,8 @@ Click "Search" on the lower left.
 
 The result of the search will be an image on the upper left, and a table of observations corresponding to your search on the bottom.
 
-.. figure:: images/portal-102-4-4.png
-    :name: portal-102-4-4
+.. figure:: images/portal-101-4-4.png
+    :name: portal-101-4-4
     :alt: The screenshot with the results of your sample search.
 
     Figure 4: The screenshot with the results of your sample search.
@@ -78,8 +74,8 @@ The job monitor will have all jobs submitted by you (created within the retentio
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
 
-.. figure:: images/portal-102-4-5.png
-    :name: portal-102-4-5
+.. figure:: images/portal-101-4-5.png
+    :name: portal-101-4-5
     :alt: The screenshot illustrating the job monitor
 
     Figure 5:  The screenshot illustrating the job monitor.
@@ -91,9 +87,9 @@ Clicking on the red "garbage can" will delete the job.
 
 An example of informaton for a recent job is in the figure below.
 
-.. figure:: images/portal-102-4-6.png
+.. figure:: images/portal-101-4-6.png
     :width:  400
-    :name: portal-102-4-6
+    :name: portal-101-4-6
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
     Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.

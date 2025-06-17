@@ -1,4 +1,3 @@
-
 .. _portal-102-3:
 
 ###################################
@@ -11,20 +10,17 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-013
 
-**Learning objective:** This tutorial demonstrates how to use the ObsTAP service to retrieve DP1 images.
-Specifically it retrieves all “calexps” (Processed Visit Images) containing a specific location on the sky during the desired range of observation epochs.
+**Learning objective:** Use the ObsTAP service to retrieve DP1 images.
 
-**LSST data products:** dp1 catalogs and images
+**LSST data products:** ``visit_image``
 
-**Credit:** Originally developed by Greg Madejski and Melissa Graham.
+**Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
-.. _portal-102-3-S1:
-
 **1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
-(If that tab does not appear after selecting the Portal Aspect, click on the "hamburger" (three horizontal lines) menu in the upper left, and click on "General TAP" to add it as an additional tab.)
+(If that tab does not appear after selecting the Portal Aspect, click on the "menu" (three horizontal lines) icon in the upper left, and click on "General TAP" to add it as an additional tab.)
 For the "Table Collection (Schema)" select the “dp1_v29” from the menu (it should be the default).
 In the box for selecting tables, select "dp1_v29.ObsCore".
 

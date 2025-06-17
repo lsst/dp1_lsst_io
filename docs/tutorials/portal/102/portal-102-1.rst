@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-16
 
-**Learning objective:** This tutorial demonstrates how to navigate the Portal's user interface (UI) and provides a tour of the main components.
+**Learning objective:** Navigate the main components of the Portal's user interface (UI).
 
 **LSST data products:** ``Object`` table
 
@@ -20,8 +20,7 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
-
-.. _portal-102-1-S1:
+----
 
 **1. Log in to the RSP and enter the Portal Aspect.**
 In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and log in.

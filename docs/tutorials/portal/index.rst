@@ -53,6 +53,7 @@ Execute queries with ADQL statements.
     103/portal-103-2.rst
     103/portal-103-3.rst
     103/portal-103-4.rst
+    103/portal-103-5.rst
 
 104. Catalog data results interface
 -----------------------------------

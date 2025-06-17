@@ -20,9 +20,6 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
-
-.. _portal-101-3-S1:
-
 **1. Go to the RSP and enter the Portal Aspect.**
 In a web browser, go to `data.lsst.cloud <https://data.lsst.cloud/>`_, click on the "Portal" panel, and log in.
 
