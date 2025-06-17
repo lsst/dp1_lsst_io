@@ -13,7 +13,9 @@ Get started
 
 To set up a new account in the RSP, visit the `RSP documentation <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
 
-To learn more about the RSP's functionality, see the `RSP user guides <https://rsp.lsst.io/guides/index.html>`_ or work through any of the tutorials below.
+To learn more about the RSP's functionality, see the `RSP user guides <https://rsp.lsst.io/guides/index.html>`_ or work through the tutorials.
+
+Tutorials are organized into levels (100, 200, 300), and levels into topical series, which proceed from beginner to more advanced topics.
 
 
 .. _tutorials-getsupport:
