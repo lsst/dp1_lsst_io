@@ -1,8 +1,8 @@
 .. _portal-104-1:
 
-###########################################################
-104.1. Navigate the catalog results interface (Coming Soon)
-###########################################################
+##############################################
+104.1. Navigate the catalog results interface
+##############################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -22,41 +22,28 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Log in to the Portal Aspect of the RSP.**
-
-*Tutorial coming soon!*
-
-#############################
-04. How to view query results
-#############################
-
-.. This section should provide a brief, top-level description of the page.
-
-**RSP Aspect:** Portal
-
-**Contact authors:** Greg Madejski and Melissa Graham
-
-**Last verified to run:** 2025-02-04
-
-**Targeted learning level:** beginner 
-
 **Introduction:**
-This tutorial demonstrates how to view and interact with the results of a simple Portal query.
+This tutorial demonstrates how to navigate the results of a simple Portal query.
+The example below selects fluxes of bright objects within a radius around a specific point on the sky.
 
-**1. Execute a query.**
-Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+
+**1. Log in to the Portal Aspect of the RSP.**
+Log in to the Rubin Science Platform, and select the Portal aspect.
+There, go to the Portal's DP0.2 Catalogs tab, and switch to the ADQL interface.
+
+**2. Execute a query.**
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         u_cModelFlux, g_cModelFlux, r_cModelFlux, 
-         i_cModelFlux, z_cModelFlux, y_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
+  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+         u_cModelFlux, g_cModelFlux, r_cModelFlux,
+         i_cModelFlux, z_cModelFlux, y_cModelFlux
+  FROM dp1_v29.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
+        AND (detect_isIsolated =1 AND refExtendedness =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 **2. Review the Results tab layout.**
@@ -119,4 +106,3 @@ Click on the tab for the first query and note that the coverage chart, table, an
 **10. Delete unwanted query results.**
 In the table (C in Figure 3), click on the X in the tab for the first query results to delete them.
 
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
