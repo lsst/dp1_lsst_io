@@ -19,6 +19,8 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
+----
+
 **1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
 (If that tab does not appear after selecting the Portal Aspect, click on the "menu" (three horizontal lines) icon in the upper left, and click on "General TAP" to add it as an additional tab.)
 For the "Table Collection (Schema)" select the “dp1_v29” from the menu (it should be the default).
