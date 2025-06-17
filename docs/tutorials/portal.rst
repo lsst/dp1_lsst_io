@@ -9,7 +9,7 @@ Portal tutorials
 100. How to: RSP functionality
 ==============================
 
-Short tutorials with a learning objective of how to use a single RSP function or tool.
+Short tutorials showing how to use a single RSP function or tool.
 
 101. User Interface (UI)
 ------------------------
@@ -24,6 +24,14 @@ Short tutorials with a learning objective of how to use a single RSP function or
 102. Queries with the UI
 ------------------------
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    portal/portal-102-3.rst
+    portal/portal-102-4.rst
+
+
 103. Queries with ADQL
 ----------------------
 
@@ -31,8 +39,10 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
+    portal/portal-103-1.rst
     portal/portal-103-2.rst
     portal/portal-103-3.rst
+    portal/portal-103-4.rst
 
 104. Tabular data results interface
 -----------------------------------
@@ -53,7 +63,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
 200. Data products definitions
 ==============================
 
-Tutorials with a learning objective of understanding one of the data products.
+Tutorials for learning about the individual data products.
 
 201. Survey metadata
 --------------------
@@ -78,7 +88,7 @@ Tutorials with a learning objective of understanding one of the data products.
 300. Science demonstrations
 ===========================
 
-Longer tutorials with a learning objective of executing an end-to-end scientific workflow.
+Longer tutorials demonstrating an end-to-end scientific workflow.
 
 
 301. DP1 target exploration
