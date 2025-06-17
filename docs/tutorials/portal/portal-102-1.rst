@@ -64,7 +64,7 @@ In the table schema interface (Figure 2) review the 8 components labeled A throu
 * A: Selection boxes. Click a box to include the column in the query. Click the funnel icon to view only selected columns.
 * B: Names. Column names are short, descriptive, and unique within a table. Click on "Name" to sort by name.
 * C: Constraints. Apply limits on column values by typing in desired constraints (e.g., :math:`>, <, =, !=`).
-* D: Units. 
+* D: Units. The units for the values that will be returned.
 * E: Unified Content Descriptor (UCD). Vocabulary standards set by the `International Virtual Observatory Alliance <https://www.ivoa.net/>`_.
 * F: Descriptions of the column's data.
 * G: Data type. E.g., integer (int), double precision (double), boolean.
@@ -90,5 +90,5 @@ This is an example of a very simple query.
     Figure 3: An example query for the DP1 ``Objects`` catalog set up in the UI.
 
 **8. Click search.**
-At lower left, click the blue button named "Search". 
+At lower left, click the blue button named "Search".
 This query will return 24 rows of the ``Object`` table.
