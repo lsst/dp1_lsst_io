@@ -12,6 +12,10 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Navigate the multi-panel interface for catalog data results.
 
+**Summary:**
+This tutorial demonstrates how to navigate the results of a simple Portal query.
+The example below selects fluxes of bright objects within a radius around a specific point on the sky.
+
 **LSST data products:**
 
 **Credit:** Originally developed by the Rubin Community Science team.
@@ -21,11 +25,6 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 Rubin staff will respond to all questions posted there.
 
 ----
-
-**Introduction:**
-This tutorial demonstrates how to navigate the results of a simple Portal query.
-The example below selects fluxes of bright objects within a radius around a specific point on the sky.
-
 
 **1. Log in to the Portal Aspect of the RSP.**
 Log in to the Rubin Science Platform, and select the Portal aspect.
