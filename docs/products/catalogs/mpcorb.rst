@@ -4,9 +4,7 @@
 MPCORB
 ######
 
-The orbit catalog produced by the Minor Planet Center.
-
-DOI: |doi_mpcorb|
+The orbit catalog produced by the `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC).
 
 Columns: 10
 
