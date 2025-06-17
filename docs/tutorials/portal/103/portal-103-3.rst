@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-16
 
-**Learning objective:** This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
+**Learning objective:** Convert fluxes to magnitudes using a special ADQL function.
 
 **LSST data products:** ``Object`` table
 
@@ -22,6 +22,8 @@ Rubin staff will respond to all questions posted there.
 
 **Warning!** Fluxes measured in difference images can be negative.
 Negative fluxes should not be converted to magnitudes using this special ADQL function.
+
+----
 
 **1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
@@ -82,8 +84,8 @@ Figure 1 shows the table panel in the Results tab for the query above.
 Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
 and the columns have been renamed as specified in the ADQL statement.
 
-.. figure:: images/portal-103-2-1.png
-    :name: portal-103-2-1
+.. figure:: images/portal-103-3-1.png
+    :name: portal-103-3-1
     :alt: The table panel in the results tab shows the created magnitude columns.
 
     Figure 1: The table panel in the Results tab for the query above shows no flux columns, but magnitude and magnitude error columns.

@@ -14,9 +14,12 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **LSST data products:** ``Object`` table
 
-**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science team.
+Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+
+----
 
 **1. Go to the Portal's DP0.2 Catalogs tab.**
 If needed, reload the webpage in the browser to clear any previously-entered constraints.
