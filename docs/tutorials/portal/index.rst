@@ -23,6 +23,7 @@ Learn to navigate the Portal's user interface.
     101/portal-101-1.rst
     101/portal-101-2.rst
     101/portal-101-3.rst
+    101/portal-101-4.rst
 
 
 102. Queries with the UI
@@ -37,7 +38,6 @@ Set up queries in the user interface without ADQL.
     102/portal-102-1.rst
     102/portal-102-2.rst
     102/portal-102-3.rst
-    102/portal-102-4.rst
 
 
 103. Queries with ADQL
