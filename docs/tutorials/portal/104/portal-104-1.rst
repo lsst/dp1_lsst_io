@@ -48,9 +48,9 @@ There, go to the Portal's DP0.2 Catalogs tab, and switch to the ADQL interface.
 **2. Review the Results tab layout.**
 The default layout of the Results tab is shown in Figure 1.
 
-.. figure:: /_static/portal-howto-results-1.png
-    :name: portal-howto-results-1
-    :alt: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at uppr right, and the tabular data below.
+.. figure:: images/portal-104-1.png
+    :name: portal-104-1
+    :alt: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at upper right, and the tabular data below.
 
     Figure 1: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at uppr right, and the tabular data below.
 
