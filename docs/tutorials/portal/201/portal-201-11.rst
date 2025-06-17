@@ -1,18 +1,18 @@
-.. _portal-104-10:
+.. _portal-201-11:
 
-########################################
-104.10. Plot a light curve (Coming Soon)
-########################################
+#################################
+201.11. MPCORB table (Coming Soon)
+#################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Create a light curve plot for a ``DiaObject``.
+**Learning objective:** Understand the contents of, and how to access, the ``MPCORB`` table.
 
-**LSST data products:**
+**LSST data products:** ``MPCORB`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -25,5 +25,3 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal Aspect of the RSP.**
 
 *Tutorial coming soon!*
-
-

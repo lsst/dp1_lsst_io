@@ -1,8 +1,8 @@
-.. _portal-104-10:
+.. _portal-105-4:
 
-########################################
-104.10. Plot a light curve (Coming Soon)
-########################################
+#####################################################
+105.4. Extract pixel values from images (Coming Soon)
+#####################################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,11 +10,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Create a light curve plot for a ``DiaObject``.
+**Learning objective:** Extract pixel values, e.g., line profile, from images displayed in Firefly.
 
 **LSST data products:**
 
-**Credit:** Originally developed by the Rubin Community Science team.
+**Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
@@ -25,5 +25,4 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal Aspect of the RSP.**
 
 *Tutorial coming soon!*
-
 

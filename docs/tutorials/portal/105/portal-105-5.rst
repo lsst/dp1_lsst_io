@@ -1,8 +1,8 @@
-.. _portal-104-10:
+.. _portal-105-5:
 
-########################################
-104.10. Plot a light curve (Coming Soon)
-########################################
+##############################################
+105.5. Use the image cutout tool (Coming Soon)
+##############################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Create a light curve plot for a ``DiaObject``.
+**Learning objective:** View image cutouts instead of full-frame images in Firefly.
 
 **LSST data products:**
 

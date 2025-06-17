@@ -81,13 +81,28 @@ Interact with catalog data in the results interface (subset and plot).
 
 Interact with image data in the results interface (Firefly).
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    105/portal-105-1.rst
+    105/portal-105-2.rst
+    105/portal-105-3.rst
+    105/portal-105-4.rst
+    105/portal-105-5.rst
 
 106. User-uploaded tables
 -------------------------
 
 Upload tables and join them in ADQL statements.
 
+.. toctree::
+    :titlesonly:
+    :glob:
 
+    106/portal-106-1.rst
+    106/portal-106-2.rst
+    106/portal-106-3.rst
 
 
 .. _portal-200:
@@ -97,21 +112,39 @@ Upload tables and join them in ADQL statements.
 
 Tutorials for learning about the individual data products.
 
-201. Survey metadata
---------------------
+201. Catalogs
+-------------
 
 .. toctree::
     :titlesonly:
     :glob:
 
     201/portal-201-1.rst
+    201/portal-201-2.rst
+    201/portal-201-3.rst
+    201/portal-201-4.rst
+    201/portal-201-5.rst
+    201/portal-201-6.rst
+    201/portal-201-7.rst
+    201/portal-201-8.rst
+    201/portal-201-9.rst
+    201/portal-201-10.rst
+    201/portal-201-11.rst
 
 
-202. Catalogs
--------------
-
-203. Images
+202. Images
 -----------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    202/portal-202-1.rst
+    202/portal-202-2.rst
+    202/portal-202-3.rst
+    202/portal-202-4.rst
+    202/portal-202-5.rst
+
 
 
 

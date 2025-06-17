@@ -1,8 +1,8 @@
-.. _portal-104-10:
+.. _portal-105-1:
 
-########################################
-104.10. Plot a light curve (Coming Soon)
-########################################
+#########################################################
+105.1. Navigate the image results interface (Coming Soon)
+#########################################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Create a light curve plot for a ``DiaObject``.
+**Learning objective:** Navigate the multi-panel interface for image data results.
 
 **LSST data products:**
 
@@ -25,5 +25,3 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal Aspect of the RSP.**
 
 *Tutorial coming soon!*
-
-
