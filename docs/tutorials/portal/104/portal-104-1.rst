@@ -68,7 +68,7 @@ The *Table results* (bottom box in Figure 1):
 A scrollable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
 
-**2. View layout options.**
+**3. View layout options.**
 At upper left, click on the menu icon (a "hamburger" icon = three horizontal lines) to open the sidebar menu.
 Under "Results Layout", click on the icon of the default layout ("up-down" arrows in Figure 2) to see all layout options.
 
@@ -79,12 +79,12 @@ Under "Results Layout", click on the icon of the default layout ("up-down" arrow
 
     Figure 2: The sidebar menu with options for the results view layout.
 
-**7. Change the layout.**
+**4. Change the layout.**
 In the sidebar menu in Figure 2, choose the two-panel view of coverage charts on the left and tables on the right.
 Notice that the active chart (the plot) is still available as a tab at upper left.
 Reopen the sidebar menu to try other layouts and return to the default three-panel view.
 
-**8. Execute another query.**
+**5. Execute another query.**
 Click on the tab "DP0.2 Catalogs" to return to the ADQL interface.
 Change the query to return objects with ``i_cModelFlux`` :math:`>` 3600 nJy (22.5 mag).
 Execute the query.
