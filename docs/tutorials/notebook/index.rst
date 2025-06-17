@@ -18,7 +18,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    notebook/notebook-101-1.rst
+    notebook-101-1.rst
 
 102. Table access with the TAP service
 --------------------------------------
@@ -48,7 +48,7 @@ Tutorials with a learning objective of understanding one of the data products.
     :titlesonly:
     :glob:
 
-    notebook/notebook-201-1.rst
+    notebook-201-1.rst
 
 
 202. Catalogs
@@ -80,5 +80,5 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :titlesonly:
     :glob:
 
-    notebook/notebook-301-1.rst
+    notebook-301-1.rst
 

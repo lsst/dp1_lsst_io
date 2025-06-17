@@ -18,6 +18,6 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    api/api-101-1.rst
+    api-101-1.rst
 
 
