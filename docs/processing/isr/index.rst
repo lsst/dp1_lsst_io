@@ -6,7 +6,7 @@ Instrument signature removal (ISR)
 
 ISR removes instrumental effects introduced in the raw images by the telescope and detectors to produce an accurate representation of the incoming light.
 
-For descriptions of the ISR steps and the generation, verification, certification, approval, and distribution of the calibration products necessary for ISR, refer to the paper `Instrument Signature Removal and Calibration Products for the Rubin Legacy Survey of Space and Time <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_), the "Rubin Baseline Calibration Plan" (`sitcomtn-086.lsst.io <https://sitcomtn-086.lsst.io/>`_), and the "Verifying LSST Calibration Data Products" (`dmtn-101.lsst.io <https://dmtn-101.lsst.io/>`_) and "Calibration Generation, Verification, Acceptance, and Certification" (`dmtn-222.lsst.io <https://dmtn-222.lsst.io/>_`) technical notes.
+For descriptions of the ISR steps and the generation, verification, certification, approval, and distribution of the calibration products necessary for ISR, refer to the paper `Instrument Signature Removal and Calibration Products for the Rubin Legacy Survey of Space and Time <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_, the "Rubin Baseline Calibration Plan" (`SITCOMTN-086 <https://sitcomtn-086.lsst.io/>`_), and the "Verifying LSST Calibration Data Products" (`DMTN-101 <https://dmtn-101.lsst.io/>`_) and "Calibration Generation, Verification, Acceptance, and Certification" (`DMTN-222 <https://dmtn-222.lsst.io/>`_) technical notes.
 
 ISR is the first step of the image processing which leads to calibrated, science-ready images.
 
@@ -45,7 +45,7 @@ The steps of ISR include:
     :name: isr_steps
     :alt: A schematic diagram with Instrument Signature Removal steps relevant for LSSTCam images.
 
-    Figure 2: Instrument Signature Removal steps derived form the detector model in Figure 1 (from `Plazas Malagón et al., 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_).
+    Figure 2: Instrument Signature Removal steps derived form the detector model in Figure 1 (from `Plazas Malagón et al. 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_).
 
 
 Overview
@@ -56,7 +56,7 @@ Figure 1 illustrates the model of detector components and their impact on the si
 Based on this model, a series of Instrument Signature Removal steps are implemented to eliminate camera-induced effects (Figure 2).
 
 The ISR pipeline essentially “works backward” through the signal chain, correcting the integer analog-to-digital units (ADU) raw camera output back to a floating-point number of photoelectrons created in the silicon.
-The physical detector, shown on the left in Figure 1, is the source of effects that arise from the silicon itself, such as the dark current and the brighter-fatter effect (`Broughton et al. 2025 <https://ui.adsabs.harvard.edu/abs/2014JInst...9C3048A/abstract>_`, `Gruen et al. 2015 <https://ui.adsabs.harvard.edu/abs/2015JInst..10C5032G/abstract>`_).
+The physical detector, shown on the left in Figure 1, is the source of effects that arise from the silicon itself, such as the dark current and the brighter-fatter effect (`Broughton et al. 2024 <https://ui.adsabs.harvard.edu/abs/2024PASP..136d5003B/abstract>`_, `Gruen et al. 2015 <https://ui.adsabs.harvard.edu/abs/2015JInst..10C5032G/abstract>`_).
 
 After the image has integrated, the charge is shifted to the serial register and read out, which can introduce charge transfer inefficiencies and a clock-injected offset level.
 The signals for all amplifiers are transferred via cables to the Readout Board (REB), during which crosstalk between the amplifiers may occur.
