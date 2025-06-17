@@ -1,9 +1,8 @@
-.. _portal-103-3:
+.. _portal-103-4:
 
-##################################
-103.2 How to join tables with ADQL
-##################################
-
+############################
+103.4. Join tables with ADQL
+############################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -11,18 +10,20 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-16
 
-**Learning objective:** This tutorial demonstrates how to join tables from a given catalog and retrieve results with ADQL.
+**Learning objective:** Join multiple tables to retrieve combined results with ADQL.
 
-**LSST data products:** dp1 catalogs
+**LSST data products:** ``Source``, ``Visit``, ``CcdVisit``, and ``Object`` tables
 
-**Credit:** Originally developed by the Rubin Community Science Team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science Team.
+Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
-
 
 **Warning!**
 Not all tables can be joined.
 Two tables must have a column in common in order to be joined.
+
+----
 
 **1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by clicking on Edit ADQL.
@@ -36,14 +37,14 @@ Two columns are selected from "table2" ("colX" and "colY").
 
 .. code-block:: SQL
 
+   **This is a generic example - it cannot be executed.**
+
    SELECT tab1.ra, tab1.dec, tab1.colA, tab1.colB, tab2.colX, tab2.colY
    FROM table1 AS tab1
    JOIN table2 AS tab2
    ON tab1.colID = tab2.colID
    WHERE CONTAINS(POINT('ICRS', tab1.ra, tab1.dec),
          CIRCLE('ICRS', 62.0, -37, 0.05)) = 1
-
-   **The above cannot be executed and is a generic demonstration only.**
 
 
 **3. Execute a two-table join.**
@@ -73,8 +74,8 @@ Notice that this join is not one-to-one: there are multiple individual sources r
 In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``CcdVisit`` table.
 If multiple tabs are present above the upper left panel in the default Results tab layout, click the "Coverage" tab to display the coverage chart.
 
-.. figure:: images/portal-103-3-1.png
-    :name: portal-103-3-1
+.. figure:: images/portal-103-4-1.png
+    :name: portal-103-4-1
     :alt: The Portal results tab for a two-table join.
 
     Figure 1: The Portal Results tab with a default layout for the data returned from the two-table join query.
@@ -110,8 +111,8 @@ The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``For
 The default Results tab might display an empty panel instead of the coverage chart. To view the coverage chart, click the
 "Coverage" tab at the top of the upper left panel.
 
-.. figure:: images/portal-103-3-2.png
-    :name: portal-103-3-2
+.. figure:: images/portal-103-4-2.png
+    :name: portal-103-4-2
     :alt: The Portal results tab for a three-table join.
 
     Figure 2: The Portal Results tab with the layout displaying the activated coverage chart for the data returned from the three-table join query.

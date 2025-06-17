@@ -1,9 +1,8 @@
-.. _portal-103-2:
+.. _portal-103-3:
 
-###################################################
-103.2 How to convert fluxes to magnitudes with ADQL
-###################################################
-
+##########################################
+103.3. Convert flux to magnitude with ADQL
+##########################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -11,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-16
 
-**Learning objective:** This tutorial demonstrates how to convert fluxes to magnitudes using a special ADQL function.
+**Learning objective:** Convert fluxes to magnitudes using a special ADQL function.
 
-**LSST data products:** dp1 catalogs
+**LSST data products:** ``Object`` table
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -23,6 +22,8 @@ Rubin staff will respond to all questions posted there.
 
 **Warning!** Fluxes measured in difference images can be negative.
 Negative fluxes should not be converted to magnitudes using this special ADQL function.
+
+----
 
 **1. Go to the DP0.2 catalog ADQL interface.**
 Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface.
@@ -83,13 +84,13 @@ Figure 1 shows the table panel in the Results tab for the query above.
 Notice that there are no flux columns because they were retrieved ``AS`` magnitudes,
 and the columns have been renamed as specified in the ADQL statement.
 
-.. figure:: images/portal-103-2-1.png
-    :name: portal-103-2-1
+.. figure:: images/portal-103-3-1.png
+    :name: portal-103-3-1
     :alt: The table panel in the results tab shows the created magnitude columns.
 
     Figure 1: The table panel in the Results tab for the query above shows no flux columns, but magnitude and magnitude error columns.
 
 
 **Note.** For a demonstration of how to convert fluxes to magnitudes after a query is executed,
-see the tutorial on how to use the results table data.
+see the tutorial on how to add a column to the results table.
 

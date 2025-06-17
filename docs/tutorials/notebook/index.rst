@@ -1,54 +1,40 @@
-.. _portal:
+.. _notebook:
 
-################
-Portal tutorials
-################
+##################
+Notebook tutorials
+##################
 
-.. _portal-100:
+.. _notebook-100:
 
 100. How to: RSP functionality
 ==============================
 
 Short tutorials with a learning objective of how to use a single RSP function or tool.
 
-101. User Interface (UI)
-------------------------
+101. JupyterLab and Notebooks
+-----------------------------
 
 .. toctree::
     :titlesonly:
     :glob:
 
-    portal/portal-101-1.rst
+    notebook-101-1.rst
 
+102. Table access with the TAP service
+--------------------------------------
 
-102. Queries with the UI
+103. Image access and display
+-----------------------------
+
+104. Data access with the butler
+--------------------------------
+
+105. Data (re)processing
 ------------------------
 
-103. Queries with ADQL
-----------------------
-
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    portal/portal-103-2.rst
-    portal/portal-103-3.rst
-
-104. Tabular data results interface
------------------------------------
-
-105. Image data results interface
----------------------------------
-
-106. User-uploaded tables
--------------------------
-
-107. User query history
------------------------
 
 
-
-.. _portal-200:
+.. _notebook-200:
 
 200. Data products definitions
 ==============================
@@ -62,7 +48,7 @@ Tutorials with a learning objective of understanding one of the data products.
     :titlesonly:
     :glob:
 
-    portal/portal-201-1.rst
+    notebook-201-1.rst
 
 
 202. Catalogs
@@ -71,9 +57,15 @@ Tutorials with a learning objective of understanding one of the data products.
 203. Images
 -----------
 
+204. Deblender products and footprints
+--------------------------------------
+
+205. Data quality assessment
+----------------------------
 
 
-.. _portal-300:
+
+.. _notebook-300:
 
 300. Science demonstrations
 ===========================
@@ -88,11 +80,5 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :titlesonly:
     :glob:
 
-    portal/portal-301-1.rst
-
-302. Stars
-----------
-
-303. Galaxies
--------------
+    notebook-301-1.rst
 
