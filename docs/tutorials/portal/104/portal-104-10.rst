@@ -1,7 +1,7 @@
-.. _portal-104-9:
+.. _portal-104-10:
 
 #######################################
-104.9. Plot a light curve (Coming Soon)
+104.10. Plot a light curve (Coming Soon)
 #######################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.

@@ -60,6 +60,10 @@ Execute queries with ADQL statements.
 
 Interact with catalog data in the results interface (subset and plot).
 
+.. toctree::
+    :titlesonly:
+    :glob:
+
     104/portal-104-1.rst
     104/portal-104-2.rst
     104/portal-104-3.rst
