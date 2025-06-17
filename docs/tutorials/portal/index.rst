@@ -20,9 +20,9 @@ Learn to navigate the Portal's user interface.
     :titlesonly:
     :glob:
 
-    portal/portal-101-1.rst
-    portal/portal-101-2.rst
-    portal/portal-101-3.rst
+    101/portal-101-1.rst
+    101/portal-101-2.rst
+    101/portal-101-3.rst
 
 
 102. Queries with the UI
@@ -34,10 +34,10 @@ Set up queries in the user interface without ADQL.
     :titlesonly:
     :glob:
 
-    portal/portal-102-1.rst
-    portal/portal-102-2.rst
-    portal/portal-102-3.rst
-    portal/portal-102-4.rst
+    102/portal-102-1.rst
+    102/portal-102-2.rst
+    102/portal-102-3.rst
+    102/portal-102-4.rst
 
 
 103. Queries with ADQL
@@ -49,10 +49,10 @@ Execute queries with ADQL statements.
     :titlesonly:
     :glob:
 
-    portal/portal-103-1.rst
-    portal/portal-103-2.rst
-    portal/portal-103-3.rst
-    portal/portal-103-4.rst
+    103/portal-103-1.rst
+    103/portal-103-2.rst
+    103/portal-103-3.rst
+    103/portal-103-4.rst
 
 104. Catalog data results interface
 -----------------------------------
@@ -88,7 +88,7 @@ Tutorials for learning about the individual data products.
     :titlesonly:
     :glob:
 
-    portal/portal-201-1.rst
+    201/portal-201-1.rst
 
 
 202. Catalogs
@@ -114,7 +114,7 @@ Longer tutorials demonstrating an end-to-end scientific workflow.
     :titlesonly:
     :glob:
 
-    portal/portal-301-1.rst
+    301/portal-301-1.rst
 
 302. Stars
 ----------

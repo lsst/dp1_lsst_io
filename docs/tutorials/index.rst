@@ -35,7 +35,7 @@ Portal Aspect
     :maxdepth: 2
     :glob:
 
-    portal
+    portal/index
 
 
 .. _tutorials-notebook:
@@ -47,7 +47,7 @@ Notebook Aspect
     :maxdepth: 2
     :glob:
 
-    notebook
+    notebook/index
 
 
 .. _tutorials-api:
@@ -59,7 +59,7 @@ API Aspect
     :maxdepth: 2
     :glob:
 
-    api
+    api/index
 
 
 
