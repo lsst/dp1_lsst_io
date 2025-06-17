@@ -1,8 +1,8 @@
-.. _portal-201-6:
+.. _portal-201-8:
 
-####################################
-201.6. DiaObject table (Coming Soon)
-####################################
+##################################################
+201.8. ForcedSourceOnDiaObject table (Coming Soon)
+##################################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Understand the contents of, and how to access, the ``DiaObject`` table.
+**Learning objective:** Understand the contents of, and how to access, the ``ForcedSourceOnDiaObject`` table.
 
-**LSST data products:** ``DiaObject`` table
+**LSST data products:** ``ForcedSourceOnDiaObject`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.

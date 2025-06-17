@@ -1,8 +1,8 @@
-.. _portal-201-5:
+.. _portal-201-7:
 
-#######################################
-201.5. ForcedSource table (Coming Soon)
-#######################################
+####################################
+201.7. DiaSource table (Coming Soon)
+####################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Understand the contents of, and how to access, the ``ForcedSource`` table.
+**Learning objective:** Understand the contents of, and how to access, the ``DiaSource`` table.
 
-**LSST data products:** ``ForcedSource`` table
+**LSST data products:** ``DiaSource`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.

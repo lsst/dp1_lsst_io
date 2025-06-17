@@ -1,8 +1,8 @@
-.. _portal-201-11:
+.. _portal-201-4:
 
-##################################
-201.11. MPCORB table (Coming Soon)
-##################################
+###################################
+201.4. CcdVisit table (Coming Soon)
+###################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Understand the contents of, and how to access, the ``MPCORB`` table.
+**Learning objective:** Understand the contents of, and how to access, the ``CcdVisit`` table.
 
-**LSST data products:** ``MPCORB`` table
+**LSST data products:** ``CcdVisit`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.

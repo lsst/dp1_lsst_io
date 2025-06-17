@@ -115,6 +115,8 @@ Tutorials for learning about the individual data products.
 201. Catalogs
 -------------
 
+Tables of measurements made on detected sources, plus observational metadata.
+
 .. toctree::
     :titlesonly:
     :glob:
@@ -134,6 +136,8 @@ Tutorials for learning about the individual data products.
 
 202. Images
 -----------
+
+Individual, difference, and coadded images of the sky in the six LSST filters.
 
 .. toctree::
     :titlesonly:
@@ -155,15 +159,22 @@ Tutorials for learning about the individual data products.
 
 Longer tutorials demonstrating an end-to-end scientific workflow.
 
-
 301. DP1 target exploration
 ---------------------------
+
+Explore the DP1 data in the seven fields observed with the LSSTComCam.
 
 .. toctree::
     :titlesonly:
     :glob:
 
     301/portal-301-1.rst
+    301/portal-301-2.rst
+    301/portal-301-3.rst
+    301/portal-301-4.rst
+    301/portal-301-5.rst
+    301/portal-301-6.rst
+    301/portal-301-7.rst
 
 
 *More tutorials coming soon!*

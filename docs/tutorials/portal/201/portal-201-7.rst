@@ -1,8 +1,8 @@
-.. _portal-201-7:
+.. _portal-201-9:
 
-####################################
-201.7. DiaSource table (Coming Soon)
-####################################
+###################################
+201.9. SSObject table (Coming Soon)
+###################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Understand the contents of, and how to access, the ``DiaSource`` table.
+**Learning objective:** Understand the contents of, and how to access, the ``SSObject`` table.
 
-**LSST data products:** ``DiaSource`` table
+**LSST data products:** ``SSObject`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.

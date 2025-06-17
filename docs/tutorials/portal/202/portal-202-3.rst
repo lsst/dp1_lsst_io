@@ -1,8 +1,8 @@
-.. _portal-202-3:
+.. _portal-202-4:
 
-####################################
-202.3. Template coadds (Coming Soon)
-####################################
+######################################
+202.4. Difference images (Coming Soon)
+######################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -10,9 +10,9 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** *yyyy-mm-dd*
 
-**Learning objective:** Understand the pixel data and how to access and interact with the ``template_coadd`` images.
+**Learning objective:** Understand the pixel data and how to access and interact with the ``difference_images``.
 
-**LSST data products:** ``template_coadd`` images
+**LSST data products:** ``difference_images``
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
