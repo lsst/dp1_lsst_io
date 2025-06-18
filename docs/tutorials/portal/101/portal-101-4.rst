@@ -16,7 +16,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ----
 
@@ -28,9 +29,9 @@ For the purpose of this tutorial, create click Edit ADQL in the upper right hand
 
 .. code::
 
-  SELECT dec,g_psfFluxMean,ra 
-     FROM dp1_v29.DiaObject 
-     WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53, -28.8, 0.008333333333333333))=1
+  SELECT dec,g_psfFluxMean,ra
+     FROM dp1_v29.DiaObject
+     WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53, -28.8, 0.0083))=1
 
 
 .. figure:: images/portal-101-4-3.png
@@ -64,3 +65,4 @@ An example of informaton for a recent job is in the figure below.
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
     Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.
+
