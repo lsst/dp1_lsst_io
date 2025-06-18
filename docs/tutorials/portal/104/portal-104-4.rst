@@ -83,8 +83,8 @@ Notice how these objects are colored differently in the coverage and active char
 Click the filter icon (under B in Figure 1).
 See how all panels update to show only the selected objects, as in Figure 3.
 
-.. figure:: /_static/portal-howto-table-3.png
-    :name: portal-howto-table-3
+.. figure:: images/portal-104-4-3.png
+    :name: portal-104-4-3
     :alt: The full Results tab when 10 rows have been selected and filtered on.
 
     Figure 3: The full Results tab after 10 rows have been selected in the table panel, and filtered on.
