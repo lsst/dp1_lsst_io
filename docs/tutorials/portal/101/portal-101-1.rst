@@ -45,7 +45,8 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 
 
 **4. Review the layout.**
-On the Portal landing page (Figure 2) notice the icons and tabs across the top of the screen, and that the default selected tab of the landing page is labeled Results.
+On the Portal landing page (Figure 2) the default selected tab of the landing page is labeled Results.
+The icons and tabs across the top of the screen will open various Portal search methods.
 
 **5. View the information window.**
 On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
