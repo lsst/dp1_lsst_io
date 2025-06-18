@@ -46,8 +46,7 @@ Only one query has been executed, so there is only one tab in the table panel (A
     :name: portal-104-4-1
     :alt: The default view of the table panel.
 
-    Figure 1: The table panel that results from the query in step 1. The third row has been clicked on and is highlighted orange.
-
+    Figure 1: The table panel that results from the query in step 1. The first row has been clicked on and is highlighted orange.
 
 **3. Mouse-over for pop-up notes.**
 In the table panel (Figure 1) use the mouse to hover over the column headers and icons see pop-up explanations.
@@ -64,7 +63,6 @@ In the table panel (Figure 1) click on each of the items below and review the fu
 * I: **Information** about the query job that produced these results.
 * J: **Table options** - open a pop-up window to show, hide, or filter columns.
 * K: **Expand panel** - have the table take the full browser window.
-
 
 **5. Sort the table.**
 Click on the table header ``coord_ra`` to sort the table by the Right Ascension coordinate.
