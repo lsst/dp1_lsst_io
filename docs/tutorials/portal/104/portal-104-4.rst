@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:** 6/16/2025
 
 **Learning objective:** Use the results table from a catalog query.
 
@@ -78,7 +78,6 @@ Notice how these objects are colored differently in the coverage and active char
 
     Figure 2: The full Results tab after 10 rows have been selected in the table panel.
 
-
 **7. Filter on the selected rows.**
 Click the filter icon (under B in Figure 1).
 See how all panels update to show only the selected objects, as in Figure 3.
@@ -91,5 +90,4 @@ See how all panels update to show only the selected objects, as in Figure 3.
 
 **8. Remove the filter and selection.**
 Click the "unfilter" icon at upper right in the table panel to remove the filter (A in Figure 3).
-Click the "unselect" icon at uppr right in the active chart panel to unselect all objects (B in Figure 3).
-
+Click the "unselect" icon at uppre right in the active chart panel to unselect all objects (B in Figure 3).
