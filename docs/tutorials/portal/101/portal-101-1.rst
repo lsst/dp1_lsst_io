@@ -73,7 +73,26 @@ On the Portal landing page (Figure 2) click on the menu icon (three horizontal l
 
 **7. Review the sidebar menu.**
 In the sidebar menu (Figure 4) notice that some of the menu options match the tabs (e.g., Data Collections),
-and that which tabs you see are configurable with the "Hide Tab" option.
+and which tabs you see are configurable with the "Hide Tab" option. Opening this menu will allow you to navigate to a tab,
+add a tab to the platform interface, or hide a tab from the interface. You can also reset options from this menu.
+A description of each of the sidebar menu options is listed below.
 Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
 
+- **Tab Selection:** Customize tabs displayed on the Rubin Portal
+- **Results:** Click on the Results tab to return to the results window.
+- **Upload:** Allows you to upload a file.
+- **Job Monitor:** Lists jobs associated with your user account.
+- **Data Collections:** Select data collection for analysis within the Portal.
+- **DP0.2 Images:** Simulated images from DP0.2
+- **DP0.2 Images SIAv2:** Simple Image Access Version 2
+- **DP0.2 Catalogs:** Catalogs for DP0.2
+- **DP0.3 Catalogs:** Catalogs for DP0.3
+- **Rubin HiPs Search:**
+- **General TAP:**
+- **SIAv2 Searches:**
+- **IRSA Images:**
+- **IRSA Catalogs:**
+- **NED Objects:**
+- **VO Cone Search:**
+- **Appearance:**
 
