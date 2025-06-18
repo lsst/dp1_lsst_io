@@ -10,7 +10,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Use the components of the results coverage chart panel.
+**Learning objective:** Learn how to iuse the coverage chart and HiPS map panel in the Portal results tab.
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude.
 
 **LSST data products:** DP1 catalogs
 
@@ -20,31 +21,7 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
-----
-
-**1. Log in to the Portal Aspect of the RSP.**
-
-
-
-####################################################
-07. How to use the results coverage chart (HiPS map)
-####################################################
-
-.. This section should provide a brief, top-level description of the page.
-
-**RSP Aspect:** Portal
-
-**Contact authors:** Greg Madejski and Melissa Graham
-
-**Last verified to run:** 2025-02-04
-
-**Targeted learning level:** beginner 
-
-**Introduction:**
-This tutorial demonstrates how to use the coverage chart and HiPS map panel in the Portal results tab.
-This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
-
-Terminology:
+**Terminology:**
 
 * `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
 * `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
@@ -55,8 +32,9 @@ Terminology:
 * `WCS <https://fits.gsfc.nasa.gov/fits_wcs.html>`_: World Coordinate System (the convention that defines the coordinates per pixel)
 * PNG: Portable Network Graphic
 
+----
 
-**1. Execute a query.**
+**1. Log in to the Portal Aspect of the RSP, and execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
 
 .. code-block:: SQL
