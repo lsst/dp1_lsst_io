@@ -31,6 +31,7 @@ Log in to the Rubin Science Platform, and select the Portal aspect.
 There, go to the Portal's DP0.2 Catalogs tab, and switch to the ADQL interface.
 
 **2. Execute a query.**
+Enter the query below into the ADQL box, and press "Search".
 
 .. code-block:: SQL
 
