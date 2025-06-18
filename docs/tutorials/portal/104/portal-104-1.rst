@@ -95,13 +95,12 @@ Execute the query.
 
     Figure 3: Similar to Figure 2, but with the results of two queries.
 
-**9. View multiple query results.**
+**7. View multiple query results.**
 The Results tab components are now populated with the data from the new query (Figure 3).
-The coverage chart includes HEALPix maps for both queries, with the new one in magenta (A in Figure 3).
-The active chart uses data from the new query results (B in Figure 3).
-The table now has two tabs, one for each query (C in Figure 3).
+The coverage chart includes HEALPix maps for both queries, with the new one in magenta (upper left in Figure 3).
+The active chart uses data from the new query results (upper right in Figure 3).
+The table now has two tabs, one for each query.
 Click on the tab for the first query and note that the coverage chart, table, and active chart change.
 
-**10. Delete unwanted query results.**
+**8. Delete unwanted query results.**
 In the table (C in Figure 3), click on the X in the tab for the first query results to delete them.
-
