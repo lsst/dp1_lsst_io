@@ -26,19 +26,17 @@ Rubin staff will respond to all questions posted there.
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
 This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
 
-.. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         u_cModelFlux, g_cModelFlux, r_cModelFlux, 
-         i_cModelFlux, z_cModelFlux, y_cModelFlux 
-  FROM dp02_dc2_catalogs.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
+  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+         u_cModelFlux, g_cModelFlux, r_cModelFlux,
+         i_cModelFlux, z_cModelFlux, y_cModelFlux
+  FROM dp1_v29.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
+        AND (detect_isIsolated =1 AND refExtendedness =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
-
 
 **2. View the default table** (Figure 1).
 Only one query has been executed, so there is only one tab in the table panel (A in Figure 1).
