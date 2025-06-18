@@ -1,8 +1,8 @@
 .. _portal-104-2:
 
-##############################################################
-104.2. Use the results coverage chart (HiPS map) (Coming Soon)
-##############################################################
+################################################
+104.2. Use the results coverage chart (HiPS map)
+################################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -12,7 +12,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the components of the results coverage chart panel.
 
-**LSST data products:**
+**LSST data products:** DP1 catalogs
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -61,16 +61,16 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
 
 .. code-block:: SQL
 
-SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
        u_cModelFlux, g_cModelFlux, r_cModelFlux,
        i_cModelFlux, z_cModelFlux, y_cModelFlux
-FROM dp1_v29.Object
-WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+  FROM dp1_v29.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
       CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
       AND (detect_isIsolated =1 AND refExtendedness =1
            AND u_cModelFlux >360 AND g_cModelFlux >360
            AND r_cModelFlux >360 AND i_cModelFlux >360
-           AND z_cModelFlux >360 AND y_cModelFlux >360)
+           AND z_cModelFlux >360 AND y_cModelFlux >360) 
 
 
 **2. View the default coverage chart** (Figure 1).
