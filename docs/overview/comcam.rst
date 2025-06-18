@@ -18,7 +18,7 @@ Focal plane
 LSSTComCam consists of only a single "raft" of 9 CCDs
 (charge-coupled device, also called a sensor, detector, or chip).
 Each CCD is 4k x 4k pixels (4000 by 4000 pixels), for a total of 144 Mpix.
-For comparison, LSSTCam will have 21 rafts, and 189 of the same CCDs.
+For comparison, LSSTCam has 21 rafts, and 189 of the same CCDs.
 All of LSSTComCam's CCDs are from ITL, one of the same two vendors that supplied the LSSTCam detectors (ITL and e2v).
 
 .. figure:: images/comcam_focal_plane.png
