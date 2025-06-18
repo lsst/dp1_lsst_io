@@ -61,7 +61,7 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
        u_cModelFlux, g_cModelFlux, r_cModelFlux,
        i_cModelFlux, z_cModelFlux, y_cModelFlux
 FROM dp1_v29.Object
