@@ -46,7 +46,7 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 
 **4. Review the layout.**
 On the Portal landing page (Figure 2) the default selected tab of the landing page is labeled Results.
-The icons and tabs across the top of the screen will open various Portal search methods.
+The icons and tabs across the top of the screen (not shown) will open various Portal search methods.
 
 **5. View the information window.**
 On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
@@ -65,7 +65,8 @@ On the Portal landing page (Figure 2) click on the menu icon (three horizontal l
 
 
 **7. Review the sidebar menu.**
-In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., DP0.2 Catalogs), and that which tabs you see are configurable with the "Hide Tab" option.
+In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., Data Collections),
+and that which tabs you see are configurable with the "Hide Tab" option.
 Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
 
 
