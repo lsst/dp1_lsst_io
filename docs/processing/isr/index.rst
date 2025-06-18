@@ -45,7 +45,75 @@ The steps of ISR include:
     :name: isr_steps
     :alt: A schematic diagram with Instrument Signature Removal steps relevant for LSSTCam images.
 
-    Figure 2: Instrument Signature Removal steps derived form the detector model in Figure 1 (from `Plazas Malagón et al. 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_).
+    Figure 2: Instrument Signature Removal steps derived from the detector model in Figure 1 (from `Plazas Malagón et al. 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_).
+
+
+Components
+==========
+
+Dithering of Digitized Counts
+-----------------------------
+Applies a small random offset in the range [−0.5, 0.5) analog-to-digital units (ADU) to mitigate quantization bias introduced by analog-to-digital conversion.
+
+Serial Overscan Subtraction
+---------------------------
+Removes row-wise electronic bias using the serial overscan region, typically via a per-row median excluding the initial columns affected by deferred charge.
+
+Masking of Saturated and Suspect Pixels
+---------------------------------------
+Flags pixels that exceed defined saturation levels or exhibit anomalies, ensuring they are excluded from subsequent calibration steps.
+
+Gain Scaling
+------------
+Converts pixel values from ADU to electrons using temperature-corrected gain factors derived from photon transfer curve (PTC) measurements.
+
+Correction of Crosstalk in Parallel Overscan
+--------------------------------------------
+Removes signal leakage from high-charge pixels into the parallel overscan regions of other amplifiers before performing the overscan subtraction.
+
+Parallel Overscan Subtraction
+-----------------------------
+Subtracts column-wise bias using the parallel overscan region, after crosstalk and saturation artifacts have been corrected.
+
+Correction of Crosstalk Between Amplifiers
+------------------------------------------
+Removes crosstalk between amplifier channels using a pre-measured crosstalk matrix, correcting both intra- and inter-CCD effects.
+
+Linearity Correction
+--------------------
+Corrects for non-linear detector response at medium and high signal levels.
+
+Serial Charge Transfer Inefficiency (CTI) Correction
+----------------------------------------------------
+Removes trailing charge artifacts from incomplete charge transfer in the serial register using a flux- and position-dependent correction model.
+
+Image Assembly and Trimming
+---------------------------
+Combines the 16 amplifier segments into a single CCD image and trims the overscan regions.
+
+Bias Subtraction
+----------------
+Subtracts a combined bias frame created from multiple zero-time exposure images, correcting for static readout structure and electronic offsets.
+
+Dark Subtraction
+----------------
+Removes the thermal dark current and any residual bias structure using a combined dark frame measured with closed-shutter exposures.
+
+Brighter-Fatter Correction
+--------------------------
+Corrects for the brighter-fatter effect using a convolution kernel calibrated from flat-field pixel correlations.
+
+Defect Masking and Interpolation
+--------------------------------
+Flags and interpolates over known bad pixels or columns identified from flat and dark exposures as statistical outliers.
+
+Variance Plane Construction
+---------------------------
+Computes the variance per pixel from the Poisson noise and read noise, creating a map for uncertainty propagation in later processing.
+
+Flat Fielding
+-------------
+Applies a background and reference flat to convert images to fluence units (e−/pixel), correcting for illumination non-uniformities.
 
 
 Overview
