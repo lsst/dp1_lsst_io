@@ -6,7 +6,7 @@ Data processing
 
 A high-level overview of the Data Release Processing (DRP) steps which generated the data products.
 
-All processing was done with the `LSST Science Pipelines <https://pipelines.lsst.io/>`_
+All processing was done with the `LSST Science Pipelines <https://pipelines.lsst.io/>`_.
 
 For details see |dp1_paper|.
 
