@@ -15,7 +15,7 @@ LSSTComCam is also referred to as the engineering test camera.
 Focal plane
 ===========
 
-LSSTComCam is comprised of only a single "raft" of 9 CCDs
+LSSTComCam consists of only a single "raft" of 9 CCDs
 (charge-coupled device, also called a sensor, detector, or chip).
 Each CCD is 4k x 4k pixels (4000 by 4000 pixels), for a total of 144 Mpix.
 For comparison, LSSTCam will have 21 rafts, and 189 of the same CCDs.
