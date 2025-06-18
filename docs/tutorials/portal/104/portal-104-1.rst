@@ -55,23 +55,23 @@ The default layout of the Results tab is shown in Figure 1.
 
     Figure 1: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at uppr right, and the tabular data below.
 
-The *Coverage chart* (upper left in Figure 1):  
+The *Coverage chart* (upper left, or "A" in Figure 1):  
 The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
 The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP0.2 deepCoadd images.
 
-The *Active chart* (upper right in Figure 1):
+The *Active chart* (upper right, or "B" in Figure 1):
 The default plot will be the first two columns of the returned data table.
 In Figure 1, this is the Declination coordinate on the y-axis and the Right Ascension coordinate on the x-axis.
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
 
-The *Table results* (bottom box in Figure 1):
+The *Table results* (bottom box, or "C" in Figure 1):
 A scrollable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
 
 **4. View layout options.**
 At upper left, click on the menu icon (a "hamburger" icon = three horizontal lines) to open the sidebar menu.
-Under "Results Layout", click on the icon of the default layout ("up-down" arrows in Figure 2) to see all layout options.
+Under "Results Layout", click on the icon of the default layout ("up-down" arrows, or "A" in Figure 2) to see all layout options.
 
 .. figure:: images/portal-104-1-2.png
     :name: portal-104-1-2
@@ -98,8 +98,8 @@ Execute the query.
 
 **7. View multiple query results.**
 The Results tab components are now populated with the data from the new query (Figure 3).
-The coverage chart includes HEALPix maps for both queries, with the new one in magenta (upper left in Figure 3).
-The active chart uses data from the new query results (upper right in Figure 3).
+The coverage chart includes HEALPix maps for both queries, with the new one in magenta (upper left, or "A" in Figure 3).
+The active chart uses data from the new query results (upper right, or "B" in Figure 3).
 The table now has two tabs, one for each query.
 Click on the tab for the first query and note that the coverage chart, table, and active chart change.
 
