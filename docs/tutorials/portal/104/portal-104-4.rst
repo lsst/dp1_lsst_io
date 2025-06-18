@@ -72,8 +72,8 @@ Any column can be sorted in this way.
 Click on the boxes at left (B in Figure 1) for the first 10 rows.
 Notice how these objects are colored differently in the coverage and active chart, as in Figure 2.
 
-.. figure:: /_static/portal-howto-table-2.png
-    :name: portal-howto-table-2
+.. figure:: images/portal-104-4-2.png
+    :name: portal-104-4-2
     :alt: The full Results tab when 10 rows have been selected.
 
     Figure 2: The full Results tab after 10 rows have been selected in the table panel.
