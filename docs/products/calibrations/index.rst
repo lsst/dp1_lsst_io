@@ -25,6 +25,8 @@ Examples of dataset types:
 * ``('flat', {band, instrument, detector, physical_filter}, ExposureF, isCalibration=True)``
 
 
+Other calibrations dataset types include ``ptc`` for Photon Transfer Curve and ``bfk`` for brighter-fatterkernel.
+
 Description
 ===========
 
@@ -48,12 +50,12 @@ Pixel data
 
 The "afw ExposureF" calibration products such as the combined bias, dark, and flat have an image plane and a variance plane.
 
-The pixel data units are ADU (analog-digital units).
+The pixel data units are ADU (analog-to-digital units).
 
 Metadata
 --------
 
-"afw ExposureF" calibration frames have a header and bounding box, but no WCS.
+"afw ExposureF" calibration frames have a header and bounding box, but don't have a Wolrd Coordinate Syetem (WCS) object.
 
 Tutorials
 ---------
