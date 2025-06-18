@@ -42,8 +42,8 @@ This query will retrieve a small sample of point-like objects (stars) brighter t
 **2. View the default table** (Figure 1).
 Only one query has been executed, so there is only one tab in the table panel (A in Figure 1).
 
-.. figure:: images/portal-104-1-1.png
-    :name: portal-104-1-1
+.. figure:: images/portal-104-4-1.png
+    :name: portal-104-4-1
     :alt: The default view of the table panel.
 
     Figure 1: The table panel that results from the query in step 1. The third row has been clicked on and is highlighted orange.
