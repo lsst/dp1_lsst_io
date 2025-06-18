@@ -17,7 +17,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ----
 
@@ -28,7 +29,7 @@ and click on "General TAP" to add it as an additional tab.)
 
 **2. Select “dp1_v29” from the "Table Collection (Schema)" menu.**
 In the box for selecting tables, select "dp1_v29.ObsCore".
-Note: leave all columns selected in the `Output Column Selection and Constraints` table.
+Note: leave all columns selected in the "Output Column Selection and Constraints table".
 
 **3. Select the location contained in the images to be retrieved.**
 Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
