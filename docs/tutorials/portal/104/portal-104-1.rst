@@ -103,4 +103,4 @@ The table now has two tabs, one for each query.
 Click on the tab for the first query and note that the coverage chart, table, and active chart change.
 
 **8. Delete unwanted query results.**
-In the table (C in Figure 3), click on the X in the tab for the first query results to delete them.
+In the table, click on the X in the tab for the first query results (the leftmost one) to delete them.
