@@ -17,7 +17,8 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in
+the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
 ----
@@ -48,24 +49,30 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 On the Portal landing page (Figure 2) the default selected tab of the landing page is labeled Results.
 The icons and tabs across the top of the screen (not shown) will open various Portal search methods.
 
+.. figure:: images/portal-101-1-3.png
+    :name: portal-101-1-3
+    :alt: Rubin Portal Version Information
+
+    Figure 3: Rubin Portal Version Information.
+
+
 **5. View the information window.**
-On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
+On the Portal landing page (Figure 3) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
 Dismiss the window by clicking on the OK button or on the X in its upper right corner.
-(Window is not shown in a figure in this tutorial.)
 
 **6. Open the sidebar menu.**
 On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
 
-.. figure:: images/portal-101-1-3.png
-    :name: portal-101-1-3
+.. figure:: images/portal-101-1-4.png
+    :name: portal-101-1-4
     :alt: The sidebar menu of the Portal Aspect, showing options in addition to the tabs.
     :width: 300
 
-    Figure 3: The sidebar menu of the Portal Aspect.
+    Figure 4: The sidebar menu of the Portal Aspect.
 
 
 **7. Review the sidebar menu.**
-In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., Data Collections),
+In the sidebar menu (Figure 4) notice that some of the menu options match the tabs (e.g., Data Collections),
 and that which tabs you see are configurable with the "Hide Tab" option.
 Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
 
