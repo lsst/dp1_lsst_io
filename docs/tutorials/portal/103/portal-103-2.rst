@@ -47,10 +47,12 @@ It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
-  SELECT coord_dec,coord_ra,detect_isIsolated,g_cModelFlux,i_cModelFlux,r_cModelFlux,u_cModelFlux,
+  SELECT coord_dec,coord_ra,detect_isIsolated,g_cModelFlux,
+       i_cModelFlux,r_cModelFlux,u_cModelFlux,
        y_cModelFlux,z_cModelFlux
   FROM dp1_v29.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53, -28, 0.05))=1
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+      CIRCLE('ICRS', 53, -28, 0.05))=1
       AND (detect_isIsolated =1
            AND g_cModelFlux >360
            AND i_cModelFlux >360
