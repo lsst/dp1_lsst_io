@@ -117,8 +117,3 @@ The default Results tab might display an empty panel instead of the coverage cha
 
     Figure 2: The Portal Results tab with the layout displaying the activated coverage chart for the data returned from the three-table join query.
 
-
-**7. Find more join examples.**
-Visit the ``/data-access-analysis-tools/adql-recipes`` page for more examples of table joins.
-Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
-
