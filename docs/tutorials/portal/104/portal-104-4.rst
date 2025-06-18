@@ -24,8 +24,9 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log in to the Portal Aspect of the RSP and execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
-This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
+This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude).
 
+.. code-block:: SQL
 
   SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
          u_cModelFlux, g_cModelFlux, r_cModelFlux,
