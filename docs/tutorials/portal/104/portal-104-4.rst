@@ -89,10 +89,7 @@ See how all panels update to show only the selected objects, as in Figure 3.
 
     Figure 3: The full Results tab after 10 rows have been selected in the table panel, and filtered on.
 
-
 **8. Remove the filter and selection.**
 Click the "unfilter" icon at upper right in the table panel to remove the filter (A in Figure 3).
 Click the "unselect" icon at uppr right in the active chart panel to unselect all objects (B in Figure 3).
-
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
 
