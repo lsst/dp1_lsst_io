@@ -55,7 +55,7 @@ a flux that's equal to the difference between their flux in the template and vis
 
 Spurious sources are also present due to unavoidably imperfect template matching.
 
-Deblending is not run on difference image sources.
+Deblending isn't run on difference image sources.
 
 The results of DIA source detection are stored in the ``DiaSource`` catalog.
 
