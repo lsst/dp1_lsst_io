@@ -32,8 +32,8 @@ Dataproduct subtype: ``lsst.deep_coadd``
 Description
 ===========
 
-For DP1 the selection criteria was that a visit image had to have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
-Selected exposures are combined using a mean stacking algorithm, weighted by inverse variance.
+For DP1 a visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
+A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual deep coadd image covers a single patch of the sky:
 a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes.
