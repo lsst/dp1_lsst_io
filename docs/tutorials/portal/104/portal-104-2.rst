@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**6/17/2025.  HIPS map does not work as yet for DP1.
+**Last verified to run:** 6/17/2025.  HIPS map does not work as yet for DP1.
 
 **Learning objective:** Learn how to iuse the coverage chart and HiPS map panel in the Portal results tab.
 This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude.
