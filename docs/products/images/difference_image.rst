@@ -46,7 +46,7 @@ Instead, a tool for on-the-fly difference image recreation will be provided to u
 
 For DP1, the difference images are served and can be retrieved
 and displayed by users instantaneously, but the inputs and tools
-for their re-creation are not supplied.
+for their re-creation aren't supplied.
 
 Processing
 ----------
