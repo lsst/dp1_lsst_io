@@ -54,7 +54,7 @@ Deblending
 After detection, ``Footprints`` with multiple peaks are deblended into
 "children" (with the original blended footprint called the "parent").
 
-The Scarlet Lite algorithm is used for deblending, as described in
+The Scarlet Lite algorithm performs the deblending, as described in
 "The current state of scarlet and looking toward the future" (`dmtn-194.lsst.io <https://dmtn-194.lsst.io/>`_).
 
 Only the deblended children are included in the catalogs.
