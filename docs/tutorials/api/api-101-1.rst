@@ -83,7 +83,60 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
     Figure 4:  The Table Access Protocol (TAP) Query window; a list of DP1 tables 
     available for query can be be seen in the Metadata panel.
 
-**7. Explore.**
+**7. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-5.png
+    :name: api-101-1-5
+    :alt: A screenshot of .
+
+    Figure 5:  Caption this!
+
+**8. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-6.png
+    :name: api-101-1-6
+    :alt: A screenshot of .
+
+    Figure 6:  Caption this!
+
+**9. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-7.png
+    :name: api-101-1-7
+    :alt: A screenshot of .
+
+    Figure 7:  Caption this!
+
+**10. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-8.png
+    :name: api-101-1-8
+    :alt: A screenshot of .
+
+    Figure 8:  Caption this!
+
+**11. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-9.png
+    :name: api-101-1-9
+    :alt: A screenshot of .
+
+    Figure 9:  Caption this!
+
+**12. Do this.**
+Blah.
+
+.. figure:: images/api-101-1-10.png
+    :name: api-101-1-10
+    :alt: A screenshot of .
+
+    Figure 10:  Caption this!
+
+**13. Explore.**
 At this stage, the Rubin DP1 data set can be explored via TOPCAT.  For an example, see the 
 :doc:`api-101-2`.
-
