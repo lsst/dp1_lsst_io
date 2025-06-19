@@ -51,7 +51,7 @@ absolute flux in difference images, where the threshold is a signal-to-noise rat
 Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
-a flux that is equal to the difference between their flux in the template and visit images.
+a flux that's equal to the difference between their flux in the template and visit images.
 
 Spurious sources are also present due to unavoidably imperfect template matching.
 
