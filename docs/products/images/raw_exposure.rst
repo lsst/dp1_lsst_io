@@ -52,7 +52,7 @@ Metadata
 
 The metadata for raw exposures retrieved from the butler include
 information about the observation (e.g., pointing, weather)
-and an intial WCS.
+and an initial WCS.
 
 Tutorials
 ---------
