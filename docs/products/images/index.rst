@@ -30,7 +30,7 @@ or for use as templates in difference image analysis.
 Visit images
 ============
 
-Processed and calibrated images from individual vists (single observations).
+Processed and calibrated images from individual visits (single observations).
 
 .. toctree::
     :maxdepth: 1
