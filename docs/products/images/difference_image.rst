@@ -36,7 +36,7 @@ resizing, warping, PSF-matching, and scaling them to a given visit image,
 and subtracting the result from the visit image.
 Each individual difference image contains data from one of the camera's detectors.
 
-Difference images contain sources of residual flux from the subtraction,
+Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
 a flux that is equal to the difference between their flux in the template and visit images.
