@@ -67,7 +67,7 @@ Measurement
 
 A large variety of centroid, size, shape, and flux measurements are made
 on the deblended children.
-It is important to note that child fluxes may be sub-threshold
+It's important to note that child fluxes may be sub-threshold
 (signal-to-noise ratio < 5), if their parent was above-threshold.
 
 In visit images, measurements of sources assume a PSF or Gaussian shape.
