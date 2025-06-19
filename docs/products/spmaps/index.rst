@@ -19,7 +19,7 @@ Dataset type: ``('<map_name>', {band, skymap}, HealSparseMap)``
 Description
 ===========
 
-Maps in ``HealSparse`` format that aggregate infromation from the ``deep_coadd`` images and
+Maps in ``HealSparse`` format that aggregate information from the ``deep_coadd`` images and
 summarize key observing conditions and survey characteristics across the sky.
 
 Map types
