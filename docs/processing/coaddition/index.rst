@@ -57,8 +57,7 @@ PSF FWHM were used.
 Image combination algorithm
 ===========================
 
-Selected exposures are combined using a mean
-stacking algorithm, weighted by inverse variance.
+A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 To mitigate transient artifacts before coaddition,
 an artifact rejection procedure first identifies and masks
