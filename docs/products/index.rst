@@ -43,7 +43,7 @@ All-sky maps of deep coadded images, survey depth, image quality, and more.
 Calibrations
 ============
 
-Calibration images (bias, dark, and flat frames).
+Calibration products (e.g., bias, dark, and flat frames).
 
 .. toctree::
     :maxdepth: 1

@@ -4,7 +4,7 @@
 Astrometric calibration
 #######################
 
-The astrometric calibrations defines the World Coordinate System (WCS) of an image, the relation between pixel coordinate and sky coordinate (Right Ascension and Declination).
+The astrometric calibrations define the World Coordinate System (WCS) of an image, the relation between pixel coordinates and sky coordinates (Right Ascension and Declination).
 
 Astrometric calibration uses the ``gbdes`` package (`Bernstein et al. 2017 <https://ui.adsabs.harvard.edu/abs/2017PASP..129g4503B/abstract>`_).
 

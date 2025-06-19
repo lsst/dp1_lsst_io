@@ -44,7 +44,7 @@ Photometric calibrations correct the counts (electrons) measured by the camera t
 Astrometric calibration
 =======================
 
-Astrometric calibrations define the World Coordinate System (WCS) of an image, the relation between pixel coordinate and sky coordinate (Right Ascension and Declination).
+Astrometric calibrations define the World Coordinate System (WCS) of an image, the relation between pixel coordinates and sky coordinates (Right Ascension and Declination).
 
 .. toctree::
     :maxdepth: 1

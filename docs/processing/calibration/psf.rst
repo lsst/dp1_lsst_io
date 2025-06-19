@@ -20,4 +20,4 @@ In this case, a second-order polynomial is used instead.
 Two Piff features were not used.
 First, PSF color dependence was not yet implemented but will be added in the future.
 Second, although the current Rubin software allows Piff to operate in sky coordinates (including WCS transformations),
-it does not yet correct for sensor-induced astrometric distortions (e.g., tree rings), but will in the future.
+it does not yet correct for sensor-induced astrometric distortions (e.g., tree rings); this functionality will also be added in the future.

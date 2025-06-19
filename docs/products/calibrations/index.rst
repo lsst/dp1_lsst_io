@@ -4,7 +4,8 @@
 Calibrations
 ############
 
-Calibration images (bias, dark, and flat frames).
+Calibration products (e.g., combined bias, dark, and flat frames).
+
 
 DOI: |doi_calibrations|
 
@@ -12,22 +13,23 @@ DOI: |doi_calibrations|
 Access
 ======
 
-The calibration frames are accessible via the butler.
+The calibration products are accessible via the butler.
 
 Butler
 ------
 
-Dataset types:
+Examples of dataset types:
 
 * ``('bias', {instrument, detector}, ExposureF, isCalibration=True)``
 * ``('dark', {instrument, detector}, ExposureF, isCalibration=True)``
 * ``('flat', {band, instrument, detector, physical_filter}, ExposureF, isCalibration=True)``
 
+Other calibrations dataset types include ``ptc`` for Photon Transfer Curve and ``bfk`` for brighter-fatterkernel.
 
 Description
 ===========
 
-The process of Instrument Signature Removal (ISR; also called "image reduction") uses bias, dark, and flat field calibration frames as part of the process to transform raw images into visit images.
+The process of Instrument Signature Removal (ISR; also called "image reduction") uses calibration products such as bias, dark, and flat field calibration frames as part of the process to transform raw images into visit images.
 
 **Bias images**: An exposure obtained with zero exposure time to measure the pedestal level of counts applied during readout.
 
@@ -38,21 +40,21 @@ The process of Instrument Signature Removal (ISR; also called "image reduction")
 Processing
 ----------
 
-The calibration frames are used in the :doc:`/processing/isr/index` pipeline.
+The calibration products are used in the :doc:`/processing/isr/index` pipeline.
 
 Pixel data
 ----------
 
-The calibration frames have an image plane and a variance plane.
+``ExposureF`` calibration products such as the combined bias, dark, and flat have an image plane and a variance plane.
 
-The pixel data units are ADU (analog-digital units).
+The pixel data units are ADU (analog-to-digital units).
 
 Metadata
 --------
 
-Calibration frames have a header and bounding box, but no WCS.
+``ExposureF`` calibration frames have a header and bounding box, but don't have a World Coordinate System (WCS) object.
 
 Tutorials
 ---------
 
-See the :ref:`200-level notebook <notebook-200>` tutorial demonstrating how to access the calibration frames.
+See the :ref:`200-level notebook <notebook-200>` tutorial demonstrating how to access the calibration products.
