@@ -46,8 +46,8 @@ For the DP1 deep coadds, a visit image had to have a PSF FWHM < 1.7 arcseconds
 to be selected as an input image.
 
 For template coadds, good seeing (low PSF FWHM) is more important than depth.
-For the DP1 template coadded images, the third of the visit images with lowest
-PSF FWHM were used as inputs.
+DP1 template coadded images use the third of the visit images with lowest
+PSF FWHM as inputs.
 If there were less than 36 visit images in total, the 12 visit images with the lowest
 PSF FWHM were used.
 
