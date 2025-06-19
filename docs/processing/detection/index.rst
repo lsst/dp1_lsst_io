@@ -21,9 +21,9 @@ Key terminology:
 * ``source``: a detection in a single processed visit image
 * ``object``: an astrophysical object at a static sky coordinate
 
-Measurements made on objects in a processed visit image are called "sources".
+The term "sources" refers to measurements made on objects in a processed visit image.
 
-Measurements made on objects in the deep coadd images are called "objects".
+The term "objects" refers to measurements made on objects in the deep coadd images.
 
 
 .. _detection-detection:
