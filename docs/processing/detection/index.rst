@@ -75,7 +75,7 @@ The results are stored in the ``Source`` catalog.
 
 In deep coadd images, measurements of objects include both PSF and extended shapes.
 A wide variety of flux measurements are pre-calculated, such as the
-composite model (cModel), Gaussian-aperture-and-PSF (GaaP), and Sersic models.
+composite model (cModel), Gaussian-aperture-and-PSF (`GaaP <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_), and Sersic models.
 The results are stored in the ``Object`` catalog.
 
 
