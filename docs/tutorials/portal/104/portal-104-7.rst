@@ -59,9 +59,9 @@ The default plot will use the first two columns of the returned data table.
 In Figure 1, this is the Declination coordinate on the y-axis and the Right Ascension coordinate on the x-axis.
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
 
-.. figure:: /_static/portal-howto-plots-1.png
-    :name: portal-howto-plots-1
-    :alt: The default view of the active chart.
+.. figure:: images/portal-104-7-1.png
+    :name: portal-104-4-1
+    :alt: The default view of the table panel.
 
     Figure 1: The active chart panel in the Results tab, with default settings, for the query above.
 
