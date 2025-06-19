@@ -16,7 +16,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 This tutorial demonstrates how to navigate the results of a simple Portal query.
 The example below selects fluxes of bright objects within a radius around a specific point on the sky.
 
-**LSST data products:**
+**LSST data products:**  DP1 Object catalog
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
