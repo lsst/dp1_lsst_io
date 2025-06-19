@@ -14,7 +14,7 @@ Coadd images
 
 Combinations of multiple calibrated images of the same region of the sky to achieve
 greater depth (to detect fainter objects),
-or to be used as templates in difference image analysis.
+or for use as templates in difference image analysis.
 
 
 .. toctree::
