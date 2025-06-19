@@ -35,7 +35,7 @@ Dataset type: ``('dia_object_forced_source', {skymap, tract, patch}, ArrowAstrop
 Description
 ===========
 
-"Forced" photometry means a measurement is made at a fixed coordinate in an image,
+"Forced" photometry means a measurement made at a fixed coordinate in an image,
 regardless of whether an above-threshold region was detected there in that particular image.
 
 The DIA forced source table contains forced PSF flux photometry on both the visit (i.e., "direct" or "science")
