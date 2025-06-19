@@ -100,8 +100,8 @@ Click on the box icon (E in Figure 1).
 Click-and-drag in the plot to select points (A in Figure 2).
 Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figure 2) the points.
 
-.. figure:: /_static/portal-howto-plots-2.png
-    :name: portal-howto-plots-2
+.. figure:: images/portal-104-7-2.png
+    :name: portal-104-4-2
     :alt: Using the selection box tool in the active chart panel.
 
     Figure 2: After using the box select tool to create a box in the plot (A), two new icons appear (B and C).
