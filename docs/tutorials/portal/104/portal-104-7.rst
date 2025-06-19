@@ -53,7 +53,6 @@ The ``scisql_nanojanskyToAbMag()`` function converts fluxes (in nJy) to AbMagnit
              AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
-
 **2. View the default active chart** (Figure 1).
 The default plot will use the first two columns of the returned data table.
 In Figure 1, this is the Declination coordinate on the y-axis and the Right Ascension coordinate on the x-axis.
@@ -89,7 +88,7 @@ In the active chart panel (Figure 1) click on each of the icons listed below and
 * L: **Add chart** - add a new chart (a new plot) to the active chart panel.
 
 **6. Zoom, pan, and unzoom.**
-Click on the zoom icon (C in Figure 1) to enter zoom mode. 
+Click on the zoom icon (C in Figure 1) to enter zoom mode.
 Click-and-drag in the plot to zoom in.
 Click on the pan icon (D in Figure 1) to enter pan mode.
 Click-and-drag in the plot to recenter the plotted data.
@@ -106,18 +105,15 @@ Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figur
 
     Figure 2: After using the box select tool to create a box in the plot (A), two new icons appear (B and C).
 
-
 **8. Select objects.**
 Click on the select icon (B in Figure 2).
-The will be marked with a different color in the active chart and the coverage chart, and will be selected in the
-table, as shown in Figure 3.
+The will be marked with a different color in the active chart and the coverage chart, and will be selected in the table, as shown in Figure 3.
 
 .. figure:: images/portal-104-7-3.png
     :name: portal-104-4-3
     :alt: The full Portal Results tab with points selected in the active chart.
 
     Figure 3: The full Portal Results tab after points have been selected in the active chart.
-
 
 **9. Filter on the selected objects.**
 Click on the select icon (B in Figure 2) to unselect objects.
@@ -131,8 +127,5 @@ The selected objects will now be the only points shown in the active chart, the 
 
     Figure 4: The full Portal Results tab after points have been selected and filtered on in the active chart.
 
-
 **10. Remove the filter.**
 Click on the filter icon (C in Figure 2) to remove the filter and return to the default plot of Figure 1.
-
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
