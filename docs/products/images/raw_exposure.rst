@@ -45,7 +45,7 @@ Pixel data
 
 The raw exposures have only an image plane, with no variance or mask planes like the visit images, because as those planes are a result of image processing and calibration.
 
-Image: Sky pixel data in units of ADU (analog-digital units).
+Image: sky pixel data in units of ADU (analog-digital units).
 
 Metadata
 --------
