@@ -57,7 +57,7 @@ After detection, ``Footprints`` with multiple peaks are deblended into
 The Scarlet Lite algorithm performs the deblending, as described in
 "The current state of scarlet and looking toward the future" (`dmtn-194.lsst.io <https://dmtn-194.lsst.io/>`_).
 
-The catalogs only included the deblended children.
+The catalogs only include the deblended children.
 
 
 .. _detection-measurement:
