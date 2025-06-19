@@ -65,7 +65,7 @@ Reliability score
 
 Real and spurious DIA sources can both be detected with a signal-to-noise ratio of 5.
 
-For DP1, a relatively simple machine learning reliability model was built,
+DP1 uses a relatively simple machine learning reliability model,
 trained on simulated data and injected point sources labelled by Rubin staff,
 and applied to DIA sources.
 The reliability value is stored in the ``reliability`` column of the ``DiaSource`` catalog.
