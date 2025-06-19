@@ -32,7 +32,7 @@ and then subtracted from the visit image to create a difference image.
 In the context of DIA, the visit image is sometimes referred to as the
 "direct" or "science" image.
 
-For *future* data releases, to save space, the difference images will not be stored.
+For *future* data releases, to save space, the difference images won't be stored.
 Instead, a tool for on-the-fly difference image recreation will be provided to users.
 
 For DP1, the difference images are served and can be retrieved
