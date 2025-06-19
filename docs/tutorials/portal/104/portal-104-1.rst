@@ -38,7 +38,7 @@ Enter the query below into the ADQL box, and press "Search".
   SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
          u_cModelFlux, g_cModelFlux, r_cModelFlux,
          i_cModelFlux, z_cModelFlux, y_cModelFlux
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
         AND (detect_isIsolated =1 AND refExtendedness =1
