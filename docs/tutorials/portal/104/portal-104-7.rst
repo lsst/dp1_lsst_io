@@ -107,7 +107,7 @@ Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figur
 
 **8. Select objects.**
 Click on the select icon (B in Figure 2).
-The will be marked with a different color in the active chart and the coverage chart, and will be selected in the table, as shown in Figure 3.
+These points will be marked with a different color in the active chart and the coverage chart, and will be selected in the table, as shown in Figure 3.
 
 .. figure:: images/portal-104-7-3.png
     :name: portal-104-4-3
