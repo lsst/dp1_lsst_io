@@ -38,17 +38,17 @@ The ``scisql_nanojanskyToAbMag()`` fonction converts fluxes (in nJy) to AbMagnit
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isPrimary, refExtendedness, 
-         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag, 
-         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag, 
-         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag, 
-         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag, 
-         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag, 
+  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+         scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
+         scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
+         scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
+         scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
+         scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp1.Object 
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1 
-        AND (detect_isPrimary =1 AND refExtendedness =1 
+  FROM dp1.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
+        AND (detect_isPrimary =1 AND detect_isIsolated =1 
              AND u_cModelFlux >360 AND g_cModelFlux >360 
              AND r_cModelFlux >360 AND i_cModelFlux >360 
              AND z_cModelFlux >360 AND y_cModelFlux >360)
