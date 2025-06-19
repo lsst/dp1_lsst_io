@@ -48,7 +48,7 @@ DIA source detection
 DIA source detection refers to the process of finding regions with above-threshold
 absolute flux in difference images, where the threshold is a signal-to-noise ratio of 5.
 
-Difference images contain sources of residual flux from the subtraction,
+Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
 a flux that is equal to the difference between their flux in the template and visit images.
