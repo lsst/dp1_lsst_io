@@ -44,7 +44,7 @@ This will open up a separate Table Access Protocol (TAP) Query window.
     :alt: A screenshot of the main TOPCAT window with the Table Access Protocol item 
 	  highlighted by the cursor under the VO drop-down menu.
 
-    The main TOPCAT window, with the "VO" menu pulled down and the "Table Access Protocol (TAP) Query" highlighted.
+    Figure 1:  The main TOPCAT window, with the "VO" menu pulled down and the "Table Access Protocol (TAP) Query" highlighted.
 
 **4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button in the Table Access Protocol (TAP) Query window.**
 For DP1, use ``https://data.lsst.cloud/api/tap``.  
@@ -56,7 +56,7 @@ For DP1, use ``https://data.lsst.cloud/api/tap``.
 	  https://data.lsst.cloud/api/tap .  A blue oval indicates the location of the 
           Selected TAP Service panel in the window.
 
-    The Table Access Protocol (TAP) Query window with the location of the "Selected TAP Service" panel indicated by a blue oval.
+    Figure 2:  The Table Access Protocol (TAP) Query window with the location of the "Selected TAP Service" panel indicated by a blue oval.
 
 **5. Populate the Authentication window that pops up.**  
 Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Password" and click "OK".
@@ -66,7 +66,7 @@ Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Passwor
     :alt: A screenshot of the Authentication window. The user has been filled in with a value of x-oauth-basic, 
 	  and the password is shown (for security purposes) as a series of filled black circles.
 
-    The Authentication window with the values for the user and the password filled in.
+    Figure 3:  The Authentication window with the values for the user and the password filled in.
 
 **6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**  
 An indicator that the service is now accessible is that a list of DP1 tables available has appeared in the Metadata panel of the TAP Query window.
@@ -80,7 +80,7 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
 	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
-    The Table Access Protocol (TAP) Query window; a list of DP1 tables 
+    Figure 4:  The Table Access Protocol (TAP) Query window; a list of DP1 tables 
     available for query can be be seen in the Metadata panel.
 
 **7. Explore.**
