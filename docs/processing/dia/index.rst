@@ -117,7 +117,7 @@ parameter.
 DIA forced photometry
 =====================
 
-In general, "forced" photometry means a measurement is made at a fixed coordinate in an image,
+In general, "forced" photometry means a measurement made at a fixed coordinate in an image,
 regardless of whether an above-threshold region was detected in that particular image.
 
 Forced PSF photometry measurements are made on all visit and difference images
