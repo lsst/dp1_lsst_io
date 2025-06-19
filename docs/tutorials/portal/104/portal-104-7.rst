@@ -14,7 +14,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Summary:** This tutorial demonstrates how to manipulate the active chart and customize the plotted data in the Portal results tab.
 
-Terminology:
+**Terminology:**
 
 * `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
 * PNG: Portable Network Graphic
@@ -33,12 +33,12 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log in to the Portal Aspect of the RSP and execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
-This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
-The ``scisql_nanojanskyToAbMag()`` fonction converts fluxes (in nJy) to AbMagnitudes.
+This query will retrieve a small sample of isolated (not blended) objects brighter than 25th magnitude.
+The ``scisql_nanojanskyToAbMag()`` function converts fluxes (in nJy) to AbMagnitudes.
 
 .. code-block:: SQL
 
-  SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
+  SELECT coord_dec, coord_ra, detect_isIsolated,
          scisql_nanojanskyToAbMag(u_cModelFlux) AS u_cModelMag,
          scisql_nanojanskyToAbMag(g_cModelFlux) AS g_cModelMag,
          scisql_nanojanskyToAbMag(r_cModelFlux) AS r_cModelMag,
@@ -48,9 +48,9 @@ The ``scisql_nanojanskyToAbMag()`` fonction converts fluxes (in nJy) to AbMagnit
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
-        AND (refExtendedness =1 AND detect_isIsolated =1 
-             AND u_cModelFlux >360 AND g_cModelFlux >360 
-             AND r_cModelFlux >360 AND i_cModelFlux >360 
+        AND (detect_isIsolated =1
+             AND u_cModelFlux >360 AND g_cModelFlux >360
+             AND r_cModelFlux >360 AND i_cModelFlux >360
              AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
@@ -64,7 +64,6 @@ This plot will switch to a two-dimensional histogram if so many objects are retu
     :alt: The default view of the active chart.
 
     Figure 1: The active chart panel in the Results tab, with default settings, for the query above.
-
 
 **3. Mouse-over for pop-up notes.**
 In the active chart panel (Figure 1) use the mouse to hover over the menus and icons to see pop-up explanations of the functionality.
