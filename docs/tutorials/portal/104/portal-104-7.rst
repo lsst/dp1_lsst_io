@@ -12,6 +12,15 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the components of the results active chart (plot) panel.
 
+**Summary:** This tutorial demonstrates how to manipulate the active chart and customize the plotted data in the Portal results tab.
+
+Terminology:
+
+* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
+* PNG: Portable Network Graphic
+* color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
+* CMD: color-magnitude diagram, a plot with a color on one axis and magnitude on the other.
+
 **LSST data products:**  DP1 object catalogs
 
 **Credit:** Originally developed by the Rubin Community Science team.
@@ -22,21 +31,10 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Log in to the Portal Aspect of the RSP.**
-
-**Introduction:**
-This tutorial demonstrates how to manipulate the active chart and customize the plotted data in the Portal results tab.
-
-Terminology:
-
-* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
-* PNG: Portable Network Graphic
-* color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
-* CMD: color-magnitude diagram, a plot with a color on one axis and magnitude on the other.
-
-**1. Execute a query.**
+**1. Log in to the Portal Aspect of the RSP and execute a query.**
 Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
 This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude (as in preceding tutorials).
+The ``scisql_nanojanskyToAbMag()`` fonction converts fluxes (in nJy) to AbMagnitudes.
 
 .. code-block:: SQL
 
@@ -47,9 +45,9 @@ This query will retrieve a small sample of point-like objects (stars) brighter t
          scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag, 
          scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag, 
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp02_dc2_catalogs.Object 
+  FROM dp1.Object 
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), 
-        CIRCLE('ICRS', 62, -37, 0.167)) =1 
+        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1 
         AND (detect_isPrimary =1 AND refExtendedness =1 
              AND u_cModelFlux >360 AND g_cModelFlux >360 
              AND r_cModelFlux >360 AND i_cModelFlux >360 
