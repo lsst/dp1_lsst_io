@@ -41,7 +41,7 @@ positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
 a flux that's equal to the difference between their flux in the template and visit images.
 
-For *future* data releases, to save space, the difference images will not be stored.
+For *future* data releases, to save space, the difference images won't be stored.
 Instead, a tool for on-the-fly difference image recreation will be provided to users.
 
 For DP1, the difference images are served and can be retrieved
