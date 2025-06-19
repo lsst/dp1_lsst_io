@@ -106,7 +106,7 @@ Variability characterization
 ----------------------------
 
 Light curve characterization parameters are calculated for all DIA objects,
-such as the minimum, mean, maximum, standard deviation and skew in the
+such as the minimum, mean, maximum, standard deviation, and skew in the
 difference image fluxes, the light curve's slope, percentiles, and ``StetsonJ``
 parameter.
 
