@@ -58,11 +58,11 @@ Pixel data
 
 The difference images have three planes of pixel data.
 
-Image: Sky pixel data in flux units of nJy.
+Image: sky pixel data in flux units of nJy.
 
-Variance: Uncertainty (noise) in the flux in units of nJy^2.
+Variance: uncertainty (noise) in the flux in units of nJy^2.
 
-Mask: An integer bitmask of representative flag values that indicate processing status or issues,
+Mask: an integer bitmask of representative flag values that indicate processing status or issues,
 similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
 
 Metadata
