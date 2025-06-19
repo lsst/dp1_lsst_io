@@ -121,8 +121,8 @@ Repeat step 7.
 Click on the filter icon (C in Figure 2).
 The selected objects will now be the only points shown in the active chart, the coverage map, and the table, as in Figure 4.
 
-.. figure:: /_static/portal-howto-plots-4.png
-    :name: portal-howto-plots-4
+.. figure:: images/portal-104-7-4.png
+    :name: portal-104-4-4
     :alt: The full Portal Results tab with points filtered in the active chart.
 
     Figure 4: The full Portal Results tab after points have been selected and filtered on in the active chart.
