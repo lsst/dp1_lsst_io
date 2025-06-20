@@ -24,5 +24,13 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log in to the Portal Aspect of the RSP.**
 Log in to the Rubin Science Platform, and select the Portal aspect.
-There, go to the Portal's DP0.2 Catalogs tab, and switch to the UI interface.
+There, go to the Portal's "General TAP" tab, and switch to the UI interface.
+If the "General TAP" tab is not available click on the "hamburger" icon on the upper left, and click on the "General TAP" entry.
+This will result in an additional tab on top.
+
+**2. Select the appropriate table and image coordinates.**  Select "dp1" for the "Table Collection (Schema)" on the left, and "dp1.ObsCore" on the right.
+For Observation Type and Source, select "PVIs (2)".
+For "Location" select "Observation boundary contains point" and enter 53.0, -28.0`` in the associated box.
+Unselect "Timing" and "Object ID Search" boxes.
+
 
