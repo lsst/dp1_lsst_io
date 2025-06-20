@@ -26,7 +26,7 @@ Rubin staff will respond to all questions posted there.
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
 **2. Create a sample job.**
-For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Submit.
+For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Search.
 
 .. code-block:: sql
 
@@ -43,9 +43,9 @@ You can return to any of those jobs by clicking the line corresponding to the pa
 
 .. figure:: images/portal-101-4-1.png
     :name: portal-101-4-1
-    :alt: The screenshot illustrating the job monitor
+    :alt: Job monitor screenshot.
 
-    Figure 1:  The screenshot illustrating the job monitor.
+    Figure 1:  Job monitor screenshot.
 
 **5. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job,
 and if completed - will reveal the results.
