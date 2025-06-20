@@ -30,16 +30,16 @@ Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Enter constraints and spa
     :name: portal-103-1-1
     :alt: The Portal UI.
 
-    Figure 1: The Portal UI screen.
+    Figure 1: The Portal UI.
 
 
 **2. Convert UI to ADQL query.**
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query (figure 2).
 
-.. figure:: images/portal-103-1-5.png
-    :name: portal-103-1-5
-    :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
+.. figure:: images/portal-103-1-2.png
+    :name: portal-103-1-2
+    :alt: The Portal ADQL interfaceL.
 
     Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
 
