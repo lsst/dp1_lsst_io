@@ -12,9 +12,10 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the Job Monitor to obtain the status and ID of, and delete, submitted query jobs.
 
-**LSST data products:** ``DiaObject`` table
+**LSST data products:** ``Object`` table
 
-**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles,
+software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
@@ -25,20 +26,14 @@ Rubin staff will respond to all questions posted there.
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
 **2. Create a sample job.**
-For the purpose of this tutorial, create click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Submit.
+For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Submit.
 
-.. code::
+.. code-block:: sql
 
-  SELECT dec,g_psfFluxMean,ra
-     FROM dp1_v29.DiaObject
-     WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53, -28.8, 0.0083))=1
+  SELECT coord_dec,coord_ra,g_psfFlux
+    FROM dp1.Object
+    WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53.13, -28.1, 0.0027))=1
 
-
-.. figure:: images/portal-101-4-3.png
-    :name: portal-101-4-3
-    :alt: The screenshot with the parameters entered for a sample search.
-
-    Figure 3: The screenshot with the parameters entered for a sample search.
 
 **3.  Examine the job monitor.**
 Click on the "Job Monitor" tab on the top.
@@ -50,7 +45,7 @@ You can return to any of those jobs by clicking the line corresponding to the pa
     :name: portal-101-4-5
     :alt: The screenshot illustrating the job monitor
 
-    Figure 5:  The screenshot illustrating the job monitor.
+    Figure 1:  The screenshot illustrating the job monitor.
 
 **5. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
 Click on the circle with a letter "i" - this will show your search converted to an ADQL query as well as the job ID.
@@ -64,5 +59,5 @@ An example of informaton for a recent job is in the figure below.
     :name: portal-101-4-6
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
-    Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.
+    Figure 2:  The screenshot illustrating information about a recent job, available from the job monitor.
 
