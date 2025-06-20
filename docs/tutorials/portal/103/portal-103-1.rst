@@ -41,7 +41,7 @@ Leave "Temporal" and Object ID Search" unchecked.
 Restrict displaying the entries in the "Output Column Selection and Constraints" table to only those selected by you by clicking on the "funnel" icon on the upper left.
 
 .. figure:: images/portal-103-1-1.png
-    :name: portal-103-1-1
+    :name: portal-103-1-1.png
     :alt: The Portal UI with a spatial query for bright objects set up.
 
     Figure 1: The Portal UI set up for a simple cone search query for bright objects in the selected region.
