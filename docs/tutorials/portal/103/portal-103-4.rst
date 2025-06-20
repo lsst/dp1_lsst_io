@@ -61,8 +61,8 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
          scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
          src.Visit, cv.VisitId,
          cv.expMidptMJD, cv.seeing
-  FROM dp1_v29.Source AS src
-  JOIN dp1_v29.CcdVisit AS cv
+  FROM dp1.Source AS src
+  JOIN dp1.CcdVisit AS cv
   ON src.Visit = cv.VisitId
   WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
         CIRCLE('ICRS', 53.13, -28.10, 0.05)) = 1
@@ -93,8 +93,8 @@ Constraints can be applied on columns from any or all tables.
          scisql_nanojanskyToAbMag(obj.i_psfFlux) AS obj_i_psfAbMag,
          scisql_nanojanskyToAbMag(fs.psfFlux) AS fs_psfAbMag,
          cv.VisitId, cv.expMidptMJD, cv.seeing
-  FROM dp1_v29.Object AS obj
-  JOIN dp1_v29.ForcedSource AS fs
+  FROM dp1.Object AS obj
+  JOIN dp1.ForcedSource AS fs
   ON obj.objectId = fs.objectId
   JOIN dp1_v29.CcdVisit AS cv
   ON fs.Visit = cv.VisitId
