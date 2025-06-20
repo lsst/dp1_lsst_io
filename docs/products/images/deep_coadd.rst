@@ -32,7 +32,7 @@ Dataproduct subtype: ``lsst.deep_coadd``
 Description
 ===========
 
-For DP1 a visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
+A DP1 visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
 A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual deep coadd image covers a single patch of the sky:
