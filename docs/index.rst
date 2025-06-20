@@ -16,6 +16,8 @@ Vera C. Rubin Observatory Data Preview 1 (DP1)
 Overview
 ========
 
+DOI: |dataset_doi|
+
 General information about the observations that comprise the dataset.
 
 .. toctree::
