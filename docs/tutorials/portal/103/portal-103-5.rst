@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-11
+**Last verified to run:** 2025-06-20
 
 **Learning objective:** Query for image data with `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_.
 
@@ -21,38 +21,25 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
-**1. Rationale for preparing the ADQL query using UI aspect of the Portal.**
-While it is possible to enter the ADQL query directly into the ADQL aspect of the Portal, if the goal is to query and examine images containing a given location - using the UI aspect to create the ADQL query is probably simpler as it involves only a few steps.
+**1. Create ADQL query.**
+Use the Portal UI interface to create an image query or click on the Edit ADQL button and copy the query below. Notice, the calibration
+level and coordinates can be changed in the Portal UI interface or in the Edit ADQL query box.
+Edit the query as necessary, then hit Search.
 
-**2.  Prepare the ADQL query using the UI aspect.**
-Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
-In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.ObsCore" table.
-Leave the blue checkmarks in the "Output Column Selection and Constraints" as defaulted.
-Under "Enter Constraints" for "Query Type" check "Observation boundary contains point".
-For coordinates, enter ``53.0, -28.0``.
-In "Observation Type and Source" check "PVI(2)" - this selects the individual calibrated exposures (Processed Visit Images).
-Leave "Temporal" and Object ID Search" unchecked, but of course it is possible to restrict the search to observations conducted during specific times.
+.. code:: sql
 
-.. figure:: images/portal-103-5-1.png
-    :name: portal-103-5-1
-    :alt: The Portal UI set up to search for images corresponding to the selected constraints.
+  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
+         lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
+         obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format
+  FROM dp1.ObsCore
+  WHERE calib_level = 2 AND dataproduct_type = 'image'
+        AND CONTAINS(POINT('ICRS', 53, -28), s_region)=1
+        AND ( 483e-9 BETWEEN em_min AND em_max )
 
-    Figure 1: The Portal UI set up to search for images corresponding to the constraints in the "Enter Constraints" area.
-
-**3.  Convert the parameters selected via UI to an ADQL query.**
-Click on the box "Populate and edit ADQL".
-This will result in the ADQL aspect of the Portal, with the UI query above converted to an ADQL query.
-You can enter the query manually (or edit it) if needed.
-
-.. figure:: images/portal-103-5-2.png
-    :name: portal-103-5-2
-    :alt: The Portal ADQL aspect, illustrating the query converted from UI to ADQL.
-
-    Figure 2: The Portal ADQL aspect, illustrating the query converted from UI to ADQL and corresponding to the constraints entered in the UI aspect.
-
-**4.  Examine the resulting image(s).**
+**2.  Examine the resulting image(s).**
 Click on the "Search" button.
-This will result in the image on the upper left corresponding to the first entry in the table on the bottom, and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
+This will result in the image on the upper left corresponding to the first entry in the table on the bottom,
+and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
 Other images can be examined by clicking other entries in the table on the bottom.
 
 .. figure:: images/portal-103-5-3.png
