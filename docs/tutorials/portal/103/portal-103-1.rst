@@ -59,7 +59,7 @@ Click on the button labeled "Populate and edit ADQL", located bottom-center in F
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
 
 .. figure:: images/portal-103-1-2.png
-    :name: portal-103-1-2
+    :name: portal-103-1-2.png
     :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
     Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
