@@ -43,18 +43,18 @@ For the "detect_isIsolated" enter ``=1``.
 
     Figure 2: Select constraints in "Output Column Selection and Constraints" table.
 
-Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
-For "Radius" enter 3 arc minutes.
+**3. Enter spatial constraints.**
+Under "Enter Constraints" check "Spatial" and enter ``53.13, -28.10``.
+For "Radius" enter 10 arc minutes.
 Leave "Temporal" and Object ID Search" unchecked.
-Restrict displaying the entries in the "Output Column Selection and Constraints" table to only those selected by you by clicking on the "funnel" icon on the upper left.
 
-.. figure:: images/portal-103-1-1.png
-    :name: portal-103-1-1.png
-    :alt: The Portal UI with a spatial query for bright objects set up.
+.. figure:: images/portal-103-1-3.PNG
+    :name: portal-103-1-3
+    :alt: Enter spatial constraints.
 
-    Figure 1: The Portal UI set up for a simple cone search query for bright objects in the selected region.
+    Figure 3: Enter spatial constraints.
 
-**2. Convert UI to ADQL query.**
+**4. Convert UI to ADQL query.**
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
 The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
 
