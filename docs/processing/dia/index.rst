@@ -32,7 +32,7 @@ and then subtracted from the visit image to create a difference image.
 In the context of DIA, the visit image is sometimes referred to as the
 "direct" or "science" image.
 
-For *future* data releases, to save space, the difference images won't be stored.
+For *future* data releases, to save space, the difference images will not be stored.
 Instead, a tool for on-the-fly difference image recreation will be provided to users.
 
 For DP1, the difference images are served and can be retrieved
@@ -51,11 +51,11 @@ absolute flux in difference images, where the threshold is a signal-to-noise rat
 Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
-a flux that's equal to the difference between their flux in the template and visit images.
+a flux that is equal to the difference between their flux in the template and visit images.
 
 Spurious sources are also present due to unavoidably imperfect template matching.
 
-Deblending isn't run on difference image sources.
+Deblending is not run on difference image sources.
 
 The results of DIA source detection are stored in the ``DiaSource`` catalog.
 
