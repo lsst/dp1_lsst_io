@@ -57,7 +57,7 @@ This will result in a display of images corresponding to the first eight entries
 
 .. figure:: images/portal-105-2.png
     :name: portal-105-1-2
-    :alt: The Results tab after a query has been executed
+    :alt: The Results tab after a query has been executed but displaying multiple images.
 
     Figure 2: The results of the query above, but displaying multiple images, corresponding to first eight entries in the table below.
 
