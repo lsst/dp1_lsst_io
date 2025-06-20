@@ -23,11 +23,11 @@ Rubin staff will respond to all questions posted there.
 
 **Terminology:**
 
-* `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys 
-* `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map 
+* `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys
+* `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map
 * `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
 * `HEALPix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
-* `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey 
+* `2MASS <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_: Two Micron All Sky Survey
 * `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
 * `WCS <https://fits.gsfc.nasa.gov/fits_wcs.html>`_: World Coordinate System (the convention that defines the coordinates per pixel)
 * PNG: Portable Network Graphic
@@ -48,7 +48,7 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
       AND (detect_isIsolated =1 AND refExtendedness =1
            AND u_cModelFlux >360 AND g_cModelFlux >360
            AND r_cModelFlux >360 AND i_cModelFlux >360
-           AND z_cModelFlux >360 AND y_cModelFlux >360) 
+           AND z_cModelFlux >360 AND y_cModelFlux >360)
 
 
 **2. View the default coverage chart** (Figure 1).
@@ -60,8 +60,8 @@ The background is a color HiPS map of the DP1 deepCoadd images.
     :name: portal-104-2-1
     :alt: The default view of the coverage chart.
 
-    Figure 1: The coverage chart panel in the Results tab, with default settings, for the query above. When the screenshot was taken the mouse was positioned on the green crosshair symbol, so the WCS Coordinates at lower left (item D) show the mouse position.
-
+    Figure 1: The coverage chart panel in the Results tab, with default settings, for the query above.
+When the screenshot was taken the mouse was positioned on the green crosshair symbol, so the WCS Coordinates at lower left (item D) show the mouse position.
 
 **3. Mouse-over for pop-up notes.**
 In the coverage chart panel (Figure 1) use the mouse to hover over the menus and icons to see pop-up explanations of the functionality.
@@ -83,8 +83,7 @@ In the coverage chart panel (Figure 1) click on each of the drop-down menus and 
 * L: **Expand panel** to have the coverage chart take the full browser window.
 
 **5. Zoom in.**
-Above C in Figure 1, click the "zoom in" icon (magnifying glass with a + inside) 5-6 times to zoom in,
-until individual object markers are displayed instead of the HEALPix grid (Figure 2).
+Above C in Figure 1, click the "zoom in" icon (magnifying glass with a + inside) 5-6 times to zoom in, until individual object markers are displayed instead of the HEALPix grid (Figure 2).
 
 **6. Select a single object.**
 Click on any individual marker, and notice that it's row will be highlighted orange in the table panel and its symbol will be orange in the active chart (Figure 2).
