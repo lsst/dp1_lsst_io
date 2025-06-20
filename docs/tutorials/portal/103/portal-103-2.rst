@@ -25,8 +25,8 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 Select "Edit ADQL" at upper right in Figure 1 to go to the ADQL interface.
 The ADQL Query box will be empty (Figure 1).
 
-.. figure:: images/portal-103-2-2.png
-    :name: portal-103-2-2
+.. figure:: images/portal-103-2-1.png
+    :name: portal-103-2-1
     :alt: The ADQL interface with no query entered.
 
     Figure 1: The ADQL interface with no query entered.
@@ -55,8 +55,8 @@ It is the same query as was used above in Option 1.
 Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
-.. figure:: images/portal-103-2-3.png
-    :name: portal-103-2-3
+.. figure:: images/portal-103-2-2.png
+    :name: portal-103-2-2
     :alt: Default search results from a query.
 
     Figure 2: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
