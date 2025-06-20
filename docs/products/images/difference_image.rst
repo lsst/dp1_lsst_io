@@ -39,14 +39,14 @@ Each individual difference image contains data from one of the camera's detector
 Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
-a flux that's equal to the difference between their flux in the template and visit images.
+a flux that is equal to the difference between their flux in the template and visit images.
 
-For *future* data releases, to save space, the difference images won't be stored.
+For *future* data releases, to save space, the difference images will not be stored.
 Instead, a tool for on-the-fly difference image recreation will be provided to users.
 
 For DP1, the difference images are served and can be retrieved
 and displayed by users instantaneously, but the inputs and tools
-for their re-creation aren't supplied.
+for their re-creation are not supplied.
 
 Processing
 ----------
