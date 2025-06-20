@@ -26,8 +26,8 @@ Rubin staff will respond to all questions posted there.
 **Tutorial Overview.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 represent steps used in this tutorial.
 
-.. figure:: images/portal-103-1-1a.PNG
-    :name: portal-103-1-1a
+.. figure:: images/portal-103-1-1.png
+    :name: portal-103-1-1
     :alt: The Portal UI.
 
     Figure 1: The Portal UI screen.
