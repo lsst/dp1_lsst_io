@@ -12,7 +12,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Query for image data with `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_.
 
-**LSST data products:** ``visit_image``
+**LSST data products:** ``visit``
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
