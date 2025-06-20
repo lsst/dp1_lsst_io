@@ -5,7 +5,7 @@
 
 .. |dp1_paper| replace:: ``DP1 paper reference``
 
-.. |comcam_doi| replace:: ``https://doi.org/10.71929/rubin/2561361``
+.. |comcam_doi| replace:: https://doi.org/10.71929/rubin/2561361
 
 .. |dataset_doi| replace:: TBD
 .. |calibrations_doi| replace:: TBD
