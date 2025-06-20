@@ -41,7 +41,7 @@ The conversion is :math:`m = -2.5 log(f) + 31.4`, where :math:`m` is magnitude a
          scisql_nanojanskyToAbMag(i_cModelFlux) AS i_cModelMag,
          scisql_nanojanskyToAbMag(z_cModelFlux) AS z_cModelMag,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         CIRCLE('ICRS', 53.13, -28.1, 0.167))=1
         AND (refExtendedness =1
@@ -67,7 +67,7 @@ This funtion will convert the corresponding flux errors, in nJy, into AB magnitu
          scisql_nanojanskyToAbMagSigma(z_cModelFlux, z_cModelFluxErr) AS z_cModelMagErr,
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag,
          scisql_nanojanskyToAbMagSigma(y_cModelFlux, y_cModelFluxErr) AS y_cModelMagErr
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         CIRCLE('ICRS', 53.13, -28.1, 0.167)) =1
         AND (refExtendedness =1
