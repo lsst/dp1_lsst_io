@@ -42,7 +42,7 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
   SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
        u_cModelFlux, g_cModelFlux, r_cModelFlux,
        i_cModelFlux, z_cModelFlux, y_cModelFlux
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
       CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
       AND (detect_isIsolated =1 AND refExtendedness =1
@@ -54,7 +54,7 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
 **2. View the default coverage chart** (Figure 1).
 The default view is a HEALPix grid showing the number of returned objects per grid region.
 Small red squares mark individual objects outside the grid.
-The background is a color HiPS map of the DP0.2 deepCoadd images.
+The background is a color HiPS map of the DP1 deepCoadd images.
 
 .. figure:: /_static/portal-howto-hips-1.png
     :name: portal-howto-hips-1
