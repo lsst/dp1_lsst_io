@@ -21,15 +21,23 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
+**Portal tutorial steps.**
+Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 represent steps used in this tutorial. 
+
+.. figure:: images/portal-103-1-1a.PNG
+    :name: portal-103-1-1a
+    :alt: The Portal UI.
+
+    Figure 1: The Portal UI screen.
+
 **1. Select schema and table.**
-Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
-As shown in Figure 1, select "dp1" in "Table Collection (Schema)" and "dp1.Object" table in "Tables".
+As shown in Figure 2, select "dp1" in "Table Collection (Schema)" and "dp1.Object" table in "Tables".
 
 .. figure:: images/portal-103-1-1.PNG
     :name: portal-103-1-1
     :alt: The Portal UI Table Collection Schema and Tables.
 
-    Figure 1: The Portal UI Table Collection Schema and Tables options.
+    Figure 2: The Portal UI Table Collection Schema and Tables options.
 
 **2. Choose search criteria.**
 In the "Output Column Selection and Constraints" table, check boxes by the rows
@@ -41,7 +49,7 @@ For the "detect_isIsolated" enter ``=1``.
     :name: portal-103-1-2
     :alt: Select constraints in Output Column Selection and Constraints.
 
-    Figure 2: Select constraints in "Output Column Selection and Constraints" table.
+    Figure 3: Select constraints in "Output Column Selection and Constraints" table.
 
 **3. Enter spatial constraints.**
 Under "Enter Constraints" check "Spatial" and enter ``53.13, -28.10``.
@@ -52,7 +60,7 @@ Leave "Temporal" and Object ID Search" unchecked.
     :name: portal-103-1-3
     :alt: Enter spatial constraints.
 
-    Figure 3: Enter spatial constraints.
+    Figure 4: Enter spatial constraints.
 
 **4. Convert UI to ADQL query.**
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
@@ -62,9 +70,9 @@ The UI will switch to the ADQL interface and will populate the ADQL Query box wi
     :name: portal-103-1-2.png
     :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
-    Figure 2: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
+    Figure 5: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
 
-**3. Execute query.**
+**5. Execute query.**
 Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
