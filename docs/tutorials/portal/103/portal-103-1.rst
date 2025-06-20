@@ -23,7 +23,14 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 **1. Create a Portal UI query.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
-In "Table Collection (Schema)" select "dp1_v29" and in the "Tables" select "dp1_v29.Object" table.
+In "Table Collection (Schema)" select "dp1" and in the "Tables" select "dp1.Object" table.
+
+.. figure:: images/portal-103-1-1.PNG
+    :name: portal-103-1-1
+    :alt: The Portal UI Table Collection Schema and Tables.
+
+    Figure 1: The Portal UI Table Collection Schema and Tables options.
+
 Set up a query in the user interface (UI), as shown in Figure 1.
 Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for ``coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux``.
 For all flux rows, enter a constraint ``>360``.
