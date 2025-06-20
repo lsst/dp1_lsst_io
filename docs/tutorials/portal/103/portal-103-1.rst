@@ -21,8 +21,8 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
-**Portal tutorial steps.**
-Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 represent steps used in this tutorial. 
+**Tutorial Overview.**
+Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 represent steps used in this tutorial.
 
 .. figure:: images/portal-103-1-1a.PNG
     :name: portal-103-1-1a
@@ -64,10 +64,10 @@ Leave "Temporal" and Object ID Search" unchecked.
 
 **4. Convert UI to ADQL query.**
 Click on the button labeled "Populate and edit ADQL", located bottom-center in Figure 1.
-The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 2.
+The UI will switch to the ADQL interface and will populate the ADQL Query box with an ADQL statement that represents the exact same query, as shown in Figure 1.
 
-.. figure:: images/portal-103-1-2.png
-    :name: portal-103-1-2.png
+.. figure:: images/portal-103-1-4.PNG
+    :name: portal-103-1-4
     :alt: The Portal UI with a spatial query for bright objects converted from the UI to ADQL.
 
     Figure 5: The Portal's ADQL interface, automatically populated with the UI query from Figure 1, converted into an ADQL statement.
