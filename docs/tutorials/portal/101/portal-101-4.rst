@@ -55,9 +55,9 @@ Clicking on the red "garbage can" will delete the job.
 
 An example of informaton for a recent job is in the figure below.
 
-.. figure:: images/portal-101-4-6.png
+.. figure:: images/portal-101-4-2.png
     :width:  400
-    :name: portal-101-4-6
+    :name: portal-101-4-2
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
     Figure 2:  The screenshot illustrating information about a recent job, available from the job monitor.
