@@ -41,6 +41,6 @@ The default layout of the Results tab is shown in Figure 1.
     :name: portal-105-1-1
     :alt: The Results tab after a query has been executed
 
-defaults to a screens split three ways:
-- an image associated with the first entry in the tabular data below at upper left
-- default plot at upper right (corresponding to the first two columns , and the tabular data below.
+    Figure 1: The results of the query above, which defaults to a screens split three ways:
+* an image associated with the first entry in the tabular data below at upper left
+* default plot at upper right (corresponding to the first two columns , and the tabular data below.
