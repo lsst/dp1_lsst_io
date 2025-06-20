@@ -71,4 +71,4 @@ This will limit the retrieved images to only those obtained during the specified
 **7. Select images obtained with specific filter.**
 Click on the "down arrow" in the header of the column "lsst band".
 Select only one filter (say ``g``) and click "search".
-This will further restrict the selected inmages.
+This will further restrict the selected images.
