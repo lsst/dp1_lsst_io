@@ -33,7 +33,7 @@ Description
 ===========
 
 Raw images from the camera are available exactly as they were read out of the camera.
-The raw images shouldn't be used for scientific analysis, and users shouldn't attempt to rerun ISR.
+The raw images should not be used for scientific analysis, and users should not attempt to rerun ISR.
 
 Processing
 ----------
