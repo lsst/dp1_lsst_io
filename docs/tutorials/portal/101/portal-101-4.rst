@@ -41,8 +41,8 @@ The job monitor will have all jobs submitted by you (created within the retentio
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
 
-.. figure:: images/portal-101-4-5.png
-    :name: portal-101-4-5
+.. figure:: images/portal-101-4-1.PNG
+    :name: portal-101-4-1
     :alt: The screenshot illustrating the job monitor
 
     Figure 1:  The screenshot illustrating the job monitor.
