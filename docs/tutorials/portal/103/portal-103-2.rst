@@ -37,10 +37,10 @@ It is the same query as was used above in Option 1.
 
 .. code-block:: SQL
 
-  SELECT coord_dec,coord_ra,,g_psfFlux,
+  SELECT coord_dec,coord_ra,g_psfFlux,
        i_psfFlux,r_psfFlux,u_psfFlux,
        y_psfFlux,z_psgFlux
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
       CIRCLE('ICRS', 53, -28, 0.05))=1
       AND (detect_isIsolated =1
