@@ -42,10 +42,10 @@ This will result in the image on the upper left corresponding to the first entry
 and the scatter point of telescope pointings on the upper right, as shown in the screenshot below.
 Other images can be examined by clicking other entries in the table on the bottom.
 
-.. figure:: images/portal-103-5-3.png
-    :name: portal-103-5-3
+.. figure:: images/portal-103-5-1.png
+    :name: portal-103-5-1
     :alt: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query above.
 
-    Figure 3: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query in Figure 2.
+    Figure 1: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query.
 
-See the tutorials in the series on manipulating image data in the results interface.
+
