@@ -21,9 +21,9 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
-**1. Create a Portal UI query.**
+**1. Select schema and table.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI.
-In "Table Collection (Schema)" select "dp1" and in the "Tables" select "dp1.Object" table.
+As shown in Figure 1, select "dp1" in "Table Collection (Schema)" and "dp1.Object" table in "Tables".
 
 .. figure:: images/portal-103-1-1.PNG
     :name: portal-103-1-1
@@ -31,10 +31,18 @@ In "Table Collection (Schema)" select "dp1" and in the "Tables" select "dp1.Obje
 
     Figure 1: The Portal UI Table Collection Schema and Tables options.
 
-Set up a query in the user interface (UI), as shown in Figure 1.
-Specifically, in the "Output Column Selection and Constraints" check boxes by the rows for ``coord_dec, coord_ra, detect_isIsolated, u_cModelFlux, g_cModelFlux, r_cModelFlux, i_cModelFlux, z_cModelFlux, y_cModelFlux``.
+**2. Choose search criteria.**
+In the "Output Column Selection and Constraints" table, check boxes by the rows
+``coord_dec, coord_ra, detect_isIsolated, g_psfFlux, r_psfFlux, i_psfFlux``, and then hit the filter button (see Figure 2).
 For all flux rows, enter a constraint ``>360``.
 For the "detect_isIsolated" enter ``=1``.
+
+.. figure:: images/portal-103-1-2.PNG
+    :name: portal-103-1-2
+    :alt: Select constraints in Output Column Selection and Constraints.
+
+    Figure 2: Select constraints in "Output Column Selection and Constraints" table.
+
 Under "Enter Constraints" check "Spatial" and enter ``53.0, -28.0``.
 For "Radius" enter 3 arc minutes.
 Leave "Temporal" and Object ID Search" unchecked.
