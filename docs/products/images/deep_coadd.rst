@@ -32,8 +32,8 @@ Dataproduct subtype: ``lsst.deep_coadd``
 Description
 ===========
 
-For DP1 the selection criteria was that a visit image had to have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
-Selected exposures are combined using a mean stacking algorithm, weighted by inverse variance.
+A DP1 visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
+A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual deep coadd image covers a single patch of the sky:
 a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes.
@@ -50,11 +50,11 @@ Pixel data
 
 The deep coadd images have three planes of pixel data.
 
-Image: Sky pixel data in flux units of nJy.
+Image: sky pixel data in flux units of nJy.
 
-Variance: Uncertainty (noise) in the flux in units of nJy^2.
+Variance: uncertainty (noise) in the flux in units of nJy^2.
 
-Mask: An integer bitmask of representative flag values that indicate processing status or issues,
+Mask: an integer bitmask of representative flag values that indicate processing status or issues,
 similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
 
 Metadata

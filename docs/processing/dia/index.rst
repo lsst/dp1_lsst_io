@@ -48,7 +48,7 @@ DIA source detection
 DIA source detection refers to the process of finding regions with above-threshold
 absolute flux in difference images, where the threshold is a signal-to-noise ratio of 5.
 
-Difference images contain sources of residual flux from the subtraction,
+Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
 a flux that is equal to the difference between their flux in the template and visit images.
@@ -65,7 +65,7 @@ Reliability score
 
 Real and spurious DIA sources can both be detected with a signal-to-noise ratio of 5.
 
-For DP1, a relatively simple machine learning reliability model was built,
+DP1 uses a relatively simple machine learning reliability model,
 trained on simulated data and injected point sources labelled by Rubin staff,
 and applied to DIA sources.
 The reliability value is stored in the ``reliability`` column of the ``DiaSource`` catalog.
@@ -106,7 +106,7 @@ Variability characterization
 ----------------------------
 
 Light curve characterization parameters are calculated for all DIA objects,
-such as the minimum, mean, maximum, standard deviation and skew in the
+such as the minimum, mean, maximum, standard deviation, and skew in the
 difference image fluxes, the light curve's slope, percentiles, and ``StetsonJ``
 parameter.
 
@@ -117,7 +117,7 @@ parameter.
 DIA forced photometry
 =====================
 
-In general, "forced" photometry means a measurement is made at a fixed coordinate in an image,
+In general, "forced" photometry means a measurement made at a fixed coordinate in an image,
 regardless of whether an above-threshold region was detected in that particular image.
 
 Forced PSF photometry measurements are made on all visit and difference images

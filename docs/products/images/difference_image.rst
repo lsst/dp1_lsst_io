@@ -36,7 +36,7 @@ resizing, warping, PSF-matching, and scaling them to a given visit image,
 and subtracting the result from the visit image.
 Each individual difference image contains data from one of the camera's detectors.
 
-Difference images contain sources of residual flux from the subtraction,
+Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
 Real astrophyisical transients, variables, and moving objects appear as sources with
 a flux that is equal to the difference between their flux in the template and visit images.
@@ -58,11 +58,11 @@ Pixel data
 
 The difference images have three planes of pixel data.
 
-Image: Sky pixel data in flux units of nJy.
+Image: sky pixel data in flux units of nJy.
 
-Variance: Uncertainty (noise) in the flux in units of nJy^2.
+Variance: uncertainty (noise) in the flux in units of nJy^2.
 
-Mask: An integer bitmask of representative flag values that indicate processing status or issues,
+Mask: an integer bitmask of representative flag values that indicate processing status or issues,
 similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
 
 Metadata

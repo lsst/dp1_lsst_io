@@ -17,7 +17,7 @@ Description
 HiPS maps (`Fernique et al. 2015 <https://ui.adsabs.harvard.edu/abs/2015A%26A...578A.114F/abstract>`_)
 provide the means to pan and zoom a seamless, multiband tiling of the coadded images.
 
-They are "false color" maps that use three of the LSST's filters as inputs to the blue, green,
+HiPS maps are "false color" maps that use three of the LSST's filters as inputs to the blue, green,
 and red channels, with different scale settings adjusted to convey the filter information
 in the coadded map.
 

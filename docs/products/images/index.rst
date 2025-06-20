@@ -14,7 +14,7 @@ Coadd images
 
 Combinations of multiple calibrated images of the same region of the sky to achieve
 greater depth (to detect fainter objects),
-or to be used as templates in difference image analysis.
+or for use as templates in difference image analysis.
 
 
 .. toctree::
@@ -30,7 +30,7 @@ or to be used as templates in difference image analysis.
 Visit images
 ============
 
-Processed and calibrated images from individual vists (single observations).
+Processed and calibrated images from individual visits (single observations).
 
 .. toctree::
     :maxdepth: 1

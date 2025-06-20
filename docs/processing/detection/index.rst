@@ -21,9 +21,9 @@ Key terminology:
 * ``source``: a detection in a single processed visit image
 * ``object``: an astrophysical object at a static sky coordinate
 
-Measurements made on objects in a processed visit image are called "sources".
+The term "sources" refers to measurements made on objects in a processed visit image.
 
-Measurements made on objects in the deep coadd images are called "objects".
+The term "objects" refers to measurements made on objects in the deep coadd images.
 
 
 .. _detection-detection:
@@ -54,10 +54,10 @@ Deblending
 After detection, ``Footprints`` with multiple peaks are deblended into
 "children" (with the original blended footprint called the "parent").
 
-The Scarlet Lite algorithm is used for deblending, as described in
+The Scarlet Lite algorithm performs the deblending, as described in
 "The current state of scarlet and looking toward the future" (`dmtn-194.lsst.io <https://dmtn-194.lsst.io/>`_).
 
-Only the deblended children are included in the catalogs.
+The catalogs only include the deblended children.
 
 
 .. _detection-measurement:
@@ -75,7 +75,7 @@ The results are stored in the ``Source`` catalog.
 
 In deep coadd images, measurements of objects include both PSF and extended shapes.
 A wide variety of flux measurements are pre-calculated, such as the
-composite model (cModel), Gaussian-aperture-and-PSF (GaaP), and Sersic models.
+composite model (cModel), Gaussian-aperture-and-PSF (`GaaP <https://ui.adsabs.harvard.edu/abs/2008A%26A...482.1053K/abstract>`_), and Sersic models.
 The results are stored in the ``Object`` catalog.
 
 
@@ -84,10 +84,10 @@ The results are stored in the ``Object`` catalog.
 Forced photometry
 =================
 
-In general, "forced" photometry means a measurement is made at a fixed coordinate in an image,
+In general, "forced" photometry refers to a measurement made at a fixed coordinate in an image,
 regardless of whether an above-threshold region was detected in that particular image.
 
-All of the measurements in the ``Object`` catalog, which made on the deep coadd images,
+All of the measurements in the ``Object`` catalog, made on the deep coadd images,
 are forced photometry measurements.
 The set of fixed coordinates is the union set of all detected objects and sources
 (even sources only detected in one visit, or one band).

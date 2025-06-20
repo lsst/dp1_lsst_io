@@ -31,9 +31,9 @@ Dataproduct subtype: ``lsst.template_coadd``
 Description
 ===========
 
-For DP1 the selection criteria was that the third of all visit images with the best seeing were
-as an input images (or the best 12, if there were less than 36 images, total).
-Selected exposures are combined using a mean stacking algorithm, weighted by inverse variance.
+For DP1 the third of all visit images with the best seeing were
+used as input images (or the best 12, if fewer than 36 images total).
+A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual template coadd image covers a single patch of the sky:
 a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes.
@@ -51,11 +51,11 @@ Pixel data
 
 The template coadd images have three planes of pixel data.
 
-Image: Sky pixel data in flux units of nJy.
+Image: sky pixel data in flux units of nJy.
 
-Variance: Uncertainty (noise) in the flux in units of nJy^2.
+Variance: uncertainty (noise) in the flux in units of nJy^2.
 
-Mask: An integer bitmask of representative flag values that indicate processing status or issues,
+Mask: an integer bitmask of representative flag values that indicate processing status or issues,
 similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
 
 Metadata

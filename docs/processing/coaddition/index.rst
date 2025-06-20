@@ -39,15 +39,15 @@ no data flagged as "NO_DATA" in the mask plane.
 Input image selection
 =====================
 
-The selection criteria for coadd inputs for DP1 does not represent the
+The selection criteria for coadd inputs for DP1 do not represent the
 selection criteria for future data release.
 
 For the DP1 deep coadds, a visit image had to have a PSF FWHM < 1.7 arcseconds
 to be selected as an input image.
 
 For template coadds, good seeing (low PSF FWHM) is more important than depth.
-For the DP1 template coadded images, the third of the visit images with lowest
-PSF FWHM were used as inputs.
+DP1 template coadded images use the third of the visit images with lowest
+PSF FWHM as inputs.
 If there were less than 36 visit images in total, the 12 visit images with the lowest
 PSF FWHM were used.
 
@@ -57,8 +57,7 @@ PSF FWHM were used.
 Image combination algorithm
 ===========================
 
-Selected exposures are combined using a mean
-stacking algorithm, weighted by inverse variance.
+A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 To mitigate transient artifacts before coaddition,
 an artifact rejection procedure first identifies and masks

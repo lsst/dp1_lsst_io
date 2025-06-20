@@ -15,10 +15,10 @@ LSSTComCam is also referred to as the engineering test camera.
 Focal plane
 ===========
 
-LSSTComCam is comprised of only a single "raft" of 9 CCDs
+LSSTComCam consists of only a single "raft" of 9 CCDs
 (charge-coupled device, also called a sensor, detector, or chip).
 Each CCD is 4k x 4k pixels (4000 by 4000 pixels), for a total of 144 Mpix.
-For comparison, LSSTCam will have 21 rafts, and 189 of the same CCDs.
+For comparison, LSSTCam has 21 rafts, and 189 of the same CCDs.
 All of LSSTComCam's CCDs are from ITL, one of the same two vendors that supplied the LSSTCam detectors (ITL and e2v).
 
 .. figure:: images/comcam_focal_plane.png
@@ -59,4 +59,4 @@ Known issues
 
 LSSTComCam was the instrument used to facilitate early system integration for the Rubin Observatory.
 It was not, itself, commissioned.
-The image quality achieved during the LSSTComCam on-sky campaign, and of the data in DP1, is not necessarily indicative of the image quality that is expected to be achieved with LSSTCam.
+The image quality achieved during the LSSTComCam on-sky campaign, and of the data in DP1, is not necessarily indicative of the image quality that Rubin Observatory expects to achieve with LSSTCam.
