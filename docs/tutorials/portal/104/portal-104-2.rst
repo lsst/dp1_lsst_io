@@ -56,8 +56,8 @@ The default view is a HEALPix grid showing the number of returned objects per gr
 Small red squares mark individual objects outside the grid.
 The background is a color HiPS map of the DP1 deepCoadd images.
 
-.. figure:: /_static/portal-howto-hips-1.png
-    :name: portal-howto-hips-1
+.. figure:: images/portal-104-2-1.png
+    :name: portal-104-2-1
     :alt: The default view of the coverage chart.
 
     Figure 1: The coverage chart panel in the Results tab, with default settings, for the query above. When the screenshot was taken the mouse was positioned on the green crosshair symbol, so the WCS Coordinates at lower left (item D) show the mouse position.
@@ -89,12 +89,11 @@ until individual object markers are displayed instead of the HEALPix grid (Figur
 **6. Select a single object.**
 Click on any individual marker, and notice that it's row will be highlighted orange in the table panel and its symbol will be orange in the active chart (Figure 2).
 
-.. figure:: /_static/portal-howto-hips-2a.png
-    :name: portal-howto-hips-2a
+.. figure:: images/portal-104-2-2.png
+    :name: portal-104-2-2
     :alt: The new view of the zoomed-in coverage chart.
 
     Figure 2: The coverage chart panel, zoomed in to show individual markers, with one object selected.
-
 
 **7. Option: save a PNG of the coverage chart.**
 Click on the tools icon (F in Figure 1) and select the disk icon next to "Save...".
