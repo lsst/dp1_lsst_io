@@ -30,7 +30,7 @@ This will result in an additional tab on top.
 
 **2. Select the appropriate table and image coordinates.**  Select "dp1" for the "Table Collection (Schema)" on the left, and "dp1.ObsCore" on the right.
 For Observation Type and Source, select "PVIs (2)".
-For "Location" select "Observation boundary contains point" and enter 53.0, -28.0`` in the associated box.
+For "Location" select "Observation boundary contains point" and enter ``53.0, -28.0`` in the associated box.
 Unselect "Timing" and "Object ID Search" boxes.
 
 
