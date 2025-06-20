@@ -12,7 +12,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Use the results table from a catalog query.
 
-**LSST data products:** DP1 catalogs
+**LSST data products:** DP1 Object catalogs
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -31,7 +31,7 @@ This query will retrieve a small sample of point-like objects (stars) brighter t
   SELECT coord_dec, coord_ra, detect_isIsolated, refExtendedness,
          u_cModelFlux, g_cModelFlux, r_cModelFlux,
          i_cModelFlux, z_cModelFlux, y_cModelFlux
-  FROM dp1_v29.Object
+  FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
         CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
         AND (detect_isIsolated =1 AND refExtendedness =1
