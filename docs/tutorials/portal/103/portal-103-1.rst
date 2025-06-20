@@ -23,7 +23,7 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**Tutorial Overview.**
+**1. Tutorial overview and schema/table selection.**
 Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 represent steps used in this tutorial.
 
 .. figure:: images/portal-103-1-1.png
@@ -32,7 +32,7 @@ Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 repres
 
     Figure 1: The Portal UI screen.
 
-**1. Select schema and table.**
+
 As shown in Figure 2, select "dp1" in "Table Collection (Schema)" and "dp1.Object" table in "Tables".
 
 .. figure:: images/portal-103-1-2.png
