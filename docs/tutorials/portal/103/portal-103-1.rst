@@ -10,14 +10,16 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-12
 
-**Learning objective:** Convert a query with constraints set in the user interface (UI) into an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ statement.
+**Learning objective:** Convert a query with constraints set in the user interface (UI) into an
+`Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ statement.
 
 **LSST data products:** ``Object`` table
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ----
 
@@ -45,8 +47,8 @@ In the "Output Column Selection and Constraints" table, check boxes by the rows
 For all flux rows, enter a constraint ``>360``.
 For the "detect_isIsolated" enter ``=1``.
 
-.. figure:: images/portal-103-1-2.PNG
-    :name: portal-103-1-2
+.. figure:: images/portal-103-1-3.png
+    :name: portal-103-1-3
     :alt: Select constraints in Output Column Selection and Constraints.
 
     Figure 3: Select constraints in "Output Column Selection and Constraints" table.
@@ -77,6 +79,7 @@ Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 
 **Warning!**
-If changes are made to the ADQL statement and then the interface is toggled back to the "Single Table (UI assisted)" interface using the button at lower right in Figure 2, those changes will not be reflected in the UI.
+If changes are made to the ADQL statement and then the interface is toggled back to the "Single Table (UI assisted)" interface using the button at lower right in Figure 2,
+those changes will not be reflected in the UI.
 The conversion only works in one direction: from the UI to ADQL.
 
