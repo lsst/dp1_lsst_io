@@ -41,13 +41,14 @@ The job monitor will have all jobs submitted by you (created within the retentio
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
 
-.. figure:: images/portal-101-4-1.PNG
+.. figure:: images/portal-101-4-1.png
     :name: portal-101-4-1
     :alt: The screenshot illustrating the job monitor
 
     Figure 1:  The screenshot illustrating the job monitor.
 
-**5. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
+**5. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job,
+and if completed - will reveal the results.
 Click on the circle with a letter "i" - this will show your search converted to an ADQL query as well as the job ID.
 
 Clicking on the red "garbage can" will delete the job.
