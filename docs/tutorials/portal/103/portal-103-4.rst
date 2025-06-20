@@ -96,7 +96,7 @@ Constraints can be applied on columns from any or all tables.
   FROM dp1.Object AS obj
   JOIN dp1.ForcedSource AS fs
   ON obj.objectId = fs.objectId
-  JOIN dp1_v29.CcdVisit AS cv
+  JOIN dp1.CcdVisit AS cv
   ON fs.Visit = cv.VisitId
   WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
         CIRCLE('ICRS', 53.13, -28.10, 0.05)) = 1
