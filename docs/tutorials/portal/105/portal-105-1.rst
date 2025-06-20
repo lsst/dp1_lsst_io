@@ -44,6 +44,30 @@ The default layout of the Results tab is shown in Figure 1.
     Figure 1: The results of the query above, which defaults to a screens split three ways:
 * an image associated with the first entry in the tabular data below at upper left,
 * default plot at upper right (corresponding to the first two columns in the table,
-* the tabular data below.
+* the tabular data below, with entries corresponding to individual imafges.
 
-**4. 
+**4. Select another image of those retuned via your seach.**
+Click on another line in your table.
+An image corresponding that entry will display in the upper left.
+
+**5. Display multiple images.**
+Click on the icon displaying six little boxes above the single image.
+This will result in a display of images coresponding to the first eight entries in the table.
+
+.. figure:: images/portal-105-2.png
+    :name: portal-105-1-2
+    :alt: The Results tab after a query has been executed
+
+    Figure 2: The results of the query above, but displaying multiple images, corresponding to first eight entries in the table below.
+
+**6.  Restrict the epochs of observations.**
+Click on the box next to "Timing".
+For "Time of Observation" select "Overlapping specified range".
+Select "MJD values" and enter the desired range, for example, ``60600`` and ``60700`` for the "Start Time" and "End Time".
+Click "Search".
+This will limit the retrieved images to only those obtained during the speified time interval.
+
+**7. Select images obtained with specific filter.**
+Click on the "down arrow" in the header of the column "lsst band".
+Select only one filter (say ``g``) and click "search".
+This will further restrict the selected inmages.
