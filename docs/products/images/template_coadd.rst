@@ -44,7 +44,7 @@ Processing
 ----------
 
 The template coadd images are the result of :doc:`/processing/coaddition/index`,
-and they're used in :doc:`/processing/dia/index`.
+and they are used in :doc:`/processing/dia/index`.
 
 Pixel data
 ----------
