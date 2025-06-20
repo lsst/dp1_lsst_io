@@ -35,8 +35,8 @@ Navigate to the "DP0.2 Catalogs" tab in the Portal UI. Labels in Figure 1 repres
 **1. Select schema and table.**
 As shown in Figure 2, select "dp1" in "Table Collection (Schema)" and "dp1.Object" table in "Tables".
 
-.. figure:: images/portal-103-1-1.PNG
-    :name: portal-103-1-1
+.. figure:: images/portal-103-1-2.png
+    :name: portal-103-1-2
     :alt: The Portal UI Table Collection Schema and Tables.
 
     Figure 2: The Portal UI Table Collection Schema and Tables options.
