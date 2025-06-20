@@ -6,7 +6,7 @@ Difference image
 
 The result of subtracting a template coadd from a visit image.
 
-DOI: |doi_difference_image|
+DOI: |difference_image_doi|
 
 Access
 ======
@@ -16,7 +16,9 @@ The difference images are accessible via the butler, SIA, and TAP services.
 Butler
 ------
 
-Dataset type: ``('difference_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+* Dataset type: ``('difference_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+* Format: FITS
+* Number of Butler datasets: |difference_image_butler_count|
 
 SIA and TAP
 -----------

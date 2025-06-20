@@ -6,12 +6,6 @@ DIA object
 
 Derived properties for transient and variable objects.
 
-DOI: |doi_dia_object|
-
-Columns: 137
-
-Rows: 1,089,818
-
 Schema: `DiaObject table <https://sdm-schemas.lsst.io/dp1.html#DiaObject>`_
 
 Access
@@ -24,13 +18,18 @@ The DIA object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``DiaObject``
+* DOI: |DiaObject_doi|
+* Table name: ``DiaObject``
+* Columns: |DiaObject_columns|
+* Rows: |DiaObject_rows|
 
 Butler
 ------
 
-Dataset type: ``('dia_object', {skymap, tract}, ArrowAstropy)``
-
+* DOI: |dia_object_doi|
+* Dataset type: ``('dia_object', {skymap, tract}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |dia_object_butler_count|
 
 Description
 ===========

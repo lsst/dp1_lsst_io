@@ -6,7 +6,7 @@ Raw exposures
 
 Unprocessed exposure from camera readout.
 
-DOI: |doi_raw|
+DOI: |raw_doi|
 
 
 Access
@@ -17,7 +17,9 @@ The raw exposures are accessible via the butler, SIA, and TAP services.
 Butler
 ------
 
-Dataset type: ``('raw', {band, instrument, day_obs, detector, group, physical_filter, exposure}, Exposure)``
+* Dataset type: ``('raw', {band, instrument, day_obs, detector, group, physical_filter, exposure}, Exposure)``
+* Format: FITS
+* Number of Butler datasets: |raw_butler_count|
 
 SIA and TAP
 -----------

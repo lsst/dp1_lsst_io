@@ -6,12 +6,6 @@ SS source
 
 Instantaneous physical parameters for moving objects at the time of every observation.
 
-DOI: |doi_ss_source|
-
-Columns: 23
-
-Rows: 5988
-
 Schema: `SSSource table <https://sdm-schemas.lsst.io/dp1.html#SSSource>`_
 
 Access
@@ -24,13 +18,18 @@ The SS source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``SSSource``
+* DOI: |SSSource_doi|
+* Table name: ``SSSource``
+* Columns: |SSSource_columns|
+* Rows: |SSSource_rows|
 
 Butler
 ------
 
-Dataset type: ``('ss_source', {}, ArrowAstropy)``
-
+* DOI: |ss_source_doi|
+* Dataset type: ``('ss_source', {}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |ss_source_butler_count|
 
 Description
 ===========

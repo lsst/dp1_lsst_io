@@ -6,12 +6,6 @@ Forced source
 
 Forced measurements in visit and difference images, at the coordinates of all objects.
 
-DOI: |doi_forced_source|
-
-Columns: 28
-
-Rows: 268,796,943
-
 Schema: `ForcedSource table <https://sdm-schemas.lsst.io/dp1.html#ForcedSource>`_
 
 Access
@@ -24,13 +18,18 @@ The forced source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``ForcedSource``
+* DOI: |ForcedSource_doi|
+* Table name: ``ForcedSource``
+* Columns: |ForcedSource_columns|
+* Rows: |ForcedSource_rows|
 
 Butler
 ------
 
-Dataset type: ``('object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
-
+* DOI: |object_forced_source_doi|
+*Dataset type: ``('object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |object_forced_source_butler_count|
 
 Description
 ===========
