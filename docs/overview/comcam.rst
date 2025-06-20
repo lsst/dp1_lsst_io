@@ -58,5 +58,5 @@ Known issues
 ============
 
 LSSTComCam was the instrument used to facilitate early system integration for the Rubin Observatory.
-It wasn't, itself, commissioned.
-The image quality achieved during the LSSTComCam on-sky campaign, and of the data in DP1, isn't necessarily indicative of the image quality that Rubin Observatory expects to achieve with LSSTCam.
+It was not, itself, commissioned.
+The image quality achieved during the LSSTComCam on-sky campaign, and of the data in DP1, is not necessarily indicative of the image quality that Rubin Observatory expects to achieve with LSSTCam.
