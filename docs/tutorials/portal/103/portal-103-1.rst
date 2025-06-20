@@ -56,8 +56,8 @@ Under "Enter Constraints" check "Spatial" and enter ``53.13, -28.10``.
 For "Radius" enter 10 arc minutes.
 Leave "Temporal" and Object ID Search" unchecked.
 
-.. figure:: images/portal-103-1-3.PNG
-    :name: portal-103-1-3
+.. figure:: images/portal-103-1-4.png
+    :name: portal-103-1-4
     :alt: Enter spatial constraints.
 
     Figure 4: Enter spatial constraints.
