@@ -27,8 +27,8 @@ select the Portal Aspect, and select the "General TAP" tab.
 (If that tab does not appear after selecting the Portal Aspect, click on the "menu" (three horizontal lines) icon in the upper left,
 and click on "General TAP" to add it as an additional tab.)
 
-**2. Select “dp1_v29” from the "Table Collection (Schema)" menu.**
-In the box for selecting tables, select "dp1_v29.ObsCore".
+**2. Select “dp1” from the "Table Collection (Schema)" menu.**
+In the box for selecting tables, select "dp1.ObsCore".
 Note: leave all columns selected in the "Output Column Selection and Constraints table".
 
 **3. Select the location contained in the images to be retrieved.**
