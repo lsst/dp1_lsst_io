@@ -87,9 +87,15 @@ Forced photometry
 In general, "forced" photometry refers to a measurement made at a fixed coordinate in an image,
 regardless of whether an above-threshold region was detected in that particular image.
 
-All of the measurements in the ``Object`` catalog, made on the deep coadd images,
-are forced photometry measurements, made at the fixed coordinates for all
-deblended detections in a deep coadd image in any filter.
+Most of the photometry measurements in the ``Object`` catalog, made on deep coadd images,
+are forced photometry measurements, made at the centroid from the "reference" band.
+The reference band is chosen based on detection significance using the priority order of i, r, z, y, g, then u band.
+
+When a photometry algorithm also involves fitting an ellipse, three different approaches are used:
+
+* In most elliptical galaxy photometry (e.g. Kron), the aperture a multiple of the second-moment shape measured in the reference band.
+* In cModel galaxy fitting, the models are fit independently to each band, and the fit from the reference image is used for additional forced photometry in all bands.
+* In multiprofit galaxy fitting, the models are fit simultaneously to all bands.
 
 Forced PSF photometry measurements are also made on all visit images
 and all difference images at the locations of all objects.
