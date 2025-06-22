@@ -14,6 +14,7 @@ Access
 The survey property maps are accessible via the butler service.
 
 * Dataset type: ``('<map_name>', {band, skymap}, HealSparseMap)``
+* Format: `FITS <https://healsparse.readthedocs.io/en/1.9.0/filespec.html#healsparsemap-fits-serialization>`_ (with ``.hsp`` file extension)
 * Number of files: |survey_property_butler_count|
 
 Description
