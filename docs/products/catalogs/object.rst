@@ -37,9 +37,8 @@ Description
 An "object" is an astrophysical object at a static sky coordinate.
 
 The object catalog contains forced measurements on the deep coadd images
-at the coordinates of every object detected in the deep coadd image
-and every source detected in the individual visit images
-(except sources associated with moving objects).
+at the coordinates of every object detected with signal-to-noise ratio >5
+in a deep coadd image of any filter.
 
 Measurements include PSF and extended fluxes, shapes, and sizes,
 as well as processing pixel flags.
