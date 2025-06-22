@@ -88,9 +88,8 @@ In general, "forced" photometry refers to a measurement made at a fixed coordina
 regardless of whether an above-threshold region was detected in that particular image.
 
 All of the measurements in the ``Object`` catalog, made on the deep coadd images,
-are forced photometry measurements.
-The set of fixed coordinates is the union set of all detected objects and sources
-(even sources only detected in one visit, or one band).
+are forced photometry measurements, made at the fixed coordinates for all
+deblended detections in a deep coadd image in any filter.
 
 Forced PSF photometry measurements are also made on all visit images
 and all difference images at the locations of all objects.
