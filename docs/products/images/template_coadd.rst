@@ -6,7 +6,7 @@ Template coadd
 
 The combination of processed images with the best seeing, for a patch of sky and for each of the six LSST filters.
 
-DOI: |doi_template_coadd|
+DOI: |template_coadd_doi|
 
 Access
 ======
@@ -16,7 +16,9 @@ The template coadd images are accessible via the butler, SIA, and TAP services.
 Butler
 ------
 
-Dataset type: ``('template_coadd', {band, skymap, tract, patch}, ExposureF)``
+* Dataset type: ``('template_coadd', {band, skymap, tract, patch}, ExposureF)``
+* Format: FITS
+* Number of Butler datasets: |template_coadd_butler_count|
 
 SIA and TAP
 -----------

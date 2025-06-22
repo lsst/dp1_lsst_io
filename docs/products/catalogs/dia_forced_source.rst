@@ -6,12 +6,6 @@ DIA forced source
 
 Forced measurements in visit and difference images, at the coordinates of all DIA objects.
 
-DOI: |dia_object_forced_source|
-
-Columns: 28
-
-Rows: 196,911,566
-
 Schema: `ForcedSourceOnDiaObject table <https://sdm-schemas.lsst.io/dp1.html#ForcedSourceOnDiaObject>`_
 
 Access
@@ -24,13 +18,18 @@ The DIA forced source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``ForcedSourceOnDiaObject``
+* DOI: |ForcedSourceOnDiaObject_doi|
+* Table name: ``ForcedSourceOnDiaObject``
+* Columns: |ForcedSourceOnDiaObject_columns|
+* Rows: |ForcedSourceOnDiaObject_rows|
 
 Butler
 ------
 
-Dataset type: ``('dia_object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
-
+* DOI: |dia_object_forced_source_doi|
+* Dataset type: ``('dia_object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |dia_object_forced_source_butler_count|
 
 Description
 ===========

@@ -6,15 +6,15 @@ Survey property maps
 
 Survey-level healsparse property maps.
 
-DOI: |doi_spmaps|
-
+DOI: |survey_property_doi|
 
 Access
 ======
 
 The survey property maps are accessible via the butler service.
 
-Dataset type: ``('<map_name>', {band, skymap}, HealSparseMap)``
+* Dataset type: ``('<map_name>', {band, skymap}, HealSparseMap)``
+* Number of files: |survey_property_butler_count|
 
 Description
 ===========

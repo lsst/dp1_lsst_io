@@ -7,7 +7,7 @@ Calibrations
 Calibration products (e.g., combined bias, dark, and flat frames).
 
 
-DOI: |doi_calibrations|
+DOI: |calibrations_doi|
 
 
 Access
@@ -17,6 +17,8 @@ The calibration products are accessible via the butler.
 
 Butler
 ------
+
+Number of Butler datasets: |calibrations_butler_count|
 
 Examples of dataset types:
 

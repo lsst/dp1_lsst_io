@@ -6,12 +6,6 @@ Visit
 
 Observation metadata for the full focal plane (date, time, band, coordinates).
 
-DOI: |doi_visit_table|
-
-Columns: 16
-
-Rows: 1786
-
 Schema: `Visit table <https://sdm-schemas.lsst.io/dp1.html#Visit>`_
 
 Access
@@ -24,13 +18,18 @@ The visit catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``Visit``
+* DOI: |Visit_doi|
+* Table name: ``Visit``
+* Columns: |Visit_columns|
+* Rows: |Visit_rows|
 
 Butler
 ------
 
-Dataset type: ``('visit_table', {instrument}, ArrowAstropy)``
-
+* DOI: |visit_table_doi|
+* Dataset type: ``('visit_table', {instrument}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |visit_table_butler_count|
 
 Description
 ===========

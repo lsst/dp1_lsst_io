@@ -6,7 +6,7 @@ Deep coadd
 
 The combination of multiple processed, calibrated, and background-subtracted images, for a patch of sky, for each of the six LSST filters.
 
-DOI: |doi_deep_coadd|
+DOI: |deep_coadd_doi|
 
 
 Access
@@ -17,7 +17,9 @@ The deep coadd images are accessible via the butler, SIA, and TAP services.
 Butler
 ------
 
-Dataset type: ``('deep_coadd', {band, skymap, tract, patch}, ExposureF)``
+* Dataset type: ``('deep_coadd', {band, skymap, tract, patch}, ExposureF)``
+* Format: FITS
+* Number of Butler datasets: |deep_coadd_butler_count|
 
 SIA and TAP
 -----------

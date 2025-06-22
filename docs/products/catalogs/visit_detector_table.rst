@@ -6,12 +6,6 @@ Visit detector (CcdVisit)
 
 Observation metadata for individual detectors (CCDs; date, time, band, PSF, zeropoint).
 
-DOI: |doi_visit_detector_table|
-
-Columns: 51
-
-Rows: 16071
-
 Schema: `CcdVisit table <https://sdm-schemas.lsst.io/dp1.html#CcdVisit>`_
 
 Access
@@ -24,13 +18,18 @@ The visit detector catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``CcdVisit``
+* DOI: |CcdVisit_doi|
+* Table name: ``CcdVisit``
+* Columns: |CcdVisit_columns|
+* Rows: |CcdVisit_rows|
 
 Butler
 ------
 
-Dataset type: ``('visit_detector_table', {instrument}, ArrowAstropy)``
-
+* DOI: |visit_detector_table_doi|
+* Dataset type: ``('visit_detector_table', {instrument}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |visit_detector_table_butler_count|
 
 Description
 ===========
@@ -45,4 +44,3 @@ Tutorials
 
 See the :ref:`200-level notebook <notebook-200>` or :ref:`200-level portal <portal-200>`
 tutorials demonstrating how to access the visit detector (``CcdVisit``) table.
-

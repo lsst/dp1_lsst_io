@@ -6,12 +6,6 @@ DIA source
 
 Measurements for detected sources in difference images.
 
-DOI: |doi_dia_source|
-
-Columns: 87
-
-Rows: 3,086,404
-
 Schema: `DiaSource table <https://sdm-schemas.lsst.io/dp1.html#DiaSource>`_
 
 Access
@@ -24,13 +18,18 @@ The DIA source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``DiaSource``
+* DOI: |DiaSource_doi|
+* Table name: ``DiaSource``
+* Columns: |DiaSource_columns|
+* Rows: |DiaSource_rows|
 
 Butler
 ------
 
-Dataset type: ``('dia_source', {skymap, tract}, ArrowAstropy)``
-
+* DOI: |source_doi|
+* Dataset type: ``('dia_source', {skymap, tract}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |source_butler_count|
 
 Description
 ===========

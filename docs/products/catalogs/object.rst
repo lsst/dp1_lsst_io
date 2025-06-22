@@ -6,12 +6,6 @@ Object
 
 Forced measurements in deep coadd images.
 
-DOI: |doi_object|
-
-Columns: 1272
-
-Rows: 2,299,757
-
 Schema: `Object table <https://sdm-schemas.lsst.io/dp1.html#Object>`_
 
 Access
@@ -24,13 +18,18 @@ The object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``Object``
+* DOI: |Object_doi|
+* Table name: ``Object``
+* Columns: |Object_columns|
+* Rows: |Object_rows|
 
 Butler
 ------
 
-Dataset type: ``('object', {skymap, tract}, ArrowAstropy)``
-
+* DOI: |object_doi|
+* Dataset type: ``('object', {skymap, tract}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |object_butler_count|
 
 Description
 ===========

@@ -6,12 +6,6 @@ SS object
 
 Derived parameters for moving objects.
 
-DOI: |doi_ss_object|
-
-Columns: 3
-
-Rows: 431
-
 Schema: `SSObject table <https://sdm-schemas.lsst.io/dp1.html#SSObject>`_
 
 Access
@@ -24,13 +18,18 @@ The SS object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``SSObject``
+* DOI: |SSObject_doi|
+* Table name: ``SSObject``
+* Columns: |SSObject_columns|
+* Rows: |SSObject_rows|
 
 Butler
 ------
 
-Dataset type: ``('ss_object', {}, ArrowAstropy)``
-
+* DOI: |ss_object_doi|
+* Dataset type: ``('ss_object', {}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |ss_object_butler_count|
 
 Description
 ===========

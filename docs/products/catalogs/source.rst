@@ -6,12 +6,6 @@ Source
 
 Measurements for detected sources in processed visit images.
 
-DOI: |doi_source|
-
-Columns: 156
-
-Rows: 45,565,632
-
 Schema: `Source table <https://sdm-schemas.lsst.io/dp1.html#Source>`_
 
 Access
@@ -24,13 +18,18 @@ The source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-Table name: ``Source``
+* DOI: |Source_doi|
+* Table name: ``Source``
+* Columns: |Source_columns|
+* Rows: |Source_rows|
 
 Butler
 ------
 
-Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, ArrowAstropy)``
-
+* DOI: |source_doi|
+* Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, ArrowAstropy)``
+* Format: Parquet
+* Number of Butler datasets: |source_butler_count|
 
 Description
 ===========

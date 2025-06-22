@@ -6,7 +6,7 @@ Visit image
 
 Individual processed and calibrated sky images.
 
-DOI: |doi_visit_image|
+DOI: |visit_image_doi|
 
 Access
 ======
@@ -16,7 +16,9 @@ The visit images are accessible via the butler, SIA, and TAP services.
 Butler
 ------
 
-Dataset type: ``('visit_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+* Dataset type: ``('visit_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+* Format: FITS
+* Number of Butler datasets: |visit_image_butler_count|
 
 SIA and TAP
 -----------
