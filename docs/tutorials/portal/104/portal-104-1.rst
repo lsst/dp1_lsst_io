@@ -87,7 +87,7 @@ Reopen the sidebar menu to try other layouts and return to the default three-pan
 
 **6. Execute another query.**
 Click on the tab "DP0.2 Catalogs" to return to the ADQL interface.
-Change the query to return objects with ``i_cModelFlux`` :math:`>` 3600 nJy (22.5 mag).
+Change the query to return objects with ``i_cModelFlux`` :math:`>` 500 nJy.
 Execute the query.
 
 .. figure:: images/portal-104-1-3.png
