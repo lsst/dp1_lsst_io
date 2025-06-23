@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/16/2025
+**Last verified to run:** 6/23/2025
 
 **Learning objective:** Use the results table from a catalog query.
 
@@ -33,7 +33,7 @@ This query will retrieve a small sample of objects brighter than 25th magnitude)
          i_cModelFlux, z_cModelFlux, y_cModelFlux
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
+        CIRCLE('ICRS', 53.0, -28.0, 1.0)) =1
         AND (detect_isIsolated =1 AND refExtendedness =1
              AND u_cModelFlux >360 AND g_cModelFlux >360
              AND r_cModelFlux >360 AND i_cModelFlux >360
