@@ -62,7 +62,7 @@ This will result in a display of images corresponding to the first eight entries
     Figure 2: The results of the query above, but displaying multiple images, corresponding to first eight entries in the table below.
 
 **6.  Restrict the epochs of observations.**
-Return to the main Portal Aspect screen, and enter the parameters as in part (2) above, but don't click on "seach" yet.
+Return to the main Portal Aspect screen, and enter the parameters as in part (2) above, but don't click on "search" yet.
 Click on the box next to "Timing".
 For "Time of Observation" select "Overlapping specified range".
 Select "MJD values" and enter the desired range, for example, ``60600`` and ``606500`` for the "Start Time" and "End Time".
