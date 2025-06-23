@@ -55,7 +55,7 @@ An image corresponding that entry will display in the upper left.
 Click on the icon displaying six little boxes above the single image.
 This will result in a display of images corresponding to the first eight entries in the table.
 
-.. figure:: images/portal-105-2.png
+.. figure:: images/portal-105-1-2.png
     :name: portal-105-1-2
     :alt: The Results tab after a query has been executed but displaying multiple images.
 
