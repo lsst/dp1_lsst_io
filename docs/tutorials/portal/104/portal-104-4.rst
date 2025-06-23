@@ -70,7 +70,7 @@ Any column can be sorted in this way.
 
 **6. Select rows.**
 Click on the boxes at left (B in Figure 1) for the first 10 rows.
-Notice how these objects are colored differently in the coverage and active chart, as in Figure 2.
+Notice how the HiPS boxes containing those objects are colored differently in the coverage and active chart, as in Figure 2.
 
 .. figure:: images/portal-104-4-2.png
     :name: portal-104-4-2
