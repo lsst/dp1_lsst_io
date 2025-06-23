@@ -98,7 +98,7 @@ Execute the query.
 
 **7. View multiple query results.**
 The Results tab components are now populated with the data from the new query (Figure 3).
-The coverage chart includes HEALPix maps for both queries, with the new one in magenta (upper left, or "A" in Figure 3).
+The coverage chart includes HEALPix maps for both queries, with the new one in a different color (upper left, or "A" in Figure 3).
 The active chart uses data from the new query results (upper right, or "B" in Figure 3).
 The table now has two tabs, one for each query.
 Click on the tab for the first query and note that the coverage chart, table, and active chart change.
