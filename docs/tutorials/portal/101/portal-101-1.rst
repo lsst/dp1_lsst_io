@@ -97,5 +97,5 @@ Dismiss the sidebar menu by clicking on the X in the upper right corner of the m
 - **IRSA Catalogs:**
 - **NED Objects:**
 - **VO Cone Search:**
-- **Appearance:**
+- **Appearance:** Change to Dark/Light mode
 
