@@ -46,11 +46,12 @@ To obtain a image of the center of Data Preview 1, enter coordinates ``53.13,-28
 
 **4. Select Data Set.**
 In the "Select Data Set" section, click on the "Title" drop down menu and click in the box next to ``LSSTComCam: DP1 gri`` (Figure 3).
+
 .. figure:: images/portal-101-2-3.png
     :name: portal-101-2-3
     :alt: Select LSSTComCam, dp1 gri filters
 
-    Figure 3: Select LSSTComCAM: DP1 gri.
+    Figure 3: Select LSSTComCam: DP1 gri.
 
 
 **5. Results.**
