@@ -15,7 +15,7 @@ to explore the DP1 tables via the Rubin Science Platform (RSP) Table Access Prot
 
 **LSST data products:** The DP1 catalogs within the RSP TAP service.
 
-**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this 
+**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this
 tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_
@@ -35,7 +35,7 @@ A new token is not needed for every TOPCAT session; the token can be reused, but
 .. Important::
     **Note that tokens should be treated like passwords:  they should not be shared with others.
     Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
-  
+
 **2. Start up TOPCAT on your own computer.**
 See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download and install instructions.
 
