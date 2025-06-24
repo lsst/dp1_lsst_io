@@ -17,7 +17,8 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ----
 
@@ -30,8 +31,8 @@ Edit the query as necessary, then hit Search.
 
   SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
          lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
-         obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format 
-  FROM ivoa.ObsCore 
+         obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format
+  FROM ivoa.ObsCore
   WHERE calib_level = 2 AND dataproduct_type = 'image'
         AND CONTAINS(POINT('ICRS', 53.13, -28.1), s_region)=1
 
@@ -46,5 +47,4 @@ Other images can be examined by clicking other entries in the table on the botto
     :alt: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query above.
 
     Figure 1: The screenshot of the image, the scatter plot, and the table resulting from executing the ADQL query.
-
 
