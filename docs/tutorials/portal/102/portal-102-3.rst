@@ -53,12 +53,8 @@ This example uses 53.13, -28.10 for RA and Dec.
 
 Figure 2:  The screenshot of Coordinates or Object Name window.
 
-**5.  Select the desired range of observation times.**
-Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
-Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for the "End Time".
-Leave "Spectral Coverage" and "Object ID Search" unchecked.
 
-**6.  Retrieve the images.**
+**5.  Retrieve the images.**
 Click on the "Search" button.
 This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
