@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/23/2025
+**Last verified to run:** 6/24/2025
 
 **Learning objective:** Use the results table from a catalog query.
 
