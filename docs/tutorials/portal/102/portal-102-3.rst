@@ -64,7 +64,7 @@ The plot on the upper right will display the pointing directions of the telescop
     :name: portal-102-3-3
     :alt: Screenshot of the window resulting from the execution of the search above.
 
-Figure 2:  The screenshot of the window resulting from the execution of the search.
+Figure 3:  The screenshot of the window resulting from the execution of the search.
 
 **6.  Examine the images.**
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
