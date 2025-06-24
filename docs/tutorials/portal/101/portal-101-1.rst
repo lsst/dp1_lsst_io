@@ -23,8 +23,9 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Go to the RSP.**
+**1. Log in to the RSP.**
 In a web browser go to the RSP using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
+On the RSP landing page (Figure 1), if "Log in" appears at upper right instead of your username, click "Log in" and follow the prompts to authenticate.
 
 .. figure:: images/portal-101-1-1.png
     :name: portal-101-1-1
@@ -32,22 +33,28 @@ In a web browser go to the RSP using the URL `data.lsst.cloud <https://data.lsst
 
     Figure 1: The main landing page of the Rubin Science Platform.
 
-**2. Log in.**
-On the RSP landing page (Figure 1), if "Log in" appears at upper right instead of your username, click "Log in" and follow the prompts to authenticate.
-
-**3. Enter the Portal.**
+**2. Enter the Portal.**
 On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
 .. figure:: images/portal-101-1-2.png
     :name: portal-101-1-2
     :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
 
-    Figure 2: The main landing page of the Portal Aspect.
+    Figure 2: The main landing page of the Portal Aspect. 
 
 
-**4. Review the layout.**
 On the Portal landing page (Figure 2) the default selected tab of the landing page is labeled Results.
-The icons and tabs across the top of the screen (not shown) will open various Portal search methods.
+Elements of the landing page:
+
+- **A** - Rubin Portal sidebar menu (Figure 4)
+- **B** - Rubin Logo (Figure 3)
+- **C** - Results tab - use this tab to return to a query result
+- **D** - Portal search tabs - refine search parameters for images, catalogs and general TAP
+
+
+**3. Determine Rubin Portal version information.**
+
+Click on the Rubin Logo (Figure 3) to view information related to the Rubin Portal and Firefly versions.
 
 .. figure:: images/portal-101-1-3.png
     :name: portal-101-1-3
@@ -56,11 +63,7 @@ The icons and tabs across the top of the screen (not shown) will open various Po
     Figure 3: Rubin Portal Version Information.
 
 
-**5. View the information window.**
-On the Portal landing page (Figure 3) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
-Dismiss the window by clicking on the OK button or on the X in its upper right corner.
-
-**6. Open the sidebar menu.**
+**4. Open the sidebar menu.**
 On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
 
 .. figure:: images/portal-101-1-4.png
@@ -71,7 +74,7 @@ On the Portal landing page (Figure 2) click on the menu icon (three horizontal l
     Figure 4: The sidebar menu of the Portal Aspect.
 
 
-**7. Review the sidebar menu.**
+**5. Review the sidebar menu.**
 In the sidebar menu (Figure 4) notice that some of the menu options match the tabs (e.g., Data Collections),
 and which tabs you see are configurable with the "Hide Tab" option. Opening this menu will allow you to navigate to a tab,
 add a tab to the platform interface, or hide a tab from the interface. You can also reset options from this menu.
