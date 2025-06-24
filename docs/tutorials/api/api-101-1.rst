@@ -10,18 +10,21 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-06
 
-**Learning objective:** This tutorial provides a basic guide to set up `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_ to explore the DP1 tables via the Rubin Science Platform (RSP) Table Access Protocol (TAP) service.
+**Learning objective:** This tutorial provides a basic guide to set up `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
+to explore the DP1 tables via the Rubin Science Platform (RSP) Table Access Protocol (TAP) service.
 
 **LSST data products:** The DP1 catalogs within the RSP TAP service.
 
-**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this 
+tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_
+of the Rubin Community Forum. Rubin staff will respond to all questions postedthere.
 
 
 
 
-**1. Create an RSP access token.**  
+**1. Create an RSP access token.**
 See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_
 for a step-by-step guide for creating an RSP access token.  It is recommended that the token you create has the
 following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``,
