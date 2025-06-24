@@ -26,8 +26,8 @@ TAP
 Butler
 ------
 
-* |visit_table_doi|
-* Dataset type: ``('visit_table', {instrument}, ArrowAstropy)``
+* DOI: |visit_table_doi|
+* Dataset type: ('visit_table', {**instrument**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |visit_table_butler_count|
 

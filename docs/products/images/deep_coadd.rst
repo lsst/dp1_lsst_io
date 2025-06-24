@@ -17,7 +17,7 @@ The deep coadd images are accessible via the Butler, SIA, and TAP services.
 Butler
 ------
 
-* Dataset type: ``('deep_coadd', {band, skymap, tract, patch}, ExposureF)``
+* Dataset type: ('deep_coadd', {**band**, **skymap**, **tract**, **patch**}, ExposureF)
 * Format: FITS
 * Number of Butler datasets: |deep_coadd_butler_count|
 

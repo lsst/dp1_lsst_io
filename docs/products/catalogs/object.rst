@@ -26,8 +26,8 @@ TAP
 Butler
 ------
 
-* |object_doi|
-* Dataset type: ``('object', {skymap, tract}, ArrowAstropy)``
+* DOI: |object_doi|
+* Dataset type: ('object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|
 
