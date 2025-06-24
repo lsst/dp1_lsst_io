@@ -22,53 +22,53 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 
 **1. Create an RSP access token.**  
-See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ 
+See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_
 for a step-by-step guide for creating an RSP access token.  It is recommended that the token you create has the
-following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``, 
+following propoerties:  a name that includes "TOPCAT" as a substring, a scope of ``read:tap``,
 and no expiration date.) The token will only be visible once.
 *You must cut-and-paste the token to a secure file for future use.*
 A new token is not needed for every TOPCAT session; the token can be reused, but it must be kept secure.
 
 .. Important::
-    **Note that tokens should be treated like passwords:  they should not be shared with others.  
+    **Note that tokens should be treated like passwords:  they should not be shared with others.
     Take precautions to keep tokens secure.  Never store tokens in git-tracked files.**
   
 **2. Start up TOPCAT on your own computer.**
 See `TOPCAT homepage <http://www.star.bris.ac.uk/~mbt/topcat/>`_ for download and install instructions.
 
 **3. Click on "Table Access Protocol (TAP) Query" under the “VO” menu.**
-This will open up a separate Table Access Protocol (TAP) Query window. 
+This will open up a separate Table Access Protocol (TAP) Query window.
 
 .. figure:: images/api-101-1-1.png
     :name: api-101-1-1
-    :alt: A screenshot of the main TOPCAT window with the Table Access Protocol item 
+    :alt: A screenshot of the main TOPCAT window with the Table Access Protocol item
 	  highlighted by the cursor under the VO drop-down menu.
 
     Figure 1:  The main TOPCAT window, with the "VO" menu pulled down and the "Table Access Protocol (TAP) Query" highlighted.
 
 **4. Fill in the relevant in the “TAP URL” window and click the “Use Service” button in the Table Access Protocol (TAP) Query window.**
-For DP1, use ``https://data.lsst.cloud/api/tap``.  
+For DP1, use ``https://data.lsst.cloud/api/tap``.
 
 .. figure:: images/api-101-1-2.png
     :name: api-101-1-2
     :alt: A screenshot of the the Table Access Protocol (TAP) Query window in which the value
           for the TAP URL has been filled in with the URL
-	  https://data.lsst.cloud/api/tap .  A blue oval indicates the location of the 
+	  https://data.lsst.cloud/api/tap .  A blue oval indicates the location of the
           Selected TAP Service panel in the window.
 
     Figure 2:  The Table Access Protocol (TAP) Query window with the location of the "Selected TAP Service" panel indicated by a blue oval.
 
-**5. Populate the Authentication window that pops up.**  
+**5. Populate the Authentication window that pops up.**
 Fill in ``x-oauth-basic`` for the "User" and your security token forthe "Password" and click "OK".
 
 .. figure:: images/api-101-1-3.png
     :name: api-101-1-3
-    :alt: A screenshot of the Authentication window. The user has been filled in with a value of x-oauth-basic, 
+    :alt: A screenshot of the Authentication window. The user has been filled in with a value of x-oauth-basic,
 	  and the password is shown (for security purposes) as a series of filled black circles.
 
     Figure 3:  The Authentication window with the values for the user and the password filled in.
 
-**6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**  
+**6. Note that the RSP TAP service is now accessible from your instance of TOPCAT.**
 An indicator that the service is now accessible is that a list of DP1 tables available has appeared in the Metadata panel of the TAP Query window.
 
 .. figure:: images/api-101-1-4.png
@@ -77,10 +77,10 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
           The Table Access Protocol (TAP) Query window shows three panels, stacked vertically.  The
 	  top panel is the Metadata panel, and it shows a list of DP1 schemas and tables that
 	  are available to query.  The middle panel is the Service Capabilities panel, and it shows that
-	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it 
+	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it
 	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
 
-    Figure 4:  The Table Access Protocol (TAP) Query window; a list of DP1 tables 
+    Figure 4:  The Table Access Protocol (TAP) Query window; a list of DP1 tables
     available for query can be be seen in the Metadata panel.
 
 **7. In the left MetaData panel of the Table Access Protocol (TAP) Query window, click on the dp1.CcdVisit table.**
@@ -90,13 +90,13 @@ Note that the column names, data types, units, and descriptions for the columns 
     :name: api-101-1-5
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
 	  It appears the same as in Figure 4, but the dp1.CcdVisit table is highlighted
-	  in the left-hand MetaData panel and the column names, data types, units, and 
-	  descriptions for the columns in the dp1.CcdVisit table are shown in the 
+	  in the left-hand MetaData panel and the column names, data types, units, and
+	  descriptions for the columns in the dp1.CcdVisit table are shown in the
 	  right-hand MetaData panel.
 
     Figure 5:  The Table Access Protocol (TAP) Query window as in Figure 4, but here
-    the dp1.CcdVisit table is highlighted in the left-hand MetaData panel and the 
-    column names, data types, units, and descriptions for the columns in the dp1.CcdVisit 
+    the dp1.CcdVisit table is highlighted in the left-hand MetaData panel and the
+    column names, data types, units, and descriptions for the columns in the dp1.CcdVisit
     table are shown in the right-hand MetaData panel.
 
 **8. At the bottom-left of the ADQL Text panel of the Table Access Protocol (TAP) Query window, click on the Examples button and choose the Full Table option under the Basic menu optoin.**
@@ -104,11 +104,11 @@ Note that the column names, data types, units, and descriptions for the columns 
 .. figure:: images/api-101-1-6.png
     :name: api-101-1-6
     :alt: A screenshot of of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 5, but the Example button has been clicked 
-	  and the Full Table menu item from the Basic menu item has been chosen and 
+	  It appears the same as in Figure 5, but the Example button has been clicked
+	  and the Full Table menu item from the Basic menu item has been chosen and
 	  highlighted.
 
-    Figure 6:  The Table Access Protocol (TAP) Query window as in Figure 5, with 
+    Figure 6:  The Table Access Protocol (TAP) Query window as in Figure 5, with
     the Full Table menu item from the Basic menu item chosen after clicking on
     the Examples button at the bottom of the ADQL Text panel.
     
@@ -118,10 +118,10 @@ Note that the column names, data types, units, and descriptions for the columns 
 .. figure:: images/api-101-1-7.png
     :name: api-101-1-7
     :alt:  A screenshot of of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 5, but the chosen ADQL example 
+	  It appears the same as in Figure 5, but the chosen ADQL example
 	  query now appears in the ADQL Text box.
 
-    Figure 7:  The Table Access Protocol (TAP) Query window as in Figure 5, with 
+    Figure 7:  The Table Access Protocol (TAP) Query window as in Figure 5, with
     the chosen ADQL example query now appears in the ADQL Text box.
 
 **10. Note that a new table, TAP_1_dp1.CcdVisit, has appeared in the Table List panel of the main TOPCAT window.**
@@ -155,11 +155,11 @@ This particular table contains 1000 rows and 51 columns.  Vertical and horizonta
 
 .. figure:: images/api-101-1-10.png
     :name: api-101-1-10
-    :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1, 
+    :alt: A screenshot of a Table Browser window.  It shows the contents of Table 1,
 	  called TAP_1_dp1.CcdVisit.
 
     Figure 10:  The Table Browser Window, showing the contents of the newly created table.
 
 **13. Explore.**
-At this stage, the Rubin DP1 data set can be further explored via TOPCAT.  For an example, see 
+At this stage, the Rubin DP1 data set can be further explored via TOPCAT.  For an example, see
 :doc:`api-101-2`.
