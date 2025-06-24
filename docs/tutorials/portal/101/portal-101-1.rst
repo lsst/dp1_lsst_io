@@ -40,15 +40,15 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
     :name: portal-101-1-2
     :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
 
-    Figure 2: The main landing page of the Portal Aspect. 
+    Figure 2: The main landing page of the Portal Aspect.
 
 
 On the Portal landing page (Figure 2) the default selected tab of the landing page is labeled Results.
 Elements of the landing page:
 
-- **A** - Rubin Portal sidebar menu (Figure 4)
-- **B** - Rubin Logo (Figure 3)
-- **C** - Results tab - use this tab to return to a query result
+- **A** - Rubin Portal sidebar menu (Figure 4) - select searches or reconfigure displayed tabs
+- **B** - Rubin Logo (Figure 3) - display portal version information
+- **C** - Results tab - return to query results
 - **D** - Portal search tabs - refine search parameters for images, catalogs and general TAP
 
 
