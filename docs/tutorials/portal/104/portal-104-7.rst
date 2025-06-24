@@ -103,7 +103,7 @@ Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figur
     :name: portal-104-4-2
     :alt: Using the selection box tool in the active chart panel.
 
-    Figure 2: After using the box select tool to create a box in the plot (A), two new icons appear (B and C).
+    Figure 2: After using the "box select" tool to create a box in the plot (A), two new icons appear (B and C).
 
 **8. Select objects.**
 Click on the select icon (B in Figure 2).
