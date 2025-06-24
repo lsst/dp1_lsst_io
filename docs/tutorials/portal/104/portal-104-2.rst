@@ -8,10 +8,10 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/23/2025.
+**Last verified to run:** 6/24/2025.
 
-**Learning objective:** Learn how to iuse the coverage chart and HiPS map panel in the Portal results tab.
-This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude.
+**Learning objective:** Learn how to use the coverage chart and HiPS map panel in the Portal results tab.
+This query will retrieve a small sample of isolated objects brighter than 25th magnitude.
 
 **LSST data products:** DP1 Object catalogs
 
@@ -53,7 +53,7 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
 
 **2. View the default coverage chart** (Figure 1).
 The default view is a HEALPix grid showing the number of returned objects per grid region.
-Small purple squares mark individual objects outside the grid.
+Small color squares mark individual objects outside the grid.
 The background is a color HiPS map of the DP1 deepCoadd images.
 
 .. figure:: images/portal-104-2-1.png
