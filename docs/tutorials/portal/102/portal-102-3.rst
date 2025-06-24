@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-013
+**Last verified to run:** 2025-06-25
 
 **Learning objective:** Use the ObsTAP service to retrieve DP1 images.
 
@@ -31,27 +31,26 @@ and click on "General TAP" to add it as an additional tab.)
 In the box for selecting tables, select "dp1.ObsCore".
 Note: leave all columns selected in the "Output Column Selection and Constraints table".
 
-**3. Select the location contained in the images to be retrieved.**
-Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
-In the "Coordinates or Object Name" enter the desired coordinates.
-This example uses 53.0, -28.0 for RA and Dec.
-
-**4.  Select the Observation Type and Source.**
+**3.  Select the Observation Type and Source.**
 Check the box for the "Observation Type and Source".
 In the drop-down menu, for "Calibration Level" select "PVIs (2)".
 For the "Data Product Type" select "image", and leave the  "Instrument Name" and "Collection" in the default state.
+
+.. figure:: images/portal-102-3-1.png
+    :name: portal-102-3-1
+    :alt: Screenshot of calibration level window.
+
+Figure 1:  The screenshot of calibration window.
+
+**4. Select the location contained in the images to be retrieved.**
+Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
+In the "Coordinates or Object Name" enter the desired coordinates.
+This example uses 53.13, -28.10 for RA and Dec.
 
 **5.  Select the desired range of observation times.**
 Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
 Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for the "End Time".
 Leave "Spectral Coverage" and "Object ID Search" unchecked.
-
-
-.. figure:: images/portal-102-3-1.png
-    :name: portal-102-3-1
-    :alt: Screenshot of the window containing all parameters and ready to execute the search.
-
-Figure 1:  The screenshot of the window containing all parameters and ready to execute the search.
 
 **6.  Retrieve the images.**
 Click on the "Search" button.
