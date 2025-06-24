@@ -47,6 +47,12 @@ Select the "Location" box and in the "Query Type" select "Observation boundary c
 In the "Coordinates or Object Name" enter the desired coordinates.
 This example uses 53.13, -28.10 for RA and Dec.
 
+.. figure:: images/portal-102-3-2.png
+    :name: portal-102-3-2
+    :alt: Screenshot of Coordinates or Object Name window.
+
+Figure 2:  The screenshot of Coordinates or Object Name window.
+
 **5.  Select the desired range of observation times.**
 Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
 Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for the "End Time".
