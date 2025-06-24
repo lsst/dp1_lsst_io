@@ -60,13 +60,13 @@ This will result in extracting 50 images meeting the selected criteria.
 By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
 The plot on the upper right will display the pointing directions of the telescope for individual images.
 
-.. figure:: images/portal-102-3-2.png
-    :name: portal-102-3-2
+.. figure:: images/portal-102-3-3.png
+    :name: portal-102-3-3
     :alt: Screenshot of the window resulting from the execution of the search above.
 
-Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
+Figure 2:  The screenshot of the window resulting from the execution of the search.
 
-**7.  Examine the images.**
+**6.  Examine the images.**
 Click on any line in the table - this will result in displaying the image corresponding to the table entry.
 Click on any point on the scatter plot on the right - this also will display the corresponding image.
 
