@@ -61,7 +61,6 @@ The background is a color HiPS map of the DP1 deepCoadd images.
     :alt: The default view of the coverage chart.
 
     Figure 1: The coverage chart panel in the Results tab, with default settings, for the query above.
-When the screenshot was taken the mouse was positioned on the green crosshair symbol, so the WCS Coordinates at lower left (item D) show the mouse position.
 
 **3. Mouse-over for pop-up notes.**
 In the coverage chart panel (Figure 1) use the mouse to hover over the menus and icons to see pop-up explanations of the functionality.
