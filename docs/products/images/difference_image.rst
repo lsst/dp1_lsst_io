@@ -11,7 +11,7 @@ The result of subtracting a template coadd from a visit image.
 Access
 ======
 
-The difference images are accessible via the butler, SIA, and TAP services.
+The difference images are accessible via the Butler, SIA, and TAP services.
 
 Butler
 ------
@@ -70,7 +70,7 @@ similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`
 Metadata
 --------
 
-The metadata for difference images retrieved from the butler include
+The metadata for difference images retrieved from the Butler include
 information about the observation (e.g., pointing, weather),
 and the derived PSF, photometric calibration, and WCS.
 

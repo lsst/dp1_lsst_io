@@ -13,7 +13,7 @@ Calibration products (e.g., combined bias, dark, and flat frames).
 Access
 ======
 
-The calibration products are accessible via the butler.
+The calibration products are accessible via the Butler.
 
 Butler
 ------
@@ -26,7 +26,7 @@ Examples of dataset types:
 * ``('dark', {instrument, detector}, ExposureF, isCalibration=True)``
 * ``('flat', {band, instrument, detector, physical_filter}, ExposureF, isCalibration=True)``
 
-Other calibrations dataset types include ``ptc`` for Photon Transfer Curve and ``bfk`` for brighter-fatterkernel.
+Other calibrations dataset types include ``ptc`` for Photon Transfer Curve and ``bfk`` for brighter-fatter kernel.
 
 Description
 ===========
@@ -42,7 +42,7 @@ The process of Instrument Signature Removal (ISR; also called "image reduction")
 Processing
 ----------
 
-The calibration products are used in the :doc:`/processing/isr/index` pipeline.
+The calibration products are created and used in the :doc:`/processing/isr/index` pipeline.
 
 Pixel data
 ----------

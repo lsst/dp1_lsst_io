@@ -4,7 +4,7 @@
 Astrometric calibration
 #######################
 
-The astrometric calibrations define the World Coordinate System (WCS) of an image, the relation between pixel coordinates and sky coordinates (Right Ascension and Declination).
+The astrometric calibrations determine the World Coordinate System (WCS) of an image, the relation between pixel coordinates and sky coordinates (Right Ascension and Declination).
 
 Astrometric calibration uses the ``gbdes`` package (`Bernstein et al. 2017 <https://ui.adsabs.harvard.edu/abs/2017PASP..129g4503B/abstract>`_).
 
@@ -18,7 +18,7 @@ Bright, isolated stars detected in the post-ISR images are used to obtain an ini
 The final astrometric solution is computed using the ensemble of visits in a given band, overlapping with a given tract.
 Isolated point sources are associated between overlapping visits and the Gaia DR3 reference catalog in order to constrain the model fit.
 The model used for DP1 consists of a static map from pixel-space to an intermediate frame (the per-detector model), followed by a per-visit map from the intermediate frame to the plane tangent to the telescope boresight (the per-visit model), then finally a deterministic mapping from the tangent plane to the sky.
-The fit is done using the gbdes package (`Bernstein et al. 2017 <https://ui.adsabs.harvard.edu/abs/2017PASP..129g4503B/abstract>`_), as described in `Saunders (2024) <https://dmtn-266.lsst.io/>`_.
+The fit is done using the ``gbdes`` package (`Bernstein et al. 2017 <https://ui.adsabs.harvard.edu/abs/2017PASP..129g4503B/abstract>`_), as described in `Saunders (2024) <https://dmtn-266.lsst.io/>`_.
 
 The per-detector model is intended to capture quasi-static characteristics of the telescope and camera.
 During Rubin Operations, the astrometric solution will allow for separate epochs with different per-detector models, to account for changes in the camera due to warming and cooling and other discrete events.

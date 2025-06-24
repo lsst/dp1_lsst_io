@@ -11,7 +11,7 @@ Schema: `DiaObject table <https://sdm-schemas.lsst.io/dp1.html#DiaObject>`_
 Access
 ======
 
-The DIA object catalog is accessible via the TAP and butler services.
+The DIA object catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

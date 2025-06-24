@@ -4,14 +4,14 @@
 Object
 ######
 
-Forced measurements in deep coadd images.
+Measurements of objects detected in deep coadd images.
 
 Schema: `Object table <https://sdm-schemas.lsst.io/dp1.html#Object>`_
 
 Access
 ======
 
-The object catalog is accessible via the TAP and butler services.
+The object catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

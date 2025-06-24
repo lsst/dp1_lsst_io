@@ -58,7 +58,7 @@ Generates the deep coadd and template images.
 Source detection and measurement
 ================================
 
-Generates the catalogs of measurements for detected sources.
+Generates catalogs of detected sources and measurements of their properties.
 
 .. toctree::
     :maxdepth: 1
@@ -72,7 +72,7 @@ Generates the catalogs of measurements for detected sources.
 Difference image analysis
 =========================
 
-Runs image substraction to generate difference images and associated detection catalogs.
+Runs image subtraction to generate difference images and associated detection catalogs.
 
 .. toctree::
     :maxdepth: 1

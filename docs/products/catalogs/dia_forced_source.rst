@@ -11,7 +11,7 @@ Schema: `ForcedSourceOnDiaObject table <https://sdm-schemas.lsst.io/dp1.html#For
 Access
 ======
 
-The DIA forced source catalog is accessible via the TAP and butler services.
+The DIA forced source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

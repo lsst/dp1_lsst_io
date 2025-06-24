@@ -4,14 +4,14 @@
 Template coadd
 ##############
 
-The combination of processed images with the best seeing, for a patch of sky and for each of the six LSST filters.
+The combination of processed images with the best seeing, for a patch of sky and for each of the six LSST filters, to be used as a template for difference imaging.
 
 |template_coadd_doi|
 
 Access
 ======
 
-The template coadd images are accessible via the butler, SIA, and TAP services.
+The template coadd images are accessible via the Butler, SIA, and TAP services.
 
 Butler
 ------
@@ -33,8 +33,8 @@ Dataproduct subtype: ``lsst.template_coadd``
 Description
 ===========
 
-For DP1 the third of all visit images with the best seeing were
-used as input images (or the best 12, if fewer than 36 images total).
+For DP1 the one-third of all visit images with the best seeing were
+used as input images (or the best 12, if there were fewer than 36 images total).
 A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual template coadd image covers a single patch of the sky:
@@ -63,7 +63,7 @@ similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`
 Metadata
 --------
 
-The metadata for template coadd images retrieved from the butler include a list of the input visit images,
+The metadata for template coadd images retrieved from the Butler include a list of the input visit images,
 and the derived PSF, photometric calibration, and WCS.
 
 Tutorials

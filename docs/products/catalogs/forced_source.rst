@@ -11,7 +11,7 @@ Schema: `ForcedSource table <https://sdm-schemas.lsst.io/dp1.html#ForcedSource>`
 Access
 ======
 
-The forced source catalog is accessible via the TAP and butler services.
+The forced source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

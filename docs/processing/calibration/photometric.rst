@@ -4,7 +4,7 @@
 Photometric calibration
 #######################
 
-Photometric calibration corrects the observed flux for attenuation from the atmosphere, filters, optics, and detector quantum efficiency.
+Photometric calibration corrects the observed flux for attenuation from the atmosphere, filter throughput, optical effects, and detector quantum efficiency, among other effects, to determine the absolute calibrated flux in units of nanoJanskys.
 
 Photometric calibration uses the Forward Global Calibration Method (FGCM; `Burke et al. 2018 <https://ui.adsabs.harvard.edu/abs/2018AJ....155...41B/abstract>`_).
 
@@ -24,8 +24,8 @@ The steps of photometric calibration include:
 Overview
 ========
 
-Bright, isolated stars with signal-to-noise greater than 10 that are detected in post-ISR images,
-and associated with the global absolute reference catalog refered to as :doc:`/processing/calibration/monster`,
+Bright, isolated stars with signal-to-noise > 10 that are detected in post-ISR images,
+and associated with the global absolute reference catalog referred to as :doc:`/processing/calibration/monster`,
 are input into the FGCM solution.
 The FGCM model constrains the atmospheric parameters per night, as well as the absolute throughput.
 

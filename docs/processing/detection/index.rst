@@ -21,9 +21,9 @@ Key terminology:
 * ``source``: a detection in a single processed visit image
 * ``object``: an astrophysical object at a static sky coordinate
 
-The term "sources" refers to measurements made on objects in a processed visit image.
+The term "sources" refers to measurements made on detections in a processed visit image.
 
-The term "objects" refers to measurements made on objects in the deep coadd images.
+The term "objects" refers to measurements made on detections in the deep coadd images.
 
 
 .. _detection-detection:
@@ -93,7 +93,7 @@ The reference band is chosen based on detection significance using the priority 
 
 When a photometry algorithm also involves fitting an ellipse, three different approaches are used:
 
-* In most elliptical galaxy photometry (e.g. Kron), the aperture a multiple of the second-moment shape measured in the reference band.
+* In most elliptical galaxy photometry (e.g. Kron), the aperture is a multiple of the second-moment shape measured in the reference band.
 * In `cModel <https://www.sdss3.org/dr8/algorithms/magnitudes.php#cmodel>`_ galaxy fitting, the models are fit independently to each band, and the fit from the reference image is used for additional forced photometry in all bands.
 * In multiprofit galaxy fitting, the models are fit simultaneously to all bands.
 

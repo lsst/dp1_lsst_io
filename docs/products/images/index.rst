@@ -57,7 +57,7 @@ Created by subtracting a template image from a visit image.
 Raw exposures
 =============
 
-The unprocessed images recieved directly from the camera.
+The unprocessed images received directly from the camera.
 
 .. toctree::
     :maxdepth: 1

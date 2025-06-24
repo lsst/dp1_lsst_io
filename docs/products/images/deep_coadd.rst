@@ -12,7 +12,7 @@ The combination of multiple processed, calibrated, and background-subtracted ima
 Access
 ======
 
-The deep coadd images are accessible via the butler, SIA, and TAP services.
+The deep coadd images are accessible via the Butler, SIA, and TAP services.
 
 Butler
 ------
@@ -34,7 +34,7 @@ Dataproduct subtype: ``lsst.deep_coadd``
 Description
 ===========
 
-A DP1 visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image.
+A DP1 visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an input image to the coadd.
 A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual deep coadd image covers a single patch of the sky:
@@ -62,7 +62,7 @@ similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`
 Metadata
 --------
 
-The metadata for deep coadd images retrieved from the butler include a list of the input visit images,
+The metadata for deep coadd images retrieved from the Butler include a list of the input visit images,
 and the derived PSF, photometric calibration, and WCS.
 
 Tutorials

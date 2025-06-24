@@ -4,14 +4,14 @@
 DIA source
 ##########
 
-Measurements for detected sources in difference images.
+Measurements for sources detected in difference images.
 
 Schema: `DiaSource table <https://sdm-schemas.lsst.io/dp1.html#DiaSource>`_
 
 Access
 ======
 
-The DIA source catalog is accessible via the TAP and butler services.
+The DIA source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

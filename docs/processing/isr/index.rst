@@ -4,11 +4,10 @@
 Instrument signature removal (ISR)
 ##################################
 
-ISR removes instrumental effects introduced in the raw images by the telescope and detectors to produce an accurate representation of the incoming light.
+ISR is the first step of image processing, which removes instrumental effects introduced in the raw images by the telescope and detectors and produces an accurate representation of the incoming light.
 
 For descriptions of the ISR steps and the generation, verification, certification, approval, and distribution of the calibration products necessary for ISR, refer to the paper `Instrument Signature Removal and Calibration Products for the Rubin Legacy Survey of Space and Time <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_, the "Rubin Baseline Calibration Plan" (`SITCOMTN-086 <https://sitcomtn-086.lsst.io/>`_), and the "Verifying LSST Calibration Data Products" (`DMTN-101 <https://dmtn-101.lsst.io/>`_) and "Calibration Generation, Verification, Acceptance, and Certification" (`DMTN-222 <https://dmtn-222.lsst.io/>`_) technical notes.
 
-ISR is the first step of image processing which leads to calibrated, science-ready images.
 
 **Users should not attempt to recreate or rerun ISR; it was automatically applied within the LSST Science Pipelines.**
 
@@ -32,7 +31,7 @@ ISR is the first step of image processing which leads to calibrated, science-rea
 Components
 ----------
 
-The steps of ISR include (from `Plazas Malagón et al. 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_).
+The steps of ISR include (from `Plazas Malagón et al. 2025 <https://ui.adsabs.harvard.edu/abs/2025JATIS..11a1209P/abstract>`_):
 
 **Dithering of digitized counts**: applies a small random offset in the range [−0.5, 0.5) analog-to-digital units (ADU) to mitigate quantization bias introduced by analog-to-digital conversion.
 

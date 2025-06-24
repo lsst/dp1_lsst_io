@@ -11,7 +11,7 @@ Schema: `SSSource table <https://sdm-schemas.lsst.io/dp1.html#SSSource>`_
 Access
 ======
 
-The SS source catalog is accessible via the TAP and butler services.
+The SS source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 

@@ -8,7 +8,7 @@ DIA uses the decorrelated `Alard and Lupton (1998) <https://ui.adsabs.harvard.ed
 image differencing algorithm,
 as described in "Implementation of Image Difference Decorrelation" (`dmtn-021.lsst.io <https://dmtn-021.lsst.io/>`_)
 and in the LSST Science Pipelines documentation for
-(`Alard-Lupton implementation <https://pipelines.lsst.io/modules/lsst.ip.diffim/AL_implementation.html>`_).
+the `Alard-Lupton implementation <https://pipelines.lsst.io/modules/lsst.ip.diffim/AL_implementation.html>`_.
 
 Key terminology:
 
@@ -63,7 +63,7 @@ The results of DIA source detection are stored in the ``DiaSource`` catalog.
 Reliability score
 -----------------
 
-Real and spurious DIA sources can both be detected with a signal-to-noise ratio of 5.
+Both real and spurious DIA sources can be detected with a signal-to-noise ratio of 5. An estimate of how likely a source is to be real is provided to enable filtering of DIA sources by users.
 
 DP1 uses a relatively simple machine learning reliability model,
 trained on simulated data and injected point sources labelled by Rubin staff,
