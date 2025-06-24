@@ -13,7 +13,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Learning objective:** Learn how to iuse the coverage chart and HiPS map panel in the Portal results tab.
 This query will retrieve a small sample of point-like objects (stars) brighter than 25th magnitude.
 
-**LSST data products:** DP1 catalogs
+**LSST data products:** DP1 Object catalogs
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
