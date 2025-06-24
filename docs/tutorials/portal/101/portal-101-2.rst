@@ -26,6 +26,7 @@ Rubin staff will respond to all questions posted there.
 In a web browser, go to `data.lsst.cloud <https://data.lsst.cloud/>`_, click on the "Portal" panel, and log in.
 
 **2. In the sidebar select "Rubin HiPS Search".**
+Click on the sidebar menu (three vertical lines in the upper left hand corner) and click on Rubin HiPS Search (Figure 1).
 
 .. figure:: images/portal-101-2-1.png
     :name: portal-101-2-1
@@ -33,7 +34,6 @@ In a web browser, go to `data.lsst.cloud <https://data.lsst.cloud/>`_, click on 
 
     Figure 1: Select Rubin HiPS Search from sidebar.
 
-Click on the sidebar menu (three vertical lines in the upper left hand corner) and click on Rubin HiPS Search (Figure 1).
 
 **3. Enter Target field.**
 To obtain a image of the center of Data Preview 1, enter coordinates ``53.13,-28.10`` and Field of View of ``1`` (Figure 2).
@@ -45,16 +45,17 @@ To obtain a image of the center of Data Preview 1, enter coordinates ``53.13,-28
     Figure 2: Enter coordinates and field of view.
 
 **4. Select Data Set.**
-
+In the "Select Data Set" section, click on the "Title" drop down menu and click in the box next to ``LSSTComCam: DP1 gri`` (Figure 3).
 .. figure:: images/portal-101-2-3.png
     :name: portal-101-2-3
     :alt: Select LSSTComCam, dp1 gri filters
 
     Figure 3: Select LSSTComCAM: DP1 gri.
 
-In the "Select Data Set" section, click on the "Title" drop down menu and click in the box next to ``LSSTComCam: DP1 gri`` (Figure 3).
 
 **5. Results.**
+Results of the search are shown in Figure 4.  You can use the scroll features on your mouse or use the zoom in an out features
+(magnifying glass icons in the upper left-hand corner of the image) to zoom in and pan around the image.
 
 .. figure:: images/portal-101-2-4.png
     :name: portal-101-2-4
@@ -62,6 +63,5 @@ In the "Select Data Set" section, click on the "Title" drop down menu and click 
 
     Figure 4: Rubin HiPS Search Results.
 
-Results of the search are shown in Figure 4.  You can use the scroll features on your mouse or use the zoom in an out features
-(magnifying glass icons in the upper left-hand corner of the image) to zoom in and pan around the image.
+
 
