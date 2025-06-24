@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/23/2025
+**Last verified to run:** 6/24/2025
 
 **Learning objective:** Use the components of the results active chart (plot) panel.
 
@@ -47,7 +47,7 @@ The ``scisql_nanojanskyToAbMag()`` function converts fluxes (in nJy) to AbMagnit
          scisql_nanojanskyToAbMag(y_cModelFlux) AS y_cModelMag
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53.0, -28.0, 0.167)) =1
+        CIRCLE('ICRS', 53.0, -28.0, 1.0)) =1
         AND (detect_isIsolated =1
              AND u_cModelFlux >360 AND g_cModelFlux >360
              AND r_cModelFlux >360 AND i_cModelFlux >360
