@@ -55,7 +55,7 @@ The default layout of the Results tab is shown in Figure 1.
 
     Figure 1: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at uppr right, and the tabular data below.
 
-The *Coverage chart* (upper left, or "A" in Figure 1):  
+The *Coverage chart* (upper left, or "A" in Figure 1):
 The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
 Small color squares mark individual objects outside the grid.
 The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP0.2 deepCoadd images.
