@@ -28,12 +28,12 @@ Edit the query as necessary, then hit Search.
 
 .. code:: sql
 
-  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,lsst_tract,lsst_patch,
+  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
          lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
-         obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format
-  FROM dp1.ObsCore
+         obs_collection,o_ucd,facility_name,instrument_name,s_region,access_url,access_format 
+  FROM ivoa.ObsCore 
   WHERE calib_level = 2 AND dataproduct_type = 'image'
-        AND CONTAINS(POINT('ICRS', 53, -28), s_region)=1
+        AND CONTAINS(POINT('ICRS', 53.13, -28.1), s_region)=1
 
 **2.  Examine the resulting image(s).**
 Click on the "Search" button.
