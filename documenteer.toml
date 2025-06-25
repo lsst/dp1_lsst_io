@@ -20,4 +20,5 @@ ignore = [
     "https://minorplanetcenter.net",
     "https://docushare.lsstcorp.org/docushare/dsweb/Get/LSE-163/LSE-163_DataProductsDefinitionDocumentDPDD.pdf",
     "http://ls.st/doc-29545",
+    "https://sdm-schemas.lsst.io/dp1.html#ObsCore" #temporary until new link comes
 ]
