@@ -29,7 +29,7 @@ If the "General TAP" tab is not available click on the "hamburger" icon on the u
 This will result in an additional tab on top.
 
 **2. Select the appropriate table and enter the image coordinates.**
-Select "dp1" for the "Table Collection (Schema)" on the left, and "dp1.ObsCore" on the right.
+Select "ivoa" for the "Table Collection (Schema)" on the left, and "ivoa.ObsCore" on the right (should be the default).
 For Observation Type and Source, select "PVIs (2)".
 For "Location" select "Observation boundary contains point" and enter ``53.0, -28.0`` in the associated box.
 Unselect "Timing" and "Object ID Search" boxes.
