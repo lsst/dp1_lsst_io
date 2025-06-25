@@ -43,8 +43,11 @@ The default layout of the Results tab is shown in Figure 1.
     :alt: The Results tab after a query has been executed.
 
     Figure 1: The results of the query above, which defaults to the screen split three ways:
+
 * an image associated with the first entry in the tabular data below at upper left,
+
 * default plot at upper right (corresponding to the first two columns in the table,
+
 * the tabular data below, with entries corresponding to individual images.
 
 **4. Select another image of those retuned via your search.**
