@@ -54,7 +54,7 @@ Elements of the landing page:
 
 **3. Determine Rubin Portal version information.**
 
-Click on the Rubin Logo (Figure 3) to view information related to the Rubin Portal and Firefly versions.
+Click on the Rubin Logo (Figure 2) to view information related to the Rubin Portal and Firefly versions.
 
 .. figure:: images/portal-101-1-3.png
     :name: portal-101-1-3
