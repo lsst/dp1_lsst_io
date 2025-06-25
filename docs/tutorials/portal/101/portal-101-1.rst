@@ -81,21 +81,21 @@ add a tab to the platform interface, or hide a tab from the interface. You can a
 A description of each of the sidebar menu options is listed below.
 Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
 
-- **Tab Selection:** Customize tabs displayed on the Rubin Portal
+- **Tab Selection:** Customize tabs displayed on the Rubin Portal.
 - **Results:** Click on the Results tab to return to the results window.
 - **Upload:** Allows you to upload a file.
 - **Job Monitor:** Lists jobs associated with your user account.
 - **Data Collections:** Select data collection for analysis within the Portal.
-- **DP0.2 Images:** Simulated images from DP0.2
-- **DP0.2 Images SIAv2:** Simple Image Access Version 2
-- **DP0.2 Catalogs:** Catalogs for DP0.2
-- **DP0.3 Catalogs:** Catalogs for DP0.3
-- **Rubin HiPs Search:**
-- **General TAP:**
-- **SIAv2 Searches:**
-- **IRSA Images:**
-- **IRSA Catalogs:**
-- **NED Objects:**
-- **VO Cone Search:**
-- **Appearance:** Change to Dark/Light mode
+- **DP0.2 Images:** Simulated images from DP0.2.
+- **DP0.2 Images SIAv2:** Simple Image Access Version 2.
+- **DP0.2 Catalogs:** Catalogs for DP0.2.
+- **DP0.3 Catalogs:** Catalogs for DP0.3.
+- **Rubin HiPS Search:** Select image, target and dataset.
+- **General TAP:** Search for coordinates, timeframe and objects.
+- **SIAv2 Searches:** Simple Image Access search.
+- **IRSA Images:** Search various data sets for images.
+- **IRSA Catalogs:** Search various data sets for catalog objects.
+- **NED Objects:** Search NASA/IPAC Extragalactic Database (NED).
+- **VO Cone Search:** Virtual Observatory search.
+- **Appearance:** Change to Dark/Light mode.
 
