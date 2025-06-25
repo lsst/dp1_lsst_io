@@ -112,7 +112,7 @@ Click on the select icon (B in Figure 2).
 These points (or respective HiPS boxes) will be marked with a different color in the active chart and the coverage chart, and will be selected in the table, as shown in Figure 3.
 
 .. figure:: images/portal-104-7-3.png
-    :name: portal-104-4-3
+    :name: portal-104-7-3
     :alt: The full Portal Results tab with points selected in the active chart.
 
     Figure 3: The full Portal Results tab after points have been selected in the active chart.
