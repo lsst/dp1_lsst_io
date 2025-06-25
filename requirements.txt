@@ -1,1 +1,2 @@
 documenteer[guide]>1.0,<2.0
+sphinx-prompt==1.9.0
