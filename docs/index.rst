@@ -4,14 +4,12 @@
 Vera C. Rubin Observatory Data Preview 1 (DP1)
 ##############################################
 
-**Anticipated release date**: June/July 2025
+**Release date**: Mon Jun 30 2025
 
 .. important::
 
-   This website is currently under development.
+   This website is under development.
 
-   The Data Preview 1 (DP1) dataset is based on images from the Commissioning Camera.
-   `Learn more about the Rubin Early Science Program <https://rubinobservatory.org/for-scientists/resources/early-science>`__.
 
 Overview
 ========
