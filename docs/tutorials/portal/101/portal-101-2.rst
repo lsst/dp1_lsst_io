@@ -23,7 +23,7 @@ Rubin staff will respond to all questions posted there.
 ----
 
 **1. Go to the RSP and enter the Portal Aspect.**
-In a web browser, go to `data.lsst.cloud <https://data.lsst.cloud/>`_, click on the "Portal" panel, and log in.
+In a web browser, go to `data.lsst.cloud <https://data.lsst.cloud/>`_, log in and click on the "Portal" panel.
 
 **2. In the sidebar select "Rubin HiPS Search".**
 Click on the sidebar menu (three vertical lines in the upper left hand corner) and click on Rubin HiPS Search (Figure 1).
