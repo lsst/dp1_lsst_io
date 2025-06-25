@@ -59,7 +59,7 @@ In Figure 1, this is the Declination coordinate on the y-axis and the Right Asce
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
 
 .. figure:: images/portal-104-7-1.png
-    :name: portal-104-4-1
+    :name: portal-104-7-1
     :width: 600
     :alt: The default view of the table panel.
 
@@ -101,7 +101,7 @@ Click-and-drag in the plot to select points (A in Figure 2).
 Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figure 2) the points.
 
 .. figure:: images/portal-104-7-2.png
-    :name: portal-104-4-2
+    :name: portal-104-7-2
     :width: 600
     :alt: Using the selection box tool in the active chart panel.
 
@@ -124,7 +124,7 @@ Click on the filter icon (C in Figure 2).
 The selected objects will now be the only points shown in the active chart, the coverage map, and the table, as in Figure 4.
 
 .. figure:: images/portal-104-7-4.png
-    :name: portal-104-4-4
+    :name: portal-104-7-4
     :alt: The full Portal Results tab with points filtered in the active chart.
 
     Figure 4: The full Portal Results tab after points have been selected and filtered on in the active chart.
