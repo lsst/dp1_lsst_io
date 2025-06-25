@@ -47,7 +47,7 @@ You can return to any of those jobs by clicking the line corresponding to the pa
 
     Figure 1:  Job monitor screenshot.
 
-**5. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job,
+**4. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job,
 and if completed - will reveal the results.
 Click on the circle with a letter "i" - this will show your search converted to an ADQL query as well as the job ID.
 
