@@ -7,7 +7,7 @@ Calibrations
 Calibration products (e.g., combined bias, dark, and flat frames).
 
 
-DOI: |calibrations_doi|
+|calibrations_doi|
 
 
 Access

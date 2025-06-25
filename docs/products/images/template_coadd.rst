@@ -6,7 +6,7 @@ Template coadd
 
 The combination of processed images with the best seeing, for a patch of sky and for each of the six LSST filters.
 
-DOI: |template_coadd_doi|
+|template_coadd_doi|
 
 Access
 ======

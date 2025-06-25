@@ -18,7 +18,7 @@ The DIA object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |DiaObject_doi|
+* |DiaObject_doi|
 * Table name: ``DiaObject``
 * Columns: |DiaObject_columns|
 * Rows: |DiaObject_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |dia_object_doi|
+* |dia_object_doi|
 * Dataset type: ``('dia_object', {skymap, tract}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |dia_object_butler_count|

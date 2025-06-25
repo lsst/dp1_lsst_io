@@ -18,7 +18,7 @@ The DIA source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |DiaSource_doi|
+* |DiaSource_doi|
 * Table name: ``DiaSource``
 * Columns: |DiaSource_columns|
 * Rows: |DiaSource_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |source_doi|
+* |source_doi|
 * Dataset type: ``('dia_source', {skymap, tract}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |source_butler_count|

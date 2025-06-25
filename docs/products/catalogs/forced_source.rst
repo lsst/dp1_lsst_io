@@ -18,7 +18,7 @@ The forced source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |ForcedSource_doi|
+* |ForcedSource_doi|
 * Table name: ``ForcedSource``
 * Columns: |ForcedSource_columns|
 * Rows: |ForcedSource_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |object_forced_source_doi|
+* |object_forced_source_doi|
 * Dataset type: ``('object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |object_forced_source_butler_count|

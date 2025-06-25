@@ -6,7 +6,7 @@ Survey property maps
 
 Survey-level healsparse property maps.
 
-DOI: |survey_property_doi|
+|survey_property_doi|
 
 Access
 ======
