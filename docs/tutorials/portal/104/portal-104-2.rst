@@ -58,6 +58,7 @@ The background is a color HiPS map of the DP1 deepCoadd images.
 
 .. figure:: images/portal-104-2-1.png
     :name: portal-104-2-1
+    :width: 500
     :alt: The default view of the coverage chart.
 
     Figure 1: The coverage chart panel in the Results tab, with default settings, for the query above.
