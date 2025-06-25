@@ -36,7 +36,7 @@ Click on the sidebar menu (three vertical lines in the upper left hand corner) a
 
 
 **3. Enter Target field.**
-To obtain a image of the center of Data Preview 1, enter coordinates ``53.13,-28.10`` and Field of View of ``1`` (Figure 2).
+To obtain a image of the center of Data Preview 1, enter coordinates ``53.13,-28.10`` and Field of View of ``1`` degree (Figure 2).
 
 .. figure:: images/portal-101-2-2.png
     :name: portal-101-2-2
