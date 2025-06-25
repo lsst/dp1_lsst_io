@@ -6,6 +6,8 @@ Vera C. Rubin Observatory Data Preview 1 (DP1)
 
 **Release date**: Mon Jun 30 2025
 
+Data Preview 1 contains image and catalog products from Rubin Science Pipelines v29 processing of observations obtained with the LSST Commissioning Camera of seven ~1 square degree fields over seven weeks in late 2024.
+
 .. important::
 
    This website is under development.
