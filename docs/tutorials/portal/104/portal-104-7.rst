@@ -101,6 +101,7 @@ Two new icons will appear to "select" (B in Figure 2) or "filter on" (C in Figur
 
 .. figure:: images/portal-104-7-2.png
     :name: portal-104-4-2
+    :width: 500
     :alt: Using the selection box tool in the active chart panel.
 
     Figure 2: After using the "box select" tool to create a box in the plot (A), two new icons appear (B and C).
@@ -111,6 +112,7 @@ These points (or respective HiPS boxes) will be marked with a different color in
 
 .. figure:: images/portal-104-7-3.png
     :name: portal-104-4-3
+    :width: 500
     :alt: The full Portal Results tab with points selected in the active chart.
 
     Figure 3: The full Portal Results tab after points have been selected in the active chart.
