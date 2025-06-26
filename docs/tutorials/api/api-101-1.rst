@@ -22,8 +22,6 @@ tutorial is used for the preparation of journal articles, software releases, or 
 of the Rubin Community Forum. Rubin staff will respond to all questions postedthere.
 
 
-
-
 **1. Create an RSP access token.**
 See the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_
 for a step-by-step guide for creating an RSP access token.  It is recommended that the token you create has the
@@ -114,7 +112,6 @@ Note that the column names, data types, units, and descriptions for the columns 
     Figure 6:  The Table Access Protocol (TAP) Query window as in Figure 5, with
     the Full Table menu item from the Basic menu item chosen after clicking on
     the Examples button at the bottom of the ADQL Text panel.
-    
 
 **9. Note that the chosen ADQL example query now appears in the ADQL Text box of the Table Access Protocol (TAP) Query window.  Click on the Run Query button at the bottom of this window.**
 
@@ -166,3 +163,4 @@ This particular table contains 1000 rows and 51 columns.  Vertical and horizonta
 **13. Explore.**
 At this stage, the Rubin DP1 data set can be further explored via TOPCAT.  For an example, see
 :doc:`api-101-2`.
+
