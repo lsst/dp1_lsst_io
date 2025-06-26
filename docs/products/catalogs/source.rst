@@ -18,7 +18,7 @@ The source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |Source_doi|
+* |Source_doi|
 * Table name: ``Source``
 * Columns: |Source_columns|
 * Rows: |Source_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |source_doi|
+* |source_doi|
 * Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |source_butler_count|

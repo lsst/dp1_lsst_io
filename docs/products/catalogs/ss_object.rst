@@ -18,7 +18,7 @@ The SS object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |SSObject_doi|
+* |SSObject_doi|
 * Table name: ``SSObject``
 * Columns: |SSObject_columns|
 * Rows: |SSObject_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |ss_object_doi|
+* |ss_object_doi|
 * Dataset type: ``('ss_object', {}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |ss_object_butler_count|

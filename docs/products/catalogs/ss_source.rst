@@ -18,7 +18,7 @@ The SS source catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |SSSource_doi|
+* |SSSource_doi|
 * Table name: ``SSSource``
 * Columns: |SSSource_columns|
 * Rows: |SSSource_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |ss_source_doi|
+* |ss_source_doi|
 * Dataset type: ``('ss_source', {}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |ss_source_butler_count|

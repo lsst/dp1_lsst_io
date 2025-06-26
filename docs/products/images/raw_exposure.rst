@@ -6,7 +6,7 @@ Raw exposures
 
 Unprocessed exposure from camera readout.
 
-DOI: |raw_doi|
+|raw_doi|
 
 
 Access

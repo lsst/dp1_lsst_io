@@ -6,7 +6,7 @@ Visit image
 
 Individual processed and calibrated sky images.
 
-DOI: |visit_image_doi|
+|visit_image_doi|
 
 Access
 ======

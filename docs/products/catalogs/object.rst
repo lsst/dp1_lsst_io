@@ -18,7 +18,7 @@ The object catalog is accessible via the TAP and butler services.
 TAP
 ---
 
-* DOI: |Object_doi|
+* |Object_doi|
 * Table name: ``Object``
 * Columns: |Object_columns|
 * Rows: |Object_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |object_doi|
+* |object_doi|
 * Dataset type: ``('object', {skymap, tract}, ArrowAstropy)``
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|
