@@ -4,8 +4,6 @@
 The Solar System Processing (SSP) Pipeline
 ##########################################
 
-.. _DP0-3-Solar-System-Processing:
-
 .. image:: images/LSST-Solar-System-Processing-Infographic.png
 
 Solar System Prompt Processing
@@ -51,27 +49,6 @@ During the day before the coming night’s observing:
 
 7. Precovery linking is attempted for all ``SSObjects`` whose orbits were updated in the above process (or are new). Where successful, newly discovered observations are queued up for submission to the Minor Planet Center.
 
-Solar system processing in DP1
-------------------------------
-
-Solar system processing in DP1 consists of two key components: the association of observations (sources) with known solar system objects, and the discovery of previously unknown objects by linking sets of tracklets, where a tracklet is defined as two or more observations taken in close succesion in a single night.
-
-To generate expected positions, ephemerides are computed for all objects found in the Minor Planet Center orbit catalog using the Sorcha survey simulation toolkit (`Merritt et al., in press <https://github.com/dirac-institute/sorcha>`_). To enable fast lookup of objects potentially
-present in an observed visit, we use the mpsky package (M. Juric 2025). In each image, the closest ``DIASource`` within 1 arcsecond of a known solar system object’s predicted position is associated to that object.
-
-Solar system discovery uses the heliolinx package of asteroid identification and linking tools (`A. Heinze et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023DPS....5540503H/abstract>`_).
-The suite consists of the following tasks:
-
-- Tracklet creation with make_tracklets
-- Multi-night tracklet linking with heliolinc
-- Linkage post processing (orbit fitting, outlier rejection, and de-duplication) with link_purify
-
-The inputs to the heliolinx suite included all sources detected in difference images produces by an early processing of the LSSTComCam commissioning data, including some that were later rejected as part of DP1 processing and hence are not part of this DP1 release.
-
-Tracklet creation with make_tracklets used an upper limit angular velocity of 1.5 deg/day, faster than any main belt asteroid and in the range of many NEO discoveries. To avoid excessive false tracklets from fields that were observed many times per night, the minimum tracklet length was set to three and the minimum on-sky motion for a valid tracklet was set to five arcseconds.
-
-The heart of the discovery pipeline is the heliolinc task, which connects (“links”) tracklets belonging to the same object over a series of nights. It employs the HelioLinC3D algorithm (`S. Eggl et al. 2020 <https://ui.adsabs.harvard.edu/abs/2020DPS....5221101E/abstract>`_; `A. Heinze et al. 2022 <https://ui.adsabs.harvard.edu/abs/2022DPS....5450404H/abstract>`_), a refinement of the original HelioLinC algorithm of `M. J. Holman et al. (2018) <https://ui.adsabs.harvard.edu/abs/2018AJ....156..135H/abstract>`_. The heliolinc run tested each tracklet with 324 different hypotheses spanning heliocentric distances from 1.5 to 9.8 AU and radial velocities spanning the full range of possible bound orbits (eccentricity 0.0 to nearly 1.0). This range of distances encompasses all main belt asteroids and Jupiter Trojans, as well as many comets and Mars-crossers and some NEOs. Smaller heliocentric distances were not attempted here because nearby objects move rapidly across the sky and hence were not likely to remain long enough in an LSSTComCam field to be discovered. A clustering radius was chosen corresponding to 1.33 × 10−3 AU at 1 AU from Earth. Linkages produced by heliolinc are then post-processed with link_purify into a final non-overlapping set of candidate discoveries, ranked from highest to lowest probability of being a real asteroid based on astrometric orbit-fit residuals and other considerations.
-
 
 Small Body Tracklet Linking and Orbit Fitting
 =============================================
@@ -94,6 +71,28 @@ During operations, the tracklet linking and orbit fitting process will consist o
 6. The large catalog of overlapping linkages produced by HelioLinC3D is refined using `"Method of Herget" orbit fitting <https://www.projectpluto.com/herget.htm>`_, producing a final set of non-overlapping, high-purity linkages that have sub-arcsecond astrometric residuals relative to the best-fit orbit -- and still meet the requirement of including tracklets from at least three distinct nights within a 14-day time span.
 7. Refined linkages are tested for associations to known objects. In this step, the short-arc orbits provided by the refined tracklet linkages are more confidently able to be associated with orbits of known objects than the individual sources tested for association prior to linking in Step 2 above. Searches for (p)recoveries and isolated detections that can be linked to the refined linkages made by HelioLinC3D are performed. Rare false linkages are identified and rejected.
 8. New discoveries and measurements of known objects are submitted to the Minor Planet Center (MPC) using the standard data-exchange protocols (e.g., the ADES format). The measurements of all DIASources detected on the previous night that have been matched at a high level of confidence (SNR>=5) to a known SSObject are also submitted to the MPC.
+
+
+Solar system processing in DP1
+==============================
+
+Solar system processing in DP1 consists of two key components: the association of observations (sources) with known solar system objects, and the discovery of previously unknown objects by linking sets of tracklets, where a tracklet is defined as two or more observations taken in close succesion in a single night.
+
+To generate expected positions, ephemerides are computed for all objects found in the Minor Planet Center orbit catalog using the `Sorcha` survey simulation toolkit (`Merritt et al., in press <https://github.com/dirac-institute/sorcha>`_). To enable fast lookup of objects potentially
+present in an observed visit, we use the `mpsky` package (M. Juric 2025). In each image, the closest ``DIASource`` within 1 arcsecond of a known solar system object’s predicted position is associated to that object.
+
+Solar system discovery uses the `heliolinx` package of asteroid identification and linking tools (`A. Heinze et al. 2023 <https://ui.adsabs.harvard.edu/abs/2023DPS....5540503H/abstract>`_).
+The suite consists of the following tasks:
+
+- Tracklet creation with `make_tracklets`
+- Multi-night tracklet linking with `heliolinc`
+- Linkage post processing (orbit fitting, outlier rejection, and de-duplication) with `link_purify`
+
+The inputs to the `heliolinx` suite included all sources detected in difference images produces by an early processing of the LSSTComCam commissioning data, including some that were later rejected as part of DP1 processing and hence are not part of this DP1 release.
+
+Tracklet creation with `make_tracklets` used an upper limit angular velocity of 1.5 deg/day, faster than any main belt asteroid and in the range of many NEO discoveries. To avoid excessive false tracklets from fields that were observed many times per night, the minimum tracklet length was set to three and the minimum on-sky motion for a valid tracklet was set to five arcseconds.
+
+The heart of the discovery pipeline is the `heliolinc` task, which connects (“links”) tracklets belonging to the same object over a series of nights. It employs the HelioLinC3D algorithm (`S. Eggl et al. 2020 <https://ui.adsabs.harvard.edu/abs/2020DPS....5221101E/abstract>`_; `A. Heinze et al. 2022 <https://ui.adsabs.harvard.edu/abs/2022DPS....5450404H/abstract>`_), a refinement of the original HelioLinC algorithm of `M. J. Holman et al. (2018) <https://ui.adsabs.harvard.edu/abs/2018AJ....156..135H/abstract>`_. The `heliolinc` run tested each tracklet with 324 different hypotheses spanning heliocentric distances from 1.5 to 9.8 AU and radial velocities spanning the full range of possible bound orbits (eccentricity 0.0 to nearly 1.0). This range of distances encompasses all main belt asteroids and Jupiter Trojans, as well as many comets and Mars-crossers and some NEOs. Smaller heliocentric distances were not attempted here because nearby objects move rapidly across the sky and hence were not likely to remain long enough in an LSSTComCam field to be discovered. A clustering radius was chosen corresponding to 1.33 × 10−3 AU at 1 AU from Earth. Linkages produced by `heliolinc` are then post-processed with `link_purify` into a final non-overlapping set of candidate discoveries, ranked from highest to lowest probability of being a real asteroid based on astrometric orbit-fit residuals and other considerations.
 
 
 Solar System Data Release Processing
