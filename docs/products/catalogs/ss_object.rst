@@ -34,11 +34,9 @@ Butler
 Description
 ===========
 
-A "Solar System object" is ...
+A "Solar System object" is a moving object for which groupings of difference image detections (``DIASources``) have been linked together.
 
-The SS object table is created by ...
-
-*Details TBD.*
+The SS object table contains the unique ``SSObjectId`` identifier, number of observations, and the date of the discovery submission (if a new discovery) for each solar system object detected with signal-to-noise ratio >5.
 
 Processing
 ----------

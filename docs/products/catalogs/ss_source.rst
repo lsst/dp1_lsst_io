@@ -34,11 +34,9 @@ Butler
 Description
 ===========
 
-A "Solar System source" is ...
+A "Solar System source" is a signal-to-noise ratio > 5 moving object detection in a visit image.
 
-The SS source table is created by ...
-
-*Details TBD.*
+The SS source table contains the 2-d (sky) coordinates and 3-d distances and velocities for every ``SSObject`` at the time of every LSST observation of that ``SSObject``.
 
 Processing
 ----------
