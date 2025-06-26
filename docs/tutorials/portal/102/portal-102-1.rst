@@ -76,7 +76,7 @@ For example, in the entry field under "Name" type "Flux" and click "enter" or "r
 Clear the entry field and click "enter" or "return" again to see all columns names (all rows of the schema interface).
 
 **7. Enter constraints.**
-At left, click on "Spatial" to include spatial constraints (a cone search) centered on RA, Dec = 53, -18 deg.
+At left, click on "Spatial" to include spatial constraints (a cone search) centered on RA, Dec = 53, -28 deg.
 Limit the radius to 30 arcseconds.
 In the table, select the ``coord_ra``, ``coord_dec``, ``g_psfFlux``, ``r_psfFlux``, and ``i_psfFlux`` to return data in those columns.
 Add constraints that only objects with fluxes greater than 360 nJy will be returned.
