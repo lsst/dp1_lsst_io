@@ -21,11 +21,11 @@ pipeline's processing occurs in daytime, after a night of observing.
 The pipeline will deliver 
 Daily Data Products for Solar System objects in the form of four catalogs:  
 ``SSObject``, ``SSSource``, ``DIASource``, and ``MPCORB``, which are described in the 
-:doc:`DP0.3 Data Products </data-products-dp0-3/index>` documentation and the 
+:doc:`/products/index` documentation and the 
 `Data Products Definition Document <https://lse-163.lsst.io>`_ (DPDD). 
 The Solar System Processing pipeline is illustrated in the infographic provided above.
 For more information on the moving object tracklet linking and orbit fitting
-algorithm, see the :doc:`HelioLinC3D Tracklet Linking and Orbit Fitting software package </data-products-dp0-3/heliolinc3d-tracklet-linking-orbit-fitting>` page.
+algorithm, see the relevant section below.
 
 The Solar System Processing pipeline steps
 ------------------------------------------
@@ -71,8 +71,7 @@ The tracklet linking and orbit fitting procedure is illustrated in the infograph
 
 During operations, the tracklet linking and orbit fitting process will consist of the following steps
 that will repeat every 24 hours following nightly observing and before release of the Solar System
-Daily Data Products (for more information on the overall Solar System Processing pipeline and Daily
-Data Products, see the :doc:`Solar System Processing pipeline </data-products-dp0-3/solar-system-processing-pipeline>` page):
+Daily Data Products (as described above):
 
 1. The nightly DIASource catalog is ingested.
 2. All stationary objects are removed from the nightly catalog of DIASources. In addition, any individual sources that can be attributed to known moving objects with high-confidence orbits where the astrometric match between the individual source and a known object has very low uncertainty (SNR>=5) are also removed from the nightly catalog of DIASources. In this manner, the moving object detections that are unattributed to any known sources are retrieved from the nightly DIASource catalog to be passed to candidate tracklet identification.
