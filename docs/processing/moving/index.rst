@@ -6,7 +6,7 @@ The Solar System Processing (SSP) Pipeline
 
 .. _DP0-3-Solar-System-Processing:
 
-.. image:: LSST-Solar-System-Processing-Infographic.png
+.. image:: images/LSST-Solar-System-Processing-Infographic.png
 
 Solar System Prompt Processing
 ==============================
