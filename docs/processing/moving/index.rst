@@ -18,8 +18,7 @@ as well as to compute physical (e.g., absolute magnitudes) and other auxiliary p
 (e.g., predicted apparent magnitudes and coordinates in various coordinate systems)
 for known Solar System objects and their LSST observations. The majority of the
 pipeline's processing occurs in daytime, after a night of observing.
-The pipeline will deliver
-Daily Data Products for Solar System objects in the form of four catalogs: 
+The pipeline will deliver Daily Data Products for Solar System objects in the form of four catalogs:
 ``SSObject``, ``SSSource``, ``DIASource``, and ``MPCORB``, which are described in the
 :doc:`/products/index` documentation and the
 `Data Products Definition Document <https://lse-163.lsst.io>`_ (DPDD).
