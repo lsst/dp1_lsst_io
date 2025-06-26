@@ -161,6 +161,6 @@ This particular table contains 1000 rows and 51 columns.  Vertical and horizonta
     Figure 10:  The Table Browser Window, showing the contents of the newly created table.
 
 **13. Explore.**
-At this stage, the Rubin DP1 data set can be further explored via TOPCAT.  For an example, see
-:doc:`api-101-2`.
+At this stage, the Rubin DP1 data set can be further explored via TOPCAT.  A future tutorial
+will showcase plotting Rubin DP1 data with TOPCAT plotting functions.
 
