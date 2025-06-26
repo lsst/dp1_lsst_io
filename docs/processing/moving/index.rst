@@ -32,6 +32,7 @@ The Solar System Processing pipeline steps
 During operations, the pipeline will consist of the following steps that will repeat every 24 hours:
 
 During nightly observing:
+
 1. Known Solar System objects are associated with difference image detections in real-time. Alerts are produced within 60 seconds for all signal-to-noise ratio (SNR)>=5 ``DIASources``. The Alert Production pipeline attempts association of ``DIASources`` with known Solar System objects in real-time, and if a match is found then the alert includes the corresponding ``SSObject`` catalog.
 During the day following nightly observing:
 2. All ``DIASources`` detected on the previous night that have not been matched at a high confidence level (SNR>=5) to a known Object, ``DIAObject``, ``SSObject``, or an artifact, are analyzed by the HelioLinC3D moving object linking algorithm for potential pairs that form tracklets (consisting of detections in three pairs of images for a given visit within 15 days) that are consistent with being on the same Keplerian orbit around the Sun. For more information on this algorithm, see the "HelioLinC3D Tracklet Linking and Orbit Fitting software package" section below.
@@ -48,8 +49,8 @@ Small Body Tracklet Linking and Orbit Fitting
 
 .. image:: images/LSST-HelioLinC3D-Infographic.png
 
-The HelioLinC3D Tracklet Linking and Orbit Fitting Software Package
--------------------------------------------------------------------
+The HelioLinC3D Tracklet Linking and Orbit Fitting Package
+-----------------------------------------------------------
 
 The Vera C. Rubin Observatory will detect millions of sources each night. As part of the Solar System Processing pipeline (Step 2 above),
 the goal of the HelioLinC3D software package is to discover asteroids amid this flood of data. The algorithm identifies and links together little sequences of typically 6-20 sources that could comprise repeated detections of a new asteroid moving in its orbit around the Sun. These sets of detections (called 'linkages') are formed in two stages. First, ‘tracklets’ of observations are identified, where a tracklet comprises at least two images within a single night. Next, tracklets from multiple nights are linked together. LSST specifications state that a valid linkage must include at least three tracklets, each from a different night, and all within a 14-day period. Each linkage meeting these criteria constitutes a candidate asteroid discovery. After the full set of candidate linkages has been produced, they are culled and refined through orbit fitting and other analyses. The final product is a purified set of thousands of non-overlapping linkages, each of which has an orbit-fit with sub-arcsecond astrometric residuals. These linkages -- each comprising a probable new asteroid discovery -- are submitted to the `Minor Planet Center <https://minorplanetcenter.net>`_ (MPC) for confirmation and publication. The tracklet linking and orbit fitting procedure is illustrated in the infographic provided above.
