@@ -10,36 +10,20 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-16
 
-**Learning objective:** This tutorial provides a basic guide for plotting DP1 catalog data via the Rubin Science Platform (RSP) Table Access Protocol (TAP) service using `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
+**Learning objective:** This tutorial provides a basic guide for plotting DP1 catalog data via the
+Rubin Science Platform (RSP) Table Access Protocol (TAP) service using `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_.
 
 **LSST data products:** The DP1 catalogs within the RSP TAP service.
 
-**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if
+this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_
+of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
 
 
-**1. Follow the steps in :doc:`api-101-2` to start up TOPCAT and configure it for the RSP DP1 TAP service.**
-By the end of the steps in :doc:`api-101-2` the following two TOPCAT windows should be open:
-
-.. figure:: images/api-101-1-1.png
-    :name: api-101-2-1
-    :alt: A screenshot of the main TOPCAT window.
-
-    The main TOPCAT window.   **THIS PLOT NEEDS UPDATING**
-
-.. figure:: images/api-101-1-4.png
-    :name: api-101-1-4
-    :alt: A screenshot of the Table Access Protocol (TAP) Query window.
-          The Table Access Protocol (TAP) Query window now shows three panels, stacked vertically.  The
-	  top panel is the Metadata panel, and it shows a list of DP1 schemas and tables that
-	  are available to query.  The middle panel is the Service Capabilities panel, and it shows that
-	  the available Query Language is ADQL-2.0.  The bottom panel is the ADQL Text panel, and it
-	  indicates the current Mode is Synchronous; the bottom panels text box is currently empty.
-
-    The Table Access Protocol (TAP) Query window; a list of DP1 tables
-    available for query can be be seen in the Metadata panel.
-
+**1. Follow the steps in the previous tutorial to start up TOPCAT and configure it for the RSP DP1 TAP service.**
+By the end of the steps the following two TOPCAT windows should be open:
 
 **2. STOPPED HERE.**  Grab some queries from the DP0.2 TOPCAT tutorial for creating a color-color diagram.
 
