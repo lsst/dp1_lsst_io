@@ -4,7 +4,7 @@
 MPCORB
 ######
 
-The orbit catalog produced by the `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC).
+The orbit catalog produced by the `Minor Planet Center <https://minorplanetcenter.net/>`_ (MPC).
 
 Columns: 10
 
@@ -31,9 +31,9 @@ Not available.
 Description
 ===========
 
-The `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC) ...
+The `Minor Planet Center <https://minorplanetcenter.net/>`_ (MPC) is the single worldwide location for receipt and distribution of positional measurements of small bodies. The MPC is responsible for the identification, designation, and orbit computation for all of these objects.
 
-The MPCORB table is created by ...
+During Rubin Operations, Solar System Processing will link together the difference-image detections of moving objects and report discoveries to the MPC. The MPC will calculate the orbital parameters and these results will be passed back to Rubin. The returned result will be stored and made available to users as the ``MPCORB`` table.
 
 *Details TBD.*
 
