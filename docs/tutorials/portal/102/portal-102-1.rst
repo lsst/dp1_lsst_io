@@ -26,10 +26,10 @@ Rubin staff will respond to all questions posted there.
 In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and log in.
 
 **2. Select the DP1 Catalogs tab.**
-On the Portal landing page, click on the tab labeled "DP1 Catalogs".
+On the Portal landing page, click on the tab labeled "DP0.2 Catalogs".
 
 **3. Mouse-over for pop-up notes.**
-In the "DP1 Catalogs" tab (Figure 1) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
+In the "DP0.2 Catalogs" tab (Figure 1) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
 
 .. figure:: images/portal-102-1-1.png
     :name: portal-102-1-1
