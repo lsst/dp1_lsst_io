@@ -13,10 +13,10 @@ Data Preview 1 contains image and catalog products from Rubin Science Pipelines 
    This website is under development.
 
 
+|dataset_doi|
+
 Overview
 ========
-
-DOI: |dataset_doi|
 
 General information about the observations that comprise the dataset.
 
