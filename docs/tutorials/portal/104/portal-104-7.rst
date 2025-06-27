@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/24/2025
+**Last verified to run:** 6/27/2025
 
 **Learning objective:** Use the components of the results active chart (plot) panel.
 
@@ -32,7 +32,7 @@ Rubin staff will respond to all questions posted there.
 ----
 
 **1. Log in to the Portal Aspect of the RSP and execute a query.**
-Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface, and execute the query below.
 This query will retrieve a small sample of isolated (not blended) objects brighter than 25th magnitude.
 The ``scisql_nanojanskyToAbMag()`` function converts fluxes (in nJy) to AbMagnitudes.
 
