@@ -24,8 +24,8 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log in to the Portal Aspect of the RSP.**
 Log in to the Rubin Science Platform, and select the Portal aspect.
-There, go to the Portal's "General TAP" tab, and switch to the UI interface.
-If the "General TAP" tab is not available click on the "hamburger" icon on the upper left, and click on the "General TAP" entry.
+There, go to the Portal's "Mult-archive TAP" tab, and switch to the UI interface.
+If the "Mult-archive TAP" tab is not available click on the "hamburger" icon on the upper left, and click on the "Mult-archive TAP" entry.
 This will result in an additional tab on top.
 
 **2. Select the appropriate table and enter the image coordinates.**
@@ -46,7 +46,7 @@ The default layout of the Results tab is shown in Figure 1.
 
 * an image associated with the first entry in the tabular data below at upper left,
 
-* default plot at upper right (corresponding to the first two columns in the table,
+* default plot at upper right (corresponding to the ``s-ra`` and ``s-dec`` columns in the table,
 
 * the tabular data below, with entries corresponding to individual images.
 
