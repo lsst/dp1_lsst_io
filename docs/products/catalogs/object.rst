@@ -31,6 +31,11 @@ Butler
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|
 
+.. note::
+
+    The Object catalog is extremely wide.
+    Loading just the columns you need is strongly recommended (see note under :ref:`catalogs`).
+
 Description
 ===========
 
