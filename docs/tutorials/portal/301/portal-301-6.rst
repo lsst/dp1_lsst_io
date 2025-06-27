@@ -65,16 +65,16 @@ Return to the DP1 Image Search window and enter the following ADQL query, which 
 
 .. code-block:: SQL
 
-SELECT dataproduct_type, dataproduct_subtype, calib_level, lsst_band,
-       em_min, em_max, lsst_tract, lsst_patch,
-       s_ra, s_dec, s_fov, s_region, s_xel1, s_xel2, obs_id, obs_collection, o_ucd,
-       facility_name, instrument_name, obs_title, access_url,
-       access_format, obs_publisher_did
-FROM ivoa.ObsCore
-WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
-      AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-      AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 95, -25, 1))=1
-      AND ( 622e-9 BETWEEN em_min AND em_max )
+  SELECT dataproduct_type, dataproduct_subtype, calib_level, lsst_band,
+         em_min, em_max, lsst_tract, lsst_patch,
+         s_ra, s_dec, s_fov, s_region, s_xel1, s_xel2, obs_id, obs_collection, o_ucd,
+         facility_name, instrument_name, obs_title, access_url,
+         access_format, obs_publisher_did
+  FROM ivoa.ObsCore
+  WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
+        AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
+        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 95, -25, 1))=1
+        AND ( 622e-9 BETWEEN em_min AND em_max )
 
 This should return 79 images. If it's not already visible, click on the "Coverage" tab to see the patch boundaries overlaid onto a HiPS coverage map. Note how you can click one of the patches on the coverage map, and its corresponding image will be highlighted in the table.
 
@@ -143,7 +143,7 @@ Create a new chart, and plot a histogram of magLim, the 5-sigma limiting magnitu
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
 
 
-**5. Objects **
+**5. Objects**
 
 Finally, examine the ``Object`` table, which contains detections and measurements from the ``deep_coadd`` images. Execute the following query in the ADQL query window, retrieving PSF and cModel magnitudes in g, r, and i bands, as well as the refExtendedness parameter.
 
