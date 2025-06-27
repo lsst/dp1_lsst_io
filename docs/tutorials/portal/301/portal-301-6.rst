@@ -173,7 +173,7 @@ Create a new chart, and plot a histogram of magLim, the 5-sigma limiting magnitu
     Figure 12: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits in DP1.
 
 
-**5. Objects (detections on coadds)
+**5. Objects (detections on coadds)**
 
 Finally, examine the Object table. Execute the following query in the ADQL query window, retrieving PSF and cModel magnitudes in g, r, and i bands, as well as the refExtendedness parameter.
 
