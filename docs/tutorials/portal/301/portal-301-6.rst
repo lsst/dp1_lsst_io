@@ -203,11 +203,13 @@ Select only point-like objects ("stars") by filtering the refExtendedness column
 
     Figure 13: Select stars by filtering on refExtendedness=0.
 
+Open a new plot window by clicking the "Add a chart" button. Make a color-color diagram by plotting r_psfMag-i_psfMag vs. g_psfMag-r_psfMag. Place the two figures side-by-side.
+
 .. figure:: images/portal-301-6-14.png
     :name: portal-301-6-14
-    :alt: A plot showing a color-magnitude diagram as a heatmap.
+    :alt: A plot showing color-color and color-magnitude diagrams as heatmaps.
 
-    Figure 14: A color-magnitude diagram of stars in the Rubin\_SV\_95\_-25 field.
+    Figure 14: A color-color and color-magnitude diagram of stars in the Rubin\_SV\_95\_-25 field.
 
 
-Exercises for the learner: try plotting the color-magnitude diagram for galaxies (refExtendedness=1) instead. Next, try plotting color-color diagrams (e.g., r-i vs. g-r)
+Exercises for the learner: try plotting the color-color and color-magnitude diagrams for galaxies (refExtendedness=1) instead.
