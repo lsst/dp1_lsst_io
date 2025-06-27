@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/24/2025.
+**Last verified to run:** 6/27/2025.
 
 **Learning objective:** Learn how to use the coverage chart and HiPS map panel in the Portal results tab.
 This query will retrieve a small sample of isolated objects brighter than 25th magnitude.
@@ -35,7 +35,7 @@ Rubin staff will respond to all questions posted there.
 ----
 
 **1. Log in to the Portal Aspect of the RSP, and execute a query.**
-Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute the query below.
+Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface, and execute the query below.
 
 .. code-block:: SQL
 
@@ -49,7 +49,6 @@ Go to the Portal's DP0.2 Catalogs tab, switch to the ADQL interface, and execute
            AND u_cModelFlux >360 AND g_cModelFlux >360
            AND r_cModelFlux >360 AND i_cModelFlux >360
            AND z_cModelFlux >360 AND y_cModelFlux >360)
-
 
 **2. View the default coverage chart** (Figure 1).
 The default view is a HEALPix grid showing the number of returned objects per grid region.
