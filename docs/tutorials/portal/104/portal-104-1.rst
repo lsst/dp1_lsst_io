@@ -86,7 +86,7 @@ Notice that the active chart (the plot) is still available as a tab at upper lef
 Reopen the sidebar menu to try other layouts and return to the default three-panel view.
 
 **6. Execute another query.**
-Click on the tab "DP0.2 Catalogs" to return to the ADQL interface.
+Click on the tab "DP1 Catalogs" to return to the ADQL interface.
 Change the query to return objects with ``i_cModelFlux`` :math:`>` 500 nJy.
 Execute the query.
 
