@@ -28,7 +28,7 @@ The field denoted "RubinSV\_95\_-25" is sometimes referred to as the "low-latitu
 
 **1. Log in to the Portal Aspect of the RSP.**
 
-See :doc:`/tutorials/portal/101/portal-101-1.rst`.
+See the how-to guide in the 101-series Portal tutorials.
 
 **2. Retrieve and examine a deep\_coadd image.**
 
