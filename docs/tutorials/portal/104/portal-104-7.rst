@@ -21,7 +21,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 * color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
 * CMD: color-magnitude diagram, a plot with a color on one axis and magnitude on the other.
 
-**LSST data products:**  DP1 object catalogs
+**LSST data products:**  ``DP1 object`` catalog
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
