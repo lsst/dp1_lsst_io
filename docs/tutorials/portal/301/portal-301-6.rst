@@ -92,9 +92,10 @@ Navigate to the "DP1 Catalogs" tab and enter the following ADQL query.
 
 .. code-block:: SQL
 
-  SELECT ra, dec, band, expTime, visit, expMidpt, expMidptMJD
+  SELECT ra, dec, band, expMidptMJD
   FROM dp1.Visit
   WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 95, -25, 1))=1
+  ORDER BY expMidptMJD ASC
 
 This should return 292 visits in total. Note that the RA, Dec plot shows the field centers, illustrating how the field was dithered.
 
@@ -105,7 +106,7 @@ Use the filter function in the table to select each of the *ugrizy* values from 
 
 **4.2. Visit dates cumulative histogram**
 
-Click on the "expMidptMJD" column to sort by observation time; you will see a triangle pointing up. This means that the table is now sorted by expMidptMJD so that it is in ascending order (confirm that it is sorted by looking at the first few table entries).
+Note that when we ran the ADQL query, we included an "ORDER BY" statement to return a table that is sorted by expMidptMJD in ascending order (confirm that it is sorted by looking at the first few table entries). We can use this to plot a cumulative histogram of exposures as a function of expMidptMJD.
 
 Add a new column to the table by clicking the column+ icon. Click "Use preset function", and select "Number rows in current sort order". Give the new column a name (e.g., "cumulative_expnum") and click "Add Column".
 
@@ -155,7 +156,7 @@ Finally, examine the ``Object`` table, which contains detections and measurement
          g_psfFlux, g_psfFLuxErr,
          r_psfFlux, r_psfFLuxErr,
          i_psfFlux, i_psfFLuxErr,
-         refExtendedness, tract, patch
+         refExtendedness
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 95, -25, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
