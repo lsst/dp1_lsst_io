@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/24/2025
+**Last verified to run:** 6/27/2025
 
 **Learning objective:** Navigate the multi-panel interface for catalog data results.
 
@@ -28,7 +28,7 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log in to the Portal Aspect of the RSP.**
 Log in to the Rubin Science Platform, and select the Portal aspect.
-There, go to the Portal's DP0.2 Catalogs tab, and switch to the ADQL interface.
+There, go to the Portal's DP1 Catalogs tab, and switch to the ADQL interface.
 
 **2. Execute a query.**
 Enter the query below into the ADQL box, and press "Search".
