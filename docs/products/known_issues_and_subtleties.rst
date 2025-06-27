@@ -14,7 +14,7 @@ Unfortunately the data product that holds the flags that would make this conditi
 
 We are currently integrating a major change to our deblender that we hope will mitigate this problem in future processing, and future data releases will definitely include a coadd mask plane indicating when skipping still occurs, making the problem easier to diagnose.
 
-It is likely that our direct image processing in crowded fields will still lag that dedicated crowded-field photometry codes; Rubin's focus for these fields has always been image subtraction (where we do expect to compete with the state of the art), with the :ref:`catalogs-object` catalog a best-effort addition.
+It is likely that our direct image processing in crowded fields will still lag dedicated crowded-field photometry codes; Rubin's focus for these fields has always been image subtraction (where we do expect to compete with the state of the art), with the :ref:`catalogs-object` catalog a best-effort addition.
 
 Image units
 ===========
@@ -27,13 +27,13 @@ Aperture corrections
 ====================
 
 Rubin processing uses aperture corrections to ensure that different photometry estimators produce consistent results on point sources.
-These corrections are measured by applying different algorithms to the same set of bright stars on each single-visit image and interpolated the ratio of each algorithm to a standard one (a backgrond-compensated top-hat aperture flux), which is then used for all photometric calibration.
+These corrections are measured by applying different algorithms to the same set of bright stars on each single-visit image and interpolating the ratio of each algorithm to a standard one (a background-compensated top-hat aperture flux), which is then used for all photometric calibration.
 All fluxes other than the standard algorithm's are then multiplied by the interpolated flux ratio.
 Aperture corrections on coadds are computed by averaging the single-detector ratios with the same weights that were used to combine images.
 
 This scheme has several problems:
 
-- These aperture corrections are well-defined for point sources only, but we still apply them for most of our galaxy-focused photometry algorithms (the ``sersic_*`` fluxes are the sole exception), since this at least makes them well-calibrated for for poorly-resolved galaxies.
+- These aperture corrections are well-defined for point sources only, but we still apply them for most of our galaxy-focused photometry algorithms (the ``sersic_*`` fluxes are the sole exception), since this at least makes them well-calibrated for poorly-resolved galaxies.
 
 - Coadding apertures with the same weights as the images is only correct in the limit that the images have the same PSF.
   For fixed-aperture photometry a different combination should be used (and will be used in future data releases, if we use this scheme at all), and for PSF-dependent photometry no formally correct combination is possible.
@@ -56,7 +56,7 @@ Forced photometry variants and blending
 There are a total of four variants of forced photometry in Rubin data release processing, for the combination of two different reference catalogs (:ref:`catalogs-object` and :ref:`catalogs-dia-object`) and two different measurement images (:ref:`images-visit-image` and :ref:`images-difference-image`).
 Each of the two forced photometry catalogs includes rows for both measurement images, and a single reference catalog (:ref:`catalogs-forced-source` uses :ref:`catalogs-object` positions, while :ref:`catalogs-dia-forced-source` uses :ref:`catalogs-dia-object` positions).
 
-We expect forced photometry on :ref:`images-difference-image` to behave best, especially in crowded regions, since image subtraction should remove neighbors even more effectively than the deblender we run on the coadds.
+We expect forced photometry on :ref:`images-difference-image` to behave best, especially in crowded regions, since image subtraction should remove neighbors even more effectively than the deblender we run on the coadds (note that we do not deblend when producing the :ref:`catalogs-dia-source` catalog, either).
 There is no deblending whatsoever in our forced photometry on :ref:`images-visit-image`.
 
 Calibration source catalogs and flags
