@@ -27,7 +27,7 @@ Butler
 ------
 
 * |object_doi|
-* Dataset type: ('object', {**skymap**, **tract**}, ArrowAstropy)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|
 
