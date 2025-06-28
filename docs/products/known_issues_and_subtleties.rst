@@ -77,3 +77,15 @@ Ellipse parameterizations and units
 All catalogs (but especially :ref:`catalogs-object`) currently report object sizes and shapes in pixel units, not angular units, and different ellipse parameterizations are used for different estimators (e.g. ``{ixx, iyy, ixy}``, ``{e1, e2, r}``, ``{r_x, r_y, rho}``), reflecting either the parameterization used directly in a measurement algorithm or the expectations of a particular astronomical subfield.
 
 We expect to use angular units and consistent parameterization throughout in future data release, with tooling provided to efficiently convert between the parameterizations (which is TBD) and those preferred by different subfields.
+
+PSF models leak memory
+======================
+
+A bug in the library we use to map C++ code to Python (`pybind11 <https://pybind11.readthedocs.io/en/stable/index.html>`__) prevents our wrappers for Piff PSF objects from being correctly garbage-collected by Python when they are first constructed by C++ code (as is the case when they are loaded from disk).
+Since these PSF objects are attached to our processed image data products (i.e. everything but :ref:`images-raw`), loading many of any of these in the same process can slowly increase memory consumption until the process (such as a notebook kernel) is shut down.
+The same is true of the ``visit_summary`` butler dataset type.
+
+One workaround for this is to only read the ``image``, ``mask``, or ``variance`` component of an image data product (see :ref:`images`), which can also be more efficient with the rest of the data product is not needed.
+
+This bug has been fixed in the latest version of pybind11, which we will adopt before the next data release.
+As this upgrade will involve breaking changes, we may not be able to include it in the 29.x release series.
