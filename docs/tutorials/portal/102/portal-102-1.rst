@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Data Release:** Data Preview 1
 
-**Last verified to run:** 2025-06-16
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Navigate the main components of the Portal's user interface (UI).
 
