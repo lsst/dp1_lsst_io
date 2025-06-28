@@ -24,6 +24,9 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
+1. Introduction
+===============
+
 This tutorial explores the LSSTComCam observations for the Seagull Nebula, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
 Named for its resemblanced to a bird in flight, the Seagull is a dusty emission and reflection nebula spanning 2.5 degrees of sky at the border of the Canis Major and Monoceros constellations, in the plane of the Milky Way.
@@ -36,23 +39,20 @@ The extended nebulosity across the entire LSSTComCam field for the Seagull Nebul
 
 **Central coordinates:** (RA, Dec) = 106.300, -10.510 degrees
 
-
-1. Log in to the Portal
-=======================
-
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
-**1.2. Select the "DP1 Images" tab.**
-If it does not appear across the top of the user interface, click the "menu" icon at upper left to open the left-hand menu.
 
 2. Examine a deep coadd image
 =============================
 
-**2.1. Switch to the "Edit ADQL" interface.**
+**2.1. Select the "DP1 Images" tab.**
+If it does not appear across the top of the user interface, click the "menu" icon at upper left to open the left-hand menu.
+
+**2.2. Switch to the "Edit ADQL" interface.**
 Click on the "Edit ADQL" button at upper right.
 
-**2.2. Execute the ADQL query for deep coadd images.**
+**2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
 This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the Seagull field.
 
@@ -69,7 +69,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
         AND CONTAINS(POINT('ICRS', 106.300, -10.510), s_region)=1
 
 
-**2.3. View the results.**
+**2.4. View the results.**
 The query will return 8 ``lsst.deep\_coadd`` results -- two for each of the *ugrz* bands,
 because the Seagull's central coordinates land in the overlap region between patches (i.e., between ``deep_coadd`` images).
 The results interface will appear similar to Figure 1.
@@ -81,7 +81,7 @@ The results interface will appear similar to Figure 1.
     Figure 1: The results of the ``deep_coadd`` image search.
 
 
-**2.4. Explore the images.**
+**2.5. Explore the images.**
 Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the Seagull field.
 
 
@@ -125,8 +125,8 @@ The boundaries of the 76 patches are overlaid onto a HiPS coverage map, as in Fi
 In the coverage map, click any patch and its corresponding image will be highlighted in the table and plot.
 
 
-4. Explore the visits
-=====================
+4. Make visit summary plots
+===========================
 
 **4.1. Go to the catalog query interface.**
 Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
@@ -210,8 +210,8 @@ It will look like Figure 4.
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
 
 
-5. Objects
-==========
+5. Analyze object photometry
+============================
 
 The ``Object`` table, which contains detections and measurements from the ``deep_coadd`` images.
 

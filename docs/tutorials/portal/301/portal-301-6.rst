@@ -24,28 +24,29 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
+1. Introduction
+===============
+
 This tutorial explores the LSSTComCam observations for the "RubinSV\_95\_-25" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
 The field denoted "RubinSV\_95\_-25" is sometimes referred to as the "low-latitude field" because it was at the lowest Galactic latitude of any of the fields observed during LSSTComCam on-sky commissioning. RubinSV\_95\_-25 is centered at (RA, Dec) = (95.0, -25.0) degrees, corresponding to Galactic longitude/latitude of (l, b) = (232.5, -17.6) degrees. It is relatively far from the Galactic plane, and not representative of the crowded fields that LSST will see in the Milky Way disk. Nonetheless, it contains the highest source density of any of the LSSTComCam fields in DP1. The region covered spans a diameter of about 1 degree.
 
 **Central coordinates:** (RA, Dec) = 95.0, -25.0 degrees
 
-1. Log in to the Portal
-=======================
-
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
-**1.2. Select the "DP1 Images" tab.**
-If it does not appear across the top of the user interface, click the "menu" icon at upper left to open the left-hand menu.
 
 2. Examine a deep coadd image
 =============================
 
-**2.1. Switch to the "Edit ADQL" interface.**
+**2.1. Select the "DP1 Images" tab.**
+If it does not appear across the top of the user interface, click the "menu" icon at upper left to open the left-hand menu.
+
+**2.2. Switch to the "Edit ADQL" interface.**
 Click on the "Edit ADQL" button at upper right.
 
-**2.2. Execute the ADQL query for deep coadd images.**
+**2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
 This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the RubinSV\_95\_-25 field.
 
@@ -62,7 +63,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
         AND CONTAINS(POINT('ICRS', 95, -25), s_region)=1
 
 
-**2.3. View the results.**
+**2.4. View the results.**
 The query will return 6 ``lsst.deep\_coadd`` results -- one for each of the *ugrizy* bands.
 The results interface will appear similar to Figure 1.
 
@@ -73,7 +74,7 @@ The results interface will appear similar to Figure 1.
     Figure 1: The results of the ``deep_coadd`` image search.
 
 
-**2.4. Explore the images.**
+**2.5. Explore the images.**
 Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the Seagull field.
 
 
@@ -118,8 +119,8 @@ In the coverage map, click any patch and its corresponding image will be highlig
 
 
 
-4. Explore the visits
-=====================
+4. Make visit summary plots
+===========================
 
 **4.1. Go to the catalog query interface.**
 Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
@@ -202,8 +203,8 @@ It will look like Figure 4.
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
 
 
-5. Objects
-==========
+5. Analyze object photometry
+============================
 
 The ``Object`` table, which contains detections and measurements from the ``deep_coadd`` images.
 
