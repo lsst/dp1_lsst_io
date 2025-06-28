@@ -27,7 +27,7 @@ Butler
 ------
 
 * |ss_object_doi|
-* Dataset type: ('ss_object', {}, ArrowAstropy)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('ss_object', {}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |ss_object_butler_count|
 

@@ -13,7 +13,7 @@ Access
 
 The survey property maps are accessible via the Butler service.
 
-* Dataset type: ('<map_name>', {**band**, **skymap**}, HealSparseMap)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('<map_name>', {**band**, **skymap**}, HealSparseMap)
 * Format: `FITS <https://healsparse.readthedocs.io/en/1.9.0/filespec.html#healsparsemap-fits-serialization>`_ (with ``.hsp`` file extension)
 * Number of files: |survey_property_butler_count|
 

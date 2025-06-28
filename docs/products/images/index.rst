@@ -8,8 +8,28 @@ Images of the sky in the six LSST filters with a variety of calibration levels.
 
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes tables of image metadata (``ObsCore``).
 
-The "Butler Dataset type" entry on each image type's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+All image data products are available via the butler, SIA, and TAP services.
 
+The "Butler Dataset type" entry on each image type's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+See :ref:`products_butler_terminology` for more information.
+
+.. note::
+
+    When reading images with the butler, it can be *much* more efficient to read just the pixels of interest, by passing::
+
+        parameters={
+            "bbox": lsst.geom.Box2I(
+                lsst.geom.Point2I(x1, y1),
+                lsst.geom.Point2I(x2, y2),
+            )
+        }
+
+    as a keyword argument to `butler.get <lsst.daf.butler.Butler.get>`.
+    It is also more efficient to just read the pixel values from a single plane by adding a storage class component name to the dataset type name, e.g.::
+
+        butler.get("visit_image.image", ...)
+
+    to load just the main image plane, not the mask, variance, or metadata.
 
 Coadd images
 ============

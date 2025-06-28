@@ -22,3 +22,9 @@ ignore = [
     "http://ls.st/doc-29545",
     "https://sdm-schemas.lsst.io/dp1.html#ObsCore" #temporary until new link comes
 ]
+
+[sphinx.intersphinx.projects]
+python = "https://docs.python.org/3/"
+lsst = "https://pipelines.lsst.io/v/v29_1_1/"
+astropy = "https://docs.astropy.org/en/v7.0.1/"
+pandas = "https://pandas.pydata.org/pandas-docs/version/2.2/"

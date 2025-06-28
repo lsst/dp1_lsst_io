@@ -27,9 +27,14 @@ Butler
 ------
 
 * |object_doi|
-* Dataset type: ('object', {**skymap**, **tract**}, ArrowAstropy)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|
+
+.. note::
+
+    The Object catalog is extremely wide.
+    Loading just the columns you need is strongly recommended (see note under :ref:`catalogs`).
 
 Description
 ===========

@@ -9,8 +9,18 @@ and tables of survey metadata for the observations.
 
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column descriptions for all tables.
 
-The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+All catalog data products are available via TAP, and most are also available with the butler.
 
+The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+See :ref:`products_butler_terminology` for more information.
+
+.. note::
+
+    When reading catalogs with the butler, it can be *much* more efficient to load just a few columns, by adding::
+
+        parameters={"columns": list_of_columns}
+
+    to a `Butler.get <lsst.daf.butler.Butler.get>` call (where ``list_of_columns`` is a Python `list` of `str` column names).
 
 Object
 ======

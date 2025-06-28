@@ -27,7 +27,7 @@ Butler
 ------
 
 * |visit_table_doi|
-* Dataset type: ('visit_table', {**instrument**}, ArrowAstropy)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('visit_table', {**instrument**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |visit_table_butler_count|
 

@@ -15,6 +15,9 @@ Access
 
 The calibration products are accessible via the Butler.
 
+Unlike other data products, most calibrations are associated with a "validity range" as well as a :ref:`data ID <products_butler_terminology>` (e.g. ``detector`` and ``physical_filter``) in the butler, since different calibrations can be valid for different observations.
+This is usually best provided by also passing an ``exposure`` or ``visit`` ID when looking up a calibration in addition to the calibration's regular data ID dimensions, since both ``exposure`` and ``visit`` are associated with a timespan in the butler database.
+
 Butler
 ------
 

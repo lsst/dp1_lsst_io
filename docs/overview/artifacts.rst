@@ -117,9 +117,8 @@ A variable interference pattern caused by light interacting with the different l
 Tree rings
 ----------
 
-Circularly symmetric features caused by changes in the effective pixel size over the CCD;
-most apparent in the z-band.
-
+Circularly symmetric features caused by changes in the effective pixel size over the CCD; most apparent in the z-band.
+Tree rings are actually changes in pixel *area*, not sensitivity, so they have a small astrometric effect as well, which is not (as of DP1) corrected.
 
 .. figure:: images/artifacts-3-camera.png
     :name: artifacts-3-camera
@@ -133,6 +132,7 @@ Interpolation
 
 Pixels values are replaced by an interpolation algorithm when they're identified
 as affected by bad pixels, cosmic rays, and bleeding.
+Our interpolation algorithm is optimized for small regions and vertical features (primarily bleed trails); in larger areas it produces visible striping, and we rely on other features of the processing to ignore these areas.
 
 Interpolation will also be evident at the edges of the HiPS maps.
 

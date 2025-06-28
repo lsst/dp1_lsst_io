@@ -17,7 +17,7 @@ The raw exposures are accessible via the Butler, SIA, and TAP services.
 Butler
 ------
 
-* Dataset type: ('raw', {band, **instrument**, day_obs, **detector**, group, physical_filter, **exposure**}, Exposure)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('raw', {band, **instrument**, day_obs, **detector**, group, physical_filter, **exposure**}, Exposure)
 * Format: FITS
 * Number of Butler datasets: |raw_butler_count|
 

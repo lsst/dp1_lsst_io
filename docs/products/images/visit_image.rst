@@ -16,7 +16,7 @@ The visit images are accessible via the Butler, SIA, and TAP services.
 Butler
 ------
 
-* Dataset type: ('visit_image', {band, **instrument**, day_obs, **detector**, physical_filter, **visit**}, ExposureF)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('visit_image', {band, **instrument**, day_obs, **detector**, physical_filter, **visit**}, ExposureF)
 * Format: FITS
 * Number of Butler datasets: |visit_image_butler_count|
 

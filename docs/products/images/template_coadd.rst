@@ -16,7 +16,7 @@ The template coadd images are accessible via the Butler, SIA, and TAP services.
 Butler
 ------
 
-* Dataset type: ('template_coadd', {**band**, **skymap**, **tract**, **patch**}, ExposureF)
+* :ref:`Dataset type <products_butler_terminology>`\ : ('template_coadd', {**band**, **skymap**, **tract**, **patch**}, ExposureF)
 * Format: FITS
 * Number of Butler datasets: |template_coadd_butler_count|
 

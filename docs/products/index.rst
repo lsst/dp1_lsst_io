@@ -58,6 +58,6 @@ Auxiliary information
     :maxdepth: 1
     :glob:
 
+    butler_terminology
+    known_issues_and_subtleties
     name_changes
-
-
