@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |dia_object_doi|
+* |dia_object_doi|
 * Dataset type: ('dia_object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |dia_object_butler_count|

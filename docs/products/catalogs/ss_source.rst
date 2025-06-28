@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |ss_source_doi|
+* |ss_source_doi|
 * Dataset type: ('ss_source', {}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |ss_source_butler_count|

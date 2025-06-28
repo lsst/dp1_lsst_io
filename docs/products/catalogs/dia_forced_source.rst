@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* DOI: |dia_object_forced_source_doi|
+* |dia_object_forced_source_doi|
 * Dataset type: ('dia_object_forced_source', {**skymap**, **tract**, **patch**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |dia_object_forced_source_butler_count|
