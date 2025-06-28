@@ -75,7 +75,7 @@ The results interface will appear similar to Figure 1.
 
 
 **2.5. Explore the images.**
-Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the Seagull field.
+Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the RubinSV\_95\_-25 field.
 
 
 3. Create a patch coverage map
