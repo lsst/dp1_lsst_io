@@ -21,46 +21,57 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
-**1. Select the image repository for your query.** Go to the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and select the "General TAP" tab.
-(If that tab does not appear after selecting the Portal Aspect, click on the "menu" (three horizontal lines) icon in the upper left, and click on "General TAP" to add it as an additional tab.)
-For the "Table Collection (Schema)" select the “dp1_v29” from the menu (it should be the default).
-In the box for selecting tables, select "dp1_v29.ObsCore".
+**1. Log in to the RSP and enter the Portal Aspect.**
+In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and log in.
 
-**2. Select the location contained in the images to be retrieved.**
-Select the "Location" box and in the "Query Type" select "Observation boundary contains point."
-In the "Coordinates or Object Name" enter the desired coordinates.
-This example uses 53.0, -28.0 for RA and Dec.
+**2. Select the DP1 Images tab.**
+On the Portal landing page, click on the tab labeled "DP1 Images".
 
-**3.  Select the Observation Type and Source.**
-Check the box for the "Observation Type and Source".
-In the drop-down menu, for "Calibration Level" select "PVIs (2)".
-For the "Data Product Type" select "image", and leave the  "Instrument Name" and "Collection" in the default state.
-
-**4.  Select the desired range of observation times.**
-Check the "Timing" box and for the "Time of Observation" select "Overlapping specified range".
-Select "MJD values" and enter ``60625`` for the "Start Time" and ``60630`` for the "End Time".
-Leave "Spectral Coverage" and "Object ID Search" unchecked.
-
+**3. Mouse-over for pop-up notes.**
+In the "DP1 Images" tab (Figure 1) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
 
 .. figure:: images/portal-102-3-1.png
     :name: portal-102-3-1
-    :alt: Screenshot of the window containing all parameters and ready to execute the search.
+    :alt: The graphical user interface for the Portal, offering drop-down menus to select catalogs and tables, entry fields for temporal and spatial constraints, and an interative view of the selected table schema.
 
-Figure 1:  The screenshot of the window containing all parameters and ready to execute the search.
+    Figure 1: The Portal User Interface (UI) for querying images.
 
-**5.  Retrieve the images.**
-Click on the "Search" button.
-This will result in extracting 50 images meeting the selected criteria.
-By default, the displayed image on the upper left is the first one in the table of images on the bottom of the screen.
-The plot on the upper right will display the pointing directions of the telescope for individual images.
+
+**4. Review the UI components.**
+In the Portal UI (Figure 1) review the 4 main components labeled A through D, which are used together to query (search) and retrieve images.
+
+* A: Select the type of image to be returned (e.g., processed visit image, deep coadd, difference image).
+* B: Define the spatial constraints for the image query.
+* C: Define the temporal constraints for the image query.
+* D: The ``ivoa.ObsCore`` table holds all image metadata. It is recommended to use all pre-selected columns.
+
+**5. Set the observation type and source.**
+Check the box next to "Observation Type and Source".
+Select calibration level 2 (for PVIs: processed visit images),
+set the instrument name to LSSTComCam, the collection to LSST.DP1,
+and the data product subtype to be "lsst.visit_image".
+
+**6. Set the location.**
+Check the box next to "Location".
+For "Query Type" select "Observation boundary contains point" and
+for coordinates, use the approximate center of the ECDFS field, RA, Dec = 53.0, -28.0 degrees.
+
+**7. Set the timing.**
+Check the box next to "Timing".
+For "Time of Observation" select "Overlapping specified range".
+Select "MJD values" and enter 60625 for the "Start Time" and 60630 for the "End Time".
+
+**8. Execute the search.**
+Click on the "Search" button at lower left.
+
+**9. Review the results.**
+The results interface enables interactive visualization of the 49 visit images which meet the search criteria.
 
 .. figure:: images/portal-102-3-2.png
     :name: portal-102-3-2
-    :alt: Screenshot of the window resulting from the execution of the search above.
+    :alt: The image results interface.
 
-Figure 2:  The screenshot of the window resulting from the execution of the search with parameters as in Figure 1.
+    Figure 2: The image results interface.
 
-**6.  Examine the images.**
-Click on any line in the table - this will result in displaying the image corresponding to the table entry.
-Click on any point on the scatter plot on the right - this also will display the corresponding image.
 
+Next steps: see the tutorials in the series on manipulating the image results interface.
