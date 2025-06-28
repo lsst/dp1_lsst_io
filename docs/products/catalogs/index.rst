@@ -9,6 +9,8 @@ and tables of survey metadata for the observations.
 
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column descriptions for all tables.
 
+The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+
 
 Object
 ======
