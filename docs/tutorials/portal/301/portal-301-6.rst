@@ -61,6 +61,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
         AND CONTAINS(POINT('ICRS', 95, -25), s_region)=1
 
+
 **2.3. View the results.**
 The query will return 6 ``lsst.deep\_coadd`` results -- one for each of the *ugrizy* bands.
 The results interface will appear similar to Figure 1.
@@ -70,6 +71,7 @@ The results interface will appear similar to Figure 1.
     :alt: The image results
 
     Figure 1: The results of the ``deep_coadd`` image search.
+
 
 **2.4. Explore the images.**
 Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the Seagull field.
@@ -99,6 +101,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
         AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 95, -25, 1))=1
         AND ( 622e-9 BETWEEN em_min AND em_max )
 
+
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
 The boundaries of the 79 patches are overlaid onto a HiPS coverage map, as in Figure 2.
@@ -108,6 +111,7 @@ The boundaries of the 79 patches are overlaid onto a HiPS coverage map, as in Fi
     :alt: The image results
 
     Figure 2: The search results showing the coadd footprints ("patches") on the HiPS coverage map.
+
 
 **3.4. Explore the coverage map.**
 In the coverage map, click any patch and its corresponding image will be highlighted in the table and plot.
@@ -129,6 +133,7 @@ This query will retrieve the coordinates, band, and MJD for all visits from the 
   FROM dp1.Visit
   WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 95, -25, 1))=1
   ORDER BY expMidptMJD ASC
+
 
 **4.3. View the query results.**
 In the results interface, the central coordinates of the 292 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
@@ -163,7 +168,6 @@ The resulting plot should look like Figure 3, showing the growing number of expo
     Figure 3: The figure showing the cumulative number of exposures obtained with time.
 
 
-
 Visit image quality plots
 -------------------------
 
@@ -196,7 +200,6 @@ It will look like Figure 4.
     :alt: A plot showing two histograms. On the left is the distribution of seeing in arcsec, and on the right a histogram of magLim in mag.
 
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
-
 
 
 5. Objects
@@ -248,9 +251,8 @@ Place the two figures side-by-side, as in Figure 5.
     Figure 5: A color-color and color-magnitude diagram of stars in the RubinSV\_95\_-25 field.
 
 
-
 6. Exercises for the learner
 ============================
 
-Try plotting the color-color and color-magnitude diagrams for galaxies (``refExtendedness``=1) instead.
+Try plotting the color-color and color-magnitude diagrams for galaxies (``refExtendedness`` = 1) instead.
 Recall that cModel magnitudes are better suited for extended sources.
