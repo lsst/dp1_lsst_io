@@ -1,8 +1,8 @@
 .. _images-raw:
 
-#############
-Raw exposures
-#############
+############
+Raw exposure
+############
 
 Unprocessed exposure from camera readout.
 
@@ -12,12 +12,12 @@ Unprocessed exposure from camera readout.
 Access
 ======
 
-The raw exposures are accessible via the butler, SIA, and TAP services.
+The raw exposures are accessible via the Butler, SIA, and TAP services.
 
 Butler
 ------
 
-* Dataset type: ``('raw', {band, instrument, day_obs, detector, group, physical_filter, exposure}, Exposure)``
+* Dataset type: ('raw', {band, **instrument**, day_obs, **detector**, group, physical_filter, **exposure**}, Exposure)
 * Format: FITS
 * Number of Butler datasets: |raw_butler_count|
 
@@ -45,16 +45,16 @@ The raw exposures are first processed with the :doc:`/processing/isr/index` pipe
 Pixel data
 ----------
 
-The raw exposures have only an image plane, with no variance or mask planes like the visit images, because as those planes are a result of image processing and calibration.
+The raw exposures have only an image plane, with no variance or mask planes like the visit images, because those planes are a result of image processing and calibration.
 
 Image: sky pixel data in units of ADU (analog-digital units).
 
 Metadata
 --------
 
-The metadata for raw exposures retrieved from the butler include
+The metadata for raw exposures retrieved from the Butler include
 information about the observation (e.g., pointing, weather)
-and an initial WCS.
+and an initial WCS estimated from the telescope boresight.
 
 Tutorials
 ---------

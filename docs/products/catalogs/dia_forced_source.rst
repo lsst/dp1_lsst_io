@@ -11,7 +11,7 @@ Schema: `ForcedSourceOnDiaObject table <https://sdm-schemas.lsst.io/dp1.html#For
 Access
 ======
 
-The DIA forced source catalog is accessible via the TAP and butler services.
+The DIA forced source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |dia_object_forced_source_doi|
-* Dataset type: ``('dia_object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
+* Dataset type: ('dia_object_forced_source', {**skymap**, **tract**, **patch**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |dia_object_forced_source_butler_count|
 

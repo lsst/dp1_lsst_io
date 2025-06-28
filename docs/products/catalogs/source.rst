@@ -4,14 +4,14 @@
 Source
 ######
 
-Measurements for detected sources in processed visit images.
+Measurements for sources detected in processed visit images.
 
 Schema: `Source table <https://sdm-schemas.lsst.io/dp1.html#Source>`_
 
 Access
 ======
 
-The source catalog is accessible via the TAP and butler services.
+The source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |source_doi|
-* Dataset type: ``('source', {band, instrument, day_obs, physical_filter, visit}, ArrowAstropy)``
+* Dataset type: ('source', {band, **instrument**, day_obs, physical_filter, **visit**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |source_butler_count|
 

@@ -11,7 +11,7 @@ Schema: `Visit table <https://sdm-schemas.lsst.io/dp1.html#Visit>`_
 Access
 ======
 
-The visit catalog is accessible via the TAP and butler services.
+The visit catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |visit_table_doi|
-* Dataset type: ``('visit_table', {instrument}, ArrowAstropy)``
+* Dataset type: ('visit_table', {**instrument**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |visit_table_butler_count|
 

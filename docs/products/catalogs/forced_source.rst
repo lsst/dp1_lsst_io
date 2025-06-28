@@ -11,7 +11,7 @@ Schema: `ForcedSource table <https://sdm-schemas.lsst.io/dp1.html#ForcedSource>`
 Access
 ======
 
-The forced source catalog is accessible via the TAP and butler services.
+The forced source catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |object_forced_source_doi|
-* Dataset type: ``('object_forced_source', {skymap, tract, patch}, ArrowAstropy)``
+* Dataset type: ('object_forced_source', {**skymap**, **tract**, **patch**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_forced_source_butler_count|
 

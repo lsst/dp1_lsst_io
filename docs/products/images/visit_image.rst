@@ -11,12 +11,12 @@ Individual processed and calibrated sky images.
 Access
 ======
 
-The visit images are accessible via the butler, SIA, and TAP services.
+The visit images are accessible via the Butler, SIA, and TAP services.
 
 Butler
 ------
 
-* Dataset type: ``('visit_image', {band, instrument, day_obs, detector, physical_filter, visit}, ExposureF)``
+* Dataset type: ('visit_image', {band, **instrument**, day_obs, **detector**, physical_filter, **visit**}, ExposureF)
 * Format: FITS
 * Number of Butler datasets: |visit_image_butler_count|
 
@@ -61,7 +61,7 @@ similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`
 Metadata
 --------
 
-The metadata for visit images retrieved from the butler include
+The metadata for visit images retrieved from the Butler include
 information about the observation (e.g., pointing, weather),
 and the derived PSF, photometric calibration, and WCS.
 

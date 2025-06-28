@@ -28,7 +28,7 @@ A whole-sky standard star catalog built specifically for LSST.
 Photometric calibration
 =======================
 
-Photometric calibrations correct the counts (electrons) measured by the camera to the incident flux from a source at Earth before it enters the atmosphere.
+Photometric calibrations relate the counts (electrons) measured by the camera to the incident flux from a source at Earth before it enters the atmosphere.
 
 .. toctree::
     :maxdepth: 1
@@ -60,7 +60,7 @@ Astrometric calibrations define the World Coordinate System (WCS) of an image, t
 Point spread function modeling
 ==============================
 
-Characterizing how the optical system "blurs" a point source into a two-dimensional shape on the detector.
+Characterizing how the optical system and atmosphere "blur" a point source into a two-dimensional shape on the detector.
 
 .. toctree::
     :maxdepth: 1
@@ -75,7 +75,7 @@ Characterizing how the optical system "blurs" a point source into a two-dimensio
 Background subtraction
 ======================
 
-Removing the atmospheric sky background flux from the image.
+Removing the sky background flux from the image.
 
 .. toctree::
     :maxdepth: 1

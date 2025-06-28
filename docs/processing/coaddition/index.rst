@@ -16,7 +16,7 @@ Coadds by patch
 ===============
 
 When producing coadded images, the processing pipeline refers to a skymap, which defines a grid of
-2.2 square degree tracts covering the entire celestial sphere.
+2.8 square degree tracts covering the entire celestial sphere.
 Each tract is further subdivided into 10 by 10 equally-sized patches, each covering
 approximately 79 square arcminutes.
 
@@ -39,11 +39,9 @@ no data flagged as "NO_DATA" in the mask plane.
 Input image selection
 =====================
 
-The selection criteria for coadd inputs for DP1 do not represent the
-selection criteria for future data release.
-
 For the DP1 deep coadds, a visit image had to have a PSF FWHM < 1.7 arcseconds
-to be selected as an input image.
+to be selected as an input image. The selection criteria for coadd inputs for DP1 may not represent the
+criteria that will be used for future data releases.
 
 For template coadds, good seeing (low PSF FWHM) is more important than depth.
 DP1 template coadded images use the third of the visit images with lowest

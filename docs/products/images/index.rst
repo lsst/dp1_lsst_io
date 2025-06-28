@@ -8,6 +8,8 @@ Images of the sky in the six LSST filters with a variety of calibration levels.
 
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes tables of image metadata (``ObsCore``).
 
+The "Butler Dataset type" entry on each image type's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+
 
 Coadd images
 ============
@@ -57,7 +59,7 @@ Created by subtracting a template image from a visit image.
 Raw exposures
 =============
 
-The unprocessed images recieved directly from the camera.
+The unprocessed images received directly from the camera.
 
 .. toctree::
     :maxdepth: 1

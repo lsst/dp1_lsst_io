@@ -11,7 +11,7 @@ Schema: `DiaObject table <https://sdm-schemas.lsst.io/dp1.html#DiaObject>`_
 Access
 ======
 
-The DIA object catalog is accessible via the TAP and butler services.
+The DIA object catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |dia_object_doi|
-* Dataset type: ``('dia_object', {skymap, tract}, ArrowAstropy)``
+* Dataset type: ('dia_object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |dia_object_butler_count|
 

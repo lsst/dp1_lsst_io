@@ -4,14 +4,14 @@
 SS object
 #########
 
-Derived parameters for moving objects.
+Derived parameters for moving (Solar System) objects.
 
 Schema: `SSObject table <https://sdm-schemas.lsst.io/dp1.html#SSObject>`_
 
 Access
 ======
 
-The SS object catalog is accessible via the TAP and butler services.
+The SS object catalog is accessible via the TAP and Butler services.
 
 **Recommended access service:** TAP
 
@@ -27,7 +27,7 @@ Butler
 ------
 
 * |ss_object_doi|
-* Dataset type: ``('ss_object', {}, ArrowAstropy)``
+* Dataset type: ('ss_object', {}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |ss_object_butler_count|
 

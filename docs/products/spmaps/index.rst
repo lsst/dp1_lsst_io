@@ -11,16 +11,16 @@ Survey-level healsparse property maps.
 Access
 ======
 
-The survey property maps are accessible via the butler service.
+The survey property maps are accessible via the Butler service.
 
-* Dataset type: ``('<map_name>', {band, skymap}, HealSparseMap)``
+* Dataset type: ('<map_name>', {**band**, **skymap**}, HealSparseMap)
 * Format: `FITS <https://healsparse.readthedocs.io/en/1.9.0/filespec.html#healsparsemap-fits-serialization>`_ (with ``.hsp`` file extension)
 * Number of files: |survey_property_butler_count|
 
 Description
 ===========
 
-Maps in ``HealSparse`` format that aggregate information from the ``deep_coadd`` images and
+Maps in ``HealSparse`` format that aggregate information from the visit images contributing to the ``deep_coadds`` and
 summarize key observing conditions and survey characteristics across the sky.
 
 Map types
