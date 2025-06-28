@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-12
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal.
 
@@ -21,51 +21,70 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 
 ----
 
-**1. Go to the Portal's DP0.2 Catalogs tab.**
-If needed, reload the webpage in the browser to clear any previously-entered constraints.
+An introduction to ADQL
+=======================
+
+The `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html>`_
+includes more information about syntax, keywords, operators, functions, and so on.
+ADQL is similar to SQL (Structured Query Langage).
+
+A typical ADQL statement has at least three components:
+
+.. code-block:: SQL
+
+  SELECT <columns> FROM <catalog> WHERE <constraints>
+
+
+where ``<columns>`` is a comma-separated list of the columns to return, ``<catalog>`` is the name of the catalog to retreive data from, and ``<constraints>`` imposes a restriction that only rows with column values that meet the constraints are returned.
+
+For example, say there is a catalog called "mysurveydata" with 5 columns, "col1", "col2", and so on.
+The following ADQL statement would return a table that has three columns, and as many rows as meet both of the restrictions in the ``WHERE`` statement.
+
+.. code-block:: SQL
+
+  SELECT col3, col4, col5 FROM mysurveydata WHERE col1 > 0.5 AND col5 < 10
+
+
+In the RSP Portal Aspect, ADQL queries are submitted to the TAP (Table Access Protocol) service.
+
+----
+
+**1. Go to the DP1 Catalogs ADQL interface.**
+The button to switch from the user interface to the ADQL interface is in the upper right corner: "Edit ADQL".
+
+**2. Review the ADQL interface.**
+Browse the available tables in the TAP service in the left side-bar.
+Scroll down to see examples of ADQL queries.
 The interface should look like Figure 1.
 
 .. figure:: images/portal-103-2-1.png
     :name: portal-103-2-1
-    :alt: The Portal UI with no constraints set.
+    :alt: The ADQL interface.
 
-    Figure 1: The Portal UI with no query constraints entered.
+    Figure 1: The ADQL interface.
 
-**2. Switch to the ADQL interface.**
-Select "Edit ADQL" at upper right in Figure 1 to go to the ADQL interface.
-The ADQL Query box will be empty (Figure 2).
 
-.. figure:: images/portal-103-2-2.png
-    :name: portal-103-2-2
-    :alt: The ADQL interface with no query entered.
-
-    Figure 2: The ADQL interface with no query entered.
-
-**3. Enter an ADQL statement in the box.**
-For example, copy paste the statement below.
-It is the same query as was used above in Option 1.
+**3. Enter the ADQL statement in the box.**
+The following ADQL query selects the coordinates RA and Dec, and the *gri* PSF magnitudes for objects that are within a small circular region of the center of the ECDFS field (RA, Dec = 53, -28; radius = 0.05 degrees), and are brighter than 25th magnitude in all three filters.
 
 .. code-block:: SQL
 
-  SELECT coord_dec,coord_ra,detect_isIsolated,g_cModelFlux,i_cModelFlux,r_cModelFlux,u_cModelFlux,
-       y_cModelFlux,z_cModelFlux
-  FROM dp1_v29.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53, -28, 0.05))=1
-      AND (detect_isIsolated =1
-           AND g_cModelFlux >360
-           AND i_cModelFlux >360
-           AND r_cModelFlux >360
-           AND u_cModelFlux >360
-           AND y_cModelFlux >360
-           AND z_cModelFlux >360)
+  SELECT coord_ra, coord_dec, g_psfMag, r_psfMag, i_psfMag
+  FROM dp1.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53, -28, 0.05))=1
+  AND g_psfMag < 25 AND r_psfMag < 25 AND i_psfMag < 25
+
 
 **4. Execute the ADQL query.**
 Click the Search button at lower left.
-The query will be executed and the results will appear in the Results tab.
+The query will be executed and the 536 objects returned will be available in the results interface.
 
-.. figure:: images/portal-103-2-3.png
-    :name: portal-103-2-3
+.. figure:: images/portal-103-2-2.png
+    :name: portal-103-2-2
     :alt: Default search results from a query.
 
-    Figure 3: The default results view layout obtained by executing of the query described above. Interacting with query results is covered in a separate tutorial.
+    Figure 2: The default results view for the query.
 
+
+Next steps: see the tutorials in the series on manipulating the catalog results interface.

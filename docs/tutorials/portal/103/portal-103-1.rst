@@ -54,3 +54,5 @@ If changes are made to the ADQL statement and then the interface is toggled back
 those changes will not be reflected in the UI.
 The conversion only works in one direction: from the UI to ADQL.
 
+
+Next steps: for more details on the format of ADQL statments, proceed to the next tutorial.
