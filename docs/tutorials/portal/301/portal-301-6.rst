@@ -36,6 +36,9 @@ The field denoted "RubinSV\_95\_-25" is sometimes referred to as the "low-latitu
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
+**1.2. Browse the gri color HiPS map.**
+`Go to the gri color HiPS map for the RubinSV\_95\_-25 field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=95.0&dec=-25.0&sr=50m>`_.
+
 
 2. Examine a deep coadd image
 =============================
