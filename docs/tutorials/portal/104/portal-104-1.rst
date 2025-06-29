@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/27/2025
+**Last verified to run:** 2025-06-29
 
 **Learning objective:** Navigate the multi-panel interface for catalog data results.
 
@@ -44,9 +44,10 @@ The default layout of the results interface is shown in Figure 1.
 
 .. figure:: images/portal-104-1-1.png
     :name: portal-104-1-1
-    :alt: The Results tab after a query has been executed defaults to a screens split three ways: coverage map at upper left, default plot at upper right, and the tabular data below.
+    :alt: The results interface.
 
-    Figure 1: The results interface after a query has been executed defaults to a screens split three ways: coverage map at upper left (A), default plot at upper right (B), and the tabular data below (C).
+    Figure 1: The results interface after a query has been executed defaults to a screens split three ways: the coverage map (A), the active chart (B), and the table (C).
+
 
 * The *Coverage chart* (upper left, or "A" in Figure 1):
 The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
