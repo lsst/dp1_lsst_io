@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-16
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Convert fluxes to magnitudes using a special ADQL function.
 
