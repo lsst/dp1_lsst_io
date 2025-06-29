@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-28
 
-**Learning objective:** Convert a query with constraints into an
+**Learning objective:** Convert a query from the graphical user interface into an
 `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ statement.
 
 **LSST data products:** ``Object`` table
