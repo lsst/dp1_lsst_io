@@ -42,6 +42,14 @@ The extended nebulosity across the entire LSSTComCam field for the Seagull Nebul
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
+**1.2. Browse the ugr color HiPS map.**
+`Go to the ugr color HiPS map for the Seagull Nebula <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_ugr&ra=106.23&dec=-10.51&sr=50m>`_.
+
+**1.3. Find other color HiPS maps.**
+From the Portal's main landing page, select "Rubin HiPS Search" from the left side bar.
+Enter the Seagull's central coordinates and choose a color (or single-band) HiPS map to browse.
+
+
 
 2. Examine a deep coadd image
 =============================
