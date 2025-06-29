@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-16
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Join multiple tables to retrieve combined results with ADQL.
 
@@ -25,8 +25,8 @@ Two tables must have a column in common in order to be joined.
 
 ----
 
-**1. Go to the DP0.2 catalog ADQL interface.**
-Navigate to the Portal's DP0.2 Catalogs tab and switch to the ADQL interface by clicking on Edit ADQL.
+**1. Go to the DP1 Catalogs ADQL interface.**
+Navigate to the Portal's DP1 Catalogs tab and switch to the ADQL interface by clicking "Edit ADQL".
 
 **2. The ADQL components of a JOIN...ON statment.**
 The generic example below illustrates a common join scenario.
@@ -61,8 +61,8 @@ Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
          scisql_nanojanskyToAbMag(src.psfFlux) AS psfAbMag,
          src.Visit, cv.VisitId,
          cv.expMidptMJD, cv.seeing
-  FROM dp1_v29.Source AS src
-  JOIN dp1_v29.CcdVisit AS cv
+  FROM dp1.Source AS src
+  JOIN dp1.CcdVisit AS cv
   ON src.Visit = cv.VisitId
   WHERE CONTAINS(POINT('ICRS', src.coord_ra, src.coord_dec),
         CIRCLE('ICRS', 53.13, -28.10, 0.05)) = 1
@@ -108,8 +108,7 @@ Constraints can be applied on columns from any or all tables.
 
 **6. Review the three-table join results.**
 The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
-The default Results tab might display an empty panel instead of the coverage chart. To view the coverage chart, click the
-"Coverage" tab at the top of the upper left panel.
+To view the coverage chart, click the "Coverage" tab at the top of the upper left panel.
 
 .. figure:: images/portal-103-4-2.png
     :name: portal-103-4-2
@@ -117,8 +116,4 @@ The default Results tab might display an empty panel instead of the coverage cha
 
     Figure 2: The Portal Results tab with the layout displaying the activated coverage chart for the data returned from the three-table join query.
 
-
-**7. Find more join examples.**
-Visit the ``/data-access-analysis-tools/adql-recipes`` page for more examples of table joins.
-Visit the `DP0.2 schema browser <https://sdm-schemas.lsst.io/dp02.html>`_ to see which tables have columns in common.
 

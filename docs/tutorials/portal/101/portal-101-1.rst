@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Data Release:** Data Preview 1
 
-**Last verified to run:** 2025-06-16
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Navigate the main components of the Portal's user interface (UI).
 
@@ -48,12 +48,12 @@ On the RSP landing page (Figure 1) click on the Portal square to enter the Porta
 On the Portal landing page (Figure 2) notice the icons and tabs across the top of the screen, and that the default selected tab of the landing page is labeled Results.
 
 **5. View the information window.**
-On the Portal landing page (Figure 2) click on the Rubin logo next to the menu icon to open a window with Rubin Portal Version Information.
+On the Portal landing page click on the Rubin logo next to the menu icon (B in Figure 2) to open a window with Rubin Portal Version Information.
 Dismiss the window by clicking on the OK button or on the X in its upper right corner.
 (Window is not shown in a figure in this tutorial.)
 
 **6. Open the sidebar menu.**
-On the Portal landing page (Figure 2) click on the menu icon (three horizontal lines at upper left) to open the sidebar menu.
+On the Portal landing page click on the menu icon (three horizontal lines at upper left; A in Figure 2) to open the sidebar menu.
 
 .. figure:: images/portal-101-1-3.png
     :name: portal-101-1-3
@@ -64,7 +64,16 @@ On the Portal landing page (Figure 2) click on the menu icon (three horizontal l
 
 
 **7. Review the sidebar menu.**
-In the sidebar menu (Figure 3) notice that some of the menu options match the tabs (e.g., DP0.2 Catalogs), and that which tabs you see are configurable with the "Hide Tab" option.
-Dismiss the sidebar menu by clicking on the X in the upper right corner of the menu.
+In the sidebar menu (Figure 3) notice that some of the menu options are for older data releases (e.g., DP0.2 Catalogs), and that which tabs you see are configurable with the "Hide Tab" option.
 
+All Portal functionality can be accessed via the sidebar:
 
+* **Tab Selection:** Customize which tabs are displayed on the landing page.
+* **Results:** Query results interface.
+* **Upload:** Upload tables to the Portal.
+* **Job Monitor:** Get the URL for, or stop the execution of, submitted query jobs.
+* **Data sets:** Query interfaces for Data Preview 1 (LSSTComCam), Data Preview 0 (simulated LSST data), and other archives.
+* **Appearance:** Switch between dark mode and light mode.
+
+**8. Dismiss the sidebar.**
+Click on the X in the upper right corner of the menu.

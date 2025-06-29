@@ -8,90 +8,54 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-12
+**Last verified to run:** 2025-06-28
 
 **Learning objective:** Use the Job Monitor to obtain the status and ID of, and delete, submitted query jobs.
 
-**LSST data products:** ``DiaObject`` table
+**LSST data products:** ``Object`` table
 
-**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+**Credit:** Originally developed by the Rubin Community Science team. Please consider acknowledging them if this tutorial is used for the preparation of journal articles,
+software releases, or other tutorials.
 
-**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Go to the RSP.**
+**1. Log into the Portal from the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-.. figure:: images/portal-101-4-1.png
-    :name: portal-101-4-1
-    :alt: The main landing page of the Rubin Science Platform, showing log in at upper right and three panels, one for each aspect: the Portal the Notebooks and the API.
+**2. Create a sample job.**
+For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Search.
 
-    Figure 1: The main landing page of the Rubin Science Platform.
+.. code-block:: sql
 
-**2. Log in.**
-On the RSP landing page (Figure 1), if "Log in" appears at upper right instead of your username, click "Log in" and follow the prompts to authenticate.
+  SELECT coord_dec,coord_ra,g_psfFlux
+    FROM dp1.Object
+    WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53.13, -28.1, 0.0027))=1
 
-**3. Enter the Portal.**
-On the RSP landing page (Figure 1) click on the Portal square to enter the Portal Aspect.
 
-.. figure:: images/portal-101-4-2.png
-    :name: portal-101-4-2
-    :alt: The main landing page of the Portal Aspect, showing tabs across the top and instructions in the middle.
-
-    Figure 2: The main landing page of the Portal Aspect.
-
-**4. Create a sample job.**
-For the purpose of this tutorial, create any query using the default UI - an example is given below.
-
-**5.  Example of a sample job.**
-Select the "'DP0.2 Catalogs" tab.
-Select "dp1_v29" for the "Table Collection (Schema)".
-Select "dp1_v29.DiaObject" from the drop-down in the "Tables" tab.
-Request a search for all objects in the 30 arc seconds radius around direction RA = 53.0 deg., Dec. = -28.8 deg by entering those parameters in the "Enter Constraints - Spatial".
-In the "Output Column Selection and Constraints", check ``dec``, ``ra``, and ``g_psfFluxMean``.
-Enter ``>300`` as the constraint for ``g_psfFluxMean``.
-Click on the "funnel" on the uper left side of the table to restrict the table to display the selected entries, and/or those where constraints were set.
-
-.. figure:: images/portal-101-4-3.png
-    :name: portal-101-4-3
-    :alt: The screenshot with the parameters entered for a sample search.
-
-    Figure 3: The screenshot with the parameters entered for a sample search.
-
-**6. Execute the search.**
-Click "Search" on the lower left.
-
-The result of the search will be an image on the upper left, and a table of observations corresponding to your search on the bottom.
-
-.. figure:: images/portal-101-4-4.png
-    :name: portal-101-4-4
-    :alt: The screenshot with the results of your sample search.
-
-    Figure 4: The screenshot with the results of your sample search.
-
-**7.  Examine the job monitor.**
+**3.  Examine the job monitor.**
 Click on the "Job Monitor" tab on the top.
 The job monitor will have all jobs submitted by you (created within the retention period).
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
 
-.. figure:: images/portal-101-4-5.png
-    :name: portal-101-4-5
-    :alt: The screenshot illustrating the job monitor
+.. figure:: images/portal-101-4-1.png
+    :name: portal-101-4-1
+    :alt: Job monitor screenshot.
 
-    Figure 5:  The screenshot illustrating the job monitor.
+    Figure 1:  Job monitor screenshot.
 
-**8. Learn about individual jobs.**  In the column with a header "control" click on the green "wave" for a job of choice - this will bring you to that job, and if completed - will reveal the results.
-Click on the circle with a letter "i" - this will show your search converted to an ADQL query as well as the job ID.
 
+**4. Learn about individual jobs.**  In the "Control" column click on the green "plot" icon to go to the results interface for that job.
+Click on the circle with a letter "i" to see the submitted ADQL and the job ID, as in Figure 2.
 Clicking on the red "garbage can" will delete the job.
 
-An example of informaton for a recent job is in the figure below.
-
-.. figure:: images/portal-101-4-6.png
+.. figure:: images/portal-101-4-2.png
     :width:  400
-    :name: portal-101-4-6
+    :name: portal-101-4-2
     :alt: The screenshot illustrating information about a recent job, available from the job monitor.
 
-    Figure 6:  The screenshot illustrating information about a recent job, available from the job monitor.
+    Figure 2:  The screenshot illustrating information about a recent job, available from the job monitor.
+
