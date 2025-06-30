@@ -64,7 +64,7 @@ Select "Heatmap" as the plot type and enter ``g_cModelMag`` for X and the expres
 Leave the Color Scale as "Default".
 Click "OK".
 
-.. figure:: ./portal-104-6-2.png
+.. figure:: ./images/portal-104-6-2.png
 	:name: portal-104-6-2
 	:width: 400
 	:alt: Screenshot of the "Add New Chart" pop-up window, set up for a heatmap.
@@ -74,7 +74,7 @@ Figure 2: The "Add New Chart" pop-up window, set up for a heatmap.
 **5. View the histogram and the heatmap.**
 The Active Charts panel now displays a 1-dimensional histogram of the g-band magnitudes at left, and a 2-dimensional histogram (a heatmap) of the g-band magnitude vs. the g-r color at right, as in Figure 3.
 
-.. figure:: ./portal-104-6-3.png
+.. figure:: ./images/portal-104-6-3.png
 	:name: portal-104-6-3.png
 	:alt: Screenshot of the Active Charts showing a 1-d histogram and a 2-d heatamp.
 
