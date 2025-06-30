@@ -8869,7 +8869,7 @@ Median in y-band:              21.93
         WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
               CIRCLE('ICRS', 53.2, -28.1, 1.0)) = 1
         ORDER BY objectId ASC
-        
+
 </pre>
 </div>
 </div>
@@ -9387,19 +9387,19 @@ Number of objects in y-band: 341877
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SELECT objectId, coord_ra, coord_dec, i_extendedness, 
-       u_cModelFlux, u_cModelFluxErr, 
-       u_cModelMag AS umag, u_cModelMagErr AS umagErr, 
-       g_cModelFlux, g_cModelFluxErr, 
-       g_cModelMag AS gmag, g_cModelMagErr AS gmagErr, 
-       r_cModelFlux, r_cModelFluxErr, 
-       r_cModelMag AS rmag, r_cModelMagErr AS rmagErr, 
-       i_cModelFlux, i_cModelFluxErr, 
-       i_cModelMag AS imag, i_cModelMagErr AS imagErr, 
-       z_cModelFlux, z_cModelFluxErr, 
-       z_cModelMag AS zmag, z_cModelMagErr AS zmagErr, 
-       y_cModelFlux, y_cModelFluxErr, 
-       y_cModelMag AS ymag, y_cModelMagErr AS ymagErr, 
+<pre>SELECT objectId, coord_ra, coord_dec, i_extendedness,
+       u_cModelFlux, u_cModelFluxErr,
+       u_cModelMag AS umag, u_cModelMagErr AS umagErr,
+       g_cModelFlux, g_cModelFluxErr,
+       g_cModelMag AS gmag, g_cModelMagErr AS gmagErr,
+       r_cModelFlux, r_cModelFluxErr,
+       r_cModelMag AS rmag, r_cModelMagErr AS rmagErr,
+       i_cModelFlux, i_cModelFluxErr,
+       i_cModelMag AS imag, i_cModelMagErr AS imagErr,
+       z_cModelFlux, z_cModelFluxErr,
+       z_cModelMag AS zmag, z_cModelMagErr AS zmagErr,
+       y_cModelFlux, y_cModelFluxErr,
+       y_cModelMag AS ymag, y_cModelMagErr AS ymagErr,
        refExtendedness
 FROM dp1.Object
 WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53.2, -28.1, 1.0)) = 1 AND r_cModelFlux/r_cModelFluxErr &gt; 20 AND i_cModelFlux/i_cModelFluxErr &gt; 20AND r_extendedness = 1
