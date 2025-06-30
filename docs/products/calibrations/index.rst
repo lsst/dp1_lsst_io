@@ -45,7 +45,7 @@ The process of Instrument Signature Removal (ISR; also called "image reduction")
 Processing
 ----------
 
-The calibration products are created and used in the :doc:`/processing/isr/index` pipeline.
+The calibration products are created by processing calibration images and used in the :doc:`/processing/isr/index` pipeline.
 
 Pixel data
 ----------
@@ -57,7 +57,7 @@ The pixel data units are ADU (analog-to-digital units).
 Metadata
 --------
 
-``ExposureF`` calibration frames have a header and bounding box, but don't have a World Coordinate System (WCS) object.
+``ExposureF`` calibration frames have a header and bounding box but don't have a World Coordinate System (WCS) object.
 
 Tutorials
 ---------
