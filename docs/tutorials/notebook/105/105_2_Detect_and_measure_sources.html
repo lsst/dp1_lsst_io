@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>template</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>105_2_Detect_and_measure_sources</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7312,6 +7312,7 @@ a.anchor-link {
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -7510,52 +7511,21 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=749b0ddf">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0de3506-06ec-4f46-92b3-a6f01753d9fc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="101.1.-A-template-tutorial-notebook">101.1. A template tutorial notebook<a class="anchor-link" href="#101.1.-A-template-tutorial-notebook">¶</a></h1><img align="left" alt="Rubin Observatory logo, a graphical representation of turning stars into data." src="https://noirlab.edu/public/media/archives/logos/svg/logo250.svg" style="background-color:white; padding:10px" width="250"/>
-<br/>
+<h1 id="105.2.-Detect-and-measure-sources">105.2. Detect and measure sources<a class="anchor-link" href="#105.2.-Detect-and-measure-sources">¶</a></h1><div>
+<img align="left" alt="No description has been provided for this image" src="attachment:90083a24-00a4-4a6f-a1c3-b9b4c6b0de9e.png" width="300"/>
+</div>
 For the Rubin Science Platform at data.lsst.cloud. <br/>
-Data Release: <i>DPX or DRX</i> <br/>
-Container Size: <i>size here</i> <br/>
-LSST Science Pipelines version: Weekly <i>yyyy_xx</i> <br/>
-Last verified to run: <i>yyyy-mm-dd</i> <br/>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2d9cd09b-d5c4-4610-993b-711bdc9bd80e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><em><strong>How to use this template.</strong></em></p>
-<p><em>Italics text is instructional or placeholder text. It should be removed or replaced with non-italicized text, as appropriate.</em></p>
-<p><em>Most of the text in</em> <strong>bold</strong> <em>or</em> regular <em>should either stay as-is, or is an example of what a real tutorial would say.</em></p>
-<p><em>Use the <a href="https://rtn-045.lsst.io">CST's Guidelines for Tutorial Notebooks</a>.</em></p>
-<p><em>While developing, execute the code cell below to use flake8 to ensure code cells conform to standards.</em></p>
-<p><em>When the tutorial is done, delete this cell and the one below.</em></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7acc79a4-8530-42d9-96e5-b7acb4397864">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> pycodestyle_magic
-<span class="o">%</span><span class="k">flake8_on</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">"flake8"</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">FATAL</span><span class="p">)</span>
-</pre></div>
-</div>
+Data Release: <a href="https://dp1.lsst.io/">Data Preview 1</a> <br/>
+Container Size: large <br/>
+LSST Science Pipelines version: r29.1.1 <br/>
+Last verified to run: 2025-06-25 <br/>
+Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/>
 </div>
 </div>
 </div>
@@ -7566,12 +7536,10 @@ Last verified to run: <i>yyyy-mm-dd</i> <br/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Learning objective:</strong> <em>Very brief description of notebook's learning objective.</em></p>
-<p><strong>LSST data products:</strong> <em>List the catalogs and images used.</em></p>
-<p><strong>Packages:</strong> <em>List the python packages that are relevant to the learning objective. E.g., include afwDisplay and lsst.daf.butler for a notebook about retrieving and displaying images. E.g., standard supporting packages like os, glob, or numpy usually don't need to be listed here.</em></p>
-<p><strong>Credit:</strong>
-<em>E.g., "Originally developed by" or "Based on notebooks developed by" and then people's names, including journal article or software release citations if appropriate.</em>
-Please consider acknowledging them if this notebook is used for the preparation of journal articles, software releases, or other notebooks.</p>
+<p><strong>Learning objective:</strong> How to run source detection, deblending, and measurement pipeline tasks.</p>
+<p><strong>LSST data products:</strong> <code>visit_image</code></p>
+<p><strong>Packages:</strong> <code>lsst.meas.algorithms</code>, <code>lsst.meas.base</code></p>
+<p><strong>Credit:</strong> Originally developed by Alex Drlica-Wagner and Imran Hasan in the context of the LSST Stack Club and later refined by the Rubin Community Science team.  Please consider acknowledging them if this notebook is used for the preparation of journal articles, software releases, or other notebooks.</p>
 <p><strong>Get Support:</strong>
 Everyone is encouraged to ask questions or raise issues in the
 <a href="https://community.lsst.org/c/support">Support Category</a>
@@ -7587,46 +7555,41 @@ Rubin staff will respond to all questions posted there.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">¶</a></h2><p><em>Provide a light narrative about this notebook, e.g., "This notebook demonstrates...".</em></p>
-<p><em>For <strong>How To</strong> tutorials, the narrative should be very light and the tutorial should be very short and focused on the one functionality (no science motivation/context needed). Only about 10 minutes to work through.</em></p>
-<p><em>For <strong>Data Products</strong> tutorials, the narrative should be very light and the tutorial should be focused on demonstrating access to, on contents of, the data product (and any metadata; no science motivation/context needed).</em></p>
-<p><em>For <strong>Science Demo</strong> tutorials, more narrative will be needed to describe key scientific concepts and demonstrate their analysis with the Rubin data. Cite or link to any relevant external information, documentation, or papers.</em></p>
-<p><strong>Related tutorials:</strong> <em>If applicable, mention other relevant tutorials by name but do not link to them.
-Tutorials evolve continuously, there is no linkchecker for the notebook repo, and tutorial hotlinks will go stale quickly. It is not necessary to mention the preceding/subsequent tutorials in the same series as this one - those are trivial for the user to find. But do use this section to mention related tutorials in other series.</em></p>
+<h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">¶</a></h2><p>The <code>lsst.meas.algorithms</code> and <code>lsst.meas.base</code> packages provide the high-level pipeline tasks useful for source detection, deblending, and measurement.  Of particular importance for this tutorial are the <code>SourceDetectionTask</code>, the <code>SourceDeblendTask</code>, and the <code>SingleFrameMeasurementTask</code>.</p>
+<p>Documentation related to the source detection, deblending, and measurement tasks:</p>
+<ul>
+<li><a href="https://pipelines.lsst.io/">LSST Science Pipelines main page</a></li>
+<li><a href="https://pipelines.lsst.io/modules/lsst.meas.algorithms/tasks/lsst.meas.algorithms.SourceDetectionTask.html">SourceDetectionTask page</a></li>
+<li><a href="https://pipelines.lsst.io/modules/lsst.meas.deblender/tasks/lsst.meas.deblender.SourceDeblendTask.html">SourceDeblendTask page</a></li>
+<li><a href="https://pipelines.lsst.io/modules/lsst.meas.base/tasks/lsst.meas.base.sfm.SingleFrameMeasurementTask.html">SingleFrameMeasurementTask page</a></li>
+</ul>
+<p><strong>This tutorial</strong> provides a brief introduction to running the LSST Science Pipelines source detection, deblending, and measurement tasks.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dc36f107">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72fa86ab-0996-4637-9a99-d94b2084b786">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1.-Import-packages">1.1. Import packages<a class="anchor-link" href="#1.1.-Import-packages">¶</a></h3><p><em>All package imports must be done in the first code cell.</em></p>
-<p><em>Do not import packages unless they are used.</em></p>
-<p><em>Describe the packages being imported, and provide external links to package documentation.</em></p>
+<p><strong>Related tutorials:</strong>  The first 100-level tutorial in this series provides a basic introduction to how to use the LSST Science Pipelines; later tutorials in this series demonstrate other image analysis techniques available with the LSST Science Pipelines.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ccb4fe61-835a-47ac-a691-e086ce766e79">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8b0e35e5-11fe-45d3-ba4f-72ac2374dc62">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Import <code>numpy</code>, a fundamental package for scientific computing with arrays in Python
-(<a href="https://numpy.org">numpy.org</a>), and
-<code>matplotlib</code>, a comprehensive library for data visualization
-(<a href="https://matplotlib.org/">matplotlib.org</a>;
-<a href="https://matplotlib.org/stable/gallery/index.html">matplotlib gallery</a>).</p>
-<p>From the <code>lsst</code> package, import modules for accessing the Table Access Protocol (TAP) service,
-the butler, and image display functions from the LSST Science Pipelines (<a href="https://pipelines.lsst.io/">pipelines.lsst.io</a>).</p>
+<h3 id="1.1.-Import-packages">1.1. Import packages<a class="anchor-link" href="#1.1.-Import-packages">¶</a></h3><p>From the <a href="https://pipelines.lsst.io/">LSST Science Pipelines</a>, import modules for butler data access (<code>lsst.daf.base</code> and <code>lsst.daf.butler</code>), for image display (<code>lsst.afw</code>), for image geometry (<code>lsst.geom</code>), for table handling (<code>lsst.afw.table</code>), and for various tasks for source detection (<code>lsst.meas.algorithms.detection</code>), deblending (<code>lsst.meas.deblender</code>), and measurement (<code>lsst.meas.base</code>).  In addition, import the <a href="https://matplotlib.org/"><code>matplotlib</code></a> module.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cddc1458">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a8cb5fea-ab37-42c0-a9d1-29a16a5a8315">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7634,35 +7597,32 @@ the butler, and image display functions from the LSST Science Pipelines (<a href
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">lsst.rsp</span> <span class="kn">import</span> <span class="n">get_tap_service</span><span class="p">,</span> <span class="n">retrieve_query</span>
-<span class="kn">import</span> <span class="nn">lsst.daf.butler</span> <span class="k">as</span> <span class="nn">dafButler</span>
-<span class="kn">import</span> <span class="nn">lsst.afw.display</span> <span class="k">as</span> <span class="nn">afwDisplay</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">lsst.daf.base</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">dafBase</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lsst.daf.butler</span><span class="w"> </span><span class="kn">import</span> <span class="n">Butler</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lsst.afw.image</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">afw_image</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lsst.afw.display</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">afw_display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lsst.afw.table</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">afwTable</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lsst.geom</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">geom</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lsst.meas.algorithms.detection</span><span class="w"> </span><span class="kn">import</span> <span class="n">SourceDetectionTask</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lsst.meas.deblender</span><span class="w"> </span><span class="kn">import</span> <span class="n">SourceDeblendTask</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lsst.meas.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">SingleFrameMeasurementTask</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c217adff-25ed-4fce-95e7-8aa04630f6cc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c728c77-d967-4843-8328-5a6cf1c9ec2d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.2.-Define-parameters-and-functions">1.2. Define parameters and functions<a class="anchor-link" href="#1.2.-Define-parameters-and-functions">¶</a></h3><p><em>All functions and global parameters must be defined here.</em></p>
-<p><em>Do not define a function unless it will be used multiple times throughout the notebook; it is better for users to see code in context.</em></p>
-<p><em>If no functions/parameters are defined, it is ok to rename or remove this section, as appropriate.</em></p>
-<p><em>It is also ok to use sub-sub-sections if many parameters or functions are needed.
-E.g., "#### 1.2.1. Define global cosmological parameter values" or "#### 1.2.2. Define a function to make an image cutout".</em></p>
-<p><em>For example, one or both of the following color definitions should be used for plotting.</em>
-<em>Instances of the butler or TAP services should be created in this section.</em></p>
-<p>Define parameters to use colorblind-friendly colors with <code>matplotlib</code>.</p>
+<h3 id="1.2.-Define-parameters-and-functions">1.2. Define parameters and functions<a class="anchor-link" href="#1.2.-Define-parameters-and-functions">¶</a></h3><p>Create an instance of the butler with the repository and collection for DP1, and assert that it exists.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ecc6cb66-ec5c-47c1-bcd0-4592a32179cd">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=388acdbf-64ed-425c-8ae8-512823b424d9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7670,24 +7630,25 @@ E.g., "#### 1.2.1. Define global cosmological parameter values" or "#### 1.2.2. 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'tableau-colorblind10'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">butler</span> <span class="o">=</span> <span class="n">Butler</span><span class="p">(</span><span class="s2">"dp1"</span><span class="p">,</span> <span class="n">collections</span><span class="o">=</span><span class="s2">"LSSTComCam/DP1"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">butler</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7893b850-3a77-4ffb-b01a-6f89bfdd228a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=26b852c1-cb8c-464f-a376-c6cbf958e774">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Define colors, symbols, and linestyles to represent the six LSST filters, $ugrizy$.</p>
+<p>Define the approximate central coordinates of the Extended Chandra Deep Field South (ECDFS) field (in degrees).</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c5a16260-32c0-4896-87b3-e5b251f45027">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ddec15e4-7c5f-4bfe-9623-3db2c10ef943">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7695,29 +7656,25 @@ E.g., "#### 1.2.1. Define global cosmological parameter values" or "#### 1.2.2. 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">filter_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'u'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">,</span> <span class="s1">'z'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">]</span>
-<span class="n">filter_colors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'u'</span><span class="p">:</span> <span class="s1">'#0c71ff'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">:</span> <span class="s1">'#49be61'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">:</span> <span class="s1">'#c61c00'</span><span class="p">,</span>
-                 <span class="s1">'i'</span><span class="p">:</span> <span class="s1">'#ffc200'</span><span class="p">,</span> <span class="s1">'z'</span><span class="p">:</span> <span class="s1">'#f341a2'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">:</span> <span class="s1">'#5d0000'</span><span class="p">}</span>
-<span class="n">filter_symbols</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'u'</span><span class="p">:</span> <span class="s1">'o'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">:</span> <span class="s1">'^'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">:</span> <span class="s1">'v'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">:</span> <span class="s1">'s'</span><span class="p">,</span> <span class="s1">'z'</span><span class="p">:</span> <span class="s1">'*'</span><span class="p">,</span> <span class="s1">'y'</span><span class="p">:</span> <span class="s1">'p'</span><span class="p">}</span>
-<span class="n">filter_linestyles</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'u'</span><span class="p">:</span> <span class="s1">'--'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">:</span> <span class="s1">':'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">:</span> <span class="s1">'-'</span><span class="p">,</span> <span class="s1">'i'</span><span class="p">:</span> <span class="s1">'-.'</span><span class="p">,</span>
-                     <span class="s1">'z'</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)),</span> <span class="s1">'y'</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))}</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ra</span> <span class="o">=</span> <span class="mf">53.13</span>
+<span class="n">dec</span> <span class="o">=</span> <span class="o">-</span><span class="mf">28.10</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3383f6e-8c34-4cb7-aa2f-12e9b7f8efc0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e3772d2c-8a33-4ea7-a003-3f803da83f3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Get an instance of the TAP service, and assert that it exists.</p>
+<p>Set the visualization backend for the LSST Application Framework (AFW) display system to be Firefly, and open frame 1.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e8184089-8a3e-4666-a194-5362a8faa541">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fd004b8d-f09b-4e3a-9b4f-adc7d8d40b7c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7725,26 +7682,49 @@ E.g., "#### 1.2.1. Define global cosmological parameter values" or "#### 1.2.2. 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">service</span> <span class="o">=</span> <span class="n">get_tap_service</span><span class="p">(</span><span class="s2">"tap"</span><span class="p">)</span>
-<span class="k">assert</span> <span class="n">service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">afw_display</span><span class="o">.</span><span class="n">setDefaultBackend</span><span class="p">(</span><span class="s1">'firefly'</span><span class="p">)</span>
+<span class="n">display</span> <span class="o">=</span> <span class="n">afw_display</span><span class="o">.</span><span class="n">Display</span><span class="p">(</span><span class="n">frame</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1e1bf006-af51-4194-8501-5c9c93d63400">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2d75a1f9-49a3-49e8-ac30-ef115b4edc28">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><em>Functions must have a preceding markdown cell with a brief explanation and they must contain docstrings formatted as in this example.</em></p>
-<p>Define a function to calculate the semi-major axis of an asteroid's orbit.</p>
+<h2 id="2.-Source-detection,-deblending,-and-measurement">2. Source detection, deblending, and measurement<a class="anchor-link" href="#2.-Source-detection,-deblending,-and-measurement">¶</a></h2><p>Learn how to perform source detection, deblending, and measurement on a <code>visit_image</code>.</p>
+<p>The LSST Science Pipelines' source detection, deblending, and measurement tasks were imported in the first code cell.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9fbe0e5c-59ab-400f-b024-beed100391d5">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ff3d0c5c-7969-47d2-8989-8daac68778b8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.1.-Select-a-visit-image">2.1. Select a visit image<a class="anchor-link" href="#2.1.-Select-a-visit-image">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=baa619ab-bb74-4ca5-8833-bbecfa1c34fa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Using the approximate coordinates of the center of the ECDFS field as declared in Section 1.2, identify the first r-band <code>visit_image</code> in order of time and date of observation (<code>visit.timespan.begin</code>).</p>
+<p>First, prepare the query and bind parameters.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a4875aa1-25a9-4ea4-8171-4048e518b7ed">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7752,99 +7732,43 @@ E.g., "#### 1.2.1. Define global cosmological parameter values" or "#### 1.2.2. 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calc_semimajor_axis</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Given a perihelion distance and orbital eccentricity,</span>
-<span class="sd">      calculate the semi-major axis of the orbit.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"band.name = band AND "</span> \
+        <span class="s2">"visit_detector_region.region OVERLAPS POINT(ra, dec)"</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    q: float</span>
-<span class="sd">        Distance at perihelion, in au.</span>
-<span class="sd">    e: float</span>
-<span class="sd">        Orbital eccentricity.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    a: float</span>
-<span class="sd">        Semi-major axis of the orbit, in au.</span>
-<span class="sd">        q = a(1-e), so a = q/(1-e)</span>
-<span class="sd">    """</span>
-
-    <span class="k">return</span> <span class="n">q</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">e</span><span class="p">)</span>
+<span class="n">bind_params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"band"</span><span class="p">:</span> <span class="s1">'r'</span><span class="p">,</span> <span class="s2">"ra"</span><span class="p">:</span> <span class="n">ra</span><span class="p">,</span> <span class="s2">"dec"</span><span class="p">:</span> <span class="n">dec</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bind_params</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=16eeb034-6728-406e-bfc8-7b875c3a9416">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>band.name = band AND visit_detector_region.region OVERLAPS POINT(ra, dec)
+{'band': 'r', 'ra': 53.13, 'dec': -28.1}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d79912c8-fb52-4607-bc4a-f589b6e296d2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="2.-Section-heading">2. Section heading<a class="anchor-link" href="#2.-Section-heading">¶</a></h2><p><em>Use numbers for sections, sub-sections, and sub-sub-sections to enable referencing.
-E.g., so that users can say "I'm having trouble with the second code cell in Section 2.3."</em></p>
-<p><em>Use section titles that actively describe what is being done, e.g., "Create a color-magnitude diagram".
-Do not use ambiguous section headings like "Plot".
-Descriptive headings make the auto-generated table of contents easier for users to navigate.</em></p>
+<p>Next, perform the query for datasets on the butler.  Order the results by <code>visit.timespan.begin</code>. Limit the number of visits returned to 1.  Save the <code>dataId</code>.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=19f67659-29ec-4fd2-af4d-f30b4eabbebd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="2.1.-Warnings">2.1. Warnings<a class="anchor-link" href="#2.1.-Warnings">¶</a></h3><p><em>Use indented text to attract users attention to common mistakes, known warnings, etc.</em></p>
-<blockquote>
-<p><strong>Warning:</strong> <em>use indented text preceded with</em> <em><strong>Warning</strong></em> <em>to attract attention to particular information.</em></p>
-</blockquote>
-<p><em>If a code cell produces a warning or error that is safe to ignore, it must be preceded with an explanation.
-Here is an example.</em></p>
-<blockquote>
-<p><strong>Warning:</strong> Pink "RuntimeWarning" errors will appear due to a few of the measured fluxes in the denominator being zero. It is safe to ignore this warning in the context of this demonstration, which is not doing any scientific analysis.</p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ec51ac0b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="2.1.1.-Images-and-plots">2.1.1. Images and plots<a class="anchor-link" href="#2.1.1.-Images-and-plots">¶</a></h4><p><em>Drag-and-drop to embed images.
-The code below is automatically generated by drag-and-drop.
-All figures must have captions: both embedded and code-generated images.
-Format captions as shown.</em></p>
-<p><img alt="example.png" src="data:image/png;base64,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"/></p>
-<blockquote>
-<p><strong>Figure 1:</strong> Value 2 as a function of Value 1 for Case A as black open circles and Case B as grey open triangles.
-This figure shows that in Case B the power law has a higher exponent.</p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d2aefbc0-aa2c-4c56-86e3-cb692b00dd0e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="2.1.2.-Provide-instruction-in-the-imperative-mood">2.1.2. Provide instruction in the imperative mood<a class="anchor-link" href="#2.1.2.-Provide-instruction-in-the-imperative-mood">¶</a></h4><p><em>Jupyter Notebook tutorials alternate between markdown cells with instructional statements written in the imperative mood, and code cells to be executed by the user.</em></p>
-<p><em>As an example, here is a set of markdown and code cells to execute an asynchronous TAP query.</em></p>
-<p>This ADQL query defined below is designed to retrieve the <code>coord_ra</code> and <code>coord_dec</code> columns for all <code>Object</code>s that are within 0.01 degrees of the coordinate defined by Right Ascension (RA) = 62 deg, and Declination (Dec) = -37 deg, and for which the <code>detect_isPrimary</code> flag is True (= 1).</p>
-<p>Create the <code>query</code> string.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ac98b7f0-aeef-439b-9642-e73bb38eef6a">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0c22b300-30d4-497b-bd08-374f4582b5a2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7852,28 +7776,48 @@ This figure shows that in Case B the power law has a higher exponent.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"SELECT coord_ra, coord_dec "</span>\
-        <span class="s2">"FROM dp02_dc2_catalogs.Object "</span>\
-        <span class="s2">"WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), "</span>\
-        <span class="s2">"CIRCLE('ICRS', 62, -37, 0.01)) = 1 "</span>\
-        <span class="s2">"AND detect_isPrimary = 1"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dataset_refs</span> <span class="o">=</span> <span class="n">butler</span><span class="o">.</span><span class="n">query_datasets</span><span class="p">(</span><span class="s2">"visit_image"</span><span class="p">,</span>
+                                     <span class="n">where</span><span class="o">=</span><span class="n">query</span><span class="p">,</span>
+                                     <span class="n">bind</span><span class="o">=</span><span class="n">bind_params</span><span class="p">,</span>
+                                     <span class="n">order_by</span><span class="o">=</span><span class="p">[</span><span class="s2">"visit.timespan.begin"</span><span class="p">],</span>
+                                     <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset_refs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="n">ref</span> <span class="o">=</span> <span class="n">dataset_refs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dataId</span> <span class="o">=</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataId</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">dataset_refs</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8acac0d-2e9c-45d0-9d64-819937f9579f">
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>{instrument: 'LSSTComCam', detector: 4, visit: 2024110800247, band: 'r', day_obs: 20241108, physical_filter: 'r_03'}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a12a3540-72b7-4edb-ac52-146afed96019">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Submit the query as a job to the TAP service.</p>
+<p>Retrieve the <code>visit_image</code> for this <code>dataId</code> from the butler.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ff3badc9-752f-4aff-82e8-46284acc4c62">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b6c8a6bd-d749-4bc1-b832-3a93b8572fce">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7881,40 +7825,24 @@ This figure shows that in Case B the power law has a higher exponent.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Job URL is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">visit_image</span> <span class="o">=</span> <span class="n">butler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'visit_image'</span><span class="p">,</span> <span class="n">dataId</span><span class="o">=</span><span class="n">dataId</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Job URL is https://data.lsst.cloud/api/tap/async/tbxc2mkbcjifc8gv
-Job phase is PENDING
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93760f98-d2ef-41f2-9cf3-00230190b63b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0a081e4-11c5-40c7-a89c-95b0043b346f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Run the job and wait until the job phase is either "COMPLETED" or "ERROR", then print the job phase.</p>
+<p>Clear the <code>DETECTED</code> information from the mask plane, as source detection is re-done below.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d1354e4c-6b49-42b4-a799-aa9287a2f553">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6a8407fb-5802-4a33-8d00-765a4645c7fa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7922,9 +7850,46 @@ Job phase is PENDING
 <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">visit_image</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">removeAndClearMaskPlane</span><span class="p">(</span><span class="s1">'DETECTED'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6448436e-d580-4d98-827b-4f0882523a63">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.2.-Source-table-schema">2.2. Source table schema<a class="anchor-link" href="#2.2.-Source-table-schema">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=070d6f97-73e7-41fa-ba30-ebce1817c07c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The schema describes the output properties that will be measured for each source.
+The schema needs to be passed to all of the tasks, each of which will add columns to the schema when it runs.</p>
+<p>Create a minimal schema for a source table.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=76c52f20-6a74-47c2-97f2-0e2c611adb16">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="n">afwTable</span><span class="o">.</span><span class="n">SourceTable</span><span class="o">.</span><span class="n">makeMinimalSchema</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7937,75 +7902,31 @@ Job phase is PENDING
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Job phase is COMPLETED
+<pre>Schema(
+    (Field['L'](name="id", doc="unique ID"), Key&lt;L&gt;(offset=0, nElements=1)),
+    (Field['Angle'](name="coord_ra", doc="position in ra/dec"), Key&lt;Angle&gt;(offset=8, nElements=1)),
+    (Field['Angle'](name="coord_dec", doc="position in ra/dec"), Key&lt;Angle&gt;(offset=16, nElements=1)),
+    (Field['L'](name="parent", doc="unique ID of parent source"), Key&lt;L&gt;(offset=24, nElements=1)),
+)
+
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4dd8fc78-3932-4b40-a41b-05027032623f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0f922952-d9b0-4f3e-8ad4-feda997e0e04">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Optional:</strong> If the status returned was "ERROR", uncomment and execute this cell to print the error messages.</p>
+<p>Add <code>coord_raErr</code> and <code>coord_decErr</code> to the minimal schema to avoid warnings
+from <code>sourceMeasurementTask</code> in Section 2.5, which expects these columns to exist.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3f8f2cae-74ba-483c-a877-8887e73d6c26">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># job.raise_if_error()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e9af2ae0-c0cc-42f8-97ea-e5342ebbf0a6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>If the status returned was "COMPLETED", execute this cell to retrieve the query results as an <code>astropy</code> table using the <code>to_table</code> method, and assert that the table length is 173 as expected.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=47a67878-40ad-4bf5-a928-a7920440f41c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">173</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=557bbb99-3a37-4b15-ad6d-e86c6282866c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Save space in memory by deleting the job and the retrieved results.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7a093135-8747-41e5-a72e-c529205bb331">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f8f88245-9e01-495c-8af4-a78fbba2cf24">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8013,14 +7934,793 @@ Job phase is PENDING
 <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-<span class="k">del</span> <span class="n">results</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">raerr</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">addField</span><span class="p">(</span><span class="s2">"coord_raErr"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"F"</span><span class="p">)</span>
+<span class="n">decerr</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">addField</span><span class="p">(</span><span class="s2">"coord_decErr"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"F"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=427ad26a-d650-4b4b-882d-59dbcaafb712">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=119fd38f-18ea-4e14-8c20-6fadf20f3cfb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Create a container which will be used to record metadata about algorithm execution.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0a3fde0d-9261-49c2-9935-96d061c1988e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">algMetadata</span> <span class="o">=</span> <span class="n">dafBase</span><span class="o">.</span><span class="n">PropertyList</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=29144181-25d5-457b-be52-c59466489884">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.3.-Configure-the-tasks">2.3. Configure the tasks<a class="anchor-link" href="#2.3.-Configure-the-tasks">¶</a></h3><p>Each task possesses an associated configuration class. The properties of these configuration classes can be determined from the classes themselves.</p>
+<p><strong>Option:</strong> uncomment the following line to view the help documentation for the <code>SourceDetectionTask</code> configuration.
+Replace <code>SourceDetectionTask</code> with another task name to view its help documentation.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=235cfb77-586c-4425-bb81-831daf4c8827">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># help(SourceDetectionTask.ConfigClass())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a2db7a7-78c2-478f-8f68-17440959811a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Set the basic configuration parameters and instantiate each task in turn.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9bb5467f-bc40-44d2-9aee-7db1db69a7bf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><code>SourceDetectionTask</code> detects sources.</p>
+<p>Set the configuration for the detection threshold to 4 (the default for LSST catalogs is 5) in order to detect sub-threshold (faint) sources.
+Set the detection threshold type to be <code>stdev</code>, which means the threshold is applied to the image's standard deviation.
+In other words, this configuration will detect sources at $4\sigma$.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4f5dc37c-409d-46ad-822c-e331b6dac003">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">SourceDetectionTask</span><span class="o">.</span><span class="n">ConfigClass</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">thresholdValue</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">config</span><span class="o">.</span><span class="n">thresholdType</span> <span class="o">=</span> <span class="s2">"stdev"</span>
+<span class="n">sourceDetectionTask</span> <span class="o">=</span> <span class="n">SourceDetectionTask</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8b6b1567-e42e-4ab0-87f1-7baf4b81b70c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><code>SourceDeblendTask</code> deblends overlapping sources into "parent" and "child" sources.</p>
+<p>No configuration is needed for this tutorial.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ff77c9d8-5bcc-4c7b-bbff-d4b3176b33e0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sourceDeblendTask</span> <span class="o">=</span> <span class="n">SourceDeblendTask</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=98533e73-809d-48cf-a67e-95eeccd1cd2a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><code>SingleFrameMeasurementTask</code> measures the properties of the deblended sources.</p>
+<p>No special configuration is needed for this tutorial.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0dfcdfd3-185c-4b6d-8442-785e29da87a9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">SingleFrameMeasurementTask</span><span class="o">.</span><span class="n">ConfigClass</span><span class="p">()</span>
+<span class="n">sourceMeasurementTask</span> <span class="o">=</span> <span class="n">SingleFrameMeasurementTask</span><span class="p">(</span><span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span>
+                                                   <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+                                                   <span class="n">algMetadata</span><span class="o">=</span><span class="n">algMetadata</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">config</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1b4a8e7c-95c1-4c7d-ae99-903f840c6f1e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Create a <code>SourceTable</code> called <code>tab</code> using the minimal schema. It will hold the output of the analysis in the following section.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=59bf3d26-8caa-46d4-9b1b-ed5bf794aed3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">tab</span> <span class="o">=</span> <span class="n">afwTable</span><span class="o">.</span><span class="n">SourceTable</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d72ca825-245e-4d19-ac5f-1a9f59266ae1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="2.3.1.-Re-configure-tasks-and-explore-methods">2.3.1. Re-configure tasks and explore methods<a class="anchor-link" href="#2.3.1.-Re-configure-tasks-and-explore-methods">¶</a></h4><p>The configuration parameters cannot be changed after the task is constructed.
+To change a configuration parameter, redefine it and then also redefine the task.</p>
+<p>For example, to change the detection threshold value used by source detection:</p>
+<pre><code>config.thresholdValue = 10
+sourceDetectionTask = SourceDetectionTask(schema=schema, config=config)
+</code></pre>
+<p><strong>Option:</strong> To explore a task, use the <code>help</code> function on the task or any of its methods.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0061d31c-29b2-4845-a3ff-225f49bb8d79">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># help(SourceDetectionTask)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f0215120-24fc-4eb0-8f88-8c2781427e29">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># help(SourceDetectionTask.getPsf)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3618d1fd-0825-4b0d-909d-9f507be53c19">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Option:</strong> To see a pop-up list of all methods for a given task, uncomment this line, place the cursor after the period,
+and press tab.  Then re-comment the line. Do not execute the cell.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2277bc15-20f9-4105-837e-937d75fdbed3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># SourceDetectionTask.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=006b814d-9a1c-441a-8ec1-26fbeccd077a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, as <code>schema</code> is no longer needed, delete it.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0c44e086-2c53-4e3b-aca9-7be80b151f94">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">schema</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=11582b95-9c8e-41d3-ba66-b2d65fb8bc94">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.4.-Source-detection">2.4. Source detection<a class="anchor-link" href="#2.4.-Source-detection">¶</a></h3><p>Run source detection.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a463a72b-f8aa-409d-8c23-36db27bc58d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">sourceDetectionTask</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="n">visit_image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.sourceDetection</span> <span style="color: var(--jp-info-color0)">INFO</span>: Setting factor for negative detections equal to that for positive detections: 1.000000</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.sourceDetection</span> <span style="color: var(--jp-info-color0)">INFO</span>: Detected 4385 positive peaks in 3226 footprints and 125 negative peaks in 114 footprints to 4 +ve and 4 -ve sigma</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.sourceDetection</span> <span style="color: var(--jp-info-color0)">INFO</span>: Resubtracting the background after object detection</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d66b2a9f-1518-48ce-b435-21711b833b33">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Print the number of positive peaks detected.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=75c327d6-a3f9-412b-80cf-98dc71274f9e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">numPosPeaks</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>4385</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9a5806a4-93c0-4159-95c0-faafdc00708d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Create <code>sources</code> to hold the detected sources from the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=096a56dc-4a1d-468a-a017-a5d2e15aaa99">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">sources</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sources</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>3226
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8270344c-53ee-409d-b91b-84aeff81b821">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>With <code>thresholdValue</code> set to 4, roughly 3200 sources are detected.</p>
+<p>Had the <code>thresholdValue</code> been set instead to 10, there would have been only roughly 1200 sources detected.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ea2a36bc-78bd-4e34-8ff4-8c248dae59c2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Option:</strong> Display <code>sources</code> to see that most of the columns are <code>NaN</code> at first.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=352f872a-eb0c-4187-8f19-8fe3124994a3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># sources</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1379e100-5fd6-4653-b954-c93407f3a4d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.5.-Source-deblending-and-measurement">2.5. Source deblending and measurement<a class="anchor-link" href="#2.5.-Source-deblending-and-measurement">¶</a></h3><p>Run the <code>SourceDeblendTask</code> and <code>SingleFrameMeasurementTask</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a6b4ad2a-db70-45cd-9188-2bf2cd788411">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sourceDeblendTask</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">visit_image</span><span class="p">,</span> <span class="n">sources</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.sourceDeblend</span> <span style="color: var(--jp-info-color0)">INFO</span>: Deblending 3226 sources</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.sourceDeblend</span> <span style="color: var(--jp-info-color0)">INFO</span>: Deblended: of 3226 sources, 391 were deblended, creating 1084 children, total 4310 sources</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fc070954-4f48-49bc-8d27-db48f9c8f352">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sourceMeasurementTask</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">measCat</span><span class="o">=</span><span class="n">sources</span><span class="p">,</span> <span class="n">exposure</span><span class="o">=</span><span class="n">visit_image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<pre style="margin: 0.1em;
+padding-left: 0.25em;
+border-left-style: solid;
+font-family: var(--jp-code-font-family);
+font-size: var(--jp-code-font-size);
+line-height: var(--jp-code-line-height);
+"><span style="color: var(--jp-warn-color2)">lsst.measurement</span> <span style="color: var(--jp-info-color0)">INFO</span>: Measuring 4310 sources (3226 parents, 1084 children) </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7b16579d-65cf-42dd-b6e3-93c6a87fb1cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Ensure that the <code>sources</code> catalog is contiguous (sequential) in memory by making a copy.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f6eda65d-3bb1-449d-82e0-9b808953a03b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="n">sources</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5ef355de-97c6-4c99-8f18-18532078e708">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Option:</strong> Display the <code>sources</code> catalog as an <code>astropy</code> table, which has a nice, human-readable output format.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8a5f9af6-f57a-4e8b-9222-897650a209b8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># sources.asAstropy()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a7cf8fc-0a9f-43fe-a028-637426013bef">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Option:</strong> Write the <code>sources</code> to a FITS table, or save the <code>visit_image</code> as a FITS file, in the current directory.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=17117fa8-1922-43d5-a585-8a69669bc8bb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># sources.writeFits("NB_105_4_sources.fits")</span>
+<span class="c1"># visit_image.writeFits("NB_105_4_visit_image.fits")</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=64f113a9-9370-4ed7-946b-7453bf8d0375">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2.6.-Visualize-sources-on-an-image-cutout">2.6. Visualize sources on an image cutout<a class="anchor-link" href="#2.6.-Visualize-sources-on-an-image-cutout">¶</a></h3><p>Overplot the detected sources on a cutout image of the <code>visit_image</code> using <code>afwDisplay</code>.</p>
+<p>There are several ways to create image cutouts. This tutorial demonstrates the use of the <code>Factory</code> method for a <code>visit_image</code>.</p>
+<p>The arguments that must be passed to the <code>Factory</code> method are:</p>
+<pre><code>visit_image : the image to make the cutout from
+bbox   : the desired bounding box of the cutout
+origin : the image pixel origin, local to the cutout array
+deep   : if True, copy the data rather than passing by reference
+</code></pre>
+<p>Define the <code>bbox</code> region for a cutout that is centered on pixel coordinate 1700, 2100 and is 400 pixels wide and 400 pixels high.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c6d97ec3-d579-490b-8262-a65a8b4022de">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1700</span><span class="p">,</span> <span class="mi">2100</span>
+<span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span>
+<span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">w</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">h</span><span class="o">//</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span><span class="p">)</span>
+<span class="n">bbox</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">Box2I</span><span class="p">()</span>
+<span class="n">bbox</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">Point2I</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span><span class="p">))</span>
+<span class="n">bbox</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">Point2I</span><span class="p">(</span><span class="n">xmin</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
+<span class="k">del</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">ymin</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>1500 1900
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=29656564-1e68-4477-aeb9-c13b38d1faea">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Option:</strong> Display the <code>bbox</code> information.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=df0428dd-8e81-4bf2-8f6a-f7ac83f7b537">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># bbox</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c0e11745-22cf-46a8-b689-25e960069104">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>An alternative statement to create <code>bbox</code> is:</p>
+<pre><code>bbox = geom.Box2I(geom.Point2I(xmin, ymin), geom.Extent2I(w, h))
+</code></pre>
+<p>Generate the cutout.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6f10fe3e-8665-4a89-917a-a086326d5e4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">cutout</span> <span class="o">=</span> <span class="n">visit_image</span><span class="o">.</span><span class="n">Factory</span><span class="p">(</span><span class="n">visit_image</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="n">afw_image</span><span class="o">.</span><span class="n">LOCAL</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b0e8915b-ce3f-48e2-a565-11c3a04803f8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Display the cutout, and set mask transparency to 100%.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=38690805-d712-4032-a8e6-08d521882baf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">cutout</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">setMaskTransparency</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=684114f4-9b7b-4230-8181-64d5069d35db">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Mark detected sources with orange circles.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=040d7083-dece-4965-afec-9161ec062258">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">display</span><span class="o">.</span><span class="n">Buffering</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">getX</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">getY</span><span class="p">()</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">1500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1900</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">1900</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">2300</span><span class="p">):</span>
+            <span class="n">display</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="s1">'o'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">ctype</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cf5157fa-969b-4f31-aee1-ab666f62ed28">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8028,7 +8728,7 @@ Job phase is PENDING
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>

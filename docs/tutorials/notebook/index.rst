@@ -18,20 +18,63 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    notebook-101-1.rst
+    101/notebook-101-1.rst
+    101/notebook-101-2.rst
 
-102. Table access with the TAP service
---------------------------------------
+
+102. Catalog access
+-------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    102/notebook-102-1.rst
+    102/notebook-102-2.rst
+    102/notebook-102-3.rst
+    102/notebook-102-4.rst
+
 
 103. Image access and display
 -----------------------------
 
-104. Data access with the butler
---------------------------------
+.. toctree::
+    :titlesonly:
+    :glob:
 
-105. Data (re)processing
-------------------------
+    103/notebook-103-1.rst
+    103/notebook-103-2.rst
+    103/notebook-103-3.rst
+    103/notebook-103-4.rst
+    103/notebook-103-5.rst
 
+
+104. Butler data access
+-----------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    104/notebook-104-1.rst
+    104/notebook-104-2.rst
+    104/notebook-104-3.rst
+    104/notebook-104-4.rst
+
+
+105. Image reprocessing
+-----------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    105/notebook-105-1.rst
+    105/notebook-105-2.rst
+    105/notebook-105-3.rst
+    105/notebook-105-4.rst
+    105/notebook-105-5.rst
+    105/notebook-105-6.rst
 
 
 .. _notebook-200:
@@ -48,7 +91,7 @@ Tutorials with a learning objective of understanding one of the data products.
     :titlesonly:
     :glob:
 
-    notebook-201-1.rst
+    201/notebook-201-1.rst
 
 
 202. Catalogs
@@ -80,5 +123,5 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :titlesonly:
     :glob:
 
-    notebook-301-1.rst
+    301/notebook-301-1.rst
 
