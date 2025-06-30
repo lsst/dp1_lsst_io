@@ -156,3 +156,30 @@ Epochs (nights)
    * - Seagull Nebula
      - 4
      - 25.0
+
+
+.. _observations-tracts:
+
+Coadd Tracts
+============
+
+.. list-table:: Table 4: Coadd tract IDs for each field
+   :widths: 3 3
+   :header-rows: 1
+
+   * - Field name
+     - Tract IDs
+   * - 47 Tuc Globular Cluster
+     - 453, 454
+   * - Low Ecliptic Latitude Field
+     - 10221, 10222, 10463, 10464, 10704, 10705
+   * - Fornax Dwarf Spheroidal Galaxy
+     - 4016, 4017, 4217, 4218
+   * - Extended Chandra Deep Field South (ECDFS)
+     - 4848, 4849, 5063, 5064
+   * - Euclid Deep Field South (EDFS)
+     - 2234, 2234, 2393, 2394
+   * - Low Galactic Latitude Field
+     - 5305, 5036, 5525, 5526
+   * - Seagull Nebula
+     - 7610, 7611, 7849, 7850
