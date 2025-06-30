@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:** 6/30/2025
 
 **Learning objective:** Create histograms and heatmaps in the results active chart.
 
-**LSST data products:**
+**LSST data products:**  DP1 ``Object`` catalogs
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -22,7 +22,7 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Log in to the Portal and execute a query.**
+**1. Log in to the Portal aspect of the Rubin Science Platform and execute a query.**
 Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface.
 Enter into the ADQL box, and execute the query below, which will retrieve g- and r-band magnitudes for a sample of extended objects (galaxies) brighter than 25th magnitude.
 
