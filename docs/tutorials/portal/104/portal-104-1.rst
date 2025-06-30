@@ -49,16 +49,21 @@ The default layout of the results interface is shown in Figure 1.
     Figure 1: The results interface after a query has been executed defaults to a screens split three ways: the coverage map (A), the active chart (B), and the table (C).
 
 
-* The *Coverage chart* (upper left, or "A" in Figure 1):
+**3.1. Coverage chart.**
+The coverage chart's default location is upper left; A in Figure 1.
 The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
 Small color squares mark individual objects outside the grid.
-The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP1 deepCoadd images.
-* The *Active chart* (upper right, or "B" in Figure 1):
+The background is an r-band `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the ``deep_coadd`` images.
+
+**3.2. Active chart.**
+The active chart's default location is upper right; B in Figure 1.
 The default plot will be the first two columns of the returned data table.
-In Figure 1, this is the Declination coordinate on the y-axis and the Right Ascension coordinate on the x-axis.
+In Figure 1, this is RA vs. Dec.
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
-* The *Table results* (bottom box, or "C" in Figure 1):
-A scrollable table of the returned data, with the first row selected by default and shown in orange.
+
+## 3.3. Table.**
+The table's default location is along the bottom; C in Figure 1.
+A scrollable, filterable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
 
 
