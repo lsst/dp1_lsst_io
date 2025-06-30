@@ -217,6 +217,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :glob:
 
     306/notebook-306-1.rst
+    306/notebook-306-2.rst
 
 
 307. Active Galactic Nuclei (AGN)
