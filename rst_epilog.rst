@@ -61,12 +61,12 @@
 .. |visit_table_butler_count| replace:: 1
 .. |Visit_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: Visit searchable catalog |doi_image| https://doi.org/10.71929/rubin/2570329
 .. |Visit_rows| replace:: 1,786
-.. |Visit_columns| replace:: 16
+.. |Visit_columns| replace:: 15
 .. |visit_detector_table_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: visit_detector_table dataset type |doi_image| https://doi.org/10.71929/rubin/2570330
 .. |visit_detector_table_butler_count| replace:: 1
 .. |CcdVisit_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: CcdVisit searchable catalog |doi_image| https://doi.org/10.71929/rubin/2570331
 .. |CcdVisit_rows| replace:: 16,071
-.. |CcdVisit_columns| replace:: 51
+.. |CcdVisit_columns| replace:: 50
 .. |ss_source_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: ss_source dataset type |doi_image| https://doi.org/10.71929/rubin/2570332
 .. |ss_source_butler_count| replace:: 1
 .. |SSSource_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: SSSource searchable catalog |doi_image| https://doi.org/10.71929/rubin/2570333
