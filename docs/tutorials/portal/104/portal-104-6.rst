@@ -55,7 +55,6 @@ Click "OK".
 
 Figure 1: The "Add New Chart" pop-up window, set up for a histogram.
 
-
 **3. Delete the default chart.** Remove the default plot of ``coord_ra`` vs. ``coord_dec`` by clicking on the "x" in the upper right corner of the plot.
 
 **4. Add a new chart, and choose heatmap.**
