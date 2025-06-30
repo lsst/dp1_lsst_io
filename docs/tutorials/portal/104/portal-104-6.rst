@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 
+**Last verified to run:**
 
 **Learning objective:** Create histograms and heatmaps in the results active chart.
 
-**LSST data products:** 
+**LSST data products:**
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
