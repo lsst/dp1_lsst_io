@@ -53,12 +53,10 @@ The default layout of the results interface is shown in Figure 1.
 The default view is a `HEALPix <https://healpix.sourceforge.io/>`_ grid showing the number of returned objects per grid region.
 Small color squares mark individual objects outside the grid.
 The background is a color `HiPS <https://aladin.cds.unistra.fr/hips/>`_ map of the DP1 deepCoadd images.
-
 * The *Active chart* (upper right, or "B" in Figure 1):
 The default plot will be the first two columns of the returned data table.
 In Figure 1, this is the Declination coordinate on the y-axis and the Right Ascension coordinate on the x-axis.
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
-
 * The *Table results* (bottom box, or "C" in Figure 1):
 A scrollable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
