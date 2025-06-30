@@ -63,6 +63,7 @@ This plot will switch to a two-dimensional histogram if so many objects are retu
 A scrollable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
 
+
 **4. View layout options.**
 At upper left, click on the menu icon (three horizontal lines) to open the sidebar menu.
 Under "Results Layout", click on the icon of the default layout ("up-down" arrows, or "A" in Figure 2) to see all layout options.
