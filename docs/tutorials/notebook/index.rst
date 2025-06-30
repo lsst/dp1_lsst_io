@@ -84,8 +84,8 @@ Short tutorials with a learning objective of how to use a single RSP function or
 
 Tutorials with a learning objective of understanding one of the data products.
 
-201. Survey metadata
---------------------
+201. Catalogs
+-------------
 
 .. toctree::
     :titlesonly:
@@ -104,18 +104,52 @@ Tutorials with a learning objective of understanding one of the data products.
     201/notebook-201-11.rst
 
 
-202. Catalogs
--------------
-
-203. Images
+202. Images
 -----------
 
-204. Deblender products and footprints
---------------------------------------
+.. toctree::
+    :titlesonly:
+    :glob:
 
-205. Data quality assessment
-----------------------------
+    202/notebook-202-1.rst
+    202/notebook-202-2.rst
+    202/notebook-202-3.rst
+    202/notebook-202-4.rst
+    202/notebook-202-5.rst
 
+
+203. Maps
+---------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    203/notebook-203-1.rst
+
+
+204. Calibrations
+-----------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    204/notebook-204-1.rst
+    204/notebook-204-2.rst
+    204/notebook-204-3.rst
+
+
+
+205. Point Spread Function PSF
+------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    205/notebook-205-1.rst
+    205/notebook-205-2.rst
 
 
 .. _notebook-300:
@@ -133,5 +167,79 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :titlesonly:
     :glob:
 
+    301/notebook-301-0.rst
     301/notebook-301-1.rst
+    301/notebook-301-2.rst
+    301/notebook-301-3.rst
+    301/notebook-301-4.rst
+    301/notebook-301-5.rst
+    301/notebook-301-6.rst
+    301/notebook-301-7.rst
+
+
+303. Galaxies
+-------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    303/notebook-303-1.rst
+
+
+
+304. Cosmology
+--------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    304/notebook-304-1.rst
+
+
+305. Galactic variables and transients
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    305/notebook-305-1.rst
+
+
+
+306. Extragalactic transients
+-----------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    306/notebook-306-1.rst
+
+
+307. Active Galactic Nuclei (AGN)
+---------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    307/notebook-307-1.rst
+
+
+308. Solar System
+-----------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    308/notebook-308-1.rst
+    308/notebook-308-2.rst
+
+
+
+
 

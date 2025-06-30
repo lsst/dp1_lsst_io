@@ -1,7 +1,7 @@
 .. _notebook-301-1:
 
 ##############################
-301.1. 47 Tuc Globular Cluster
+301.1. 47 Tuc globular cluster
 ##############################
 
 .. raw:: html
