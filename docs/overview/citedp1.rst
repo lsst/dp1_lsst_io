@@ -6,7 +6,7 @@ How to cite Data Preview 1
 
 `How to cite Rubin Observatory <https://rubinobservatory.org/for-scientists/documentation/cite>`_.
 
-When citing this data release please reference |dp1_paper|.
+When citing this data release please reference the data release paper: |dp1_paper|.
 
 The instrument itself can be formally cited as
 
