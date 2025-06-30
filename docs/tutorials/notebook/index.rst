@@ -4,6 +4,8 @@
 Notebook tutorials
 ##################
 
+**Known issue:** the logo fails to display in the header of every html-rendered notebook.
+
 .. _notebook-100:
 
 100. How to: RSP functionality
