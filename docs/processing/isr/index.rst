@@ -17,7 +17,7 @@ For descriptions of the ISR steps and the generation, verification, certificatio
     :name: isr_model
     :alt: A schematic diagram of a model with various detector signatures relevant for LSSTCam images.
 
-    Figure 1: The model of the detector and readout board (REB) components, labeled with the effects that they impart on signal (from |dp1_paper|).
+    Figure 1: The model of the detector and readout electronics board (REB) components, labeled with the effects that they impart on signal (from |dp1_paper|).
 
 
 .. figure:: images/isr_steps.png
@@ -77,7 +77,7 @@ The ISR pipeline essentially “works backward” through the signal chain, corr
 The physical detector, shown on the left in Figure 1, is the source of effects that arise from the silicon itself, such as the dark current and the brighter-fatter effect (`Broughton et al. 2024 <https://ui.adsabs.harvard.edu/abs/2024PASP..136d5003B/abstract>`_, `Gruen et al. 2015 <https://ui.adsabs.harvard.edu/abs/2015JInst..10C5032G/abstract>`_).
 
 After the image has integrated, the charge is shifted to the serial register and read out, which can introduce charge transfer inefficiencies and a clock-injected offset level.
-The signals for all amplifiers are transferred via cables to the Readout Board (REB), during which crosstalk between the amplifiers may occur.
+The signals for all amplifiers are transferred via cables to the Readout Electronics Board (REB), during which crosstalk between the amplifiers may occur.
 The Analog Signal Processing Integrated Circuit (ASPIC) on the REB converts the analog signal from the detector into a digital signal, adding both quantization and a bias level to the image.
 Although the signal chain is designed to be stable and linear, the presence of numerous sources of non-linearity reveals its complexity.
 
