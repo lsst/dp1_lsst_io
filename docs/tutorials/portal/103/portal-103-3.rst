@@ -31,8 +31,7 @@ These fluxes can be retrieved as AB magnitudes using the ``scisql_nanojanskyToAb
 **Warning!** Fluxes measured in difference images can be negative.
 Negative fluxes should not be converted to magnitudes using this special ADQL function.
 
-**Note:** for a demonstration of how to convert fluxes to magnitudes *after* a query is executed,
-see the tutorial on how to add a column to the results table.
+**Note:** to convert fluxes to magnitudes *after* a query is executed, add a new derived column to calculate magnitudes from fluxes (see the tutorial on how to use the results interface table panel for how to add a column).
 
 
 

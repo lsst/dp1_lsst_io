@@ -93,8 +93,8 @@ Execute the query.
   SELECT coord_dec, coord_ra, g_cModelMag, r_cModelMag
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53.0, -28.0, 1.0)) =1
-        AND g_cModelMag < 22 AND r_cModelMag < 22
+        CIRCLE('ICRS', 53.0, -28.0, 0.2)) =1
+        AND g_cModelMag < 25 AND r_cModelMag < 25
 
 
 **7. View multiple query results.**
