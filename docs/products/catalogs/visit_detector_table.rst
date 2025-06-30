@@ -35,7 +35,7 @@ Description
 ===========
 
 A "visit" is an observation in a single filter, obtained at a given time and sky coordinate.
-A "detector" is one of the 189 CCDs (charge-coupled devices) that make up LSSTCam.
+A "detector" is one of the 9 CCDs (charge-coupled devices) that make up LSSTComCam.
 A "CcdVisit" refers to an observation with a single detector as the
 reference for the observational metadata (e.g., airmass, seeing).
 This table includes image characterization information measured from the image, including things such as the PSF size, sky background, and image zeropoint.
