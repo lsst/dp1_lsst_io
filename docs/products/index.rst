@@ -54,6 +54,8 @@ Calibration products (e.g., bias, dark, and flat frames).
 Auxiliary information
 =====================
 
+Extra details and helpful hints.
+
 .. toctree::
     :maxdepth: 1
     :glob:
@@ -61,3 +63,15 @@ Auxiliary information
     butler_terminology
     known_issues_and_subtleties
     name_changes
+
+
+User-generated data products
+============================
+
+Derived and third-party data products.
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    lincc_lsdb
