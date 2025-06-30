@@ -38,7 +38,7 @@ The suite consists of the following tasks:
 - Multi-night tracklet linking with ``heliolinc``
 - Linkage post processing (orbit fitting, outlier rejection, and de-duplication) with ``link_purify``
 
-The inputs to the ``heliolinx`` suite included all sources detected in difference images produces by an early processing of the LSSTComCam commissioning data, including some that were later rejected as part of DP1 processing and hence are not part of this DP1 release.
+The inputs to the ``heliolinx`` suite included all sources detected in difference images produced by an early processing of the LSSTComCam data, including some that were later rejected as part of DP1 processing and hence are not part of this DP1 release.
 
 Tracklet creation with ``make_tracklets`` used an upper limit angular velocity of 1.5 deg/day, faster than any main belt asteroid and in the range of many NEO discoveries.
 To avoid excessive false tracklets from fields that were observed many times per night, the minimum tracklet length was set to three and the minimum on-sky motion for a valid tracklet was set to five arcseconds.
@@ -48,7 +48,7 @@ It employs the HelioLinC3D algorithm (`S. Eggl et al. 2020 <https://ui.adsabs.ha
 The ``heliolinc`` run tested each tracklet with 324 different hypotheses spanning heliocentric distances from 1.5 to 9.8 AU and radial velocities spanning the full range of possible bound orbits (eccentricity 0.0 to nearly 1.0).
 This range of distances encompasses all main belt asteroids and Jupiter Trojans, as well as many comets and Mars-crossers and some NEOs.
 Smaller heliocentric distances were not attempted here because nearby objects move rapidly across the sky and hence were not likely to remain long enough in an LSSTComCam field to be discovered.
-A clustering radius was chosen corresponding to 1.33 × 10−3 AU at 1 AU from Earth.
+A clustering radius was chosen corresponding to :math:`1.33 \times 10^{-3}` AU at 1 AU from Earth.
 Linkages produced by ``heliolinc`` are then post-processed with ``link_purify`` into a final non-overlapping set of candidate discoveries, ranked from highest to lowest probability of being a real asteroid based on astrometric orbit-fit residuals and other considerations.
 
 

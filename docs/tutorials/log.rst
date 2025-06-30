@@ -4,7 +4,7 @@
 Log of major tutorial updates
 #############################
 
-2025-07-01
+2025-06-30
 ==========
 
 DP1 release.

@@ -4,9 +4,9 @@
 Artifacts
 #########
 
-Some image artifacts from the camera or processing will remain visible the data.
+Some image artifacts from the camera or processing will remain visible in the data.
 
-The purpose of this page is to assist with artifact identification,
+The purpose of this page is to assist with artifact identification
 and to provide users with a consistent vocabulary for the artifacts they might notice.
 
 
@@ -18,7 +18,7 @@ Several types of artifacts are masked, meaning that the pixel mask plane for pro
 Bad pixels
 ----------
 
-Individual pixels with erroneous sensitivity (quantum efficiency) beyond a correctable range, or dead pixels.
+Individual pixels with erroneous sensitivity (quantum efficiency) beyond a correctable range or dead pixels.
 A "vampire pixel" is a term for a particular kind of bad pixel that seems to "suck" charge from nearby pixels.
 
 Bad columns
@@ -60,7 +60,7 @@ Artificial objects in Earth's orbit, including satellites and debris, can appear
 In general, shorter and thinner streaks (less than the width of one detector) are from objects in higher orbits, while longer and wider streaks (often crossing the whole field of view) are from objects in lower orbits.
 It is common for such features to vary in brightness along the track and exhibit flares or glint trails.
 Pixel values are not erased, redacted, or otherwise altered in trailed regions, and no attempt is made to identify the origin of any streak.
-If a streak is visually present in a difference image, it may set the STREAK mask plane, and any diaSource detected in such a region will have ``pixelFlags_streak`` flag set in the corresponding catalog.
+If a streak is visually present in a difference image, it may set the STREAK mask plane, and any diaSource detected in such a region will have the ``pixelFlags_streak`` flag set in the corresponding catalog.
 In practice, it is challenging to distinguish "real" streaks from, e.g., diffraction spikes, and DP1 makes no promise of accuracy for the STREAK mask.
 In the future, STREAK mask information may be propagated into other catalogs, and trailed glints may also be detected and indicated.
 
@@ -131,7 +131,7 @@ Tree rings are actually changes in pixel *area*, not sensitivity, so they have a
 
 .. figure:: images/artifacts-3-camera.png
     :name: artifacts-3-camera
-    :alt: Examples of non-astrophysical light in the images.
+    :alt: Examples of camera detector effects in the images.
 
     Figure 3: Examples of an amplifier jump and tree rings.
 
@@ -139,7 +139,7 @@ Tree rings are actually changes in pixel *area*, not sensitivity, so they have a
 Interpolation
 =============
 
-Pixels values are replaced by an interpolation algorithm when they're identified
+Pixel values are replaced by an interpolation algorithm when they're identified
 as affected by bad pixels, cosmic rays, and bleeding.
 Our interpolation algorithm is optimized for small regions and vertical features (primarily bleed trails); in larger areas it produces visible striping, and we rely on other features of the processing to ignore these areas.
 
@@ -163,7 +163,7 @@ Interpolation will also be evident at the edges of the HiPS maps.
 Background subtraction artifacts
 ================================
 
-Artifacts that stem from the estimatation and subtraction of the sky background.
+Artifacts that stem from the estimation and subtraction of the sky background.
 
 Dark edge
 ---------
