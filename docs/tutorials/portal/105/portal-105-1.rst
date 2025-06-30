@@ -88,7 +88,7 @@ Note that it might be necessary to choose the right tab in the left panel in ord
     :name: portal-105-1-4
     :alt: Side-by-side view of images and the table.
 
-    Figure 4: A side-by-side view of images and the table. 
+    Figure 4: A side-by-side view of images and the table.
 
 
 
