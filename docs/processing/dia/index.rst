@@ -50,7 +50,7 @@ absolute flux in difference images, where the threshold is a signal-to-noise rat
 
 Difference images contain sources of residual flux from the subtraction, both
 positive and negative.
-Real astrophyisical transients, variables, and moving objects appear as sources with
+Real astrophysical transients, variables, and moving objects appear as sources with
 a flux that is equal to the difference between their flux in the template and visit images.
 
 Spurious sources are also present due to unavoidably imperfect template matching.
@@ -66,7 +66,7 @@ Reliability score
 Both real and spurious DIA sources can be detected with a signal-to-noise ratio of 5. An estimate of how likely a source is to be real is provided to enable filtering of DIA sources by users.
 
 DP1 uses a relatively simple machine learning reliability model,
-trained on simulated data and injected point sources labelled by Rubin staff,
+trained on simulated data and injected point sources labeled by Rubin staff,
 and applied to DIA sources.
 The reliability value is stored in the ``reliability`` column of the ``DiaSource`` catalog.
 
