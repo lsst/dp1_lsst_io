@@ -74,4 +74,4 @@ Derived and third-party data products.
     :maxdepth: 1
     :glob:
 
-    lincc_lsdb
+    lsdb

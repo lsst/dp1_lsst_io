@@ -1,8 +1,8 @@
-.. _products_lincc-lsdb:
+.. _products_lsdb:
 
-##################################
-LINCC Large Survey Database (LSDB)
-##################################
+############################
+Large Survey Database (LSDB)
+############################
 
 LSDB is a python tool for scalable analysis of large catalogs (query and cross-match).
 
