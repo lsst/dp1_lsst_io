@@ -49,6 +49,9 @@ Measurements include PSF and extended fluxes, shapes, and sizes,
 as well as processing pixel flags.
 Photometry is calibrated, but not corrected for Milky Way dust extinction.
 
+Objects are detected and deblended in each patch independently, including the "outer" patch regions that overlap.
+They are then filtered down to just those whose reference-band centroid falls within the inner (non-overlapping) patch bounds when per-patch catalogs are aggregated.
+
 Processing
 ----------
 

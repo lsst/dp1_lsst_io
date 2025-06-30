@@ -31,6 +31,8 @@ Butler
 * Format: Parquet
 * Number of Butler datasets: |object_forced_source_butler_count|
 
+Forced sources are sharded by ``patch``, not just ``tract``, because in regions with many epochs the size of a full ``tract`` catalog becomes unwieldy.
+
 Description
 ===========
 
