@@ -7766,7 +7766,7 @@ Rubin staff will respond to all questions posted there.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SELECT fsodo.diaObjectId, fsodo.coord_ra, fsodo.coord_dec, fsodo.visit, fsodo.detector, fsodo.band, fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, fsodo.psfFlux as psfFlux, fsodo.psfFluxErr, vis.expMidptMJD FROM dp1.ForcedSourceOnDiaObject as fsodo JOIN dp1.Visit as vis ON vis.visit = fsodo.visit WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 94.922632983, -25.2318482104, 0.0001388888888888889)) = 1 
+<pre>SELECT fsodo.diaObjectId, fsodo.coord_ra, fsodo.coord_dec, fsodo.visit, fsodo.detector, fsodo.band, fsodo.psfDiffFlux, fsodo.psfDiffFluxErr, fsodo.psfFlux as psfFlux, fsodo.psfFluxErr, vis.expMidptMJD FROM dp1.ForcedSourceOnDiaObject as fsodo JOIN dp1.Visit as vis ON vis.visit = fsodo.visit WHERE CONTAINS (POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 94.922632983, -25.2318482104, 0.0001388888888888889)) = 1
 </pre>
 </div>
 </div>
@@ -8190,7 +8190,7 @@ y: 8 visits
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>
