@@ -92,6 +92,10 @@ Tutorials with a learning objective of understanding one of the data products.
     :glob:
 
     201/notebook-201-1.rst
+    201/notebook-201-2.rst
+    201/notebook-201-3.rst
+    201/notebook-201-4.rst
+    201/notebook-201-5.rst
 
 
 202. Catalogs

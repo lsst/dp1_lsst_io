@@ -1,8 +1,8 @@
 .. _notebook-201-1:
 
-################################
-201.1. Visit and ccdVisit tables
-################################
+###################
+201.1. Object table
+###################
 
 .. raw:: html
-    :file: 201_1_Visit_and_ccdVisit_tables.html
+    :file: 201_1_Object_table.html

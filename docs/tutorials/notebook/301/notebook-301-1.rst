@@ -5,4 +5,4 @@
 ##############################
 
 .. raw:: html
-    :file: 301_1_47_Tuc_globular_cluster.html
+    :file: 301_1_47Tuc_Globular_Cluster.html
