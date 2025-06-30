@@ -41,13 +41,15 @@ Enter into the ADQL box, and execute the query below, which will retrieve g- and
    AND g_cModelFlux > 360
    AND r_cModelFlux > 360
 
+The plot in "Active Charts" panel shows the number of objects as a function of position in the selected region.
+
 **2. Add a new chart, and choose histogram.**
 In the Active Chart panel, click on the "+" button in the upper-left corner of the panel.
 In the "Add New Chart" pop-up window select "Histogram" as the plot type and enter ``g_cModelMag`` as the column (Figure 1).
 Click "OK".
 
-.. figure:: ./portal-104-9-1.png
-	:name: portal-104-9-1
+.. figure:: ./images/portal-104-6-1.png
+	:name: portal-104-6-1
 	:width: 400
 	:alt: Screenshot of the "Add New Chart" pop-up window, set up for a histogram.
 
@@ -56,15 +58,14 @@ Figure 1: The "Add New Chart" pop-up window, set up for a histogram.
 
 **3. Delete the default chart.** Remove the default plot of ``coord_ra`` vs. ``coord_dec`` by clicking on the "x" in the upper right corner of the plot.
 
-
 **4. Add a new chart, and choose heatmap.**
 Open the "Add New Chart" pop-up window.
 Select "Heatmap" as the plot type and enter ``g_cModelMag`` for X and the expression ``g_cModelMag`` - ``r_cModelMag`` for Y (Figure 2).
 Leave the Color Scale as "Default".
 Click "OK".
 
-.. figure:: ./portal-104-9-2.png
-	:name: portal-104-9-2
+.. figure:: ./portal-104-6-2.png
+	:name: portal-104-6-2
 	:width: 400
 	:alt: Screenshot of the "Add New Chart" pop-up window, set up for a heatmap.
 
@@ -73,8 +74,8 @@ Figure 2: The "Add New Chart" pop-up window, set up for a heatmap.
 **5. View the histogram and the heatmap.**
 The Active Charts panel now displays a 1-dimensional histogram of the g-band magnitudes at left, and a 2-dimensional histogram (a heatmap) of the g-band magnitude vs. the g-r color at right, as in Figure 3.
 
-.. figure:: ./portal-104-9-3.png
-	:name: portal-104-9-3.png
+.. figure:: ./portal-104-6-3.png
+	:name: portal-104-6-3.png
 	:alt: Screenshot of the Active Charts showing a 1-d histogram and a 2-d heatamp.
 
 Figure 3: The Active Charts panel displays the g-magnitude histogram and the color-magnitude diagram.
