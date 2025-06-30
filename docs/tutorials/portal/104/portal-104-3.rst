@@ -37,7 +37,7 @@ that are brighter than 22 mag in *g* and *r*.
 
 
 **2. View the table in the results interface**.
-Only one query has been executed, so there is only one tab in the table panel (A in Figure 1).
+It should appear similar to Figure 1.
 
 .. figure:: images/portal-104-3-1.png
     :name: portal-104-3-1

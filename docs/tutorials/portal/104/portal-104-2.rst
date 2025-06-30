@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-06-29
 
-**Learning objective:** How to use the coverage chart in the results interface.
+**Learning objective:** Use the coverage chart in the results interface.
 
 **LSST data products:** ``Object`` table
 
