@@ -20,13 +20,6 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
-**Terminology:**
-
-* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
-* PNG: Portable Network Graphic
-* color: The difference in magnitude (brightness) between adjacent bands (e.g., g-r, r-i).
-* CMD: color-magnitude diagram, a plot with a color on one axis and magnitude on the other.
-
 ----
 
 **1. Log in to the Portal and execute a query.**
