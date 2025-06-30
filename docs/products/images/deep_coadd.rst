@@ -24,7 +24,7 @@ Butler
 SIA and TAP
 -----------
 
-Schema: `ObsCore table <https://sdm-schemas.lsst.io/dp1.html#ObsCore>`_
+Schema: `ObsCore table <https://sdm-schemas.lsst.io/ivoa_obscore.html>`_
 
 IVOA calibration level: 3
 

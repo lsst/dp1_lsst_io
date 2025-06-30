@@ -7,7 +7,7 @@
    :width: 15
    :alt: DOI Logo
 
-.. |dp1_paper| replace:: ``DP1 paper reference``
+.. |dp1_paper| replace:: ``DP1 paper reference placeholder: rtn-095.lsst.io``
 
 .. |comcam_doi| replace:: *Citation*: **SLAC National Accelerator Laboratory and NSF-DOE Vera C. Rubin Observatory** (2024); LSST Commissioning Camera |doi_image| https://doi.org/10.71929/rubin/2561361
 

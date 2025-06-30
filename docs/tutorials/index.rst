@@ -6,13 +6,20 @@ Data access and analysis
 
 Tutorials demonstrating how to access and analyze data via the Rubin Science Platform (RSP).
 
+**Data rights:** it is necessary to have an account in the Rubin Science Platform (RSP) to access Data Preview 1,
+and it is necessary to be a Rubin data rights holder in order to have an RSP account.
+All scientists in students in the US and Chile, plus named members of international in-kind teams,
+have Rubin data rights.
+
+`Learn more about the Rubin data policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`_.
+
+
 .. _tutorials-getstarted:
 
 Get started
 ===========
 
-To set up a new account in the RSP, visit the `RSP documentation <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
-
+**To set up a new account in the RSP**, visit the `RSP documentation <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
 To learn more about the RSP's functionality, see the `RSP user guides <https://rsp.lsst.io/guides/index.html>`_ or work through the tutorials.
 
 Tutorials are organized into levels (100, 200, 300), and levels into topical series, which proceed from beginner to more advanced topics.
