@@ -13,7 +13,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Learning objective:** Plot a light curve of an object with known coordinates.
 The most reliable way is to first determine the ``diaObjectId`` of the object, and use that to perform forced photometry at the location of the object.
 
-**LSST data products:** DP1 ``DiaObject`` and ``ForcedSourceOnDiaObject`` catalogs
+**LSST data products:** DP1 ``DiaObject`` and ``ForcedSourceOnDiaObject`` catalogs.
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -40,15 +40,17 @@ Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
 As a default, the "Coverage" panel (upper left) will display the "Deep Coadd" field image containing the coordinates entered in the search.
 The "Active Chart" panel will display the default plot, dec as a function of RA.
+The table on the bottom will display the requested columns.
 
-.. figure:: ./portal-104-10-1.png
-    :name: portal-104-10-1
+.. figure:: ./images/portal-104-7-1.png
+    :name: portal-104-1-7
     :alt: Default search results from a query.
 
     Figure 1: The default results view obtained by executing of the query described above.
-The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections.
+The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections (in the column``nDiaSources``
 
-**4.  Execute the ADQL query to retrieve the object's light curve.**
+**3.  Execute the ADQL query to retrieve the object's light curve.**
+This query joins the ``ForcedSourceOnDiaObject`` table (cointaing fluxes) with the ``Visit`` table (containing the MJD observation epoch) on a common metadata ``visit``.
 
 .. code-block:: SQL
 
@@ -60,12 +62,12 @@ The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagre
         ON visinfo.visit = src.visit
         WHERE diaObjectId = 611256447031836758
 
-**5. Select the quantities to be plotted.**
+**4. Select the quantities to be plotted.**
 By default, the plot on the upper right hand side panel is of the dec as a function of RA.
 To change this, click on the "gear" above the plot, and enter the parameters as in the screenshot below.
 
-.. figure:: ./portal-104-10-2.png
-    :name: portal-104-10-2
+.. figure:: ./images/portal-104-7-2.png
+    :name: portal-104-7-2
     :width: 500
     :alt: Parameters for the light curve plot
 
@@ -75,8 +77,8 @@ To change this, click on the "gear" above the plot, and enter the parameters as 
 Click "Apply" - this will result in the light curve measured in several filters.
 On the table at the bottom, click on the box below the column header "band" and check only "i" for this filter.
 
-.. figure:: ./portal-104-10-3.png
-    :name: portal-104-10-3
+.. figure:: ./portal-104-7-3.png
+    :name: portal-104-7-3
     :alt: The i-band light curve plot
 
     Figure 3: The light curve of the selected target in the ``i`` band as a function of observation epoch (in MJD-60000).
