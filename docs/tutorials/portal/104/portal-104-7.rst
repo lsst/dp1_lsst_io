@@ -24,15 +24,8 @@ Rubin staff will respond to all questions posted there.
 ----
 
 **1. Log in to the Portal and execute a query.**
-Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface, and execute the query below.
-
-**1. Go to the Portal's DP0.2 Catalogs tab.**
-If needed, reload the webpage in the browser to clear any previously-entered constraints.
-Click on "Edit ADQL" tab.
-
-**2. Enter an ADQL statement in the box.**
-As an example, copy paste the statement below.
-This step will return the ``diaObjectId`` for the object with coordinates in the box below.
+Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface (click on "Edit ADQL" tab), and enter the query below.
+This step will return the ``diaObjectId`` for the object with coordinates in the query.
 
 .. code-block:: SQL
 
@@ -42,9 +35,11 @@ This step will return the ``diaObjectId`` for the object with coordinates in the
         WHERE CONTAINS(POINT('ICRS', ra, dec),
         CIRCLE('ICRS', 53.112562, -27.684829, 0.00028)) = 1
 
-**3. Execute the ADQL query to retrieve the object ID.**
+**2. Execute the ADQL query to retrieve the object ID.**
 Click the Search button at lower left.
 The query will be executed and the results will appear in the Results tab.
+As a default, the "Coverage" panel (upper left) will display the "Deep Coadd" field image containing the coordinates entered in the search.
+The "Active Chart" panel will display the default plot, dec as a function of RA.
 
 .. figure:: ./portal-104-10-1.png
     :name: portal-104-10-1
