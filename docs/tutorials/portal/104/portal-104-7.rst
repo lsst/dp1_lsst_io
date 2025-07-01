@@ -47,10 +47,10 @@ The table on the bottom will display the requested columns.
     :alt: Default search results from a query.
 
     Figure 1: The default results view obtained by executing of the query described above.
-The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections (in the column``nDiaSources``
+The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections (in the column``nDiaSources``).
 
-**3.  Execute the ADQL query to retrieve the object's light curve.**
-This query joins the ``ForcedSourceOnDiaObject`` table (cointaing fluxes) with the ``Visit`` table (containing the MJD observation epoch) on a common metadata ``visit``.
+**3.  Execute another ADQL query, to retrieve the object's light curve.**
+This query joins the ``ForcedSourceOnDiaObject`` table (containing fluxes and flux errors) with the ``Visit`` table (containing the MJD observation epoch) on a common metadata ``visit``.
 
 .. code-block:: SQL
 
@@ -73,7 +73,7 @@ To change this, click on the "gear" above the plot, and enter the parameters as 
 
     Figure 2: The box with selection of parameters for the plot of the light curve of the selected target as a fnction of observation epoch (in MJD-60000).
 
-**6. Plot the light curve of the object.**
+**5. Plot the light curve of the object.**
 Click "Apply" - this will result in the light curve measured in several filters.
 On the table at the bottom, click on the box below the column header "band" and check only "i" for this filter.
 
