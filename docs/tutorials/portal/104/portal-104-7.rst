@@ -77,7 +77,7 @@ To change this, click on the "gear" above the plot, and enter the parameters as 
 Click "Apply" - this will result in the light curve measured in several filters.
 On the table at the bottom, click on the box below the column header "band" and check only "i" for this filter.
 
-.. figure:: ./portal-104-7-3.png
+.. figure:: ./images/portal-104-7-3.png
     :name: portal-104-7-3
     :alt: The i-band light curve plot
 
