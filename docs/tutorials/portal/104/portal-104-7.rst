@@ -46,7 +46,7 @@ The default "Coverage Chart" marks the ``DiaObjects`` on the HiPS map and the de
 The table on the bottom displays the returned ``DiaObjects``, and it is the one with the large number of detections
 (``diaObjectId`` = 611256447031836758) that is the time domain object of interest.
 
-.. figure:: ./images/portal-104-7-1.png
+.. figure:: images/portal-104-7-1.png
     :name: portal-104-1-7
     :alt: Default search results from a query.
 
@@ -71,7 +71,7 @@ This query joins the ``ForcedSourceOnDiaObject`` table (containing fluxes and fl
 To change the plot from the default of RA vs. Dec, click on the "gear" above the plot, and enter the parameters as in the screenshot below.
 Click "Apply" - this will result in the light curve measured in several filters.
 
-.. figure:: ./images/portal-104-7-2.png
+.. figure:: images/portal-104-7-2.png
     :name: portal-104-7-2
     :width: 500
     :alt: Parameters for the light curve plot
@@ -82,7 +82,7 @@ Click "Apply" - this will result in the light curve measured in several filters.
 In the table at the bottom of the screen, click on the box below the column header "band" and check only "i",
 and the plot will update to be just the *i*-band light curve.
 
-.. figure:: ./images/portal-104-7-3.png
+.. figure:: images/portal-104-7-3.png
     :name: portal-104-7-3
     :alt: The i-band light curve plot
 
