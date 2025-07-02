@@ -61,7 +61,7 @@ The default plot will be the first two columns of the returned data table.
 In Figure 1, this is RA vs. Dec.
 This plot will switch to a two-dimensional histogram if so many objects are returned that individual points cannot be distinguished.
 
-## 3.3. Table.**
+**3.3. Table.**
 The table's default location is along the bottom; C in Figure 1.
 A scrollable, filterable table of the returned data, with the first row selected by default and shown in orange.
 Note that the orange point in the active chart corresponds to the selected row.
