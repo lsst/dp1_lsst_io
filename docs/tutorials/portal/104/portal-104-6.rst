@@ -51,7 +51,7 @@ Click "OK".
 
 .. figure:: images/portal-104-6-1.png
     :name: portal-104-6-1
-	:width: 400
+    :width: 400
     :alt: Screenshot of the "Add New Chart" pop-up window, set up for a histogram.
 
     Figure 1: The "Add New Chart" pop-up window, set up for a histogram.
@@ -68,7 +68,7 @@ Click "OK".
 
 .. figure:: images/portal-104-6-2.png
     :name: portal-104-6-2
-	:width: 400
+    :width: 400
     :alt: Screenshot of the "Add New Chart" pop-up window, set up for a heatmap.
 
     Figure 2: The "Add New Chart" pop-up window, set up for a heatmap.
