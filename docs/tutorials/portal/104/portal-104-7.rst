@@ -8,12 +8,12 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 7/1/2025
+**Last verified to run:** 2025-07-01
 
 **Learning objective:** Plot a light curve of an object with known coordinates.
 The most reliable way is to first determine the ``diaObjectId`` of the object, and use that to perform forced photometry at the location of the object.
 
-**LSST data products:** DP1 ``DiaObject`` and ``ForcedSourceOnDiaObject`` catalogs.
+**LSST data products:** ``DiaObject`` and ``ForcedSourceOnDiaObject`` tables
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -47,7 +47,8 @@ The table on the bottom will display the requested columns.
     :alt: Default search results from a query.
 
     Figure 1: The default results view obtained by executing of the query described above.
-The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections (in the column``nDiaSources``).
+    The appropriate ``diaObjectId`` - 611256447031836758 - is the one with the lagrest number of significant detections (in the column``nDiaSources``).
+
 
 **3.  Execute another ADQL query, to retrieve the object's light curve.**
 This query joins the ``ForcedSourceOnDiaObject`` table (containing fluxes and flux errors) with the ``Visit`` table (containing the MJD observation epoch) on a common metadata ``visit``.
