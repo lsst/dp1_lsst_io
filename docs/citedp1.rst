@@ -23,3 +23,30 @@ When asked to cite the DP1 dataset as a whole please use:
 
 If you only use a specific subset, such as only querying the Objects catalog or only using the deep coadd images, you may cite the DOI explicitly assigned to that subset.
 Each individual page in :ref:`products` includes the relevant DOI.
+
+
+How to refer to single objects from DP1 data
+============================================
+
+If you are referring to individual sources or objects from the Data Preview 1 catalogs, please use the naming convention described here, which has been registered with the International Astronomical Union (IAU).
+All designations should begin with "LSST-DP1" (denoting the Legacy Survey of Space and Time, Data Preview 1), followed by a string that specifies which table the object was obtained from.
+These strings should be "O" (for the ``Object`` table), "S" (``Source``), "DO" (``DiaObject``), "DS" (``DiaSource``), or "SSO" (``SSObject``).
+Following this table identifier, the (18-digit for all tables except ``SSObject``, for which the ID is 17 digits long) unique numeric identifier from the specified table (i.e., the ``objectId``, ``sourceId``, ``diaObjectId``, ``diaSourceId``, or ``ssObjectId``) should be included.
+The "fields" of the identifier should be separated by dashes, so that the designation appears like "LSST-DP1-TAB-123456789012345678."
+To summarize, here are examples for objects from each table:
+
+* ``Object``: LSST-DP1-O-609788942606161356 (for ``objectId`` 609788942606161356)
+* ``Source``: LSST-DP1-S-600408134082103129 (for ``sourceId`` 600408134082103129)
+* ``DiaObject``: LSST-DP1-DO-609788942606140532 (for ``diaObjectId`` 609788942606140532)
+* ``DiaSource``: LSST-DP1-DS-600359758253260853 (for ``diaSourceId`` 600359758253260853)
+* ``SSObject``: LSST-DP1-SSO-21163611375481943 (for ``ssObjectId`` 21163611375481943)
+
+All catalog entries reported in DP1 tables will have at least one of these five types of IDs.
+Refer to the following list for the identifier in each of the remaining tables that are provided with DP1:
+
+* ``ForcedSource``: ``objectId``
+* ``ForcedSourceOnDiaObject``: ``diaObjectId``
+* ``SSSource``: ``diaSourceId`` or ``ssObjectId``
+* ``MPCORB``: ``ssObjectId``
+
+
