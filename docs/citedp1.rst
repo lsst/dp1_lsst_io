@@ -8,6 +8,9 @@ How to cite Data Preview 1
 
 When citing this data release please reference the data release paper: |dp1_paper|.
 
+For AAS publications please refer to the `facility <https://journals.aas.org/facility-keywords/>`_ as "Rubin:Simonyi" and for DP1 use "Rubin:Simonyi (LSSTComCam)".
+The `Minor Planet Center <https://minorplanetcenter.net/iau/lists/ObsCodesF.html>`_ has allocated the telescope code X05.
+
 The instrument itself can be formally cited as
 
 |comcam_doi|

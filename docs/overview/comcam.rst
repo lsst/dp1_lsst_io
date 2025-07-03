@@ -8,7 +8,7 @@ LSST Commissioning Camera
 
 The LSST Commissioning Camera, LSSTComCam (`lsstcomcam.lsst.io <https://lsstcomcam.lsst.io/>`_),
 is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_.
-LSSTComCam is also referred to as the engineering test camera.
+LSSTComCam is also referred to as the engineering test camera and informally within the project as ComCam.
 
 .. _comcam-focalplane:
 
