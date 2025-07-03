@@ -37,7 +37,7 @@ Description
 A "DIA object" is an astrophysical transient or variable object at a static sky coordinate.
 
 The DIA object table is created by associating DIA sources within a 1 arcsecond radius.
-DIA objects are assigned to a ``tract`` and ``patch`` based on their ``(ra, dec`` at ``radecMjdTai``.
+DIA objects are assigned to a ``tract`` and ``patch`` based on their ``ra, dec`` at ``radecMjdTai``.
 DIA objects are only created in the non-overlapping ``tract`` and ``patch`` inner regions.
 
 The DIA object catalog contains derived per-filter variability parameters such as the minimum, mean,
