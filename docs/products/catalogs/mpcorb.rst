@@ -6,9 +6,9 @@ MPCORB
 
 The orbit catalog produced by the `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC).
 
-Columns: 10
-
-Rows: 1,425,270
+* Observatory Code: X05
+* Columns: 10
+* Rows: 1,425,270
 
 Schema: `MPCORB table <https://sdm-schemas.lsst.io/dp1.html#MPCORB>`_
 
