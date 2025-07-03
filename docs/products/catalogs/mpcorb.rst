@@ -4,7 +4,7 @@
 MPCORB
 ######
 
-The orbit catalog produced by the `Minor Planets Center <https://minorplanetcenter.net/>`_ (MPC).
+The orbit catalog produced by the `Minor Planet Center <https://minorplanetcenter.net/>`_ (MPC).
 
 * Observatory Code: X05
 * Columns: 10
