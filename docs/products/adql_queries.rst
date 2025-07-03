@@ -49,6 +49,33 @@ This can be thought of as the database being divided up by spatial region (shard
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search, minimize the number of shards that have to be searched through, and are typically faster (and can be much faster) than ADQL query statements that have no (or very wide) spatial constraints, or only include constraints for other columns.
 
 Use either an ADQL Cone Search or a Polygon Search.
-Do **not** use of column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
+**Do not** use of column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
 
+
+Specify the columns
+===================
+
+It is recommended to only retrieve the columns that are needed for a given analysis.
+
+Most queries should specify columns by name and should **not use** of ``SELECT * FROM``.
+The ``Object`` table, for example, has over 1000 columns.
+
+
+Use TOP instead of LIMIT
+========================
+
+For debugging and testing queries, the recommended way to restrict the number of rows returned is to use very small spatial regions, if possible, instead of TOP.
+The TAP service first applies WHERE constraints, then ORDER BY, and then TOP.
+If the query is not well constrained, i.e., if thousands or more objects meet the WHERE constraints, then they all must first be sorted before the top number are returned.
+
+However, it can be useful to only retrieve a subset of the rows which meet the query constraints.
+To do this, use ``SELECT TOP N`` where ``N`` is the number of rows.
+
+For users with TAP experience, passing ``maxrec`` when the job is submitted will also work, but use of TOP is recommended.
+
+Use caution if combining TOP and ORDER BY
+-----------------------------------------
+
+Combined use of TOP and ORDER BY in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
+It is best to only combine TOP and ORDER BY if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
 
