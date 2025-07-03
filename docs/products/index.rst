@@ -60,6 +60,7 @@ Extra details and helpful hints.
     :maxdepth: 1
     :glob:
 
+    adql_queries
     butler_terminology
     known_issues_and_subtleties
     name_changes
