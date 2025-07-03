@@ -9,7 +9,7 @@ The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astrono
 ADQL is based on the Structured Query Language (SQL).
 
 .. Important::
-    If a query takes longer than expected, please :ref:`Get support` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
+    If a query takes longer than expected, please :ref:`tutorials-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
     Rubin staff are happy to investigate and to help tweak queries for optimal execution.
 
 
@@ -18,7 +18,7 @@ Use asynchronous queries
 
 In the Notebook Aspect, execute TAP queries "asynchronously".
 
-This means submit the query job separately from fetching the results, as demonstrated in Section 4 of Notebook tutorial :doc:`docs/tutorials/notebook/102/notebook-102-1`.
+This means submit the query job separately from fetching the results, as demonstrated in Section 4 of Notebook tutorial :doc:`/tutorials/notebook/102/notebook-102-1`.
 
 Where ``query`` is an ADQL statement, an asynchronous job can be run with the following code,
 which will print the job phase and show the error traceback if the job did not complete.
