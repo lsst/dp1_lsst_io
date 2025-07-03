@@ -84,8 +84,9 @@ If multiple tabs are present above the upper left panel in the default Results t
 **5. Execute a three-table join.**
 The ``Object`` table (photometry in the deepCoadd images) can be joined with the
 ``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
-The ``ForcedSource`` table can be joined with the ``Visit`` table using ``VisitId``.
-Constraints can be applied on columns from any or all tables.
+The ``ForcedSource`` table can be joined with the ``CcdVisit`` table (metadata about individual visits) using a shared column, named ``Visit``
+in the ``ForcedSource`` table and ``VisitId`` in the ``CcdVisit`` table,
+which identifies an LSST visit.
 
 .. code-block:: SQL
 
@@ -93,10 +94,10 @@ Constraints can be applied on columns from any or all tables.
          scisql_nanojanskyToAbMag(obj.i_psfFlux) AS obj_i_psfAbMag,
          scisql_nanojanskyToAbMag(fs.psfFlux) AS fs_psfAbMag,
          cv.VisitId, cv.expMidptMJD, cv.seeing
-  FROM dp1_v29.Object AS obj
-  JOIN dp1_v29.ForcedSource AS fs
+  FROM dp1.Object AS obj
+  JOIN dp1.ForcedSource AS fs
   ON obj.objectId = fs.objectId
-  JOIN dp1_v29.CcdVisit AS cv
+  JOIN dp1.CcdVisit AS cv
   ON fs.Visit = cv.VisitId
   WHERE CONTAINS(POINT('ICRS', obj.coord_ra, obj.coord_dec),
         CIRCLE('ICRS', 53.13, -28.10, 0.05)) = 1
