@@ -48,18 +48,3 @@ A summary of the mean PSF for visit images, and the coadded depth.
 
     iqsummary
     artifacts
-
-
-
-.. _overview-citedp1:
-
-How to cite Data Preview 1
-==========================
-
-How to cite Rubin Observatory and Data Preview 1.
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    citedp1

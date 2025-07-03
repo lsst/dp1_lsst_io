@@ -53,3 +53,16 @@ Tutorials demonstrating how to access and analyze data via the Rubin Science Pla
    :titlesonly:
 
    Tutorials <tutorials/index>
+
+.. _overview-citedp1:
+
+How to cite Data Preview 1
+==========================
+
+How to cite Rubin Observatory and Data Preview 1.
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    citedp1
