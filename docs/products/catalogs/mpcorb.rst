@@ -5,10 +5,7 @@ MPCORB
 ######
 
 The orbit catalog produced by the `Minor Planet Center <https://minorplanetcenter.net/>`_ (MPC).
-
-* Observatory Code: X05
-* Columns: 10
-* Rows: 1,425,270
+The MPC has assigned `"observatory code" <https://minorplanetcenter.net/iau/lists/ObsCodesF.html>`_ ``X05`` to the Rubin Observatory.
 
 Schema: `MPCORB table <https://sdm-schemas.lsst.io/dp1.html#MPCORB>`_
 
@@ -20,7 +17,9 @@ The MPCORB catalog is accessible via the TAP service only.
 TAP
 ---
 
-Table name: ``MPCORB``
+* Table name: ``MPCORB``
+* Columns: 10
+* Rows: 1,425,270
 
 Butler
 ------
