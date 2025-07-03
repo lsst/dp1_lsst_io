@@ -24,19 +24,21 @@ Where ``query`` is an ADQL statement, an asynchronous job can be run with the fo
 which will print the job phase and show the error traceback if the job did not complete.
 
 .. code-block:: SQL
-    job = service.submit_job(query)
-    job.run()
-    job.wait(phases=['COMPLETED', 'ERROR'])
-    print('Job phase is', job.phase)
-    if job.phase == 'ERROR':
-        job.raise_if_error()
+
+  job = service.submit_job(query)
+  job.run()
+  job.wait(phases=['COMPLETED', 'ERROR'])
+  print('Job phase is', job.phase)
+  if job.phase == 'ERROR':
+      job.raise_if_error()
 
 
 Then this code can be run separately to fetch the results, if the job completed.
 
 .. code-block:: SQL
-    assert job.phase == 'COMPLETED'
-    results = job.fetch_result()
+
+  assert job.phase == 'COMPLETED'
+  results = job.fetch_result()
 
 
 Use spatial constraints
