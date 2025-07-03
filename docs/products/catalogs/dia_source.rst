@@ -31,6 +31,8 @@ Butler
 * Format: Parquet
 * Number of Butler datasets: |source_butler_count|
 
+DIA sources are sharded by ``tract``, not ``visit`` in order to make them easier to join to their :ref:`catalogs-dia-object`.
+
 Description
 ===========
 
