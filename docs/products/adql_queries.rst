@@ -44,6 +44,8 @@ Then this code can be run separately to fetch the results, if the job completed.
 Use spatial constraints
 =======================
 
+It is recommended to always include spatial constraints.
+
 Qserv stores catalog data sharded by coordinate (RA, Dec).
 This can be thought of as the database being divided up by spatial region (shard) and distributed across multiple servers.
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search, minimize the number of shards that have to be searched through, and are typically faster (and can be much faster) than ADQL query statements that have no (or very wide) spatial constraints, or only include constraints for other columns.
@@ -52,12 +54,24 @@ Use either an ADQL Cone Search or a Polygon Search.
 **Do not** use of column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
 
 
+Retrieve forced photometry by identifier
+========================================
+
+It is recommended to query the ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) table by ``objectId`` (or ``diaObjectId``), and **not by** coordinates.
+
+The ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) table should only be used to retrieve all forced photometry measurements in the direct and difference images (i.e., light curves) for one or more ``Object`` (or ``DiaObject``) record(s).
+
+It is recommended to first query the ``Object`` (or ``DiaObject``) table with spatial constraints to obtain the ``objectId`` (or ``diaObjectId``) for the target(s) of interest, and then retrieve the forced photometry.
+
+Alternatively, advanced TAP users may query the ``Object`` (or ``DiaObject``) table with spatial constraints and join on the ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) tables to combine the two steps into one.
+
+
 Specify the columns
 ===================
 
 It is recommended to only retrieve the columns that are needed for a given analysis.
 
-Most queries should specify columns by name and should **not use** of ``SELECT * FROM``.
+Most queries should specify columns by name and should **not use** ``SELECT * FROM``.
 The ``Object`` table, for example, has over 1000 columns.
 
 
@@ -78,4 +92,3 @@ Use caution if combining TOP and ORDER BY
 
 Combined use of TOP and ORDER BY in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
 It is best to only combine TOP and ORDER BY if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
-
