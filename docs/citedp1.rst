@@ -53,7 +53,7 @@ Reporting data to external systems
 ==================================
 
 When reporting discoveries or followup information from DP1 to external archives and messaging mechanisms
-(e.g., the `IAU Transient Name Service <https://wis-tns.org/>`_),
+(e.g., the `IAU Transient Name Service <https://www.wis-tns.org/>`_),
 please remember to use "LSSTComCam" as the instrument name and "Rubin:Simonyi"
 (or just "Rubin" if that's not available) as the observatory/facility/telescope name,
 and please look for an option to report filters as "LSST" and not "Sloan", despite the similarity in photometric systems.
