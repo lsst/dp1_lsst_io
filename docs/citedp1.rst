@@ -28,7 +28,7 @@ Each individual page in :ref:`products` includes the relevant DOI.
 How to refer to single objects from DP1 data
 ============================================
 
-If you are referring to individual sources or objects from the Data Preview 1 catalogs, please use the naming convention described here, which has been registered with the International Astronomical Union (IAU).
+If you are referring to individual sources or objects from the Data Preview 1 catalogs, please use the naming convention described here, which has been registered with the International Astronomical Union (IAU) and was developed following `IAU specifications <https://cdsweb.u-strasbg.fr/Dic/iau-spec.html>`_.
 All designations should begin with "LSST-DP1" (denoting the Legacy Survey of Space and Time, Data Preview 1), followed by a string that specifies which table the object was obtained from.
 These strings should be "O" (for the ``Object`` table), "S" (``Source``), "DO" (``DiaObject``), "DS" (``DiaSource``), or "SSO" (``SSObject``).
 Following this table identifier, the (18-digit for all tables except ``SSObject``, for which the ID is 17 digits long) unique numeric identifier from the specified table (i.e., the ``objectId``, ``sourceId``, ``diaObjectId``, ``diaSourceId``, or ``ssObjectId``) should be included.
