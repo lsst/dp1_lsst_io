@@ -1,4 +1,5 @@
 .. _products_lsdb:
+
 ####
 LSDB
 ####
@@ -8,4 +9,5 @@ LSDB is a python tool for scalable analysis of large catalogs (query and cross-m
 Built on top of `Dask <https://docs.dask.org/en/stable/>`_,
 LSDB uses the `HATS <https://hats.readthedocs.io/en/stable/>`_ (Hierarchical Adaptive Tiling Scheme) data format to efficiently perform spatial operations.
 
-Find LSDB tutorials for accessing Rubin data at `lsdb.io/dp1 <https://docs.lsdb.io/en/latest/tutorials/pre_executed/rubin_dp1.html>`_. Additional information and explanations of different data products are available at `https://data.lsdb.io/#Rubin_DP1 <https://data.lsdb.io/#Rubin_DP1>`.
+Find LSDB tutorials for accessing Rubin data at `lsdb.io/dp1 <https://docs.lsdb.io/en/latest/tutorials/pre_executed/rubin_dp1.html>`_.
+Additional information and explanations of different data products are available at `data.lsdb.io <https://data.lsdb.io/#Rubin_DP1>`.
