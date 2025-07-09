@@ -1,8 +1,7 @@
 .. _products_lsdb:
-
-############################
+####
 LSDB
-############################
+####
 
 LSDB is a python tool for scalable analysis of large catalogs (query and cross-match).
 
