@@ -6,7 +6,7 @@ Query best practices (TAP/ADQL tips)
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/latest/ADQL.html>`_.
 The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST Table Access Protocol (TAP) service.
-ADQL is based on the Structured Query Language (SQL).
+ADQL is based on the 1992 ANSI-standard dialect of Structured Query Language (SQL92).
 
 .. Important::
     If a query takes longer than expected, please :ref:`tutorials-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
@@ -40,30 +40,33 @@ Then this code can be run separately to fetch the results, if the job completed.
   assert job.phase == 'COMPLETED'
   results = job.fetch_result()
 
+The RSP Portal automatically uses asynchronous mode for user queries.
 
 Use spatial constraints
 =======================
 
-It is recommended to always include spatial constraints.
+It is recommended to always include spatial constraints unless deliberately performing an all-sky analysis.
+Even in that case we strongly recommend first prototyping the query with a spatial constraint included.
 
 Qserv stores catalog data sharded by coordinate (RA, Dec).
 This can be thought of as the database being divided up by spatial region (shard) and distributed across multiple servers.
 ADQL query statements that include constraints by coordinate do not requre a whole-catalog search, minimize the number of shards that have to be searched through, and are typically faster (and can be much faster) than ADQL query statements that have no (or very wide) spatial constraints, or only include constraints for other columns.
 
-Use either an ADQL Cone Search or a Polygon Search.
-**Do not** use of column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
+Use ADQL's spherical geometry operators to perform either a Cone Search or a Polygon Search.
+These are automatically translated into efficient spatial operations in Qserv.
+**Do not** use direct column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
 
 
 Retrieve forced photometry by identifier
 ========================================
 
-It is recommended to query the ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) table by ``objectId`` (or ``diaObjectId``), and **not by** coordinates.
+It is recommended to query the ``ForcedSource`` (or ``ForcedSourceOnDiaObject``) table by ``objectId`` (or ``diaObjectId``), and **not by** coordinates.
 
-The ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) table should only be used to retrieve all forced photometry measurements in the direct and difference images (i.e., light curves) for one or more ``Object`` (or ``DiaObject``) record(s).
+The ``ForcedSource`` (or ``ForcedSourceOnDiaObject``) table should only be used to retrieve all forced photometry measurements in the direct and difference images (i.e., light curves) for one or more ``Object`` (or ``DiaObject``) record(s).
 
 It is recommended to first query the ``Object`` (or ``DiaObject``) table with spatial constraints to obtain the ``objectId`` (or ``diaObjectId``) for the target(s) of interest, and then retrieve the forced photometry.
 
-Alternatively, advanced TAP users may query the ``Object`` (or ``DiaObject``) table with spatial constraints and join on the ``ForcedSource`` (or ``ForcedSourceOnDiaObjects``) tables to combine the two steps into one.
+Alternatively, advanced TAP users may query the ``Object`` (or ``DiaObject``) table with spatial constraints and join on the ``ForcedSource`` (or ``ForcedSourceOnDiaObject``) tables to combine the two steps into one.
 
 
 Specify the columns
@@ -84,6 +87,7 @@ If the query is not well constrained, i.e., if thousands or more objects meet th
 
 However, it can be useful to only retrieve a subset of the rows which meet the query constraints.
 To do this, use ``SELECT TOP N`` where ``N`` is the number of rows.
+(Note that other SQL dialects provide a ``LIMIT`` clause for this operation, but ``TOP`` is the ADQL word for it.)
 
 For users with TAP experience, passing ``maxrec`` when the job is submitted will also work, but use of TOP is recommended.
 
