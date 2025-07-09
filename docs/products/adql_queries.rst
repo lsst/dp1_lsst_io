@@ -40,7 +40,9 @@ Then this code can be run separately to fetch the results, if the job completed.
   assert job.phase == 'COMPLETED'
   results = job.fetch_result()
 
+
 The RSP Portal automatically uses asynchronous mode for user queries.
+
 
 Use spatial constraints
 =======================
@@ -69,8 +71,8 @@ It is recommended to first query the ``Object`` (or ``DiaObject``) table with sp
 Alternatively, advanced TAP users may query the ``Object`` (or ``DiaObject``) table with spatial constraints and join on the ``ForcedSource`` (or ``ForcedSourceOnDiaObject``) tables to combine the two steps into one.
 
 
-Specify the columns
-===================
+Select only the necessary columns
+=================================
 
 It is recommended to only retrieve the columns that are needed for a given analysis.
 
@@ -78,21 +80,13 @@ Most queries should specify columns by name and should **not use** ``SELECT * FR
 The ``Object`` table, for example, has over 1000 columns.
 
 
-Use TOP instead of LIMIT
-========================
+Use caution if combining ORDER BY with TOP, LIMIT, or MAXREC
+============================================================
 
-For debugging and testing queries, the recommended way to restrict the number of rows returned is to use very small spatial regions, if possible, instead of TOP.
-The TAP service first applies WHERE constraints, then ORDER BY, and then TOP.
-If the query is not well constrained, i.e., if thousands or more objects meet the WHERE constraints, then they all must first be sorted before the top number are returned.
+For debugging and testing queries, the recommended way to restrict the number of rows returned is to use very small spatial regions and selective column constraints, if possible, instead of returning only a subset of the results with ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter.
 
-However, it can be useful to only retrieve a subset of the rows which meet the query constraints.
-To do this, use ``SELECT TOP N`` where ``N`` is the number of rows.
-(Note that other SQL dialects provide a ``LIMIT`` clause for this operation, but ``TOP`` is the ADQL word for it.)
+The TAP service first applies WHERE constraints, then ORDER BY, and then ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter.
+If the query is not well constrained, i.e., if thousands or more objects meet the WHERE constraints, then they all must first be sorted before the subset is returned.
 
-For users with TAP experience, passing ``maxrec`` when the job is submitted will also work, but use of TOP is recommended.
-
-Use caution if combining TOP and ORDER BY
------------------------------------------
-
-Combined use of TOP and ORDER BY in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
-It is best to only combine TOP and ORDER BY if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
+Combined use of ``ORDER BY`` with ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
+It is best to only combine these ADQL functionalities if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
