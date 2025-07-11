@@ -142,7 +142,7 @@ This query will retrieve the coordinates, band, and MJD for all visits from the 
 In the results interface, the central coordinates of all visits are automatically marked on the Coverage map, illustrating how the field was dithered.
 
 **4.4. Obtain the filter distribution.**
-Use the filter function in the table to select each of the *griy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 5 *g*, 25 *r*, and 12 *i*-band visits.
+Use the filter function in the table to select each of the *gri* values from the "band" column in turn, and note how many observations there were in each filter. There should be 5 *g*, 25 *r*, and 12 *i*-band visits.
 Remove the filter constraint before continuing.
 
 
@@ -215,20 +215,22 @@ The ``Object`` table, which contains detections and measurements from the ``deep
 Delete the last ADQL statement.
 
 **5.2. Execute a query on the Object table.**
-This query will retrieve the PSF and cModel magnitudes in *g* and *r* bands, as well as the ``refExtendedness`` parameter, for 86,018 objects with SNR>5 measurements in the Fornax dSph field. Set the "Low Limit" to 100,000.
+This query will retrieve the PSF and cModel magnitudes, PSF fluxes and flux errors in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for 78,714 objects with SNR>5 measurements in all three bands in the Fornax dSph field. Set the "Low Limit" to 100,000.
 
 .. code-block:: SQL
 
   SELECT coord_ra, coord_dec,
-         g_psfMag, r_psfMag,
-         g_cModelMag, r_cModelMag,
+         g_psfMag, r_psfMag, i_psfMag,
+         g_cModelMag, r_cModelMag, i_cModelMag,
          g_psfFlux, g_psfFLuxErr,
          r_psfFlux, r_psfFLuxErr,
+         i_psfFlux, i_psfFLuxErr,
          refExtendedness
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 40.080, -34.450, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
         AND r_psfFlux/r_psfFluxErr > 5
+        AND i_psfFlux/i_psfFluxErr > 5
 
 
 **5.3. Select point-like objects.**
@@ -238,17 +240,18 @@ Filter the table for only point-like objects ("stars") by filtering the ``refExt
 Add a chart and select the "Heatmap" plot type.
 Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis.
 Select 300 bins in X and 200 bins in Y.
-Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to 16, 26.
+Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26.
 Select "reverse" under "Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
-**5.5. View the plot.**
-It should resemble Figure 5.
+**5.5. Create a color-color diagram.**
+Open a new plot window by clicking the "Add a chart" button. Make another heatmap for the color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Select 200 bins in both X and Y. Set the X Min and Y Min to -1, and X Max and Y Max to 2.
+Place the two figures side-by-side, as in Figure 5.
 
 .. figure:: images/portal-301-3-5.png
     :name: portal-301-3-5
-    :alt: A plot showing color-color diagram as a heatmap.
+    :alt: Color-magnitude and color-color diagrams of stars in the Fornax dSph field.
 
-    Figure 5: A color-magnitude diagram of stars in the Fornax dSph field.
+    Figure 5: Color-magnitude and color-color diagrams of stars in the Fornax dSph field. 
 
 
 6. Exercises for the learner
