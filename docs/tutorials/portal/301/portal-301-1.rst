@@ -221,7 +221,7 @@ This query will retrieve the PSF and cModel magnitudes, PSF fluxes and flux erro
 .. code-block:: SQL
 
   SELECT coord_ra, coord_dec,
-         g_psfMag, r_psfMag, i_psfMag, 
+         g_psfMag, r_psfMag, i_psfMag,
          g_cModelMag, r_cModelMag, i_cModelMag,
          g_psfFlux, g_psfFLuxErr,
          r_psfFlux, r_psfFLuxErr,
