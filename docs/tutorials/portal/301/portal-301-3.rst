@@ -251,7 +251,7 @@ Place the two figures side-by-side, as in Figure 5.
     :name: portal-301-3-5
     :alt: Color-magnitude and color-color diagrams of stars in the Fornax dSph field.
 
-    Figure 5: Color-magnitude and color-color diagrams of stars in the Fornax dSph field. 
+    Figure 5: Color-magnitude and color-color diagrams of stars in the Fornax dSph field.
 
 
 6. Exercises for the learner
