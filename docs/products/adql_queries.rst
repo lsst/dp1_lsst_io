@@ -80,13 +80,13 @@ Most queries should specify columns by name and should **not use** ``SELECT * FR
 The ``Object`` table, for example, has over 1000 columns.
 
 
-Use caution if combining ORDER BY with TOP, LIMIT, or MAXREC
-============================================================
+Use caution if combining ORDER BY with TOP or MAXREC
+====================================================
 
-For debugging and testing queries, the recommended way to restrict the number of rows returned is to use very small spatial regions and selective column constraints, if possible, instead of returning only a subset of the results with ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter.
+For debugging and testing queries, the recommended way to restrict the number of rows returned is to use very small spatial regions and selective column constraints, if possible, instead of returning only a subset of the results with ``TOP`` or the ``MAXREC`` parameter.
 
-The TAP service first applies WHERE constraints, then ORDER BY, and then ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter.
+The TAP service first applies WHERE constraints, then ORDER BY, and then ``TOP`` or the ``MAXREC`` parameter.
 If the query is not well constrained, i.e., if thousands or more objects meet the WHERE constraints, then they all must first be sorted before the subset is returned.
 
-Combined use of ``ORDER BY`` with ``TOP``, ``LIMIT``, or the ``MAXREC`` parameter in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
+Combined use of ``ORDER BY`` with ``TOP`` or the ``MAXREC`` parameter in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
 It is best to only combine these ADQL functionalities if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
