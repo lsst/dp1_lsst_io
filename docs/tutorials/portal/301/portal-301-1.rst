@@ -27,9 +27,9 @@ Rubin staff will respond to all questions posted there.
 1. Introduction
 ===============
 
-This notebook examines the DP1 data products in the "47 Tuc" field: assess sky coverage and depth, visit distribution over time, image quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams (CMD and CCD).
+This tutorial explores the LSSTComCam observations for the "47 Tuc" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
-47 Tucanae ("47 Tuc") is a bright, dense star cluster in the constellation Tucana. The ComCam field targeting this cluster is centered at (RA, Dec) = (6.128, –72.090) degrees. It is representative of the crowded fields that LSST will encounter in the Milky Way. 47 Tuc overlaps with the Small Magellanic Cloud (SMC) on the sky, but these are distinct objects: 47 Tuc is a globular cluster of the Milky Way's halo, while the SMC is a dwarf satellite galaxy orbiting around the Milky Way.
+47 Tuc is a bright, dense star cluster in the constellation Tucana. The ComCam field targeting this cluster is centered at (RA, Dec) = (6.128, –72.090) degrees. It is representative of the crowded fields that LSST will encounter in the Milky Way. 47 Tuc overlaps with the Small Magellanic Cloud (SMC) on the sky, but these are distinct objects: 47 Tuc is a globular cluster of the Milky Way's halo, while the SMC is a dwarf satellite galaxy orbiting around the Milky Way.
 
 **Central coordinates:** (RA, Dec) = 6.128, –72.090 degrees
 
@@ -200,7 +200,7 @@ The query returns 594 results, with the central locations of each detector for e
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
 It will look like Figure 4.
 
-.. figure:: images/portal-301-7-4.png
+.. figure:: images/portal-301-1-4.png
     :name: portal-301-1-4
     :alt: A plot showing two histograms. On the left is the distribution of seeing in arcsec, and on the right a histogram of magLim in mag.
 
@@ -216,20 +216,22 @@ The ``Object`` table, which contains detections and measurements from the ``deep
 Delete the last ADQL statement.
 
 **5.2. Execute a query on the Object table.**
-This query will retrieve the PSF and cModel magnitudes in *g* and *r* bands, as well as the ``refExtendedness`` parameter, for 39,260 objects with SNR>5 measurements in the 47 Tuc field.
+This query will retrieve the PSF and cModel magnitudes, PSF fluxes and flux errors in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for 38,607 objects with SNR>5 measurements in all three bands in the 47 Tuc field.
 
 .. code-block:: SQL
 
   SELECT coord_ra, coord_dec,
-         g_psfMag, r_psfMag,
-         g_cModelMag, r_cModelMag,
+         g_psfMag, r_psfMag, i_psfMag, 
+         g_cModelMag, r_cModelMag, i_cModelMag,
          g_psfFlux, g_psfFLuxErr,
          r_psfFlux, r_psfFLuxErr,
+         i_psfFlux, i_psfFLuxErr,
          refExtendedness
   FROM dp1.Object
   WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 6.128, -72.090, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
         AND r_psfFlux/r_psfFluxErr > 5
+        AND i_psfFlux/i_psfFluxErr > 5
 
 
 **5.3. Select point-like objects.**
@@ -242,14 +244,15 @@ Select 300 bins in X and 200 bins in Y.
 Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26.
 Select "reverse" under "Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
-**5.5. View the plot.**
-It should resemble Figure 5.
+**5.5. Create a color-color diagram.**
+Open a new plot window by clicking the "Add a chart" button. Make another heatmap for the color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Select 200 bins in both X and Y. Set the X Min and Y Min to -1, and X Max and Y Max to 2.
+Place the two figures side-by-side, as in Figure 5.
 
 .. figure:: images/portal-301-1-5.png
     :name: portal-301-1-5
-    :alt: A plot showing color-color diagram as a heatmap.
+    :alt: Color-magnitude and color-color diagrams of stars in the 47 Tuc field.
 
-    Figure 5: A color-magnitude diagram of stars in the 47 Tuc field. The red box represents stellar populations in the outer SMC. 47 Tuc lies more than 2 degrees from the main body of the SMC, but a diffuse stellar population from the SMC extends into the 47 Tuc field, contributing to the color-magnitude diagram of 47 Tuc.
+    Figure 5: Color-magnitude and color-color diagrams of stars in the 47 Tuc field. The red box in the color-magnitude diagram represents stellar populations in the outer SMC. 47 Tuc lies more than 2 degrees from the main body of the SMC, but a diffuse stellar population from the SMC extends into the 47 Tuc field, contributing to the color-magnitude diagram of 47 Tuc.
 
 
 6. Exercises for the learner
