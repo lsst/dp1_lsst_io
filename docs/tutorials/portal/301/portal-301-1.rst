@@ -36,8 +36,8 @@ This tutorial explores the LSSTComCam observations for the "47 Tuc" field, inclu
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
-**1.2. Browse the ugr color HiPS map.**
-`Go to the ugr color HiPS map for the 47 Tuc field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_ugr&ra=6.128&dec=-72.09&sr=50m>`_.
+**1.2. Browse the gri color HiPS map.**
+`Go to the ugr color HiPS map for the 47 Tuc field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=6.128&dec=-72.09&sr=50m>`_.
 
 
 2. Examine a deep coadd image
@@ -51,7 +51,7 @@ Click on the "Edit ADQL" button at upper right.
 
 **2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
-This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the 47 Tuc field.
+This query will retrieve all images of subtype ``deep_coadd`` that cover the west of the 47 Tuc field, avoiding saturated regions near the center.
 
 .. code-block:: SQL
 
@@ -63,7 +63,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', 6.128, -72.090), s_region)=1
+        AND CONTAINS(POINT('ICRS', 5.288, -72.090), s_region)=1
 
 
 **2.4. View the results.**
@@ -243,6 +243,7 @@ Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``)
 Select 300 bins in X and 200 bins in Y.
 Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26.
 Select "reverse" under "Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
+Draw a selection box as shown in Figure 5. Click the "Select" icon (red circle in the figure), then click the starting point and drag to draw the box.
 
 **5.5. Create a color-color diagram.**
 Open a new plot window by clicking the "Add a chart" button. Make another heatmap for the color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Select 200 bins in both X and Y. Set the X Min and Y Min to -1, and X Max and Y Max to 2.
@@ -252,7 +253,7 @@ Place the two figures side-by-side, as in Figure 5.
     :name: portal-301-1-5
     :alt: Color-magnitude and color-color diagrams of stars in the 47 Tuc field.
 
-    Figure 5: Color-magnitude and color-color diagrams of stars in the 47 Tuc field. The red box in the color-magnitude diagram represents stellar populations in the outer SMC. 47 Tuc lies more than 2 degrees from the main body of the SMC, but a diffuse stellar population from the SMC extends into the 47 Tuc field, contributing to the color-magnitude diagram of 47 Tuc.
+    Figure 5: Color-magnitude and color-color diagrams of stars in the 47 Tuc field. The selected box in the color-magnitude diagram represents stellar populations in the outer SMC. 47 Tuc lies more than 2 degrees from the main body of the SMC, but a diffuse stellar population from the SMC extends into the 47 Tuc field, contributing to the color-magnitude diagram of 47 Tuc.
 
 
 6. Exercises for the learner
