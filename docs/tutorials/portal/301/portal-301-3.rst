@@ -37,7 +37,7 @@ The Fornax Dwarf Spheroidal is a satellite galaxy of the Milky Way in the conste
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
 **1.2. Browse the gri color HiPS map.**
-`Go to the ugr color HiPS map for the Fornax dSph field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=40.08&dec=-34.45&sr=50m>`_.
+`Go to the gri color HiPS map for the Fornax dSph field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=40.08&dec=-34.45&sr=50m>`_.
 
 
 2. Examine a deep coadd image
