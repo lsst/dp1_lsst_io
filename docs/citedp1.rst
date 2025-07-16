@@ -10,6 +10,9 @@ For general information, see `how to cite Rubin Observatory <https://rubinobserv
 DOI and publications
 ====================
 
+Data release and data products
+------------------------------
+
 When citing this data release please reference the data release paper: |dp1_paper|.
 
 When asked to cite the DP1 dataset as a whole please use:
