@@ -18,7 +18,7 @@ The SS object catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |SSObject_doi|
+* |SSObject_doi| [:download:`BibTeX </bib/tap-SSObject.bib>`]
 * Table name: ``SSObject``
 * Columns: |SSObject_columns|
 * Rows: |SSObject_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |ss_object_doi|
+* |ss_object_doi| [:download:`BibTeX </bib/butler-ss_object.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('ss_object', {}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |ss_object_butler_count|

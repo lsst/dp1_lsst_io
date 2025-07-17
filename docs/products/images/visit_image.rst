@@ -6,7 +6,7 @@ Visit image
 
 Individual processed and calibrated sky images.
 
-|visit_image_doi|
+|visit_image_doi| [:download:`BibTeX </bib/butler-visit_image.bib>`]
 
 Access
 ======

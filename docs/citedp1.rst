@@ -13,11 +13,11 @@ DOI and publications
 Data release and data products
 ------------------------------
 
-When citing this data release please reference the data release paper: |dp1_paper|.
+When citing this data release please reference the data release paper: |dp1_paper| [:download:`BibTeX </bib/paper.bib>`].
 
 When asked to cite the DP1 dataset as a whole please use:
 
-|dataset_doi|
+|dataset_doi| [:download:`BibTeX </bib/dataset.bib>`]
 
 If you only use a specific subset, such as only querying the Objects catalog or only using the deep coadd images, you may cite the DOI explicitly assigned to that subset.
 Each individual page in :ref:`products` includes the relevant DOI.
@@ -25,7 +25,7 @@ Each individual page in :ref:`products` includes the relevant DOI.
 Bibtex
 ------
 
-Find ``bibtex`` entries for all DOI in `the LSST texmf package <https://github.com/lsst/lsst-texmf/blob/main/texmf/bibtex/bib/lsst.bib>`_.
+Find ``bibtex`` entries for all DOIs and other Rubin documentation in `the LSST texmf package <https://github.com/lsst/lsst-texmf/blob/main/texmf/bibtex/bib/lsst.bib>`_.
 
 
 Telescope and instrument
@@ -36,7 +36,7 @@ The `Minor Planet Center <https://minorplanetcenter.net/iau/lists/ObsCodesF.html
 
 The instrument itself can be formally cited as
 
-|comcam_doi|
+|comcam_doi| [:download:`BibTeX </bib/camera.bib>`]
 
 and that page includes additional references describing the camera.
 

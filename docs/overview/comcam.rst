@@ -4,7 +4,7 @@
 LSST Commissioning Camera
 #########################
 
-|comcam_doi|
+|comcam_doi| [:download:`BibTeX </bib/camera.bib>`]
 
 The LSST Commissioning Camera, LSSTComCam (`lsstcomcam.lsst.io <https://lsstcomcam.lsst.io/>`_),
 is a smaller, fully functional version of `LSSTCam <https://rubinobservatory.org/for-scientists/rubin-101/instruments>`_.

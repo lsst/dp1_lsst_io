@@ -18,7 +18,7 @@ The visit catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |Visit_doi|
+* |Visit_doi| [:download:`BibTeX </bib/tap-Visit.bib>`]
 * Table name: ``Visit``
 * Columns: |Visit_columns|
 * Rows: |Visit_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |visit_table_doi|
+* |visit_table_doi| [:download:`BibTeX </bib/butler-visit_table.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('visit_table', {**instrument**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |visit_table_butler_count|

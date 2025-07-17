@@ -6,7 +6,7 @@ Raw exposure
 
 Unprocessed exposure from camera readout.
 
-|raw_doi|
+|raw_doi| [:download:`BibTeX </bib/butler-raw.bib>`]
 
 
 Access

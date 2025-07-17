@@ -18,7 +18,7 @@ The forced source catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |ForcedSource_doi|
+* |ForcedSource_doi| [:download:`BibTeX </bib/tap-ForcedSource.bib>`]
 * Table name: ``ForcedSource``
 * Columns: |ForcedSource_columns|
 * Rows: |ForcedSource_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |object_forced_source_doi|
+* |object_forced_source_doi| [:download:`BibTeX </bib/butler-object_forced_source.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('object_forced_source', {**skymap**, **tract**, **patch**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_forced_source_butler_count|

@@ -6,7 +6,7 @@ Difference image
 
 The result of subtracting a template coadd from a visit image.
 
-|difference_image_doi|
+|difference_image_doi| [:download:`BibTeX </bib/butler-difference_image.bib>`]
 
 Access
 ======

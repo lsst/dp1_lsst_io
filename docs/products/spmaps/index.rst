@@ -6,7 +6,7 @@ Survey property maps
 
 Survey-level `healsparse <https://healsparse.readthedocs.io/en/1.9.0/>`_ property maps.
 
-|survey_property_doi|
+|survey_property_doi| [:download:`BibTeX </bib/butler-survey-property.bib>`]
 
 Access
 ======
