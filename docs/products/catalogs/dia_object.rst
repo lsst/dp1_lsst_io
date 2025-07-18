@@ -18,7 +18,7 @@ The DIA object catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |DiaObject_doi|
+* |DiaObject_doi| [:download:`BibTeX </bib/tap-DiaObject.bib>`]
 * Table name: ``DiaObject``
 * Columns: |DiaObject_columns|
 * Rows: |DiaObject_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |dia_object_doi|
+* |dia_object_doi| [:download:`BibTeX </bib/butler-dia_object.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('dia_object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |dia_object_butler_count|

@@ -6,7 +6,7 @@ Deep coadd
 
 The combination of multiple processed, calibrated, and background-subtracted images, for a patch of sky, for each of the six LSST filters.
 
-|deep_coadd_doi|
+|deep_coadd_doi| [:download:`BibTeX </bib/butler-deep_coadd.bib>`]
 
 
 Access

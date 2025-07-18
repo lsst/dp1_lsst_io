@@ -18,7 +18,7 @@ The object catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |Object_doi|
+* |Object_doi| [:download:`BibTeX </bib/tap-Object.bib>`]
 * Table name: ``Object``
 * Columns: |Object_columns|
 * Rows: |Object_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |object_doi|
+* |object_doi| [:download:`BibTeX </bib/butler-object.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('object', {**skymap**, **tract**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |object_butler_count|

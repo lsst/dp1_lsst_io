@@ -18,7 +18,7 @@ The source catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |Source_doi|
+* |Source_doi| [:download:`BibTeX </bib/tap-Source.bib>`]
 * Table name: ``Source``
 * Columns: |Source_columns|
 * Rows: |Source_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |source_doi|
+* |source_doi| [:download:`BibTeX </bib/butler-source.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('source', {band, **instrument**, day_obs, physical_filter, **visit**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |source_butler_count|

@@ -6,7 +6,7 @@ Template coadd
 
 The combination of processed images with the best seeing, for a patch of sky and for each of the six LSST filters, to be used as a template for difference imaging.
 
-|template_coadd_doi|
+|template_coadd_doi| [:download:`BibTeX </bib/butler-template_coadd.bib>`]
 
 Access
 ======

@@ -18,7 +18,7 @@ The visit detector catalog is accessible via the TAP and Butler services.
 TAP
 ---
 
-* |CcdVisit_doi|
+* |CcdVisit_doi| [:download:`BibTeX </bib/tap-CcdVisit.bib>`]
 * Table name: ``CcdVisit``
 * Columns: |CcdVisit_columns|
 * Rows: |CcdVisit_rows|
@@ -26,7 +26,7 @@ TAP
 Butler
 ------
 
-* |visit_detector_table_doi|
+* |visit_detector_table_doi| [:download:`BibTeX </bib/butler-visit_detector_table.bib>`]
 * :ref:`Dataset type <products_butler_terminology>`\ : ('visit_detector_table', {**instrument**}, ArrowAstropy)
 * Format: Parquet
 * Number of Butler datasets: |visit_detector_table_butler_count|
