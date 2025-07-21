@@ -24,9 +24,11 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log into the Portal from the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
+Click on the "DP1 Catalogs" tab.
+If no tabs appear at the top, click on the "hamburger" icon (three horizontal lines on upper left) and select "DP1 Images" and "DP1 Catalogs" tabs.
 
 **2. Create a sample job.**
-For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Search.
+For the purpose of this tutorial, click the "Edit ADQL" box in the upper right hand corner and paste the following query into the box and hit Search.
 
 .. code-block:: sql
 
