@@ -101,6 +101,7 @@ The results interface is now populated with data from the new query (Figure 3).
 The table (C in Figure 3) now has two tabs, one for the old query (red) and one for the new (cyan).
 The coverage chart (A in Figure 3) includes markers for both queries, in colors that match the table.
 The active chart (B in Figure 3) is the default plot for the new query, the selected table.
+You can delete the unwanted query results by clicking "X" in the corresponding tab above the table.
 
 .. figure:: images/portal-104-1-3.png
     :name: portal-104-1-3
