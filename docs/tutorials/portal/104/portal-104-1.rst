@@ -26,9 +26,8 @@ Rubin staff will respond to all questions posted there.
 Log in to the Portal, click on the DP1 Catalogs tab, and switch to the ADQL interface.
 
 **2. Execute a query.**
-Enter the query below into the ADQL box, and clear "Search".
-This query returns coordinates and magnitudes for objects near the center of the ECDFS field
-that are brighter than 22 mag in *g* and *r*.
+Enter the query below into the ADQL box, and click "Search".
+This query returns coordinates and magnitudes for objects near the center of the ECDFS field that are brighter than 22 mag in *g* and *r*.
 
 .. code-block:: SQL
 
