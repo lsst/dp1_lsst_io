@@ -24,7 +24,7 @@ Rubin staff will respond to all questions posted there.
 
 * `HiPS <https://aladin.cds.unistra.fr/hips/>`_: Hierarchical Progressive Surveys
 * `MOC <https://www.ivoa.net/documents/MOC/>`_: Multi-Order Coverage map
-* `ADQL <https://www.ivoa.net/documents/latest/ADQL.html>`_: Astronomy Query Data Language
+* `ADQL <https://www.ivoa.net/documents/ADQL>`_: Astronomy Query Data Language
 * `HEALPix <https://healpix.sourceforge.io/>`_: Hierarchical Equal Area isoLatitude Pixelation of a sphere
 * `regions <https://ds9.si.edu/doc/ref/region.html>`_ file: a standard format for marking regions in an image
 * `WCS <https://fits.gsfc.nasa.gov/fits_wcs.html>`_: World Coordinate System (the convention that defines the coordinates per pixel)
