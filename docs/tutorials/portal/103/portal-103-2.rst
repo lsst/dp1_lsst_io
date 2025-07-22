@@ -24,7 +24,7 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 An introduction to ADQL
 =======================
 
-The `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html>`_
+The `documentation for ADQL <http://www.ivoa.net/documents/ADQL>`_
 includes more information about syntax, keywords, operators, functions, and so on.
 ADQL is similar to SQL (Structured Query Langage).
 
