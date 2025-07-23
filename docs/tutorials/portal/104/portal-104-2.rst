@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-29
+**Last verified to run:** 2025-07-23
 
 **Learning objective:** Use the coverage chart in the results interface.
 
