@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Data Release:** Data Preview 1
 
-**Last verified to run:** 2025-06-28
+**Last verified to run:** 2025-07-23
 
 **Learning objective:** Navigate the main components of the Portal's user interface (UI).
 
@@ -29,7 +29,7 @@ In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the
 On the Portal landing page, click on the tab labeled "DP1 Catalogs".
 
 **3. Mouse-over for pop-up notes.**
-In the "DP1 Catalogs" tab (Figure 1) use the mouse to hover-over the components of the UI and see pop-up explanations of the functionality.
+In the "DP1 Catalogs" tab (Figure 1) use the mouse to hover-over the components of the UI or click on the question marks and see pop-up explanations of the functionality.
 
 .. figure:: images/portal-102-1-1.png
     :name: portal-102-1-1

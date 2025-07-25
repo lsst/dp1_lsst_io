@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-29
+**Last verified to run:** 2025-07-23
 
 **Learning objective:** Navigate the multi-panel interface for catalog data results.
 
@@ -26,9 +26,8 @@ Rubin staff will respond to all questions posted there.
 Log in to the Portal, click on the DP1 Catalogs tab, and switch to the ADQL interface.
 
 **2. Execute a query.**
-Enter the query below into the ADQL box, and clear "Search".
-This query returns coordinates and magnitudes for objects near the center of the ECDFS field
-that are brighter than 22 mag in *g* and *r*.
+Enter the query below into the ADQL box, and click "Search".
+This query returns coordinates and magnitudes for objects near the center of the ECDFS field that are brighter than 22 mag in *g* and *r*.
 
 .. code-block:: SQL
 
@@ -102,6 +101,7 @@ The results interface is now populated with data from the new query (Figure 3).
 The table (C in Figure 3) now has two tabs, one for the old query (red) and one for the new (cyan).
 The coverage chart (A in Figure 3) includes markers for both queries, in colors that match the table.
 The active chart (B in Figure 3) is the default plot for the new query, the selected table.
+You can delete the unwanted query results by clicking "X" in the corresponding tab above the table.
 
 .. figure:: images/portal-104-1-3.png
     :name: portal-104-1-3

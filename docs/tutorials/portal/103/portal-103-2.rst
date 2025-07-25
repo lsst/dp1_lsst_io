@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-28
+**Last verified to run:** 2025-07-23
 
 **Learning objective:** Prepare and execute an `Astronomy Data Query Language (ADQL) <https://www.ivoa.net/documents/latest/ADQL.html>`_ query in the Portal.
 
@@ -24,7 +24,7 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 An introduction to ADQL
 =======================
 
-The `documentation for ADQL <http://www.ivoa.net/documents/latest/ADQL.html>`_
+The `documentation for ADQL <http://www.ivoa.net/documents/ADQL>`_
 includes more information about syntax, keywords, operators, functions, and so on.
 ADQL is similar to SQL (Structured Query Langage).
 
