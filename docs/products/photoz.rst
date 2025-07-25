@@ -8,8 +8,10 @@ As documented in the SIT-Com tech note "Initial studies of photometric redshifts
 (`SITCOMTN-154 <https://sitcomtn-154.lsst.io/>`_),
 members of the Rubin Commissioning Science Unit for photometric redshifts have generated photo-z estimates for every galaxy in DP1.
 
-Access to these photo-z estimates from the Rubin Science Platform is available via the :ref:`LSDB` and via the :ref:`PZ Server`.
+Access to these photo-z estimates from the Rubin Science Platform is available via the :ref:`products_lsdb` and the :ref:`products_photoz_pzserver`.
 
+
+.. _products_photoz_pzserver:
 
 PZ Server
 =========
