@@ -8,11 +8,13 @@ Vera C. Rubin Observatory Data Preview 1 (DP1)
 
 Data Preview 1 contains image and catalog products from Rubin Science Pipelines v29 processing of observations obtained with the LSST Commissioning Camera of seven ~1 square degree fields over seven weeks in late 2024.
 
-|dataset_doi| [:download:`BibTeX <bib/dataset.bib>`]
+*Dataset* |dataset_doi| [:download:`BibTeX <bib/dataset.bib>`]
 
 **Data Policy:** Only Rubin data rights holders may have an account in the Rubin Science Platform (RSP) and access to Data Preview 1.
 All scientists and students in the US and Chile, plus named members of international in-kind teams, have Rubin data rights.
 `Learn more about the Rubin data policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`_.
+
+For information on citing this dataset and associated paper see :ref:`here <citedp1>`.
 
 Overview
 ========
