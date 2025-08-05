@@ -25,7 +25,7 @@ Rubin staff will respond to all questions posted there.
 **1. Log into the Portal from the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 Click on the "DP1 Catalogs" tab.
-If no tabs appear at the top, click on the "hamburger" icon (three horizontal lines on upper left) and select "DP1 Images" and "DP1 Catalogs" tabs.
+If no tabs appear at the top, click on the "menu" icon (three horizontal lines on upper left) and select "DP1 Images" and "DP1 Catalogs" tabs.
 
 **2. Create a sample job.**
 For the purpose of this tutorial, click the "Edit ADQL" box in the upper right hand corner and paste the following query into the box.
@@ -39,7 +39,7 @@ Hit the "Search" button on the lower left of the screen.
 
 **3.  Examine the job monitor.**
 Click on the "Job Monitor" tab on the top.
-If a "Job Monitor" tab does not appear at the top, click on the "hamburger" icon (three horizontal lines on upper left) and add it to your tabs.
+If a "Job Monitor" tab does not appear at the top, click on the "menu" icon (three horizontal lines on upper left) and add it to your tabs.
 The job monitor will have all jobs submitted by you (created within the retention period).
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
