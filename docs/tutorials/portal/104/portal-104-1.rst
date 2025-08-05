@@ -69,6 +69,7 @@ Note that the orange point in the active chart corresponds to the selected row.
 **4. View layout options.**
 At upper left, click on the menu icon (three horizontal lines) to open the sidebar menu.
 Under "Results Layout", click on the icon of the default layout ("up-down" arrows, or "A" in Figure 2) to see all layout options.
+Note that the "Results Layout" box appears only after a "search" has been executed.
 
 .. figure:: images/portal-104-1-2.png
     :name: portal-104-1-2
