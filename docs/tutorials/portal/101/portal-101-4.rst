@@ -24,6 +24,7 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log into the Portal from the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
+Select the "Portal" box.
 Click on the "DP1 Catalogs" tab.
 If no tabs appear at the top, click on the "menu" icon (three horizontal lines on upper left) and select "DP1 Images" and "DP1 Catalogs" tabs.
 
