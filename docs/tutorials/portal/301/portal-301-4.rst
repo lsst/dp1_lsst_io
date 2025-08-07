@@ -49,7 +49,7 @@ Click on the "Edit ADQL" button at upper right.
 
 **2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
-This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the RubinSV\_95\_-25 field.
+This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the ECDFS field.
 
 .. code-block:: SQL
 
@@ -61,7 +61,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', 95, -25), s_region)=1
+        AND CONTAINS(POINT('ICRS', 53.16, -28.10), s_region)=1
 
 
 **2.4. View the results.**
