@@ -44,20 +44,6 @@ Rubin staff will respond to all questions posted there.
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-###########################################
-12. How to extract pixel values from images
-###########################################
-
-.. This section should provide a brief, top-level description of the page.
-
-**RSP Aspect:** Portal
-
-**Contact authors:** Yumi Choi
-
-**Last verified to run:** 2025-03-05
-
-**Targeted learning level:** beginner 
-
 **Introduction:**
 This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
 
@@ -104,6 +90,3 @@ Click "Pin Chart/Table" to save the results temporariliy, or use "Download as Ta
     :alt: A screenshot displaying six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
 
     Figure 2: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
-
-
-Return to the list of DP0.2 :ref:`DP0-2-Tutorials-Portal`.
