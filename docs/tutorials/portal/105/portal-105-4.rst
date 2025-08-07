@@ -45,9 +45,6 @@ This tutorial demonstrates how to extract pixel values from active images retrei
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-**Introduction:**
-This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
-
 **1. Execute an image query.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
 click on the "DP0.2 Images" tab at the top. Enter your desired constraints for the image query,
