@@ -6,10 +6,8 @@ Data access and analysis
 
 Tutorials demonstrating how to access and analyze data via the Rubin Science Platform (RSP).
 
-**Data rights:** it is necessary to have an account in the Rubin Science Platform (RSP) to access Data Preview 1,
-and it is necessary to be a Rubin data rights holder in order to have an RSP account.
-All scientists and students in the US and Chile, plus named members of international in-kind teams,
-have Rubin data rights.
+**Data Policy:** Only Rubin data rights holders may have an account in the Rubin Science Platform (RSP) and access to Data Preview 1.
+All scientists and students in the US and Chile, plus named members of international in-kind teams, have Rubin data rights.
 
 `Learn more about the Rubin data policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`_.
 
