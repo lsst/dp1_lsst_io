@@ -27,15 +27,15 @@ Rubin staff will respond to all questions posted there.
 
 This tutorial explores the LSSTComCam observations for the Extended Chandra Deep Field South or "ECDFS" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
-The field denoted "RubinSV\_95\_-25" is sometimes referred to as the "low-latitude field" because it was at the lowest Galactic latitude of any of the fields observed during LSSTComCam on-sky commissioning. RubinSV\_95\_-25 is centered at (RA, Dec) = (95.0, -25.0) degrees, corresponding to Galactic longitude/latitude of (l, b) = (232.5, -17.6) degrees. It is relatively far from the Galactic plane, and not representative of the crowded fields that LSST will see in the Milky Way disk. Nonetheless, it contains the highest source density of any of the LSSTComCam fields in DP1. The region covered spans a diameter of about 1 degree.
+The <a href="https://en.wikipedia.org/wiki/Chandra_Deep_Field_South">Extended Chandra Deep Field South (ECDFS)</a> is a popular extragalatic deep field that has attracted a wealth of panchromatic imaging and spectroscopy. The Rubin map of ECDFS is centered at (RA, Dec) = (53.16 -28.10) The region covered spans a diameter of about 1 degree.
 
-**Central coordinates:** (RA, Dec) = 95.0, -25.0 degrees
+**Central coordinates:** (RA, Dec) = 53.16, -28.10 degrees
 
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
 **1.2. Browse the gri color HiPS map.**
-`Go to the gri color HiPS map for the RubinSV\_95\_-25 field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=95.0&dec=-25.0&sr=50m>`_.
+`Go to the gri color HiPS map for the ECDFS field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=53.16&dec=-28.10&sr=50m>`_.
 
 
 2. Examine a deep coadd image
