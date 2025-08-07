@@ -20,11 +20,12 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
+**Introduction:**
+This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
+
 ----
 
 **1. Log in to the Portal Aspect of the RSP.**
-
-*Tutorial coming soon!*
 
 .. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
 
