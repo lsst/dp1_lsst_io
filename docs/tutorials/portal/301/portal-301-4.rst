@@ -100,7 +100,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 95, -25, 1))=1
+        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 53, -28, 1))=1
         AND ( 622e-9 BETWEEN em_min AND em_max )
 
 
