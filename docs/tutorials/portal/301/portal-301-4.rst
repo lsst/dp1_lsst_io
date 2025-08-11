@@ -163,9 +163,9 @@ Set the "Trace Style" to "connected points", and click "OK".
 **4.7. View the plot.**
 The resulting plot should look like Figure 3, showing the growing number of exposures with MJD.
 
-.. figure:: images/portal-301-6-3.png
-    :name: portal-301-6-3
-    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 17 days.
+.. figure:: images/portal-301-4-3.png
+    :name: portal-301-4-3
+    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 30 days.
 
     Figure 3: The figure showing the cumulative number of exposures obtained with time.
 
