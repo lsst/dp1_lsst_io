@@ -88,7 +88,7 @@ Delete the previous query from the box.
 
 **3.2. Execute a new image query.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
-This query will retrieve all images of subtype ``deep_coadd`` that were obtained with the *r*-band filter and overlap the ~1 degree RubinSV\_95\_-25 field (not just its central coordinates).
+This query will retrieve all images of subtype ``deep_coadd`` that were obtained with the *r*-band filter and overlap the ~1 degree ECDFS field (not just its central coordinates).
 
 .. code-block:: SQL
 
