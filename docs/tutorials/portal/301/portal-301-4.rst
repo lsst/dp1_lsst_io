@@ -180,13 +180,13 @@ Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
 Delete the last query statement.
 
 **4.9. Execute a query on the CcdVisit table.**
-This query retrieves a table of all CcdVists (visit and detector combinations) that were observed of the RubinSV\_95\_-25 field.
+This query retrieves a table of all CcdVists (visit and detector combinations) that were observed of the ECDFS field.
 
 .. code-block:: SQL
 
   SELECT visitId, ra, dec, band, seeing, magLim
   FROM dp1.CcdVisit
-  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 95.0, -25.0, 1.0))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53.16, -28.1, 1.0))=1
   ORDER BY visitId
 
 
