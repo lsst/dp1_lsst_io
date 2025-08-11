@@ -191,7 +191,7 @@ This query retrieves a table of all CcdVists (visit and detector combinations) t
 
 
 **4.10. View the results.**
-The query returns 2628 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
+The query returns 7692 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
 
 **4.11. Create histograms of seeing and magnitude limit.**
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
