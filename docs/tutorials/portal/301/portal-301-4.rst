@@ -106,7 +106,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
 
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
-The boundaries of the 81 patches are overlaid onto a HiPS coverage map, as in Figure 2.
+The boundaries of the 82 patches are overlaid onto a HiPS coverage map, as in Figure 2.
 
 .. figure:: images/portal-301-4-2.png
     :name: portal-301-4-2
@@ -127,13 +127,13 @@ In the coverage map, click any patch and its corresponding image will be highlig
 Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
 
 **4.2. Execute a query on the Visit table.**
-This query will retrieve the coordinates, band, and MJD for all visits from the ``Visit`` table with central coordinates within the RubinSV\_95\_-25 field.
+This query will retrieve the coordinates, band, and MJD for all visits from the ``Visit`` table with central coordinates within the ECDFS field.
 
 .. code-block:: SQL
 
   SELECT ra, dec, band, expMidptMJD
   FROM dp1.Visit
-  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 95, -25, 1))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 53, -28, 1))=1
   ORDER BY expMidptMJD ASC
 
 
