@@ -213,7 +213,7 @@ The ``Object`` table, which contains detections and measurements from the ``deep
 Delete the last ADQL statement.
 
 **5.2. Execute a query on the Object table.**
-This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the ECDFS field.
+This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the ECDFS field. Since ECDFS data is very deep, there are many detections: update the row limit next to the search button from 50,000 to 500,000 to include all objects in the field.
 
 .. code-block:: SQL
 
