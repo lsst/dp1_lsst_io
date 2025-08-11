@@ -238,19 +238,19 @@ Filter the table for only point-like objects ("stars") by filtering the ``refExt
 Add a chart and select the "Heatmap" plot type.
 Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis.
 Select 300 bins in X and 200 bins in Y.
-Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to 16, 26.
+Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to 16, 28.
 Select "reverse" under "Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
 **5.5. Create a color-color diagram.**
 Open a new plot window by clicking the "Add a chart" button.
-Make a color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``.
+Make a color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to -1, 2.5.
 Place the two figures side-by-side, as in Figure 5.
 
-.. figure:: images/portal-301-6-5.png
-    :name: portal-301-6-5
+.. figure:: images/portal-301-4-5.png
+    :name: portal-301-4-5
     :alt: A plot showing color-color and color-magnitude diagrams as heatmaps.
 
-    Figure 5: A color-color and color-magnitude diagram of stars in the RubinSV\_95\_-25 field.
+    Figure 5: A color-color and color-magnitude diagram of stars in the ECDFS field.
 
 
 6. Exercises for the learner
