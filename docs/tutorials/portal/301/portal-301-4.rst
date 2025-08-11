@@ -138,10 +138,10 @@ This query will retrieve the coordinates, band, and MJD for all visits from the 
 
 
 **4.3. View the query results.**
-In the results interface, the central coordinates of the 292 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
+In the results interface, the central coordinates of the 855 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
 
 **4.4. Obtain the filter distribution.**
-Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 33 *u*, 82 *g*, 84 *r*, 23 *i*, 60 *z*, and 10 *y*-band visits.
+Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 43 *u*, 230 *g*, 236 *r*, 162 *i*, 153 *z*, and 30 *y*-band visits.
 
 
 Visit dates cumulative histogram
