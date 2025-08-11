@@ -197,8 +197,8 @@ The query returns 7692 results, with the central locations of each detector for 
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
 It will look like Figure 4.
 
-.. figure:: images/portal-301-6-4.png
-    :name: portal-301-6-4
+.. figure:: images/portal-301-4-4.png
+    :name: portal-301-4-4
     :alt: A plot showing two histograms. On the left is the distribution of seeing in arcsec, and on the right a histogram of magLim in mag.
 
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
@@ -213,7 +213,7 @@ The ``Object`` table, which contains detections and measurements from the ``deep
 Delete the last ADQL statement.
 
 **5.2. Execute a query on the Object table.**
-This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the RubinSV\_95\_-25 field.
+This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the ECDFS field.
 
 .. code-block:: SQL
 
@@ -225,7 +225,7 @@ This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* band
          i_psfFlux, i_psfFLuxErr,
          refExtendedness
   FROM dp1.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 95, -25, 1))=1
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53, -28, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
         AND r_psfFlux/r_psfFluxErr > 5
         AND i_psfFlux/i_psfFluxErr > 5
