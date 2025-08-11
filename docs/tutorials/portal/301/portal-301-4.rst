@@ -106,10 +106,10 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
 
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
-The boundaries of the 79 patches are overlaid onto a HiPS coverage map, as in Figure 2.
+The boundaries of the 81 patches are overlaid onto a HiPS coverage map, as in Figure 2.
 
-.. figure:: images/portal-301-6-2.png
-    :name: portal-301-6-2
+.. figure:: images/portal-301-4-2.png
+    :name: portal-301-4-2
     :alt: The image results
 
     Figure 2: The search results showing the coadd footprints ("patches") on the HiPS coverage map.
