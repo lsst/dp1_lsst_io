@@ -27,7 +27,9 @@ Rubin staff will respond to all questions posted there.
 
 This tutorial explores the LSSTComCam observations for the Extended Chandra Deep Field South or "ECDFS" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
-The `Extended Chandra Deep Field South (ECDFS) <https://en.wikipedia.org/wiki/Chandra_Deep_Field_South#Extended_Chandra_Deep_Field_South>`_ is a popular extragalatic deep field that has attracted a wealth of panchromatic imaging and spectroscopy. The Rubin map of ECDFS is centered at (RA, Dec) = (53.16 -28.10) The region covered spans a diameter of about 1 degree.
+The `Extended Chandra Deep Field South (ECDFS) <https://en.wikipedia.org/wiki/Chandra_Deep_Field_South#Extended_Chandra_Deep_Field_South>`_ is a popular extragalatic deep field that has attracted a wealth of panchromatic imaging and spectroscopy. The Rubin map of ECDFS is centered at (RA, Dec) = (53.16 -28.10).
+
+The region covered spans a diameter of about 1 degree.
 
 **Central coordinates:** (RA, Dec) = 53.16, -28.10 degrees
 
