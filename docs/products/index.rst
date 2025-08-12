@@ -76,3 +76,4 @@ Derived and third-party data products.
     :glob:
 
     lsdb
+    photoz
