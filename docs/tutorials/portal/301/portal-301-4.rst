@@ -67,7 +67,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
 
 
 **2.4. View the results.**
-The query will return 6 ``lsst.deep\_coadd`` results -- one for each of the *ugrizy* bands.
+The query will return 6 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
 The results interface will appear similar to Figure 1.
 
 .. figure:: images/portal-301-4-1.png
