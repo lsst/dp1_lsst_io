@@ -12,7 +12,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Understand the observations and data available for the ECDFS.
 
-**LSST data products:** *List the catalogs and images used.*
+**LSST data products:** `deep_coadd` images, `Visit`, `CcdVisit`, and `Object` tables
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
