@@ -36,6 +36,7 @@ Description
 
 Raw images from the camera are available exactly as they were read out of the camera.
 The raw images should not be used for scientific analysis, and users should not attempt to rerun ISR.
+A description of the file format can be found in `CTN-004 <https://ctn-004.lsst.io/>`_.
 
 Processing
 ----------
