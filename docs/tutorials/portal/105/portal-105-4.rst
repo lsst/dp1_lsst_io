@@ -62,6 +62,7 @@ Select "i" from the lsst_band dropdown menu.
     Figure 1: The results interface after a query requesting co-add images in the selected location has been executed.
 
 **3. Select the Line Tool.**
+Click a few times on the "zoom-in" icon (a "+" sign in the upper left of the image panel) to bring in an object of interest.
 To extract pixel values along a line (1D brightness profile), click the "Tools" icon, then select the "Line" icon under the "Extract" section.
 In the instruction window, choose an aperture for combining values.
 
@@ -70,17 +71,16 @@ Click the starting point on the image, drag to the endpoint, and release.
 A pop-up window will display the 1D brightness profile, where you can adjust the aperture if needed.
 
 **5. Save or download.**
-Click "Pin Chart/Table" to add the chart and table to the result,
-or download them directly. Repeat the process to extract another profile.
+Click "Pin Chart/Table" to add the chart and table to the result, or download them directly.
+Repeat the process to extract another profile.
 
-.. figure:: /_static/portal_tut06_step03a.png
+.. figure:: images/portal-105-4-2.png
     :width: 500
-    :name: portal_howto_image_extract_pixelvalues-1
-    :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line. 
+    :name: portal-105-4-2
+    :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line.
 
-    Figure 1: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
+    Figure 2: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
-                                        
 **6. Select the Points Tool.**
 To extract pixel information for selected points,
 click the "Points" icon under the "Extract" section. 
