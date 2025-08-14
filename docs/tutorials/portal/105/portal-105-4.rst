@@ -79,7 +79,7 @@ Repeat the process to extract another profile.
     :name: portal-105-4-2
     :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line.
 
-    Figure 2: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
+    Figure 2: A line drawn across an object, with a pop-up window displaying the 1D brightness profile of the object.
 
 **6. Select the Points Tool.**
 To extract pixel information for selected points,
