@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Extract pixel values, e.g., line profile, from images retreived from a Portal image query and displayed in Firefly.
+**Learning objective:** Extract pixel values, e.g., line profile, from images retreived via a Portal image query and displayed in Firefly.
 
 **LSST data products:**
 
@@ -44,7 +44,6 @@ Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, a
 .. A warning will alert you of identical labels during the linkcheck process.
 
 **2. Enter and execute an image query.**
-
 Enter your desired constraints for the image query.
 An example below will use DP1 Rubin data from the Euclid Deep Field South (EDFS), containing location of RA = 59.1, Dec = -48.73.
 Enter those coordinates in the "Location" box.
@@ -53,18 +52,18 @@ Leave other boxes under "Enter Constraints" unchecked.
 Click "Search".
 
 By default, the image shown might be a difference image.
-To work with a co-add, 
+To work with a co-add, in the table below, in the second column (dataproduct_subtype), select lsst.deep_coadd from the drop-down menu.
+Select "i" from the lsst_band dropdown menu.
 
 .. figure:: images/portal-105-4-1.png
     :name: portal-105-4-1
     :alt: The results interface.
 
-    Figure 1: The results interface after a query requesting images in the selected location has been executed.
+    Figure 1: The results interface after a query requesting co-add images in the selected location has been executed.
 
 
 **2. Select the Line Tool.**
-To extract pixel values along a line (1D brightness profile),
-click the "Tools" icon, then select the "Line" icon under the "Extract" section.
+To extract pixel values along a line (1D brightness profile), click the "Tools" icon, then select the "Line" icon under the "Extract" section.
 In the instruction window, choose an aperture for combining values.
 
 **3. Draw and view profile.**
