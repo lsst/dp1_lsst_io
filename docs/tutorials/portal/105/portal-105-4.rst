@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:**
 
-**Learning objective:** Extract pixel values, e.g., line profile, from images displayed in Firefly.
+**Learning objective:** Extract pixel values, e.g., line profile, from images retreived from a Portal image query and displayed in Firefly.
 
 **LSST data products:**
 
@@ -20,19 +20,16 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
-**Introduction:**
-This tutorial demonstrates how to extract pixel values from active images retreived from a Portal image query.
-
 ----
 
 **1. Log in to the Portal Aspect of the RSP.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
-.. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
+.. This is the beginning of a new tutorial focussing on learning to study pixel values in an image using features of the Rubin Portal
 
 .. Review the README on instructions to contribute.
 .. Review the style guide to keep a consistent approach to the documentation.
-.. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
+.. Static objects, such as figures, should be stored in the _images directory. Review the _static/README on instructions to contribute.
 .. Do not remove the comments that describe each section. They are included to provide guidance to contributors.
 .. Do not remove other content provided in the templates, such as a section. Instead, comment out the content and include comments to explain the situation. For example:
 	- If a section within the template is not needed, comment out the section title and label reference. Do not delete the expected section title, reference or related comments provided from the template.
