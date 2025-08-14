@@ -61,16 +61,15 @@ Select "i" from the lsst_band dropdown menu.
 
     Figure 1: The results interface after a query requesting co-add images in the selected location has been executed.
 
-
-**2. Select the Line Tool.**
+**3. Select the Line Tool.**
 To extract pixel values along a line (1D brightness profile), click the "Tools" icon, then select the "Line" icon under the "Extract" section.
 In the instruction window, choose an aperture for combining values.
 
-**3. Draw and view profile.**
+**4. Draw and view profile.**
 Click the starting point on the image, drag to the endpoint, and release. 
 A pop-up window will display the 1D brightness profile, where you can adjust the aperture if needed.
 
-**4. Save or download.**
+**5. Save or download.**
 Click "Pin Chart/Table" to add the chart and table to the result,
 or download them directly. Repeat the process to extract another profile.
 
@@ -82,15 +81,15 @@ or download them directly. Repeat the process to extract another profile.
     Figure 1: A line drawn across a source, with a pop-up window displaying the 1D brightness profile of the source.
 
                                         
-**5. Select the Points Tool.**
+**6. Select the Points Tool.**
 To extract pixel information for selected points,
 click the "Points" icon under the "Extract" section. 
 In the instruction window, choose an aperture to combine the values. 
 
-**6. Select points.** 
+**7. Select points.** 
 Click multiple points on the image to extract their pixel values at once. 
 
-**7. Save or download.**
+**8. Save or download.**
 Click "Pin Chart/Table" to save the results temporariliy, or use "Download as Table" and/or
 "Download Chart" to save them locally. Results can also be saved as a DS9 region file. 
 
