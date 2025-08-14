@@ -28,6 +28,14 @@ Bibtex
 Find ``bibtex`` entries for all DOIs and other Rubin documentation in `the LSST texmf package <https://github.com/lsst/lsst-texmf/blob/main/texmf/bibtex/bib/lsst.bib>`_.
 
 
+Science pipelines software
+--------------------------
+
+The `Rubin Science Pipelines <https://pipelines.lsst.io/>`_ can be formally cited as:
+
+|osprae_doi| [:download:`BibTeX </bib/osprae.bib>`]
+
+
 Telescope and instrument
 ------------------------
 

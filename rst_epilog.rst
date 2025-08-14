@@ -11,6 +11,7 @@
 
 .. |comcam_doi| replace:: *Citation*: **SLAC National Accelerator Laboratory and NSF-DOE Vera C. Rubin Observatory** (2024); LSST Commissioning Camera |doi_image| https://doi.org/10.71929/rubin/2561361
 
+.. |osprae_doi| replace:: **Rubin Observatory Science Pipelines Developers** (2025); The LSST Science Pipelines Software: Optical Survey Pipeline Reduction and Analysis Environment |doi_image| https://doi.org/10.71929/rubin/2570545
 
 .. |dataset_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1 |doi_image| https://doi.org/10.71929/rubin/2570308
 .. |calibrations_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: calibrations dataset type |doi_image| https://doi.org/10.71929/rubin/2570309
