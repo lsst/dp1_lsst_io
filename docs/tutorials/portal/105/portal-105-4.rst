@@ -52,7 +52,7 @@ Leave other boxes under "Enter Constraints" unchecked.
 Click "Search".
 
 By default, the image shown might be a difference image.
-To work with a co-add, in the table below, in the second column (dataproduct_subtype), select lsst.deep_coadd from the drop-down menu.
+To work with a co-add, in the table below, in the second column (dataproduct_subtype), select "lsst.deep_coadd" from the drop-down menu.
 Select "i" from the lsst_band dropdown menu.
 
 .. figure:: images/portal-105-4-1.png
