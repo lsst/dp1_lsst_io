@@ -26,6 +26,7 @@ This tutorial demonstrates how to extract pixel values from active images retrei
 ----
 
 **1. Log in to the Portal Aspect of the RSP.**
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
 .. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
 
@@ -45,10 +46,10 @@ This tutorial demonstrates how to extract pixel values from active images retrei
 .. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
 .. A warning will alert you of identical labels during the linkcheck process.
 
-**1. Execute an image query.**
-Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
-Enter your desired constraints for the image query, and click "Search" to execute it.
-An example below will use DP1 Rubin data from the Euclid Deep Field South (EDFS), at RA = 59.1, Dec = -48.73.
+**2. Enter and execute an image query.**
+
+Enter your desired constraints for the image query.
+An example below will use DP1 Rubin data from the Euclid Deep Field South (EDFS), containing location of RA = 59.1, Dec = -48.73.
 Enter those coordinates in the "Location" box.
 For "Observation Type and Source", click the box "Coadds and Difference Images" (3).
 Leave other boxes under "Enter Constraints" unchecked.
