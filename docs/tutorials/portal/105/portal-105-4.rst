@@ -1,8 +1,8 @@
 .. _portal-105-4:
 
-#####################################################
-105.4. Extract pixel values from images (Coming Soon)
-#####################################################
+#######################################
+105.4. Extract pixel values from images
+#######################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -46,9 +46,15 @@ This tutorial demonstrates how to extract pixel values from active images retrei
 .. A warning will alert you of identical labels during the linkcheck process.
 
 **1. Execute an image query.**
-Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
-click on the "DP0.2 Images" tab at the top. Enter your desired constraints for the image query,
-and click "Search" to execute it.       
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
+Enter your desired constraints for the image query, and click "Search" to execute it.
+An example below will use DP1 Rubin data from the Euclid Deep Field South (EDFS), at RA = 59.1, Dec = -48.73.
+Enter those coordinates in the "Location" box.
+For "Observation Type and Source", click the box "Coadds and Difference Images" (3).
+Leave other boxes under "Enter Constraints" unchecked.
+Click "Search".
+
+
 
 **2. Select the Line Tool.**
 To extract pixel values along a line (1D brightness profile),
