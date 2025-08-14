@@ -74,6 +74,13 @@ The metadata for difference images retrieved from the Butler include
 information about the observation (e.g., pointing, weather),
 and the derived PSF, photometric calibration, and WCS.
 
+WCS
+"""
+
+The World Coordinate System objects for difference images are not exactly representable as FITS; the FITS headers have an approximation that is good enough only for visualization.
+Transformations with the true WCS are currently only possible using Rubin libraries, and those can be easy to misuse.
+See :ref:`products_wcs_known_issues` for more information.
+
 Tutorials
 ---------
 

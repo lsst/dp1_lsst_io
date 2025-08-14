@@ -16,6 +16,45 @@ We are currently integrating a major change to our deblender that we hope will m
 
 It is likely that our direct image processing in crowded fields will still lag dedicated crowded-field photometry codes; Rubin's focus for these fields has always been image subtraction (where we do expect to compete with the state of the art), with the :ref:`catalogs-object` catalog a best-effort addition.
 
+.. _products_wcs_known_issues:
+
+WCS FITS approximations and misleading interfaces
+=================================================
+
+Rubin's single-visit World Coordinate System (WCS) objects are not in general exactly representable via the FITS WCS standard, and hence the FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object-finding, not precision astrometry.
+To make use of the full WCS of a visit image or difference image, at present it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
+
+  wcs = visit_image.wcs
+  x, y = wcs.skyToPixelArray(ra, dec, degrees=True)  # or False for radians
+  ra, dec = wcs.pixelToSkyArray(x, y, degrees=True)
+
+where ``x``, ``y``, ``ra``, and ``dec`` are double-precision (``dtype=np.float64``) NumPy arrays.
+
+Unfortunately, these objects are not included in our Python API documentation reference at present, and they are counterintuitive and easy to misuse in several ways, which can make it appear as if the WCS fits are terrible.
+These problems center around the fact that their ``getSkyOrigin`` and ``getPixelOrigin`` methods generally return a point that is far off the image the WCS corresponds to (where the mapping can extrapolate poorly), and other methods like ``getPixelScale`` will by default evaluate at this often-irrelevant point.
+The ``skyToPixel[Array]`` and ``pixelToSky[Array]`` are always safe to use, and ``getPixelScale`` can be used safely if you explicitly provide it with the point to evaluate the pixel scale at.
+Most other methods are best avoided (including ``getFitsMetadata``, which does *not* return the FITS approximation in the file headers).
+
+The WCSs objects attached to coadds *are* exactly representable in FITS WCS, but can also be tricky to use since each full ``tract`` has a single WCS, and each patch image has an integer offset relative to that coordinate system.
+So if you're indexing the NumPy array that backs a coadd image directly, e.g.::
+
+  coadd.image.array[i, j]
+
+be aware that this corresponds to the ``x`` and ``y`` pixel coordinates of the WCS via::
+
+  bbox = coadd.getBBox()
+  i = y - bbox.y.min
+  j = x - bbox.x.min
+
+When we write a coadd image to a file, we offset the WCS in the FITS header to be consistent with the pixels (since FITS requires that the origin of any image be ``(1, 1)``).
+But this is not done when calling ``wcs.getFitsMetadata()``, since the necessary offset is stored with the coadd object, not the WCS, and this is another common source of confusion.
+
+Finally, the WCS objects of :ref:`raw <images-raw>` images simply should not be used; they are based on an initial guess from the telescope at its pointing, but at present this can be quite far off from the true pointing.
+The corresponding :ref:`visit image <images-visit-image>` WCS should be used instead.
+
+For more details on Rubin WCS pitfalls (especially outside the context of DP1), see `this community post <https://community.lsst.org/t/how-to-use-wcss-in-dp1-and-commissioning-processing/10769>`__.
+We are hoping to address most of these interface issues by DP2, but we expect our single-visit WCS objects to continue to be non-representable as FITS.
+
 Image units
 ===========
 

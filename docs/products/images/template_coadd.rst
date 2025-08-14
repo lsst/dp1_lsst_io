@@ -66,6 +66,13 @@ Metadata
 The metadata for template coadd images retrieved from the Butler include a list of the input visit images,
 and the derived PSF, photometric calibration, and WCS.
 
+WCS
+"""
+
+The World Coordinate System objects for coadd images are exactly representable as FITS (they are simple TAN projections), but each ``tract`` has its own WCS that is shared by all ``patches``, with an integer offset that must be applied for each patch manually to index the pixel arrays.
+
+See :ref:`products_wcs_known_issues` for more information.
+
 Tutorials
 ---------
 
