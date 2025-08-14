@@ -55,6 +55,14 @@ For "Observation Type and Source", click the box "Coadds and Difference Images" 
 Leave other boxes under "Enter Constraints" unchecked.
 Click "Search".
 
+By default, the image shown might be a difference image.
+To work with a co-add, 
+
+.. figure:: images/portal-105-4-1.png
+    :name: portal-105-4-1
+    :alt: The results interface.
+
+    Figure 1: The results interface after a query requesting images in the selected location has been executed.
 
 
 **2. Select the Line Tool.**
