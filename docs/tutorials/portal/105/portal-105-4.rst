@@ -93,8 +93,9 @@ Click multiple points on the image to extract their pixel values at once.
 Click "Pin Chart/Table" to save the results temporariliy, or use "Download as Table" and/or
 "Download Chart" to save them locally. Results can also be saved as a DS9 region file. 
 
-.. figure:: /_static/portal_tut06_step03b.png
-    :name: portal_howto_image_extract_pixelvalues-2
+.. figure:: images/portal-105-4-3.png
+    :width: 500
+    :name: portal-105-4-3
     :alt: A screenshot displaying six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
 
-    Figure 2: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
+    Figure 3: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
