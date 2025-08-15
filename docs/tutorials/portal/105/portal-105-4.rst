@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:** 2025-08-15
 
 **Learning objective:** Extract pixel values, e.g., line profile, from images retreived via a Portal image query and displayed in Firefly.
 
-**LSST data products:**
+**LSST data products:** DP1 images
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
