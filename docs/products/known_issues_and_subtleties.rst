@@ -24,17 +24,18 @@ WCS FITS approximations and misleading interfaces
 WCS FITS approximations and misleading interfaces
 =================================================
 
-Rubin's single-visit World Coordinate System (WCS) objects are not, in general, exactly representable via the FITS WCS standard.  
-The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object finding, not for precision astrometry.  
+Rubin's single-visit World Coordinate System (WCS) objects are not, in general, exactly representable via the FITS WCS standard.
+The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object finding, not for precision astrometry.
 
-The approximation to the full WCS has been determined to be better than 0.05 pixels at all scales.  
-However, users will encounter WCS problems if they download visit or difference images and treat their WCS as FITS standard.  
+The approximation to the full WCS has been determined to be better than 0.05 pixels at all scales.
+
+However, users will encounter WCS problems if they download visit or difference images and treat their WCS as FITS standard.
 
 To make use of the full WCS of a visit image or difference image, it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
 
-    wcs = visit_image.wcs
-    x, y = wcs.skyToPixelArray(ra, dec, degrees=True)  # or False for radians
-    ra, dec = wcs.pixelToSkyArray(x, y, degrees=True)
+  wcs = visit_image.wcs
+  x, y = wcs.skyToPixelArray(ra, dec, degrees=True)  # or False for radians
+  ra, dec = wcs.pixelToSkyArray(x, y, degrees=True)
 
 where ``x``, ``y``, ``ra``, and ``dec`` are double-precision (``dtype=np.float64``) NumPy arrays.
 
