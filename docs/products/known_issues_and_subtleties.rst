@@ -21,15 +21,10 @@ It is likely that our direct image processing in crowded fields will still lag d
 WCS FITS approximations and misleading interfaces
 =================================================
 
-WCS FITS approximations and misleading interfaces
-=================================================
-
 Rubin's single-visit World Coordinate System (WCS) objects are not, in general, exactly representable via the FITS WCS standard.
 The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object finding, not for precision astrometry.
 
 The approximation to the full WCS has been determined to be better than 0.05 pixels at all scales.
-
-However, users will encounter WCS problems if they download visit or difference images and treat their WCS as FITS standard.
 
 To make use of the full WCS of a visit image or difference image, it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
 
@@ -69,7 +64,7 @@ The corresponding :ref:`visit image <images-visit-image>` WCS should be used ins
 - Call ``getPixelScale()`` without arguments. This is evaluated at ``getPixelOrigin()``, which may not correspond to a relevant location in your image.
 - Call ``getTanWcs()``. This returns a FITS-compatible TAN WCS, but it may reference a point far from the image and differ significantly from the original WCS. It can appear superficially correct in some cases, making it more prone to causing subtle errors.
 
-**With a ``lsst.afw.geom.SkyWcs`` object, you should:**
+**With an lsst.afw.geom.SkyWcs object, you should:**
 
 - Call ``pixelToSky[Array]`` to transform points from pixel coordinates (which may not start at (0, 0)!) to celestial coordinates.
 - Call ``skyToPixel[Array]`` to transform points from celestial coordinates to pixel coordinates.
