@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Last verified to run:** 2025-08-15
 
-**Learning objective:** Extract pixel values, e.g., line profile, from images retreived via a Portal image query and displayed in Firefly.
+**Learning objective:** Extract pixel values, e.g., line profile, from images retrieved via a Portal image query and displayed in Firefly.
 
 **LSST data products:** DP1 images
 
@@ -53,7 +53,7 @@ Click "Search".
 
 By default, the image shown might be a difference image.
 To work with a co-add, in the table below, in the second column (dataproduct_subtype), select "lsst.deep_coadd" from the drop-down menu.
-Select "i" from the lsst_band dropdown menu.
+Select "i" from the lsst_band drop-down menu.
 
 .. figure:: images/portal-105-4-1.png
     :name: portal-105-4-1
@@ -90,7 +90,7 @@ In the instruction window, choose an aperture to combine the values.
 Click multiple points on the image to extract their pixel values at once. 
 
 **8. Save or download.**
-Click "Pin Chart/Table" to save the results temporariliy, or use "Download as Table" and/or
+Click "Pin Chart/Table" to save the results temporarily, or use "Download as Table" and/or
 "Download Chart" to save them locally. Results can also be saved as a DS9 region file. 
 
 .. figure:: images/portal-105-4-3.png
