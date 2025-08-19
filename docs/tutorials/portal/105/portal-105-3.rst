@@ -42,15 +42,17 @@ Rubin staff will respond to all questions posted there.
 
 .. This section should provide a brief, top-level description of the page.
 
-**1. Log in to the Portal Aspect of the RSP.** Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and
-click on the "DP1 Images" tab at the top. 
+**1. Log in to the Portal Aspect of the RSP.** Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
 **2. Execute an Image query.**
 Enter your desired constraints for the image query, and click "Search" to execute it.
+The example below uses the Euclid Deep Field South (ECDS) containing the location of RA = 59.1, Dec = -48.73.
+It uses a co-add image, selected by clicking on the "Coadds and Difference Images" box in the "Observation Type and Source" tab on the left.
+By default, the first image displayed is a difference image.
+In the table on the bottom, in the column with the header "dataproduct_subtype" select "lsst.deep_coadd" from the dropdown menu.
 
 **3. Explore available image layer options.**
-Click the Tools icon (A in Figure 1) to open the drop-down menu,
-then mouse-over each icon in the "Layers" section (red circle in Figure 1) to see pop-up description boxes.
+Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" section (red circle in Figure 1) to see pop-up description boxes.
 
 .. figure:: /_static/portal-howto-image-add-layers-1.png
     :name: portal-howto-image-add-layers-1
