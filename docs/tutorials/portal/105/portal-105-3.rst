@@ -54,8 +54,8 @@ In the table on the bottom, in the column with the header "dataproduct_subtype" 
 **3. Explore available image layer options.**
 Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" section (red circle in Figure 1) to see pop-up description boxes.
 
-.. figure:: /_static/portal-howto-image-add-layers-1.png
-    :name: portal-howto-image-add-layers-1
+.. figure:: images/portal-105-3-1.png
+    :name: portal-105-3-1
     :alt: A screenshot of the drop-down menu under the Tool icon.
 
     Figure 1: A screenshot of the drop-down menu under the Tool icon.
