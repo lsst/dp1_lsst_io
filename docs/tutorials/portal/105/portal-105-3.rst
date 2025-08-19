@@ -89,8 +89,8 @@ The footprint will appear in the center of the image. Move it by clicking and dr
 To rotate, click the Overlay icon and enter "45" for "Angle" under "Footprint: JWST NIRCAM",
 or drag the rotate handle by 45 degrees.
 
-.. figure:: /_static/portal-howto-image-add-layers-2.png
-    :name: portal-howto-image-add-layers-2
+.. figure:: images/portal-105-3-2.png
+    :name: portal-105-3-2
     :alt: A screenshot of the added layers listed under the Overlay icon with layer display controls.
 
     Figure 2: A screenshot of the added layers listed under the Overlay icon with layer display controls. The mask layer is removed to improve visualization clarity (see Step 9).
