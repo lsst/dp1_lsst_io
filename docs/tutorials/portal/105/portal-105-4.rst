@@ -67,7 +67,7 @@ To extract pixel values along a line (1D brightness profile), click the "Tools" 
 In the instruction window, choose an aperture for combining values.
 
 **4. Draw and view profile.**
-Click the starting point on the image, drag to the endpoint, and release. 
+Click the starting point on the image, drag to the endpoint, and release.
 A pop-up window will display the 1D brightness profile, where you can adjust the aperture if needed.
 
 **5. Save or download.**
@@ -82,16 +82,15 @@ Repeat the process to extract another profile.
     Figure 2: A line drawn across an object, with a pop-up window displaying the 1D brightness profile of the object.
 
 **6. Select the Points Tool.**
-To extract pixel information for selected points,
-click the "Points" icon under the "Extract" section. 
-In the instruction window, choose an aperture to combine the values. 
+To extract pixel information for selected points, click the "Points" icon under the "Extract" section.
+In the instruction window, choose an aperture to combine the values.
 
-**7. Select points.** 
-Click multiple points on the image to extract their pixel values at once. 
+**7. Select points.**
+Click multiple points on the image to extract their pixel values at once.
 
 **8. Save or download.**
-Click "Pin Chart/Table" to save the results temporarily, or use "Download as Table" and/or
-"Download Chart" to save them locally. Results can also be saved as a DS9 region file. 
+Click "Pin Chart/Table" to save the results temporarily, or use "Download as Table" and/or "Download Chart" to save them locally.
+Results can also be saved as a DS9 region file. 
 
 .. figure:: images/portal-105-4-3.png
     :width: 500
