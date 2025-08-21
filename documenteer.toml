@@ -31,5 +31,5 @@ astropy = "https://docs.astropy.org/en/v7.0.1/"
 pandas = "https://pandas.pydata.org/pandas-docs/version/2.2/"
 
 [sphinx.redirects]
-"overview/citedp1.html" = "citedp1.html"
+"overview/citedp1" = "citedp1"
 
