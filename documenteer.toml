@@ -29,3 +29,6 @@ python = "https://docs.python.org/3/"
 lsst = "https://pipelines.lsst.io/v/v29_1_1/"
 astropy = "https://docs.astropy.org/en/v7.0.1/"
 pandas = "https://pandas.pydata.org/pandas-docs/version/2.2/"
+
+[sphinx.redirects]
+"https://dp1.lsst.io/overview/citedp1.html" = "https://dp1.lsst.io/citedp1.html"
