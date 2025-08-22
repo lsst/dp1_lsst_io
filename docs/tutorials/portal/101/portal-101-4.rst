@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-28
+**Last verified to run:** 2025-07-23
 
 **Learning objective:** Use the Job Monitor to obtain the status and ID of, and delete, submitted query jobs.
 
@@ -24,9 +24,13 @@ Rubin staff will respond to all questions posted there.
 
 **1. Log into the Portal from the RSP.**
 In a web browser go to the Rubin Science Platform (RSP) using the URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
+Select the "Portal" box.
+Click on the "DP1 Catalogs" tab.
+If no tabs appear at the top, click on the "menu" icon (three horizontal lines on upper left) and select "DP1 Images" and "DP1 Catalogs" tabs.
 
 **2. Create a sample job.**
-For the purpose of this tutorial, click Edit ADQL in the upper right hand corner and paste the following query into the box and hit Search.
+For the purpose of this tutorial, click the "Edit ADQL" box in the upper right hand corner and paste the following query into the box.
+Hit the "Search" button on the lower left of the screen.
 
 .. code-block:: sql
 
@@ -34,9 +38,9 @@ For the purpose of this tutorial, click Edit ADQL in the upper right hand corner
     FROM dp1.Object
     WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),CIRCLE('ICRS', 53.13, -28.1, 0.0027))=1
 
-
 **3.  Examine the job monitor.**
 Click on the "Job Monitor" tab on the top.
+If a "Job Monitor" tab does not appear at the top, click on the "menu" icon (three horizontal lines on upper left) and add it to your tabs.
 The job monitor will have all jobs submitted by you (created within the retention period).
 The jobs listed are in the chronological order (most recent first).
 You can return to any of those jobs by clicking the line corresponding to the particular job.
@@ -46,7 +50,6 @@ You can return to any of those jobs by clicking the line corresponding to the pa
     :alt: Job monitor screenshot.
 
     Figure 1:  Job monitor screenshot.
-
 
 **4. Learn about individual jobs.**  In the "Control" column click on the green "plot" icon to go to the results interface for that job.
 Click on the circle with a letter "i" to see the submitted ADQL and the job ID, as in Figure 2.
