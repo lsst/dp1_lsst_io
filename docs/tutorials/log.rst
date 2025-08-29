@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-8-29
+==========
+
+Released 300-level tutorial notebook on galaxy shapes.
+
 2025-07-16
 ==========
 
