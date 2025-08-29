@@ -185,7 +185,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :glob:
 
     303/notebook-303-1.rst
-
+    303/notebook-303-2.rst
 
 
 304. Cosmology
