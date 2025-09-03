@@ -4,7 +4,12 @@
 Log of major tutorial updates
 #############################
 
-2025-8-29
+2025-09-04
+==========
+
+Updated all tutorials for the new recommended image: r29.2.0.
+
+2025-08-29
 ==========
 
 Released 300-level tutorial notebook on galaxy shapes.
