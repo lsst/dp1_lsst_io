@@ -18,8 +18,8 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :titlesonly:
     :glob:
 
-    101/notebook-101-1.rst
-    101/notebook-101-2.rst
+    101/101_1_Use_the_JupyterLab
+    101/101_2_Use_a_Notebook
 
 
 102. Catalog access
