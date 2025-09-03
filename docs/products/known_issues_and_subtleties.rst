@@ -132,7 +132,10 @@ This problem will be fixed in future data releases.
 Ellipse parameterizations and units
 ===================================
 
-All catalogs (but especially :ref:`catalogs-object`) currently report object sizes and shapes in pixel units, not angular units or pixels**2. This includes size measurements such as ``*_kronRad``, ``*_bdReB``, ``*_bdReD``. Additionally, different ellipse parameterizations are used for different estimators (e.g. ``{ixx, iyy, ixy}``, ``{e1, e2, r}``, ``{r_x, r_y, rho}``), reflecting either the parameterization used directly in a measurement algorithm or the expectations of a particular astronomical subfield. For DP1 the ``*_bdE1`` parameter contains incorrect values and ellipse estimators that use ``{e1, e2, r}`` should not be used. Further, ``*_bdE1`` and ``*_bdE2`` are unitless parameters.
+All catalogs (but especially :ref:`catalogs-object`) currently report object sizes and shapes in pixel units, not angular units or pixels**2. 
+This includes size measurements such as ``*_kronRad``, ``*_bdReB``, ``*_bdReD``. Additionally, different ellipse parameterizations are used for different estimators (e.g. ``{ixx, iyy, ixy}``, ``{e1, e2, r}``, ``{r_x, r_y, rho}``), reflecting either the parameterization used directly in a measurement algorithm or the expectations of a particular astronomical subfield. 
+For DP1 the ``*_bdE1`` parameter contains incorrect values and ellipse estimators that use ``{e1, e2, r}`` should not be used. 
+Further, ``*_bdE1`` and ``*_bdE2`` are unitless parameters.
 
 We expect to use angular units and consistent parameterization throughout in future data releases, with tooling provided to efficiently convert between the parameterization (which one is TBD) and those preferred by different subfields.
 
