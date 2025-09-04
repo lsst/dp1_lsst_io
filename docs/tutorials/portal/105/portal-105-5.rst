@@ -22,8 +22,30 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Log in to the Portal Aspect of the RSP.**
+**1. Log in to the Portal Aspect of the RSP.** Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
-*Tutorial coming soon!*
+**2. Enter the coordinates of the image to be examined.**
+Enter your desired constraints for the image query.
+The example below uses the Euclid Deep Field South (ECDS) containing the location of RA = 59.1, Dec = -48.73.
+Select Processed Visit Images (PVIs) by clicking on the "PVIs (2)" box in the "Observation Type and Source" tab on the left.
+
+
+**2. Restrict the observation epochs.**
+
+In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
+
+**3. Select the cutout tool.**
+Above the image on the upper left, click on "scissors" which will select the cutout tool.
+The pop-up window will allow for some choices:  the default is "Search Target Center".
+
+**4. Change the coordinates of the cutout.**
+Change the cutout center by clicking on the circle next to "Entered Position".
+Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
+The example here uses RA = 52.9936, Dec = -28.4118.
+Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
+
+**Image**
+
+**5. Display multiple cutouts.**
 
 
