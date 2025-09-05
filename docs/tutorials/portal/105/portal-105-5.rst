@@ -1,14 +1,14 @@
 .. _portal-105-5:
 
-##############################################
-105.5. Use the image cutout tool (Coming Soon)
-##############################################
+################################
+105.5. Use the image cutout tool
+################################
 
 For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:**  September 6, 2025
 
 **Learning objective:** View image cutouts instead of full-frame images in Firefly.
 
@@ -28,7 +28,6 @@ Rubin staff will respond to all questions posted there.
 Enter your desired constraints for the image query.
 The example below uses the Euclid Deep Field South (ECDS) containing the location of RA = 59.1, Dec = -48.73.
 Select Processed Visit Images (PVIs) by clicking on the "PVIs (2)" box in the "Observation Type and Source" tab on the left.
-
 
 **2. Restrict the observation epochs.**
 
