@@ -40,16 +40,17 @@ All-sky maps of deep coadded images, survey depth, image quality, and more.
     spmaps/index
     hips/index
 
-Calibrations
-============
+Auxiliary products
+==================
 
-Calibration products (e.g., bias, dark, and flat frames).
+Additional data products (e.g., calibration frames, filter bandpasses).
 
 .. toctree::
     :maxdepth: 1
     :glob:
 
     calibrations/index
+    bandpasses/index
 
 Auxiliary information
 =====================
