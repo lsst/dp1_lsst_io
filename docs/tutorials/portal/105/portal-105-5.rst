@@ -51,9 +51,16 @@ The pop-up window will allow for some choices:  the default is "Search Target Ce
     :name: portal-105-5-2
     :alt: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
 
-    Figure 2: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked as "A).
+    Figure 2: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
 
 Click on "Show cutout".
+
+.. figure:: images/portal-105-5-3.png
+    :name: portal-105-5-3
+    :alt: The screenshot showing the single cutout.
+
+    Figure 3: The screenshot resulting from executing the seach above, with the cutout centered on the image center on the upper left.
+
 Examine the upper left-hand panel of your screen showing the cutout of the image, centered on the coordinates entered in Step 1.
 At this point, it is possible to return the full image by clicking on the scissors, and clicking on "Show Full Image".
 
