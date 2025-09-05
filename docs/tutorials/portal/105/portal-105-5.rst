@@ -41,7 +41,7 @@ Click the "Search" button.
     Figure 1: The screenshot of the Portal Aspect of the RSP with selection of the parameters as above.
 
 **4. Select a single-band observaton.**
-In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menuw
+In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
 
 **5. Select the cutout tool.**
 Above the image on the upper left, click on "scissors" which will select the cutout tool.
@@ -49,7 +49,7 @@ The pop-up window will allow for some choices:  the default is "Search Target Ce
 
 .. figure:: images/portal-105-5-2.png
     :name: portal-105-5-2
-    :alt: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked as "A).
+    :alt: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
 
     Figure 2: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked as "A).
 
