@@ -67,13 +67,13 @@ See the :ref:`200-level notebook <notebook-200>` tutorial demonstrating how to a
 Standard passbands
 ==================
 
-There are six ``standard_passband`` datasets in the DP1 Butler repository -- one for each of the _ugrizy_ bands.
-These datasets tabulate the full-system transmission of the six LSSTComCam filters as a function of wavelength that was used as a reference for the LSSTComCam DP1 photometry.
+There are six ``standard_passband`` datasets in the DP1 Butler repository -- one for each of the *ugrizy* bands.
+These datasets tabulate the full-system transmission of the six LSSTComCam filters as a function of wavelength, which was used as a reference for the LSSTComCam DP1 photometry.
 The ``standard_passband`` dataset is keyed by band and is in Astropy Table format.
 
 * ``('standard_passband', {band, instrument}, ArrowAstropy)``
 
-.. figure:: figures/dp1_comcam_std_bandpasses.pdf
+.. figure:: figures/dp1_comcam_std_bandpasses.png
     :name: dp1-std-bandpasses
     :alt: Curves illustrating throughput as a function of wavelength for each of the six LSSTComCam filters.
 
