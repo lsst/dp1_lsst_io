@@ -34,14 +34,27 @@ Select Processed Visit Images (PVIs) by clicking on the "PVIs (2)" box in the "O
 In the "Timing" tab, for the "Time of Observation" select "Overlaping specific range"..." and enter 60638 and 60641 as start time and End Time.
 Click the "Search" button.
 
+.. figure:: images/portal-105-5-1.png
+    :name: portal-105-5-1
+    :alt: The screenshot with parameters requestng the image.
 
+    Figure 1: The screenshot of the Portal Aspect of the RSP with selection of the parameters as above.
 
 **4. Select a single-band observaton.**
 In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
 
-**4. Select the cutout tool.**
+**5. Select the cutout tool.**
 Above the image on the upper left, click on "scissors" which will select the cutout tool.
 The pop-up window will allow for some choices:  the default is "Search Target Center".
+
+.. figure:: images/portal-105-5-2.png
+    :name: portal-105-5-2
+    :alt: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked as "A).
+
+    Figure 2: The screenshot resulting from executing the seach above, with the pop-up window resulting from clicking on "scissors" (marked as "A).
+
+Click on "Show cutout".
+Examine the upper left-hand panel of your screen showing the cutout of the image, centered on the coordinates entered in Step 1.
 
 **4. Change the coordinates of the cutout.**
 Change the cutout center by clicking on the circle next to "Entered Position".
