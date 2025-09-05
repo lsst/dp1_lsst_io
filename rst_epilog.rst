@@ -16,7 +16,7 @@
 .. |dataset_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1 |doi_image| https://doi.org/10.71929/rubin/2570308
 .. |calibrations_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: calibrations dataset type |doi_image| https://doi.org/10.71929/rubin/2570309
 .. |calibrations_butler_count| replace:: 496
-.. |bandpasses_doi| replace:: *DOI to be added.*
+.. |bandpasses_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1 |doi_image| https://doi.org/10.71929/rubin/2587407
 .. |raw_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: raw dataset type |doi_image| https://doi.org/10.71929/rubin/2570310
 .. |raw_butler_count| replace:: 16,125
 .. |visit_image_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Legacy Survey of Space and Time Data Preview 1: visit_image dataset type |doi_image| https://doi.org/10.71929/rubin/2570311
