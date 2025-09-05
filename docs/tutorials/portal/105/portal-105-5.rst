@@ -41,7 +41,7 @@ Click the "Search" button.
     Figure 1: The screenshot of the Portal Aspect of the RSP with selection of the parameters as above.
 
 **4. Select a single-band observaton.**
-In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
+In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menuw
 
 **5. Select the cutout tool.**
 Above the image on the upper left, click on "scissors" which will select the cutout tool.
@@ -55,11 +55,13 @@ The pop-up window will allow for some choices:  the default is "Search Target Ce
 
 Click on "Show cutout".
 Examine the upper left-hand panel of your screen showing the cutout of the image, centered on the coordinates entered in Step 1.
+At this point, it is possible to return the full image by clicking on the scissors, and clicking on "Show Full Image".
 
-**4. Change the coordinates of the cutout.**
+**6. Change the coordinates of the cutout.**
+Click on the "scissors" again to display the pop-up window.
 Change the cutout center by clicking on the circle next to "Entered Position".
 Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
-The example here uses RA = 52.9936, Dec = -28.4118.
+Enter 
 Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
 
 **Image**
