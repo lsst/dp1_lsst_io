@@ -61,10 +61,15 @@ At this point, it is possible to return the full image by clicking on the scisso
 Click on the "scissors" again to display the pop-up window.
 Change the cutout center by clicking on the circle next to "Entered Position".
 Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
-Enter 
+As an example, enter 59.3936, -48.72416 .
 Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
 
-**Image**
+.. figure:: images/portal-105-5-3.png
+    :name: portal-105-5-3
+    :alt: The screenshot revealing the cutout centered on the selected coordinates.
+
+    Figure 3:  The screenshot revealing the cutout centered on the selected coordinates.
+
 
 **5. Display multiple cutouts.**
 
