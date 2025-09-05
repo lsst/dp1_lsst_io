@@ -61,16 +61,36 @@ At this point, it is possible to return the full image by clicking on the scisso
 Click on the "scissors" again to display the pop-up window.
 Change the cutout center by clicking on the circle next to "Entered Position".
 Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
-As an example, enter 59.3936, -48.72416 .
+As an example, enter 59.09367, -48.724489 .
 Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
 
 .. figure:: images/portal-105-5-3.png
     :name: portal-105-5-3
     :alt: The screenshot revealing the cutout centered on the selected coordinates.
 
-    Figure 3:  The screenshot revealing the cutout centered on the selected coordinates.
+    Figure 3:  The screenshot revealing the cutout centered on the selected coordinates, with the pop-up window where the cutout center coordinates were entered.
 
+**7. Display multiple cutouts.**
 
-**5. Display multiple cutouts.**
+Click on the icon with six little rectangles on the upper left (marked with the red arrow).
+This will reveal cutouts from the first eight images (as listed in the table below).
+
+.. figure:: images/portal-105-5-4.png
+    :name: portal-105-5-4
+    :alt: The screenshot revealing the eight cutout centered on the selected coordinates.
+
+    Figure 4:  The screenshot revealing the eight cutouts centered on the selected coordinates.
+
+**7. Align the orientation of the multiple cutouts.**
+
+Click on the "image alignment" tool icon (next-to-the-righmost icon above the eight images.
+Under the "Align and Lock" option, click on the "by WCS" choice.
+
+.. figure:: images/portal-105-5-5.png
+    :name: portal-105-5-5
+    :alt: The screenshot revealing the eight cutout centered on the selected coordinates, aligned to WCS.
+
+    Figure 5:  The screenshot revealing the eight cutouts centered on the selected coordinates, but aligned to WCS.
+
 
 
