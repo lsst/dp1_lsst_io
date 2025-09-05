@@ -7,7 +7,7 @@ Bandpasses
 LSSTComCam filter bandpasses.
 
 
-|bandpasses_doi|
+|bandpasses_doi| [:download:`BibTeX </bib/butler-bandpasses.bib>`]
 
 
 Access
