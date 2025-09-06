@@ -79,7 +79,7 @@ Click on "Update Cutout", which will show a single cutout corresponding to the f
 
 **7. Display multiple cutouts.**
 
-Click on the icon with six little rectangles on the upper left (marked with the red arrow).
+Click on the icon with six little rectangles on the upper left (marked with an arrow).
 This will reveal cutouts from the first eight images (as listed in the table below).
 
 .. figure:: images/portal-105-5-5.png
