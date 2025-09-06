@@ -68,7 +68,7 @@ At this point, it is possible to return the full image by clicking on the scisso
 Click on the "scissors" again to display the pop-up window.
 Change the cutout center by clicking on the circle next to "Entered Position".
 Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
-As an example, enter 59.1017464, -48.7366495
+As an example, enter 59.1017464, -48.7366495.
 Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
 
 .. figure:: images/portal-105-5-4.png
@@ -90,7 +90,7 @@ This will reveal cutouts from the first eight images (as listed in the table bel
 
 **7. Align the orientation of the retrieved multiple cutouts.**
 
-Click on the "image alignment" tool icon (next-to-the-righmost icon above the eight images.
+Click on the "image alignment" tool icon (next-to-the-righmost icon above the eight images, maked with an arrow).
 Under the "Align and Lock" option, click on the "by WCS" choice.
 
 .. figure:: images/portal-105-5-6.png
