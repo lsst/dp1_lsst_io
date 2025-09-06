@@ -31,7 +31,7 @@ In the "Location" tab on the left, request "Observation boundary contains point"
 Select Processed Visit Images (PVIs) by clicking on the "PVIs (2)" box in the "Observation Type and Source" tab on the left.
 
 **3. Restrict the observation epochs.**
-In the "Timing" tab, for the "Time of Observation" select "Overlapping specific range"..." and enter 60638 and 60641 as start time and End Time.
+In the "Timing" tab, for the "Time of Observation" select "Overlapping specific range"..." and enter 60638 and 60641 as "Start Time" and "End Time".
 Click the "Search" button.
 
 .. figure:: images/portal-105-5-1.png
