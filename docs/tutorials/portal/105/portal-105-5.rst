@@ -88,7 +88,7 @@ This will reveal cutouts from the first eight images (as listed in the table bel
 
     Figure 5:  The screenshot revealing the eight cutouts centered on the selected coordinates.
 
-**7. Align the orientation of the retrieved multiple cutouts.**
+**8. Align the orientation of the retrieved multiple cutouts.**
 
 Click on the "image alignment" tool icon (next-to-the-rightmost icon above the eight images, maked with an arrow).
 Under the "Align and Lock" option, click on the "by WCS" choice.
