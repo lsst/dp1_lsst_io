@@ -54,6 +54,7 @@ The pop-up window will allow for some choices:  the default is "Search Target Ce
     Figure 2: The screenshot resulting from executing the search above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
 
 Click on "Show cutout".
+Note that there appears the size of the cutout next to the "scissors".
 
 .. figure:: images/portal-105-5-3.png
     :name: portal-105-5-3
