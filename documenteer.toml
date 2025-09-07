@@ -21,7 +21,8 @@ ignore = [
     "https://docushare.lsstcorp.org/docushare/dsweb/Get/LSE-163/LSE-163_DataProductsDefinitionDocumentDPDD.pdf",
     "http://ls.st/doc-29545",
     "https://ui.adsabs.harvard.edu/abs/.*#", #temporary to unblock MLG Sun Jun 29
-    "https://aladin.cds.unistra.fr/hips/" #temporary to unblock, is in portal 104-1
+    "https://aladin.cds.unistra.fr/hips/", #temporary to unblock, is in portal 104-1
+    "http://www.star.bris.ac.uk/~mbt/topcat/" #temporary to unblock, in ap1-1
 ]
 
 [sphinx.intersphinx.projects]

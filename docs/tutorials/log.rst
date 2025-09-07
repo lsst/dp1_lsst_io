@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-09-07
+==========
+
+Release new notebook tutorial 310.1 on how to access photo-z estimates.
+
 2025-09-04
 ==========
 
