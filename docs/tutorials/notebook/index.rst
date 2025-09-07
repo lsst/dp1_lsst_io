@@ -243,6 +243,17 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     308/notebook-308-2.rst
 
 
+310. Photometric redshifts
+--------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    310/notebook-310-1.rst
+
+
+
 
 
 
