@@ -42,7 +42,7 @@ The ``standard_passband`` dataset is keyed by band and is in Astropy Table forma
 Tutorials
 ---------
 
-*Coming soon.*
+See the :ref:`200-level notebook <notebook-200>` tutorial on filter bandpasses for an example of how to retrieve them from the Butler.
 
 
 
