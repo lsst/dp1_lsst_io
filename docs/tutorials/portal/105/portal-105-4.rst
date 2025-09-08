@@ -90,7 +90,7 @@ Click multiple points on the image to extract their pixel values at once.
 
 **8. Save or download.**
 Click "Pin Chart/Table" to save the results temporarily, or use "Download as Table" and/or "Download Chart" to save them locally.
-Results can also be saved as a DS9 region file. 
+Results can also be saved as a DS9 region file.
 
 .. figure:: images/portal-105-4-3.png
     :width: 500
