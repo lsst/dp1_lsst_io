@@ -4,10 +4,15 @@
 Log of major tutorial updates
 #############################
 
+2025-09-08
+==========
+
+Released new notebook tutorial 204.4 on how to access the filter bandpasses via the Butler.
+
 2025-09-07
 ==========
 
-Release new notebook tutorial 310.1 on how to access photo-z estimates.
+Released new notebook tutorial 310.1 on how to access photo-z estimates.
 
 2025-09-04
 ==========

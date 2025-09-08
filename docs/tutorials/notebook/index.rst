@@ -138,6 +138,7 @@ Tutorials with a learning objective of understanding one of the data products.
     204/notebook-204-1.rst
     204/notebook-204-2.rst
     204/notebook-204-3.rst
+    204/notebook-204-4.rst
 
 
 
