@@ -60,7 +60,7 @@ Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over
 
     Figure 1: A screenshot of the drop-down menu under the Tool icon.
 
-**4. Add a compass.** 
+**4. Add a compass.**
 Click the north-east arrow icon (C in Figure 1). The compass will appear on the image.
 Change its color to purple by clicking the Overlay icon (B in Figure 1), then clicking "Color" to the right of "North Arrow", and selecting purple.
 
