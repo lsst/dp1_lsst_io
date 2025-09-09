@@ -179,7 +179,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
 
 
 302. Stars, MilkyWay, and Local Volume
--------------
+--------------------------------------
 
 .. toctree::
     :titlesonly:
