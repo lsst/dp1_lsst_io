@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-09-10
+==========
+
+Released new notebook tutorial 304.3 on weak lensing analysis with rich cluster Abell 360.
+
 2025-09-08
 ==========
 
