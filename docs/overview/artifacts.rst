@@ -135,6 +135,18 @@ Tree rings are actually changes in pixel *area*, not sensitivity, so they have a
 
     Figure 3: Examples of an amplifier jump and tree rings.
 
+Crosshatch pattern
+------------------
+
+A faint correlated-noise pattern introduced by the overscan subtraction, most noticeable in visit images with low background levels.
+The effect is more pronounced for LSSTComCam than for most LSSTCam detectors, due to the comparatively lower quality of the LSSTComCam CCDs.
+
+.. figure:: images/artifacts-3-1-camera-crosshatch.png
+    :name: artifacts-3-1-camera-crosshatch
+    :alt: Example of crosshatch pattern in visit images.
+
+    Figure 4: Examples of crosshatch patter in visit images with low background.
+
 
 Interpolation
 =============
@@ -150,14 +162,14 @@ Interpolation will also be evident at the edges of the HiPS maps.
     :name: artifacts-4-interp-and-crosstalk
     :alt: Examples of pixels that have been interpolated over.
 
-    Figure 4: An example of a bright star which caused a bleed trail and an edge bleed, where the affected pixels have been interpolated in the processed visit image. Crosstalk features from the bright star remain visible.
+    Figure 5: An example of a bright star which caused a bleed trail and an edge bleed, where the affected pixels have been interpolated in the processed visit image. Crosstalk features from the bright star remain visible.
 
 
 .. figure:: images/artifacts-5-interp-hips.png
     :name: artifacts-5-interp-hips
     :alt: Examples of pixels that have been interpolated over.
 
-    Figure 5: An example of interpolation at the edge of a HiPS map.
+    Figure 6: An example of interpolation at the edge of a HiPS map.
 
 
 Background subtraction artifacts
