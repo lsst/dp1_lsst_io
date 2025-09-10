@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**
+**Last verified to run:** 2025-09-10
 
 **Learning objective:** Add overlays to images displayed in Firefly.
 
-**LSST data products:** DP1 images
+**LSST data products:** ``deep_coadd`` image
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -22,37 +22,28 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-.. This is the beginning of a new tutorial focussing on learning to study variability using features of the Rubin Portal
+**1. Log in to the Portal Aspect of the RSP.**
+Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
-.. Review the README on instructions to contribute.
-.. Review the style guide to keep a consistent approach to the documentation.
-.. Static objects, such as figures, should be stored in the _static directory. Review the _static/README on instructions to contribute.
-.. Do not remove the comments that describe each section. They are included to provide guidance to contributors.
-.. Do not remove other content provided in the templates, such as a section. Instead, comment out the content and include comments to explain the situation. For example:
-	- If a section within the template is not needed, comment out the section title and label reference. Do not delete the expected section title, reference or related comments provided from the template.
-    - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
+**2. Execute an ADQL query for an image.**
+Click on "Edit ADQL" at upper right.
+Enter the following ADQL statement and click "Search" at lower left.
+This query statement will return one *g*-band image in the Euclid Deep Field South field.
 
-.. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-image-add-layers:
-.. Each section should include a label for cross referencing to a given area.
-.. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
-.. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
-.. A warning will alert you of identical labels during the linkcheck process.
+.. code-block:: SQL
 
-.. This section should provide a brief, top-level description of the page.
-
-**1. Log in to the Portal Aspect of the RSP.** Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
-
-**2. Execute an Image query.**
-Enter your desired constraints for the image query, and click "Search" to execute it.
-The example below uses the Euclid Deep Field South (ECDS) containing the location of RA = 59.1, Dec = -48.73.
-It uses a co-add image, selected by clicking on the "Coadds and Difference Images" box in the "Observation Type and Source" tab on the left.
-By default, the first image displayed is a difference image.
-In the table on the bottom, in the column with the header "dataproduct_subtype" select "lsst.deep_coadd" from the dropdown menu.
+  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
+         lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
+         obs_collection,o_ucd,facility_name,instrument_name,obs_title,s_region,access_url,
+         access_format
+  FROM ivoa.ObsCore
+  WHERE CONTAINS(POINT('ICRS', 59.1, -48.73), s_region)=1
+        AND (483e-9 BETWEEN em_min AND em_max)
+        AND calib_level = 3 AND dataproduct_type = 'image' AND dataproduct_subtype = 'lsst.deep_coadd'
+        AND (lsst_tract = 2394 AND lsst_patch = 25)
 
 **3. Explore available image layer options.**
-Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" section (red circle in Figure 1) to see pop-up description boxes.
+Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" row to see pop-up description boxes.
 
 .. figure:: images/portal-105-3-1.png
     :name: portal-105-3-1
@@ -72,14 +63,14 @@ Change its coordinate system to the Galactic coordinate by clicking the Overlay 
 Click the Ruler icon (E in Figure 1), click a starting point on the image, and drag to an endpoint.
 Click the Overlay icon, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
 
-**7. Add a mask.**
-Click the Mask icon (F in Figure 1), enter "2" under "HDU Index" to use the 2nd extension of the active image file, and click OK.
-Alternatively, uploading a custom mask file is possible.
+**7. Add a mask** (coming soon).
+Use of the Mask icon (F in Figure 1) will be added here.
 
 **8. Add a marker.**
-Click the last icon (G in Figure 1) and select "Add Marker" to place a marker at the center.
-Click and drag it to the lower-left corner, resize it by dragging any corner, and set its label to "Object of interest".
-Change the label location to "NE" from the "Corner" drop-down menu.
+Click the last icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.
+Click and drag to move it to the lower-left corner of the image.
+Resize it by clicking and dragging one of the little four boxes that appear around it.
+Open the Overlay window, set the label to "Object of interest", and change the label corner to "NE".
 
 **9. Add a footprint.**
 Click the last icon (G in Figure 1) and select "NIRCAM" from "Add JWST footprint".
