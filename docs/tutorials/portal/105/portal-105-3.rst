@@ -65,7 +65,7 @@ Click the "Ruler" icon (E in Figure 1), click a starting point on the image, and
 In the "Layers" pop-up window, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
 
 **7. Add a mask** (coming soon).
-Use of the "Mask" icon (F in Figure 1) will be added here.
+Use of the "Mask" icon (F in Figure 1) will be added here at a later date.
 
 **8. Add a marker.**
 Click the "Marker" icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.

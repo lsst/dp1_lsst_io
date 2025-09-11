@@ -57,13 +57,15 @@ Click on the "zoom-in" icon (the magnifying glass with a "+" sign in the upper l
 **4. Extract a line profile.**
 Click the "Tools" icon, then select the "Line" icon in the "Extract" row (see Figure 1).
 The pop-up "Extract" window will appear.
-In the image, click-and-drag to draw a line across any object(s), and the 1D brightness profile (line profile) will appear in the pop-up window.
+In the image, click-and-drag to draw a line across any object(s), and the 1D brightness profile (line profile) will appear in the pop-up window (see Figure 2).
 
 
 **5. Adjust the aperture.**
-The aperture options in the "Extract" window are given in "x-by-y", and will always be 1 along the direction of the line.
-For example, more horizontal line aperture options will be "1x3" to "1x7" (always 1 in the x-direction), whereras more vertical line aperture options will be "3x1" to "7x1" (always 1 in the y-direction).
-Options to calculate the "Average" or "Sum" within the aperture are given.
+In the "Extract" window, aperture options are provided in the format "x-by-y".
+The options will always be 1 along the direction of the line.
+For a more horizontal line the options will be "1x3" to "1x7" (i.e., always 1 in the x-direction).
+Whereras for a more vertical line the options will be "3x1" to "7x1" (i.e., always 1 in the y-direction).
+The options to calculate the "Average" or "Sum" of the fluxes within the aperture are given.
 Figure 2 demonstrates a "7x1" sum aperture used on a more vertical line profile across two blended objects.
 
 
@@ -77,7 +79,7 @@ Figure 2 demonstrates a "7x1" sum aperture used on a more vertical line profile 
 
 **6. Pin or download the extracted line profile.**
 In the pop-up "Extract" window click "Pin Chart/Table" to send the extracted fluxes to the table and chart panels of the results viewer, as shown in Figure 3.
-Clicking either download button will present options for download file formats.
+Clicking either of the two download buttons will present options for downloadable file formats, including a DS9 region file.
 
 .. figure:: images/portal-105-4-3.png
     :width: 500
@@ -88,7 +90,8 @@ Clicking either download button will present options for download file formats.
 
 
 **7. Clear the extracted line profile.**
-Click the "x" at upper right in the chart (plot); in the table tab "Extract line"; and in the "Overlay" pop-up window to the right of the "Extract Line" overlay row and then close the "Overlay" window.
+Click the "x" at upper right in the chart (plot) and the "x" in the table tab named "Extract line".
+Open the "Layers" pop-up window and click the "x" at far right in the "Extract Line" row, and then close the "Layers" window.
 
 **8. Extract point fluxes.**
 Click the "Tools" icon, then select the "Points" icon in the "Extract" row (see Figure 1).
@@ -105,4 +108,3 @@ Set the aperture to "7x7" and "Sum", as in the example in Figure 4 below.
 
 **9. Pin or download the extracted fluxes.**
 As in step 6, send the extracted fluxes into the table and chart panels.
-Notice that for downloads, a variety of file formats are offered, including a DS9 region file.

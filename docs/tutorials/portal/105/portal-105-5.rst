@@ -47,8 +47,8 @@ Click on the line for ``lsst_visit`` 2024112500284.
 That row of the table will be highlighted, and that specific image displayed in the Firefly viewer at upper left, as in Figure 1.
 
 **4. Open the cutout tool.**
-Above the image on the upper left, click on "cutout" tool icon (the scissors, as shown in Figure 1).
-The "Cutout Settings" pop-up window displays the default cutout size and center (72 arcseconds and "Search Target Center", respectively).
+Above the image on the upper left, click on "Cutout" tool icon (the scissors, as shown in Figure 1).
+The "Cutout Settings" pop-up window displays the default cutout size and center (a radius of 72 arcseconds and "Search Target Center", respectively).
 
 .. figure:: images/portal-105-5-1.png
     :name: portal-105-5-1
@@ -57,7 +57,7 @@ The "Cutout Settings" pop-up window displays the default cutout size and center 
     Figure 1: The results view with *i*-band image for visit 2024112500284 displayed. The search coordinate is marked with a yellow symbol. Also shown is the pop-up window that appears after clicking on the "cutout" icon (the scissors, marked with an arrow).
 
 
-** 5. View the default cutout.**
+**5. View the default cutout.**
 In the "Cutout Settings" window, click on "Show Cutout".
 The image displayed in the Firefly panel will update to be the default cutout, as in Figure 2.
 
@@ -69,9 +69,9 @@ The image displayed in the Firefly panel will update to be the default cutout, a
 
 
 **6. Create a custom cutout.**
-Open the "Cutout Settings" window and change the size to 10 arcseconds (this is a radius, not a side length).
+Open the "Cutout Settings" window and change the size to a radius of 10 arcseconds.
 Click on the circle next to "Entered Position", then click on the "Change Cutout Center" box that appears and enter "59.1017464, -48.7366495".
-These are the RA, Dec coordinates of a small faint extended object, in degrees.
+These are the RA and Dec coordinates of a small faint extended object, in degrees.
 As shown in Figure 3, click on "Update Cutout", and the result will be as shown in Figure 4.
 
 .. figure:: images/portal-105-5-3.png
