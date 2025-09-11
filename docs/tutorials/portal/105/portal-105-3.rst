@@ -43,46 +43,48 @@ This query statement will return one *g*-band image in the Euclid Deep Field Sou
         AND (lsst_tract = 2394 AND lsst_patch = 25)
 
 **3. Explore available image layer options.**
-Click the Tools icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" row to see pop-up description boxes.
+Click the "Tools" icon (A in Figure 1) to open the drop-down menu, then mouse-over each icon in the "Layers" row to see pop-up description boxes.
 
 .. figure:: images/portal-105-3-1.png
     :name: portal-105-3-1
     :alt: A screenshot of the drop-down menu under the Tool icon.
 
-    Figure 1: A screenshot of the drop-down menu under the Tool icon.
+    Figure 1: The retrieved image displayed with Firefly, and the "Tools" drop-down menu.
 
 **4. Add a compass.**
-Click the north-east arrow icon (C in Figure 1). The compass will appear on the image.
-Change its color to purple by clicking the Overlay icon (B in Figure 1), then clicking "Color" to the right of "North Arrow", and selecting purple.
+Click the "Compass" icon (the north-east arrow; C in Figure 1).
+A compass will appear on the image.
+Change its color to purple by clicking the "Layers" icon (B in Figure 1), and in the pop-up window (Figure 2) clicking "Color" to the right of "North Arrow", and selecting purple.
 
 **5. Add a coordinate grid.**
-Click the Grid icon (D in Figure 1) to display the coordinate grid on the image.
-Change its coordinate system to the Galactic coordinate by clicking the Overlay icon and selecting "Galactic" from the drop-down menu under "Grid".
+Click the "Grid" icon (D in Figure 1) to display the coordinate grid on the image.
+Change its coordinate system to the Galactic coordinate by opening the "Layers" pop-up window and selecting "Galactic" from the drop-down menu under "Grid" (Figure 2).
 
 **6. Add a ruler to measure distance.**
-Click the Ruler icon (E in Figure 1), click a starting point on the image, and drag to an endpoint.
-Click the Overlay icon, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
+Click the "Ruler" icon (E in Figure 1), click a starting point on the image, and drag to an endpoint.
+In the "Layers" pop-up window, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
 
 **7. Add a mask** (coming soon).
-Use of the Mask icon (F in Figure 1) will be added here.
+Use of the "Mask" icon (F in Figure 1) will be added here.
 
 **8. Add a marker.**
-Click the last icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.
+Click the "Marker" icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.
 Click and drag to move it to the lower-left corner of the image.
-Resize it by clicking and dragging one of the little four boxes that appear around it.
-Open the Overlay window, set the label to "Object of interest", and change the label corner to "NE".
+Resize the marker by clicking and dragging one of the little four boxes that appear around it.
+Open the "Layers" window, set the label to "Object of interest", and change the label corner to "NE".
 
 **9. Add a footprint.**
-Click the last icon (G in Figure 1) and select "NIRCAM" from "Add JWST footprint".
-The footprint will appear in the center of the image. Move it by clicking and dragging any part of it.
+Click the "Footprint" icon (G in Figure 1) and select "NIRCAM" from "Add JWST footprint".
+The footprint will appear in the center of the image.
+Move it by clicking and dragging any part of it.
 To rotate, click the Overlay icon and enter "45" for "Angle" under "Footprint: JWST NIRCAM", or drag the rotate handle by 45 degrees.
 
 .. figure:: images/portal-105-3-2.png
     :name: portal-105-3-2
     :alt: A screenshot of the added layers listed under the Overlay icon with layer display controls.
 
-    Figure 2: A screenshot of the added layers listed under the Overlay icon with layer display controls. The mask layer is removed to improve visualization clarity (see Step 9).
+    Figure 2: The "Layers" pop-up window with display controls.
 
 **10. Remove a layer.**
-To temporarily remove a layer, click the Overlay icon and toggle the sliding button next to the layer.
-To completely remove a layer, click the "X" next to its "Color" box.
+In the "Layers" window, toggle the display of any layer on and off using the sliding buttons at left.
+To completely remove a layer, click the "X" to the right of its "Color" box.
