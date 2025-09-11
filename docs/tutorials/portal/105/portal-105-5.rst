@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:**  September 6, 2025
+**Last verified to run:** 2025-09-11
 
 **Learning objective:** View image cutouts instead of full-frame images in Firefly.
 
-**LSST data products:**
+**LSST data products:** ``visit_image``
 
 **Credit:** Originally developed by the Rubin Community Science team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -25,79 +25,101 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal Aspect of the RSP.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
-**2. Enter the Observation Type and Source, and the coordinates of the image to be examined.**
-The example below uses the Euclid Deep Field South (ECDS) containing the location of RA = 59.1, Dec = -48.73.
-In the "Location" tab on the left, request "Observation boundary contains point" and enter those coordinates in the box just below.
-Select Processed Visit Images (PVIs) by clicking on the "PVIs (2)" box in the "Observation Type and Source" tab on the left.
+**2. Execute an ADQL query for an image.**
+Click on "Edit ADQL" at upper right.
+Enter the following ADQL statement and click "Search" at lower left.
+This query will return a subset of processed visit images in the Euclid Deep Field South field that overlap coordinates RA, Dec = 59.1, -48.73 deg.
 
-**3. Restrict the observation epochs.**
-In the "Timing" tab, for the "Time of Observation" select "Overlapping specific range"..." and enter 60638 and 60641 as "Start Time" and "End Time".
-Click the "Search" button.
+.. code-block:: SQL
+
+  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
+         lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
+         obs_collection,o_ucd,facility_name,instrument_name,obs_title,s_region,access_url,access_format
+  FROM ivoa.ObsCore
+  WHERE CONTAINS(POINT('ICRS', 59.1, -48.73), s_region) = 1
+        AND calib_level = 2 AND dataproduct_type = 'image' AND dataproduct_subtype = 'lsst.visit_image'
+        AND (t_min <= 60641 AND 60638 <= t_max)
+
+
+**3. Select a single i-band image.**
+In the results view, in the table across the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
+Click on the line for ``lsst_visit`` 2024112500284.
+That row of the table will be highlighted, and that specific image displayed in the Firefly viewer at upper left, as in Figure 1.
+
+**4. Open the cutout tool.**
+Above the image on the upper left, click on "cutout" tool icon (the scissors, as shown in Figure 1).
+The "Cutout Settings" pop-up window displays the default cutout size and center (72 arcseconds and "Search Target Center", respectively).
 
 .. figure:: images/portal-105-5-1.png
     :name: portal-105-5-1
-    :alt: The screenshot with parameters requesting the image.
+    :alt: The screenshot with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
 
-    Figure 1: The screenshot of the Portal Aspect of the RSP with selection of the parameters as above.
+    Figure 1: The results view with *i*-band image for visit 2024112500284 displayed. The search coordinate is marked with a yellow symbol. Also shown is the pop-up window that appears after clicking on the "cutout" icon (the scissors, marked with an arrow).
 
-**4. Select a single-band observaton.**
-In the table on the bottom, in the column with the header "lsst band" select "i" from the dropdown menu.
 
-**5. Select the cutout tool.**
-Above the image on the upper left, click on "scissors" which will select the cutout tool.
-The pop-up window will allow for some choices:  the default is "Search Target Center".
+** 5. View the default cutout.**
+In the "Cutout Settings" window, click on "Show Cutout".
+The image displayed in the Firefly panel will update to be the default cutout, as in Figure 2.
 
 .. figure:: images/portal-105-5-2.png
     :name: portal-105-5-2
-    :alt: The screenshot resulting from executing the search above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
+    :alt: The screenshot showing the single cutout.
 
-    Figure 2: The screenshot resulting from executing the search above, with the pop-up window resulting from clicking on "scissors" (marked with an arrow).
+    Figure 2: The default cutout, 72x72 arcseconds, centered on the original search coordinates (yellow symbol).
 
-Click on "Show cutout".
-Note that there appears the size of the cutout next to the "scissors".
-Also note that you can change this size by entering the desired size in the pop-up window.
+
+**6. Create a custom cutout.**
+Open the "Cutout Settings" window and change the size to 10 arcseconds (this is a radius, not a side length).
+Click on the circle next to "Entered Position", then click on the "Change Cutout Center" box that appears and enter "59.1017464, -48.7366495".
+These are the RA, Dec coordinates of a small faint extended object, in degrees.
+As shown in Figure 3, click on "Update Cutout", and the result will be as shown in Figure 4.
 
 .. figure:: images/portal-105-5-3.png
     :name: portal-105-5-3
-    :alt: The screenshot showing the single cutout.
+    :width: 300
+    :alt: The screenshot of the cutout settings for a custom cutout.
 
-    Figure 3: The screenshot resulting from executing the search above, with the cutout centered on the image center on the upper left.
+    Figure 3: Cutout settings for a custom cutout that is 20 arcseconds per side, and centered on the provided RA and Dec in degrees.
 
-Examine the upper left-hand panel of your screen showing the cutout of the image, centered on the coordinates entered in Step 1.
-At this point, it is possible to return the full image by clicking on the scissors, and clicking on "Show Full Image".
-
-**6. Change the coordinates of the cutout.**
-Click on the "scissors" again to display the pop-up window.
-Change the cutout center by clicking on the circle next to "Entered Position".
-Click on the "Change Cutout Center" box and enter your desired coordinates (which need to be within the selected PVI).
-As an example, enter 59.1017464, -48.7366495.
-Click on "Update Cutout", which will show a single cutout corresponding to the first entry in the table below.
 
 .. figure:: images/portal-105-5-4.png
     :name: portal-105-5-4
-    :alt: The screenshot revealing the cutout centered on the selected coordinates.
+    :width: 300
+    :alt: The screenshot showing the cutout centered on the selected coordinates.
 
-    Figure 4:  The screenshot revealing the cutout centered on the selected coordinates, with the pop-up window where the cutout center coordinates were entered.
+    Figure 4: The cutout that results from the settings in Figure 3.
 
-**7. Display multiple cutouts.**
 
-Click on the icon with six little rectangles on the upper left (marked with an arrow).
-This will reveal cutouts from the first eight images (as listed in the table below).
+**7. Reset the cutout size to 60 arcseconds.**
+Open the cutout setting window, enter 60 in the size box, and click "Update Cutout".
+The following steps are better demonstrated with larger cutouts.
+
+
+**8. Display multiple cutouts.**
+Click on the "Tile" icon at upper left (six little rectangles; marked with an arrow in Figure 5).
+Cutouts will be displayed from the first eight images in the table, as shown in Figure 5.
+Notice that the visit images have different rotations, and that for visit image 20241125000283 (second from left on the bottom) the cutout center coordinates are close to that image's edge, and the cutout is not square.
 
 .. figure:: images/portal-105-5-5.png
     :name: portal-105-5-5
-    :alt: The screenshot revealing the eight cutout centered on the selected coordinates.
+    :alt: The screenshot showing the eight cutout centered on the selected coordinates.
 
-    Figure 5:  The screenshot revealing the eight cutouts centered on the selected coordinates.
+    Figure 5: A tiled view of eight cutouts of eight different visit images, all made with 60 arcsecond radii and centered on the same coordinates.
 
-**8. Align the orientation of the retrieved multiple cutouts.**
 
-Click on the "image alignment" tool icon (next-to-the-rightmost icon above the eight images, maked with an arrow).
-Under the "Align and Lock" option, click on the "by WCS" choice.
+**9. Align the tiled cutouts in sky coordinates.**
+Click on the "image alignment" tool icon (marked with an arrow in Figure 6).
+Under "Align and Lock" click on "by WCS" (World Coordinate System; sky coordinate).
+As in Figure 6, all cutouts are now oriented north-up, east-left.
 
 .. figure:: images/portal-105-5-6.png
     :name: portal-105-5-6
-    :alt: The screenshot revealing the eight cutout centered on the selected coordinates, aligned to WCS.
+    :alt: The screenshot showing the eight cutout centered on the selected coordinates, aligned to WCS.
 
-    Figure 6:  The screenshot revealing the eight cutouts centered on the selected coordinates, but aligned to WCS.
+    Figure 6: A tiled view of the same eight cutouts as in Figure 5, but aligned by WCS and oriented north-up, east-left.
+
+
+**10. Return to full image display.**
+Return to full-image display by opening the cutout tool window and clicking "Show Full Image".
+
 

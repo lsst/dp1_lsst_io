@@ -12,7 +12,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Learning objective:** Extract pixel values from an image with Firefly (e.g., line profiles, apertures).
 
-**LSST data products:** DP1 images
+**LSST data products:** ``deep_coadd`` image
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -87,12 +87,13 @@ Clicking either download button will present options for download file formats.
     Figure 3: After clicking "Pin Chart/Table", the extracted line profile will appear in the table (bottom) and chart (right) for further analysis and manipulation.
 
 
-**7. Delete the extracted line profile.**
+**7. Clear the extracted line profile.**
 Click the "x" at upper right in the chart (plot); in the table tab "Extract line"; and in the "Overlay" pop-up window to the right of the "Extract Line" overlay row and then close the "Overlay" window.
 
 **8. Extract point fluxes.**
 Click the "Tools" icon, then select the "Points" icon in the "Extract" row (see Figure 1).
-Click on a few faint objects across the image, and the single-pixel flux will be plotted as a function of their x-axis location in the pop-up window.
+Click on a few objects across the image; in Figure 4, faint objects were selected.
+In the pop-up window, see that the single-pixel flux will be plotted as a function of the x-axis location.
 Set the aperture to "7x7" and "Sum", as in the example in Figure 4 below.
 
 .. figure:: images/portal-105-4-4.png
@@ -103,6 +104,5 @@ Set the aperture to "7x7" and "Sum", as in the example in Figure 4 below.
     Figure 4: The summed flux in a 7x7 pixel aperture for each of the marked locations, plotted versus the x-axis location.
 
 **9. Pin or download the extracted fluxes.**
-As in step 6, it is also possible to send the extracted fluxes into the table and chart panels, or to download them as a file.
-A variety of file formats are offered, including a DS9 region file.
-
+As in step 6, send the extracted fluxes into the table and chart panels.
+Notice that for downloads, a variety of file formats are offered, including a DS9 region file.
