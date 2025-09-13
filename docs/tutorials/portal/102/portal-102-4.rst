@@ -49,8 +49,8 @@ After uploading, the pop-up window will show a list of the columns it found, nam
 
     Figure 2. The interface to upload a table.
 
-**6. Select columns.** 
-Click the arrow next to "Position Columns (from the selected table on the right. Indicate which of the DP1 catalog columns to use for the spatial matching. Leave the search radius at the default of 10 arcseconds.
+**6. Select columns and set the radius for matching.** 
+Click the arrow next to "Position Columns. Indicate which of the uploaded table columns to use for spatial matching (ra and dec). Indicate which of the DP1 catalog columns to use for the spatial matching (coord_ra and coord_dec). Set the search radius to 1 arcseconds.
 
 .. figure:: images/portal-102-4-3b.png
     :name: portal-102-4-3b
@@ -61,8 +61,10 @@ Click the arrow next to "Position Columns (from the selected table on the right.
 **7. Click search.** 
 At lower left, click the blue button named "Search".
 
+**8. Review the results**. This search returns 8579 matching objects. 
+
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
     :alt: 
 
-    Figure 4.
+    Figure 4. The catalog results interface.
