@@ -10,7 +10,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Last verified to run:** 2025-09-05
 
-**Learning objective:** 
+**Learning objective:** Use user-uploaded tables for cross-matching
 
 **LSST data products:** ``Object`` table
 
@@ -32,7 +32,7 @@ On the Portal landing page, click on the tab labeled "DP1 Catalogs".
 Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button.
 
 **4. Upload a table to the Portal.** 
-Download the file to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. Click on "upload file". 
+Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. Click on "upload file". 
 
 **5. Load table.** 
 After uploading, the pop-up window will show a list of the columns it found, named according to the header. Make sure that the ra and dec columns in the file are labeled "ra" and "dec" and are displayed in the list.  Click the "Load Table" button.
