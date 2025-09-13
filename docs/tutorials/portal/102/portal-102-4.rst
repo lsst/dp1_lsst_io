@@ -35,6 +35,8 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
     :name: portal-102-4-1
     :alt: 
 
+    Figure 1. 
+
 **4. Upload a table to the Portal.** 
 Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. Click on "upload file". 
 
@@ -45,6 +47,8 @@ After uploading, the pop-up window will show a list of the columns it found, nam
     :name: portal-102-4-2
     :alt: 
 
+    Figure 2. The interface to upload a table.
+
 **6. Select columns.** 
 Click the arrow next to "Position Columns (from the selected table on the right. Indicate which of the DP1 catalog columns to use for the spatial matching. Leave the search radius at the default of 10 arcseconds.
 
@@ -52,9 +56,13 @@ Click the arrow next to "Position Columns (from the selected table on the right.
     :name: portal-102-4-3b
     :alt: 
 
+    Figure 3. 
+
 **7. Click search.** 
 At lower left, click the blue button named "Search".
 
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
     :alt: 
+
+    Figure 4.
