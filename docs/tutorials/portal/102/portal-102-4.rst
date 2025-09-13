@@ -31,14 +31,30 @@ On the Portal landing page, click on the tab labeled "DP1 Catalogs".
 **3. Enter Constraints.** 
 Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button.
 
+.. figure:: images/portal-102-4-1.png
+    :name: portal-102-4-1
+    :alt: 
+
 **4. Upload a table to the Portal.** 
 Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. Click on "upload file". 
 
 **5. Load table.** 
 After uploading, the pop-up window will show a list of the columns it found, named according to the header. Make sure that the ra and dec columns in the file are labeled "ra" and "dec" and are displayed in the list.  Click the "Load Table" button.
 
+.. figure:: images/portal-102-4-2.png
+    :name: portal-102-4-2
+    :alt: 
+
 **6. Select columns.** 
 Click the arrow next to "Position Columns (from the selected table on the right. Indicate which of the DP1 catalog columns to use for the spatial matching. Leave the search radius at the default of 10 arcseconds.
 
+.. figure:: images/portal-102-4-3b.png
+    :name: portal-102-4-3b
+    :alt: 
+
 **7. Click search.** 
 At lower left, click the blue button named "Search".
+
+.. figure:: images/portal-102-4-4.png
+    :name: portal-102-4-4
+    :alt: 
