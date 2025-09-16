@@ -4,10 +4,20 @@
 Log of major tutorial updates
 #############################
 
+2025-09-16
+==========
+
+Released new notebook tutorial 309.1 on applying Milky Way dust extinction correction.
+
 2025-09-10
 ==========
 
 Released new notebook tutorial 304.3 on weak lensing analysis with rich cluster Abell 360.
+
+2025-09-09
+==========
+
+Released new notebook tutorial 302.1 on PSF photometry for stars.
 
 2025-09-08
 ==========
