@@ -53,7 +53,7 @@ Click the drop down menu under "Position Columns (from the uploaded table). Indi
     :name: portal-102-4-3b
     :alt: 
 
-    Figure 3. The interface to select 
+    Figure 3. The interface to select columns for spatial cross-matching.
 
 **6. Click search.** 
 At lower left, click the blue button named "Search". Leave the default row limit.
