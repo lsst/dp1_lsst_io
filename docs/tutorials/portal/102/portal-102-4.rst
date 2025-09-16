@@ -26,42 +26,39 @@ Rubin staff will respond to all questions posted there.
 In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and log in.
 
 **2. Select the DP1 Catalogs tab.**
-On the Portal landing page, click on the tab labeled "DP1 Catalogs".
+On the Portal landing page, click on the tab labeled "DP1 Catalogs". Leave the default table selection.
 
 **3. Enter Constraints.** 
-Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button.
+Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button next to "Spatial Type".
 
 .. figure:: images/portal-102-4-1.png
     :name: portal-102-4-1
     :alt: 
 
-    Figure 1. 
+    Figure 1. The interface to upload a table.
 
 **4. Upload a table to the Portal.** 
-Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. Click on "upload file". 
-
-**5. Load table.** 
-After uploading, the pop-up window will show a list of the columns it found, named according to the header. Make sure that the ra and dec columns in the file are labeled "ra" and "dec" and are displayed in the list.  Click the "Load Table" button.
+Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the downloaded file and click the "Load Table" button.
 
 .. figure:: images/portal-102-4-2.png
     :name: portal-102-4-2
     :alt: 
 
-    Figure 2. The interface to upload a table.
+    Figure 2. The pop-up window after uploading a table, with a list of columns shown.
 
-**6. Select columns and set the radius for matching.** 
-Click the arrow next to "Position Columns. Indicate which of the uploaded table columns to use for spatial matching (ra and dec). Indicate which of the DP1 catalog columns to use for the spatial matching (coord_ra and coord_dec). Set the search radius to 1 arcseconds.
+**5. Select columns and set the radius for cross-matching.** 
+Click the drop down menu under "Position Columns (from the uploaded table). Indicate which of the uploaded table columns to use for spatial matching ("ra" and "dec"). Click the drop down menu under "Position Columns (from the selected table on the right). Indicate which of the DP1 table columns to use for spatial matching ("coord_ra" and "coord_dec"). Set the search radius to 1 arcseconds.
 
 .. figure:: images/portal-102-4-3b.png
     :name: portal-102-4-3b
     :alt: 
 
-    Figure 3. 
+    Figure 3. The interface to select 
 
-**7. Click search.** 
-At lower left, click the blue button named "Search".
+**6. Click search.** 
+At lower left, click the blue button named "Search". Leave the default row limit.
 
-**8. Review the results**. This search returns 8579 matching objects. 
+**7. Review the results**. This search returns 8579 matching objects. 
 
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
