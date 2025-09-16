@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>202_5_Raw_images.r29_2_0</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>202_5_Raw_images</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -8343,24 +8343,9 @@ DateTime("2024-12-08T07:50:12.484500321", TAI)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.3.-World-Coordinate-System-(WCS)">4.3. World Coordinate System (WCS)<a class="anchor-link" href="#4.3.-World-Coordinate-System-(WCS)">¶</a></h3><p>This is not an astrometric solution but rather an <em>initial</em> WCS
-generated from the telescope pointing and detector geometry.</p>
-<p>Option to view the initial WCS estimate.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c07cab3b-7b6f-4603-a8ee-481d244b19ae">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># wcs = raw.getWcs()</span>
-<span class="c1"># wcs</span>
-</pre></div>
-</div>
+<h3 id="4.3.-World-Coordinate-System-(WCS)">4.3. World Coordinate System (WCS)<a class="anchor-link" href="#4.3.-World-Coordinate-System-(WCS)">¶</a></h3><blockquote>
+<p><strong>Warning</strong>: The WCS objects of raw images should not be used; they are based on an initial guess from the telescope at its pointing, but at present this can be quite far off from the true pointing. The corresponding visit image WCS should be used instead. See <a href="https://dp1.lsst.io/products/known_issues_and_subtleties.html#wcs-fits-approximations-and-misleading-interfaces">the DP1 documentation</a> for more details.</p>
+</blockquote>
 </div>
 </div>
 </div>
@@ -8381,7 +8366,7 @@ generated from the telescope pointing and detector geometry.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bbox</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">getBBox</span><span class="p">()</span>
@@ -8395,7 +8380,7 @@ generated from the telescope pointing and detector geometry.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bbox</span>
@@ -8409,7 +8394,7 @@ generated from the telescope pointing and detector geometry.</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Box2I(corner=Point2I(0, 0), dimensions=Extent2I(4608, 4096))</pre>
 </div>
@@ -8432,7 +8417,7 @@ generated from the telescope pointing and detector geometry.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">corners</span> <span class="o">=</span> <span class="p">(</span><span class="n">lsst</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">Point2D</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">beginX</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">beginY</span><span class="p">),</span>
@@ -8462,7 +8447,7 @@ larger than that of a <code>visit_image</code> due to overscan.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="s1">'square pixels'</span><span class="p">)</span>
@@ -8500,7 +8485,7 @@ larger than that of a <code>visit_image</code> due to overscan.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">bbox</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">True</span>
@@ -8542,24 +8527,10 @@ False
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">corners</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f072e2ea-8358-49ef-ba75-4765c24bb813">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>

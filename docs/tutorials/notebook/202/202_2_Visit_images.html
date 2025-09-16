@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>202_2_Visit_images.r29_2_0</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>202_2_Visit_images</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7905,7 +7905,7 @@ This format includes pixel data and metadata.</p>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;lsst.afw.image._exposure.ExposureF at 0x7ec8113bf930&gt;</pre>
+<pre>&lt;lsst.afw.image._exposure.ExposureF at 0x7c5461a5bef0&gt;</pre>
 </div>
 </div>
 </div>
@@ -8337,7 +8337,7 @@ Order the results by <code>expMidptMJD</code> (the MJD at the midpoint of the ex
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=3</i>
-<table class="table-striped table-bordered table-condensed" id="table139398464797392">
+<table class="table-striped table-bordered table-condensed" id="table136701871527200">
 <thead><tr><th>visitId</th><th>detector</th><th>expMidptMJD</th><th>seeing</th><th>band</th></tr></thead>
 <thead><tr><th></th><th></th><th>d</th><th>arcsec</th><th></th></tr></thead>
 <thead><tr><th>int64</th><th>int64</th><th>float64</th><th>float64</th><th>object</th></tr></thead>
@@ -9507,7 +9507,8 @@ Pixel Scale: 0.200266 arcsec/pixel</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Print the area of the bounding box.</p>
+<p>Print the area of the bounding box, first in pixels squared and then in arcminutes squared.
+The pixel scale is calculated at the center of the bounding box, as <a href="https://dp1.lsst.io/products/known_issues_and_subtleties.html#wcs-fits-approximations-and-misleading-interfaces">it is recommended</a> not to call the <code>wcs.getPixelScale()</code> method without an argument.</p>
 </div>
 </div>
 </div>
@@ -9520,7 +9521,9 @@ Pixel Scale: 0.200266 arcsec/pixel</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="s1">'square pixels'</span><span class="p">)</span>
-<span class="n">scale</span> <span class="o">=</span> <span class="n">wcs</span><span class="o">.</span><span class="n">getPixelScale</span><span class="p">()</span><span class="o">.</span><span class="n">asArcminutes</span><span class="p">()</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="n">wcs</span><span class="o">.</span><span class="n">getPixelScale</span><span class="p">(</span><span class="n">lsst</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">Point2D</span><span class="p">(</span>
+    <span class="n">bbox</span><span class="o">.</span><span class="n">centerX</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">centerY</span><span class="p">))</span><span class="o">.</span><span class="n">asArcminutes</span><span class="p">()</span>
+
 <span class="n">area</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">area</span> <span class="o">*</span> <span class="n">scale</span><span class="o">**</span><span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s1">'square arcminutes'</span><span class="p">)</span>
 </pre></div>
@@ -9838,7 +9841,7 @@ and the second moments (all units are pixels).</p>
 <span class="n">psf_sigma</span> <span class="o">=</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getDeterminantRadius</span><span class="p">()</span>
 <span class="n">psf_fwhm</span> <span class="o">=</span> <span class="n">psf_sigma</span> <span class="o">*</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"PSF sigma: </span><span class="si">{</span><span class="n">psf_sigma</span><span class="si">}</span><span class="s2">, PSF FWHM: </span><span class="si">{</span><span class="n">psf_fwhm</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"PSF shape (ixx, iyy, ixy): "</span><span class="p">,</span><span class="n">psf_shape</span><span class="o">.</span><span class="n">getIxx</span><span class="p">(),</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getIyy</span><span class="p">(),</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getIxy</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"PSF shape (ixx, iyy, ixy): "</span><span class="p">,</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getIxx</span><span class="p">(),</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getIyy</span><span class="p">(),</span> <span class="n">psf_shape</span><span class="o">.</span><span class="n">getIxy</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
