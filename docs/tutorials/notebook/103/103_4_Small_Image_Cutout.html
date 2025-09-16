@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>103_4_Small_Image_Cutout.r29_2_0</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>103_4_Small_Image_Cutout</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7524,7 +7524,7 @@ a.anchor-link {
 Data Release: DP1 <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-09-02 <br/>
+Last verified to run: 2025-09-09 <br/>
 Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
 </div>
 </div>
@@ -7599,6 +7599,7 @@ The <a href="https://www.ivoa.net/">International Virtual Observatory Alliance (
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">lsst.afw.display</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">afwDisplay</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lsst.afw.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExposureF</span>
@@ -7761,7 +7762,8 @@ Define the band and the start and end times.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">circle</span><span class="p">,</span> <span class="n">calib_level</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dpsubtype</span><span class="o">=</span><span class="s1">'lsst.visit_image'</span><span class="p">,</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pos</span><span class="o">=</span><span class="n">circle</span><span class="p">,</span> <span class="n">calib_level</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                         <span class="n">dpsubtype</span><span class="o">=</span><span class="s1">'lsst.visit_image'</span><span class="p">,</span>
                          <span class="n">band</span><span class="o">=</span><span class="n">eff_wl</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="n">time1</span><span class="p">,</span> <span class="n">time2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
 </pre></div>
@@ -7815,7 +7817,7 @@ Define the band and the start and end times.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=1</i>
-<table class="table-striped table-bordered table-condensed" id="table139469833923008">
+<table class="table-striped table-bordered table-condensed" id="table134910548929824">
 <thead><tr><th>dataproduct_type</th><th>dataproduct_subtype</th><th>facility_name</th><th>calib_level</th><th>target_name</th><th>obs_id</th><th>obs_collection</th><th>obs_publisher_did</th><th>access_url</th><th>access_format</th><th>s_resolution</th><th>s_xel1</th><th>s_xel2</th><th>t_xel</th><th>t_min</th><th>t_max</th><th>t_exptime</th><th>t_resolution</th><th>em_xel</th><th>em_min</th><th>em_max</th><th>em_res_power</th><th>em_filter_name</th><th>o_ucd</th><th>pol_xel</th><th>instrument_name</th><th>lsst_visit</th><th>lsst_detector</th><th>lsst_tract</th><th>lsst_patch</th><th>lsst_band</th><th>lsst_filter</th><th>obs_title</th><th>s_ra</th><th>s_dec</th><th>s_fov</th><th>s_region</th></tr></thead>
 <thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>arcsec</th><th></th><th></th><th></th><th>d</th><th>d</th><th>s</th><th>s</th><th></th><th>m</th><th>m</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>deg</th><th>deg</th><th>deg</th><th></th></tr></thead>
 <thead><tr><th>object</th><th>object</th><th>object</th><th>int32</th><th>object</th><th>object</th><th>object</th><th>object</th><th>object</th><th>object</th><th>float64</th><th>int64</th><th>int64</th><th>int64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>int64</th><th>float64</th><th>float64</th><th>float64</th><th>object</th><th>object</th><th>int64</th><th>object</th><th>int64</th><th>int64</th><th>int64</th><th>int64</th><th>object</th><th>object</th><th>object</th><th>float64</th><th>float64</th><th>float64</th><th>object</th></tr></thead>
@@ -7882,7 +7884,8 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">datalink_url</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">access_url</span>
-<span class="n">dl_result</span> <span class="o">=</span> <span class="n">DatalinkResults</span><span class="o">.</span><span class="n">from_result_url</span><span class="p">(</span><span class="n">datalink_url</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">get_pyvo_auth</span><span class="p">())</span>
+<span class="n">dl_result</span> <span class="o">=</span> <span class="n">DatalinkResults</span><span class="o">.</span><span class="n">from_result_url</span><span class="p">(</span><span class="n">datalink_url</span><span class="p">,</span>
+                                            <span class="n">session</span><span class="o">=</span><span class="n">get_pyvo_auth</span><span class="p">())</span>
 
 <span class="sa">f</span><span class="s2">"Datalink status: </span><span class="si">{</span><span class="n">dl_result</span><span class="o">.</span><span class="n">status</span><span class="si">}</span><span class="s2">. Datalink service url: </span><span class="si">{</span><span class="n">datalink_url</span><span class="si">}</span><span class="s2">"</span>
 </pre></div>
@@ -8059,7 +8062,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <span class="c1"># else:</span>
 <span class="c1">#     print('Directory already existed: ', tempdir)</span>
 
-<span class="c1"># sodaCutout = os.path.join(tempdir,'cutout-circle.fits')</span>
+<span class="c1"># sodaCutout = os.path.join(tempdir, 'cutout-circle.fits')</span>
 <span class="c1"># with open(sodaCutout, 'bw') as f:</span>
 <span class="c1">#     f.write(sq.execute_stream().read())</span>
 
@@ -8081,6 +8084,26 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Future planned options for the Rubin cutout service, including the potential to retrieve other image formats such as jpeg, are listed at the <a href="https://dmtn-208.lsst.io/">Rubin Science Platform image cutout implementation strategy document</a>.</p>
+<p><strong>Note:</strong> <code>ExposureF</code> contains multiple Header-Data Units (HDUs) with extensive exposure metadata. To reduce file size, one option is to save only the image, mask, and variance planes, along with the WCS recorded in the Primary HDU. This can be done by writing <code>exposure.maskedImage</code>-a three-plane object containing the image, mask, and variance-into a FITS file using <code>writeFitsImage</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de03af16-26d1-4268-998b-43f33bb35a67">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># fits.info(sodaCutout)</span>
+
+<span class="c1"># sodaCutout_small = os.path.join(tempdir, 'cutout-circle_small.fits')</span>
+<span class="c1"># afwDisplay.writeFitsImage(sodaCutout_small,</span>
+<span class="c1">#                           exposure.maskedImage,</span>
+<span class="c1">#                           wcs=exposure.wcs)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8105,7 +8128,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sqp</span> <span class="o">=</span> <span class="n">SodaQuery</span><span class="o">.</span><span class="n">from_resource</span><span class="p">(</span><span class="n">dl_result</span><span class="p">,</span>
@@ -8139,7 +8162,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span> <span class="o">=</span> <span class="n">afwDisplay</span><span class="o">.</span><span class="n">Display</span><span class="p">()</span>
@@ -8193,7 +8216,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sq2</span> <span class="o">=</span> <span class="n">SodaQuery</span><span class="o">.</span><span class="n">from_resource</span><span class="p">(</span><span class="n">dl_result</span><span class="p">,</span>
@@ -8236,7 +8259,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">spherePoint</span><span class="o">.</span><span class="n">getDec</span><span class="p">()</span><span class="o">.</span><span class="n">asDegrees</span><span class="p">(),</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span>
@@ -8281,7 +8304,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">],</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
