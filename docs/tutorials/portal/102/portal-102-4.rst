@@ -49,7 +49,7 @@ Download the file with an example user table to your computer using the `link to
 **5. Select columns and set the radius for cross-matching.** 
 Click the drop down menu under "Position Columns (from the uploaded table). Indicate which of the uploaded table columns to use for spatial matching ("ra" and "dec"). Click the drop down menu under "Position Columns (from the selected table on the right). Indicate which of the DP1 table columns to use for spatial matching ("coord_ra" and "coord_dec"). Set the search radius to 1 arcseconds.
 
-.. figure:: images/portal-102-4-3b.png
+.. figure:: images/portal-102-4-3.png
     :name: portal-102-4-3b
     :alt: 
 
