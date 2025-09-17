@@ -255,6 +255,16 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     308/notebook-308-2.rst
 
 
+309. Astronomical analysis
+--------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    309/notebook-309-1.rst
+
+
 310. Photometric redshifts
 --------------------------
 
