@@ -85,7 +85,7 @@ Log of major updates
 ====================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     log
