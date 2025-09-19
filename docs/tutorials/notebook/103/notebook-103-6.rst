@@ -1,7 +1,7 @@
 .. _notebook-103-6:
 
 ############################
-103.6. Color Composite Image
+103.6. Color composite Image
 ############################
 
 .. raw:: html
