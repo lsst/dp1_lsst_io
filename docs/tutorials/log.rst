@@ -7,8 +7,12 @@ Log of major tutorial updates
 2025-09-19
 ==========
 
-Released new notebook tutorial 103.6 on creating color composite images.
+Released new notebook tutorial 102.5 on LSDB data access.
 
+2025-09-19
+==========
+
+Released new notebook tutorial 103.6 on creating color composite images.
 
 2025-09-16
 ==========
