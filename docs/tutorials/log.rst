@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-09-26
+==========
+
+Released new notebook tutorial 103.7 on creating big depp coadd cutouts.
+
 2025-09-25
 ==========
 
