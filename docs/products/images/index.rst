@@ -8,7 +8,7 @@ Images of the sky in the six LSST filters with a variety of calibration levels.
 
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes tables of image metadata (``ObsCore``).
 
-All image data products are available via the butler, SIA, and TAP services.
+Image data products are available via the butler, SIA, and TAP services.
 See the following resources to get started with these services:
 
 * :doc:`/tutorials/index`

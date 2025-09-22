@@ -1,8 +1,11 @@
 .. _products_adql_queries:
 
 #######################################
-TAP/ADQL terminology and query tips
+TAP and ADQL terminology and query tips
 #######################################
+
+TAP (Table Access Protocol) provides standardized access to catalog data for discovery, search, and retrieval.
+`Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (`IVOA <https://www.ivoa.net/>`_).
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/latest/ADQL.html>`_.
 The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST Table Access Protocol (TAP) service.
