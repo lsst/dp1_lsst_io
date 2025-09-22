@@ -11,6 +11,7 @@ The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column description
 
 All catalog data products are available via TAP, and most are also available with the Butler.
 See the following resources to get started with these services:
+
 * :doc:`/tutorials/index`
 * :doc:`/products/adql_queries`
 * :doc:`/products/butler_terminology`

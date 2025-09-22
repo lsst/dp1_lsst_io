@@ -4,9 +4,9 @@
 API tutorials
 ################
 
-`API Aspect User Guide <https://rsp.lsst.io/guides/api/index.html>`_.
-
 Tutorials for the API (Application Programming Interface) Aspect of the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_.
+
+See also the `API Aspect User Guide <https://rsp.lsst.io/guides/api/index.html>`_.
 
 
 .. _api-100:

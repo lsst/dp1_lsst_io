@@ -4,11 +4,11 @@
 Notebook tutorials
 ##################
 
-`Notebook Aspect User Guide <https://rsp.lsst.io/guides/notebooks/index.html>`_.
-
 Tutorials for the Notebook Aspect of the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-Use the left- and right-hand menu bars to navigate the tutorials.
+See also the `Notebook Aspect User Guide <https://rsp.lsst.io/guides/notebooks/index.html>`_.
+
+Use the left- and right-hand menu bars to navigate this page.
 
 
 .. _notebook-100:

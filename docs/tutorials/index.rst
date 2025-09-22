@@ -19,9 +19,9 @@ Get started
 
 **Get a new RSP account:** follow these `instructions to sign up <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
 
-**The three RSP aspects:** visit the Portal, Notebook, and API `User Guides <https://rsp.lsst.io/guides/index.html>`_.
+**Learn about the RSP:** visit the Portal, Notebook, and API aspects' `User Guides <https://rsp.lsst.io/guides/index.html>`_.
 
-**Tutorials** are organized into levels (100, 200, 300), and each level into multiple series (by topic) which proceed from beginner to advanced.
+**Work through the tutorials:** they are organized into levels (100, 200, 300), and each level into multiple series (by topic), which proceed from beginner to advanced skills in data access and analysis.
 
 
 .. _tutorials-getsupport:
