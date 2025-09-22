@@ -8,44 +8,39 @@ As the system used to organize Rubin datasets both for users and behind the scen
 
 See :ref:`daf_butler_organizing_datasets` in the `~lsst.daf.butler.Butler` documentation for a more complete description of butler concepts.
 
+
 Catalog query tips
 ==================
 
-The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
-See :ref:`products_butler_terminology` for more information.
+**Required dimensions:** the "Butler Dataset type" entry on the page for each of the :doc:`/products/catalogs/index` is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
 
-.. note::
+**Efficient data retrieval:** when reading catalogs with the butler, it can be *much* more efficient to load just a few columns, by adding::
 
-    When reading catalogs with the butler, it can be *much* more efficient to load just a few columns, by adding::
+    parameters={"columns": list_of_columns}
 
-        parameters={"columns": list_of_columns}
-
-    to a `Butler.get <lsst.daf.butler.Butler.get>` call (where ``list_of_columns`` is a Python `list` of `str` column names).
+to a `Butler.get <lsst.daf.butler.Butler.get>` call (where ``list_of_columns`` is a Python `list` of `str` column names).
 
 
 Image query tips
 ================
 
-The "Butler Dataset type" entry on each image type's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
-See :ref:`products_butler_terminology` for more information.
+**Required dimensions:** the "Butler Dataset type" entry on the page for each of the :doc:`/products/images/index` is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
 
-.. note::
+**Efficient data retrieval:** when reading images with the butler, it can be *much* more efficient to read just the pixels of interest, by passing::
 
-    When reading images with the butler, it can be *much* more efficient to read just the pixels of interest, by passing::
+    parameters={
+        "bbox": lsst.geom.Box2I(
+            lsst.geom.Point2I(x1, y1),
+            lsst.geom.Point2I(x2, y2),
+        )
+    }
 
-        parameters={
-            "bbox": lsst.geom.Box2I(
-                lsst.geom.Point2I(x1, y1),
-                lsst.geom.Point2I(x2, y2),
-            )
-        }
+as a keyword argument to `butler.get <lsst.daf.butler.Butler.get>`.
+It is also more efficient to just read the pixel values from a single plane by adding a storage class component name to the dataset type name, e.g.::
 
-    as a keyword argument to `butler.get <lsst.daf.butler.Butler.get>`.
-    It is also more efficient to just read the pixel values from a single plane by adding a storage class component name to the dataset type name, e.g.::
+    butler.get("visit_image.image", ...)
 
-        butler.get("visit_image.image", ...)
-
-    to load just the main image plane, not the mask, variance, or metadata.
+to load just the main image plane, not the mask, variance, or metadata.
 
 
 Datasets
@@ -73,6 +68,7 @@ Dimensions and data IDs
 The *dimensions* of a dataset type are the keys of the mapping-like *data IDs* (also known as *data coordinates*) that identify datasets of that type.
 For example, the ``visit_image`` dataset type has dimensions ``{instrument, visit, detector}``, because its datasets have data IDs like ``{instrument: "LSSTComCam", visit: 2024110800246, detector=2}``.
 In addition to being used as keys in data IDs, dimensions are associated with metadata (*dimension records*) in the butler database, and can have other dimensions as *required* and *implied* dependencies that often allow data IDs to be written more concisely.
+
 For example, the ``visit`` dimension *requires* the ``instrument`` dimension, which means that a visit ID like ``2024110800246`` must be accompanied by an instrument name like ``"LSSTComCam"`` to be fully-qualified.\ [#data_id_defaults]_
 On the other hand, the ``visit`` dimension *implies* the ``physical_filter`` and ``day_obs`` dimensions, which means you never have to pass values for these dimensions when specifying a visit ID; the butler can just look them up from the visit ID.
 
