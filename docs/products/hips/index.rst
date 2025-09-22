@@ -24,5 +24,5 @@ in the coadded map.
 Tutorials
 ---------
 
-See the :ref:`200-level portal <portal-200>`
-tutorials demonstrating how to explore the HiPS maps.
+See the :ref:`100-level portal <portal-100>`
+tutorial demonstrating how to explore the HiPS maps.
