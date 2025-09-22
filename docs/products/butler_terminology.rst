@@ -1,12 +1,27 @@
 .. _products_butler_terminology:
 
-##################
-Butler terminology
-##################
+#################################
+Butler terminology and query tips
+#################################
 
 As the system used to organize Rubin datasets both for users and behind the scenes, the terminology used to describe a data product within the data butler is often used more broadly in tutorials and documentation, even in contexts where data access does not use the butler directly.
 
 See :ref:`daf_butler_organizing_datasets` in the `~lsst.daf.butler.Butler` documentation for a more complete description of butler concepts.
+
+Query tips
+==========
+
+The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+See :ref:`products_butler_terminology` for more information.
+
+.. note::
+
+    When reading catalogs with the butler, it can be *much* more efficient to load just a few columns, by adding::
+
+        parameters={"columns": list_of_columns}
+
+    to a `Butler.get <lsst.daf.butler.Butler.get>` call (where ``list_of_columns`` is a Python `list` of `str` column names).
+
 
 Datasets
 ========

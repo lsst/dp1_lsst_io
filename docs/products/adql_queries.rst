@@ -1,8 +1,8 @@
 .. _products_adql_queries:
 
-####################################
-Query best practices (TAP/ADQL tips)
-####################################
+#######################################
+TAP/ADQL terminology and query tips
+#######################################
 
 ADQL is the `Astronomical Data Query Language <https://www.ivoa.net/documents/latest/ADQL.html>`_.
 The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astronomy queries posted to Virtual Observatory (VO) services, such as the Rubin LSST Table Access Protocol (TAP) service.
@@ -57,6 +57,16 @@ ADQL query statements that include constraints by coordinate do not requre a who
 Use ADQL's spherical geometry operators to perform either a Cone Search or a Polygon Search.
 These are automatically translated into efficient spatial operations in Qserv.
 **Do not** use direct column constraints (e.g., ``ra < value``) or ``WHERE`` ... ``BETWEEN`` statements to set boundaries on RA and Dec.
+
+
+Table indices
+=============
+
+The three columns, ``objectId``, ``diaObjectId``, and ``sourceId``, can be thought of as columns that encode information about which shard the object can be found in.
+
+These columns appear in multiple tables (e.g., the ``objectId`` appears in the Object table and also in the ForcedSource table).
+
+Queries that provide constraints on these columns (see below) are executed much faster, because they also minimize the number of shards that have to be accessed.
 
 
 Retrieve forced photometry by identifier
