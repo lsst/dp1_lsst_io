@@ -4,13 +4,14 @@
 Portal tutorials
 ################
 
-.. _portal-100:
+`Portal Aspect User Guide <https://rsp.lsst.io/guides/portal/index.html>`_.
 
-Tutorials for the Portal Aspect of the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_,
-based on the Data Preview 1 release.
+Tutorials for the Portal Aspect of the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
 Use the left- and right-hand menu bars to navigate the tutorials.
 
+
+.. _portal-100:
 
 100. How to: RSP functionality
 ==============================

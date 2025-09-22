@@ -17,10 +17,11 @@ All scientists and students in the US and Chile, plus named members of internati
 Get started
 ===========
 
-**To set up a new account in the RSP**, visit the `RSP documentation <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
-To learn more about the RSP's functionality, see the `RSP user guides <https://rsp.lsst.io/guides/index.html>`_ or work through the tutorials.
+**Get a new RSP account:** follow these `instructions to sign up <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
 
-Tutorials are organized into levels (100, 200, 300), and levels into topical series, which proceed from beginner to more advanced topics.
+**The three RSP aspects:** visit the Portal, Notebook, and API `User Guides <https://rsp.lsst.io/guides/index.html>`_.
+
+**Tutorials** are organized into levels (100, 200, 300), and each level into multiple series (by topic) which proceed from beginner to advanced.
 
 
 .. _tutorials-getsupport:
