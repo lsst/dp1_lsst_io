@@ -8,8 +8,8 @@ As the system used to organize Rubin datasets both for users and behind the scen
 
 See :ref:`daf_butler_organizing_datasets` in the `~lsst.daf.butler.Butler` documentation for a more complete description of butler concepts.
 
-Query tips
-==========
+Catalog query tips
+==================
 
 The "Butler Dataset type" entry on each catalog's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
 See :ref:`products_butler_terminology` for more information.
@@ -21,6 +21,31 @@ See :ref:`products_butler_terminology` for more information.
         parameters={"columns": list_of_columns}
 
     to a `Butler.get <lsst.daf.butler.Butler.get>` call (where ``list_of_columns`` is a Python `list` of `str` column names).
+
+
+Image query tips
+================
+
+The "Butler Dataset type" entry on each image type's page is of the format ('datasetTypeName', {dimension1, **dimension2**, **dimension3**}, StorageClass), where dimensions in bold are *required* dimensions for retrieving datasets of this type.
+See :ref:`products_butler_terminology` for more information.
+
+.. note::
+
+    When reading images with the butler, it can be *much* more efficient to read just the pixels of interest, by passing::
+
+        parameters={
+            "bbox": lsst.geom.Box2I(
+                lsst.geom.Point2I(x1, y1),
+                lsst.geom.Point2I(x2, y2),
+            )
+        }
+
+    as a keyword argument to `butler.get <lsst.daf.butler.Butler.get>`.
+    It is also more efficient to just read the pixel values from a single plane by adding a storage class component name to the dataset type name, e.g.::
+
+        butler.get("visit_image.image", ...)
+
+    to load just the main image plane, not the mask, variance, or metadata.
 
 
 Datasets
