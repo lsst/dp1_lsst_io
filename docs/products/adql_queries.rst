@@ -1,8 +1,8 @@
 .. _products_adql_queries:
 
-#######################################
-TAP and ADQL terminology and query tips
-#######################################
+##############################
+TAP terminology and query tips
+##############################
 
 TAP (Table Access Protocol) provides standardized access to catalog data for discovery, search, and retrieval.
 `Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (`IVOA <https://www.ivoa.net/>`_).
