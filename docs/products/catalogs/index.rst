@@ -10,7 +10,7 @@ and tables of survey metadata for the observations.
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column descriptions for all tables.
 
 All catalog data products are available via TAP, and most are also available with the Butler.
-See the :doc:`products/adql_queries`, :doc:`products/butler_terminology`, and :doc:`tutorials/index` pages to get started with these services.
+See the :doc:`/products/adql_queries`, :doc:`/products/butler_terminology`, and :doc:`/tutorials/index` pages to get started with these services.
 
 
 Object
