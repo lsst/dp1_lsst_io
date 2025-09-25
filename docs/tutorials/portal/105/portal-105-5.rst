@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-09-11
+**Last verified to run:** 2025-09-25
 
 **Learning objective:** View image cutouts instead of full-frame images in Firefly.
 
