@@ -8,11 +8,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-08-15
+**Last verified to run:** 2025-09-10
 
-**Learning objective:** Extract pixel values, e.g., line profile, from images retrieved via a Portal image query and displayed in Firefly.
+**Learning objective:** Extract pixel values from an image with Firefly (e.g., line profiles, apertures).
 
-**LSST data products:** DP1 images
+**LSST data products:** ``deep_coadd`` image
 
 **Credit:** Originally developed by the Rubin Community Science Team.
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -25,76 +25,86 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal Aspect of the RSP.**
 Go to `data.lsst.cloud <https://data.lsst.cloud>`_ , select the Portal Aspect, and click on the "DP1 Images" tab at the top.
 
-.. This is the beginning of a new tutorial focussing on learning to study pixel values in an image using features of the Rubin Portal
+**2. Execute an ADQL query for an image.**
+Click on "Edit ADQL" at upper right.
+Enter the following ADQL statement and click "Search" at lower left.
+This query statement will return one *i*-band image in the Euclid Deep Field South field.
 
-.. Review the README on instructions to contribute.
-.. Review the style guide to keep a consistent approach to the documentation.
-.. Static objects, such as figures, should be stored in the _images directory. Review the _static/README on instructions to contribute.
-.. Do not remove the comments that describe each section. They are included to provide guidance to contributors.
-.. Do not remove other content provided in the templates, such as a section. Instead, comment out the content and include comments to explain the situation. For example:
-	- If a section within the template is not needed, comment out the section title and label reference. Do not delete the expected section title, reference or related comments provided from the template.
-    - If a file cannot include a title (surrounded by ampersands (#)), comment out the title from the template and include a comment explaining why this is implemented (in addition to applying the ``title`` directive).
+.. code-block:: SQL
 
-.. This is the label that can be used for cross referencing this file.
-.. Recommended title label format is "Directory Name"-"Title Name" -- Spaces should be replaced by hyphens.
-.. _Tutorials-Examples-DP0-2-Portal-howto-image-extract-pixelvalues:
-.. Each section should include a label for cross referencing to a given area.
-.. Recommended format for all labels is "Title Name"-"Section Name" -- Spaces should be replaced by hyphens.
-.. To reference a label that isn't associated with an reST object such as a title or figure, you must include the link and explicit title using the syntax :ref:`link text <label-name>`.
-.. A warning will alert you of identical labels during the linkcheck process.
+  SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
+         lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
+         obs_collection,o_ucd,facility_name,instrument_name,obs_title,s_region,access_url,
+         access_format
+  FROM ivoa.ObsCore
+  WHERE calib_level = 3 AND dataproduct_type = 'image' AND dataproduct_subtype = 'lsst.deep_coadd'
+        AND CONTAINS(POINT('ICRS', 59.1, -48.73), s_region)=1
+        AND (755e-9 BETWEEN em_min AND em_max)
+        AND (lsst_tract = 2394 AND lsst_patch = 25)
 
-**2. Enter and execute an image query.**
-Enter your desired constraints for the image query.
-An example below will use DP1 Rubin data from the Euclid Deep Field South (EDFS), containing location of RA = 59.1, Dec = -48.73.
-Enter those coordinates in the "Location" box.
-For "Observation Type and Source", click the box "Coadds and Difference Images" (3).
-Leave other boxes under "Enter Constraints" unchecked.
-Click "Search".
 
-By default, the image shown might be a difference image.
-To work with a co-add, in the table below, in the second column (dataproduct_subtype), select "lsst.deep_coadd" from the drop-down menu.
-Select "i" from the lsst_band drop-down menu.
+**3. Zoom in.**
+Click on the "zoom-in" icon (the magnifying glass with a "+" sign in the upper left of the image panel), or use the mouse, to zoom in on any object(s) of interest (as in Figure 1).
+
 
 .. figure:: images/portal-105-4-1.png
     :name: portal-105-4-1
-    :alt: The results interface.
+    :alt: The Firefly panel of the results interface.
 
-    Figure 1: The results interface after a query requesting co-add images in the selected location has been executed.
+    Figure 1: The Firefly interface displays the retrieved image, zoomed-in, with the "Tools" window displayed.
 
-**3. Select the Line Tool.**
-Click a few times on the "zoom-in" icon (a "+" sign in the upper left of the image panel) to bring in an object of interest.
-To extract pixel values along a line (1D brightness profile), click the "Tools" icon, then select the "Line" icon under the "Extract" section.
-In the instruction window, choose an aperture for combining values.
 
-**4. Draw and view profile.**
-Click the starting point on the image, drag to the endpoint, and release.
-A pop-up window will display the 1D brightness profile, where you can adjust the aperture if needed.
+**4. Extract a line profile.**
+Click the "Tools" icon, then select the "Line" icon in the "Extract" row (see Figure 1).
+The pop-up "Extract" window will appear.
+In the image, click-and-drag to draw a line across any object(s), and the 1D brightness profile (line profile) will appear in the pop-up window (see Figure 2).
 
-**5. Save or download.**
-Click "Pin Chart/Table" to add the chart and table to the result, or download them directly.
-Repeat the process to extract another profile.
+
+**5. Adjust the aperture.**
+In the "Extract" window, aperture options are provided in the format "x-by-y".
+The options will always be 1 along the direction of the line.
+For a more horizontal line the options will be "1x3" to "1x7" (i.e., always 1 in the x-direction).
+Whereras for a more vertical line the options will be "3x1" to "7x1" (i.e., always 1 in the y-direction).
+The options to calculate the "Average" or "Sum" of the fluxes within the aperture are given.
+Figure 2 demonstrates a "7x1" sum aperture used on a more vertical line profile across two blended objects.
+
 
 .. figure:: images/portal-105-4-2.png
     :width: 500
     :name: portal-105-4-2
     :alt: A screenshot displaying a line drawn across a source, accompanied by a pop-up window showing the source's 1D brightness profile along that line.
 
-    Figure 2: A line drawn across an object, with a pop-up window displaying the 1D brightness profile of the object.
+    Figure 2: A line profile drawn across two blended objects, with the pop-up "Extract" window options set to use a "7x1" aperture and "Sum" the pixel values within the aperture.
 
-**6. Select the Points Tool.**
-To extract pixel information for selected points, click the "Points" icon under the "Extract" section.
-In the instruction window, choose an aperture to combine the values.
 
-**7. Select points.**
-Click multiple points on the image to extract their pixel values at once.
-
-**8. Save or download.**
-Click "Pin Chart/Table" to save the results temporarily, or use "Download as Table" and/or "Download Chart" to save them locally.
-Results can also be saved as a DS9 region file.
+**6. Pin or download the extracted line profile.**
+In the pop-up "Extract" window click "Pin Chart/Table" to send the extracted fluxes to the table and chart panels of the results viewer, as shown in Figure 3.
+Clicking either of the two download buttons will present options for downloadable file formats, including a DS9 region file.
 
 .. figure:: images/portal-105-4-3.png
     :width: 500
     :name: portal-105-4-3
-    :alt: A screenshot displaying six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
+    :alt: A screenshot with an extracted line profile appearing in the table and chart panels of the results viewer.
 
-    Figure 3: Six selected points on the image (left panel), in the active chart (right panel), and in the pinned table (bottom panel), with a pop-up window offering options for file format and naming for saving.
+    Figure 3: After clicking "Pin Chart/Table", the extracted line profile will appear in the table (bottom) and chart (right) for further analysis and manipulation.
+
+
+**7. Clear the extracted line profile.**
+Click the "x" at upper right in the chart (plot) and the "x" in the table tab named "Extract line".
+Open the "Layers" pop-up window and click the "x" at far right in the "Extract Line" row, and then close the "Layers" window.
+
+**8. Extract point fluxes.**
+Click the "Tools" icon, then select the "Points" icon in the "Extract" row (see Figure 1).
+Click on a few objects across the image; in Figure 4, faint objects were selected.
+In the pop-up window, see that the single-pixel flux will be plotted as a function of the x-axis location.
+Set the aperture to "7x7" and "Sum", as in the example in Figure 4 below.
+
+.. figure:: images/portal-105-4-4.png
+    :width: 500
+    :name: portal-105-4-4
+    :alt: A screenshot displaying selected points and their aperture flux values.
+
+    Figure 4: The summed flux in a 7x7 pixel aperture for each of the marked locations, plotted versus the x-axis location.
+
+**9. Pin or download the extracted fluxes.**
+As in step 6, send the extracted fluxes into the table and chart panels.
