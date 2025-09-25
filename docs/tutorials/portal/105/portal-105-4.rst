@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-09-10
+**Last verified to run:** 2025-09-25
 
 **Learning objective:** Extract pixel values from an image with Firefly (e.g., line profiles, apertures).
 
