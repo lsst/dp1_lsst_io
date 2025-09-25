@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-09-25
+==========
+
+Released new Portal tutorials 105.3, 105.4, and 105.5 on image display, manipulation, and cutouts with Firefly.
+
 2025-09-19
 ==========
 
