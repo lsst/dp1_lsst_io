@@ -37,10 +37,10 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
 
     Figure 1. The interface to upload a table.
 
-**4. Create a table to upload to the Portal.** 
-Copy the table below containing coordinates and save it as a CSV file. 
+**4. Create a table to upload.** 
+Copy the table below containing coordinates and save it as a CSV file.
 
-..  csv-table:: 
+..  csv-table:: dp1_102_4_user_table.csv
     :header: "SDSS_objid", "ra", "dec"
 
     1237667228761718852,	37.71029247, 6.504712078
@@ -50,7 +50,7 @@ Copy the table below containing coordinates and save it as a CSV file.
     1237667228761719243,	37.68240015, 6.520379946
 
 **5. Upload a table to the Portal.** 
-In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file and click the "Load Table" button.
+In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file containing the user table and click the "Load Table" button.
 
 .. figure:: images/portal-102-4-2.png
     :name: portal-102-4-2
@@ -70,7 +70,7 @@ Click the drop down menu under "Position Columns (from the uploaded table). Indi
 **7. Click search.** 
 At lower left, click the blue button named "Search". Leave the default row limit.
 
-**8. Review the results**. This search returns 8579 matching objects. 
+**8. Review the results**. This search returns the default columns from the Object table for the matching objects.
 
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
