@@ -37,8 +37,20 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
 
     Figure 1. The interface to upload a table.
 
-**4. Upload a table to the Portal.** 
-Download the file with an example user table to your computer using the `link to file in GitHub containing the catalog <https://github.com/lsst/dp1_lsst_io/tree/main/docs/tutorials/portal/102/>`_. In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the downloaded file and click the "Load Table" button.
+**4. Create a table to upload to the Portal.** 
+Copy the table below containing coordinates and save it as a CSV file. 
+
+..  csv-table:: 
+    :header: "SDSS_objid", "ra", "dec"
+
+    1237667228761718852,	37.71029247, 6.504712078
+    1237667228761718994,	37.6980341,	 6.522612024
+    1237667228761719208,	37.66236551, 6.521921085
+    1237667228761719224,	37.67399726, 6.518456585
+    1237667228761719243,	37.68240015, 6.520379946
+
+**5. Upload a table to the Portal.** 
+In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file and click the "Load Table" button.
 
 .. figure:: images/portal-102-4-2.png
     :name: portal-102-4-2
@@ -46,7 +58,7 @@ Download the file with an example user table to your computer using the `link to
 
     Figure 2. The pop-up window after uploading a table, with a list of columns shown.
 
-**5. Select columns and set the radius for cross-matching.** 
+**6. Select columns and set the radius for cross-matching.** 
 Click the drop down menu under "Position Columns (from the uploaded table). Indicate which of the uploaded table columns to use for spatial matching ("ra" and "dec"). Click the drop down menu under "Position Columns (from the selected table on the right). Indicate which of the DP1 table columns to use for spatial matching ("coord_ra" and "coord_dec"). Set the search radius to 1 arcseconds.
 
 .. figure:: images/portal-102-4-3.png
@@ -55,10 +67,10 @@ Click the drop down menu under "Position Columns (from the uploaded table). Indi
 
     Figure 3. The interface to select columns for spatial cross-matching.
 
-**6. Click search.** 
+**7. Click search.** 
 At lower left, click the blue button named "Search". Leave the default row limit.
 
-**7. Review the results**. This search returns 8579 matching objects. 
+**8. Review the results**. This search returns 8579 matching objects. 
 
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
