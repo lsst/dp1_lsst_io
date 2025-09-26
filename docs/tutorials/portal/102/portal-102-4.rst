@@ -40,14 +40,14 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
 **4. Create a table to upload.** 
 Copy the table below containing coordinates and save it as a CSV file.
 
-..  csv-table:: dp1_102_4_user_table.csv
+..  csv-table:: dp1_106_1_user_table.csv
     :header: "SDSS_objid", "ra", "dec"
 
-    1237667228761718852,	37.71029247, 6.504712078
-    1237667228761718994,	37.6980341,	 6.522612024
-    1237667228761719208,	37.66236551, 6.521921085
-    1237667228761719224,	37.67399726, 6.518456585
-    1237667228761719243,	37.68240015, 6.520379946
+    1237667228761784409,	37.74742808,	6.524779178
+    1237667229298524386,	37.58392949,	6.939873543
+    1237667229835395444,	37.57851835,	7.358364681
+    1237670016195560108,	37.90737626,	6.548163852    
+    1237670016195691261,	38.18971577,	6.703589365
 
 **5. Upload a table to the Portal.** 
 In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file containing the user table and click the "Load Table" button.
