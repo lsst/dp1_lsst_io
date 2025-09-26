@@ -33,7 +33,7 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
 
 .. figure:: images/portal-102-4-1.png
     :name: portal-102-4-1
-    :alt: 
+    :alt: The user interface for the Portal, with drop-down menus to select and upload files.
 
     Figure 1. The interface to upload a table.
 
@@ -54,7 +54,7 @@ In the pop-up window for table uploads, select "Upload file" and click on "Choos
 
 .. figure:: images/portal-102-4-2.png
     :name: portal-102-4-2
-    :alt: 
+    :alt: The user interface after a file has been uploaded showing the name of the file and the table schema including column names. 
 
     Figure 2. The pop-up window after uploading a table, with a list of columns shown.
 
@@ -63,7 +63,7 @@ Click the drop down menu under "Position Columns (from the uploaded table). Indi
 
 .. figure:: images/portal-102-4-3.png
     :name: portal-102-4-3b
-    :alt: 
+    :alt: The user interface to enter spatial constraints, showing drop-down menus to enter column names.
 
     Figure 3. The interface to select the position columns and set the radius to be used for cross-matching.
 
@@ -74,6 +74,6 @@ At the lower left, click the blue button named "Search". Leave the default row l
 
 .. figure:: images/portal-102-4-4.png
     :name: portal-102-4-4
-    :alt: 
+    :alt: The Results tab after a query has been executed.
 
     Figure 4. The catalog results interface after the cross-match query was executed.
