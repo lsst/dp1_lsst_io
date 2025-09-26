@@ -12,12 +12,7 @@ Released new Portal tutorials 105.3, 105.4, and 105.5 on image display, manipula
 2025-09-19
 ==========
 
-Released new notebook tutorial 102.5 on LSDB data access.
-
-2025-09-19
-==========
-
-Released new notebook tutorial 103.6 on creating color composite images.
+Released new notebook tutorials 102.5, 102.6, 103.6 on LSDB data access, cross-matching to uploaded tables, and creating color composite images.
 
 2025-09-16
 ==========
