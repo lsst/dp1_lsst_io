@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Data Release:** Data Preview 1
 
-**Last verified to run:** 2025-09-25
+**Last verified to run:** 2025-09-26
 
 **Learning objective:** How to upload a table and cross-match by coordinate
 
@@ -31,8 +31,8 @@ On the Portal landing page, click on the tab labeled "DP1 Catalogs". Leave the d
 **3. Enter Constraints.** 
 Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button next to "Spatial Type". This will make a pop-up window appear with the interface to upload a table.
 
-.. figure:: images/portal-102-4-1.png
-    :name: portal-102-4-1
+.. figure:: images/portal-106-1-1.png
+    :name: portal-106-1-1
     :alt: The user interface for the Portal, with drop-down menus to select and upload files.
 
     Figure 1. The interface to upload a table.
@@ -52,8 +52,8 @@ Copy the example table below and save it as a CSV file called ``dp1_106_1_user_t
 **5. Upload a table to the Portal.** 
 In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file containing the user table and click the "Load Table" button.
 
-.. figure:: images/portal-102-4-2.png
-    :name: portal-102-4-2
+.. figure:: images/portal-106-1-2.png
+    :name: portal-106-1-2
     :alt: The user interface after a file has been uploaded showing the name of the file and the table schema including column names. 
 
     Figure 2. The pop-up window after uploading a table, with a list of columns shown.
@@ -61,8 +61,8 @@ In the pop-up window for table uploads, select "Upload file" and click on "Choos
 **6. Select columns and set the radius for cross-matching.** 
 Click the drop down menu under "Position Columns (from the uploaded table). Indicate which of the uploaded table columns to use for spatial matching (default "ra" and "dec"). Click the drop down menu under "Position Columns (from the selected table on the right) and check that the default "coord_ra" and "coord_dec" are shown. Set the search radius to 1 arcseconds.
 
-.. figure:: images/portal-102-4-3.png
-    :name: portal-102-4-3b
+.. figure:: images/portal-106-1-3.png
+    :name: portal-106-1-3
     :alt: The user interface to enter spatial constraints, showing drop-down menus to enter column names.
 
     Figure 3. The interface to select the position columns and set the radius to be used for cross-matching.
@@ -72,8 +72,8 @@ At the lower left, click the blue button named "Search". Leave the default row l
 
 **8. Review the results**. The search returns matches for all five of the objects from the user-uploaded table. The results interface includes a table with the default column selections from the DP1 Object table and the "ra" and "dec" columns from the uploaded table.
 
-.. figure:: images/portal-102-4-4.png
-    :name: portal-102-4-4
+.. figure:: images/portal-106-1-4.png
+    :name: portal-106-1-4
     :alt: The Results tab after a query has been executed.
 
     Figure 4. The catalog results interface after the cross-match query was executed.
