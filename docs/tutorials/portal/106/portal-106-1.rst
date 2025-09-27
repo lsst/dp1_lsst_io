@@ -40,7 +40,7 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
 **4. Create a table to upload.**
 Copy the example table below and save it as a CSV file called ``dp1_106_1_user_table.csv``.
 
-.. code-block:: csv
+.. code-block::
 
     SDSS_objid,ra,dec
     1237667228761784409,37.74742808,6.524779178
