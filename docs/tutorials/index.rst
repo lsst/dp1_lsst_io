@@ -87,7 +87,7 @@ Citing
 
 When citing the tutorials please use:
 
-|tutorials_doi| [:download:`BibTeX </bib/tutorials.bib>`]
+|tutorials_doi| [:download:`BibTeX <../bib/tutorials.bib>`]
 
 
 
