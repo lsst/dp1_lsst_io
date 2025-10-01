@@ -54,7 +54,7 @@ Tutorials
 
 When citing the tutorials please use:
 
-|tutorials_doi| [:download:`BibTeX <../bib/tutorials.bib>`]
+|tutorials_doi| [:download:`BibTeX </bib/tutorials.bib>`]
 
 
 How to refer to single objects from DP1 data
