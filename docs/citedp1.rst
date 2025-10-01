@@ -49,6 +49,14 @@ The instrument itself can be formally cited as
 and that page includes additional references describing the camera.
 
 
+Tutorials
+---------
+
+When citing the tutorials please use:
+
+|tutorials_doi| [:download:`BibTeX <../bib/tutorials.bib>`]
+
+
 How to refer to single objects from DP1 data
 ============================================
 
