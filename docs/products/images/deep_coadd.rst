@@ -38,7 +38,7 @@ A DP1 visit image must have a PSF FWHM < 1.7 arcseconds to be selected as an inp
 A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual deep coadd image covers a single patch of the sky:
-a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes.
+a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes, with a pixel scale of 0.2 arcseconds.
 Patches slightly overlap at their edges.
 Deep coadd images are for a single filter.
 
