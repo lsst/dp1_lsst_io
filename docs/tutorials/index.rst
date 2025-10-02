@@ -80,6 +80,17 @@ Anyone from across the Rubin community is welcome to suggest a tutorial, or to v
 
 
 
+.. _tutorials-cite:
+
+Citing
+======
+
+When citing the tutorials please use:
+
+|tutorials_doi| [:download:`BibTeX <../bib/tutorials.bib>`]
+
+
+
 .. _tutorials-log:
 
 Log of major updates
