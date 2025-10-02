@@ -4,10 +4,15 @@
 Log of major tutorial updates
 #############################
 
+2025-10-01
+==========
+
+Updated notebook tutorial 103.5 on image display with Firefly.
+
 2025-09-26
 ==========
 
-Released new notebook tutorial 103.7 on creating big depp coadd cutouts.
+Released new notebook tutorial 103.7 on creating big deep coadd cutouts.
 
 2025-09-25
 ==========
