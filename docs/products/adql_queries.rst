@@ -103,3 +103,29 @@ If the query is not well constrained, i.e., if thousands or more objects meet th
 
 Combined use of ``ORDER BY`` with ``TOP`` or the ``MAXREC`` parameter in ADQL queries can be dangerous: it may take an unexpectedly long time because the database is trying to first sort, and then extract the top N elements.
 It is best to only combine these ADQL functionalities if the query's WHERE statements significantly cut down the number of objects that would need to be sorted.
+
+Avoid putting TAP queries in ``for...in`` loops
+====================================================
+
+When a list of right ascension and declination coordinates is available and it is necessary to determine whether LSST detected a source at those positions, it may be tempting to perform a series of TAP queries inside a Python ``for`` loop, for example:
+
+.. code-block:: python
+
+   for my_ra, my_dec in my_coords:
+       query = """
+           SELECT table_ra, table_dec FROM table
+           WHERE CONTAINS(
+               POINT('ICRS', table_ra, table_dec),
+               CIRCLE('ICRS', my_ra, my_dec, 0.00014)
+           ) = 1
+       """
+       job = tap_service.submit_job(query)
+       job.run()
+       job.wait(phases=['COMPLETED', 'ERROR'])
+       assert job.phase == 'COMPLETED'
+       results = job.fetch_result().to_table()
+
+Running multiple TAP queries in a loop is inefficient and can overload the service, as each query initiates a new asynchronous job.
+
+Instead, the TAP functionality for **table upload** and **cross-match** operations should be used.
+DP1 notebook tutorials 102.6 and 306.3 demonstrate this recommended approach.
