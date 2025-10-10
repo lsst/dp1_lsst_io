@@ -121,8 +121,8 @@ When a list of right ascension and declination coordinates is available and it i
        """
        job = tap_service.submit_job(query)
        job.run()
-       job.wait(phases=['COMPLETED', 'ERROR'])
-       assert job.phase == 'COMPLETED'
+       job.wait(phases=["COMPLETED", "ERROR"])
+       assert job.phase == "COMPLETED"
        results = job.fetch_result().to_table()
 
 Running multiple TAP queries in a loop is inefficient and can overload the service, as each query initiates a new asynchronous job.
