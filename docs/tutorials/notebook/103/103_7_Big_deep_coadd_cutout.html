@@ -9963,7 +9963,7 @@ rkJggg==
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-09-22 <br/>
+Last verified to run: 2025-10-15 <br/>
 Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
 </div>
 </div>
@@ -10384,8 +10384,41 @@ The following cells override these parameters with appropriate values.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Use the BCG location to obtain the pixel scale there.
-First, get the WCS of the patch and tract where the BCG is located.
-From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respectively.</p>
+First, get the WCS of the patch and tract where the BCG is located.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae116f76-2aca-447f-833f-75bc36a7ebab">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_point</span> <span class="o">=</span> <span class="n">SpherePoint</span><span class="p">(</span><span class="n">ra_bcg</span> <span class="o">*</span> <span class="n">degrees</span><span class="p">,</span>
+                        <span class="n">dec_bcg</span> <span class="o">*</span> <span class="n">degrees</span><span class="p">)</span>
+<span class="n">bcg_tract</span> <span class="o">=</span> <span class="n">skymap</span><span class="o">.</span><span class="n">findTract</span><span class="p">(</span><span class="n">bcg_point</span><span class="p">)</span>
+<span class="n">bcg_patch</span> <span class="o">=</span> <span class="n">bcg_tract</span><span class="o">.</span><span class="n">findPatch</span><span class="p">(</span><span class="n">bcg_point</span><span class="p">)</span>
+
+<span class="n">bcg_tract_number</span> <span class="o">=</span> <span class="n">bcg_tract</span><span class="o">.</span><span class="n">tract_id</span>
+<span class="n">bcg_patch_number</span> <span class="o">=</span> <span class="n">bcg_patch</span><span class="o">.</span><span class="n">getSequentialIndex</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bcg_tract_number</span><span class="p">,</span> <span class="n">bcg_patch_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>10463 61
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -10394,12 +10427,12 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_data_ref</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
     <span class="n">ref</span> <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">tract_container</span>
-    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"tract"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10463</span> <span class="ow">and</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="mi">62</span>
+    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"tract"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_tract_number</span> <span class="ow">and</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_patch_number</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -10422,7 +10455,7 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_coadd</span> <span class="o">=</span> <span class="n">butler</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">bcg_data_ref</span><span class="p">)</span>
@@ -10447,7 +10480,7 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">wcs_bcg</span> <span class="o">=</span> <span class="n">bcg_coadd</span><span class="o">.</span><span class="n">getWcs</span><span class="p">()</span>
@@ -10461,7 +10494,7 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_point</span> <span class="o">=</span> <span class="n">SpherePoint</span><span class="p">(</span><span class="n">ra_bcg</span> <span class="o">*</span> <span class="n">degrees</span><span class="p">,</span>
@@ -10487,7 +10520,7 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">plate_scale_bcg</span> <span class="o">=</span> <span class="n">wcs_bcg</span><span class="o">.</span><span class="n">getPixelScale</span><span class="p">(</span><span class="n">Point2D</span><span class="p">(</span><span class="n">bcg_point</span><span class="p">))</span><span class="o">.</span><span class="n">asArcseconds</span><span class="p">()</span>
@@ -10512,7 +10545,7 @@ From the 300 DP1 tutorials, the patch and tract numbers are 10463 and 62 respect
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">discrete_skymap_config</span><span class="o">.</span><span class="n">skyMap</span><span class="o">.</span><span class="n">pixelScale</span> <span class="o">=</span> <span class="n">plate_scale_bcg</span>
@@ -10538,7 +10571,7 @@ The WCS of <code>deep_coadd</code> images are <code>TAN</code> projections (<a h
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">discrete_skymap_config</span><span class="o">.</span><span class="n">skyMap</span><span class="o">.</span><span class="n">projection</span> <span class="o">=</span> <span class="s1">'TAN'</span>
@@ -10563,7 +10596,7 @@ The WCS of <code>deep_coadd</code> images are <code>TAN</code> projections (<a h
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">new_skymap</span> <span class="o">=</span> <span class="n">MakeDiscreteSkyMapTask</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">discrete_skymap_config</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">position_container</span><span class="p">)</span><span class="o">.</span><span class="n">skyMap</span>
@@ -10630,7 +10663,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">new_wcs</span> <span class="o">=</span> <span class="n">new_skymap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">wcs</span>
@@ -10644,7 +10677,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">new_wcs</span>
@@ -10658,7 +10691,7 @@ line-height: var(--jp-code-line-height);
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>FITS standard SkyWcs:
 Sky Origin: (37.8481271152, +7.0272990684)
@@ -10684,7 +10717,7 @@ Pixel Scale: 0.199937 arcsec/pixel</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">small_box</span> <span class="o">=</span> <span class="n">Box2I</span><span class="p">(</span>
@@ -10715,7 +10748,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">getTemplateTask</span> <span class="o">=</span> <span class="n">GetTemplateTask</span><span class="p">()</span>
@@ -10744,7 +10777,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -10777,7 +10810,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">afwDisplay</span><span class="o">.</span><span class="n">setDefaultBackend</span><span class="p">(</span><span class="s1">'matplotlib'</span><span class="p">)</span>
@@ -10791,7 +10824,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -10834,7 +10867,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">new_image_r</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span>
@@ -10848,7 +10881,7 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>(3642, 3615)</pre>
 </div>
@@ -10874,7 +10907,7 @@ Note that Firelfly will use the new WCS information to display the image in cele
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">afwDisplay</span><span class="o">.</span><span class="n">setDefaultBackend</span><span class="p">(</span><span class="s1">'firefly'</span><span class="p">)</span>
@@ -10900,7 +10933,7 @@ Note that Firelfly will use the new WCS information to display the image in cele
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">afw_display</span><span class="o">.</span><span class="n">mtv</span><span class="p">(</span><span class="n">new_image_r</span><span class="o">.</span><span class="n">template</span><span class="p">)</span>
@@ -10926,7 +10959,7 @@ Set the mask plane transparency to 100, fully transparent, to see only the pixel
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">afw_display</span><span class="o">.</span><span class="n">setMaskTransparency</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -10955,7 +10988,7 @@ from all lines in the following cell and then execute it.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># username = os.environ.get('USER')</span>
@@ -10995,7 +11028,7 @@ Compare the PSF size at the location of the BCG and at near one corner of the bi
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">margin</span> <span class="o">=</span> <span class="mf">0.01</span>
@@ -11025,7 +11058,7 @@ Compare the PSF size at the location of the BCG and at near one corner of the bi
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">SIGMA_TO_FWHM</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
@@ -11056,9 +11089,9 @@ Compare the PSF size at the location of the BCG and at near one corner of the bi
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>center coadd_bcg FWHM =  5.505 pixels
+<pre>center coadd_bcg FWHM =  5.515 pixels
 center newimage FWHM =  5.513 pixels
-center percent difference =  0.14%
+center percent difference =  0.03%
 
 corner coadd_bcg FWHM =  5.455 pixels
 corner newimage FWHM =  5.444 pixels
