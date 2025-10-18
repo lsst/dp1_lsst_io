@@ -75,7 +75,7 @@ See :ref:`products_wcs_known_issues` for more information.
 
 Note also that the pixel scale in a visit image can vary with position.
 If one wishes to use the pixel scale, it is recommended to extract it using the "getPixelScale" method associated with the visit images' WCS.
-This function should _always_ be given an argument with x, y coordinates, so that a typical call (for an x, y position of 1000, 1400) may look like: ```wcs.getPixelScale(lsst.geom.Point2D(1000, 1400)).asArcseconds()``` (where "wcs" is the WCS associated with a visit image, the "Point2D" function comes from the "lsst.geom" package, and the final portion converts the result to arcseconds).
+This function should *always* be given an argument with x, y coordinates, so that a typical call (for an x, y position of 1000, 1400) may look like: ``wcs.getPixelScale(lsst.geom.Point2D(1000, 1400)).asArcseconds()`` (where "wcs" is the WCS associated with a visit image, the "Point2D" function comes from the "lsst.geom" package, and the final portion converts the result to arcseconds).
 
 Tutorials
 ---------
