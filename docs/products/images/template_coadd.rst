@@ -38,7 +38,7 @@ used as input images (or the best 12, if there were fewer than 36 images total).
 A mean stacking algorithm, weighted by inverse variance, combines selected exposures.
 
 Each individual template coadd image covers a single patch of the sky:
-a quadrilateral sub-region of the overall skymap that covers approximately 79 square arcminutes.
+a quadrilateral sub-region of the overall skymap that covers approximately 128 square arcminutes.
 Patches slightly overlap at their edges.
 Template coadd images are for a single filter.
 

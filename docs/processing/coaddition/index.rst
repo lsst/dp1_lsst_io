@@ -18,7 +18,7 @@ Coadds by patch
 When producing coadded images, the processing pipeline refers to a skymap, which defines a grid of
 2.8 square degree tracts covering the entire celestial sphere.
 Each tract is further subdivided into 10 by 10 equally-sized patches, each covering
-approximately 79 square arcminutes.
+approximately 128 square arcminutes.
 
 To create a coadded image, the processing pipeline selects all suitable
 (i.e., surpassing certain quality thresholds) calibrated visit images
