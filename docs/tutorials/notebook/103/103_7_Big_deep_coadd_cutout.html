@@ -9963,7 +9963,7 @@ rkJggg==
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-10-15 <br/>
+Last verified to run: 2025-10-21 <br/>
 Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
 </div>
 </div>
@@ -10025,6 +10025,7 @@ The workflow follows a process similar to template generation in alert productio
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">lsst.daf.butler</span><span class="w"> </span><span class="kn">import</span> <span class="n">Butler</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">lsst.afw.display</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">afwDisplay</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">lsst.afw.detection</span><span class="w"> </span><span class="kn">import</span> <span class="n">InvalidPsfError</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">lsst.geom</span><span class="w"> </span><span class="kn">import</span> <span class="n">Box2I</span><span class="p">,</span> <span class="n">Point2I</span><span class="p">,</span> <span class="n">SpherePoint</span><span class="p">,</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">Point2D</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lsst.sphgeom</span><span class="w"> </span><span class="kn">import</span> <span class="n">Box</span> <span class="k">as</span> <span class="n">SphBox</span>
@@ -10422,7 +10423,18 @@ First, get the WCS of the patch and tract where the BCG is located.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9b490ebb-ccee-455e-b53f-b319ec88da7d">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cec719c6-e18c-407e-ad04-cdb03bdd148e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Get the data reference for the coadd in the <code>r</code> band that contains the BCG.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=13c3d913-3f94-4118-9a9c-55b72b39e2af">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10431,8 +10443,9 @@ First, get the WCS of the patch and tract where the BCG is located.</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_data_ref</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
-    <span class="n">ref</span> <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">tract_container</span>
-    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"tract"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_tract_number</span> <span class="ow">and</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_patch_number</span>
+    <span class="n">ref</span>
+    <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">sorted_data</span><span class="p">[</span><span class="n">my_band</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">bcg_tract_number</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_patch_number</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -10769,20 +10782,6 @@ Note that the run method modifies the bounding box in place, so a copy is made.<
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=79b9046c-f83d-4d33-ac7e-5d0f165468d8">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6870187a-7aba-4863-8570-00f63ad7c5fe">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -11063,20 +11062,25 @@ Compare the PSF size at the location of the BCG and at near one corner of the bi
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">SIGMA_TO_FWHM</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">loc</span> <span class="ow">in</span> <span class="n">locations</span><span class="p">:</span>
-    <span class="n">center_pix_coadd</span> <span class="o">=</span> <span class="n">wcs_bcg</span><span class="o">.</span><span class="n">skyToPixel</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-    <span class="n">point_coadd</span> <span class="o">=</span> <span class="n">Point2D</span><span class="p">(</span><span class="n">center_pix_coadd</span><span class="p">)</span>
-    <span class="n">coadd_psf</span> <span class="o">=</span> <span class="n">bcg_coadd</span><span class="o">.</span><span class="n">getPsf</span><span class="p">()</span>
-    <span class="n">psf_sigma_coadd</span> <span class="o">=</span> <span class="n">coadd_psf</span><span class="o">.</span><span class="n">computeShape</span><span class="p">(</span><span class="n">point_coadd</span><span class="p">)</span><span class="o">.</span><span class="n">getDeterminantRadius</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Label: </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loc: </span><span class="si">{</span><span class="n">loc</span><span class="si">}</span><span class="s2"> deg"</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">center_pix_coadd</span> <span class="o">=</span> <span class="n">wcs_bcg</span><span class="o">.</span><span class="n">skyToPixel</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+        <span class="n">point_coadd</span> <span class="o">=</span> <span class="n">Point2D</span><span class="p">(</span><span class="n">center_pix_coadd</span><span class="p">)</span>
+        <span class="n">coadd_psf</span> <span class="o">=</span> <span class="n">bcg_coadd</span><span class="o">.</span><span class="n">getPsf</span><span class="p">()</span>
+        <span class="n">psf_sigma_coadd</span> <span class="o">=</span> <span class="n">coadd_psf</span><span class="o">.</span><span class="n">computeShape</span><span class="p">(</span><span class="n">point_coadd</span><span class="p">)</span><span class="o">.</span><span class="n">getDeterminantRadius</span><span class="p">()</span>
 
-    <span class="n">center_pix_new</span> <span class="o">=</span> <span class="n">new_wcs</span><span class="o">.</span><span class="n">skyToPixel</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
-    <span class="n">point_new</span> <span class="o">=</span> <span class="n">Point2D</span><span class="p">(</span><span class="n">center_pix_new</span><span class="p">)</span>
-    <span class="n">newimage_psf</span> <span class="o">=</span> <span class="n">new_image_r</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">getPsf</span><span class="p">()</span>
-    <span class="n">psf_sigma_new</span> <span class="o">=</span> <span class="n">newimage_psf</span><span class="o">.</span><span class="n">computeShape</span><span class="p">(</span><span class="n">point_new</span><span class="p">)</span><span class="o">.</span><span class="n">getDeterminantRadius</span><span class="p">()</span>
+        <span class="n">center_pix_new</span> <span class="o">=</span> <span class="n">new_wcs</span><span class="o">.</span><span class="n">skyToPixel</span><span class="p">(</span><span class="n">loc</span><span class="p">)</span>
+        <span class="n">point_new</span> <span class="o">=</span> <span class="n">Point2D</span><span class="p">(</span><span class="n">center_pix_new</span><span class="p">)</span>
+        <span class="n">newimage_psf</span> <span class="o">=</span> <span class="n">new_image_r</span><span class="o">.</span><span class="n">template</span><span class="o">.</span><span class="n">getPsf</span><span class="p">()</span>
+        <span class="n">psf_sigma_new</span> <span class="o">=</span> <span class="n">newimage_psf</span><span class="o">.</span><span class="n">computeShape</span><span class="p">(</span><span class="n">point_new</span><span class="p">)</span><span class="o">.</span><span class="n">getDeterminantRadius</span><span class="p">()</span>
 
-    <span class="n">percent_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psf_sigma_coadd</span> <span class="o">-</span> <span class="n">psf_sigma_new</span><span class="p">)</span> <span class="o">/</span> <span class="n">psf_sigma_new</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> coadd_bcg FWHM = </span><span class="si">{</span><span class="n">psf_sigma_coadd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SIGMA_TO_FWHM</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2"> pixels"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> newimage FWHM = </span><span class="si">{</span><span class="n">psf_sigma_new</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SIGMA_TO_FWHM</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2"> pixels"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> percent difference = </span><span class="si">{</span><span class="n">percent_diff</span><span class="si">:</span><span class="s2"> .2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">percent_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psf_sigma_coadd</span> <span class="o">-</span> <span class="n">psf_sigma_new</span><span class="p">)</span> <span class="o">/</span> <span class="n">psf_sigma_new</span> <span class="o">*</span> <span class="mi">100</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> coadd_bcg FWHM = </span><span class="si">{</span><span class="n">psf_sigma_coadd</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SIGMA_TO_FWHM</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2"> pixels"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> newimage FWHM = </span><span class="si">{</span><span class="n">psf_sigma_new</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SIGMA_TO_FWHM</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2"> pixels"</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> percent difference = </span><span class="si">{</span><span class="n">percent_diff</span><span class="si">:</span><span class="s2"> .2f</span><span class="si">}</span><span class="s2">%</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">InvalidPsfError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"PSF could not be computed at </span><span class="si">{</span><span class="n">point_coadd</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -11089,10 +11093,14 @@ Compare the PSF size at the location of the BCG and at near one corner of the bi
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>center coadd_bcg FWHM =  5.515 pixels
+<pre>Label: center
+Loc: (37.8650000000, +6.9820000000) deg
+center coadd_bcg FWHM =  5.515 pixels
 center newimage FWHM =  5.513 pixels
 center percent difference =  0.03%
 
+Label: corner
+Loc: (37.7750000000, +6.8920000000) deg
 corner coadd_bcg FWHM =  5.455 pixels
 corner newimage FWHM =  5.444 pixels
 corner percent difference =  0.20%
