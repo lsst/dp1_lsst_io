@@ -9963,7 +9963,7 @@ rkJggg==
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-10-15 <br/>
+Last verified to run: 2025-10-21 <br/>
 Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
 </div>
 </div>
@@ -11009,7 +11009,18 @@ First, get the WCS of the patch and tract where the BCG is located.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ccd5259-ffb1-45a9-bfc8-79c110301c48">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c9fb3075-d951-4764-842d-5b94b03d4b60">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Get the data reference for the coadd in the <code>g</code> band that contains the BCG.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=808b89a6-1641-42d9-ad2d-3e109a602b81">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -11018,8 +11029,9 @@ First, get the WCS of the patch and tract where the BCG is located.</p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">bcg_data_ref</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
-    <span class="n">ref</span> <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">tract_container</span>
-    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"tract"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_tract_number</span> <span class="ow">and</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_patch_number</span>
+    <span class="n">ref</span>
+    <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">sorted_data</span><span class="p">[</span><span class="n">bands</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">bcg_tract_number</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">ref</span><span class="o">.</span><span class="n">dataId</span><span class="p">[</span><span class="s2">"patch"</span><span class="p">]</span> <span class="o">==</span> <span class="n">bcg_patch_number</span>
 <span class="p">)</span>
 </pre></div>
 </div>
