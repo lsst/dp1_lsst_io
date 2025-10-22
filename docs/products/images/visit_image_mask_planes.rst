@@ -1,75 +1,147 @@
 .. _images-visit-mask-planes:
 
-DP1 Visit Image Mask Planes
-===========================
+Visit Image Mask Planes
+========================
 
-This table lists the pixel mask planes present in `visit_image` datasets in Rubin Data Preview 1 (DP1), along with detailed descriptions of their meaning and use in the DP1 processing context.
+The following are the pixel mask bit planes defined in visit images (``visit_image``) in Data Preview 1 (DP1). Each plane represents a specific per-pixel condition flagged during image processing. Multiple flags may be set on the same pixel simultaneously.
 
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Mask Plane             | Description (DP1 Visit Images)                                                                                                                                                                                                                              |
-+========================+==============================================================================================================================================================================================================================================================+
-| BAD                   | Pixel marked as bad – e.g. known defective pixel or column, or part of a bad amplifier region. These pixels are identified via detector defect maps or instrument signature removal and flagged as BAD. They are typically interpolated over in processing. |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CLIPPED               | Pixel that was clipped during coaddition – i.e. at least one input image for this pixel was identified as an artifact and excluded. Usage: This plane is primarily relevant to coadds; in single-visit images it will normally be unset (zero) for all     |
-|                        | pixels. (In deep coadds, CLIPPED is set when transient artifacts like satellite trails or cosmic rays were detected via difference imaging and omitted from the stack.)                                                                                   |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CR                    | Pixel hit by a cosmic ray. Identified by the cosmic-ray detection algorithm during single-frame processing; such pixels are flagged CR and typically interpolated over.                                               |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CROSSTALK             | Pixel affected by electronic crosstalk from a bright source in another amplifier. Flagged during instrument signature removal (ISR) when crosstalk correction is applied. After subtracting the crosstalk ghost, the affected pixel is labeled with        |
-|                        | CROSSTALK.                                                                                                                                                                                                                                                  |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| DETECTED              | Pixel that is part of a detected source in this exposure. All pixels above the detection threshold belonging to a source footprint are flagged as DETECTED. (These regions appear blue by default in ds9/Firefly displays.)                                |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| DETECTED_NEGATIVE     | Pixel that is part of a negative source detection. This is used in image difference contexts (for detecting disappearances or negative flux transients). In DP1 static visit images, this plane is generally not used (no negative detections are run), but |
-|                        | it is defined for compatibility with difference imaging.                                                                                                                                                                                                   |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| EDGE                  | Pixel on the edge of the sensor or image. This typically marks regions at the periphery of the CCD that are not useful for science (e.g. overscan areas or areas lacking full data). In practice, LSSTCam/ComCam images are trimmed of overscan, but      |
-|                        | EDGE may flag pixels very close to the image boundary. (On coadds, a related plane `SENSOR_EDGE` is used for partial coverage – see below.)                                                                                                                 |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INEXACT_PSF           | Pixel where the PSF is ill-defined or inexact. This is used mainly on coadds: it flags pixels for which the effective PSF model is not well-defined because different input images contribute to different parts of the coadd image. Whenever              |
-|                        | INEXACT_PSF is set, it is accompanied by at least one of the descriptive flags (SENSOR_EDGE, REJECTED, or CLIPPED) that explain the cause. Usage: In single-visit images, the PSF is defined across the sensor, so INEXACT_PSF is not expected to occur. |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INJECTED              | Pixel containing an injected fake source in the science exposure. This plane is used when artificial sources are added to images for testing or calibration. Any pixel whose value was modified by inserting a simulated source (e.g. for efficiency tests) |
-|                        | gets the INJECTED bit. (DP1’s official processing did not inject extra sources into visit images, so this will be unset for most DP1 data. It is included for pipeline support of user-generated fakes.)                                                  |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INJECTED_TEMPLATE     | Pixel containing an injected fake source in the template image. Used in difference imaging: if a source was artificially added to the template coadd, those template-contributed pixels in the science image’s difference would get this flag.             |
-|                        | (Not used in normal DP1 processing except in difference image products; included for completeness.)                                                                                                                                                         |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| INTRP                 | Interpolated pixel – this pixel’s value was replaced via interpolation (usually because it was flagged BAD, SAT, or CR). After interpolation, the pipeline sets the INTRP bit to indicate the value is not original data. For example, saturated cores   |
-|                        | and cosmic ray hits that have been patched will have both their original flag (SAT or CR) and INTRP set.                                                                                                                                                   |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ITL_DIP               | Pixel in a region affected by the “ITL dip” artifact. This is a vendor-specific detector effect seen in ITL CCDs (like those in ComCam/LSSTCam) where very bright stars cause a vertical dark trail (a drop in measured flux extending up/down along the  |
-|                        | column). The pipeline identifies these trails in ISR and masks them. Pixels along such a trail are flagged with ITL_DIP. (This plane was added to handle bright star artifacts in ComCam data.)                                                           |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NOT_DEBLENDED         | Pixel in a source footprint that was not deblended. If a detected object was too large, too close to an image edge, or had too high a fraction of masked pixels, the deblender may skip it. In that case the entire footprint is flagged NOT_DEBLENDED.   |
-|                        | For example, very bright stars or crowded cores that the deblender could not separate will have this mask.                                                                                                                                                 |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| NO_DATA               | Pixel with no valid data in this exposure. In single-visit images this can occur if a pixel falls outside the illuminated area or within a sensor artifact so severe that no data value is present. (On coadds, NO_DATA is common in areas not covered by   |
-|                        | any input image.) In general, NO_DATA indicates that the pixel should be ignored in analysis (not observed).                                                                                                                                                |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| REJECTED              | Pixel where a contributing image was masked and not used. On coadds, this flags pixels where one or more input exposures had the pixel masked (e.g. BAD or SAT) and thus that pixel’s coadd value comes from fewer images. Many REJECTED pixels are those   |
-|                        | falling on a sensor defect or bad column that persisted through single-frame processing. Usage: In single visit images, this is generally not used (since “rejection” happens during coaddition), though the plane exists in the mask schema.              |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAT                   | Saturated pixel. The pixel’s value exceeded the saturation threshold of the sensor and is therefore not reliable. Saturated pixels are flagged during ISR (after bias/overscan correction). The pipeline will typically interpolate over them (setting     |
-|                        | INTRP as well). Pixels brighter than the full-well capacity are marked SAT (and their cores appear green in displays). Surrounding pixels that are highly bright but not above the hard threshold may instead be SUSPECT.                                 |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SAT_TEMPLATE          | Pixel that corresponds to a saturated pixel in the template image. This is used in difference imaging: if the static sky template had a saturation at this location, the difference image flags it as SAT_TEMPLATE (to distinguish from saturation in the  |
-|                        | new science exposure). This helps avoid false detections or mis-estimation in difference images. (Not used in standalone visit images; relevant in DP1 difference image products.)                                                                         |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SENSOR_EDGE           | Pixel near a sensor’s edge or image boundary where coverage/data are incomplete. In coaddition, SENSOR_EDGE is set on pixels that lie close to the edge of at least one input image. Any object whose footprint touches such an area will get a flag     |
-|                        | indicating potential PSF issues. Essentially, SENSOR_EDGE marks regions of a coadd that were not fully covered by all exposures (transition areas). In single visits, the entire image is one sensor, so SENSOR_EDGE would typically mark the outer few    |
-|                        | pixels if used (though EDGE serves a similar purpose).                                                                                                                                                                                                      |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| STREAK                | Pixel in a satellite or airplane trail (linear streak artifact). The LSST pipeline includes a streak detection algorithm that finds linear features (via a Hough transform) and masks them. Pixels identified as part of a linear trail are flagged STREAK. |
-|                        | (This plane was added to single-frame processing to mitigate satellite trails.) In DP1, many long green trails in the mask correspond to STREAK (satellite) artifacts.                                                                                      |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| SUSPECT               | Pixel that is suspicious (likely affected by saturation or other non-linearity) but not completely saturated. The pipeline flags pixels just below the saturation threshold as SUSPECT (for example, electrons bleeding from a saturated pixel into       |
-|                        | adjacent pixels, or pixels in the “bloom” tail of a saturated star). These are often included in saturated footprints and interpolated. In essence, SUSPECT marks pixels that may be unreliable (e.g. beginning of saturation or other readout effects).   |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| UNMASKEDNAN           | Pixel value is a NaN (Not-a-Number) that was not originally masked. This flags any pixels that turned into NaNs during processing. If a pixel ends up with an undefined value (NaN) and no other mask bit set, the pipelines will set the UNMASKEDNAN     |
-|                        | plane for that pixel. This alerts the user that the pixel has invalid data. (Such cases are rare; they typically indicate a processing error or division-by-zero in calibration.)                                                                          |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| VIGNETTED             | Pixel in a vignetted region of the sensor. This means the pixel is significantly darkened by the optical vignetting (for example, at the very edge of the field of view where the camera’s optics or filter holder obscures light). Such pixels receive    |
-|                        | the VIGNETTED flag. Effectively, these areas have much lower exposure and are often excluded from analysis. (By default, extremely vignetted sources are not deblended.)                                                                                   |
-+------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+BAD
+    Pixel marked as bad – e.g. known defective pixel or column, or part of a bad amplifier region.
+    These pixels are identified via detector defect maps or instrument signature removal and flagged
+    as BAD. They are typically interpolated over in processing.
 
+CLIPPED
+    Pixel that was clipped during coaddition – i.e. at least one input image for this pixel was
+    identified as an artifact and excluded.
+    *Usage:* This plane is primarily relevant to coadds; in single-visit images it will normally
+    be unset (zero) for all pixels. In deep coadds, ``CLIPPED`` is set when transient artifacts like
+    satellite trails or cosmic rays were detected via difference imaging and omitted from the stack.
+
+CR
+    Pixel hit by a cosmic ray. Identified by the cosmic-ray detection algorithm
+    during single-frame processing; such pixels are flagged ``CR`` and typically interpolated over.
+
+CROSSTALK
+    Pixel affected by electronic crosstalk from a bright source in another amplifier. Flagged
+    during instrument signature removal (ISR) when crosstalk correction is applied. After subtracting
+    the crosstalk ghost, the affected pixel is labeled with ``CROSSTALK``.
+
+DETECTED
+    Pixel that is part of a detected source in this exposure. All pixels above the detection threshold
+    belonging to a source footprint are flagged as ``DETECTED``.
+
+DETECTED_NEGATIVE
+    Pixel that is part of a negative source detection. This is used in image difference contexts
+    (for detecting disappearances or negative flux transients). In DP1 static visit images, this
+    plane is generally not used (no negative detections are run), but it is defined for compatibility
+    with difference imaging.
+
+EDGE
+    Pixel on the edge of the sensor or image. This typically marks regions at the periphery of the
+    CCD near the edge of the detector, where astrometry/photometry may be unreliable due to e.g.,
+    edge distortion effects.
+
+INEXACT_PSF
+    Pixel where the PSF is ill-defined or inexact. This is used mainly on coadds: it flags pixels
+    for which the effective PSF model is not well-defined because different input images contribute
+    to different parts of the coadd image. Whenever ``INEXACT_PSF`` is set, it is accompanied by at least
+    one of the descriptive flags (``SENSOR_EDGE``, ``REJECTED``, or ``CLIPPED``) that explain the cause.
+    In single-visit images, it remains in the mask schema for coadd usage).
+
+INJECTED
+    Pixel containing an injected synthetic source in the science exposure. This plane is used when
+    artificial sources are added to images for testing or calibration. Any pixel whose value was
+    modified by inserting a simulated source gets the ``INJECTED`` bit.
+    DP1’s official processing did not inject extra sources into visit images, so this will be unset
+    for most DP1 data.
+
+INJECTED_TEMPLATE
+    Pixel containing an injected synthetic source in the template image. Used in difference imaging:
+    if a source was artificially added to the template coadd, those template-contributed pixels in
+    the science image’s difference would get this flag.
+
+INTRP
+    Interpolated pixel – this pixel’s value was replaced via interpolation (usually because it was
+    flagged ``BAD``, ``SAT``, or ``CR``). After interpolation, the pipeline sets the ``INTRP`` bit to indicate the
+    value is not original data. For example, saturated cores and cosmic ray hits that have been
+    patched will have both their original flag (``SAT`` or ``CR``) and ``INTRP`` set.
+
+ITL_DIP
+    Pixel in a region affected by the “ITL dip” artifact. This is a vendor-specific detector effect
+    seen in ITL CCDs (like those in LSSTComCam) where very bright stars cause a vertical dark
+    trail (a drop in measured flux extending up/down along the column).
+    The pipeline identifies these trails in ISR and masks them. Pixels along such a trail are flagged
+    with ITL_DIP.
+
+NOT_DEBLENDED
+    Pixel in a source footprint that was not deblended. If a detected object was too large,
+    too close to an image edge, or had too high a fraction of masked pixels, the deblender may skip it.
+    In that case the entire footprint is flagged ``NOT_DEBLENDED``.
+    For example, very bright stars or crowded cores that the deblender could not separate
+    will have this mask.
+
+NO_DATA
+    Pixel with no valid data in this exposure.
+    In single-visit images this can occur if a pixel falls
+    outside the illuminated area or within a sensor artifact so severe that no data value is present.
+    On coadds, ``NO_DATA`` is common in areas not covered by any input image.
+    In general, ``NO_DATA`` indicates that the pixel should be ignored in analysis (not observed).
+
+REJECTED
+    Pixel where a contributing image was masked and not used. On coadds, this flags pixels where one
+    or more input exposures had the pixel masked (e.g. ``BAD`` or ``SAT``) and thus that pixel’s coadd value
+    comes from fewer images. Many ``REJECTED`` pixels are those falling on a sensor defect or bad column
+    that persisted through single-frame processing.
+    In single-visit images, this is generally not used (since “rejection” happens during
+    coaddition), though the plane exists in the mask schema.
+
+SAT
+    Saturated pixel. The pixel’s value exceeded the saturation threshold of the sensor and is
+    therefore not reliable. Saturated pixels are flagged during ISR (after bias/overscan correction).
+    The pipeline will typically interpolate over them (setting INTRP as well). Pixels brighter than
+    the full-well capacity are marked SAT (and their cores appear green in displays). Surrounding pixels
+    that are highly bright but not above the hard threshold may instead be SUSPECT.
+
+SAT_TEMPLATE
+    Pixel that corresponds to a saturated pixel in the template image. This is used in difference
+    imaging: if the static sky template had a saturation at this location, the difference image flags it
+    as SAT_TEMPLATE (to distinguish from saturation in the new science exposure). This helps avoid
+    false detections or mis-estimation in difference images.
+    Not used in standalone visit images; relevant in DP1 difference image products.
+
+SENSOR_EDGE
+    Pixel near a sensor’s edge or image boundary where coverage/data are incomplete.
+    In coaddition, SENSOR_EDGE is set on pixels that lie close to the edge of at least one input image.
+    Any object whose footprint touches such an area will get a flag indicating potential PSF issues.
+    Essentially, SENSOR_EDGE marks regions of a coadd that were not fully covered by all exposures.
+    In single visits, the entire image is one sensor, so SENSOR_EDGE would typically mark the outer
+    few pixels if used (though EDGE serves a similar purpose).
+
+STREAK
+    Pixel in a satellite or airplane trail (linear streak artifact). The LSST pipeline includes a streak
+    detection algorithm that finds linear features (via a Hough transform) and masks them.
+    Pixels identified as part of a linear trail are flagged STREAK.
+    This plane was added to single-frame processing to mitigate satellite trails.
+    In DP1, many long green trails in the mask correspond to STREAK (satellite) artifacts.
+
+SUSPECT
+    Pixel that is suspicious (likely affected by saturation or other non-linearity)
+    but not completely saturated. The pipeline flags pixels just below the saturation threshold
+    as SUSPECT (for example, electrons bleeding from a saturated pixel into adjacent pixels,
+    or pixels in the “bloom” tail of a saturated star). These are often included in saturated
+    footprints and interpolated. In essence, SUSPECT marks pixels that may be unreliable
+    (e.g. beginning of saturation or other readout effects).
+
+UNMASKEDNAN
+    Pixel value is a NaN (Not-a-Number) that was not originally masked. This flags any pixels that
+    turned into NaNs during processing. If a pixel ends up with an undefined value (NaN) and no other
+    mask bit set, the pipelines will set the UNMASKEDNAN plane for that pixel. This alerts the user
+    that the pixel has invalid data. Such cases are rare and typically indicate a processing error
+    or division-by-zero in calibration.
+
+VIGNETTED
+    Pixel in a vignetted region of the sensor. This means the pixel is significantly darkened by
+    the optical vignetting (for example, at the very edge of the field of view where the camera’s
+    optics or filter holder obscures light). Such pixels receive the VIGNETTED flag.
+    Effectively, these areas have much lower exposure and are often excluded from analysis.
+    By default, extremely vignetted sources are not deblended.
