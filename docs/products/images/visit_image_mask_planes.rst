@@ -133,7 +133,7 @@ STREAK
     This mask is persisted in DP1 visit images, and any ``diaSource`` overlapping the streak region
     will have the ``pixelFlag_streak`` and/or ``pixelFlag_streakCenter`` catalog flags set accordingly.
     Although the same streak detection algorithm is available for the coadd pipeline, it was not enabled
-    for DP1 coadd processing, and the `STREAK` mask plane is therefore only relevant in visit images
+    for DP1 coadd processing, and the ``STREAK`` mask plane is therefore only relevant in visit images
     for this release.
 
 SUSPECT
