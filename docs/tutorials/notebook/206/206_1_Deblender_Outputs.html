@@ -10209,9 +10209,9 @@ Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst
 <p><strong>LSST data products:</strong> <code>Object</code> table, <code>deep_coadd</code></p>
 <p><strong>Packages:</strong> <code>lsst.rsp</code>, <code>lsst.daf.butler</code>, <code>lsst.geom</code>, <code>lsst.afw.display</code></p>
 <p><strong>Credit:</strong>
-Originally developed by Christina Williams and the Rubin Community 
-Science team. This notebook is partly based on DP0.2 notebook 10 on 
-deblender data products, and benefited from helpful discussions with 
+Originally developed by Christina Williams and the Rubin Community
+Science team. This notebook is partly based on DP0.2 notebook 10 on
+deblender data products, and benefited from helpful discussions with
 Fred Moolekamp. The deblender packages are based on <a href="https://ui.adsabs.harvard.edu/abs/2018A%26C....24..129M/abstract">Melchior et al. 2018</a>, and the <a href="https://pmelchior.github.io/scarlet/">Scarlet software</a> written by Peter Melchior and Fred Moolekamp. Further documentation on Scarlet is available at that site.</p>
 <p><strong>Get Support:</strong>
 Everyone is encouraged to ask questions or raise issues in the
@@ -10229,30 +10229,30 @@ Rubin staff will respond to all questions posted there.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">¶</a></h2><p>This notebook is an introduction to the data products in the <code>Object</code> table that are associated with the deblending process.</p>
-<p>In order to build its source catalog and measure photometry of 
-objects in images, the LSST Science Pipeline uses the multi-wavelength 
+<p>In order to build its source catalog and measure photometry of
+objects in images, the LSST Science Pipeline uses the multi-wavelength
 deblending algorithm Scarlet (<a href="https://ui.adsabs.harvard.edu/abs/2018A%26C....24..129M/abstract">Melchior et al. 2018</a>) to identify independent detected components within source blends and separate the flux from independent objects.</p>
 <p>A "<strong>parent</strong>" source is identified as a region of connected pixels above a given signal-to-noise ratio (S/N) in the <code>deepCoadd</code>
  image.
 These regions are called footprints.
-Each footprint may have one or more peaks, which the deblender uses to 
+Each footprint may have one or more peaks, which the deblender uses to
 infer the number and positions of objects blended in each footprint.
 The deblended sub-peaks are referred to as "<strong>children</strong>" of the parent in the properties saved by the deblender in the <code>Object</code> table.</p>
 <p>The Scarlet deblender separates the flux among components by modeling the flux and shape of each source making up the blend.</p>
 <p>This tutorial will identify a heavily blended parent object with many
- children and explore how to interpret the deblender-related 
+ children and explore how to interpret the deblender-related
 measurements in the <code>Object</code> table. It will also demonstrate how to use deblender-related columns in the <code>Object</code>
  table to identify unique deblended child sources, and
-provide an example of how to access metadata that is available for each 
+provide an example of how to access metadata that is available for each
 deblended source (e.g. the deblended footprints and pixel-weight maps).</p>
 <p><strong>Note</strong>: There have been updates to the deblending implementation since DP1 so <em>expect the API to be slightly different (improved) in future data releases</em>,
- including having more information available to understand how blended 
-an object is with its neighbors and useful cuts to remove potentially 
+ including having more information available to understand how blended
+an object is with its neighbors and useful cuts to remove potentially
 more difficult blends from analysis.</p>
 <p><strong>References:</strong></p>
 <ul>
-<li>An introduction to all of the available deblending flags, and the 
-processes that produce the deblender data products discussed in this 
+<li>An introduction to all of the available deblending flags, and the
+processes that produce the deblender data products discussed in this
 tutorial
 can be found in this <a href="https://pipelines.lsst.io/modules/lsst.pipe.tasks/deblending-flags-overview.html">overview of the deblending flags</a>.</li>
 <li>A general discussion of blending impacts to LSST can be found in this article titled "<a href="https://lss.fnal.gov/archive/2021/pub/fermilab-pub-21-598-ppd.pdf">The challenge of blending in large sky surveys</a>" by Melchior et al. 2021.</li>
@@ -10461,16 +10461,16 @@ A notebook demonstrating how to work with blend footprints is available as 206.2
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="2.-The-deblender-data-products">2. The deblender data products<a class="anchor-link" href="#2.-The-deblender-data-products">¶</a></h2><p>The object catalog contains a number of columns that can be used to identify and characterize blended objects in the <code>deepCoadd</code>
- images. Prior to deblending, blends are identified (referred to as 
-parents), and are then deblended into child objects by the LSST 
+ images. Prior to deblending, blends are identified (referred to as
+parents), and are then deblended into child objects by the LSST
 deblender package, Scarlet Lite. Only the children are ultimately stored
- in the <code>Object</code> table; the parent objects are excluded. Of 
-course, isolated single sources that do not require deblending are also 
+ in the <code>Object</code> table; the parent objects are excluded. Of
+course, isolated single sources that do not require deblending are also
 stored in the <code>Object</code> table and are not considered parent sources.</p>
 <p>In this tutorial we will focus on the deblending data products for objects stored in the <code>Object</code> table.</p>
-<p>The following describes key parameters in the <code>Object</code> 
-table: 1) boolean flags that are set by the deblender, Scarlet Lite; 2) 
-measurements or properties of deblended sources that can be used to 
+<p>The following describes key parameters in the <code>Object</code>
+table: 1) boolean flags that are set by the deblender, Scarlet Lite; 2)
+measurements or properties of deblended sources that can be used to
 characterize (de)blended sources; 3) blendedness metrics performed after
  the deblender completes; 4) obsolete keywords still present in the <code>Object</code> table.</p>
 <p>Scarlet blend flags:</p>
@@ -10481,27 +10481,27 @@ characterize (de)blended sources; 3) blendedness metrics performed after
 <p><code>footprintArea</code> (int): Number of pixels in the deblended object's detection "footprint", in the "reference band".</p>
 <p><code>&lt;f&gt;_deblend_fluxOverlap</code> (dbl): The total flux from neighboring objects that overlaps with this sources footprint in the deconvolved space. See also <code>&lt;f&gt;_deblend_fluxOverlapFraction</code> Fraction of flux from neighbors / source flux in the deconvolved footprint.</p>
 <p>Blendedness parameters:</p>
-<p><code>&lt;f&gt;_blendedness</code> (dbl): For each filter (f = u, g, 
+<p><code>&lt;f&gt;_blendedness</code> (dbl): For each filter (f = u, g,
 r, i, z, or y), a measure of how much the flux is affected by neighbors,
- (1 - child_flux/parent_flux). The measurement is in the observed, not 
-point spread function (PSF)-deconvolved space. Operates on the absolute 
-value of the pixels to try to obtain a de-noised value. These are not 
-performed by the deblender (Scarlet Lite) but rather from a blendedness 
+ (1 - child_flux/parent_flux). The measurement is in the observed, not
+point spread function (PSF)-deconvolved space. Operates on the absolute
+value of the pixels to try to obtain a de-noised value. These are not
+performed by the deblender (Scarlet Lite) but rather from a blendedness
 algorithm (see section 4.9.11 of <a href="https://ui.adsabs.harvard.edu/abs/2018PASJ...70S...5B/abstract">Bosch et al. 2018, PASJ, 70, S5</a> for details).</p>
 <p><code>&lt;f&gt;_deblend_blendedness</code> (dbl): Blendedness in filter <f> in the PSF-deconvolved space.</f></p>
 <p><code>&lt;f&gt;_blendedness_flag</code> (boolean): Flag set for any failure in the blendedness algorithm.</p>
 <p>Obsolete or non-informative parameters:</p>
-<p><code>deblend_failed</code> (boolean): Deblender failed to deblend 
+<p><code>deblend_failed</code> (boolean): Deblender failed to deblend
 this source. Note that in DP1, only child objects that were successfully
- deblended will appear in the <code>Object</code> table. Thus, parent 
-objects which failed to deblend are not included, and this flag is 
-always 0. In future data releases, a parent catalog may exist with 
+ deblended will appear in the <code>Object</code> table. Thus, parent
+objects which failed to deblend are not included, and this flag is
+always 0. In future data releases, a parent catalog may exist with
 informative keywords for the deblender's performance.</p>
 <p>In addition to <code>deblend_failed</code>, the following columns from DP0.2 have now been deprecated, although still appear in the <code>Object</code> table (artifacts from when the parents were included in the same catalog). This includes <code>deblend_nChild</code>,
  which was a property of parents but does not contain useful information
  in DP1 because the parent blends themselves are now excluded from the <code>Object</code> table. Similarly, <code>deblend_nPeaks</code>,
  which used to contain the number of peaks a parent object has in DP0.2,
- still appears in DP1, but always contains the value 1 because only 
+ still appears in DP1, but always contains the value 1 because only
 child objects are in the <code>Object</code> table.</p>
 </div>
 </div>
@@ -10514,13 +10514,13 @@ child objects are in the <code>Object</code> table.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="2.1.-Identify-blended-objects">2.1. Identify blended objects<a class="anchor-link" href="#2.1.-Identify-blended-objects">¶</a></h3><p>As
- with all explorative TAP queries searching for examples, it is 
-essential to first start with a small area while developing queries (to 
-confirm the query is good), and then iteratively increase the area as 
-needed (because the full query could take hours without any spatial 
-constraint on the search). This is because the tables are indexed by 
+ with all explorative TAP queries searching for examples, it is
+essential to first start with a small area while developing queries (to
+confirm the query is good), and then iteratively increase the area as
+needed (because the full query could take hours without any spatial
+constraint on the search). This is because the tables are indexed by
 Right Ascension and declination coordinates (R.A., Dec) and queries with
- constraints only on measurement columns (such as deblending-related 
+ constraints only on measurement columns (such as deblending-related
 parameters) are inefficient.
 In other words, Qserv (the backend hosting the TAP-accessible tables) is
  "spatially sharded".</p>
@@ -10674,8 +10674,8 @@ In other words, Qserv (the backend hosting the TAP-accessible tables) is
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Generate a cutout of the i-band <code>deep_coadd</code> imaging that 
-overlaps the queried objects, centered at (RA, Dec) = 53.11, -28.07 
+<p>Generate a cutout of the i-band <code>deep_coadd</code> imaging that
+overlaps the queried objects, centered at (RA, Dec) = 53.11, -28.07
 degrees, with a cutout edge size of 200 pixels.</p>
 </div>
 </div>
@@ -10705,7 +10705,7 @@ degrees, with a cutout edge size of 200 pixels.</p>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>bbox =  (minimum=(14543, 5011), maximum=(14742, 5210)) xy =  (14643, 5111) cutoutSize =  (200, 200)
 band.name = 'i' AND patch = 14 AND tract = 5063
-        
+
 </pre>
 </div>
 </div>
@@ -10718,11 +10718,11 @@ band.name = 'i' AND patch = 14 AND tract = 5063
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Display the cutout with isolated objects identified by red circles 
-and objects that were identified from blends identified as cyan plus 
-signs. To ensure that <code>afwDisplay</code> will make the low surface 
-brightness connecting the blends together visible, set the scale to 
-linear, set the min and max pixel values to be relatively low and also 
+<p>Display the cutout with isolated objects identified by red circles
+and objects that were identified from blends identified as cyan plus
+signs. To ensure that <code>afwDisplay</code> will make the low surface
+brightness connecting the blends together visible, set the scale to
+linear, set the min and max pixel values to be relatively low and also
 indicate with units=Absolute that these should be in actual count units.</p>
 </div>
 </div>
@@ -10967,11 +10967,11 @@ indicate with units=Absolute that these should be in actual count units.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>A single source is identified with high <code>i_deblend_fluxOverlapFraction</code>
- (i.e. flux contribution from neighbors) of almost 62%. Note however 
-that in this case, the deblender indicates that the deblended flux is 
+ (i.e. flux contribution from neighbors) of almost 62%. Note however
+that in this case, the deblender indicates that the deblended flux is
 uncontaminated in the PSF-decovolved space, <code>i_deblend_blendedness</code>
  = 0, and the blendedness flag returns False, indicating this object was
- successfully deblended. However, these blendedness metrics before and 
+ successfully deblended. However, these blendedness metrics before and
 after deblending can assist in quality assessment.</p>
 <p>Below, identify this child with heavy blendedness of 50%.</p>
 </div>
@@ -11049,7 +11049,7 @@ after deblending can assist in quality assessment.</p>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>bbox =  (minimum=(11579, 3969), maximum=(11837, 4227)) xy =  (11708, 4098) cutoutSize =  (259, 259)
 band.name = 'i' AND patch = 13 AND tract = 5063
-        
+
 </pre>
 </div>
 </div>
@@ -11062,9 +11062,9 @@ band.name = 'i' AND patch = 13 AND tract = 5063
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Display the <code>deepCoadd</code> cutout made for this parent, with 
-all deblended children identified with red circles. Identify the 
-children for which the blendedness metric (before deblending) was 50% 
+<p>Display the <code>deepCoadd</code> cutout made for this parent, with
+all deblended children identified with red circles. Identify the
+children for which the blendedness metric (before deblending) was 50%
 with a cyan circle.</p>
 </div>
 </div>
@@ -11118,9 +11118,9 @@ with a cyan circle.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p><strong>Figure 2:</strong> The cutout image displayed in greyscale, 
+<p><strong>Figure 2:</strong> The cutout image displayed in greyscale,
 with red circles marking the deblended children, cyan circles indicating
- any children whose contamination from neighbors prior to deblending is 
+ any children whose contamination from neighbors prior to deblending is
 high (&gt;50% of flux from a neighbor).</p>
 </blockquote>
 </div>
@@ -11144,11 +11144,11 @@ high (&gt;50% of flux from a neighbor).</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="4.-Heavy-blends">4. Heavy blends<a class="anchor-link" href="#4.-Heavy-blends">¶</a></h2><p>It is useful to be able to quantify how much flux in the blended source is attributed to a neighbor. <a href="https://ui.adsabs.harvard.edu/abs/2018PASJ...70S..25M/abstract">Mandelbaum et al. 2018</a>
-  quantitatively explored the criteria for acceptable blendedness as a 
+  quantitatively explored the criteria for acceptable blendedness as a
 metric of deblender performance. In this section, explore examples where
  sources are heavily contaminated (<code>&lt;f&gt;_blendedness</code> &gt;50%) by the flux of neighbors, and then compare to the deblended contamination fraction <code>&lt;f&gt;_deblend_blendedness</code>.</p>
-<p>Below, identify which child objects are above this high threshold of 
-PSF-convolved blending, and see what fraction of objects in the catalog 
+<p>Below, identify which child objects are above this high threshold of
+PSF-convolved blending, and see what fraction of objects in the catalog
 meet this criteria.</p>
 </div>
 </div>
@@ -11265,8 +11265,8 @@ meet this criteria.</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
 <p><strong>Figure 3:</strong> This figure shows the <code>blendedness</code> metric (fraction of flux contributed by neighbors) before deblending vs the <code>deblend_blendedness</code>
- metric that identifies the fraction of flux contamination after 
-deblending, for heavily blended objects (&gt;50% flux from one or more 
+ metric that identifies the fraction of flux contamination after
+deblending, for heavily blended objects (&gt;50% flux from one or more
 neighbors). The right panel shows a histogram of the <code>deblend_blendedness</code>, indicating that the deblender is successful at separating flux, such that <code>deblend_blendedness</code> = 0, in the overwhelming majority of objects.</p>
 </blockquote>
 </div>
@@ -11504,8 +11504,8 @@ neighbors). The right panel shows a histogram of the <code>deblend_blendedness</
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Use the cutout_coadd function to request an image cutout of this 
-blend, and identify any objects which still have 1% of flux contributed 
+<p>Use the cutout_coadd function to request an image cutout of this
+blend, and identify any objects which still have 1% of flux contributed
 by a neighbor after the deblending process (<code>i_deblend_blendedness</code> &gt; 0.01).</p>
 </div>
 </div>
@@ -11538,7 +11538,7 @@ by a neighbor after the deblending process (<code>i_deblend_blendedness</code> &
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>bbox =  (minimum=(13941, 4082), maximum=(14744, 4885)) xy =  (14343, 4484) cutoutSize =  (804, 804)
 band.name = 'i' AND patch = 14 AND tract = 5063
-        
+
 </pre>
 </div>
 </div>
@@ -11594,10 +11594,10 @@ band.name = 'i' AND patch = 14 AND tract = 5063
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
 <p><strong>Figure 4:</strong> This figure shows a heavily blended parent
- for which deblended objects have a fraction of flux contributed by 
+ for which deblended objects have a fraction of flux contributed by
 neighbors (red circles). Cyan circles indicate objects whose <code>deblend_blendedness</code>
- metric is not 0, and remains &gt; 1% contamination even after 
-deblending. They are typically faint objects near the outskirts of the 
+ metric is not 0, and remains &gt; 1% contamination even after
+deblending. They are typically faint objects near the outskirts of the
 biggest and brightest objects where contamination might be high.</p>
 </blockquote>
 </div>
