@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-10-22
+==========
+
+Released new notebook tutorials 206.1 on deblender outputs and 206.2 on deblender footprints.
+
 2025-10-01
 ==========
 
