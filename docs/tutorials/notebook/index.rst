@@ -164,6 +164,17 @@ Tutorials with a learning objective of understanding one of the data products.
     205/notebook-205-2.rst
 
 
+206. Deblender Data Products
+------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    206/notebook-206-1.rst
+    206/notebook-206-2.rst
+
+
 .. _notebook-300:
 
 300. Science demonstrations
