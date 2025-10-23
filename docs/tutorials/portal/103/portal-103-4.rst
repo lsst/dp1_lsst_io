@@ -70,7 +70,7 @@ Enter the ADQL query to the ADQL Quest box, and click on "search".
         AND cv.expMidptMJD > 60631 AND cv.expMidptMJD < 60637
         AND src.band = 'i'
 
-If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure 1, click the tab that says “Coverage”.
+If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure 1, click the tab that says “Coverage” to display the HIPS map.
 
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
