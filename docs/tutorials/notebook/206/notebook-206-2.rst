@@ -5,4 +5,4 @@
 ###########################
 
 .. raw:: html
-    :file: 206_2_Deblender_Footprints.html
+    :file: 206_2_Deblender_footprints.html
