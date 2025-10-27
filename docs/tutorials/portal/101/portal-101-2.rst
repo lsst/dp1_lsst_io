@@ -38,6 +38,7 @@ Click on the sidebar menu (three vertical lines in the upper left hand corner) a
 
 **3. Select the target.**
 Enter coordinates ``53.13,-28.10``, which are the center of the Extended Chanrda Deep Field South (ECDFS) field, and field of view of ``1`` degree (Figure 2).
+Click "Search".
 
 .. figure:: images/portal-101-2-2.png
     :name: portal-101-2-2
