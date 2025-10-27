@@ -13,9 +13,8 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
     These often appear alongside ``NO_DATA`` in deeply masked regions.
 
 ``CLIPPED``
-    Pixel was excluded during coaddition due to artifact clipping.
+    Pixel was excluded during coaddition due to artifact clipping -- i.e. at least one input image for this pixel was identified as an artifact and excluded.
     The coaddition algorithm in DP1 aggressively rejects transient features such as cosmic rays, meteors, or satellite trails.
-    If a warp contributing to this coadd patch had the pixel flagged as part of an artifact, it was excluded from the stack, and ``CLIPPED`` is set.
 
 ``CR``
     One or more input visits flagged this pixel as a cosmic ray.
@@ -33,9 +32,7 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
     All pixels in detected footprints are flagged ``DETECTED``.
 
 ``DETECTED_NEGATIVE``
-    Pixel belongs to a negative source footprint.
-    This would occur for “disappearance” detections or dipole-like features.
-    While rare in static-sky coadds, this bit is retained for compatibility with image differencing.
+    Used in :ref:`difference images <images-difference-image>` only, see the :ref:`vist and difference image <images-visit-mask-planes>` page.
 
 ``EDGE``
     Pixel lies near the nominal edge of an input image.
@@ -45,8 +42,7 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
 ``INEXACT_PSF``
     The PSF at this pixel is ill-defined or varies significantly across inputs.
     This usually occurs at patch boundaries or regions with partial input coverage.
-    When set, ``INEXACT_PSF`` is always accompanied by at least one of ``SENSOR_EDGE``, ``CLIPPED``, or ``REJECTED``.
-    Objects overlapping this flag may have degraded photometric or shape measurements.
+    When set, ``INEXACT_PSF`` is always accompanied by at least one of ``SENSOR_EDGE``, ``CLIPPED``, or ``REJECTED`` flags.
 
 ``INTRP``
     Pixel value was interpolated during stacking, or all inputs had this pixel marked interpolated.
@@ -69,8 +65,9 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
     It may also occur where inputs were masked and no valid interpolation was possible.
 
 ``REJECTED``
-    The pixel was rejected from one or more inputs and could not be interpolated.
-    This flag typically marks defects like bad columns that persisted across multiple visits.
+    Pixel where a contributing image was masked and not used.
+    On coadds, this flags pixels where one or more input exposures had the pixel masked (e.g. ``BAD`` or ``SAT``) and thus that pixel’s coadd value comes from fewer images.
+    Many ``REJECTED`` pixels are those falling on a sensor defect or bad column that persisted through single-frame processing.
     If all inputs rejected this pixel, it may be flagged as ``REJECTED`` and possibly ``NO_DATA``.
 
 ``SAT``
@@ -84,14 +81,12 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
     Objects with pixels in ``SENSOR_EDGE`` regions may have poor PSF modeling or incomplete photometry.
 
 ``STREAK``
-    Pixel lies in a linear streak identified in one or more inputs, such as a satellite trail.
-    Although the coadd pipeline includes the capability to flag streaks, this feature was **not enabled** for DP1 coadds.
-    As a result, ``STREAK`` is typically **not set** in deep coadds for DP1, even though the plane is defined.
+   Used in :ref:`difference images <images-difference-image>` only, see the :ref:`vist and difference image <images-visit-mask-planes>` page.
 
 ``SUSPECT``
     Pixel was flagged as ``SUSPECT`` (likely above the PTC turnoff but not fully saturated) in one or more inputs.
     If a configurable fraction of input visits marked the pixel as ``SUSPECT``, it propagates to the coadd.
-    Unlike ``SAT``, ``SUSPECT`` is **not dilated**, and thus this bit marks only the directly affected pixels.
+    Unlike ``SAT``, ``SUSPECT`` is not dilated, and thus this bit marks only the directly affected pixels.
     It indicates that photometry may be mildly biased due to non-linearity or blooming shoulders.
 
 ``UNMASKEDNAN``
@@ -103,4 +98,3 @@ Each plane corresponds to a bit in the coadd mask and reflects the propagation o
     Pixel lies in a vignetted region in all contributing visits.
     These areas received significantly less flux due to optical shading near the corners or edge of the field.
     ``VIGNETTED`` pixels may appear at the outer edges of the coadd and usually have lower weight.
-
