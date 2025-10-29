@@ -25,8 +25,8 @@ Stage 1 is ISR, preliminary single-detector calibrations, and analysis on those 
   Pipeline graph of DP1 DRP stage1, showing single visit processing steps.
 
 
-.. figure:: images/DP1-stage1-figure.pdf
-  :alt: Full PDF version of the pipeline graph of DP1 DRP stage1.
+:download:`Download the full PDF version of the pipeline graph of DP1 DRP stage1 <images/DP1-stage1-figure.pdf>`.
+
 
 
 Stage 2
