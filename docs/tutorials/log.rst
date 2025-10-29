@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-10-29
+==========
+
+Released new notebook tutorials 302.3 on deriving stellar properties.
+
 2025-10-22
 ==========
 
