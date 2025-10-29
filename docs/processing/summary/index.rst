@@ -13,26 +13,46 @@ For simplicity, all DRP tasks designed to compute metrics and make plots are omi
     These pipeline graphs are a representation of most tasks in the LSSTComCam DRP pipeline at the time DP1 was processed.
     They illustrate how different data products and tasks relate to one another, and are not a definitive record of all processing steps performed.
 
+
+Stage 1
+=======
+
+Stage 1 is ISR, preliminary single-detector calibrations, and analysis on those (which includes matching across visits).
+
 .. figure:: images/DP1-stage1-figure.pdf
   :width: 400
   :alt: Pipeline graph of DP1 DRP stage1, showing single visit processing steps
 
-  Stage 1 is ISR, preliminary single-detector calibrations, and analysis on those (which includes matching across visits).
+Stage 2
+=======
 
-.. figure:: images/DP1-stage2-figure.pdf
+Stage 2 is multi-visit and full-visit recalibration.
+
+.. figure:: images/DP1-stage2-figure.png
   :width: 400
   :alt: Pipeline graph of DP1 DRP stage2, showing recalibration steps
 
-  Stage 2 is multi-visit and full-visit recalibration.
+.. figure:: images/DP1-stage2-figure.pdf
+  :width: 400
+  :alt: Full PDF version of the pipeline graph of DP1 DRP stage2, showing recalibration steps
+
+
+
+Stage 3
+=======
+
+Stage 3 is coaddition and coadd processing, which results in the object table.
 
 .. figure:: images/DP1-stage3-figure.pdf
   :width: 400
   :alt: Pipeline graph of DP1 DRP stage3, showing coaddition steps
 
-  Stage 3 is coaddition and coadd processing, which results in the object table.
+
+Stage 4
+=======
+
+Stage 4 uses information from stage 3 to create visit-level final source catalogs and do difference imaging and forced photometry.
 
 .. figure:: images/DP1-stage4-figure.pdf
   :width: 400
   :alt: Pipeline graph of DP1 DRP stage4, showing variability measurement steps
-
-  Stage 4 uses information from stage 3 to create visit-level final source catalogs and do difference imaging and forced photometry.
