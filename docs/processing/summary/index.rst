@@ -19,23 +19,24 @@ Stage 1
 
 Stage 1 is ISR, preliminary single-detector calibrations, and analysis on those (which includes matching across visits).
 
-.. figure:: images/DP1-stage1-figure.pdf
-  :width: 400
+.. figure:: images/DP1-stage1-figure.png
   :alt: Pipeline graph of DP1 DRP stage1, showing single visit processing steps
+
+  Pipeline graph of DP1 DRP stage1, showing single visit processing steps.
+
+
+.. figure:: images/DP1-stage1-figure.pdf
+  :alt: Full PDF version of the pipeline graph of DP1 DRP stage1.
+
 
 Stage 2
 =======
 
 Stage 2 is multi-visit and full-visit recalibration.
 
-.. figure:: images/DP1-stage2-figure.png
-  :width: 400
-  :alt: Pipeline graph of DP1 DRP stage2, showing recalibration steps
-
 .. figure:: images/DP1-stage2-figure.pdf
   :width: 400
-  :alt: Full PDF version of the pipeline graph of DP1 DRP stage2, showing recalibration steps
-
+  :alt: Pipeline graph of DP1 DRP stage2, showing recalibration steps
 
 
 Stage 3
