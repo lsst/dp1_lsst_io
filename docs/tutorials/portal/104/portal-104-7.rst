@@ -41,7 +41,8 @@ Click the Search button at lower left.
 
 
 **2. Retrieve the object ID from the results.**
-The query results will appear in the results interface.
+The query results will appear in the "Results" tab (interface).
+If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure 1, click the tab that says “Coverage”.
 The default "Coverage Chart" marks the ``DiaObjects`` on the HiPS map and the default "Active Chart" plots RA vs. Dec.
 The table on the bottom displays the returned ``DiaObjects``, and it is the one with the large number of detections
 (``diaObjectId`` = 611256447031836758) that is the time domain object of interest.
@@ -50,7 +51,7 @@ The table on the bottom displays the returned ``DiaObjects``, and it is the one 
     :name: portal-104-1-7
     :alt: Default search results from a query.
 
-    Figure 1: The default results view obtained by executing the query.
+    Figure 1: The default results view obtained by executing the query and selecting the "coverage" tab.
 
 
 **3. Execute a ADQL query to retrieve the object's light curve.**
@@ -70,6 +71,7 @@ This query joins the ``ForcedSourceOnDiaObject`` table (containing fluxes and fl
 **4. Change the plot to show flux vs. time.**
 To change the plot from the default of RA vs. Dec, click on the "gear" above the plot, and enter the parameters as in the screenshot below.
 Click "Apply" - this will result in the light curve measured in several filters.
+Again, to see the coverage HIPS map as shown in Figure 2, above the left panel, click the tab that says “Coverage”.
 
 .. figure:: images/portal-104-7-2.png
     :name: portal-104-7-2
