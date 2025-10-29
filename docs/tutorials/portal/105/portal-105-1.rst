@@ -62,7 +62,7 @@ For column ``t_min`` enter ``< 60623.28`` to select only images for which the sh
 This will filter the table down to 10 images.
 
 **5. Display multiple images.**
-To display up to six images side-by-side, click on the icon displaying six little boxes above the single image (A in Figure 1).
+To display up to eight images side-by-side, click on the icon displaying six little boxes above the single image (A in Figure 1).
 
 .. figure:: images/portal-105-1-2.png
     :name: portal-105-1-2
