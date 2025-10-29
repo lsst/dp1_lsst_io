@@ -25,7 +25,7 @@ Stage 1 is ISR, preliminary single-detector calibrations, and analysis on those 
   **Figure 1:** Pipeline graph of DP1 DRP Stage 1, showing single visit processing steps.
 
 
-:download:`Download the full PDF for Stage 1 <images/DP1-stage1-figure.pdf>`.
+:download:`Download the PDF for Stage 1 <images/DP1-stage1-figure.pdf>`.
 
 
 Stage 2
@@ -39,7 +39,7 @@ Stage 2 is multi-visit and full-visit recalibration.
   **Figure 2:** Pipeline graph of DP1 DRP Stage 2, showing recalibration steps.
 
 
-:download:`Download the full PDF for Stage 2 <images/DP1-stage2-figure.pdf>`.
+:download:`Download the PDF for Stage 2 <images/DP1-stage2-figure.pdf>`.
 
 
 Stage 3
@@ -53,7 +53,7 @@ Stage 3 is coaddition and coadd processing, which results in the object table.
   **Figure 3:** Pipeline graph of DP1 DRP Stage 3, showing coaddition steps.
 
 
-:download:`Download the full PDF for Stage 3 <images/DP1-stage3-figure.pdf>`.
+:download:`Download the PDF for Stage 3 <images/DP1-stage3-figure.pdf>`.
 
 
 
@@ -68,4 +68,4 @@ Stage 4 uses information from stage 3 to create visit-level final source catalog
   **Figure 4:** Pipeline graph of DP1 DRP Stage 4, showing variability measurement steps.
 
 
-:download:`Download the full PDF for Stage 4 <images/DP1-stage4-figure.pdf>`.
+:download:`Download the PDF for Stage 4 <images/DP1-stage4-figure.pdf>`.
