@@ -43,8 +43,8 @@ This query will return all process visit images that overlap coordinates RA, Dec
 
 
 **2. Review the results interface for images.**
-As shown in Figure 1, the default layout displays the selected image at upper right,
-a default plot of RA vs. Dec at upper left, and the table with image metadata at the bottom.
+As shown in Figure 1, the default layout displays the selected image at upper left,
+a default plot of RA vs. Dec at upper right, and the table with image metadata at the bottom.
 
 .. figure:: images/portal-105-1-1.png
     :name: portal-105-1-1
@@ -62,13 +62,13 @@ For column ``t_min`` enter ``< 60623.28`` to select only images for which the sh
 This will filter the table down to 10 images.
 
 **5. Display multiple images.**
-To display up to eight images side-by-side, click on the icon displaying six little boxes above the single image (A in Figure 1).
+To display up to six images side-by-side, click on the icon displaying six little boxes above the single image (A in Figure 1).
 
 .. figure:: images/portal-105-1-2.png
     :name: portal-105-1-2
     :alt: The Results tab after a query has been executed but displaying multiple images.
 
-    Figure 2: The results of the query above, but displaying multiple images, corresponding to first eight entries in the table.
+    Figure 2: The results of the query above, but displaying multiple images, corresponding to first six entries in the table.
 
 
 **6. Hide the active chart (plot).**
