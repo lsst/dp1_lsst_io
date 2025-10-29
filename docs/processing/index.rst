@@ -11,6 +11,20 @@ All processing was done with the `LSST Science Pipelines <https://pipelines.lsst
 For details see |dp1_paper| [:download:`BibTeX </bib/paper.bib>`].
 
 
+.. _processing-summary:
+
+Summary
+=======
+
+A summary of the DRP processing stages.
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    summary/index
+
+
 .. _processing-isr:
 
 Instrument signature removal (ISR)
