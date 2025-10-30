@@ -7524,8 +7524,9 @@ a.anchor-link {
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-09-16 <br/>
-Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
+Last verified to run: 2025-10-30 <br/>
+Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/>
+DOI: <a href="https://doi.org/10.11578/rubin/dc.20250909.20">10.11578/rubin/dc.20250909.20</a> <br/></p>
 </div>
 </div>
 </div>
@@ -7557,7 +7558,7 @@ Rubin staff will respond to all questions posted there.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">¶</a></h2><p>Interstellar dust removes flux by absorbing photons and scattering them out of the observer’s line of sight, a process known as "extinction". The amount of extinction depends on wavelength: dust affects shorter (bluer) wavelengths more strongly than longer (redder) ones, leading to a "reddening" of the light. The wavelength dependence is described by an extinction curve, from which the size distribution and composition of interstellar dust grains can be inferred. Such curves are used to correct observations for dust effects. Without these corrections, the derived properties of celestial objects, such as intrinsic luminosity and color, will be inaccurate.</p>
-<p>This notebook demonstrates how to correct for the effects of Galactic foreground dust along the line of sight using the <code>ebv</code> column in the <code>Object</code> table, which provides $E(B-V)$ values at given RA/Dec coordinates per <a href="https://ui.adsabs.harvard.edu/abs/1998ApJ...500..525S/abstract">Schlegel, Finkbeiner &amp; Davis (1998)</a> (SFD98 hearafter). Interstellar reddening is quantified by the color excess, defined as the difference between an object’s observed and intrinsic (i.e., dust-free) color indices: $E(B-V) = (B-V)_{observed} - (B-V)_{intrinsic}$. E(B-V) measures how much interstellar dust reddens incoming flux and serves as a direct proxy for the amount of the line-of-sight extinction. The total-to-selective extinction ratio at wavelength $\lambda$ is defined as $R_\lambda = \frac{A_\lambda}{E(B-V)}$, which characterizes the degree to which dust dims light at that wavelength. As an example, this notebook explorex the reddening properties in the "low-Galactic-latitude field" RubinSV_95_-25 field.</p>
+<p>This notebook demonstrates how to correct for the effects of Galactic foreground dust along the line of sight using the <code>ebv</code> column in the <code>Object</code> table, which provides $E(B-V)$ values at given RA/Dec coordinates per <a href="https://ui.adsabs.harvard.edu/abs/1998ApJ...500..525S/abstract">Schlegel, Finkbeiner &amp; Davis (1998)</a> (SFD98 hereafter). Interstellar reddening is quantified by the color excess, defined as the difference between an object’s observed and intrinsic (i.e., dust-free) color indices: $E(B-V) = (B-V)_{observed} - (B-V)_{intrinsic}$. E(B-V) measures how much interstellar dust reddens incoming flux and serves as a direct proxy for the amount of the line-of-sight extinction. The total-to-selective extinction ratio at wavelength $\lambda$ is defined as $R_\lambda = \frac{A_\lambda}{E(B-V)}$, which characterizes the degree to which dust dims light at that wavelength. As an example, this notebook explores the reddening properties in the "low-Galactic-latitude field" RubinSV_95_-25 field.</p>
 <p><strong>Related tutorials:</strong> See the 200-level and 300-level DP1 tutorials for guidance on the <code>Object</code> table and target exploration.</p>
 </div>
 </div>
@@ -7762,7 +7763,6 @@ and <code>matplotlib</code>, a comprehensive library for data visualization
 <span class="s2">        FROM dp1.Object</span>
 <span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), </span>
 <span class="s2">              CIRCLE('ICRS', </span><span class="si">{</span><span class="n">ra_cen</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">dec_cen</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">radius</span><span class="si">}</span><span class="s2">)) = 1 </span>
-<span class="s2">        ORDER BY objectId ASC</span>
 <span class="s2">        """</span>
 </pre></div>
 </div>
@@ -8203,7 +8203,6 @@ and <code>matplotlib</code>, a comprehensive library for data visualization
 <span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), </span>
 <span class="s2">            CIRCLE('ICRS', </span><span class="si">{</span><span class="n">ra_cen_seagull</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">dec_cen_seagull</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">radius</span><span class="si">}</span><span class="s2">)) = 1</span>
 <span class="s2">        AND refExtendedness = 0</span>
-<span class="s2">        ORDER BY objectId ASC</span>
 <span class="s2">        """</span>
 </pre></div>
 </div>
@@ -8224,7 +8223,6 @@ and <code>matplotlib</code>, a comprehensive library for data visualization
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
     <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
-<span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
 </pre></div>
 </div>
 </div>
@@ -8251,7 +8249,8 @@ and <code>matplotlib</code>, a comprehensive library for data visualization
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">table_seagull</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">table_seagull</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'The query returned </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">table_seagull</span><span class="p">)</span><span class="si">}</span><span class="s1"> objects.'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8404,7 +8403,7 @@ and <code>matplotlib</code>, a comprehensive library for data visualization
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
