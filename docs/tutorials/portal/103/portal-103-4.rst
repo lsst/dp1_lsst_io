@@ -54,7 +54,7 @@ in the ``Source`` table and ``VisitId`` in the ``CcdVisit`` table,
 which identifies an LSST visit.
 Constraints can be applied on columns from either or both tables.
 Spatial constraints are applied to the ``FROM`` table, not the ``JOIN`` table.
-Enter the ADQL query to the ADQL Quest box, and click on "search".
+Enter the ADQL query to the ADQL Query box, and click on "search".
 
 .. code-block:: SQL
 
@@ -86,11 +86,10 @@ In other words, there are multiple rows from the ``Source`` table joined with a 
 
 
 **5. Execute a three-table join.**
-The ``Object`` table (photometry in the deepCoadd images) can be joined with the
-``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
-The ``ForcedSource`` table can be joined with the ``CcdVisit`` table (metadata about individual visits) using a shared column, named ``Visit``
-in the ``ForcedSource`` table and ``VisitId`` in the ``CcdVisit`` table,
-which identifies an LSST visit.
+The ``Object`` table (photometry in the deepCoadd images) can be joined with the ``ForcedSource`` table (photometry in individual processed visit images) using their shared ``objectId`` column.
+The ``ForcedSource`` table can be joined with the ``CcdVisit`` table (metadata about individual visits) using a shared column, named ``Visit`` in the ``ForcedSource`` table and ``VisitId`` in the ``CcdVisit`` table, which identifies an LSST visit.
+Enter the ADQL query to the ADQL Query box, and click on "search".
+Again, to view the coverage chart, click the "Coverage" tab at the top of the upper left panel.
 
 .. code-block:: SQL
 
@@ -113,7 +112,6 @@ which identifies an LSST visit.
 
 **6. Review the three-table join results.**
 The join of ``Object`` to ``ForcedSource`` is one-to-many, and the join of ``ForcedSource`` to ``CcdVisit`` is many-to-one.
-Again, to view the coverage chart, click the "Coverage" tab at the top of the upper left panel.
 
 .. figure:: images/portal-103-4-2.png
     :name: portal-103-4-2
