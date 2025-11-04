@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-07-01
+**Last verified to run:** 2025-11-04
 
 **Learning objective:** Plot a light curve of an object with known coordinates.
 
