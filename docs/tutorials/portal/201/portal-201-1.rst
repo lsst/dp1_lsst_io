@@ -20,6 +20,11 @@ Please consider acknowledging them if this tutorial is used for the preparation 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
 Rubin staff will respond to all questions posted there.
 
+**INTRODUCTION:** The Object table contains forced measurements in the u g r i y deep_coadd images at the sky coordinates of every source detected in any individual Visit image, or in a deep_coadd image in any filter, with signal-to-noise ratio ≥ 5.
+
+The Object table contains only deblended objects (the "children" of deblending only, no "parent" objects), and duplicates have been rejected (e.g., objects in the overlapping edges of deep_coadd images).
+
+TAP table name: dp1.Object
 ----
 
 **1. Log in to the Portal Aspect of the RSP.**
