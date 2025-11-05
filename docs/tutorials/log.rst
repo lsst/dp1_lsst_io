@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-11-04
+==========
+
+Updated notebook tutorial 105.3 on forced photometry, 105.4 on synthetic source injection, and 305.1 on extracting a variable star lightcurve.
+
 2025-10-29
 ==========
 
