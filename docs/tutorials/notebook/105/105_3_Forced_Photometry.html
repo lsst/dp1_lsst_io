@@ -7644,9 +7644,9 @@ Rubin staff will respond to all questions posted there.</p>
 <span class="sd">    table : Astropy Table</span>
 <span class="sd">        Transformed version of the input table, with columns and units updated.</span>
 <span class="sd">    """</span>
-        
+
     <span class="n">cols_with_instflux</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">colnames</span><span class="p">)</span> <span class="k">if</span> <span class="s1">'instFlux'</span> <span class="ow">in</span> <span class="n">col</span><span class="p">]</span>
-    
+
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols_with_instflux</span><span class="p">:</span>
         <span class="n">new_colname</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="s1">'instFlux'</span><span class="p">,</span> <span class="s1">'flux'</span><span class="p">)</span>
         <span class="n">table</span><span class="o">.</span><span class="n">rename_column</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">new_colname</span><span class="p">)</span>
@@ -8496,7 +8496,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -8510,7 +8510,7 @@ line-height: var(--jp-code-line-height);
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>
