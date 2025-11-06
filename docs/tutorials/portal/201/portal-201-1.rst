@@ -25,8 +25,38 @@ Rubin staff will respond to all questions posted there.
 The Object table contains only deblended objects (the "children" of deblending only, no "parent" objects), and duplicates have been rejected (e.g., objects in the overlapping edges of deep_coadd images).
 
 TAP table name: dp1.Object
+
 ----
 
 **1. Log in to the Portal Aspect of the RSP.**
 
-*Tutorial coming soon!*
+**2. Explore the schema.**
+
+**3. Explore the key columns in the Object table.**
+
+* ObjectID
+
+* Coordinates
+
+* Photometry
+
+Magnitudes 
+
+PSF fluxes
+
+cModel fluxes 
+
+Other extended-object photometry measurements
+
+[f]_sersicFlux: Sersic flux (NED documentation)
+
+[f]_gaap*: GaaP fluxes (Kuijken et al. 2008)
+
+[f]_kronFlux: Kron flux (NED documentation)
+
+[f]_ap*: aperture fluxes (radii; pixels)
+
+Milky Way dust extinction
+
+* 
+
