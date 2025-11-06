@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** *yyyy-mm-dd*
+**Last verified to run:** *2025-11-05* (Date of the latest revision)
 
 **Learning objective:** Understand the contents of, and how to access, the ``Object`` table.
 
