@@ -43,7 +43,7 @@ All-sky maps of deep coadded images, survey depth, image quality, and more.
 Auxiliary products
 ==================
 
-Additional data products (e.g., calibration frames, filter bandpasses).
+Additional data products (e.g., calibration frames, filter bandpasses, filter transformations).
 
 .. toctree::
     :maxdepth: 1
@@ -51,6 +51,8 @@ Additional data products (e.g., calibration frames, filter bandpasses).
 
     calibrations/index
     bandpasses/index
+    filter_transformations/index
+
 
 Auxiliary information
 =====================
