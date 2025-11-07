@@ -16,12 +16,14 @@ Access to these photo-z estimates from the Rubin Science Platform is available v
 Photo-z Server
 ==============
 
-The `LSST Photo-z Server <https://docs.linea.org.br/en/sci-platforms/pz_server.html>`_ is an online service that is
-complementary to the Rubin Science Platform (RSP).
-The PZ Server hosts and produces pz-related lightweight data products and provides data management tools for data sharing and provenance.
+The `LSST Photo-z Server <https://pzserver.linea.org.br/>`_ is an online service complementary to the Rubin Science Platform (RSP).
+It hosts and produces photometric redshift–related lightweight data products and provides tools for data management, sharing, and provenance tracking.
+Access is granted using RSP credentials.
+See the Photo-z Server `User Guide <https://docs.linea.org.br/en/sci-platforms/pz_server.html>`_ for instructions on how to use it.
 
-The PZ Server provides an API interface that enables users to access photo-z and related data products
-through Python scripts from any location (`pzserver GitHub repository <https://github.com/linea-it/pzserver>`_).
+The DP1 :doc:`/products/catalogs/object` catalog is available as input data for the **Training Set Maker** pipeline.
+A comprehensive collection of **Reference Redshift Catalogs** (mostly spectroscopic) from the literature is also available for users to build customized training sets.
 
-See Appendix B.2 of `SITCOMTN-154 <https://sitcomtn-154.lsst.io/>`_ for more details on accessing the
-photo-z datasets via the PZ Server.
+A dedicated `documentation page <https://data.linea.org.br/en/sci_products/pzserver.html#data-preview-1>`_ includes links to datasets curated by the Photo-z Server administrators, such as the DP1 preliminary photo-z data products described in `SITCOMTN-154 <https://sitcomtn-154.lsst.io/>`_ (see Appendix B.2 for details on accessing these datasets via the Photo-z Server).
+
+
