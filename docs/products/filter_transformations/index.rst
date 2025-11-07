@@ -12,7 +12,7 @@ Filter transformations to/from the LSSTComCam photometric system and other astro
 Access
 ======
 
-The filter transformations are accessible via `RTN-099 <https://rtn-099.lsst.io/>`.
+The filter transformations are accessible via `RTN-099 <https://rtn-099.lsst.io/>`_.
 
 Description
 ===========
@@ -26,7 +26,7 @@ lines or atypical colors.
 
 Transformation relations are currently available to/from LSSTComCam Data Preview 1 (DP1)
 photometric system and the photometric systems of the Dark Energy Survey (DES), PanSTARRS,
-SDSS, Gaia DR3, Euclid Q1, and Johnson-Cousins UBVR:sub:`c` I:sub:`c`.  There are also some transformation
+SDSS, Gaia DR3, Euclid Q1, and Johnson-Cousins UBVRcIc.  There are also some transformation
 equations based on synthetic photometry available to/from LSSTCam filters and DES and TESS.
 
 
