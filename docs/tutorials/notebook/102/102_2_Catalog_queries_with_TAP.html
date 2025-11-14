@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>102_2_Catalog_queries_with_TAP.r29_2_0</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>102_2_Catalog_queries_with_TAP</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7524,8 +7524,9 @@ a.anchor-link {
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-09-02 <br/>
-Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
+Last verified to run: 2025-11-10 <br/>
+Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/>
+DOI: <a href="https://doi.org/10.11578/rubin/dc.20250909.20">10.11578/rubin/dc.20250909.20</a> <br/></p>
 </div>
 </div>
 </div>
@@ -7562,6 +7563,7 @@ International Virtual Observatory Alliance (IVOA).</p>
 <p>ADQL (Astronomy Data Query Language) is similar to SQL (Structured Query Langage).
 The <a href="http://www.ivoa.net/documents/latest/ADQL.html">documentation for ADQL</a> includes more information about syntax and keywords.
 Not all ADQL functionality is supported yet in the preview-era RSP.</p>
+<p>This tutorial demonstrates options for manipulating and constraining columns and formatting the retrieved data sets with ADQL.</p>
 <p><strong>Related tutorials</strong>: The other 100-level tutorials in this series demonstrate the TAP basics. The 200-level tutorials describe the contents of the catalog data and have example queries for each.</p>
 </div>
 </div>
@@ -7931,7 +7933,7 @@ Also retrieve the 2D sky distance between each object and the search coordinates
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <i>Row index=0</i>
-<table id="table132605042048944">
+<table id="table134654148163440">
 <thead><tr><th>ra_rad</th><th>dec_rad</th><th>distance</th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float64</th></tr></thead>
 <tr><td>0.9250236455912983</td><td>-0.488863082199624</td><td>0.009791465987706714</td></tr>
@@ -8080,7 +8082,7 @@ $m_{\rm AB} = -2.5 \log(f_{\rm nJy}) + 31.4$.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=141</i>
-<table class="table-striped table-bordered table-condensed" id="table132605036257184">
+<table class="table-striped table-bordered table-condensed" id="table134654152257088">
 <thead><tr><th>coord_ra</th><th>coord_dec</th><th>g_cModelMag</th><th>g_cModelMagErr</th><th>r_cModelMag</th><th>r_cModelMagErr</th><th>g_sersicMag</th><th>g_sersicMagErr</th><th>r_sersicMag</th><th>r_sersicMagErr</th></tr></thead>
 <thead><tr><th>deg</th><th>deg</th><th>mag</th><th>mag</th><th>mag</th><th>mag</th><th></th><th></th><th></th><th></th></tr></thead>
 <thead><tr><th>float64</th><th>float64</th><th>float32</th><th>float32</th><th>float32</th><th>float32</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th></tr></thead>
@@ -8093,26 +8095,7 @@ $m_{\rm AB} = -2.5 \log(f_{\rm nJy}) + 31.4$.</p>
 <tr><td>52.99610446568829</td><td>-28.00392847688764</td><td>25.7216</td><td>0.0553019</td><td>24.699</td><td>0.028772</td><td>25.51758445383836</td><td>0.05332594940368145</td><td>24.509594032041257</td><td>0.028202493409365273</td></tr>
 <tr><td>52.994574524381925</td><td>-27.997372314676916</td><td>24.6329</td><td>0.0226044</td><td>23.8767</td><td>0.0155296</td><td>24.588047465995317</td><td>0.022427202238376947</td><td>23.902507096802537</td><td>0.015430592488508811</td></tr>
 <tr><td>52.998335112826375</td><td>-28.003816346850325</td><td>24.2705</td><td>0.0164768</td><td>24.1018</td><td>0.0186653</td><td>24.28554955290755</td><td>0.016401610324314392</td><td>24.121507128684378</td><td>0.018583906770695945</td></tr>
-<tr><td>52.99727214731918</td><td>-27.995802683902657</td><td>24.1665</td><td>0.0148334</td><td>23.9779</td><td>0.0159933</td><td>24.05499024455791</td><td>0.01472144188486561</td><td>23.86914537758115</td><td>0.015866300626627625</td></tr>
-<tr><td>52.99448158796685</td><td>-28.004930968057806</td><td>25.4552</td><td>0.0485347</td><td>24.5962</td><td>0.0287135</td><td>25.449133222023576</td><td>0.04758318208775367</td><td>24.59559267560771</td><td>0.028457169418620278</td></tr>
-<tr><td>53.00329626602324</td><td>-28.00003899309067</td><td>26.4099</td><td>0.12389</td><td>25.1792</td><td>0.0553923</td><td>26.214156107023598</td><td>0.12011723028055703</td><td>25.066084862462944</td><td>0.05502026080091147</td></tr>
-<tr><td>52.995155520103665</td><td>-28.001850964307206</td><td>25.2018</td><td>0.032764</td><td>24.9675</td><td>0.0340522</td><td>24.98366181547818</td><td>0.03153300679336374</td><td>24.747833555881364</td><td>0.03296765049953945</td></tr>
-<tr><td>52.998350813029674</td><td>-27.998949176106738</td><td>24.9673</td><td>0.036206</td><td>24.4623</td><td>0.0292279</td><td>24.689558070181704</td><td>0.03559698277072439</td><td>24.190417616723618</td><td>0.028889488895029118</td></tr>
-<tr><td>52.99775326969135</td><td>-28.002351573160492</td><td>23.9493</td><td>0.0181754</td><td>23.7738</td><td>0.0204255</td><td>23.966454620658244</td><td>0.01784050507271788</td><td>23.81095705407506</td><td>0.020293583897009082</td></tr>
-<tr><td>53.00136383200885</td><td>-28.00378700494794</td><td>24.1718</td><td>0.0148051</td><td>22.5728</td><td>0.00462062</td><td>24.12388626731189</td><td>0.014574249214755933</td><td>22.532669787765567</td><td>0.004566907128197098</td></tr>
-<tr><td>52.998141835898004</td><td>-27.99448571126122</td><td>23.474</td><td>0.00780369</td><td>22.8152</td><td>0.00553536</td><td>23.471800778385468</td><td>0.007746273093980313</td><td>22.826360671596085</td><td>0.00550083209919062</td></tr>
-<tr><td>53.00348062615347</td><td>-27.998557634775082</td><td>24.3642</td><td>0.021632</td><td>22.8599</td><td>0.00721825</td><td>24.18665519491221</td><td>0.020860959923297534</td><td>22.70293818046334</td><td>0.007074329470682065</td></tr>
 <tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-<tr><td>53.00721376470392</td><td>-28.001180170512843</td><td>25.8221</td><td>0.0705159</td><td>25.138</td><td>0.0547828</td><td>25.643071406300145</td><td>0.0695114984063437</td><td>25.062861961887055</td><td>0.054008888233512506</td></tr>
-<tr><td>53.00731182899547</td><td>-28.007278522078224</td><td>26.5402</td><td>0.116733</td><td>25.7899</td><td>0.0781803</td><td>26.51143392456686</td><td>0.11444293325696969</td><td>25.749709662903598</td><td>0.07567945095039222</td></tr>
-<tr><td>52.996154273849754</td><td>-28.00745531725093</td><td>26.5604</td><td>0.139</td><td>26.2221</td><td>0.136156</td><td>25.797519548521954</td><td>0.09593058005399466</td><td>25.621443205734508</td><td>0.10922534251617994</td></tr>
-<tr><td>53.00652419077008</td><td>-27.996847460472292</td><td>26.4912</td><td>0.104924</td><td>25.8685</td><td>0.0768782</td><td>26.216381835835843</td><td>0.10326724647430342</td><td>25.57709124155874</td><td>0.07522092856933878</td></tr>
-<tr><td>53.00959690484238</td><td>-27.995582825205606</td><td>26.1223</td><td>0.103543</td><td>26.0045</td><td>0.122761</td><td>25.84619747536304</td><td>0.09927947435859197</td><td>25.77521978879163</td><td>0.12274444058105709</td></tr>
-<tr><td>53.00468263321903</td><td>-27.993287377947603</td><td>23.0769</td><td>0.00549674</td><td>22.2739</td><td>0.00348814</td><td>23.048143772478458</td><td>0.0054415511451337386</td><td>22.25616738068976</td><td>0.003464440490055301</td></tr>
-<tr><td>52.99651645707511</td><td>-27.993612805089697</td><td>25.2278</td><td>0.0368774</td><td>24.5424</td><td>0.0250163</td><td>25.129143995230777</td><td>0.03646948837143515</td><td>24.44799918035816</td><td>0.024823940859456724</td></tr>
-<tr><td>53.0024143070743</td><td>-27.994569940599067</td><td>29.1129</td><td>1.16653</td><td>28.1966</td><td>0.643018</td><td>28.11391580977372</td><td>0.8523796476347621</td><td>27.435392873223932</td><td>0.5926338475351709</td></tr>
-<tr><td>53.00683694050946</td><td>-27.995182293985668</td><td>26.9208</td><td>0.206666</td><td>27.1901</td><td>0.355787</td><td>26.726780897459953</td><td>0.20325626559192458</td><td>27.00931080069696</td><td>0.347245559971689</td></tr>
-<tr><td>53.00624909377419</td><td>-27.992036216815464</td><td>25.0768</td><td>0.0288796</td><td>23.8358</td><td>0.0119606</td><td>25.070734802074092</td><td>0.028472772676904644</td><td>23.831714466054347</td><td>0.011824806749270257</td></tr>
 <tr><td>53.00766969633569</td><td>-27.993399513118437</td><td>20.4858</td><td>0.000620706</td><td>19.3215</td><td>0.000333081</td><td>20.488225674135386</td><td>0.0005964093735726239</td><td>19.327588879321173</td><td>0.000313522792252015</td></tr>
 <tr><td>53.00642044578477</td><td>-27.994667920805927</td><td>24.3085</td><td>0.0337899</td><td>24.1698</td><td>0.0395691</td><td>23.392352928047327</td><td>0.0332268011886009</td><td>23.19645761026413</td><td>0.03703635296876196</td></tr>
 <tr><td>52.996802053288405</td><td>-27.9912332351428</td><td>28.5065</td><td>0.677682</td><td>32.7069</td><td>42.3778</td><td>28.228616805619353</td><td>0.7439242460744452</td><td>34.46578974634167</td><td>299.92762698447825</td></tr>
@@ -8287,7 +8270,7 @@ $m_{\rm AB} = -2.5 \log(f_{\rm nJy}) + 31.4$.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Column-constraints">3. Column constraints<a class="anchor-link" href="#3.-Column-constraints">¶</a></h2>
+<h2 id="3.-Constrain-column-values">3. Constrain column values<a class="anchor-link" href="#3.-Constrain-column-values">¶</a></h2>
 </div>
 </div>
 </div>
@@ -8848,7 +8831,7 @@ AND g_sersicMag &lt; 25
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=3</i>
-<table class="table-striped table-bordered table-condensed" id="table132605036492800">
+<table class="table-striped table-bordered table-condensed" id="table134654141887648">
 <thead><tr><th>objectId</th><th>coord_ra</th><th>coord_dec</th></tr></thead>
 <thead><tr><th></th><th>deg</th><th>deg</th></tr></thead>
 <thead><tr><th>int64</th><th>float64</th><th>float64</th></tr></thead>
@@ -8875,7 +8858,1022 @@ AND g_sersicMag &lt; 25
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=94b6205e-c3be-4d92-a7fd-b07905035671">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=28021698-fb65-4741-af76-b3fb2d772895">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="4.-Manipulate-the-results">4. Manipulate the results<a class="anchor-link" href="#4.-Manipulate-the-results">¶</a></h2><h3 id="4.1.-Use-caution-with-TOP-and-ORDER-BY">4.1. Use caution with TOP and ORDER BY<a class="anchor-link" href="#4.1.-Use-caution-with-TOP-and-ORDER-BY">¶</a></h3><blockquote>
+<p><strong>Warning:</strong> The TAP service first applies <code>WHERE</code> constraints, then <code>ORDER BY</code>, and <em>then</em> <code>TOP</code>.
+If the query is not well constrained, and many more rows meet the <code>WHERE</code> constraints than the <code>N</code> returned by <code>TOP</code>,
+then they <em>all</em> are sorted, first, before only the top <code>N</code> are returned.
+This is not an efficient use of the shared TAP service.</p>
+</blockquote>
+<p>It is recommended to only combine TOP and ORDER BY if the query's WHERE statements significantly cut
+down the number of objects that would need to be sorted.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66551aea-cf67-4726-9721-d619d9152497">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="4.2.-Limit-rows">4.2. Limit rows<a class="anchor-link" href="#4.2.-Limit-rows">¶</a></h3><p>Very small spatial regions are the recommended way to restrict the number of rows returned, but <code>TOP</code> will also work.</p>
+<p>To only retrieve a subset of the rows which meet the query constraints, add <code>TOP N</code> after <code>SELECT</code> to return only the top <code>N</code> number of rows. Including <code>maxrec</code> in the job definition will also work, but use of <code>TOP</code> is recommended over <code>maxrec</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f394ed1a-7795-4428-a3f5-7f0c4e89adcb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT TOP 10 coord_ra, coord_dec</span>
+<span class="s2">        FROM dp1.Object</span>
+<span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),</span>
+<span class="s2">        CIRCLE('ICRS', 53, -28, 0.1)) = 1"""</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>SELECT TOP 10 coord_ra, coord_dec
+        FROM dp1.Object
+        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53, -28, 0.1)) = 1
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=34d22043-89e8-4f8a-a0c5-e5a0bb5546bf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Execute the query.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f5261ed8-8cf8-4f7a-be1b-de0fbc1a7d4f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Job phase is COMPLETED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=06c7e756-1e34-46f5-94f1-f0af564be42d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Fetch the results and confirm that only 10 rows are returned.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=812ea08b-a24d-407a-910b-63d0bece700e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span>
+
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>10
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4f68f095-d91b-4049-916c-9e4cfdb73ce1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Clean up.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0c2d893e-020c-4e2f-adec-c06cd9f9ed38">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8bd59f93-9e2b-4a60-9bc9-1fd0c5e6cf88">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="4.3.-Sort-table">4.3. Sort table<a class="anchor-link" href="#4.3.-Sort-table">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6158ba10-f70e-45b9-b410-bc3006c95a4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4.3.1.-Sort-with-astropy">4.3.1. Sort with astropy<a class="anchor-link" href="#4.3.1.-Sort-with-astropy">¶</a></h4><p>Retrieve the query results as an <code>astropy</code> table and use the <code>sort</code> method.</p>
+<p>Create a query that is similar to the one in Section 4.1, but does not use <code>TOP</code> and only returns rows with <code>g_cModelMag</code> brighter than 20th mag.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=66c7299f-d1be-4f34-b65f-2b5034478221">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT coord_ra, coord_dec, g_cModelMag</span>
+<span class="s2">        FROM dp1.Object</span>
+<span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),</span>
+<span class="s2">        CIRCLE('ICRS', 53, -28, 0.1)) = 1</span>
+<span class="s2">        AND g_cModelMag &lt; 20"""</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>SELECT coord_ra, coord_dec, g_cModelMag
+        FROM dp1.Object
+        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53, -28, 0.1)) = 1
+        AND g_cModelMag &lt; 20
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ae27b17d-9c86-499b-830f-a2f7ac17f844">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Submit the query job.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e5e46495-9f49-4c6c-9b27-39519342a18d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Job phase is COMPLETED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=270c7e6d-cb9d-488a-ba17-3fd42146d1cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Retrieve the results as an <code>astropy</code> formatted table with <code>to_table()</code>, in order to use the <code>sort</code> method.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9b1705be-4547-4ce2-8578-c1cc877f253a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=df0280b2-7d05-4b1f-ac67-4fbf07dd6fe0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Sort the <code>astropy</code> table by <code>g_cModelMag</code> in descending order (i.e., use <code>reverse=True</code>; the default is <code>False</code>, for ascending order).</p>
+<p>It is also possible to sort by multiple columns with, e.g., <code>results.sort(['column_1', 'column_2'])</code>.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3b979462-5afa-4726-bde5-d9aea03e1d97">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">'g_cModelMag'</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=61016422-f947-4aa8-ad62-ce8ecc727af1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Display the results, now sorted by $g$-band magnitude, with the faintest object in the first row.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91366598-95b0-4d0a-aace-335563a3d591">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><i>Table length=51</i>
+<table class="table-striped table-bordered table-condensed" id="table134654141888848">
+<thead><tr><th>coord_ra</th><th>coord_dec</th><th>g_cModelMag</th></tr></thead>
+<thead><tr><th>deg</th><th>deg</th><th>mag</th></tr></thead>
+<thead><tr><th>float64</th><th>float64</th><th>float32</th></tr></thead>
+<tr><td>52.917598505724484</td><td>-28.036759972159413</td><td>19.9929</td></tr>
+<tr><td>53.04775482029748</td><td>-27.975392984903166</td><td>19.9504</td></tr>
+<tr><td>53.03584306939495</td><td>-27.928161395037968</td><td>19.9287</td></tr>
+<tr><td>53.03903906240283</td><td>-27.959458794774264</td><td>19.9</td></tr>
+<tr><td>52.96663897778455</td><td>-27.963653398451722</td><td>19.874</td></tr>
+<tr><td>53.00918641402325</td><td>-28.044180804131248</td><td>19.7971</td></tr>
+<tr><td>53.01829138799236</td><td>-28.075509632285595</td><td>19.7953</td></tr>
+<tr><td>53.07382332409231</td><td>-28.06505463389963</td><td>19.752</td></tr>
+<tr><td>53.09918248237757</td><td>-27.979397996279193</td><td>19.6067</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>52.91466707323275</td><td>-28.027825200964536</td><td>17.1495</td></tr>
+<tr><td>52.97177339646181</td><td>-28.049185382350746</td><td>17.018</td></tr>
+<tr><td>53.01835078638047</td><td>-28.085549256632248</td><td>17.0006</td></tr>
+<tr><td>53.069949903324094</td><td>-28.039568580067808</td><td>16.9427</td></tr>
+<tr><td>53.09326022159075</td><td>-28.018392693608014</td><td>16.6915</td></tr>
+<tr><td>53.08453522823213</td><td>-28.026264129464558</td><td>16.2093</td></tr>
+<tr><td>52.92140884571618</td><td>-28.052060061799228</td><td>16.1101</td></tr>
+<tr><td>52.956019116141974</td><td>-27.952755305471864</td><td>15.8976</td></tr>
+<tr><td>52.92022761953359</td><td>-28.010189784283277</td><td>15.6904</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6b00efec-8ac0-4872-b567-b803f5e60ec3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Clean up.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bf7e72a2-fc3f-4143-900e-657efd3ebd84">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9faaeab5-8e11-4593-b784-86e59b3c1c36">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4.3.2.-Sort-with-ORDER-BY">4.3.2. Sort with ORDER BY<a class="anchor-link" href="#4.3.2.-Sort-with-ORDER-BY">¶</a></h4><p>Add an <code>ORDER BY</code> statement to the TAP query to sort the results in ascending (ASC) or descending (DESC) order.</p>
+<blockquote>
+<p><strong>Warning:</strong> Adding <code>ORDER BY</code> statements to TAP queries requires more processing than unordered queries, and consumes more of the shared resource that is the TAP service. Sorting with <code>astropy</code> is recommended for this reason (Section 4.3.1).</p>
+</blockquote>
+<p>Order the results by descending <code>g_cModelMag</code> values.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f9a08aae-e484-4abd-b895-1ab30659ff0a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT coord_ra, coord_dec, g_cModelMag</span>
+<span class="s2">        FROM dp1.Object</span>
+<span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),</span>
+<span class="s2">        CIRCLE('ICRS', 53, -28, 0.1)) = 1</span>
+<span class="s2">        AND g_cModelMag &lt; 20</span>
+<span class="s2">        ORDER BY g_cModelMag DESC"""</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>SELECT coord_ra, coord_dec, g_cModelMag
+        FROM dp1.Object
+        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
+        CIRCLE('ICRS', 53, -28, 0.1)) = 1
+        AND g_cModelMag &lt; 20
+        ORDER BY g_cModelMag DESC
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d6f6a56c-51a2-4f80-914c-ef5fbc50d418">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Submit the query job.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9334a91e-49c3-4aab-977c-03992d18c465">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Job phase is COMPLETED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d98faa12-0c33-4f99-bf97-e47d122443f7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Return the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0ebe94d9-4bbc-48e0-bdf4-6933b9e5554b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ac70c8c3-360c-4b89-81f2-81e68c27c440">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Display the results, which are already sorted by $g$-band magnitude from faint to bright.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=92b10a45-c952-48a9-847e-25c96df76dfa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;DALResultsTable length=51&gt;
+     coord_ra           coord_dec      g_cModelMag
+       deg                 deg             mag
+     float64             float64         float32
+------------------ ------------------- -----------
+52.917598505724484 -28.036759972159413     19.9929
+ 53.04775482029748 -27.975392984903166     19.9504
+ 53.03584306939495 -27.928161395037968     19.9287
+ 53.03903906240283 -27.959458794774264        19.9
+ 52.96663897778455 -27.963653398451722      19.874
+ 53.00918641402325 -28.044180804131248     19.7971
+ 53.01829138799236 -28.075509632285595     19.7953
+ 53.07382332409231  -28.06505463389963      19.752
+ 53.09918248237757 -27.979397996279193     19.6067
+               ...                 ...         ...
+ 52.91466707323275 -28.027825200964536     17.1495
+ 52.97177339646181 -28.049185382350746      17.018
+ 53.01835078638047 -28.085549256632248     17.0006
+53.069949903324094 -28.039568580067808     16.9427
+ 53.09326022159075 -28.018392693608014     16.6915
+ 53.08453522823213 -28.026264129464558     16.2093
+ 52.92140884571618 -28.052060061799228     16.1101
+52.956019116141974 -27.952755305471864     15.8976
+ 52.92022761953359 -28.010189784283277     15.6904</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1af5e591-e7ba-4377-a4a0-e499f8314e50">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Clean up.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=204f85ec-dbd3-46b0-9441-fe4a4957433f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a46ea1f1-59b7-49c8-9043-36794d5822f8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="5.-Aggregate-rows">5. Aggregate rows<a class="anchor-link" href="#5.-Aggregate-rows">¶</a></h2><p>The SQL and ADQL aggregate functions are: <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, and <code>MAX</code>.
+Use these to return the statistics of the column values for a query, instead of the values themselves.</p>
+<p>Define a query to return the number (<code>COUNT</code>) of $r$-band images obtained for the ECDFS field, and also the Modified Julian Date (MJD) of the first (<code>MIN</code>) and last (<code>MAX</code>) image.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=575ec2fe-3139-48cd-b45d-332a63177e45">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT COUNT(expMidptMJD) AS n_visits,</span>
+<span class="s2">        MIN(expMidptMJD) AS min_mjd, MAX(expMidptMJD) AS max_mjd</span>
+<span class="s2">        FROM dp1.Visit</span>
+<span class="s2">        WHERE CONTAINS(POINT('ICRS', ra, dec),</span>
+<span class="s2">        CIRCLE('ICRS', 53.13, -28.10, 3)) = 1</span>
+<span class="s2">        AND band = 'r'"""</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>SELECT COUNT(expMidptMJD) AS n_visits,
+        MIN(expMidptMJD) AS min_mjd, MAX(expMidptMJD) AS max_mjd
+        FROM dp1.Visit
+        WHERE CONTAINS(POINT('ICRS', ra, dec),
+        CIRCLE('ICRS', 53.13, -28.10, 3)) = 1
+        AND band = 'r'
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a961b106-5bdd-4682-ad41-605a4fbaae00">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Submit the query job.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91fa5203-580c-4b3e-8d31-b9d63fba041c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Job phase is COMPLETED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1c320122-c4f3-4152-9a6e-a432c22de08b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Return the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=75af9b85-0640-4138-8df9-110e5cc52799">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a131fa6-0022-437c-bb2e-a6d59a4f88bb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Display the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1a2d3fa5-47c5-4953-9b48-710fa0d28122">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><i>Table length=1</i>
+<table class="table-striped table-bordered table-condensed" id="table134654141884384">
+<thead><tr><th>n_visits</th><th>min_mjd</th><th>max_mjd</th></tr></thead>
+<thead><tr><th>int64</th><th>float64</th><th>float64</th></tr></thead>
+<tr><td>237</td><td>60623.25932903928</td><td>60655.24643617473</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=371a5bbc-f9f8-4953-8c71-427cf20c4505">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Clean up.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=14249ff8-64fe-4485-8306-91827a759a9f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e41872b8-1aad-4b20-bae4-93d34a8e00bb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="5.1.-Use-GROUP-BY">5.1. Use GROUP BY<a class="anchor-link" href="#5.1.-Use-GROUP-BY">¶</a></h3><p>To apply the ADQL / SQL aggregate functions to groups of rows instead of the full table, use <code>GROUP BY</code>.</p>
+<p>Define a query to return the <code>visit</code>, the MJD, the <code>band</code>, and the number of detected sources per visit by joining the <code>Visit</code> and <code>Source</code> tables, and using <code>GROUP BY</code> on the <code>visit</code>. Constrain the query to only $r$-band images obtained within a $\sim30$ minute window between MJD 60623.250 and 60623.270.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=27ede881-188a-49f7-ae63-ff8226374658">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT v.visit, v.expMidptMJD, v.band,</span>
+<span class="s2">        COUNT(s.sourceId) AS n_sources</span>
+<span class="s2">        FROM dp1.Visit AS v</span>
+<span class="s2">        JOIN dp1.Source AS s ON s.visit = v.visit</span>
+<span class="s2">        WHERE CONTAINS(POINT('ICRS', v.ra, v.dec),</span>
+<span class="s2">        CIRCLE('ICRS', 53.13, -28.10, 3)) = 1</span>
+<span class="s2">        AND v.band = 'r'</span>
+<span class="s2">        AND v.expMidptMJD &gt; 60623.250</span>
+<span class="s2">        AND v.expMidptMJD &lt; 60623.270</span>
+<span class="s2">        GROUP BY v.visit"""</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>SELECT v.visit, v.expMidptMJD, v.band,
+        COUNT(s.sourceId) AS n_sources
+        FROM dp1.Visit AS v
+        JOIN dp1.Source AS s ON s.visit = v.visit
+        WHERE CONTAINS(POINT('ICRS', v.ra, v.dec),
+        CIRCLE('ICRS', 53.13, -28.10, 3)) = 1
+        AND v.band = 'r'
+        AND v.expMidptMJD &gt; 60623.250
+        AND v.expMidptMJD &lt; 60623.270
+        GROUP BY v.visit
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=55d61a80-f09f-48e7-8b5c-66ff2f435efb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Submit the job.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f04c32cd-5b6d-4795-b03c-3127bb66069d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
+    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Job phase is COMPLETED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eaeef6ea-e74a-4016-bb1a-9f4d492163a6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Retrieve the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=617fd565-9cd5-4b0c-937b-60318ea097d0">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=782e94f6-9814-4dbb-9cfb-142be9a9df87">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Display the results.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7dd6f89a-a558-4938-96b1-b616e71c1933">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><i>Table length=8</i>
+<table class="table-striped table-bordered table-condensed" id="table134654149940896">
+<thead><tr><th>visit</th><th>expMidptMJD</th><th>band</th><th>n_sources</th></tr></thead>
+<thead><tr><th></th><th>d</th><th></th><th></th></tr></thead>
+<thead><tr><th>int64</th><th>float64</th><th>object</th><th>int64</th></tr></thead>
+<tr><td>2024110800246</td><td>60623.25932903928</td><td>r</td><td>27708</td></tr>
+<tr><td>2024110800247</td><td>60623.25989537033</td><td>r</td><td>27446</td></tr>
+<tr><td>2024110800250</td><td>60623.262127748836</td><td>r</td><td>27834</td></tr>
+<tr><td>2024110800251</td><td>60623.2626942534</td><td>r</td><td>27474</td></tr>
+<tr><td>2024110800254</td><td>60623.2648977835</td><td>r</td><td>28241</td></tr>
+<tr><td>2024110800255</td><td>60623.265465752265</td><td>r</td><td>27057</td></tr>
+<tr><td>2024110800258</td><td>60623.2676935763</td><td>r</td><td>26917</td></tr>
+<tr><td>2024110800259</td><td>60623.268262389945</td><td>r</td><td>27709</td></tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f4e1f9b5-70e5-4bf3-b7cf-d5313f3953d5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Clean up.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d60e4c3e-134b-4711-94d8-43fbbd0fd403">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d80e85a5-f8f8-48c1-bd68-359943829a28">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>

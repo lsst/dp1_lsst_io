@@ -7524,8 +7524,9 @@ a.anchor-link {
 Data Release: <a href="https://dp1.lsst.io">Data Preview 1</a> <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2025-09-17 <br/>
-Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
+Last verified to run: 2025-11-10 <br/>
+Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/>
+DOI: <a href="https://doi.org/10.11578/rubin/dc.20250909.20">10.11578/rubin/dc.20250909.20</a> <br/></p>
 </div>
 </div>
 </div>
@@ -7559,6 +7560,14 @@ Rubin staff will respond to all questions posted there.</p>
 <h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">¶</a></h2><p>TAP (Table Access Protocol) provides standardized access to catalog data for discovery, search, and retrieval.
 Full <a href="http://www.ivoa.net/documents/TAP">documentation for TAP</a> is provided by the
 International Virtual Observatory Alliance (IVOA).</p>
+<p>This tutorial demonstrates how to get started with the TAP service, explore the TAP schema, and make efficient queries.</p>
+<p>Best practices for TAP queries:</p>
+<ol>
+<li>Use asynchronous queries.</li>
+<li>Specify the columns to be returned.</li>
+<li>Use spatial constraints on sky coordinates.</li>
+<li>Apply column constraints (as appropriate).</li>
+</ol>
 <p><strong>Related tutorials</strong>: The other 100-level tutorials in this series demonstrate advanced ADQL statements. The 200-level tutorials describe the contents of the catalog data and have example queries for each.</p>
 </div>
 </div>
@@ -7671,13 +7680,10 @@ and the RSP TAP service.</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="3.-Explore-the-TAP-schema">3. Explore the TAP schema<a class="anchor-link" href="#3.-Explore-the-TAP-schema">¶</a></h2><p>Browsable TAP schema are accessible at <a href="https://sdm-schemas.lsst.io/">sdm-schemas.lsst.io</a> and in the Portal Aspect's user interface.</p>
-<p>In a Notebook, it is possible to interact programmatically with the TAP schema.</p>
-<h3 id="3.1.-Use-caution-with-synchronous-queries">3.1. Use caution with synchronous queries<a class="anchor-link" href="#3.1.-Use-caution-with-synchronous-queries">¶</a></h3><p><strong>Caution:</strong>
-Typically users should not make synchronous queries that retrieve all available columns (<code>SELECT *</code>). The only time this is acceptable and useful is when querying table schema.</p>
-<p>A "synchronous" query is when the search is executed and the results are retrieved at the same time, and no other cells can be run while the search is executing.</p>
-<p>Synchronous queries are best used sparingly, and only for retrieving table metadata.
-However <strong>asynchronous</strong> queries should be used whenever table data is being returned.</p>
-<p>Queries that use <code>SELECT *</code>, which will retrieve all columns, are only appropriate for schemas or tables with very few (&lt;20) columns. Queries that return data should specify which of the tens to <em>thousands</em> of columns are necessary to return.</p>
+<p>This section demonstrates how to interact programmatically with the TAP schema.</p>
+<h3 id="3.1.-Use-caution-with-synchronous-queries">3.1. Use caution with synchronous queries<a class="anchor-link" href="#3.1.-Use-caution-with-synchronous-queries">¶</a></h3><p>A "synchronous" query is when the search is executed and the results are retrieved at the same time, and no other cells can be run while the search is executing.</p>
+<p>Synchronous queries are best used sparingly, and only for retrieving table metadata, as in this section.</p>
+<p><strong>Asynchronous</strong> queries should be used when table data is being returned (Section 4.1).</p>
 </div>
 </div>
 </div>
@@ -7688,7 +7694,9 @@ However <strong>asynchronous</strong> queries should be used whenever table data
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.2.-List-all-schemas">3.2. List all schemas<a class="anchor-link" href="#3.2.-List-all-schemas">¶</a></h3><p>Pass a query for the TAP schemas to the TAP service, and store the results in <code>results</code>.</p>
+<h3 id="3.2.-Use-caution-with-SELECT-*">3.2. Use caution with SELECT *<a class="anchor-link" href="#3.2.-Use-caution-with-SELECT-*">¶</a></h3><p>Queries that use <code>SELECT *</code>, which will retrieve all columns, are only appropriate for schemas (this section) or tables with very few (&lt;20) columns.</p>
+<p>Queries that return data should specify which of the tens to <em>hundreds</em> of columns are necessary to return (Section 4.2).</p>
+<h3 id="3.3.-List-all-schemas">3.3. List all schemas<a class="anchor-link" href="#3.3.-List-all-schemas">¶</a></h3><p>Pass a query for the TAP schemas to the TAP service, and store the results in <code>results</code>.</p>
 </div>
 </div>
 </div>
@@ -7784,7 +7792,7 @@ dp02_dc2_catalogs        ...            2
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=4</i>
-<table class="table-striped table-bordered table-condensed" id="table132889475308944">
+<table class="table-striped table-bordered table-condensed" id="table136132321581856">
 <thead><tr><th>schema_name</th><th>utype</th><th>description</th><th>schema_index</th></tr></thead>
 <thead><tr><th>str64</th><th>str512</th><th>str512</th><th>int32</th></tr></thead>
 <tr><td>dp02_dc2_catalogs</td><td></td><td>Data Preview 0.2 contains the image and catalog products of the Rubin Science Pipelines v23 processing of the DESC Data Challenge 2 simulation, which covered 300 square degrees of the wide-fast-deep LSST survey region over 5 years.</td><td>2</td></tr>
@@ -7817,7 +7825,7 @@ dp02_dc2_catalogs        ...            2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.3.-List-all-tables">3.3. List all tables<a class="anchor-link" href="#3.3.-List-all-tables">¶</a></h3><p>Create a query that selects all table names from the TAP schema for DP1. Retrieve the results as an Astropy table and display it.</p>
+<h3 id="3.4.-List-all-tables">3.4. List all tables<a class="anchor-link" href="#3.4.-List-all-tables">¶</a></h3><p>Create a query that selects all table names from the TAP schema for DP1. Retrieve the results as an Astropy table and display it.</p>
 </div>
 </div>
 </div>
@@ -7847,7 +7855,7 @@ dp02_dc2_catalogs        ...            2
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=12</i>
-<table class="table-striped table-bordered table-condensed" id="table132889479599728">
+<table class="table-striped table-bordered table-condensed" id="table136132321584832">
 <thead><tr><th>schema_name</th><th>table_name</th><th>table_type</th><th>utype</th><th>description</th><th>table_index</th></tr></thead>
 <thead><tr><th>str512</th><th>str64</th><th>str8</th><th>str512</th><th>str512</th><th>int32</th></tr></thead>
 <tr><td>dp1</td><td>dp1.Object</td><td>table</td><td></td><td>Descriptions of static astronomical objects (or the static aspects of variable and slowly-moving objects) detected and measured on coadds.</td><td>10</td></tr>
@@ -7888,7 +7896,7 @@ dp02_dc2_catalogs        ...            2
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.4.-List-all-columns">3.4. List all columns<a class="anchor-link" href="#3.4.-List-all-columns">¶</a></h3><p>Create a query that selects all column names, data types, description, and units from the DP1 <code>Object</code> table. Retrieve the results as an Astropy table.</p>
+<h3 id="3.5.-List-all-columns">3.5. List all columns<a class="anchor-link" href="#3.5.-List-all-columns">¶</a></h3><p>Create a query that selects all column names, data types, description, and units from the DP1 <code>Object</code> table. Retrieve the results as an Astropy table.</p>
 </div>
 </div>
 </div>
@@ -8060,7 +8068,9 @@ coord_raErr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-Best-practices-for-TAP-queries">4. Best practices for TAP queries<a class="anchor-link" href="#4.-Best-practices-for-TAP-queries">¶</a></h2><p>The <code>Object</code> table used in this demonstration contains forced measurements in the multi-band <code>deep_coadd</code> images at the coordinates of all signal-to-noise ratio &gt;5 detections in a <code>deep_coadd</code> of any filter.
+<h2 id="4.-Best-practices-for-TAP-queries">4. Best practices for TAP queries<a class="anchor-link" href="#4.-Best-practices-for-TAP-queries">¶</a></h2><p>It is recommended to follow the guidance in this section when querying for and retrieving data because the TAP service is a limited resource that is shared by all users.</p>
+<p>This tutorial will demonstrate how to make efficient queries that return only the data needed for a given analysis.</p>
+<p>The <code>Object</code> table used in this demonstration contains forced measurements in the multi-band <code>deep_coadd</code> images at the coordinates of all signal-to-noise ratio &gt;5 detections in a <code>deep_coadd</code> of any filter.
 The 200-level tutorial for the <code>Object</code> catalog contains further detail.</p>
 </div>
 </div>
@@ -8072,24 +8082,46 @@ The 200-level tutorial for the <code>Object</code> catalog contains further deta
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.1.-Use-asynchronous-queries">4.1. Use asynchronous queries<a class="anchor-link" href="#4.1.-Use-asynchronous-queries">¶</a></h3><p>For all TAP searches for data (not schema), one should use <strong>asynchronous</strong> queries.</p>
-<p>Asynchronous means that the query is submitted as a job to the TAP service, and it can run in the background until it completes. The results can then be retrieved right away, or at a later time.</p>
-<p>The step-by-step process for asynchronous queries starts by defining the <code>job</code> by passing the <code>query</code> to the TAP service.</p>
+<h3 id="4.1.-Use-asynchronous-queries">4.1. Use asynchronous queries<a class="anchor-link" href="#4.1.-Use-asynchronous-queries">¶</a></h3><p>An "asynchronous" query means that the query is submitted as a job to the TAP service, and it runs in the background until it completes. The results can then be retrieved right away, or at a later time.</p>
+<p>The general process for asynchronous queries is as follows.</p>
+<ol>
+<li>Define the <code>job</code> by passing the <code>query</code> to the TAP service.</li>
+</ol>
 <pre><code>job = service.submit_job(query)
 </code></pre>
-<p>The next step is to run the job and, optionally, wait for it to return either a COMPLETED or ERROR result. While waiting is optional, tutorial notebooks always wait because the next steps of a tutorial depend on having the retrieved data.</p>
+<ol start="2">
+<li>Run the job and wait for it to return either a COMPLETED or ERROR result. While waiting is optional, tutorial notebooks always wait because the next steps of a tutorial depend on having the retrieved data.</li>
+</ol>
 <pre><code>job.run()
 job.wait(phases=['COMPLETED', 'ERROR'])
 print('Job phase is', job.phase)
 </code></pre>
-<p>Display the error message if the query was not successful.</p>
+<ol start="3">
+<li>Display the error message if the query was not successful.</li>
+</ol>
 <pre><code>if job.phase == 'ERROR':
     job.raise_if_error()
 </code></pre>
-<p>If the query was completed, retrieve (fetch) the results.</p>
+<ol start="4">
+<li>If the query was completed, retrieve (fetch) the results.</li>
+</ol>
 <pre><code>assert job.phase == 'COMPLETED'
 results = job.fetch_result()
 </code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fa9aad66-0bd1-466e-9697-473dad04eaaf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="4.2.-Use-SELECT-to-specify-columns">4.2. Use SELECT to specify columns<a class="anchor-link" href="#4.2.-Use-SELECT-to-specify-columns">¶</a></h3><p>Queries for data should <strong>not use</strong> <code>SELECT *</code>, as this will retrieve all columns, and some tables have <em>hundreds</em> of columns.</p>
+<p>It is recommended to first decide which columns are necessary to retrieve.
+Use the <a href="https://sdm-schemas.lsst.io/">TAP schema</a> to understand the available columns.
+Then, specify only the desired columns in the TAP query's <code>SELECT</code> statement.</p>
 </div>
 </div>
 </div>
@@ -8100,10 +8132,21 @@ results = job.fetch_result()
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.2.-Use-spatial-constraints">4.2. Use spatial constraints<a class="anchor-link" href="#4.2.-Use-spatial-constraints">¶</a></h3><p>All TAP searches on tables that include sky coordinates should include spatial constraints.</p>
+<h3 id="4.3.-Use-spatial-constraints">4.3. Use spatial constraints<a class="anchor-link" href="#4.3.-Use-spatial-constraints">¶</a></h3><p>All TAP searches on tables that include sky coordinates should include spatial constraints.</p>
 <p>It is recommended to always start with spatial constraints for a small region and then expand the search area.</p>
 <p>Spatial constraints should be implemented with either an ADQL cone or polygon search.</p>
-<h4 id="4.2.1.-Table-sharding-by-coordinate">4.2.1. Table sharding by coordinate<a class="anchor-link" href="#4.2.1.-Table-sharding-by-coordinate">¶</a></h4><p>On disk, the catalog tables are sharded by coordinate (RA, Dec). This can be thought of as the database being divided up by spatial region (shard) and distributed across multiple servers. Queries that include spatial constraints which minimize the number of shards that have to be searched through will be much faster than queries that have no (or very wide) spatial constraints.</p>
+<p>For small, "quicklook" queries it is recommended to use a small spatial region rather than just limiting the results returned with <code>TOP</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3234ded2-c0d2-4808-8523-65440bbff94d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4.3.1.-Table-sharding-by-coordinate">4.3.1. Table sharding by coordinate<a class="anchor-link" href="#4.3.1.-Table-sharding-by-coordinate">¶</a></h4><p>On disk, the catalog tables are sharded by coordinate (RA, Dec). This can be thought of as the database being divided up by spatial region (shard) and distributed across multiple servers. Queries that include spatial constraints which minimize the number of shards that have to be searched through will be much faster than queries that have no (or very wide) spatial constraints.</p>
 </div>
 </div>
 </div>
@@ -8114,7 +8157,7 @@ results = job.fetch_result()
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="4.2.2.-Cone-searches">4.2.2. Cone searches<a class="anchor-link" href="#4.2.2.-Cone-searches">¶</a></h4><p>A cone search means a catalog query that returns all objects within a given radius of a sky coordinate.
+<h4 id="4.3.2.-Cone-searches">4.3.2. Cone searches<a class="anchor-link" href="#4.3.2.-Cone-searches">¶</a></h4><p>A cone search means a catalog query that returns all objects within a given radius of a sky coordinate.
 Since a given angular diameter corresponds to a larger physical diameter at larger distances,
 the volume queried is a cone shape in 3D, not a cylinder.</p>
 <p>In ADQL, a cone search is executed with <code>WHERE CONTAINS(POINT(), CIRCLE()) = 1</code>.</p>
@@ -8277,7 +8320,7 @@ the volume queried is a cone shape in 3D, not a cylinder.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="4.2.3.-Polygon-searches">4.2.3. Polygon searches<a class="anchor-link" href="#4.2.3.-Polygon-searches">¶</a></h4><p>For a polygon search, replace <code>CIRCLE</code> with <code>POLYGON(ra1, dec1, ra2, dec2, ra3, dec3, ...)</code> where each <code>ra1, dec</code> is a vertex of the polygon.</p>
+<h4 id="4.3.3.-Polygon-searches">4.3.3. Polygon searches<a class="anchor-link" href="#4.3.3.-Polygon-searches">¶</a></h4><p>For a polygon search, replace <code>CIRCLE</code> with <code>POLYGON(ra1, dec1, ra2, dec2, ra3, dec3, ...)</code> where each <code>ra1, dec</code> is a vertex of the polygon.</p>
 </div>
 </div>
 </div>
@@ -8288,7 +8331,8 @@ the volume queried is a cone shape in 3D, not a cylinder.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.3.-Use-column-constraints">4.3. Use column constraints<a class="anchor-link" href="#4.3.-Use-column-constraints">¶</a></h3><p>A simple column constraint is to put an upper or lower limit on the values in a column, such as a limiting magnitude.</p>
+<h3 id="4.4.-Use-column-constraints">4.4. Use column constraints<a class="anchor-link" href="#4.4.-Use-column-constraints">¶</a></h3><p>It is recommended to understand the columns being retrieved (Section 4.2) and, if appropriate, to also place constraints on those columns' values. The point is to only return table rows that are relevant to the analysis (e.g., only objects of interest).</p>
+<p>For example, a simple column constraint is to put an upper or lower limit on the values in a column, such as a limiting magnitude.</p>
 <p>Use the same cone search as above, but extend the radius to $0.3$ degrees and only return <code>Objects</code> with a $g$-band <code>cModel</code> magnitude brighter than 20 mag.</p>
 </div>
 </div>
@@ -8411,386 +8455,6 @@ the volume queried is a cone shape in 3D, not a cylinder.</p>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 <span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56bd367d-9ff8-4826-984f-81562cbfc09a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.4.-Sort-results-with-ORDER-BY">4.4. Sort results with ORDER BY<a class="anchor-link" href="#4.4.-Sort-results-with-ORDER-BY">¶</a></h3><p>Add an <code>ORDER BY</code> statement to the TAP query above to sort the results in ascending (ASC) or descending (DESC) order.</p>
-<blockquote>
-<p><strong>Warning:</strong> Adding <code>ORDER BY</code> statements to TAP queries requires more processing than unordered queries, and consumes more of the shared resource that is the TAP service. Consider whether sorting is necessary, or sorting after the query is returned (as in Section 4.4.1).</p>
-</blockquote>
-<p>Order the results by ascending <code>coord_ra</code> values.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dfa9e8fe-3e4b-4821-95c8-1dfec282664b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT coord_ra, coord_dec, g_cModelMag</span>
-<span class="s2">        FROM dp1.Object</span>
-<span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),</span>
-<span class="s2">        CIRCLE('ICRS', 53, -28, 0.3)) = 1</span>
-<span class="s2">        AND g_cModelMag &lt; 20</span>
-<span class="s2">        ORDER BY coord_ra ASC"""</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SELECT coord_ra, coord_dec, g_cModelMag
-        FROM dp1.Object
-        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53, -28, 0.3)) = 1
-        AND g_cModelMag &lt; 20
-        ORDER BY coord_ra ASC
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7c01c299-08ed-409a-9f72-84f8d542f529">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
-    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Job phase is COMPLETED
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=661f83ba-c5b4-487f-886d-358baed0227a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Return the results as an <code>astropy</code> formatted table with <code>to_table()</code>, in order to use the sorting function of <code>astropy</code> tables.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=dad64abd-f701-4ecd-a24b-f81ecfc03a8a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4478a975-37b5-4439-a70b-62f40b7ca9e7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="4.4.1.-Sort-an-astropy-table">4.4.1. Sort an astropy table<a class="anchor-link" href="#4.4.1.-Sort-an-astropy-table">¶</a></h4><p>Sort the <code>astropy</code> table by <code>g_cModelMag</code> instead, in descending order (i.e., use <code>reverse=True</code>; the default is <code>False</code>, for ascending order). Sort by multiple columns with, e.g., <code>results.sort(['column_1', 'column_2'])</code>.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b68f368b-fab5-455a-8555-e574b9f2812c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">results</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">'g_cModelMag'</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=519bcdbe-681e-4075-bc5c-2ef63ac1c61d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Option to display the results, now sorted by $g$-band magnitude.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=74af010a-da4e-41ad-b725-34f49636ba69">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># results</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3358d02-e0f1-4d15-a75e-46638f45cd04">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Clean up.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e5a6961c-9244-4350-ab63-98c7df9b34e2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=eb343134-f23f-4dc1-976a-0ca45f27a50b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.5.-Limit-rows-with-TOP">4.5. Limit rows with TOP<a class="anchor-link" href="#4.5.-Limit-rows-with-TOP">¶</a></h3><p><strong>Very small spatial regions (not use of TOP) is the recommended way to restrict the number of rows returned.</strong></p>
-<blockquote>
-<p><strong>Warning:</strong> The TAP service first applies <code>WHERE</code> constraints, then <code>ORDER BY</code>, and then <code>TOP</code>.
-If the query is not well constrained, i.e., if thousands or more objects meet the <code>WHERE</code>
-constraints, then they all must first be sorted before the top number are returned.
-<strong>This would be a waste of time and compute resources.</strong></p>
-</blockquote>
-<p>However, it can be useful to only retrieve a subset of the rows which meet the query constraints. To do this, add <code>TOP N</code> after <code>SELECT</code> to return only the top <code>N</code> number of rows.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cb319758-546a-49f7-b7f7-fa7045f2b2b6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">"""SELECT TOP 10 coord_ra, coord_dec</span>
-<span class="s2">        FROM dp1.Object</span>
-<span class="s2">        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),</span>
-<span class="s2">        CIRCLE('ICRS', 53, -28, 0.01)) = 1</span>
-<span class="s2">        ORDER BY coord_ra ASC"""</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>SELECT TOP 10 coord_ra, coord_dec
-        FROM dp1.Object
-        WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec),
-        CIRCLE('ICRS', 53, -28, 0.01)) = 1
-        ORDER BY coord_ra ASC
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b1bbb142-a805-41ff-9982-06369b585600">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Execute the query.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=feada71a-b2c8-4bb4-9a03-3dd2cf041a5c">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">phases</span><span class="o">=</span><span class="p">[</span><span class="s1">'COMPLETED'</span><span class="p">,</span> <span class="s1">'ERROR'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Job phase is'</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'ERROR'</span><span class="p">:</span>
-    <span class="n">job</span><span class="o">.</span><span class="n">raise_if_error</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Job phase is COMPLETED
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e83878e-3ecf-4812-a366-73e3ee063a45">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Confirm that only 10 rows are returned.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=639289be-59ca-4442-b8c5-e1c2a63f785a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">job</span><span class="o">.</span><span class="n">phase</span> <span class="o">==</span> <span class="s1">'COMPLETED'</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span>
-
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>10
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4dac97b2-d2fd-44c5-bb17-570851d6a9a6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">job</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-<span class="k">del</span> <span class="n">query</span><span class="p">,</span> <span class="n">results</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f912d6a9-b510-4ca7-bf73-a612d030d787">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>For users with TAP experience, including <code>maxrec</code> in the job definition will also work, but use of <code>TOP</code> is recommended.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f1f5c1cb-0fc4-4a41-a736-6233b3a1087b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.6.-Use-caution-with-TOP-and-ORDER-BY">4.6. Use caution with TOP and ORDER BY<a class="anchor-link" href="#4.6.-Use-caution-with-TOP-and-ORDER-BY">¶</a></h3><p>Combined use of TOP and ORDER BY in ADQL queries can be dangerous: it may take an unexpectedly long
-time because the database is trying to first sort, and <em>then</em> extract the top N elements.
-It is best to only combine TOP and ORDER BY if the query's WHERE statements significantly cut
-down the number of objects that would need to be sorted.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d36a918b-f3e0-4de1-8693-7e40a4d0cb60">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span>
 </pre></div>
 </div>
 </div>
