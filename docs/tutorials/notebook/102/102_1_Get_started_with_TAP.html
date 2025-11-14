@@ -7792,7 +7792,7 @@ dp02_dc2_catalogs        ...            2
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=4</i>
-<table class="table-striped table-bordered table-condensed" id="table135708863086224">
+<table class="table-striped table-bordered table-condensed" id="table136132321581856">
 <thead><tr><th>schema_name</th><th>utype</th><th>description</th><th>schema_index</th></tr></thead>
 <thead><tr><th>str64</th><th>str512</th><th>str512</th><th>int32</th></tr></thead>
 <tr><td>dp02_dc2_catalogs</td><td></td><td>Data Preview 0.2 contains the image and catalog products of the Rubin Science Pipelines v23 processing of the DESC Data Challenge 2 simulation, which covered 300 square degrees of the wide-fast-deep LSST survey region over 5 years.</td><td>2</td></tr>
@@ -7855,7 +7855,7 @@ dp02_dc2_catalogs        ...            2
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=12</i>
-<table class="table-striped table-bordered table-condensed" id="table135708863080176">
+<table class="table-striped table-bordered table-condensed" id="table136132321584832">
 <thead><tr><th>schema_name</th><th>table_name</th><th>table_type</th><th>utype</th><th>description</th><th>table_index</th></tr></thead>
 <thead><tr><th>str512</th><th>str64</th><th>str8</th><th>str512</th><th>str512</th><th>int32</th></tr></thead>
 <tr><td>dp1</td><td>dp1.Object</td><td>table</td><td></td><td>Descriptions of static astronomical objects (or the static aspects of variable and slowly-moving objects) detected and measured on coadds.</td><td>10</td></tr>
@@ -8068,8 +8068,8 @@ coord_raErr
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="4.-Best-practices-for-TAP-queries">4. Best practices for TAP queries<a class="anchor-link" href="#4.-Best-practices-for-TAP-queries">¶</a></h2><p>It is recommended to follow the guidance in this section when querying for and retrieving data from the TAP service, as opposed to when simply exploring the schema as in Section 3.</p>
-<p>The TAP service is a resource shared by all users, and this tutorial will demonstrate how to make efficient queries that return only the data needed for a given analysis.</p>
+<h2 id="4.-Best-practices-for-TAP-queries">4. Best practices for TAP queries<a class="anchor-link" href="#4.-Best-practices-for-TAP-queries">¶</a></h2><p>It is recommended to follow the guidance in this section when querying for and retrieving data because the TAP service is a limited resource that is shared by all users.</p>
+<p>This tutorial will demonstrate how to make efficient queries that return only the data needed for a given analysis.</p>
 <p>The <code>Object</code> table used in this demonstration contains forced measurements in the multi-band <code>deep_coadd</code> images at the coordinates of all signal-to-noise ratio &gt;5 detections in a <code>deep_coadd</code> of any filter.
 The 200-level tutorial for the <code>Object</code> catalog contains further detail.</p>
 </div>
