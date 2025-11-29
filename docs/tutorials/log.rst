@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-11-28
+==========
+
+Released new notebook tutorial 103.5 on image display with matplotlib.
+
 2025-11-04
 ==========
 
