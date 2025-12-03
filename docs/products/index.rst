@@ -67,6 +67,7 @@ Extra details and helpful hints.
     butler_terminology
     known_issues_and_subtleties
     name_changes
+    time_measurements
 
 
 User-generated data products
