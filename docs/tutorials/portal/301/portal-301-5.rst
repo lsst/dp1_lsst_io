@@ -25,13 +25,18 @@ Rubin staff will respond to all questions posted there.
 1. Introduction
 ===============
 
-This tutorial explores the LSSTComCam observations for the Extended Chandra Deep Field South or "ECDFS" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
+This tutorial explores the LSSTComCam observations for the Euclid Deep Field South or "EDFS" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
-The `Extended Chandra Deep Field South (ECDFS) <https://en.wikipedia.org/wiki/Chandra_Deep_Field_South#Extended_Chandra_Deep_Field_South>`_ is a popular extragalatic deep field that has attracted a wealth of panchromatic imaging and spectroscopy. The Rubin map of ECDFS is centered at (RA, Dec) = (53.16 -28.10).
+The **Euclid Deep Field South** covers approximately **28.1 square degrees** in the southern constellation of **Horologium**, named after the pendulum clock.
 
-The region covered spans a diameter of about 1 degree.
+The **LSSTComCam EDFS** is one of the target fields selected to overlap with a key extragalactic deep field identified by the **European Space Agency’s Euclid mission** for intensive imaging and spectroscopic follow-up. This overlap enables valuable cross-survey comparisons and synergy.
 
-**Central coordinates:** (RA, Dec) = 53.16, -28.10 degrees
+The LSSTComCam EDFS field is centered at Right Ascension and Declination coordinates **(RA, Dec) = (59.10°, –48.73°)**. Although its band coverage is more limited than that of the Extended Chandra Deep Field South (ECDFS), it remains highly relevant for extragalactic science and future multi-survey studies.
+
+**References**
+[Rubin-Euclid Derived Data Products: Initial Recommendations](https://ui.adsabs.harvard.edu/abs/2022zndo...5836022G/abstract)
+
+**Central coordinates:** (RA, Dec) = 59.10, -48.73 degrees
 
 **1.1. Log in to the Portal Aspect of the RSP.**
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
