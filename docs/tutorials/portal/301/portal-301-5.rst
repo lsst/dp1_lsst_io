@@ -42,7 +42,7 @@ The LSSTComCam EDFS field is centered at Right Ascension and Declination coordin
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
 **1.2. Browse the gri color HiPS map.**
-`Go to the gri color HiPS map for the ECDFS field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=53.16&dec=-28.10&sr=50m>`_.
+`Go to the gri color HiPS map for the ECDFS field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=59.10&dec=-48.73&sr=50m>`_.
 
 
 2. Examine a deep coadd image
@@ -68,22 +68,22 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', 53.16, -28.10), s_region)=1
+        AND CONTAINS(POINT('ICRS', 59.10, -48.73), s_region)=1
 
 
 **2.4. View the results.**
 The query will return 6 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
 The results interface will appear similar to Figure 1.
 
-.. figure:: images/portal-301-4-1.png
-    :name: portal-301-4-1
+.. figure:: images/portal-301-5-1.png
+    :name: portal-301-5-1
     :alt: The image results
 
     Figure 1: The results of the ``deep_coadd`` image search.
 
 
 **2.5. Explore the images.**
-Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the ECDFS field.
+Use the image display interface to zoom, pan, rescale, and generally explore the deep images of the EDFS field.
 
 
 3. Create a patch coverage map
