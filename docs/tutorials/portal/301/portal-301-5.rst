@@ -31,10 +31,10 @@ The **Euclid Deep Field South** covers approximately **28.1 square degrees** in 
 
 The **LSSTComCam EDFS** is one of the target fields selected to overlap with a key extragalactic deep field identified by the **European Space Agency’s Euclid mission** for intensive imaging and spectroscopic follow-up. This overlap enables valuable cross-survey comparisons and synergy.
 
-The LSSTComCam EDFS field is centered at Right Ascension and Declination coordinates **(RA, Dec) = (59.10°, –48.73°)**. Although its band coverage is more limited than that of the Extended Chandra Deep Field South (ECDFS), it remains highly relevant for extragalactic science and future multi-survey studies.
+The LSSTComCam EDFS field is centered at Right Ascension and Declination coordinates **(RA, Dec) = (59.10°, -48.73°)**. Although its band coverage is more limited than that of the Extended Chandra Deep Field South (ECDFS), it remains highly relevant for extragalactic science and future multi-survey studies.
 
 **References**
-[Rubin-Euclid Derived Data Products: Initial Recommendations](https://ui.adsabs.harvard.edu/abs/2022zndo...5836022G/abstract)
+`Rubin-Euclid Derived Data Products: Initial Recommendations <https://ui.adsabs.harvard.edu/abs/2022zndo...5836022G/abstract>`_
 
 **Central coordinates:** (RA, Dec) = 59.10, -48.73 degrees
 
