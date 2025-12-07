@@ -42,7 +42,7 @@ The LSSTComCam EDFS field is centered at Right Ascension and Declination coordin
 In a web browser, navigate to `data.lsst.cloud <https://data.lsst.cloud/>`_ and select the "Portal" panel.
 
 **1.2. Browse the gri color HiPS map.**
-`Go to the gri color HiPS map for the ECDFS field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=59.10&dec=-48.73&sr=50m>`_.
+`Go to the gri color HiPS map for the EDFS field <https://data.lsst.cloud/portal/app/?api=hips&uri=https://data.lsst.cloud/api/hips/v2/dp1/deep_coadd/color_gri&ra=59.10&dec=-48.73&sr=50m>`_.
 
 
 2. Examine a deep coadd image
@@ -56,7 +56,7 @@ Click on the "Edit ADQL" button at upper right.
 
 **2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
-This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the ECDFS field.
+This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the EDFS field.
 
 .. code-block:: SQL
 
@@ -187,25 +187,25 @@ Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
 Delete the last query statement.
 
 **4.9. Execute a query on the CcdVisit table.**
-This query retrieves a table of all CcdVists (visit and detector combinations) that were observed of the ECDFS field.
+This query retrieves a table of all CcdVists (visit and detector combinations) that were observed of the EDFS field.
 
 .. code-block:: SQL
 
   SELECT visitId, ra, dec, band, seeing, magLim
   FROM dp1.CcdVisit
-  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53.16, -28.1, 1.0))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 59.10, -48.73, 1.0))=1
   ORDER BY visitId
 
 
 **4.10. View the results.**
-The query returns 7692 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
+The query returns 2448 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
 
 **4.11. Create histograms of seeing and magnitude limit.**
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
 It will look like Figure 4.
 
-.. figure:: images/portal-301-4-4.png
-    :name: portal-301-4-4
+.. figure:: images/portal-301-5-4.png
+    :name: portal-301-5-4
     :alt: A plot showing two histograms. On the left is the distribution of seeing in arcsec, and on the right a histogram of magLim in mag.
 
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
@@ -220,7 +220,7 @@ The ``Object`` table, which contains detections and measurements from the ``deep
 Delete the last ADQL statement.
 
 **5.2. Execute a query on the Object table.**
-This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the ECDFS field. Since ECDFS data is very deep, there are many detections: update the row limit next to the search button from 50,000 to 500,000 to include all objects in the field.
+This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* bands, as well as the ``refExtendedness`` parameter, for objects with SNR>5 measurements in *g* and *r* bands in the EDFS field. Since EDFS data is very deep, there are many detections: update the row limit next to the search button from 50,000 to 500,000 to include all objects in the field.
 
 .. code-block:: SQL
 
@@ -232,7 +232,7 @@ This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* band
          i_psfFlux, i_psfFLuxErr,
          refExtendedness
   FROM dp1.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53, -28, 1))=1
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 59, -49, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
         AND r_psfFlux/r_psfFluxErr > 5
         AND i_psfFlux/i_psfFluxErr > 5
@@ -253,11 +253,11 @@ Open a new plot window by clicking the "Add a chart" button.
 Make a color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to -1, 2.5.
 Place the two figures side-by-side, as in Figure 5.
 
-.. figure:: images/portal-301-4-5.png
-    :name: portal-301-4-5
+.. figure:: images/portal-301-5-5.png
+    :name: portal-301-5-5
     :alt: A plot showing color-color and color-magnitude diagrams as heatmaps.
 
-    Figure 5: A color-color and color-magnitude diagram of stars in the ECDFS field.
+    Figure 5: A color-color and color-magnitude diagram of stars in the EDFS field.
 
 
 6. Exercises for the learner
