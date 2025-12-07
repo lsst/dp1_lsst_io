@@ -95,7 +95,7 @@ Delete the previous query from the box.
 
 **3.2. Execute a new image query.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
-This query will retrieve all images of subtype ``deep_coadd`` that were obtained with the *r*-band filter and overlap the ~1 degree ECDFS field (not just its central coordinates).
+This query will retrieve all images of subtype ``deep_coadd`` that were obtained with the *r*-band filter and overlap the ~1 degree EDFS field (not just its central coordinates).
 
 .. code-block:: SQL
 
@@ -107,16 +107,16 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 53, -28, 1))=1
+        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 59, -49, 1))=1
         AND ( 622e-9 BETWEEN em_min AND em_max )
 
 
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
-The boundaries of the 82 patches are overlaid onto a HiPS coverage map, as in Figure 2.
+The boundaries of the 73 patches are overlaid onto a HiPS coverage map, as in Figure 2.
 
-.. figure:: images/portal-301-4-2.png
-    :name: portal-301-4-2
+.. figure:: images/portal-301-5-2.png
+    :name: portal-301-5-2
     :alt: The image results
 
     Figure 2: The search results showing the coadd footprints ("patches") on the HiPS coverage map.
@@ -134,21 +134,21 @@ In the coverage map, click any patch and its corresponding image will be highlig
 Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
 
 **4.2. Execute a query on the Visit table.**
-This query will retrieve the coordinates, band, and MJD for all visits from the ``Visit`` table with central coordinates within the ECDFS field.
+This query will retrieve the coordinates, band, and MJD for all visits from the ``Visit`` table with central coordinates within the EDFS field.
 
 .. code-block:: SQL
 
   SELECT ra, dec, band, expMidptMJD
   FROM dp1.Visit
-  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 53, -28, 1))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 59, -49, 1))=1
   ORDER BY expMidptMJD ASC
 
 
 **4.3. View the query results.**
-In the results interface, the central coordinates of the 855 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
+In the results interface, the central coordinates of the 272 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
 
 **4.4. Obtain the filter distribution.**
-Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 43 *u*, 230 *g*, 236 *r*, 162 *i*, 153 *z*, and 30 *y*-band visits.
+Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 20 *u*, 61 *g*, 87 *r*, 42 *i*, 42 *z*, and 20 *y*-band visits.
 
 
 Visit dates cumulative histogram
@@ -170,9 +170,9 @@ Set the "Trace Style" to "connected points", and click "OK".
 **4.7. View the plot.**
 The resulting plot should look like Figure 3, showing the growing number of exposures with MJD.
 
-.. figure:: images/portal-301-4-3.png
-    :name: portal-301-4-3
-    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 30 days.
+.. figure:: images/portal-301-5-3.png
+    :name: portal-301-5-3
+    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 20 days.
 
     Figure 3: The figure showing the cumulative number of exposures obtained with time.
 
