@@ -128,6 +128,7 @@ Tutorials with a learning objective of understanding one of the data products.
     202/notebook-202-3.rst
     202/notebook-202-4.rst
     202/notebook-202-5.rst
+    202/notebook-202-6.rst
 
 
 203. Maps
