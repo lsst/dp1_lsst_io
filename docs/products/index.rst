@@ -67,7 +67,6 @@ Extra details and helpful hints.
     butler_terminology
     known_issues_and_subtleties
     name_changes
-    mask_planes
 
 
 User-generated data products
