@@ -1,4 +1,4 @@
-.. _products_mask_planes:
+.. _images-mask-planes:
 
 ###########
 Mask planes
