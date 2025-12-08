@@ -4,10 +4,16 @@
 Log of major tutorial updates
 #############################
 
+2025-12-11
+==========
+
+Released new notebook tutorial 202.6 on pixel mask planes.
+
 2025-12-09
 ==========
 
 Released new Portal tutorial 301.5 on Euclid Deep Field South.
+
 
 2025-11-28
 ==========
