@@ -15,9 +15,11 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 **LSST data products:** ``deep_coadd`` images, ``Visit``, ``CcdVisit``, and ``Object`` tables
 
 **Credit:** Originally developed by the Rubin Community Science team.
+
 Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
 
 **Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum.
+
 Rubin staff will respond to all questions posted there.
 
 ----
@@ -27,11 +29,7 @@ Rubin staff will respond to all questions posted there.
 
 This tutorial explores the LSSTComCam observations for the Euclid Deep Field South or "EDFS" field, including magnitude limits, visit distribution with time, data quality, and the distributions of stars and galaxies in color-magnitude and color-color diagrams.
 
-The **Euclid Deep Field South** covers approximately **28.1 square degrees** in the southern constellation of **Horologium**, named after the pendulum clock.
-
 The **LSSTComCam EDFS** is one of the target fields selected to overlap with a key extragalactic deep field identified by the **European Space Agency’s Euclid mission** for intensive imaging and spectroscopic follow-up. This overlap enables valuable cross-survey comparisons and synergy.
-
-The LSSTComCam EDFS field is centered at Right Ascension and Declination coordinates **(RA, Dec) = (59.10°, -48.73°)**. Although its band coverage is more limited than that of the Extended Chandra Deep Field South (ECDFS), it remains highly relevant for extragalactic science and future multi-survey studies.
 
 **References**
 `Rubin-Euclid Derived Data Products: Initial Recommendations <https://ui.adsabs.harvard.edu/abs/2022zndo...5836022G/abstract>`_
@@ -56,6 +54,7 @@ Click on the "Edit ADQL" button at upper right.
 
 **2.3. Execute the ADQL query for deep coadd images.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
+
 This query will retrieve all images of subtype ``deep_coadd`` that contain the central coordinates of the EDFS field.
 
 .. code-block:: SQL
@@ -73,6 +72,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
 
 **2.4. View the results.**
 The query will return 6 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
+
 The results interface will appear similar to Figure 1.
 
 .. figure:: images/portal-301-5-1.png
@@ -91,10 +91,12 @@ Use the image display interface to zoom, pan, rescale, and generally explore the
 
 **3.1. Return to the query interface.**
 Navigate back to the "DP1 Images" tab, and switch to the "Edit ADQL" interface.
+
 Delete the previous query from the box.
 
 **3.2. Execute a new image query.**
 Copy-paste the following ADQL query into the query box and click "Search" at lower left.
+
 This query will retrieve all images of subtype ``deep_coadd`` that were obtained with the *r*-band filter and overlap the ~1 degree EDFS field (not just its central coordinates).
 
 .. code-block:: SQL
@@ -113,6 +115,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
 
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
+
 The boundaries of the 73 patches are overlaid onto a HiPS coverage map, as in Figure 2.
 
 .. figure:: images/portal-301-5-2.png
@@ -155,16 +158,21 @@ Visit dates cumulative histogram
 --------------------------------
 
 The ADQL query for visits included an "ORDER BY" statement to return a table that is sorted by ``expMidptMJD`` in ascending order.
+
 Use this to plot a cumulative histogram of exposure acquisition dates.
 
 **4.5. Add a new column.**
 Add a new column to the table by clicking the column+ icon.
+
 Click "Use preset function", and select "Number rows in current sort order".
+
 Give the new column a name (e.g., "cumulative_expnum") and click "Add Column".
 
 **4.6. Create the histogram.**
 In the "Active Chart" panel, click the icon of the plus sign in a circle to open the "Add New Chart" popup.
+
 Choose "Plot Type: Scatter", then plot column "expMidptMJD" on the x-axis, and "cumulative_expnum" on the y-axis.
+
 Set the "Trace Style" to "connected points", and click "OK".
 
 **4.7. View the plot.**
@@ -184,6 +192,7 @@ Derived quantities that characterize the quality of images and their properties 
 
 **4.8. Return to the catalog query interface.**
 Click on the "DP1 Catalogs" tab and then on the "Edit ADQL" button.
+
 Delete the last query statement.
 
 **4.9. Execute a query on the CcdVisit table.**
@@ -202,6 +211,7 @@ The query returns 2448 results, with the central locations of each detector for 
 
 **4.11. Create histograms of seeing and magnitude limit.**
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
+
 It will look like Figure 4.
 
 .. figure:: images/portal-301-5-4.png
@@ -239,18 +249,24 @@ This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* band
 
 
 **5.3. Select point-like objects.**
-Filter the table for only point-like objects ("stars") by filtering the ``refExtendedness`` column to be equal 0.
+Filter the table for only point-like objects ("stars") by filtering the ``refExtendedness`` column to be equal to 0.
 
 **5.4. Create a color-magnitude diagram.**
 Add a chart and select the "Heatmap" plot type.
+
 Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis.
+
 Select 300 bins in X and 200 bins in Y.
+
 Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to 16, 28.
+
 Select "reverse" under "Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
 **5.5. Create a color-color diagram.**
 Open a new plot window by clicking the "Add a chart" button.
+
 Make a color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag``-``r_psfMag``. Set the X Min, X Max values to -1, 2, and the Y Min, Y Max values to -1, 2.5.
+
 Place the two figures side-by-side, as in Figure 5.
 
 .. figure:: images/portal-301-5-5.png
@@ -264,4 +280,5 @@ Place the two figures side-by-side, as in Figure 5.
 ============================
 
 Try plotting the color-color and color-magnitude diagrams for galaxies (``refExtendedness`` = 1) instead.
+
 Recall that cModel magnitudes are better suited for extended sources.
