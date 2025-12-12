@@ -137,6 +137,18 @@ Return the visit identifiers, RA, Dec, band, the midpoint time of the exposure i
     AND (band = 'r' OR band = 'g')
   ORDER BY expMidptMJD ASC
 
+.. code-block:: sql
+
+  SELECT objectId, ra, dec,
+         gMag, rMag
+  FROM dp1.Object
+  WHERE CONTAINS(
+            POINT('ICRS', ra, dec),
+            CIRCLE('ICRS', 53.13, -28.10, 0.5)
+        ) = 1
+    AND gMag IS NOT NULL
+    AND rMag IS NOT NULL
+
 
 .. figure:: images/api-101-1-7.png
     :name: api-101-1-7
