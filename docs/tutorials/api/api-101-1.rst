@@ -100,7 +100,11 @@ Note that the column names, data types, units, and descriptions for the columns 
     column names, data types, units, and descriptions for the columns in the dp1.CcdVisit
     table are shown in the right-hand Metadata panel.
 
-**8. At the bottom-left of the ADQL Text panel of the Table Access Protocol (TAP) Query window, click on the Examples button and choose the Full Table option under the Basic menu option.**
+**8. In the ADQL Text panel of the Table Access Protocol (TAP) Query window, click the Examples button at the bottom left and select Full Table from the Basic menu.**
+A sample ADQL query will appear in the text box, returning all column names from the selected table. Because some of the tables contain a large number of columns, this query type is generally not recommended.
+
+You can modify the query directly in the ADQL text box or use a predefined query (such as the one shown in Step 9).
+Explore the other options in the Examples menu to try additional basic ADQL queries available through the TAP service.
 
 .. figure:: images/api-101-1-6.png
     :name: api-101-1-6
@@ -113,7 +117,14 @@ Note that the column names, data types, units, and descriptions for the columns 
     the Full Table menu item from the Basic menu item chosen after clicking on
     the Examples button at the bottom of the ADQL Text panel.
 
-**9. Note that the chosen ADQL example query now appears in the ADQL Text box of the Table Access Protocol (TAP) Query window.  Click on the Run Query button at the bottom of this window.**
+**9. Avoid full-table queries. Construct a specific query to access information from the CCDVisit table.**
+
+Although the DP1 CcdVisit table is relatively small, it is good practice to always include spatial constraints and only retrieve necessary columns.
+
+Search for g- and r-band CCD visits within 3 degrees of the center of the Extended Chandra Deep Field South (ECDFS) field, RA, Dec =  53.13−28.10.
+Return the visit identifiers, RA, Dec, band, the midpoint time of the exposure in MJD, and the seeing, sky background, and magnitude limit for the corresponding visit_image.
+
+INSERT CODE BLOCK HERE
 
 .. figure:: images/api-101-1-7.png
     :name: api-101-1-7
