@@ -27,6 +27,9 @@ Deep and template coadds images
 
    deep_coadd_mask_planes
 
+Summary of key planes
+=====================
+
 The following table provides a summary.
 
 .. list-table::
