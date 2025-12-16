@@ -101,11 +101,15 @@ Note that the column names, data types, units, and descriptions for the columns 
     column names, data types, units, and descriptions for the columns in the dp1.Object
     table are shown in the right-hand Metadata panel.
 
-**8. In the ADQL Text panel of the Table Access Protocol (TAP) Query window, click the Examples button at the bottom left and select Full Table from the Basic menu.**
-A sample ADQL query will appear in the text box, returning all column names from the selected table. Because some of the tables contain a large number of columns, this query type is generally not recommended.
+**8. Explore sample ADQL queries.**
 
-You can modify the query directly in the ADQL text box or use a predefined query (such as the one shown in Step 9).
-Explore the other options in the Examples menu to try additional basic ADQL queries available through the TAP service.
+Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, select the Examples button located at the lower left and choose Full Table from the Basic menu.
+A sample ADQL query will then be displayed in the text box. Figure 6 demonstrates a query that retrieves the top 1000 entries from the dp1.Object table.
+
+This type of query is generally not recommended for routine use, as some tables contain a large volume of data.
+The queries provided in the Examples menu are intended as starting templates and should be adapted within the ADQL text box to meet specific requirements,
+or replaced with a predefined query (such as the one presented in Step 9).
+
 
 .. figure:: images/api-101-1-6.png
     :name: api-101-1-6
