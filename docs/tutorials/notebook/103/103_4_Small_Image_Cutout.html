@@ -7854,8 +7854,8 @@ Define the band and the start and end times.</p>
 <pre><code>SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
        lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
        obs_collection,o_ucd,facility_name,instrument_name,obs_title,s_region,access_url,
-       access_format 
-FROM ivoa.ObsCore 
+       access_format
+FROM ivoa.ObsCore
 WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
       AND obs_collection = 'LSST.DP1' AND calib_level = 2
       AND dataproduct_type = 'image' AND instrument_name = 'LSSTComCam'
@@ -8498,8 +8498,8 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Filename: &lt;class '_io.BytesIO'&gt;
 No.    Name      Ver    Type      Cards   Dimensions   Format
-  0  PRIMARY       1 PrimaryHDU     733   ()      
-  1  IMAGE         1 ImageHDU       121   (360, 360)   float32   
+  0  PRIMARY       1 PrimaryHDU     733   ()
+  1  IMAGE         1 ImageHDU       121   (360, 360)   float32
 </pre>
 </div>
 </div>
