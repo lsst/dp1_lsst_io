@@ -85,7 +85,8 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
     available for query can be be seen in the Metadata panel.
 
 **7. In the left Metadata panel of the Table Access Protocol (TAP) Query window, click on the dp1.Object table.**
-Note that the column names, data types, units, and descriptions for the columns of the dp1.Object table are shown in the right-hand panel. Click the tabs to change the view.
+In the right Metadata panel, click the "columns" tabs to change the view.
+Note that the column names, data types, units, and descriptions for the columns of the dp1.Object table are shown.
 
 .. figure:: images/api-101-1-5.png
     :name: api-101-1-5
