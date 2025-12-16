@@ -84,20 +84,20 @@ An indicator that the service is now accessible is that a list of DP1 tables ava
     Figure 4:  The Table Access Protocol (TAP) Query window; a list of DP1 tables
     available for query can be be seen in the Metadata panel.
 
-**7. In the left Metadata panel of the Table Access Protocol (TAP) Query window, click on the dp1.CcdVisit table.**
-Note that the column names, data types, units, and descriptions for the columns of the dp1.CcdVisit table are shown in the right-hand panel. Click the tabs to change the view.
+**7. In the left Metadata panel of the Table Access Protocol (TAP) Query window, click on the dp1.Object table.**
+Note that the column names, data types, units, and descriptions for the columns of the dp1.Object table are shown in the right-hand panel. Click the tabs to change the view.
 
 .. figure:: images/api-101-1-5.png
     :name: api-101-1-5
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 4, but the dp1.CcdVisit table is highlighted
+	  It appears the same as in Figure 4, but the dp1.Object table is highlighted
 	  in the left-hand Metadata panel and the column names, data types, units, and
-	  descriptions for the columns in the dp1.CcdVisit table are shown in the
+	  descriptions for the columns in the dp1.Object table are shown in the
 	  right-hand Metadata panel.
 
     Figure 5:  The Table Access Protocol (TAP) Query window as in Figure 4, but here
-    the dp1.CcdVisit table is highlighted in the left-hand Metadata panel and the
-    column names, data types, units, and descriptions for the columns in the dp1.CcdVisit
+    the dp1.Object table is highlighted in the left-hand Metadata panel and the
+    column names, data types, units, and descriptions for the columns in the dp1.Object
     table are shown in the right-hand Metadata panel.
 
 **8. In the ADQL Text panel of the Table Access Protocol (TAP) Query window, click the Examples button at the bottom left and select Full Table from the Basic menu.**
