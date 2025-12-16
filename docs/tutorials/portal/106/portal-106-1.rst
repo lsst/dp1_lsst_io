@@ -38,7 +38,7 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
     Figure 1. The interface to upload a table.
 
 **4. Create a table to upload.**
-Copy the example table below and save it as a CSV file called ``dp1_106_1_user_table.csv``.
+Copy the example table below and save it as a CSV file called ``dp1_106_1_user_table.csv``. Avoid using the "+" prefix for positive infinity (i.e., "+inf") in any of your columns. These values are not recognized as valid float values, and the entire column will be interpreted as a character type.
 
 .. code-block::
 
