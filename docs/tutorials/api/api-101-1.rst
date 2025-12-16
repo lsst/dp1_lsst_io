@@ -122,37 +122,24 @@ or replaced with a predefined query (such as the one presented in Step 9).
     the Full Table menu item from the Basic menu item chosen after clicking on
     the Examples button at the bottom of the ADQL Text panel.
 
-**9. Avoid full-table queries. Construct a specific query to access information from the CCDVisit table.**
+**9. Avoid full-table queries. Construct a specific query to access information from the dp1.Object table.**
 
-Although the DP1 CcdVisit table is relatively small, it is good practice to always include spatial constraints and only retrieve necessary columns.
+Because the dp1.Object table is large, it is good practice to always include spatial constraints and only retrieve necessary columns.
 
 Search for g- and r-band CCD visits within 3 degrees of the center of the Extended Chandra Deep Field South (ECDFS) field, RA, Dec =  53.13, 28.10.
 Return the visit identifiers, RA, Dec, band, the midpoint time of the exposure in MJD, and the seeing, sky background, and magnitude limit for the corresponding visit_image.
 
 .. code-block:: sql
 
-  SELECT ccdVisitId, visitId, detector,
-         ra, dec, band, expMidptMJD,
-         seeing, skyBg, magLim
-  FROM dp1.CcdVisit
-  WHERE CONTAINS(
-            POINT('ICRS', ra, dec),
-            CIRCLE('ICRS', 53.13, -28.10, 3)
-        ) = 1
-    AND (band = 'r' OR band = 'g')
-  ORDER BY expMidptMJD ASC
-
-.. code-block:: sql
-
-  SELECT objectId, ra, dec,
-         gMag, rMag
+  SELECT objectId, coord_ra, coord_dec,
+         g_psfMag, r_psfMag
   FROM dp1.Object
   WHERE CONTAINS(
-            POINT('ICRS', ra, dec),
+            POINT('ICRS', coord_ra, coord_dec),
             CIRCLE('ICRS', 53.13, -28.10, 0.5)
         ) = 1
-    AND gMag IS NOT NULL
-    AND rMag IS NOT NULL
+    AND g_psfMag IS NOT NULL
+    AND r_psfMag IS NOT NULL
 
 
 .. figure:: images/api-101-1-7.png
