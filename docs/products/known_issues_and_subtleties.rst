@@ -30,11 +30,11 @@ The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :
    This problem affects all external tools that read FITS files, as well as the Portal aspect of the Rubin Science Platform.
    It does not affect any catalog data products (in which all transforms will have been performed with the true WCS), coadds (which have a FITS standard WCS natively), or code using our `lsst.afw.geom.SkyWcs` class to transform points.
 
-   The problem is that while we did in fact generate a gnomonic + polynomial approximation that was as good as we originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope oversight, and hence outside the bounding box of all but the central detector.
+   The problem is that while the approximation generate a gnomonic + polynomial WCS that was as good as was originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope oversight, and hence outside the bounding box of all but the central detector.
    This is not inherently problematic, but the polynomial component of the transform was only fit to the detector area, and hence that polynomial often extrapolated badly when attempting to map CRVAL to CRPIX (or vice versa).
-   This caused the ``CRPIX`` and ``CRVAL`` header cards we wrote to not correspond to the transform we fit and validated.
+   This caused the ``CRPIX`` and ``CRVAL`` header cards written to the FITS headers to not correspond to the transform that was fit and validated.
 
-   This is a sufficiently serious problem that we are preparing an update to all ``visit_image`` and ``difference_image`` files in DP1.
+   This is a sufficiently serious problem that the Data Management team is preparing an update to all ``visit_image`` and ``difference_image`` files in DP1.
 
 To make use of the full WCS of a visit image or difference image, it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
 
