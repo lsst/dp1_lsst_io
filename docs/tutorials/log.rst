@@ -7,7 +7,7 @@ Log of major tutorial updates
 2025-12-16
 ==========
 
-Updated notebook tutorials 103.4, 303.2, and 306.2.
+Updated notebook tutorials 103.4, 303.2, and 306.2 to work with the new cutout service.
 
 2025-12-11
 ==========
