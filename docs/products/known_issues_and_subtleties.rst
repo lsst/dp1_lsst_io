@@ -22,9 +22,19 @@ WCS FITS approximations and misleading interfaces
 =================================================
 
 Rubin's single-visit World Coordinate System (WCS) objects are not, in general, exactly representable via the FITS WCS standard.
-The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object finding, not for precision astrometry.
+The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are ``TAN-SIP`` approximations that were expected to be good enough for visualization and object finding, not for precision astrometry.
 
-The approximation to the full WCS has been determined to be better than 0.05 pixels at all scales.
+.. warning::
+
+   **The FITS WCS approximations are often much worse than we have previously reported (as much as a few arcseconds in some cases).**
+   This problem affects all external tools that read FITS files, as well as the Portal aspect of the Rubin Science Platform.
+   It does not affect any catalog data products (in which all transforms will have been performed with the true WCS), coadds (which have a FITS standard WCS natively), or code using our `lsst.afw.geom.SkyWcs` class to transform points.
+
+   The problem is that while the approximation generate a gnomonic + polynomial WCS that was as good as was originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope oversight, and hence outside the bounding box of all but the central detector.
+   This is not inherently problematic, but the polynomial component of the transform was only fit to the detector area, and hence that polynomial often extrapolated badly when attempting to map CRVAL to CRPIX (or vice versa).
+   This caused the ``CRPIX`` and ``CRVAL`` header cards written to the FITS headers to not correspond to the transform that was fit and validated.
+
+   This is a sufficiently serious problem that the Data Management team is preparing an update to all ``visit_image`` and ``difference_image`` files in DP1.
 
 To make use of the full WCS of a visit image or difference image, it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
 
