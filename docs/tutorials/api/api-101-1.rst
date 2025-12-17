@@ -127,6 +127,7 @@ or replaced with a predefined query (such as the one presented in Step 9).
 Because the dp1.Object table is large, it is good practice to always include spatial constraints and only retrieve necessary columns.
 
 Search for objects within 0.5 degrees of the center of the Extended Chandra Deep Field South (ECDFS) field, RA, Dec =  53.13, 28.10 and retrieve g-band and r-band PSF magnitudes.
+Copy the code block below and paste it into the ADQL text box, then click Run Query.
 
 .. code-block:: sql
 
@@ -144,11 +145,10 @@ Search for objects within 0.5 degrees of the center of the Extended Chandra Deep
 .. figure:: images/api-101-1-7.png
     :name: api-101-1-7
     :alt:  A screenshot of of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 5, but the chosen ADQL example
-	  query now appears in the ADQL Text box.
+	  It appears the same as in Figure 5 with the code block in the ADQL Text box.
 
     Figure 7:  The Table Access Protocol (TAP) Query window as in Figure 5, with
-    the chosen ADQL example query now appears in the ADQL Text box.
+    the code block in the ADQL Text box.
 
 **10. Note that a new table, TAP_1_dp1.CcdVisit, has appeared in the Table List panel of the main TOPCAT window.**
 
