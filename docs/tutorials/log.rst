@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2025-12-30
+==========
+
+Released new notebook tutorial series 207 on the timeseries features in the ``DiaObject`` table.
+
 2025-12-16
 ==========
 
