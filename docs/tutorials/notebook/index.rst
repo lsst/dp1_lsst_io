@@ -177,6 +177,17 @@ Tutorials with a learning objective of understanding one of the data products.
     206/notebook-206-2.rst
 
 
+207. Timeseries features
+------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    207/notebook-207-1.rst
+    207/notebook-207-2.rst
+
+
 .. _notebook-300:
 
 300. Science demonstrations
