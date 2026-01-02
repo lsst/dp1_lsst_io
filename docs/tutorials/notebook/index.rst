@@ -42,6 +42,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     102/notebook-102-4.rst
     102/notebook-102-5.rst
     102/notebook-102-6.rst
+    102/notebook-102-7.rst
 
 
 103. Image access and display
