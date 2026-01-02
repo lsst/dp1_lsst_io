@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-01-02
+==========
+
+Released new notebook tutorial 102.7 on masked arrays.
+
 2025-12-30
 ==========
 
