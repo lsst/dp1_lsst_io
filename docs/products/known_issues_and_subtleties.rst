@@ -36,7 +36,7 @@ In the first version of the DP1 images, the FITS WCS approximations were often m
 This problem affected all external tools that read FITS files, as well as the Portal aspect of the Rubin Science Platform.
 It did not affect any catalog data products (for which all transforms were performed with the true WCS), coadded images (which have a FITS standard WCS natively), or code using our `lsst.afw.geom.SkyWcs` class to transform points.
 
-The problem was that while the approximation generated a gnomonic + polynomial WCS that was as good as was originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope oversight, and hence outside the bounding box of all but the central detector.
+The problem was that while the approximation generated a gnomonic + polynomial WCS that was as good as was originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope boresight, and hence outside the bounding box of all but the central detector.
 This was not inherently problematic, but the polynomial component of the transform was only fit to the detector area, and hence that polynomial often extrapolated badly when attempting to map CRVAL to CRPIX (or vice versa).
 This caused the ``CRPIX`` and ``CRVAL`` header cards written to the FITS headers to not correspond to the transform that was fit and validated.
 
