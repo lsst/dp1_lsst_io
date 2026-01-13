@@ -174,9 +174,9 @@ As this upgrade will involve breaking changes, we may not be able to include it 
 g-band red leak / excess long-wavelength transmission
 =====================================================
 
-During the final weeks of the LSSTComCam commissioning campaign, initial tests of the Collimated Beam Projector (CBP) revealed excess transmission in the LSSTComCam ``g`` filter at wavelengths beyond the nominal bandpass, extending past 1100 nm.
-The g filter specifications were not defined beyond 1100 nm, and as a result the filter does not strongly block longer-wavelength light.
-CBP measurements indicate measurable transmission at these wavelengths, with throughput reaching the tens of percent level near ~1190 nm (see Fig. 11 and Fig 12 of SITCOMTN-152).
+During the final weeks of the LSSTComCam commissioning campaign, initial tests of the Collimated Beam Projector (CBP) revealed excess transmission in the LSST ``g`` filter at wavelengths beyond the nominal bandpass, extending past 1100 nm.
+The ``g`` filter specifications were not defined beyond 1100 nm, and as a result the filter does not strongly block longer-wavelength light.
+CBP measurements indicate measurable transmission at these wavelengths, with throughput reaching the tens of percent level near ~1190 nm (see Fig. 11 and Fig 12 of `SITCOMTN-152 <https://sitcomtn-152.lsst.io/>`__).
 
 Although the filter transmits some long-wavelength light, the CCD quantum efficiency (QE) drops sharply beyond 1100 nm, so the total system throughput at these wavelengths remains small.
-The effect is more pronounced in LSSTComCam than it will be in LSSTCam because LSSTComCam CCDs were operated at temperatures about 20C warmer (SITCOMTN-149).
+The effect is more pronounced in LSSTComCam than it will be in LSSTCam because LSSTComCam CCDs were operated at temperatures about 20C-40C warmer (`SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`__).
