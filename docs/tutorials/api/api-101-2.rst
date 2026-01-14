@@ -29,7 +29,7 @@ This workflow is suitable for users who prefer scripted or automated access to R
 Related tutorials describe catalog access via graphical tools such as TOPCAT or interactive analysis in the Notebook Aspect of the Rubin Science Platform.
 
 1. Create an RSP access token
-----------------------------
+-----------------------------
 
 Create an RSP access token following the instructions on the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_
 
@@ -47,7 +47,7 @@ Copy the token to a secure location. The token will not be shown again.
    Do not share them and do not store them in version-controlled files.
 
 2. Install and import the Python packages
-------------------------------
+-----------------------------------------
 
 Install the required Python packages, ``PyVO`` and ``requests``, in the chosen environment (for example, in a local computer or in a Google Colab notebook).
 See `the PyVO homepage <https://pyvo.readthedocs.io/en/latest/>`_ and `the "requests" documentation <https://requests.readthedocs.io/en/latest/>`_ for download and install instructions.
@@ -60,7 +60,7 @@ Import the required packages.
    import requests
 
 3. Store the access token
-------------------------
+-------------------------
 
 Store the access token in a Python variable or environment variable.
 
@@ -69,6 +69,7 @@ Read the token from an environment variable (recommended):
 .. code-block:: python
 
    import os
+
    token = os.environ["RSP_TOKEN"]
 
 Alternatively, assign the token directly:
@@ -90,7 +91,7 @@ Create a persistent HTTP session and attach the access token using the ``Authori
 This session ensures that all TAP requests are authenticated using the provided token.
 
 5. Connect to the Rubin TAP service
-----------------------------------
+-----------------------------------
 
 Define the `Rubin ObsTAP service endpoint <https://data.lsst.cloud/api-aspect>`_ and initialize a PyVO TAP service object.
 
@@ -102,21 +103,25 @@ Define the `Rubin ObsTAP service endpoint <https://data.lsst.cloud/api-aspect>`_
 The TAP service object represents the remote catalog service and manages job submission and result retrieval.
 
 6. Define the ADQL query
------------------------
+------------------------
 
-Define an ADQL query that retrieves the ``visit`` table, as in `DP1 Notebook tutorial 201.10 <https://dp1.lsst.io/tutorials/notebook/201/notebook-201-10.html>`_ 
+Define an ADQL query that retrieves the ``visit`` table, as in `DP1 Notebook tutorial 201.10 <https://dp1.lsst.io/tutorials/notebook/201/notebook-201-10.html>`_
 
-.. code-block:: SQL
+.. code-block:: python
 
-   query = "SELECT visit, ra, dec, band, expMidptMJD " \
-           "FROM dp1.Visit " \
-           "WHERE CONTAINS(POINT('ICRS', ra, dec), " \
-           "CIRCLE('ICRS', 53.13, -28.10, 3)) = 1 " \
-           "AND (band = 'r' OR band = 'g') " \ 
-           "ORDER BY expMidptMJD ASC "
+   query = """
+   SELECT visit, ra, dec, band, expMidptMJD
+   FROM dp1.Visit
+   WHERE CONTAINS(
+         POINT('ICRS', ra, dec),
+         CIRCLE('ICRS', 53.13, -28.10, 3)
+       ) = 1
+     AND band IN ('g', 'r')
+   ORDER BY expMidptMJD ASC
+   """
 
 7. Submit and run the TAP job
-----------------------------
+-----------------------------
 
 Submit the query as an asynchronous TAP job and start execution.
 
@@ -161,4 +166,4 @@ Optionally display the first few rows.
    :name: api-101-2-1
    :alt: Screenshot of a notebook output displaying the first five rows of the query result table.
 
-   Figure 1: Preview of the DP1 `visit` table query results returned by the TAP service.
+   Figure 1: Preview of the DP1 ``visit`` table query results returned by the TAP service.
