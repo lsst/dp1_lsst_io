@@ -38,7 +38,6 @@ Click on the sidebar menu (three vertical lines in the upper left hand corner) a
 
 **3. Select the target.**
 Enter coordinates ``53.13,-28.10``, which are the center of the Extended Chanrda Deep Field South (ECDFS) field, and field of view of ``1`` degree (Figure 2).
-Click "Search".
 
 .. figure:: images/portal-101-2-2.png
     :name: portal-101-2-2
@@ -46,16 +45,15 @@ Click "Search".
 
     Figure 2: Enter coordinates and field of view.
 
-
 **4. Select the gri HiPS color map.**
 In the "Select Data Set" section, click on the drop down menu for the "Title" column and click in the box next to ``LSSTComCam: DP1 gri`` (Figure 3).
+Click "Apply" and then click "Search".
 
 .. figure:: images/portal-101-2-3.png
     :name: portal-101-2-3
     :alt: Select LSSTComCam, dp1 gri filters
 
     Figure 3: Select the gri color HiPS map.
-
 
 **5. Results.**
 Results of the search are shown in Figure 4.
