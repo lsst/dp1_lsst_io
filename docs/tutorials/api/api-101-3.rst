@@ -31,12 +31,12 @@ See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOP
 .. figure:: images/api-101-1-5.png
     :name: api-101-1-5
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 4, but the dp1.Object table is highlighted
+	  Dp1.Object table is highlighted
 	  in the left-hand Metadata panel and the column names, data types, units, and
 	  descriptions for the columns in the dp1.Object table are shown in the
 	  right-hand Metadata panel.
 
-    Figure 1:  xxx
+    Figure 1:  Select dp1.Object table from available tables.
 
 **3. Explore sample ADQL queries.**
 
