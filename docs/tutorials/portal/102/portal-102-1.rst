@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform (RSP) at data.lsst.cloud.
 
 **Data Release:** Data Preview 1
 
-**Last verified to run:** 2025-07-23
+**Last verified to run:** 2026-01-15
 
 **Learning objective:** Navigate the main components of the Portal's user interface (UI).
 
@@ -91,3 +91,4 @@ This is an example of a very simple query.
 **8. Click search.**
 At lower left, click the blue button named "Search".
 This query will return 24 rows of the ``Object`` table.
+If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure X, click the tab that says “Coverage”.
