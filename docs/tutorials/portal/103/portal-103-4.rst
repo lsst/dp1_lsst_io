@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-11-04
+**Last verified to run:** 2026-01-14
 
 **Learning objective:** Join multiple tables to retrieve combined results with ADQL.
 
@@ -70,13 +70,13 @@ Enter the ADQL query to the ADQL Query box, and click on "search".
         AND cv.expMidptMJD > 60631 AND cv.expMidptMJD < 60637
         AND src.band = 'i'
 
-If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure 1, click the tab that says “Coverage” to display the HIPS map.
+.. If a lightcurve appears in the left panel instead of a coverage HIPS map as shown in Figure 1, click the tab that says “Coverage” to display the HIPS map.
 
 **4. Review the two-table join results.**
 Notice that this join is not one-to-one: there are multiple individual sources returned that are matched to the same visit.
 In other words, there are multiple rows from the ``Source`` table joined with a given row from the ``CcdVisit`` table.
 
-.. If multiple tabs are present above the upper left panel in the default Results tab layout, click the "Coverage" tab to display the coverage chart.
+If multiple tabs are present above the upper left panel in the default Results tab layout, click the "Coverage" tab to display the coverage chart.
 
 .. figure:: images/portal-103-4-1.png
     :name: portal-103-4-1
