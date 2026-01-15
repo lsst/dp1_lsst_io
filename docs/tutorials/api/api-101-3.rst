@@ -1,14 +1,14 @@
-.. _api-101-2:
+.. _api-101-3:
 
 ##########################################
-101.2. How to plot a Histogram with TOPCAT
+101.3. How to plot a Histogram with TOPCAT
 ##########################################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-06
+**Last verified to run:** 2025-01-15
 
 **Learning objective:** This tutorial provides a basic guide to plotting data within `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
 and to explore DP1.
