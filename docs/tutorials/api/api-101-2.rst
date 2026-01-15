@@ -1,14 +1,14 @@
 .. _api-101-2:
 
 ###################################
-101.1. How to get started with PyVO
+101.2. How to get started with PyVO
 ###################################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-01-13
+**Last verified to run:** 2026-01-15
 
 **Learning objective:** Query Rubin DP1 catalogs using the Table Access Protocol (TAP) with PyVO from a Python environment.
 
