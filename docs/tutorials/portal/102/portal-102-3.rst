@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-07-23
+**Last verified to run:** 2026-01-14
 
 **Learning objective:** Use the ObsTAP service to retrieve DP1 images.
 
@@ -26,6 +26,8 @@ In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the
 
 **2. Select the DP1 Images tab.**
 On the Portal landing page, click on the tab labeled "DP1 Images".
+Check boxes by "Observation Type and Source", "Location", "Timing", and "Spectral Coverage".
+Click the down-arrows in those fields to expand the content of the boxes.
 
 **3. Mouse-over for pop-up notes.**
 In the "DP1 Images" tab (Figure 1) use the mouse to hover-over the components of the UI or click on the question marks and see pop-up explanations of the functionality.
@@ -46,19 +48,19 @@ In the Portal UI (Figure 1) review the 4 main components labeled A through D, wh
 * D: The ``ivoa.ObsCore`` table holds all image metadata. It is recommended to use all pre-selected columns.
 
 **5. Set the observation type and source.**
-Check the box next to "Observation Type and Source".
-Select calibration level 2 (for PVIs: processed visit images),
+In the "Observation Type and Source" area,
+select calibration level 2 (for PVIs: processed visit images),
 set the instrument name to LSSTComCam, the collection to LSST.DP1,
 and the data product subtype to be "lsst.visit_image".
 
 **6. Set the location.**
-Check the box next to "Location".
-For "Query Type" select "Observation boundary contains point" and
+In the "Location" area,
+for "Query Type" select "Observation boundary contains point" and
 for coordinates, use the approximate center of the ECDFS field, RA, Dec = 53.0, -28.0 degrees.
 
 **7. Set the timing.**
-Check the box next to "Timing".
-For "Time of Observation" select "Overlapping specified range".
+In the "Timing" area,
+for "Time of Observation" select "Overlapping specified range".
 Select "MJD values" and enter 60625 for the "Start Time" and 60630 for the "End Time".
 
 **8. Execute the search.**
