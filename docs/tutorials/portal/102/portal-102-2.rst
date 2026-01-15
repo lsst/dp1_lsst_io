@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-06-28
+**Last verified to run:** 20256-01-14
 
 **Learning objective:** Use the Simple Image Access (SIA) service to query for and retrieve images.
 
