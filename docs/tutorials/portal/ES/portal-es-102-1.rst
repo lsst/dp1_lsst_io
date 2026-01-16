@@ -31,7 +31,7 @@ En la página de inicio del Portal, hacer clic en la pestaña denominada "DP1 Ca
 **3. Colocar el cursor sobre los elementos para ver notas emergentes.**
 En la pestaña "DP1 Catalogs" (Catálogos DP1) (Figura 1), colocar el cursor por encima de los componentes de la interfaz o hacer clic en los signos de interrogación para ver explicaciones emergentes sobre la funcionalidad.
 
-.. figure:: images/portal-102-1-1.png
+.. figure:: ../102/images/portal-102-1-1.png
     :name: portal-es-102-1-1
     :alt: La interfaz gráfica del Portal, que ofrece menús desplegables para seleccionar catálogos y tablas, campos de entrada para restricciones temporales y espaciales, y una vista interactiva del esquema de la tabla seleccionada.
 
@@ -50,7 +50,7 @@ En la interfaz del Portal (Figura 1), revisar los 8 componentes principales etiq
 * H: Botón para ejecutar la consulta; para aplicar las restricciones de búsqueda y obtener los datos en la pestaña de resultados.
 
 
-.. figure:: images/portal-102-1-2.png
+.. figure:: ../102/images/portal-102-1-2.png
     :name: portal-es-102-1-2
     :alt: La interfaz del esquema, que muestra cómo seleccionar las columnas que se incluirán en los resultados y cómo establecer restricciones en los valores de las columnas.
 
@@ -82,7 +82,7 @@ En la tabla, seleccionar ``coord_ra``, ``coord_dec``, ``g_psfFlux``, ``r_psfFlux
 Añadir restricciones para que sólo se incluyan objetos con flujos superiores a 360 nJy.
 Este es un ejemplo de una consulta muy sencilla.
 
-.. figure:: images/portal-102-1-3.png
+.. figure:: ../102/images/portal-102-1-3.png
     :name: portal-es-102-1-3
     :alt: La interfaz del esquema, que muestra cómo seleccionar las columnas que se incluirán en los resultados y cómo establecer restricciones en los valores de las columnas.
 

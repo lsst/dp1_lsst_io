@@ -25,7 +25,7 @@ El equipo de Rubin responderá a todas las preguntas publicadas allí.
 **1. Acceder al RSP.**
 En un navegador web, acceder al RSP utilizando la URL `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-.. figure:: images/portal-101-1-1.png
+.. figure:: ../101/images/portal-101-1-1.png
     :name: portal-es-101-1-1
     :alt: La página de inicio principal de la Plataforma Científica de Rubin que muestra el inicio de sesión en la parte superior derecha y tres paneles, uno para cada faceta: el Portal, los Notebooks y la API.
 
@@ -37,7 +37,7 @@ En la página de inicio de la RSP (Figura 1), si aparece "Log in" (Iniciar sesi�
 **3. Ingresar al Portal.**
 En la página de inicio de la RSP (Figura 1), hacer clic en el panel de Portal para ingresar a la Faceta Portal.
 
-.. figure:: images/portal-101-1-2.png
+.. figure:: ../101/images/portal-101-1-2.png
     :name: portal-es-101-1-2
     :alt: La página de inicio principal de la Faceta Portal que muestra pestañas en la parte superior e instrucciones en el medio.
 
@@ -55,7 +55,7 @@ Cerrar la ventana haciendo clic en el botón OK o en la X situada en la esquina 
 **6. Abrir el menú lateral.**
 En la página de inicio del Portal, hacer clic en el ícono del menú (tres líneas horizontales en la parte superior izquierda; A en la Figura 2) para abrir el menú lateral.
 
-.. figure:: images/portal-101-1-3.png
+.. figure:: ../101/images/portal-101-1-3.png
     :name: portal-es-101-1-3
     :alt: El menú lateral de la Faceta Portal que muestra opciones adicionales a las pestañas.
     :width: 300

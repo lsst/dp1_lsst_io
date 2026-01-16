@@ -57,7 +57,7 @@ Explorar las tablas disponibles en el servicio TAP en la barra lateral izquierda
 Desplazarse hacia abajo para ver ejemplos de consultas ADQL.
 La interfaz debería tener el aspecto de la Figura 1.
 
-.. figure:: images/portal-103-2-1.png
+.. figure:: ../103/images/portal-103-2-1.png
     :name: portal-es-103-2-1
     :alt: La interfaz ADQL.
 
@@ -80,7 +80,7 @@ La siguiente consulta ADQL selecciona las coordenadas RA y Dec, y las magnitudes
 Hacer clic en el botón "Search" (Buscar) situado en la parte inferior izquierda.
 La consulta se ejecutará y los 536 objetos devueltos estarán disponibles en la interfaz de resultados.
 
-.. figure:: images/portal-103-2-2.png
+.. figure:: ../103/images/portal-103-2-2.png
     :name: portal-es-103-2-2
     :alt: Resultados de búsqueda predeterminados de una consulta.
 

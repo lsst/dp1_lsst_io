@@ -41,7 +41,7 @@ Esta consulta devuelve las coordenadas y magnitudes de los objetos cercanos al c
 **3. Ver la interfaz de resultados.**
 El diseño predeterminado de la interfaz de resultados se muestra en la Figura 1.
 
-.. figure:: images/portal-104-1-1.png
+.. figure:: ../104/images/portal-104-1-1.png
     :name: portal-es-104-1-1
     :alt: La interfaz de resultados.
 
@@ -71,7 +71,7 @@ En la parte superior izquierda, hacer clic en el ícono del menú (tres líneas 
 En "Results Layout" (Diseño de resultados), hacer clic en el ícono del diseño predeterminado (flechas "arriba-abajo" o "A" en la Figura 2) para ver todas las opciones de diseño.
 Tener en cuenta que el recuadro "Results Layout" sólo aparece después de haber realizado una "búsqueda".
 
-.. figure:: images/portal-104-1-2.png
+.. figure:: ../104/images/portal-104-1-2.png
     :name: portal-es-104-1-2
     :alt: El menú lateral con opciones para el diseño de la vista de resultados.
     :width: 200
@@ -104,7 +104,7 @@ El gráfico de cobertura (A en la Figura 3) incluye marcadores para ambas consul
 El gráfico interactivo (B en la Figura 3) es el gráfico predeterminado para la nueva consulta, la tabla seleccionada.
 Los resultados de consultas no deseadas pueden ser eliminados haciendo clic en la "X" de la pestaña correspondiente situada encima de la tabla.
 
-.. figure:: images/portal-104-1-3.png
+.. figure:: ../104/images/portal-104-1-3.png
     :name: portal-es-104-1-3
     :alt: La pestaña Resultados después de ejecutar una segunda consulta.
 

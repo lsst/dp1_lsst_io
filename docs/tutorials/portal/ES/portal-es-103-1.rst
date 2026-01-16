@@ -27,7 +27,7 @@ El equipo de Rubin responderá a todas las preguntas publicadas allí.
 Ir a la pestaña "DP1 Catalogs" (Catálogos DP1) en la interfaz UI del Portal.
 Introducir los criterios de búsqueda como se muestra en la Figura 1.
 
-.. figure:: images/portal-103-1-1.png
+.. figure:: ../103/images/portal-103-1-1.png
     :name: portal-es-103-1-1
     :alt: La interfaz UI del portal.
 
@@ -38,7 +38,7 @@ Introducir los criterios de búsqueda como se muestra en la Figura 1.
 Hacer clic en el botón "Populate and edit ADQL" (Completar y editar ADQL), situado en la parte inferior central de la Figura 1.
 La interfaz cambiará a la interfaz ADQL y completará el cuadro de consulta ADQL con una sentencia ADQL que representa exactamente la misma consulta (Figura 2).
 
-.. figure:: images/portal-103-1-2.png
+.. figure:: ../103/images/portal-103-1-2.png
     :name: portal-es-103-1-2
     :alt: La interfaz ADQL del Portal.
 

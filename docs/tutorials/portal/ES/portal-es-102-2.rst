@@ -40,7 +40,7 @@ establecer el tipo de producto de datos como imagen escribiendo "image" en el ca
 el nombre del instrumento en LSSTComCam en el campo "Instrument Name", la colección en LSST.DP1 en el campo "Collection"
 y el subtipo de producto de datos en "lsst.visit_image" en el campo "Data Product Subtype".
 
-.. figure:: images/portal-102-2-1.png
+.. figure:: ../102/images/portal-102-2-1.png
     :name: portal-es-102-2-1
     :alt: Restricciones de búsqueda SIA.
 
@@ -56,7 +56,7 @@ Seleccionar "MJD Values" (Valores MJD) e introducir 60625 para el "Start Time" (
 Seleccionar el tipo de consulta por bandas de filtros con la opción "By Filter Bands" en el campo "Query Type" y seleccionar la banda r.
 
 
-.. figure:: images/portal-102-2-2.png
+.. figure:: ../102/images/portal-102-2-2.png
     :name: portal-es-102-2-2
     :alt:  Restricciones de búsqueda SIA.
 
@@ -69,7 +69,7 @@ Hacer clic en el botón "Search" (Buscar) situado en la parte inferior izquierda
 **8. Revisar los resultados.**
 La interfaz de resultados permite visualizar interactivamente las 81 imágenes de visitas que cumplen los criterios de búsqueda.
 
-.. figure:: images/portal-102-2-3.png
+.. figure:: ../102/images/portal-102-2-3.png
     :name: portal-es-102-2-3
     :alt: La interfaz de resultados de imágenes.
 

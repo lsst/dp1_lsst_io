@@ -28,7 +28,7 @@ En un navegador web, ir a `data.lsst.cloud <https://data.lsst.cloud/>`_, iniciar
 **2. En el menú lateral seleccionar "Rubin HiPS Search".**
 Hacer clic en el menú de la barra lateral (tres líneas horizontales en la esquina superior izquierda) y hacer clic en Rubin HiPS Search (Búsqueda Rubin HiPS) (Figura 1).
 
-.. figure:: images/portal-101-2-1.png
+.. figure:: ../101/images/portal-101-2-1.png
     :name: portal-es-101-2-1
     :width: 200
     :alt: Seleccionar "Rubin HiPS Search" en la barra lateral.
@@ -40,7 +40,7 @@ Hacer clic en el menú de la barra lateral (tres líneas horizontales en la esqu
 Introducir las coordenadas ``53.13,-28.10``, que son el centro del Campo Profundo Sur de Chandra Extendido (ECDFS, Extended Chandra Deep Field South), y un campo de visión de ``1`` grado (Figura 2).
 
 
-.. figure:: images/portal-101-2-2.png
+.. figure:: ../101/images/portal-101-2-2.png
     :name: portal-es-101-2-2
     :alt: Agregar coordenadas y campo de visión.
 
@@ -50,7 +50,7 @@ Introducir las coordenadas ``53.13,-28.10``, que son el centro del Campo Profund
 **4. Seleccionar el mapa de colores gri HiPS.**
 En la sección "Select Data Set" (Seleccionar conjunto de datos), hacer clic en el menú desplegable de la columna "Title" (Título) y hacer clic en la casilla situada junto a ``LSSTComCam: DP1 gri`` (Figura 3).
 
-.. figure:: images/portal-101-2-3.png
+.. figure:: ../101/images/portal-101-2-3.png
     :name: portal-es-101-2-3
     :alt: Seleccionar los filtros LSSTComCam, dp1 gri
 
@@ -63,7 +63,7 @@ Utilizar las funciones de desplazamiento del ratón o los botones de zoom
 (íconos con forma de lupa en la esquina superior izquierda de la imagen)
 para ampliar y desplazar la imagen.
 
-.. figure:: images/portal-101-2-4.png
+.. figure:: ../101/images/portal-101-2-4.png
     :name: portal-es-101-2-4
     :alt: Resultados de búsqueda Rubin HiPS.
 
