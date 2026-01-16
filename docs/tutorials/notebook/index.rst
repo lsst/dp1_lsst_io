@@ -313,6 +313,22 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
 
 
 
+.. _notebook-es:
+
+Traducciones al Español
+=======================
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    ES/notebook-es-101-1.rst
+    ES/notebook-es-101-2.rst
+    ES/notebook-es-102-1.rst
+    ES/notebook-es-102-2.rst
+    ES/notebook-es-103-2.rst
+    ES/notebook-es-301-0.rst
+
 
 
 
