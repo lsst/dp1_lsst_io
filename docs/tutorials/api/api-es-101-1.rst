@@ -30,7 +30,7 @@ y sin fecha de caducidad. El token sólo será visible una vez.
 *Se debe copiar y pegar el token en un archivo seguro para su uso en el futuro.*
 No es necesario contar con un nuevo token para cada sesión de TOPCAT; el token se puede reutilizar, pero debe mantenerse seguro.
 
-.. Importante::
+.. Important::
     **Tener en cuenta que los tokens deben tratarse como contraseñas: no deben compartirse con otras personas.
     Se deben tomar precauciones para mantener los tokens seguros. Nunca se deben almacenar tokens en archivos indexados por git.**
 
