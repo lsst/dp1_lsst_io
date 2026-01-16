@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-01-16
+==========
+
+Released Spanish versions of selected Notebook, Portal, and API tutorials, translated by the Argentinian in-kind contributor team.
+
+
 2026-01-02
 ==========
 
