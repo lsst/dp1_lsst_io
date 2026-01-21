@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** *2026-01-20*
+**Last verified to run:** *2026-01-21*
 
 **Learning objective:** Understand the observations and data available for the Low Ecliptic Latitude field.
 
@@ -68,7 +68,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
 
 
 **2.4. View the results.**
-The query will return 6 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
+The query will return 4 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
 
 The results interface will appear similar to Figure 1.
 
@@ -106,17 +106,17 @@ This query will retrieve all images of subtype ``deep_coadd`` that were obtained
   FROM ivoa.ObsCore
   WHERE obs_collection = 'LSST.DP1' AND calib_level = 3 AND dataproduct_type = 'image'
         AND instrument_name = 'LSSTComCam' AND dataproduct_subtype = 'lsst.deep_coadd'
-        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 59, -49, 1))=1
+        AND CONTAINS(POINT('ICRS', s_ra, s_dec),CIRCLE('ICRS', 38, 7, 1))=1
         AND ( 622e-9 BETWEEN em_min AND em_max )
 
 
 **3.3. Switch to the Coverage map.**
 In the results interface, switch from image display to Coverage map.
 
-The boundaries of the 73 patches are overlaid onto a HiPS coverage map, as in Figure 2.
+The boundaries of the 128 patches are overlaid onto a HiPS coverage map, as in Figure 2.
 
-.. figure:: images/portal-301-5-2.png
-    :name: portal-301-5-2
+.. figure:: images/portal-301-2-2.png
+    :name: portal-301-2-2
     :alt: The image results
 
     Figure 2: The search results showing the coadd footprints ("patches") on the HiPS coverage map.
@@ -140,15 +140,15 @@ This query will retrieve the coordinates, band, and MJD for all visits from the 
 
   SELECT ra, dec, band, expMidptMJD
   FROM dp1.Visit
-  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 59, -49, 1))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec), CIRCLE('ICRS', 38, 7, 1))=1
   ORDER BY expMidptMJD ASC
 
 
 **4.3. View the query results.**
-In the results interface, the central coordinates of the 272 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
+In the results interface, the central coordinates of the 159 visits are automatically marked on the Coverage map, illustrating how the field was dithered.
 
 **4.4. Obtain the filter distribution.**
-Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 20 *u*, 61 *g*, 87 *r*, 42 *i*, 42 *z*, and 20 *y*-band visits.
+Use the filter function in the table to select each of the *ugrizy* values from the "band" column in turn, and note how many observations there were in each filter. There should be 0 *u*, 44 *g*, 40 *r*, 55 *i*, 20 *z*, and 0 *y*-band visits.
 
 
 Visit dates cumulative histogram
@@ -175,9 +175,9 @@ Set the "Trace Style" to "connected points", and click "OK".
 **4.7. View the plot.**
 The resulting plot should look like Figure 3, showing the growing number of exposures with MJD.
 
-.. figure:: images/portal-301-5-3.png
-    :name: portal-301-5-3
-    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 20 days.
+.. figure:: images/portal-301-2-3.png
+    :name: portal-301-2-3
+    :alt: A cumulative histogram of number of exposures as a function of expMidptMJD. Values steadily increase with time over a span of 14 days.
 
     Figure 3: The figure showing the cumulative number of exposures obtained with time.
 
@@ -199,20 +199,20 @@ This query retrieves a table of all CcdVists (visit and detector combinations) t
 
   SELECT visitId, ra, dec, band, seeing, magLim
   FROM dp1.CcdVisit
-  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 59.10, -48.73, 1.0))=1
+  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 37.98, 7.015, 1.0))=1
   ORDER BY visitId
 
 
 **4.10. View the results.**
-The query returns 2448 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
+The query returns 1428 results, with the central locations of each detector for each CcdVisit overplotted on the coverage map.
 
 **4.11. Create histograms of seeing and magnitude limit.**
 In the "Active Chart" panel, create two new plots that show a histogram of the ``seeing`` column and a histogram of the ``magLim`` column (the 5-sigma limiting magnitude of each detector image).
 
 It will look like Figure 4.
 
-.. figure:: images/portal-301-5-4.png
-    :name: portal-301-5-4
+.. figure:: images/portal-301-2-4.png
+    :name: portal-301-2-4
     :alt: A plot showing two histograms. On the left is the distribution of seeing in arcsec, and on the right a histogram of magLim in mag.
 
     Figure 4: The two histograms showing the distribution of seeing and limiting magnitude over all LSSTComCam detectors and visits, in all bands, in DP1.
@@ -239,7 +239,7 @@ This query will retrieve the PSF and cModel magnitudes in *g*, *r*, and *i* band
          i_psfFlux, i_psfFLuxErr,
          refExtendedness
   FROM dp1.Object
-  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 59, -49, 1))=1
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 38, 7, 1))=1
         AND g_psfFlux/g_psfFluxErr > 5
         AND r_psfFlux/r_psfFluxErr > 5
         AND i_psfFlux/i_psfFluxErr > 5
@@ -266,8 +266,8 @@ Make a color-color diagram by plotting ``r_psfMag``-``i_psfMag`` vs. ``g_psfMag`
 
 Place the two figures side-by-side, as in Figure 5.
 
-.. figure:: images/portal-301-5-5.png
-    :name: portal-301-5-5
+.. figure:: images/portal-301-2-5.png
+    :name: portal-301-2-5
     :alt: A plot showing color-color and color-magnitude diagrams as heatmaps.
 
     Figure 5: A color-color and color-magnitude diagram of stars in the "Rubin_SV_38_7" field.
