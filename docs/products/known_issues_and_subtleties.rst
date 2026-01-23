@@ -180,3 +180,8 @@ CBP measurements indicate measurable transmission at these wavelengths, with thr
 
 Although the filter transmits some long-wavelength light, the CCD quantum efficiency (QE) drops sharply beyond 1100 nm, so the total system throughput at these wavelengths remains small.
 The effect is more pronounced in LSSTComCam than it will be in LSSTCam because LSSTComCam CCDs were operated at temperatures about 20°C-40°C warmer (`SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`__).
+
+Incorrect geometric scaling in DP1 Right Ascension errors
+=========================================================
+
+Right Ascension errors in DP1 suffer from an over-application of the cosine of the declination (:math:`\cos(\delta)`) geometric correction. Consequently, the reported uncertainties (e.g., ``coord_raErr`` in :ref:`catalogs-object` catalog and ``raErr`` in :ref:`catalogs-dia-source` catalog) include an extra scaling factor. To recover the correct on-sky uncertainty, users must divide the reported RA error by :math:`\cos(\delta)`. This issue will be resolved in DP2 and future data releases.
