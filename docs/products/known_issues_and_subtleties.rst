@@ -184,4 +184,4 @@ The effect is more pronounced in LSSTComCam than it will be in LSSTCam because L
 Incorrect geometric scaling in DP1 Right Ascension errors
 =========================================================
 
-Right Ascension errors in DP1 suffer from an over-application of the cosine of the declination (:math:`\cos(\delta)`) geometric correction. Consequently, the reported uncertainties (e.g., ``coord_raErr`` in :ref:`catalogs-object` catalog and ``raErr`` in :ref:`catalogs-dia-source` catalog) include an extra scaling factor. To recover the correct on-sky uncertainty, users must divide the reported RA error by :math:`\cos(\delta)`. This issue will be resolved in DP2 and future data releases.
+Right Ascension errors in DP1 suffer from an over-application of the cosine of the declination (`cos(δ)`) geometric correction. Consequently, the reported uncertainties (e.g., ``coord_raErr`` in :ref:`catalogs-object` catalog and ``raErr`` in :ref:`catalogs-dia-source` catalog) include an extra scaling factor. To recover the correct on-sky uncertainty, users must divide the reported RA error by `cos(δ)`. This issue will be resolved in DP2 and future data releases.
