@@ -1,8 +1,8 @@
 .. _api-101-3:
 
-###########################################
-101.3. How to plot a DP1 Skymap with TOPCAT
-###########################################
+########################################################################
+101.3. How to plot a DP1 Skymap, g_psfMag Histogram, and CMD with TOPCAT
+########################################################################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -25,7 +25,7 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and access DP1 Data.**
 See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOPCAT.
 
-**2. Explore DP1 Data with ADQL Query**
+**2. Create Skymap**
 
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and add it to the ADQL text window, then click ``Run Query``.
 
@@ -47,14 +47,50 @@ It is recommended to construct a TAP query using spatial constraints, but his qu
 
     Figure 1:  Run Query 
 
-**3. Review table.**
+**2.1. Review table.**
 
 Text.
 Insert figure
 
 
-**4. Create Skymap of DP1 fields using the Sky 9lotting window and Aitoff projection**
+**2.2. Create Skymap of DP1 fields using the Sky 9lotting window and Aitoff projection**
 
 Text describing image
 
 Insert figure 
+
+**3. Create g_psfMag Historgram for ECDFS field**
+
+**3.1 Run ADQL query on dp1.Object table**
+
+.. code-block:: sql
+
+  SELECT TOP 1000
+       coord_ra, coord_dec, g_psfMag
+  FROM dp1.Object
+    WHERE 1 = CONTAINS( POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53.13, -28.10, 0.2)
+     )
+
+**3.2 Plot Histogram**
+
+Add Text
+
+Add Figure
+
+add image of histogram
+
+
+**4. Create CMD with TOPCAT**
+
+**4.1 Run query**
+
+
+add code
+
+**4.2 Create CMD**
+
+add text
+
+add image
+
+add image of CDM
