@@ -42,6 +42,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     102/notebook-102-4.rst
     102/notebook-102-5.rst
     102/notebook-102-6.rst
+    102/notebook-102-7.rst
 
 
 103. Image access and display
@@ -128,6 +129,7 @@ Tutorials with a learning objective of understanding one of the data products.
     202/notebook-202-3.rst
     202/notebook-202-4.rst
     202/notebook-202-5.rst
+    202/notebook-202-6.rst
 
 
 203. Maps
@@ -174,6 +176,17 @@ Tutorials with a learning objective of understanding one of the data products.
 
     206/notebook-206-1.rst
     206/notebook-206-2.rst
+
+
+207. Timeseries features
+------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    207/notebook-207-1.rst
+    207/notebook-207-2.rst
 
 
 .. _notebook-300:
@@ -299,6 +312,22 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     310/notebook-310-1.rst
 
 
+
+.. _notebook-es:
+
+Traducciones al Español
+=======================
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    ES/notebook-es-101-1.rst
+    ES/notebook-es-101-2.rst
+    ES/notebook-es-102-1.rst
+    ES/notebook-es-102-2.rst
+    ES/notebook-es-103-2.rst
+    ES/notebook-es-301-0.rst
 
 
 
