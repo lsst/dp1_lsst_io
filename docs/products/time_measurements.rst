@@ -26,4 +26,4 @@ Converting between time scales
 
 The DP1 data products that contain time measurements include the mean epoch of an object in the ugrizy-band coadds (e.g., ``r_epoch``), in the :ref:`catalogs-object` catalog, ``obsStart``, ``expMidptMJD``, ``expMidpt``, and ``obsStartMJD`` in both the :ref:`catalogs-visit` and :ref:`catalogs-ccdvisit` catalogs, and the ``discoverySubmissionDate`` in the ref:`catalogs-ssobject` catalog.
 
-To convert between the different time scales as needed...
+To convert between the different time scales as needed
