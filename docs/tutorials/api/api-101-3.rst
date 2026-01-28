@@ -108,7 +108,7 @@ Create a histogram in TOPCAT.
 
 **3.1 Run ADQL query on dp1.Object table and plot histogram**
 
-Copy the ADQL query below, add it to the window in the "ADQL Text" box and hit "Run Query".
+Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figure 1) and hit "Run Query".
 
 .. code-block:: sql
 
@@ -145,10 +145,26 @@ Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
 
 **4. Create CMD with TOPCAT**
 
+Create a CMD in TOPCAT by using the "Plane plotting window".
+
 **4.1 Run query**
 
+Copy the following query into the "ADQL Text" box in the TAP Query window (see figure 1).
 
-add code
+.. code-block:: sql
+
+  SELECT coord_ra, coord_dec,
+         g_psfMag, i_psfMag, r_psfMag,
+         g_cModelMag, i_cModelMag, r_cModelMag,
+         g_psfFlux, g_psfFLuxErr,
+         r_psfFlux, r_psfFLuxErr,
+         i_psfFlux, i_psfFLuxErr,
+         refExtendedness
+  FROM dp1.Object
+  WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53, -28, 1))=1
+        AND g_psfFlux/g_psfFluxErr > 5
+        AND r_psfFlux/r_psfFluxErr > 5
+        AND i_psfFlux/i_psfFluxErr > 5
 
 **4.2 Create CMD**
 
