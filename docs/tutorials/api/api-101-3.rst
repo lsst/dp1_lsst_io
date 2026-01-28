@@ -65,7 +65,7 @@ Click on "Display table cell data" to view the data returned from the query.
 
 **2.3 Review table.**
 
-Text.
+Table with 1000 entries: visit number, RA, DEC, band and expMidptMJD values.
 
 .. figure:: images/api-103-1-3.png
     :name: api-103-1-3
@@ -74,42 +74,55 @@ Text.
     Figure 3:  Data returned from query. 
 
 
-**2.4 Create Skymap of DP1 fields using the Sky 9lotting window and Aitoff projection**
+**2.4 Create Skymap of DP1 fields using the Sky plotting window and Aitoff projection**
 
-Text describing image
+To create a Skymap of data returned from the query, click on the "Sky plotting window". 
 
 .. figure:: images/api-103-1-4.png
     :name: api-103-1-4
     :alt: A screenshot of table. 
 
-    Figure 4:  Data returned from query. 
+    Figure 4:  Window before selecting "aitoff" project.
 
-Insert figure 
+
+The default plot shows the seven fields contained in Data Preview 1 on a rotating globe.
+Click on "Axes", then select "aitoff" from the "Projection" drop-down menu to change the skymap.
 
 .. figure:: images/api-103-1-5.png
     :name: api-103-1-5
-    :alt: A screenshot of table. 
+    :alt: A screenshot of the aitoff projection.
 
-    Figure 5:  Data returned from query. 
+    Figure 5:  Skymap of dp1 fields on rotating globe.
 
+This plot shows the seven fields on an "aitoff" projection.
 
 .. figure:: images/api-103-1-6.png
     :name: api-103-1-6
     :alt: A screenshot of table. 
 
-    Figure 6:  Data returned from query. 
+    Figure 6:  Skymap of dp1 fields on aitoff projection. 
 
-**3. Create g_psfMag Historgram for ECDFS field**
+**3. Create Histogram of g-band limiting magnitude ECDFS field**
+
+Create a histogram in TOPCAT.
 
 **3.1 Run ADQL query on dp1.Object table**
 
+Copy the ADQL query below, add it to the window in the "ADQL Text" box and hit "Run Query".
+
 .. code-block:: sql
 
-  SELECT TOP 1000
-       coord_ra, coord_dec, g_psfMag
-  FROM dp1.Object
-    WHERE 1 = CONTAINS( POINT('ICRS', coord_ra, coord_dec), CIRCLE('ICRS', 53.13, -28.10, 0.2)
-     )
+  SELECT visitId, ra, dec, band, seeing, magLim
+    FROM dp1.CcdVisit
+  WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53.16, -28.1, 1.0))=1
+
+Notice a new table is available in the TOPCAT window.  Select the table button to review the contents. 
+
+.. figure:: images/api-103-1-6.png
+    :name: api-103-1-6
+    :alt: A screenshot of TOPCAT window. 
+
+    Figure 7:  New table from dp1.CCDVisit query. 
 
 **3.2 Plot Histogram**
 
