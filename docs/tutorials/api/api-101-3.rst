@@ -54,8 +54,8 @@ It is recommended to construct a TAP query using spatial constraints, but his qu
        visit, ra, dec, band, expMidptMJD
   FROM dp1.Visit
 
-.. figure:: images/api-101-1-2.png
-    :name: api-101-1-2
+.. figure:: images/api-103-1-2.png
+    :name: api-131-1-2
     :alt: A screenshot of the table return window. Click on the table icon to review data within the table.
 
     Figure 1:  View table returned from query.
