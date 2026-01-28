@@ -54,14 +54,11 @@ It is recommended to construct a TAP query using spatial constraints, but his qu
        visit, ra, dec, band, expMidptMJD
   FROM dp1.Visit
 
-.. figure:: images/api-101-1-6.png
-    :name: api-101-1-6
-    :alt: A screenshot of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 5, but the Example button has been clicked
-	  and the Full Table menu item from the Basic menu item has been chosen and
-	  highlighted.
+.. figure:: images/api-101-1-2.png
+    :name: api-101-1-2
+    :alt: A screenshot of the table return window. Click on the table icon to review data within the table.
 
-    Figure 1:  Run Query 
+    Figure 1:  View table returned from query.
 
 **2.1. Review table.**
 
