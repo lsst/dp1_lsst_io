@@ -106,7 +106,7 @@ This plot shows the seven fields on an "aitoff" projection.
 
 Create a histogram in TOPCAT.
 
-**3.1 Run ADQL query on dp1.Object table**
+**3.1 Run ADQL query on dp1.Object table and plot histogram**
 
 Copy the ADQL query below, add it to the window in the "ADQL Text" box and hit "Run Query".
 
@@ -116,7 +116,7 @@ Copy the ADQL query below, add it to the window in the "ADQL Text" box and hit "
     FROM dp1.CcdVisit
   WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53.16, -28.1, 1.0))=1
 
-Notice a new table is available in the TOPCAT window.  Select the table button to review the contents. 
+Notice a new table (red arrow) is available in the TOPCAT window.  Select the table button to review the contents. Click the histogram button (red circle).
 
 .. figure:: images/api-103-1-7.png
     :name: api-103-1-7
@@ -126,12 +126,22 @@ Notice a new table is available in the TOPCAT window.  Select the table button t
 
 **3.2 Plot Histogram**
 
-Add Text
+In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
-Add Figure
+.. figure:: images/api-103-1-7.png
+    :name: api-103-1-7
+    :alt: A screenshot of TOPCAT window. 
 
-add image of histogram
+    Figure 8:  Initial histogram with ra/deg on the x-axis. 
 
+
+Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
+
+.. figure:: images/api-103-1-7.png
+    :name: api-103-1-7
+    :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table. 
+
+    Figure 9:  Histogram of "magLim" for the ECDFS field. 
 
 **4. Create CMD with TOPCAT**
 
