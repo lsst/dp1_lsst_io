@@ -62,13 +62,18 @@ Click on "Display table cell data" to view the data returned from the query.
 
     Figure 2:  Results window from query.
 
-**2.3. Review table.**
+**2.3 Review table.**
 
 Text.
-Insert figure
+
+.. figure:: images/api-103-1-3.png
+    :name: api-103-1-3
+    :alt: A screenshot of table. 
+
+    Figure 3:  Data returned from query. 
 
 
-**2.2. Create Skymap of DP1 fields using the Sky 9lotting window and Aitoff projection**
+**2.4 Create Skymap of DP1 fields using the Sky 9lotting window and Aitoff projection**
 
 Text describing image
 
