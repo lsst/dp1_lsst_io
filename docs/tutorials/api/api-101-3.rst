@@ -168,12 +168,13 @@ Copy the following query into the "ADQL Text" box in the TAP Query window (see f
 
 **4.2 Create CCD**
 
-Click on the "Plane plotting window" and "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box. Put the cursor over the highest concentration of stars and zoom in to view  details. 
+Click on the "Plane plotting window" and "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
+Put the cursor over the highest concentration of stars and zoom in to view  details. 
 
 
-.. figure:: images/api-103-1-9.png
-    :name: api-103-1-9
-    :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table.
+.. figure:: images/api-103-1-10.png
+    :name: api-103-1-10
+    :alt: Color-Color diagram of ECDFS field.
 
     Figure 10:  Color-Color Diagram of ECDFS field. 
 
