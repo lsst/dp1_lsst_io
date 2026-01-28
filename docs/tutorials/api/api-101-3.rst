@@ -102,7 +102,7 @@ This plot shows the seven fields on an "aitoff" projection.
 
     Figure 6:  Skymap of dp1 fields on aitoff projection. 
 
-**3. Create Histogram of g-band limiting magnitude ECDFS field**
+**3. Create Histogram of dp1.CCDVisit table limiting magnitude in the ECDFS field**
 
 Create a histogram in TOPCAT.
 
@@ -128,8 +128,8 @@ Notice a new table (red arrow) is available in the TOPCAT window.  Select the ta
 
 In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
-.. figure:: images/api-103-1-7.png
-    :name: api-103-1-7
+.. figure:: images/api-103-1-8.png
+    :name: api-103-1-8
     :alt: A screenshot of TOPCAT window. 
 
     Figure 8:  Initial histogram with ra/deg on the x-axis. 
@@ -137,8 +137,8 @@ In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
 Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
 
-.. figure:: images/api-103-1-7.png
-    :name: api-103-1-7
+.. figure:: images/api-103-1-9.png
+    :name: api-103-1-9
     :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table. 
 
     Figure 9:  Histogram of "magLim" for the ECDFS field. 
