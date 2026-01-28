@@ -127,3 +127,19 @@ The following table provides a summary.
    * - **SAT_TEMPLATE**
      - difference
      - Pixel saturated in the template used for difference imaging.
+
+Mask planes not populated in DP1
+================================
+In DP1, several mask planes defined by the LSST Science Pipelines are not populated in either ``visit_image`` or ``deep_coadd`` products.
+This is expected and reflects DP1-specific processing, camera geometry, and pipeline configuration, and may differ in future data releases.
+
+**Visit images**
+The following planes are not set in DP1 ``visit_image`` images:
+
+``CLIPPED``, ``DETECTED_NEGATIVE``, ``INEXACT_PSF``, ``INJECTED``, ``INJECTED_TEMPLATE``, ``NO_DATA``,
+``REJECTED``, ``SAT_TEMPLATE``, ``SENSOR_EDGE``, ``STREAK``, ``UNMASKEDNAN``, ``VIGNETTED``.
+
+**Deep coadd images**
+The following planes are not set in DP1 ``deep_coadd`` images:
+
+``BAD``, ``CROSSTALK``, ``DETECTED_NEGATIVE``, ``ITL_DIP``, ``NOT_DEBLENDED``, ``STREAK``, ``SUSPECT``, ``UNMASKEDNAN``, ``VIGNETTED``.
