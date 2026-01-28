@@ -118,8 +118,8 @@ Copy the ADQL query below, add it to the window in the "ADQL Text" box and hit "
 
 Notice a new table is available in the TOPCAT window.  Select the table button to review the contents. 
 
-.. figure:: images/api-103-1-6.png
-    :name: api-103-1-6
+.. figure:: images/api-103-1-7.png
+    :name: api-103-1-7
     :alt: A screenshot of TOPCAT window. 
 
     Figure 7:  New table from dp1.CCDVisit query. 
