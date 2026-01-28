@@ -1,14 +1,14 @@
 .. _api-101-3:
 
-########################################################################
-101.3. How to plot a DP1 Skymap, g_psfMag Histogram, and CMD with TOPCAT
-########################################################################
+##############################
+101.3. How to plot with TOPCAT
+##############################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2025-01-15
+**Last verified to run:** 2026-01-28
 
 **Learning objective:** This tutorial provides a basic guide to plotting data within `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
 and to explore DP1.
@@ -25,7 +25,19 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and access DP1 Data.**
 See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOPCAT.
 
-**2. Create Skymap**
+**2. Create DP1 Skymap**
+
+After starting TOPCAT and accessig the Rubin DP1 data through the VO protocol, where you add your credentials, click on ``dp1.Visit`` table.
+Notice tabs in the right-hand window.  Click on "Colums" to see a description of each of the columns in this table.
+
+.. figure:: images/api-101-1-6.png
+    :name: api-101-1-6
+    :alt: A screenshot of Table Access Protocol (TAP) Query window.
+	  It appears the same as in Figure 5, but the Example button has been clicked
+	  and the Full Table menu item from the Basic menu item has been chosen and
+	  highlighted.
+
+    Figure 1:  Run Query 
 
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and add it to the ADQL text window, then click ``Run Query``.
 
