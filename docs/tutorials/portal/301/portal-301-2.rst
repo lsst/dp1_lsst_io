@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** *2026-01-21*
+**Last verified to run:** 2026-01-21
 
 **Learning objective:** Understand the observations and data available for the Low Ecliptic Latitude field.
 
@@ -68,7 +68,7 @@ This query will retrieve all images of subtype ``deep_coadd`` that contain the c
 
 
 **2.4. View the results.**
-The query will return 4 ``lsst.deep_coadd`` results -- one for each of the *ugrizy* bands.
+The query will return 4 ``lsst.deep_coadd`` results -- one for each of the *griz* bands.
 
 The results interface will appear similar to Figure 1.
 
