@@ -31,8 +31,8 @@ Access the ``dp1.Visit`` table to create a skymap of Data Preview 1 visits.
 
 **2.1 Use TAP Query window**
 
-After starting TOPCAT and accessig the Rubin DP1 data through the VO protocol, where you add your credentials, click on ``dp1.Visit`` table.
-Notice tabs in the right-hand window.  Click on "Colums" to see a description of each of the columns in this table.
+After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on ``dp1.Visit`` table.
+Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
 .. figure:: images/api-103-1-1.png
     :name: api-103-1-1
@@ -43,9 +43,10 @@ Notice tabs in the right-hand window.  Click on "Colums" to see a description of
 
 **2.2 Run ADQL query**
 
-Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and add it to the ADQL text window, then click ``Run Query``.
+Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and paste into the ADQL text window, then click ``Run Query``.
 
-**NOTE: It is recommended to construct a TAP query using spatial constraints, but his query has been limited to the top 1000 entries.  This should limit the time it takes to run the query.**
+**NOTE: It is recommended to construct a TAP query using spatial constraints, but his query has been limited to the top 1000 entries. 
+This should limit the time it takes to run the query.**
 
 
 .. code-block:: sql
@@ -77,7 +78,26 @@ Text.
 
 Text describing image
 
+.. figure:: images/api-103-1-4.png
+    :name: api-103-1-4
+    :alt: A screenshot of table. 
+
+    Figure 4:  Data returned from query. 
+
 Insert figure 
+
+.. figure:: images/api-103-1-5.png
+    :name: api-103-1-5
+    :alt: A screenshot of table. 
+
+    Figure 5:  Data returned from query. 
+
+
+.. figure:: images/api-103-1-6.png
+    :name: api-103-1-6
+    :alt: A screenshot of table. 
+
+    Figure 6:  Data returned from query. 
 
 **3. Create g_psfMag Historgram for ECDFS field**
 
