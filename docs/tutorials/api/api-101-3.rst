@@ -45,7 +45,7 @@ Notice tabs in the right-hand window.  Click on "Colums" to see a description of
 
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and add it to the ADQL text window, then click ``Run Query``.
 
-It is recommended to construct a TAP query using spatial constraints, but his query has been limited to the top 1000 entries.  This should limit the time it takes to run the query.
+**NOTE: It is recommended to construct a TAP query using spatial constraints, but his query has been limited to the top 1000 entries.  This should limit the time it takes to run the query.**
 
 
 .. code-block:: sql
@@ -54,13 +54,15 @@ It is recommended to construct a TAP query using spatial constraints, but his qu
        visit, ra, dec, band, expMidptMJD
   FROM dp1.Visit
 
+Click on "Display table cell data" to view the data returned from the query.
+
 .. figure:: images/api-103-1-2.png
     :name: api-131-1-2
     :alt: A screenshot of the table return window. Click on the table icon to review data within the table.
 
-    Figure 1:  View table returned from query.
+    Figure 2:  Results window from query.
 
-**2.1. Review table.**
+**2.3. Review table.**
 
 Text.
 Insert figure
