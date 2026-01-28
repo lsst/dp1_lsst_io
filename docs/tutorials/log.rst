@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-01-28
+==========
+
+Released new portal tutorial 301.2 on the Low Ecliptic Latitude Field.
+
 2026-01-16
 ==========
 
