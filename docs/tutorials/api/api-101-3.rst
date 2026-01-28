@@ -27,17 +27,21 @@ See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOP
 
 **2. Create DP1 Skymap**
 
+Access the ``dp1.Visit`` table to create a skymap of Data Preview 1 visits.
+
+**2.1 Use TAP Query window**
+
 After starting TOPCAT and accessig the Rubin DP1 data through the VO protocol, where you add your credentials, click on ``dp1.Visit`` table.
 Notice tabs in the right-hand window.  Click on "Colums" to see a description of each of the columns in this table.
 
-.. figure:: images/api-101-1-6.png
-    :name: api-101-1-6
+.. figure:: images/api-103-1-1.png
+    :name: api-103-1-1
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
-	  It appears the same as in Figure 5, but the Example button has been clicked
-	  and the Full Table menu item from the Basic menu item has been chosen and
-	  highlighted.
+	  TOPCAT window to add ADQL query. 
 
-    Figure 1:  Run Query 
+    Figure 1:  TAP Query window with dp1.Visit table selected, column descriptions visible, and ADQL query in ADQL Text box. 
+
+**2.2 Run ADQL query**
 
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and add it to the ADQL text window, then click ``Run Query``.
 
