@@ -5,4 +5,4 @@
 ########################
 
 .. raw:: html
-    :file: 105_3_Forced_Photometry.html
+    :file: 105_3_Forced_photometry.html
