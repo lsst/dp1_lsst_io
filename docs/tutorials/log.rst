@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-01-28
+==========
+
+Released new Portal tutorial 301.2 on the Low Ecliptic Latitude Field, and a new Notebook tutorial 101.3 on how to remotely access files with WebDAV.
+
+
 2026-01-16
 ==========
 
