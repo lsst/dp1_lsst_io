@@ -24,6 +24,20 @@ Short tutorials with a learning objective of how to use a single RSP function or
     :glob:
 
     api-101-1.rst
+    api-101-2.rst
     api-101-3.rst
 
+See also the tutorial notebook :doc:`/tutorials/notebook/101/notebook-101-3`.
+
+
+.. _api-es:
+
+Traducciones al Español
+=======================
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    api-es-101-1.rst
 
