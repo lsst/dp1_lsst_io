@@ -25,5 +25,17 @@ Short tutorials with a learning objective of how to use a single RSP function or
 
     api-101-1.rst
     api-101-3.rst
+    api-101-2.rst
 
+
+.. _api-es:
+
+Traducciones al Español
+=======================
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    api-es-101-1.rst
 
