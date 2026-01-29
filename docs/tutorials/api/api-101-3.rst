@@ -13,7 +13,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Learning objective:** This tutorial provides a basic guide to plotting data within `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
 and to explore DP1.
 
-**LSST data products:** The DP1 catalogs within th Rubin Science Platform (RSP) Table Access Protocol (TAP) service.
+**LSST data products:** The DP1 catalogs within the Rubin Science Platform (RSP) Table Access Protocol (TAP) service.
 
 **Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this
 tutorial is used for the preparation of journal articles, software releases, or other tutorials.
@@ -27,11 +27,11 @@ See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOP
 
 **2. Create DP1 Skymap**
 
-Access the ``dp1.Visit`` table to create a skymap of Data Preview 1 visits.
+Access the "dp1.Visit" table to create a skymap of Data Preview 1 visits.
 
 **2.1 Use TAP Query window**
 
-After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on ``dp1.Visit`` table.
+After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.Visit" table.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
 .. figure:: images/api-103-1-1.png
@@ -43,10 +43,10 @@ Notice tabs in the right-hand window.  Click on "Columns" to see a description o
 
 **2.2 Run ADQL query**
 
-Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and paste into the ADQL text window, then click ``Run Query``.
+Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and paste into the ADQL text window, then click "Run Query".
 
-**NOTE: It is recommended to construct a TAP query using spatial constraints, but his query has been limited to the top 1000 entries. 
-This should limit the time it takes to run the query.**
+**NOTE: It is recommended to construct a TAP query using spatial constraints,
+but his query has been limited to the top 1000 entries to reduce the amount of time required to retrieve results.**
 
 
 .. code-block:: sql
@@ -104,11 +104,11 @@ This plot shows the seven fields on an "aitoff" projection.
 
 **3. Create Histogram of dp1.CCDVisit table limiting magnitude in the ECDFS field**
 
-Create a histogram in TOPCAT.
+Create a histogram in TOPCAT by using the Histogram button.
 
 **3.1 Run ADQL query on dp1.Object table and plot histogram**
 
-Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figure 1) and hit "Run Query".
+Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figure 1) and click "Run Query".
 
 .. code-block:: sql
 
@@ -116,7 +116,7 @@ Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figu
     FROM dp1.CcdVisit
   WHERE CONTAINS(POINT('ICRS', ra, dec),CIRCLE('ICRS', 53.16, -28.1, 1.0))=1
 
-Notice a new table (red arrow) is available in the TOPCAT window.  Select the table button to review the contents. Click the histogram button (red circle).
+Notice a new table (red arrow) is available in the TOPCAT window.  Select the table button to review the contents. Click the histogram button (red circle) to create a histogram.
 
 .. figure:: images/api-103-1-7.png
     :name: api-103-1-7
@@ -132,7 +132,7 @@ In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
     :name: api-103-1-8
     :alt: A screenshot of TOPCAT window. 
 
-    Figure 8:  Initial histogram with ra/deg on the x-axis. 
+    Figure 8:  Initial histogram with "ra/deg" on the x-axis. 
 
 
 Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
@@ -149,7 +149,7 @@ Create a CCD in TOPCAT by using the "Plane plotting window".
 
 **4.1 Run query**
 
-Copy the following query into the "ADQL Text" box in the TAP Query window (see figure 1).
+Copy the following query into the "ADQL Text" box in the TAP Query window (see figure 1), then click "Run Query".
 
 .. code-block:: sql
 
@@ -168,7 +168,7 @@ Copy the following query into the "ADQL Text" box in the TAP Query window (see f
 
 **4.2 Create CCD**
 
-Click on the "Plane plotting window" and "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
+Click on the "Plane plotting window" (icon next to the "Histogram" icon in Figure 7), add "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
 Put the cursor over the highest concentration of stars and zoom in to view  details. 
 
 
