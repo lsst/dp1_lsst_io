@@ -73,14 +73,3 @@ The unprocessed images received directly from the camera.
 
     raw_exposure
 
-Mask planes
-===========
-
-Image mask planes.
-
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-    :glob:
-
-    mask_planes

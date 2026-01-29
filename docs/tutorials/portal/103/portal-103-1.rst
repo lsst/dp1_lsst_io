@@ -31,7 +31,7 @@ Enter search constraints as in Figure 1.
     :name: portal-103-1-1
     :alt: The Portal UI.
 
-    Figure 1: The Portal user interface with a query set up. Use the funnel icon (magenta circle) to limit the table to only display selected rows.
+    Figure 1: The Portal user interface with a query set up.
 
 
 **2. Convert UI to ADQL query.**

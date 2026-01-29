@@ -4,37 +4,10 @@
 Log of major tutorial updates
 #############################
 
-2026-01-16
-==========
-
-Released Spanish versions of selected Notebook, Portal, and API tutorials, translated by the Argentinian in-kind contributor team.
-
-
-2026-01-02
-==========
-
-Released new notebook tutorial 102.7 on masked arrays.
-
-2025-12-30
-==========
-
-Released new notebook tutorial series 207 on the timeseries features in the ``DiaObject`` table.
-
-2025-12-16
-==========
-
-Updated notebook tutorials 103.4, 303.2, and 306.2 to work with the new cutout service.
-
-2025-12-11
-==========
-
-Released new notebook tutorial 202.6 on pixel mask planes.
-
 2025-12-09
 ==========
 
 Released new Portal tutorial 301.5 on Euclid Deep Field South.
-
 
 2025-11-28
 ==========

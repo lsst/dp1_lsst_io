@@ -67,7 +67,6 @@ Variance: uncertainty (noise) in the flux in units of nJy^2.
 Mask: an integer bitmask of representative flag values that indicate processing status or issues,
 similar to the `SDSS bitmasks <https://www.sdss4.org/dr17/algorithms/bitmasks/>`_.
 
-
 Metadata
 --------
 

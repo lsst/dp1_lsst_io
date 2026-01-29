@@ -177,20 +177,4 @@ Explore the DP1 data in the seven fields observed with the LSSTComCam.
     301/portal-301-7.rst
 
 
-
-.. _portal-es:
-
-Traducciones al Español
-=======================
-
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    ES/portal-es-101-1.rst
-    ES/portal-es-101-2.rst
-    ES/portal-es-102-1.rst
-    ES/portal-es-102-2.rst
-    ES/portal-es-103-1.rst
-    ES/portal-es-103-2.rst
-    ES/portal-es-104-1.rst
+*More tutorials coming soon!*

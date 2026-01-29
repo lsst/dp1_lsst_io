@@ -22,29 +22,9 @@ WCS FITS approximations and misleading interfaces
 =================================================
 
 Rubin's single-visit World Coordinate System (WCS) objects are not, in general, exactly representable via the FITS WCS standard.
-The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are ``TAN-SIP`` approximations that were expected to be good enough for visualization and object finding, not for precision astrometry.
+The FITS WCS in the headers of the :ref:`visit image <images-visit-image>` and :ref:`difference image <images-difference-image>` data products (they are the same) are approximations that are only expected to be good enough for visualization and object finding, not for precision astrometry.
 
-
-The WCS fix released Thu Jan 8 2026
------------------------------------
-
-On Thu Jan 8 2026, versions of the DP1 images with updated headers were released to fix the issue described below.
-These fixed images are now the default versions returned by all queries.
-The original versions are still available via the Butler by using repo ``dp1`` and collection ``LSSTComCam/DP1/v1``.
-
-In the first version of the DP1 images, the FITS WCS approximations were often much worse than previously reported, as much as a few arcseconds in some cases.
-This problem affected all external tools that read FITS files, as well as the Portal aspect of the Rubin Science Platform.
-It did not affect any catalog data products (for which all transforms were performed with the true WCS), coadded images (which have a FITS standard WCS natively), or code using our `lsst.afw.geom.SkyWcs` class to transform points.
-
-The problem was that while the approximation generated a gnomonic + polynomial WCS that was as good as was originally reported, the projection point for the gnomonic transform (the FITS ``CRVAL`` and ``CRPIX`` header cards) was at the telescope boresight, and hence outside the bounding box of all but the central detector.
-This was not inherently problematic, but the polynomial component of the transform was only fit to the detector area, and hence that polynomial often extrapolated badly when attempting to map CRVAL to CRPIX (or vice versa).
-This caused the ``CRPIX`` and ``CRVAL`` header cards written to the FITS headers to not correspond to the transform that was fit and validated.
-
-This was a sufficiently serious problem that the Data Management team prepared and released an update for all ``visit_image`` and ``difference_image`` files in DP1 on Thu Jan 8 2026.
-
-
-Current recommendations for WCS use
------------------------------------
+The approximation to the full WCS has been determined to be better than 0.05 pixels at all scales.
 
 To make use of the full WCS of a visit image or difference image, it is necessary to use Rubin's ``lsst.afw.geom.SkyWcs`` objects::
 
@@ -170,18 +150,3 @@ One workaround for this is to only read the ``image``, ``mask``, or ``variance``
 
 This bug has been fixed in the latest version of pybind11, which we will adopt before the next data release.
 As this upgrade will involve breaking changes, we may not be able to include it in the 29.x release series.
-
-g-band red leak / excess long-wavelength transmission
-=====================================================
-
-During the final weeks of the LSSTComCam commissioning campaign, initial tests of the Collimated Beam Projector (CBP) revealed excess transmission in the LSST ``g`` filter at wavelengths beyond the nominal bandpass, extending past 1100 nm.
-The ``g`` filter specifications were not defined beyond 1100 nm, and as a result the filter does not strongly block longer-wavelength light.
-CBP measurements indicate measurable transmission at these wavelengths, with throughput reaching the tens of percent level near ~1190 nm (see Fig. 11 and Fig 12 of `SITCOMTN-152 <https://sitcomtn-152.lsst.io/>`__).
-
-Although the filter transmits some long-wavelength light, the CCD quantum efficiency (QE) drops sharply beyond 1100 nm, so the total system throughput at these wavelengths remains small.
-The effect is more pronounced in LSSTComCam than it will be in LSSTCam because LSSTComCam CCDs were operated at temperatures about 20°C-40°C warmer (`SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`__).
-
-Incorrect geometric scaling in DP1 Right Ascension errors
-=========================================================
-
-Right Ascension errors in DP1 suffer from an over-application of the cosine of the declination (:math:`\cos(\delta)`) geometric correction. Consequently, the reported uncertainties (e.g., ``coord_raErr`` in :ref:`catalogs-object` catalog and ``raErr`` in :ref:`catalogs-dia-source` catalog) include an extra scaling factor. To recover the correct on-sky uncertainty, users must divide the reported RA error by :math:`\cos(\delta)`. This issue will be resolved in DP2 and future data releases.
