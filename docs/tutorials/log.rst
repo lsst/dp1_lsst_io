@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-01-29
+==========
+
+Released new Notebook tutorial 305.2 on identifying and characterizing variable stars.
+
+
 2026-01-28
 ==========
 
