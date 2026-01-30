@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-01-30
+==========
+
+Released new Notebook tutorial 201.12 on the ``CoaddPatches`` table and updated all Notebook tutorials in the 301 series to use this table in Section 2.3.
+
+
 2026-01-29
 ==========
 
