@@ -31,7 +31,7 @@ Create a skymap of the Data Preview 1 Dataset using TOPCAT and an "aitoff" proje
 
 **2.1 Use TAP Query window**
 
-After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.CoaddPatches" table in the Table Access
+After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.CoaddPatches" in the Table Access
 Protocol (TAP) Query Metadata section.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
@@ -58,31 +58,25 @@ This query will retrieve the RA/DEC of each of the Coadd Patches within dp1.
 
 **2.3 Create Skymap of DP1 fields using the Sky plotting window and Aitoff projection**
 
-To create a Skymap of data returned from the query, click on the "Sky plotting window".
+A new window will open which shows the "Table List" (red arrow) and "Current Table Properties". Notice this table has 652 rows for each of the Coadd Patches and 2 columns (for RA and DEC).
+To create a Skymap of data returned from the query, click on the "Sky plotting window" (red circle).
 
 .. figure:: images/api-101-3-2.png
     :name: api-101-3-2
-    :alt: A screenshot of table.
+    :alt: Click sky plotting window.
 
-    Figure 4:  Window before selecting "aitoff" project.
+    Figure 2:  Click "Sky plotting window".
 
 
 The default plot shows the seven fields contained in Data Preview 1 on a rotating globe.
 Click on "Axes", then select "aitoff" from the "Projection" drop-down menu to change the skymap.
 
-.. figure:: images/api-103-1-5.png
-    :name: api-103-1-5
-    :alt: A screenshot of the aitoff projection.
 
-    Figure 5:  Skymap of dp1 fields on rotating globe.
+.. figure:: images/api-101-3-3.png
+    :name: api-101-3-3
+    :alt: A screenshot of the skymap aitoff projection.
 
-This plot shows the seven fields on an "aitoff" projection.
-
-.. figure:: images/api-103-1-6.png
-    :name: api-103-1-6
-    :alt: A screenshot of table.
-
-    Figure 6:  Skymap of dp1 fields on aitoff projection.
+    Figure 3:  Skymap of dp1 fields on aitoff projection.
 
 **3. Create Histogram of dp1.CCDVisit table limiting magnitude in the ECDFS field**
 
@@ -104,7 +98,7 @@ Notice a new table (red arrow) is available in the TOPCAT window.  Select the ta
     :name: api-103-1-7
     :alt: A screenshot of TOPCAT window.
 
-    Figure 7:  New table from dp1.CCDVisit query.
+    Figure 4:  New table from dp1.CCDVisit query.
 
 **3.2 Plot Histogram**
 
@@ -114,7 +108,7 @@ In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
     :name: api-103-1-8
     :alt: A screenshot of TOPCAT window.
 
-    Figure 8:  Initial histogram with "ra/deg" on the x-axis.
+    Figure 5:  Initial histogram with "ra/deg" on the x-axis.
 
 
 Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
@@ -123,7 +117,7 @@ Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
     :name: api-103-1-9
     :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table.
 
-    Figure 9:  Histogram of "magLim" for the ECDFS field.
+    Figure 6:  Histogram of "magLim" for the ECDFS field.
 
 **4. Create Color-Color Diagram (CCD) with TOPCAT**
 
@@ -158,6 +152,6 @@ Put the cursor over the highest concentration of stars and zoom in to view  deta
     :name: api-103-1-10
     :alt: Color-Color diagram of ECDFS field.
 
-    Figure 10:  Color-Color Diagram of ECDFS field.
+    Figure 7:  Color-Color Diagram of ECDFS field.
 
 
