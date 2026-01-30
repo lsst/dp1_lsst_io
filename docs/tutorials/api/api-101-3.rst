@@ -35,8 +35,8 @@ After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, 
 Protocol (TAP) Query Metadata section.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
-.. figure:: images/api-103-1-1.png
-    :name: api-103-1-1
+.. figure:: images/api-101-3-1.png
+    :name: api-101-3-1
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
 	  TOPCAT window to add ADQL query.
 
@@ -60,8 +60,8 @@ This query will retrieve the RA/DEC of each of the Coadd Patches within dp1.
 
 To create a Skymap of data returned from the query, click on the "Sky plotting window".
 
-.. figure:: images/api-103-1-4.png
-    :name: api-103-1-4
+.. figure:: images/api-101-3-2.png
+    :name: api-101-3-2
     :alt: A screenshot of table.
 
     Figure 4:  Window before selecting "aitoff" project.
