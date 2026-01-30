@@ -1,7 +1,7 @@
 .. _notebook-305-2:
 
 ###########################################
-305.2. Stellar Variability Characterization
+305.2. Stellar variability characterization
 ###########################################
 
 .. raw:: html
