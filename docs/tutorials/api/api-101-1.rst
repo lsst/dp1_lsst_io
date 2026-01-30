@@ -133,7 +133,7 @@ or replaced with a predefined query (such as the one presented in Step 9).
 
 Because the dp1.Object table is large, it is good practice to always include spatial constraints and only retrieve necessary columns.
 
-Search for objects within 0.5 degrees of the center of the Extended Chandra Deep Field South (ECDFS) field, RA, Dec =  53.13, 28.10 and retrieve g-band and r-band PSF magnitudes.
+Search for objects within 0.5 degrees of the center of the Extended Chandra Deep Field South (ECDFS) field, RA, Dec =  53.13, -28.10 and retrieve g-band and r-band PSF magnitudes.
 Copy the code block below and paste it into the ADQL text box, then click "Run Query".
 
 .. code-block:: sql
