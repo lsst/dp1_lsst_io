@@ -5,4 +5,4 @@
 ##########################
 
 .. raw:: html
-    :file: 201_12_Coaddpatches_table.html
+    :file: 201_12_CoaddPatches_table.html
