@@ -116,6 +116,7 @@ Tutorials with a learning objective of understanding one of the data products.
     201/notebook-201-9.rst
     201/notebook-201-10.rst
     201/notebook-201-11.rst
+    201/notebook-201-12.rst
 
 
 202. Images
