@@ -27,11 +27,12 @@ See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOP
 
 **2. Create DP1 Skymap**
 
-Access the "dp1.CoaddPatches" table to create a skymap of Data Preview 1 visits.
+Create a skymap of the Data Preview 1 Dataset using TOPCAT and an "aitoff" projection.
 
 **2.1 Use TAP Query window**
 
-After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.CoaddPatches" table.
+After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.CoaddPatches" table in the Table Access
+Protocol (TAP) Query Metadata section.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
 .. figure:: images/api-103-1-1.png
@@ -44,37 +45,18 @@ Notice tabs in the right-hand window.  Click on "Columns" to see a description o
 **2.2 Run ADQL query**
 
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and paste into the ADQL text window, then click "Run Query".
+This query will retrieve the RA/DEC of each of the Coadd Patches within dp1.
 
-**NOTE: It is recommended to construct a TAP query using spatial constraints,
-but his query has been limited to the top 1000 entries to reduce the amount of time required to retrieve results.**
+**NOTE: It is recommended to construct a TAP query using spatial constraints but that is not necessary in this case because the dp1.CoaddPatches table is small.**
 
 
 .. code-block:: sql
 
-  SELECT TOP 1000
-       visit, ra, dec, band, expMidptMJD
-  FROM dp1.Visit
-
-Click on "Display table cell data" to view the data returned from the query.
-
-.. figure:: images/api-103-1-2.png
-    :name: api-131-1-2
-    :alt: A screenshot of the table return window. Click on the table icon to review data within the table.
-
-    Figure 2:  Results window from query.
-
-**2.3 Review table.**
-
-Table with 1000 entries: visit number, RA, DEC, band and expMidptMJD values.
-
-.. figure:: images/api-103-1-3.png
-    :name: api-103-1-3
-    :alt: A screenshot of table.
-
-    Figure 3:  Data returned from query.
+  SELECT s_ra, s_dec
+  FROM dp1.CoaddPatches
 
 
-**2.4 Create Skymap of DP1 fields using the Sky plotting window and Aitoff projection**
+**2.3 Create Skymap of DP1 fields using the Sky plotting window and Aitoff projection**
 
 To create a Skymap of data returned from the query, click on the "Sky plotting window".
 
