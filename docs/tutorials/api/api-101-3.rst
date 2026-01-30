@@ -11,7 +11,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 **Last verified to run:** 2026-01-28
 
 **Learning objective:** This tutorial provides a basic guide to plotting data within `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
-and to explore DP1.
+to explore DP1.
 
 **LSST data products:** The DP1 catalogs within the Rubin Science Platform (RSP) Table Access Protocol (TAP) service.
 
@@ -31,7 +31,7 @@ Create a skymap of the Data Preview 1 Dataset using TOPCAT and an "aitoff" proje
 
 **2.1 Use TAP Query window**
 
-After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, where you add your credentials, click on "dp1.CoaddPatches" in the Table Access
+After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, click on "dp1.CoaddPatches" in the Table Access
 Protocol (TAP) Query Metadata section.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
@@ -94,8 +94,8 @@ Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figu
 
 Notice a new table (red arrow) is available in the TOPCAT window.  Select the table button to review the contents. Click the histogram button (red circle) to create a histogram.
 
-.. figure:: images/api-103-1-7.png
-    :name: api-103-1-7
+.. figure:: images/api-101-3-4.png
+    :name: api-101-3-4
     :alt: A screenshot of TOPCAT window.
 
     Figure 4:  New table from dp1.CCDVisit query.
@@ -104,8 +104,8 @@ Notice a new table (red arrow) is available in the TOPCAT window.  Select the ta
 
 In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
-.. figure:: images/api-103-1-8.png
-    :name: api-103-1-8
+.. figure:: images/api-101-3-5.png
+    :name: api-101-3-5
     :alt: A screenshot of TOPCAT window.
 
     Figure 5:  Initial histogram with "ra/deg" on the x-axis.
@@ -113,8 +113,8 @@ In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
 Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
 
-.. figure:: images/api-103-1-9.png
-    :name: api-103-1-9
+.. figure:: images/api-101-3-6.png
+    :name: api-101-3-6
     :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table.
 
     Figure 6:  Histogram of "magLim" for the ECDFS field.
@@ -144,12 +144,12 @@ Copy the following query into the "ADQL Text" box in the TAP Query window (see f
 
 **4.2 Create CCD**
 
-Click on the "Plane plotting window" (icon next to the "Histogram" icon in Figure 7), add "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
+Click on the "Plane plotting window" (icon next to the "Histogram" icon in Figure 4), add "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
 Put the cursor over the highest concentration of stars and zoom in to view  details.
 
 
-.. figure:: images/api-103-1-10.png
-    :name: api-103-1-10
+.. figure:: images/api-101-3-7.png
+    :name: api-101-3-7
     :alt: Color-Color diagram of ECDFS field.
 
     Figure 7:  Color-Color Diagram of ECDFS field.
