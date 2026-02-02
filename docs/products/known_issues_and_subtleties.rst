@@ -183,15 +183,15 @@ The effect is more pronounced in LSSTComCam than it will be in LSSTCam because L
 
 .. figure:: figures/issues-1-image-red-star-g-leak.png
     :name: issues-1-image-red-star-g-leak
-    :alt: Two images of the bright variable star V460 Carinae. The left panel shows a g-band LSSTComCam image with a horizontal diffraction feature circled in red; the right panel shows a reference image of the same star from the Digitized Sky Survey (DDS) via the SIMBAD database.
+    :alt: Two images of the bright variable star V460 Carinae. The left panel shows a g-band LSSTComCam image with a horizontal diffraction feature shown by red arrows; the right panel shows a reference color image of the same star from the Digitized Sky Survey (DDS) via the SIMBAD database.
 
-    Figure 1: Left: g-band LSSTComCam image of the bright long-period variable star V460 Carinae (circled in red), with a horizontal diffraction feature commonly associated with CCD channel-stop diffraction and typically observed in the y band. Right: reference image of the same source from the Digitized Sky Survey via the SIMBAD database, illustrating the nature of this object as a red and bright star.
+    Figure 1: Left: g-band LSSTComCam image of the bright long-period variable star V460 Carinae, with a horizontal diffraction feature commonly associated with CCD channel-stop diffraction and typically observed in the y band (red arrows). Right: reference color image of the same source from the Digitized Sky Survey via the SIMBAD database, illustrating the nature of this object as a red and bright star.
 
 .. figure:: figures/issues-2-delta-g-comcam-monster-g-leak.png
     :name: issues-2-delta-g-comcam-monster-g-leak
     :alt: Scatter plot of the difference between measured LSSTComCam g-band magnitudes and the Monster reference catalog synthetic LSSTComCam g-band magnitudes as a function of the Monster DES (z - y) color, for stars near the center of the Euclid Deep Field South DP1 field. A linear fit is overplotted.
 
-    Figure 2: Residuals between measured LSSTComCam g-band magnitudes and the Monster reference catalog synthetic LSSTComCam g-band magnitudes, :math:`\Delta g = g_{\rm meas}^{\rm ComCam} - g_{\rm ComCam}^{\rm Monster}`, plotted as a function of the Monster :math:`(z - y)_{\rm DES}` DES color for matched stars in the central region of the Euclid Deep Field South (EDFS) Data Preview 1 field. Each point represents an individual star. The red line shows a sigma-clipped linear fit to the data, with the fitted slope and its bootstrap uncertainty indicated in the annotation. The negative slope indicates that redder stars exhibit systematically more negative g-band residuals.
+    Figure 2: Residuals between measured LSSTComCam g-band magnitudes and the Monster reference catalog synthetic LSSTComCam g-band magnitudes, :math:`\Delta g = g_{\rm meas}^{\rm ComCam} - g_{\rm ComCam}^{\rm Monster}`, plotted as a function of the Monster :math:`(z - y)_{\rm DES}` DES color for matched stars in the central region of the Euclid Deep Field South (EDFS) Data Preview 1 field. Each point represents an individual star. The red line shows a 3-sigma-clipped linear fit to the data, with the fitted slope and its bootstrap uncertainty indicated in the annotation. The negative slope indicates that redder stars exhibit systematically more negative g-band residuals.
 
 Incorrect geometric scaling in DP1 Right Ascension errors
 =========================================================
