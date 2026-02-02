@@ -8,7 +8,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-01-28
+**Last verified to run:** 2026-02-02
 
 **Learning objective:** This tutorial provides a basic guide to plotting data within `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_
 to explore DP1.
@@ -167,6 +167,6 @@ Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in
 
 Zooming in TOPCAT is performed using the mouse (drag to move, scroll to zoom).
 TOPCAT does not currently provide keyboard shortcuts for zooming.
-Figure 8 shows a zoomed in view of the highest concentration of stars.
+Figure 8 shows a zoomed in view of the highest concentration of stars. Click the "?" icon at th elower left for further instructions.
 
 
