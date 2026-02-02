@@ -7,3 +7,7 @@ linkcheck_ignore = [
     r'https://www\.lsst\.org/content/lsst-statement-regarding-increased-deployment-satellite-constellations',
 ]
 
+linkcheck_ignore = [
+    r'https://healpix\.sourceforge\.io/?',
+]
+
