@@ -24,7 +24,9 @@ ignore = [
     "https://aladin.cds.unistra.fr/hips/", #temporary to unblock, is in portal 104-1
     "http://www.star.bris.ac.uk/~mbt/topcat/", #temporary to unblock, in ap1-1
     "https://ds9.si.edu/doc/ref/region.html", #temporary to unblock a review on portal 105 series
-    "https://healpix.sourceforge.io/" #temporary to unblock PR 161
+    "https://healpix.sourceforge.io/", #temporary to unblock PR 161
+    "https://www\.lsst\.org/content/lsst-statement-regarding-increased-deployment-satellite-constellations", #temporary to unblock api 101-3
+    "https://healpix\.sourceforge\.io/?", #temporary to unblock api 101-3
 ]
 
 [sphinx.intersphinx.projects]
