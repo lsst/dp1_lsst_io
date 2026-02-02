@@ -156,7 +156,7 @@ Click on the "Plane plotting window" shown in Figure 7 with the blue circle.
     Figure 7:  Plane plotting window button (blue circle).
 
 
-Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in the "Y:" box, then hit "Enter".
+Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in the "Y:" box (red arrow), then hit "Enter".
 
 
 .. figure:: images/api-101-3-8.png
@@ -165,8 +165,7 @@ Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in
 
     Figure 8:  Color-Color Diagram of ECDFS field.
 
+Figure 8 shows a zoomed in view of the highest concentration of stars.
 Zooming in TOPCAT is performed using the mouse (drag to move, scroll to zoom).
-TOPCAT does not currently provide keyboard shortcuts for zooming.
-Figure 8 shows a zoomed in view of the highest concentration of stars. Click the "?" icon at th elower left for further instructions.
-
+TOPCAT does not currently provide keyboard shortcuts for zooming.  Click the "?" icon (red circle) at the lower left for further instructions.
 
