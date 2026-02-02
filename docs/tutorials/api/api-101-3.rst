@@ -23,11 +23,12 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 
 
 **1. Open TOPCAT and access DP1 Data.**
-See API Tutorial 101-1 for instructions on how to access Rubin DP1 data with TOPCAT.
+
+See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
 
 **2. Create DP1 Skymap**
 
-Create a skymap of the Data Preview 1 Dataset using TOPCAT and an "aitoff" projection.
+Create a skymap of the Data Preview 1 Dataset using TOPCAT and an `"aitoff" <https://en.wikipedia.org/wiki/Aitoff_projection>`_ projection.
 
 **2.1 Use TAP Query window**
 
@@ -47,7 +48,8 @@ Notice tabs in the right-hand window.  Click on "Columns" to see a description o
 Within the ADQL Text panel of the Table Access Protocol (TAP) Query window, copy the ADQL query below and paste into the ADQL text window, then click "Run Query".
 This query will retrieve the RA/DEC of each of the Coadd Patches within dp1.
 
-**NOTE: It is recommended to construct a TAP query using spatial constraints but that is not necessary in this case because the dp1.CoaddPatches table is small.**
+**NOTE: It is recommended to construct a TAP query using spatial constraints but that is not necessary in this case because the dp1.CoaddPatches table is small.
+See examples of queries with spatial constraints in API 101-1 (linked above) or step 3.1 below.**
 
 
 .. code-block:: sql
