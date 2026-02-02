@@ -146,14 +146,27 @@ Copy the following query into the "ADQL Text" box in the TAP Query window (see f
 
 **4.2 Create CCD**
 
-Click on the "Plane plotting window" (icon next to the "Histogram" icon in Figure 4), add "g_psfMag-r_psfMag" in the "X:" selection box and "r_psfMag-i_psfMag" in the "Y:" box.
-Put the cursor over the highest concentration of stars and zoom in to view  details.
+Click on the "Plane plotting window" shown in Figure 7 with the blue circle.
 
 
 .. figure:: images/api-101-3-7.png
     :name: api-101-3-7
+    :alt: Plane plotting window button.
+
+    Figure 7:  Plane plotting window button (blue circle).
+
+
+Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in the "Y:" box, then hit "Enter".
+
+
+.. figure:: images/api-101-3-8.png
+    :name: api-101-3-8
     :alt: Color-Color diagram of ECDFS field.
 
-    Figure 7:  Color-Color Diagram of ECDFS field.
+    Figure 8:  Color-Color Diagram of ECDFS field.
+
+Zooming in TOPCAT is performed using the mouse (drag to move, scroll to zoom).
+TOPCAT does not currently provide keyboard shortcuts for zooming.
+Figure 8 shows a zoomed in view of the highest concentration of stars.
 
 
