@@ -181,13 +181,13 @@ CBP measurements indicate measurable transmission at these wavelengths, with thr
 Although the filter transmits some long-wavelength light, the CCD quantum efficiency (QE) drops sharply beyond 1100 nm, so the total system throughput at these wavelengths remains small.
 The effect is more pronounced in LSSTComCam than it will be in LSSTCam because LSSTComCam CCDs were operated at temperatures about 20°C-40°C warmer (`SITCOMTN-149 <https://sitcomtn-149.lsst.io/>`__).
 
-.. figure:: figures/issues-1-image-red-star-g-leak.png
+.. figure:: images/issues-1-image-red-star-g-leak.png
     :name: issues-1-image-red-star-g-leak
     :alt: Two images of the bright variable star V460 Carinae. The left panel shows a g-band LSSTComCam image with a horizontal diffraction feature shown by red arrows; the right panel shows a reference color image of the same star from the Digitized Sky Survey (DDS) via the SIMBAD database.
 
     Figure 1: Left: g-band LSSTComCam image of the bright long-period variable star V460 Carinae, with a horizontal diffraction feature commonly associated with CCD channel-stop diffraction and typically observed in the y band (red arrows). Right: reference color image of the same source from the Digitized Sky Survey via the SIMBAD database, illustrating the nature of this object as a red and bright star.
 
-.. figure:: figures/issues-2-delta-g-comcam-monster-g-leak.png
+.. figure:: images/issues-2-delta-g-comcam-monster-g-leak.png
     :name: issues-2-delta-g-comcam-monster-g-leak
     :alt: Scatter plot of the difference between measured LSSTComCam g-band magnitudes and the Monster reference catalog synthetic LSSTComCam g-band magnitudes as a function of the Monster DES (z - y) color, for stars near the center of the Euclid Deep Field South DP1 field. A linear fit is overplotted.
 
