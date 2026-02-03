@@ -54,21 +54,6 @@ Additional data products (e.g., calibration frames, filter bandpasses, filter tr
     filter_transformations/index
 
 
-Auxiliary information
-=====================
-
-Extra details and helpful hints.
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    adql_queries
-    butler_terminology
-    known_issues_and_subtleties
-    name_changes
-
-
 User-generated data products
 ============================
 

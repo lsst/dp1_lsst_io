@@ -12,7 +12,7 @@ The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astrono
 ADQL is based on the 1992 ANSI-standard dialect of Structured Query Language (SQL92).
 
 .. Important::
-    If a query takes longer than expected, please :ref:`tutorials-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
+    If a query takes longer than expected, please :ref:`access-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
     Rubin staff are happy to investigate and to help tweak queries for optimal execution.
 
 

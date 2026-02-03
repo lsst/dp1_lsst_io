@@ -23,7 +23,7 @@ Overview
 General information about the observations that comprise the dataset.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
 
    Overview <overview/index>
@@ -50,10 +50,22 @@ Summaries of the data processing steps that generated the data products.
 
    Data processing <processing/index>
 
-Data access and analysis
-========================
+Data access
+===========
 
-Tutorials demonstrating how to access and analyze data via the Rubin Science Platform (RSP).
+Services and tools for data access.
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   Data access <access/index>
+
+
+Tutorials
+=========
+
+Tutorials demonstrating how to access and analyze the data products.
 
 .. toctree::
    :maxdepth: 1
@@ -63,8 +75,8 @@ Tutorials demonstrating how to access and analyze data via the Rubin Science Pla
 
 .. _overview-citedp1:
 
-How to cite Data Preview 1
-==========================
+Cite
+====
 
 How to cite Rubin Observatory and Data Preview 1.
 
