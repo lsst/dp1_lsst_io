@@ -1,8 +1,8 @@
 .. _products_name_changes:
 
-############
-Name changes
-############
+################################
+Butler dataset type name changes
+################################
 
 Butler dataset types with name changes since Data Preview 0.
 
