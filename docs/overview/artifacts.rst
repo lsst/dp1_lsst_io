@@ -1,8 +1,8 @@
 .. _artifacts:
 
-#########
-Artifacts
-#########
+###############
+Image artifacts
+###############
 
 Some image artifacts from the camera or processing will remain visible in the data.
 

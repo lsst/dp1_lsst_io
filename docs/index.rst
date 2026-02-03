@@ -20,7 +20,7 @@ All scientists and students in the US and Chile, plus named members of internati
 Overview
 ========
 
-General information about the observations that comprise the dataset.
+General information about the observations, image quality, and known issues.
 
 .. toctree::
    :maxdepth: 2
@@ -34,7 +34,7 @@ Data products
 Descriptions and schema for the images and catalogs.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
 
    Data products <products/index>
@@ -45,7 +45,7 @@ Data processing
 Summaries of the data processing steps that generated the data products.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
 
    Data processing <processing/index>
@@ -56,7 +56,7 @@ Data access
 Services and tools for data access.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
 
    Data access <access/index>
@@ -68,7 +68,7 @@ Tutorials
 Tutorials demonstrating how to access and analyze the data products.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :titlesonly:
 
    Tutorials <tutorials/index>
