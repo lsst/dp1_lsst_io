@@ -1,8 +1,8 @@
 .. _products_butler_terminology:
 
-#################################
-Butler terminology and query tips
-#################################
+###########################
+Butler tips and terminology
+###########################
 
 As the system used to organize Rubin datasets both for users and behind the scenes, the terminology used to describe a data product within the data butler is often used more broadly in tutorials and documentation, even in contexts where data access does not use the butler directly.
 
