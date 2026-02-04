@@ -10,11 +10,7 @@ and tables of survey metadata for the observations.
 The `schema browser <https://sdm-schemas.lsst.io/>`_ includes column descriptions for all tables.
 
 Catalog data products are available via TAP, and most are also available with the Butler.
-See the following resources to get started with these services:
-
-* :doc:`/tutorials/index`
-* :doc:`/products/adql_queries`
-* :doc:`/products/butler_terminology`
+See the :doc:`/access/index` and the :doc:`/tutorials/index` pages to get started with these services.
 
 
 Object
@@ -28,7 +24,6 @@ Measurements on the deep coadd images at the locations of all detected objects.
     :glob:
 
     object
-
 
 
 Source and forced source
@@ -45,8 +40,8 @@ Measurements on the individual images at the locations of all objects.
     forced_source
 
 
-Difference image analysis
-=========================
+Difference image analysis (DIA)
+===============================
 
 Measurements on the difference and visit images at the locations of all variable or moving objects.
 
@@ -60,10 +55,10 @@ Measurements on the difference and visit images at the locations of all variable
     dia_forced_source
 
 
-Moving objects
-==============
+Solar system (SS)
+=================
 
-Derived properties for moving objects detected in images.
+Derived properties for moving objects detected in difference images.
 
 .. toctree::
     :maxdepth: 1
@@ -76,10 +71,10 @@ Derived properties for moving objects detected in images.
 
 
 
-Observations
-============
+Observations and metadata
+=========================
 
-Observational metadata for visits and detectors.
+Metadata for observations (visits and detectors) and the sky map (tracts and patches).
 
 .. toctree::
     :maxdepth: 1
@@ -88,3 +83,4 @@ Observational metadata for visits and detectors.
 
     visit_table
     visit_detector_table
+    coadd_patches

@@ -1,8 +1,8 @@
 .. _products_adql_queries:
 
-##############################
-TAP terminology and query tips
-##############################
+########################
+TAP tips and terminology
+########################
 
 TAP (Table Access Protocol) provides standardized access to catalog data for discovery, search, and retrieval.
 `Full documentation for TAP <https://www.ivoa.net/documents/TAP/>`_ is provided by the International Virtual Observatory Alliance (`IVOA <https://www.ivoa.net/>`_).
@@ -12,7 +12,7 @@ The language is used by the `IVOA <https://www.ivoa.net/>`_ to represent astrono
 ADQL is based on the 1992 ANSI-standard dialect of Structured Query Language (SQL92).
 
 .. Important::
-    If a query takes longer than expected, please :ref:`tutorials-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
+    If a query takes longer than expected, please :ref:`access-getsupport` by asking for help in the `Rubin Community Forum <https://community.lsst.org/>`_.
     Rubin staff are happy to investigate and to help tweak queries for optimal execution.
 
 

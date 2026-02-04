@@ -160,7 +160,7 @@ Epochs (nights)
 
 .. _observations-tracts:
 
-Coadd Tracts
+Coadd tracts
 ============
 
 .. list-table:: Table 4: Coadd tract IDs for each field

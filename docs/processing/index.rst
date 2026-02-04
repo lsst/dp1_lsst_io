@@ -33,7 +33,7 @@ Instrument signature removal (ISR)
 Corrects the raw images for the effects of the telescope and detector.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     isr/index
@@ -47,7 +47,7 @@ Calibration
 Generates the science-ready processed visit images.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     calibration/index
@@ -61,7 +61,7 @@ Coaddition
 Generates the deep coadd and template images.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     coaddition/index
@@ -75,7 +75,7 @@ Source detection and measurement
 Generates catalogs of detected sources and measurements of their properties.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     detection/index
@@ -89,7 +89,7 @@ Difference image analysis
 Runs image subtraction to generate difference images and associated detection catalogs.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     dia/index
@@ -103,7 +103,7 @@ Moving objects processing
 Links detected sources into moving objects and generates Solar System catalogs.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     moving/index

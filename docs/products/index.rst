@@ -12,7 +12,7 @@ Catalogs
 Tables of measurements made on detected sources, plus observational metadata.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     catalogs/index
@@ -23,7 +23,7 @@ Images
 Individual, difference, and coadded images of the sky in the six LSST filters.
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
     :glob:
 
     images/index
@@ -54,23 +54,8 @@ Additional data products (e.g., calibration frames, filter bandpasses, filter tr
     filter_transformations/index
 
 
-Auxiliary information
-=====================
-
-Extra details and helpful hints.
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    adql_queries
-    butler_terminology
-    known_issues_and_subtleties
-    name_changes
-
-
-User-generated data products
-============================
+User-generated products
+=======================
 
 Derived and third-party data products.
 

@@ -1,38 +1,13 @@
 .. _tutorials:
 
-########################
-Data access and analysis
-########################
+#########
+Tutorials
+#########
 
-Tutorials demonstrating how to access and analyze data via the Rubin Science Platform (RSP).
+Tutorials demonstrating :doc:`/access/index` and analysis via the Rubin Science Platform (RSP).
 
-**Data Policy:** Only Rubin data rights holders may have an account in the Rubin Science Platform (RSP) and access to Data Preview 1.
-All scientists and students in the US and Chile, plus named members of international in-kind teams, have Rubin data rights.
-
-`Learn more about the Rubin data policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`_.
-
-
-.. _tutorials-getstarted:
-
-Get started
-===========
-
-**Get a new RSP account:** follow these `instructions to sign up <https://rsp.lsst.io/guides/getting-started/get-an-account.html>`_.
-
-**Learn about the RSP:** visit the Portal, Notebook, and API aspects' `User Guides <https://rsp.lsst.io/guides/index.html>`_.
-
-**Work through the tutorials:** they are organized into levels (100, 200, 300), and each level into multiple series (by topic), which proceed from beginner to advanced skills.
-
-
-.. _tutorials-getsupport:
-
-Get support
-===========
-
-To ask question and get help with any aspect of Rubin Observatory please post a new topic in the Rubin Community Forum's `Support category <https://community.lsst.org/c/support/6>`_.
-
-Weekly `Rubin Science Assemblies <https://rubinobservatory.org/for-scientists/events-deadlines/events-rsa>`_ offer presentations, hands-on tutorials, and drop-in office hours to support use of the Rubin data products, services, and tools.
-
+Tutorials are organized to proceed from beginner to advanced skills.
+Find general information about the RSP's Portal, Notebook, and API aspects in the `RSP User Guides <https://rsp.lsst.io/guides/index.html>`_.
 
 .. _tutorials-portal:
 
