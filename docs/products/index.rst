@@ -54,8 +54,8 @@ Additional data products (e.g., calibration frames, filter bandpasses, filter tr
     filter_transformations/index
 
 
-User-generated data products
-============================
+User-generated products
+=======================
 
 Derived and third-party data products.
 

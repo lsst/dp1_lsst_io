@@ -26,7 +26,6 @@ Measurements on the deep coadd images at the locations of all detected objects.
     object
 
 
-
 Source and forced source
 ========================
 
@@ -41,8 +40,8 @@ Measurements on the individual images at the locations of all objects.
     forced_source
 
 
-Difference image analysis
-=========================
+Difference image analysis (DIA)
+===============================
 
 Measurements on the difference and visit images at the locations of all variable or moving objects.
 
@@ -56,10 +55,10 @@ Measurements on the difference and visit images at the locations of all variable
     dia_forced_source
 
 
-Moving objects
-==============
+Solar system (SS)
+=================
 
-Derived properties for moving objects detected in images.
+Derived properties for moving objects detected in difference images.
 
 .. toctree::
     :maxdepth: 1
