@@ -71,10 +71,10 @@ Derived properties for moving objects detected in difference images.
 
 
 
-Observations
-============
+Observations and metadata
+=========================
 
-Observational metadata for visits and detectors.
+Metadata for observations (visits and detectors) and the sky map (tracts and patches).
 
 .. toctree::
     :maxdepth: 1
@@ -83,3 +83,4 @@ Observational metadata for visits and detectors.
 
     visit_table
     visit_detector_table
+    coadd_patches
