@@ -40,7 +40,7 @@ A summary of the mean PSF for visit images, and the coadded depth.
     iqsummary
 
 Image artifacts
-=============
+===============
 
 Artifacts from the camera or processing that are visible in the data.
 
