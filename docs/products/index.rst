@@ -34,7 +34,7 @@ Maps
 All-sky maps of deep coadded images, survey depth, image quality, and more.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     spmaps/index
@@ -46,7 +46,7 @@ Auxiliary products
 Additional data products (e.g., calibration frames, filter bandpasses, filter transformations).
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     calibrations/index
@@ -60,7 +60,7 @@ User-generated data products
 Derived and third-party data products.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :glob:
 
     lsdb

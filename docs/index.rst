@@ -24,7 +24,7 @@ General information about the observations, image quality, and known issues.
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :glob:
 
    Overview <overview/index>
 
@@ -35,7 +35,7 @@ Descriptions and schema for the images and catalogs.
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :glob:
 
    Data products <products/index>
 
@@ -46,7 +46,7 @@ Summaries of the data processing steps that generated the data products.
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :glob:
 
    Data processing <processing/index>
 
@@ -57,7 +57,7 @@ Services and tools for data access.
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :glob:
 
    Data access <access/index>
 
@@ -69,7 +69,7 @@ Tutorials demonstrating how to access and analyze the data products.
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
+   :glob:
 
    Tutorials <tutorials/index>
 
