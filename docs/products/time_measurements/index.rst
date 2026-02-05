@@ -26,4 +26,4 @@ Finally, TDB (or barycentric dynamical time) is a relativistic coordinate time s
 Time scales in DP1
 ==================
 
-The DP1 data products that contain time measurements include the mean epoch of an object in the ugrizy-band coadds (e.g., ``r_epoch``), in the :ref:`object` catalog, ``obsStart``, ``expMidptMJD``, ``expMidpt``, and ``obsStartMJD`` in both the :ref:`visit_table` and :ref:`visit_detector_table` catalogs, and the ``discoverySubmissionDate`` in the :ref:`ssobject` catalog.
+The DP1 data products that contain time measurements include the mean epoch of an object in the ugrizy-band coadds (e.g., ``r_epoch``), in the :doc:`object <../catalogs/object>` catalog, ``obsStart``, ``expMidptMJD``, ``expMidpt``, and ``obsStartMJD`` in both the :doc:`visit <../catalogs/visit_table>` and :docs:`ccdvisit <../catalogs/visit_detector_table>` catalogs, and the ``discoverySubmissionDate`` in the :docs:`ssobject <../catalogs/ss_object>` catalog.
