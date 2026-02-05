@@ -7,7 +7,9 @@ Time Measurements
 Time scale definitions
 ======================
 
-Time measurements in the DP1 data products are in International Atomic Time (TAI). TAI is a weighted average of the time kept by more than 450 atomic clocks in over 80 national laboratories worldwide that are combined by the International Bureau of Weights and Measures (BIPM, France) to calculate the most stable time scale possible.
+Time measurements in the DP1 data products are in International Atomic Time (TAI).
+
+TAI is a weighted average of the time kept by more than 450 atomic clocks in over 80 national laboratories worldwide that are combined by the International Bureau of Weights and Measures (BIPM, France) to calculate the most stable time scale possible.
 
 TAI differs from UTC (Coordinated Universal Time) by an integral number of seconds (currently 37) through the addition of "leap seconds" used to keep UTC within 0.9 seconds of UT1.
 
