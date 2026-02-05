@@ -34,4 +34,4 @@ Finally, TDB (or barycentric dynamical time) is a relativistic coordinate time s
 
 To convert between timescales, the astropy python library has helpful resources.
 
-Using the astropy `Time` object, declare times from TAP catalog queries as e.g., `t = Time(60623, format='mjd', scale='tai')`. Conversion to a different timescale and format can be done using, e.g., `t.utc.datetime` or `t.tt.jd`. It is advised to always include a `scale='xxx'` when defining astropy `Time` objects, since astropy assumes times are in UTC.
+Using the astropy ``Time`` object, declare times from TAP catalog queries as e.g., ``t = Time(60623, format='mjd', scale='tai')``. Conversion to a different timescale and format can be done using, e.g., ``t.utc.datetime`` or ``t.tt.jd``. It is advised to always include a ``scale='xxx'`` when defining astropy ``Time`` objects, since astropy assumes times are in UTC.
