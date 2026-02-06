@@ -33,7 +33,7 @@ Finally, TDB (or barycentric dynamical time) is a relativistic coordinate time s
     Figure 1: Differences in the various astronomical time scales over the past 25 years (credit: Tim Lister).
 
 Converting between time scales
-=============================
+==============================
 
 To convert between time scales, the astropy python library has helpful resources.
 
