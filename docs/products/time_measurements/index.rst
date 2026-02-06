@@ -28,10 +28,13 @@ Finally, TDB (or barycentric dynamical time) is a relativistic coordinate time s
 
 .. figure:: figures/astronomical_timescales.png
     :name: astronomical_timescales
-    :alt: Astronomical timescale differences over the past 25 years.
+    :alt: Astronomical time scale differences over the past 25 years.
 
-    Figure 1: Differences in the various astronomical timescales over the past 25 years (credit: Tim Lister).
+    Figure 1: Differences in the various astronomical time scales over the past 25 years (credit: Tim Lister).
 
-To convert between timescales, the astropy python library has helpful resources.
+Converting between time scales
+=============================
 
-Using the astropy ``Time`` object, declare times from TAP catalog queries as e.g., ``t = Time(60623, format='mjd', scale='tai')``. Conversion to a different timescale and format can be done using, e.g., ``t.utc.datetime`` or ``t.tt.jd``. It is advised to always include a ``scale='xxx'`` when defining astropy ``Time`` objects, since astropy assumes times are in UTC.
+To convert between time scales, the astropy python library has helpful resources.
+
+Using the astropy ``Time`` object, declare times from TAP catalog queries as e.g., ``t = Time(60623, format='mjd', scale='tai')``. Conversion to a different time scale and format can be done using, e.g., ``t.utc.datetime`` or ``t.tt.jd``. It is advised to always include a ``scale='xxx'`` when defining astropy ``Time`` objects, since astropy assumes times are in UTC.
