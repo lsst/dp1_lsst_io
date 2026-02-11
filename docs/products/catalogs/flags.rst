@@ -46,17 +46,17 @@ DP1 contains **660+ flag columns** distributed across five catalog tables:
    * - :ref:`Source <catalogs-source>`
      - 82
      - Single-epoch visit detections; includes centroiding, photometry, deblending flags
-   * - :ref:`ForcedSource <catalogs-forced_source>`
+   * - :ref:`ForcedSource <catalogs-forced-source>`
      - 15
      - Forced photometry at Object positions; primarily pixel quality flags
-   * - :ref:`DiaSource <catalogs-dia_source>`
+   * - :ref:`DiaSource <catalogs-dia-source>`
      - 36
      - Difference imaging detections; includes real/bogus classification, dipole flags
-   * - :ref:`ForcedSourceOnDiaObject <catalogs-dia_forced_source>`
+   * - :ref:`ForcedSourceOnDiaObject <catalogs-dia-forced-source>`
      - 15
      - Forced photometry at DiaObject positions; similar to ForcedSource
 
-Tables without flag columns: :ref:`DiaObject <catalogs-dia_object>`, :ref:`Visit <catalogs-visit_table>`, :ref:`CcdVisit <catalogs-visit_detector_table>`, :ref:`CoaddPatches <catalogs-coadd_patches>`, SSObject, SSSource, MPCORB contain metadata and aggregate statistics but no per-row quality flags.
+Tables without flag columns: :ref:`DiaObject <catalogs-dia-object>`, :ref:`Visit <catalogs-visit-table>`, :ref:`CcdVisit <catalogs-visit-detector-table>`, :ref:`CoaddPatches <catalogs-coadd-patches>`, SSObject, SSSource, MPCORB contain metadata and aggregate statistics but no per-row quality flags.
 
 Flag categories
 ===============
