@@ -26,10 +26,12 @@ Rubin staff will respond to all questions posted there.
 In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the Portal Aspect, and log in.
 
 **2. Select the DP1 Catalogs tab.**
-On the Portal landing page, click on the tab labeled "DP1 Catalogs". Leave the default table selection.
+On the Portal landing page, click on the tab labeled "DP1 Catalogs".
+To ensure this user interface is set to the default: ensure the "dp1.Object" table is selected from the right-hand drop-down menu and click "Reset Column Selection and Constraints" at upper right.
 
 **3. Enter Constraints.**
-Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button next to "Spatial Type". This will make a pop-up window appear with the interface to upload a table.
+Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button next to "Spatial Type".
+This will make a pop-up window appear with the interface to upload a table.
 
 .. figure:: images/portal-106-1-1.png
     :name: portal-106-1-1
@@ -38,7 +40,9 @@ Check the box to the left of the "Spatial" section (uncheck the other two if che
     Figure 1. The interface to upload a table.
 
 **4. Create a table to upload.**
-Copy the example table below and save it as a CSV file called ``dp1_106_1_user_table.csv``. Avoid using the "+" prefix for positive infinity (i.e., "+inf") in any of your columns. These values are not recognized as valid float values, and the entire column will be interpreted as a character type.
+Copy the example table below and save it as a CSV file called ``dp1_106_1_user_table.csv``.
+Avoid using the "+" prefix for positive infinity (i.e., "+inf") in any of your columns.
+These values are not recognized as valid float values, and the entire column will be interpreted as a character type.
 
 .. code-block::
 
@@ -50,7 +54,8 @@ Copy the example table below and save it as a CSV file called ``dp1_106_1_user_t
     1237670016195691261,38.18971577,6.703589365
 
 **5. Upload a table to the Portal.**
-In the pop-up window for table uploads, select "Upload file" and click on "Choose File". Select the CSV file containing the user table and click the "Load Table" button.
+In the pop-up window for table uploads, select "Upload file" and click on "Choose File".
+Select the CSV file containing the user table and click the "Load Table" button.
 
 .. figure:: images/portal-106-1-2.png
     :name: portal-106-1-2
@@ -59,7 +64,10 @@ In the pop-up window for table uploads, select "Upload file" and click on "Choos
     Figure 2. The pop-up window after uploading a table, with a list of columns shown.
 
 **6. Select columns and set the radius for cross-matching.**
-Click the drop down menu under "Position Columns (from the uploaded table). Indicate which of the uploaded table columns to use for spatial matching (default "ra" and "dec"). Click the drop down menu under "Position Columns (from the selected table on the right) and check that the default "coord_ra" and "coord_dec" are shown. Set the search radius to 1 arcseconds.
+Click the drop down menu under "Position Columns (from the uploaded table).
+Indicate which of the uploaded table columns to use for spatial matching (default "ra" and "dec").
+Click the drop down menu under "Position Columns (from the selected table on the right) and check that the default "coord_ra" and "coord_dec" are shown.
+Set the search radius to 1 arcseconds.
 
 .. figure:: images/portal-106-1-3.png
     :name: portal-106-1-3
@@ -68,9 +76,12 @@ Click the drop down menu under "Position Columns (from the uploaded table). Indi
     Figure 3. The interface to select the position columns and set the radius to be used for cross-matching.
 
 **7. Click search.**
-At the lower left, click the blue button named "Search". Leave the default row limit.
+At the lower left, click the blue button named "Search".
+Leave the default row limit.
 
-**8. Review the results**. The search returns matches for all five of the objects from the user-uploaded table. The results interface includes a table with the default column selections from the DP1 Object table and the "ra" and "dec" columns from the uploaded table.
+**8. Review the results**.
+The search returns matches for all five of the objects from the user-uploaded table.
+The results interface includes a table with the default column selections from the DP1 Object table and the "ra" and "dec" columns from the uploaded table.
 
 .. figure:: images/portal-106-1-4.png
     :name: portal-106-1-4
