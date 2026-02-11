@@ -13,6 +13,19 @@ Catalog data products are available via TAP, and most are also available with th
 See the :doc:`/access/index` and the :doc:`/tutorials/index` pages to get started with these services.
 
 
+Flag columns
+============
+
+Guidance on understanding and using boolean quality flag columns across all catalog tables.
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+    :glob:
+
+    flags
+
+
 Object
 ======
 
