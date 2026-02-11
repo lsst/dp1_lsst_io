@@ -31,7 +31,7 @@ Stage 1 is :ref:`Instrument Signature Removal (ISR) <isr>`, which applies the in
 Stage 2
 =======
 
-Stage 2 is multi-visit and full-visit recalibration, including :ref:`FGCM photometric calibration <processing_calibration-photometric>`\ and :ref:`gbdes astrometric calibration <processing_calibration-astrometric>`\.
+Stage 2 is multi-visit and full-visit recalibration, including :ref:`FGCM photometric calibration <calibration-photometric>` and :ref:`gbdes astrometric calibration <calibration-astrometric>`.
 
 .. figure:: images/DP1-stage2-figure.png
   :alt: Pipeline graph of DP1 DRP Stage 2, showing recalibration steps
