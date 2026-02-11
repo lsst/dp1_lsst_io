@@ -27,7 +27,7 @@ In a web browser go to `data.lsst.cloud <https://data.lsst.cloud/>`_, select the
 
 **2. Select the DP1 Catalogs tab.**
 On the Portal landing page, click on the tab labeled "DP1 Catalogs".
-To ensure this user interface is set to the default: ensure the "dp1.Object" table is selected from the right-hand drop-down menu and click "Reset Column Selection and Constraints" at upper right.
+To ensure this user interface is set to the default: select the "dp1.Object" table from the right-hand drop-down menu and click "Reset Column Selection and Constraints" at upper right.
 
 **3. Enter Constraints.**
 Check the box to the left of the "Spatial" section (uncheck the other two if checked), and click on the "Multi-object" button next to "Spatial Type".
