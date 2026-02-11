@@ -17,7 +17,7 @@ For simplicity, all DRP tasks designed to compute metrics and make plots are omi
 Stage 1
 =======
 
-Stage 1 is :ref:`ISR <processing_isr>`\, which applies the input :ref:`calibration data products <products_calibrations>`\ to :ref:`raw images <products_images-raw>`\, and produces 'post_isr_images'. These are matched to the :ref:`Monster reference catalog <processing_photometric-monster>`\ to derive the initial single-detector calibrations, and analysis is performed on those calibrated single-visit images (which includes matching across visits).
+Stage 1 is :ref:`Instrument Signature Removal (ISR) <isr>`, which applies the input :ref:`calibration data products <calibrations>` to :ref:`raw <images-raw>`, and produces 'post_isr_images'. These are matched to the :doc:`/processing/calibration/monster` to derive the initial single-detector calibrations, and analysis is performed on those calibrated single-visit images (which includes matching across visits).
 
 .. figure:: images/DP1-stage1-figure.png
   :alt: Pipeline graph of DP1 DRP stage1, showing single visit processing steps
@@ -31,7 +31,7 @@ Stage 1 is :ref:`ISR <processing_isr>`\, which applies the input :ref:`calibrati
 Stage 2
 =======
 
-Stage 2 is multi-visit and full-visit recalibration.
+Stage 2 is multi-visit and full-visit recalibration, including :ref:`FGCM photometric calibration <processing_calibration-photometric>`\ and :ref:`gbdes astrometric calibration <processing_calibration-astrometric>`\.
 
 .. figure:: images/DP1-stage2-figure.png
   :alt: Pipeline graph of DP1 DRP Stage 2, showing recalibration steps
