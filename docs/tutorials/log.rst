@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-02-10
+==========
+
+Updated Notebook tutorial 101.3 to add Linux Nautlius for WebDAV.
+
+
 2026-01-30
 ==========
 
