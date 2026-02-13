@@ -1,8 +1,8 @@
-.. _api-101-2:
+.. _api-102-1:
 
-###################################
-101.2. How to get started with PyVO
-###################################
+#################################################
+102.1. How to get started with PyVO using TAP
+#################################################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
@@ -162,8 +162,8 @@ Optionally display the first few rows.
 
    results[:5]
 
-.. figure:: images/api-101-2-1.png
-   :name: api-101-2-1
+.. figure:: images/api-102-1-1.png
+   :name: api-102-1-1
    :alt: Screenshot of a notebook output displaying the first five rows of the query result table.
 
    Figure 1: Preview of the DP1 ``visit`` table query results returned by the TAP service.
