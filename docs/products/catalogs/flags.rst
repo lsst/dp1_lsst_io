@@ -383,7 +383,7 @@ Standard source quality selection:
 .. code-block:: sql
 
    WHERE centroid_flag = false              -- Centroid succeeded (position reliable)
-     AND psfFlux_flag = false               -- PSF flux succeeded  
+     AND psfFlux_flag = false               -- PSF flux succeeded
      AND pixelFlags_edge = false            -- Not on CCD edge
      AND pixelFlags_saturatedCenter = false -- No saturation at center
      AND pixelFlags_bad = false             -- No bad pixels
@@ -569,7 +569,7 @@ Transient/supernova search
 .. code-block:: python
 
    # Require at least 2 high-quality detections
-   diaobj_quality = diasource_quality.groupby('diaObjectId').size()
+   diaobj_quality = diasource_quality.groupby("diaObjectId").size()
    good_objects = diaobj_quality[diaobj_quality >= 2].index
 
 **Typical purity:** High (~80-90% real transients)
@@ -749,40 +749,6 @@ General recommendations
 
 10. **Consult Science Pipelines code for advanced usage:** For sophisticated filtering, examine selector configurations in ``analysis_tools`` (e.g., ``CoaddPlotFlagSelector``) and ``meas_algorithms`` (e.g., ``ScienceSourceSelectorConfig``) to see Data Management team's internal quality criteria.
 
-Common pitfalls
----------------
-
-**Pitfall:** Using measurements without checking corresponding flags.
-
-   **Solution:** Always verify ``*_flag = false`` for any quantity in your analysis.
-
-**Pitfall:** Treating all flagged objects as "bad" unconditionally.
-
-   **Solution:** Some flags are informational (e.g., ``calib_psf_candidate``) or apply only to specific measurements. Understand what each flag indicates.
-
-**Pitfall:** Ignoring ``deblend_nChild`` in Source table.
-
-   **Solution:** Failing to filter parents (``nChild > 0``) leads to double-counting flux and inflated object counts.
-
-**Pitfall:** Applying Object table flag logic directly to Source table without considering deblending.
-
-   **Solution:** Source table requires deblending flags; Object table does not (deblending already applied in coadd detection).
-
-**Pitfall:** Using deprecated flags (e.g., ``pixelFlags_edge`` on Object coadds).
-
-   **Solution:** For Object coadds, use ``pixelFlags_sensor_edge`` instead of ``edge``/``offimage`` (deprecated).
-
-**Pitfall:** Over-filtering and losing science signal.
-
-   **Solution:** Not all pixel flags need to be False for every science case. For example, mild ``pixelFlags_interpolated`` (not Center) might be acceptable if you don't need sub-percent photometry precision.
-
-**Pitfall:** Trusting ``reliability`` scores without understanding model limitations.
-
-   **Solution:** DP1's real/bogus classifier is preliminary. Validate your sample, especially for unusual object types (very bright, unusual colors, extended transients).
-
-**Pitfall:** Assuming ``calib_*`` flags indicate high quality or good stars.
-
-   **Solution:** These flags only show if an object was *used* in preliminary calibration, not that it's a reliable reference or high-quality measurement. In DP1, calibration flags have known issues and should be used cautiously.
 
 Further reading
 ===============
@@ -797,13 +763,3 @@ Further reading
 - **Analysis tools source code:** ``analysis_tools`` repository ``CoaddPlotFlagSelector`` for Data Management's internal flag selections
 - **Science Pipelines:** ``meas_algorithms`` repository ``ScienceSourceSelectorConfig`` for source selection criteria
 
-Questions and support
-======================
-
-For questions about flag usage or to report issues with flag behavior in DP1 data:
-
-- **Community Forum:** https://community.lsst.org (tag with "data-preview" or "dp1")
-- **GitHub issues:** Report suspected flag bugs or documentation issues in the relevant Science Pipelines package repositories
-- **DP1 documentation feedback:** Contact the Community Science Team via the forum
-
-**Remember:** Flag filtering is a critical step in Rubin data analysis. The Science Pipelines provide extensive flags to enable users to make informed quality decisions tailored to their science requirements. When in doubt, err on the side of caution and apply stricter flag cuts—you can always relax them if your science permits.
