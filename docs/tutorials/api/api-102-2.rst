@@ -1,0 +1,192 @@
+.. _api-102-2:
+
+#################################################
+102.2. How to get started with PyVO using SIA
+#################################################
+
+For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
+
+**Data Release:** DP1
+
+**Last verified to run:** 2026-02-13
+
+**Learning objective:** Query Rubin DP1 images using the Simple Image Access (SIA) protocol with PyVO from a Python environment.
+
+**LSST data products:** DP1 images accessed via the Rubin Science Platform SIA service.
+
+**Credit:** Developed by Andrés A. Plazas Malagón and the Rubin Community Science Team (CST), and based on tutorials developed by the CST. Please consider acknowledging them if this tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_ of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+
+
+Introduction
+------------
+
+This tutorial demonstrates how to access Rubin DP1 image data programmatically using the API Aspect of the Rubin Science Platform. The tutorial uses the Python Virtual Observatory (PyVO) package to authenticate with the Rubin Simple Image Access (SIA) service and query for images.
+
+Simple Image Access (SIA) is a protocol of the International Virtual Observatory Alliance (IVOA). It provides a standardized model for image metadata, and the capability to query and retrieve image datasets. Learn more in the `IVOA SIA documentation <https://www.ivoa.net/documents/SIA/>`_.
+
+This workflow is suitable for users who prefer scripted or automated access to Rubin data from a local Python environment or from cloud-based environments such as Google Colab. Familiarity with basic Python syntax is assumed.
+
+Related tutorials describe image access via the Notebook Aspect of the Rubin Science Platform, such as :doc:`/tutorials/notebook/103/notebook-103-2`.
+
+1. Create an RSP access token
+------------------------------
+
+Create an RSP access token following the instructions on the `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_
+
+Configure the token with the following properties:
+
+- Include ``pyvo`` or ``sia`` in the token name.
+- Select the ``read:image`` scope.
+- No expiration date.
+
+Copy the token to a secure location. The token will not be shown again.
+
+.. Important::
+
+   Treat tokens like passwords.
+   Do not share them and do not store them in version-controlled files.
+
+2. Install and import the Python packages
+------------------------------------------
+
+Install the required Python packages, ``PyVO`` and ``requests``, in the chosen environment (for example, in a local computer or in a Google Colab notebook).
+See `the PyVO homepage <https://pyvo.readthedocs.io/en/latest/>`_ and `the "requests" documentation <https://requests.readthedocs.io/en/latest/>`_ for download and install instructions.
+
+Import the required packages.
+
+.. code-block:: python
+
+   import pyvo
+   import requests
+
+3. Store the access token
+--------------------------
+
+Store the access token in a Python variable or environment variable.
+
+Read the token from an environment variable (recommended):
+
+.. code-block:: python
+
+   import os
+
+   token = os.environ["RSP_TOKEN"]
+
+Alternatively, assign the token directly:
+
+.. code-block:: python
+
+   token = "YOUR_TOKEN"
+
+4. Create an authenticated HTTP session
+----------------------------------------
+
+Create a persistent HTTP session and attach the access token using the ``Authorization`` header.
+
+.. code-block:: python
+
+   session = requests.Session()
+   session.headers["Authorization"] = f"Bearer {token}"
+
+This session ensures that all SIA requests are authenticated using the provided token.
+
+5. Connect to the Rubin SIA service
+------------------------------------
+
+Define the `Rubin SIA service endpoint <https://data.lsst.cloud/api-aspect>`_ and initialize a PyVO SIA2Service object.
+
+The endpoint for the DP1 SIA service is ``https://data.lsst.cloud/api/sia/dp1/query``.
+
+.. code-block:: python
+
+   rsp_sia_url = "https://data.lsst.cloud/api/sia/dp1/query"
+   sia_service = pyvo.dal.SIA2Service(
+       rsp_sia_url, session=session, check_baseurl=False
+   )
+
+The SIA service object represents the remote image service and manages query submission and result retrieval.
+
+Note that ``check_baseurl=False`` is required because the SIA endpoint includes the query path.
+
+6. Define the search parameters
+--------------------------------
+
+Define a spatial region to search for images. For this example, search for images in a circular region centered at RA, Dec = 53.076, -28.110 degrees with a radius of 0.05 degrees.
+
+.. code-block:: python
+
+   circle = (53.076, -28.110, 0.05)
+
+The position is specified as a tuple of (RA, Dec, radius) in decimal degrees.
+
+7. Query for images
+-------------------
+
+Execute a search query to retrieve images that overlap the specified region. Limit the results to calibrated images (``calib_level=2``) and restrict the number of results to 5.
+
+.. code-block:: python
+
+   results = sia_service.search(pos=circle, calib_level=2, maxrec=5)
+
+The ``calib_level`` parameter filters images by calibration level:
+
+- ``calib_level=1``: Raw or partially calibrated images
+- ``calib_level=2``: Fully calibrated images (recommended for scientific analysis)
+- ``calib_level=3``: Derived data products (e.g., coadds)
+
+See the `SIA2Query documentation <https://pyvo.readthedocs.io/en/latest/api/pyvo.dal.SIA2Query.html>`_ for a complete list of query parameters.
+
+8. Inspect the results
+----------------------
+
+The results object contains a table of image metadata. Print the number of results and inspect the columns.
+
+.. code-block:: python
+
+   print(f"Found {len(results)} images")
+   print(results.to_table().colnames)
+
+Display the first few rows to see the available metadata:
+
+.. code-block:: python
+
+   results.to_table()[:5]
+
+The results table includes metadata such as:
+
+- ``s_ra``, ``s_dec``: Image center position
+- ``t_exptime``: Exposure time
+- ``em_filter_name``: Filter/band name
+- ``dataproduct_subtype``: Type of image (e.g., lsst.deepCoadd)
+- ``access_url``: URL to access the image data
+
+9. Access individual images
+----------------------------
+
+To retrieve a specific image, use the ``access_url`` from the results. This URL points to a datalink service that provides various access methods for the image.
+
+.. code-block:: python
+
+   # Get the access URL for the first image
+   image_access_url = results[0].access_url
+   print(image_access_url)
+
+The datalink service can be queried to obtain the direct download URL for the image file.
+
+For a complete example of downloading and displaying images using PyVO and the SIA service, see the notebook tutorial :doc:`/tutorials/notebook/103/notebook-103-2`.
+
+Summary
+-------
+
+This tutorial demonstrated how to:
+
+1. Create and configure an RSP access token for SIA access
+2. Set up PyVO with authentication to access the Rubin SIA service
+3. Query for images by spatial region and calibration level
+4. Inspect the returned image metadata
+
+The SIA service provides a standardized way to discover and access images from the Rubin Science Platform using Virtual Observatory protocols.
+
+For catalog queries using TAP, see the companion tutorial :doc:`api-102-1`.

@@ -16,18 +16,27 @@ See also the `API Aspect User Guide <https://rsp.lsst.io/guides/api/index.html>`
 
 Short tutorials with a learning objective of how to use a single RSP function or tool.
 
-101. Remote data access
------------------------
+101. Remote data access with TOPCAT
+------------------------------------
 
 .. toctree::
     :titlesonly:
     :glob:
 
     api-101-1.rst
-    api-101-2.rst
     api-101-3.rst
 
 See also the tutorial notebook :doc:`/tutorials/notebook/101/notebook-101-3`.
+
+102. Remote data access with PyVO
+----------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    api-102-1.rst
+    api-102-2.rst
 
 
 .. _api-es:
