@@ -17,7 +17,7 @@ For simplicity, all DRP tasks designed to compute metrics and make plots are omi
 Stage 1
 =======
 
-Stage 1 is :ref:`Instrument Signature Removal (ISR) <isr>`, which applies the input :ref:`calibration data products <calibrations>` to :ref:`raw <images-raw>`, and produces 'post_isr_images'. These are matched to the :doc:`/processing/calibration/monster` to derive the initial single-detector calibrations, and analysis is performed on those calibrated single-visit images (which includes matching across visits).
+Stage 1 is :ref:`Instrument Signature Removal (ISR) <isr>`, which applies the input :ref:`calibration data products <calibrations>` to :ref:`raw images <images-raw>`, and produces "post_isr_images." These are matched to the :doc:`/processing/calibration/monster` to derive the initial single-detector calibrations, and analysis is performed on those calibrated single-visit images (which includes matching across visits).
 
 .. figure:: images/DP1-stage1-figure.png
   :alt: Pipeline graph of DP1 DRP stage1, showing single visit processing steps
@@ -45,7 +45,7 @@ Stage 2 is multi-visit and full-visit recalibration, including :ref:`FGCM photom
 Stage 3
 =======
 
-Stage 3 is coaddition and coadd processing, which results in the object table.
+Stage 3 is the coaddition of single-visit images to create :ref:`deep_coadd <images-deep-coadd>` images. These coadds are then processed through detection, deblending, and measurement algorithms, which results in the :ref:`Object <catalogs-object>` table.
 
 .. figure:: images/DP1-stage3-figure.png
   :alt: Pipeline graph of DP1 DRP Stage 3, showing coaddition steps
@@ -60,7 +60,7 @@ Stage 3 is coaddition and coadd processing, which results in the object table.
 Stage 4
 =======
 
-Stage 4 uses information from stage 3 to create visit-level final source catalogs and do difference imaging and forced photometry.
+Stage 4 uses information from stage 3 to create visit-level final :ref:`Source <catalogs-source>` catalogs. This stage also performs :ref:`difference imaging <dia>` of all visit images compared to template coadds. Stage 4 also executes forced photometry, wherein measurements are extracted from all visit images at the positions of Objects to produce the :ref:`forced source <catalogs-forced-source>` catalogs, and at the positions of DiaObjects in all difference images to produce :ref:`forced source on DiaObject <catalogs-dia-forced-source>` catalogs.
 
 .. figure:: images/DP1-stage4-figure.png
   :alt: Pipeline graph of DP1 DRP Stage 4, showing variability measurement steps
