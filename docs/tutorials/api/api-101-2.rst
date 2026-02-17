@@ -1,7 +1,7 @@
-.. _api-101-3:
+.. _api-101-2:
 
 ##############################
-101.3. How to plot with TOPCAT
+101.2. How to plot with TOPCAT
 ##############################
 
 For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
@@ -36,8 +36,8 @@ After starting TOPCAT and accessing the Rubin DP1 data through the VO protocol, 
 Protocol (TAP) Query Metadata section.
 Notice tabs in the right-hand window.  Click on "Columns" to see a description of each of the columns in this table.
 
-.. figure:: images/api-101-3-1.png
-    :name: api-101-3-1
+.. figure:: images/api-101-2-1.png
+    :name: api-101-2-1
     :alt: A screenshot of Table Access Protocol (TAP) Query window.
 	  TOPCAT window to add ADQL query.
 
@@ -63,8 +63,8 @@ See examples of queries with spatial constraints in API 101-1 (linked above) or 
 A new window will open which shows the "Table List" (red arrow) and "Current Table Properties". Notice this table has 652 rows for each of the Coadd Patches and 2 columns (for RA and DEC).
 To create a Skymap of data returned from the query, click on the "Sky plotting window" (red circle).
 
-.. figure:: images/api-101-3-2.png
-    :name: api-101-3-2
+.. figure:: images/api-101-2-2.png
+    :name: api-101-2-2
     :alt: Click sky plotting window.
 
     Figure 2:  Click "Sky plotting window".
@@ -74,8 +74,8 @@ The default plot shows the seven fields contained in Data Preview 1 on a rotatin
 Click on "Axes", then select "aitoff" from the "Projection" drop-down menu to change the skymap.
 
 
-.. figure:: images/api-101-3-3.png
-    :name: api-101-3-3
+.. figure:: images/api-101-2-3.png
+    :name: api-101-2-3
     :alt: A screenshot of the skymap aitoff projection.
 
     Figure 3:  Skymap of dp1 fields on aitoff projection.
@@ -96,8 +96,8 @@ Copy the ADQL query below, add it to the window in the "ADQL Text" box (see Figu
 
 Notice a new table (red arrow) is available in the TOPCAT window.  Select the table button to review the contents. Click the histogram button (red circle) to create a histogram.
 
-.. figure:: images/api-101-3-4.png
-    :name: api-101-3-4
+.. figure:: images/api-101-2-4.png
+    :name: api-101-2-4
     :alt: A screenshot of TOPCAT window.
 
     Figure 4:  New table from dp1.CCDVisit query.
@@ -106,8 +106,8 @@ Notice a new table (red arrow) is available in the TOPCAT window.  Select the ta
 
 In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
-.. figure:: images/api-101-3-5.png
-    :name: api-101-3-5
+.. figure:: images/api-101-2-5.png
+    :name: api-101-2-5
     :alt: A screenshot of TOPCAT window.
 
     Figure 5:  Initial histogram with "ra/deg" on the x-axis.
@@ -115,8 +115,8 @@ In the "Histogram Plot" window, select "magLim" from the "X:" drop-down menu.
 
 Histogram of magLim for the ECDFS field in dp1.CCDVisit table.
 
-.. figure:: images/api-101-3-6.png
-    :name: api-101-3-6
+.. figure:: images/api-101-2-6.png
+    :name: api-101-2-6
     :alt: Histogram of "magLim" for the ECDFS field in dp1.CCDVisit table.
 
     Figure 6:  Histogram of "magLim" for the ECDFS field.
@@ -149,8 +149,8 @@ Copy the following query into the "ADQL Text" box in the TAP Query window (see f
 Click on the "Plane plotting window" shown in Figure 7 with the blue circle.
 
 
-.. figure:: images/api-101-3-7.png
-    :name: api-101-3-7
+.. figure:: images/api-101-2-7.png
+    :name: api-101-2-7
     :alt: Plane plotting window button.
 
     Figure 7:  Plane plotting window button (blue circle).
@@ -159,8 +159,8 @@ Click on the "Plane plotting window" shown in Figure 7 with the blue circle.
 Add ``g_psfMag-r_psfMag`` in the "X:" selection box and ``r_psfMag-i_psfMag`` in the "Y:" box (red arrow), then hit "Enter".
 
 
-.. figure:: images/api-101-3-8.png
-    :name: api-101-3-8
+.. figure:: images/api-101-2-8.png
+    :name: api-101-2-8
     :alt: Color-Color diagram of ECDFS field.
 
     Figure 8:  Color-Color Diagram of ECDFS field.

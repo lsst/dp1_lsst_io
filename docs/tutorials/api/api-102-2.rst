@@ -8,7 +8,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-02-13
+**Last verified to run:** 2026-02-17
 
 **Learning objective:** Query Rubin DP1 images using the Simple Image Access (SIA) protocol with PyVO from a Python environment.
 
@@ -169,24 +169,11 @@ To retrieve a specific image, use the ``access_url`` from the results. This URL 
 
 .. code-block:: python
 
-   # Get the access URL for the first image
    image_access_url = results[0].access_url
    print(image_access_url)
 
 The datalink service can be queried to obtain the direct download URL for the image file.
 
 For a complete example of downloading and displaying images using PyVO and the SIA service, see the notebook tutorial :doc:`/tutorials/notebook/103/notebook-103-2`.
-
-Summary
--------
-
-This tutorial demonstrated how to:
-
-1. Create and configure an RSP access token for SIA access
-2. Set up PyVO with authentication to access the Rubin SIA service
-3. Query for images by spatial region and calibration level
-4. Inspect the returned image metadata
-
-The SIA service provides a standardized way to discover and access images from the Rubin Science Platform using Virtual Observatory protocols.
 
 For catalog queries using TAP, see the companion tutorial :doc:`api-102-1`.
