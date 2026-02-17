@@ -4,6 +4,12 @@
 Log of major tutorial updates
 #############################
 
+2026-02-17
+==========
+
+Released new API tutorial 102.2 on how to get started with PyVO using SIA.
+
+
 2026-02-10
 ==========
 
