@@ -329,12 +329,12 @@ Minimal quality cuts (recommended for most science):
 .. code-block:: sql
 
    -- For r-band example; adjust band as needed
-   WHERE r_psfFlux_flag = false                    -- PSF flux succeeded
-     AND r_pixelFlags_saturatedCenter = false      -- No saturation at center
-     AND r_pixelFlags_crCenter = false              -- No cosmic ray at center
-     AND r_pixelFlags_interpolatedCenter = false   -- No interpolation at center
-     AND r_pixelFlags_sensor_edgeCenter = false    -- Not on detector edge
-     AND r_invalidPsfFlag = false                   -- Valid PSF model
+   WHERE r_psfFlux_flag = 0                    -- PSF flux succeeded
+     AND r_pixelFlags_saturatedCenter = 0      -- No saturation at center
+     AND r_pixelFlags_crCenter = 0              -- No cosmic ray at center
+     AND r_pixelFlags_interpolatedCenter = 0   -- No interpolation at center
+     AND r_pixelFlags_sensor_edgeCenter = 0    -- Not on detector edge
+     AND r_invalidPsfFlag = 0                   -- Valid PSF model
 
 **Additional filters for specific science:**
 
@@ -342,25 +342,25 @@ Minimal quality cuts (recommended for most science):
 
 .. code-block:: sql
 
-   AND r_cModel_flag = false          -- CModel fit succeeded
+   AND r_cModel_flag = 0          -- CModel fit succeeded
    AND r_extendedness > 0.5            -- Extended source
-   AND r_extendedness_flag = false     -- Classification valid
+   AND r_extendedness_flag = 0     -- Classification valid
 
 *Star samples (PSF photometry):*
 
 .. code-block:: sql
 
    AND r_extendedness < 0.5            -- Point source
-   AND r_extendedness_flag = false     -- Classification valid
-   AND r_pixelFlags_edge = false       -- Not on any edge (optional stricter cut)
+   AND r_extendedness_flag = 0     -- Classification valid
+   AND r_pixelFlags_edge = 0       -- Not on any edge (optional stricter cut)
 
 *High-precision photometry or shapes:*
 
 .. code-block:: sql
 
-   AND r_kronFlux_flag = false         -- If using Kron flux
-   AND r_hsmShapeRegauss_flag = false  -- If using HSM shapes
-   AND r_pixelFlags_interpolated = false  -- Minimal interpolation (optional)
+   AND r_kronFlux_flag = 0         -- If using Kron flux
+   AND r_hsmShapeRegauss_flag = 0  -- If using HSM shapes
+   AND r_pixelFlags_interpolated = 0  -- Minimal interpolation (optional)
 
 **Multi-band requirements:** When requiring detections in multiple bands, ensure flux measurements and key pixel flags are valid in *each* band used.
 Check ``pixelFlags_nodata`` to confirm coverage.
@@ -382,21 +382,21 @@ Standard source quality selection:
 
 .. code-block:: sql
 
-   WHERE centroid_flag = false              -- Centroid succeeded (position reliable)
-     AND psfFlux_flag = false               -- PSF flux succeeded
-     AND pixelFlags_edge = false            -- Not on CCD edge
-     AND pixelFlags_saturatedCenter = false -- No saturation at center
-     AND pixelFlags_bad = false             -- No bad pixels
+   WHERE centroid_flag = 0              -- Centroid succeeded (position reliable)
+     AND psfFlux_flag = 0               -- PSF flux succeeded
+     AND pixelFlags_edge = 0            -- Not on CCD edge
+     AND pixelFlags_saturatedCenter = 0 -- No saturation at center
+     AND pixelFlags_bad = 0             -- No bad pixels
      AND deblend_nChild = 0                 -- Not a parent (avoid double-counting)
-     AND deblend_skipped = false            -- Deblending completed
+     AND deblend_skipped = 0            -- Deblending completed
 
 **Additional recommended cuts:**
 
 .. code-block:: sql
 
-   AND pixelFlags_crCenter = false          -- No cosmic ray at center
-   AND pixelFlags_interpolatedCenter = false -- No interpolation at center
-   AND pixelFlags_suspectCenter = false      -- No suspect pixels at center
+   AND pixelFlags_crCenter = 0          -- No cosmic ray at center
+   AND pixelFlags_interpolatedCenter = 0 -- No interpolation at center
+   AND pixelFlags_suspectCenter = 0      -- No suspect pixels at center
 
 **Deblending note:** Always use ``deblend_nChild = 0`` to select isolated sources or deblended children.
 Parents (``deblend_nChild > 0``) represent blended groups and should not be treated as individual objects.
@@ -415,17 +415,17 @@ ForcedSource table
 
 .. code-block:: sql
 
-   WHERE psfFlux_flag = false               -- Direct image PSF flux succeeded
-     AND pixelFlags_saturatedCenter = false -- No saturation at forced position
-     AND pixelFlags_edge = false            -- Position not on edge
-     AND invalidPsfFlag = false             -- PSF model valid
+   WHERE psfFlux_flag = 0               -- Direct image PSF flux succeeded
+     AND pixelFlags_saturatedCenter = 0 -- No saturation at forced position
+     AND pixelFlags_edge = 0            -- Position not on edge
+     AND invalidPsfFlag = 0             -- PSF model valid
 
 **If using difference image flux:**
 
 .. code-block:: sql
 
-   AND psfDiffFlux_flag = false             -- Difference flux succeeded
-   AND diff_PixelFlags_nodataCenter = false -- Difference image has coverage
+   AND psfDiffFlux_flag = 0             -- Difference flux succeeded
+   AND diff_PixelFlags_nodataCenter = 0 -- Difference image has coverage
 
 **Light curve usage:** When constructing light curves, apply these flags to each measurement (row) individually.
 This filters out poor-quality epochs while retaining good measurements for the same object across other visits.
@@ -443,12 +443,12 @@ High-confidence real astrophysical transients:
 
 .. code-block:: sql
 
-   WHERE isDipole = false                   -- Not a subtraction dipole artifact
+   WHERE isDipole = 0                   -- Not a subtraction dipole artifact
      AND reliability > 0.5                  -- Likely real (adjust threshold as needed)
-     AND psfFlux_flag = false               -- Difference flux succeeded
-     AND pixelFlags_edge = false            -- Not on edge
-     AND pixelFlags_saturatedCenter = false -- No saturation
-     AND pixelFlags_bad = false             -- No bad pixels
+     AND psfFlux_flag = 0               -- Difference flux succeeded
+     AND pixelFlags_edge = 0            -- Not on edge
+     AND pixelFlags_saturatedCenter = 0 -- No saturation
+     AND pixelFlags_bad = 0             -- No bad pixels
 
 **Reliability threshold guidance:**
 
@@ -464,8 +464,8 @@ Always consider your science tolerance for contamination versus completeness.
 
 .. code-block:: sql
 
-   AND centroid_flag = false                -- Position reliable
-   AND pixelFlags_cr = false                -- Not a cosmic ray residual
+   AND centroid_flag = 0                -- Position reliable
+   AND pixelFlags_cr = 0                -- Not a cosmic ray residual
 
 .. _flags-dia-forced:
 
@@ -478,195 +478,13 @@ ForcedSourceOnDiaObject table
 
 .. code-block:: sql
 
-   WHERE psfDiffFlux_flag = false               -- Difference flux succeeded
-     AND diff_PixelFlags_nodataCenter = false   -- Difference image has coverage
-     AND pixelFlags_saturatedCenter = false     -- No saturation
-     AND invalidPsfFlag = false                  -- PSF valid
+   WHERE psfDiffFlux_flag = 0               -- Difference flux succeeded
+     AND diff_PixelFlags_nodataCenter = 0   -- Difference image has coverage
+     AND pixelFlags_saturatedCenter = 0     -- No saturation
+     AND invalidPsfFlag = 0                  -- PSF valid
 
 **Usage:** Apply these filters when building DiaObject light curves from forced photometry.
 Similar to ForcedSource, filter per-measurement to remove bad epochs while keeping good ones.
-
-Science case examples
-=====================
-
-Different science applications require different flag filtering strategies.
-Below are examples for common use cases.
-
-Galaxy clustering
------------------
-
-**Goal:** Clean extended source sample with reliable photometry.
-
-**Recommended cuts:**
-
-.. code-block:: sql
-
-   -- r-band example
-   SELECT objectId, coord_ra, coord_dec, r_cModelFlux
-   FROM dp1.Object
-   WHERE r_extendedness > 0.5                     -- Extended
-     AND r_extendedness_flag = false
-     AND r_cModel_flag = false                    -- Model flux valid
-     AND r_psfFlux_flag = false                   -- PSF flux also valid
-     AND r_pixelFlags_saturatedCenter = false
-     AND r_pixelFlags_crCenter = false
-     AND r_pixelFlags_interpolatedCenter = false
-     AND r_pixelFlags_sensor_edgeCenter = false
-     AND r_invalidPsfFlag = false
-
-**Typical completeness:** ~85-90%
-
-Stellar photometry
-------------------
-
-**Goal:** Point source sample with clean PSF photometry.
-
-**Recommended cuts:**
-
-.. code-block:: sql
-
-   -- Multi-band stellar sample
-   SELECT objectId, g_psfFlux, r_psfFlux, i_psfFlux
-   FROM dp1.Object
-   WHERE r_extendedness < 0.5                     -- Point source
-     AND r_extendedness_flag = false
-     AND g_psfFlux_flag = false                   -- All bands succeed
-     AND r_psfFlux_flag = false
-     AND i_psfFlux_flag = false
-     AND g_pixelFlags_saturatedCenter = false     -- No saturation
-     AND r_pixelFlags_saturatedCenter = false
-     AND i_pixelFlags_saturatedCenter = false
-     AND g_pixelFlags_crCenter = false
-     AND r_pixelFlags_crCenter = false
-     AND i_pixelFlags_crCenter = false
-     AND g_invalidPsfFlag = false
-     AND r_invalidPsfFlag = false
-     AND i_invalidPsfFlag = false
-
-**Typical completeness:** ~85-90%
-
-Transient/supernova search
---------------------------
-
-**Goal:** High-purity real transients, minimizing false positives.
-
-**Recommended cuts:**
-
-.. code-block:: sql
-
-   SELECT diaSourceId, diaObjectId, psfFlux, reliability
-   FROM dp1.DiaSource
-   WHERE isDipole = false                         -- Exclude dipoles
-     AND reliability > 0.8                        -- High confidence
-     AND psfFlux_flag = false
-     AND pixelFlags_saturatedCenter = false
-     AND pixelFlags_edge = false
-     AND pixelFlags_bad = false
-     AND pixelFlags_cr = false                    -- No cosmic rays
-
-**Then filter DiaObjects by minimum detections:**
-
-.. code-block:: python
-
-   # Require at least 2 high-quality detections
-   diaobj_quality = diasource_quality.groupby("diaObjectId").size()
-   good_objects = diaobj_quality[diaobj_quality >= 2].index
-
-**Typical purity:** High (~80-90% real transients)
-
-**Typical completeness:** Lower (~70-80%) due to stringent cuts
-
-Variable star light curves
----------------------------
-
-**Goal:** Time-series photometry with balanced completeness and quality.
-
-**Source selection (initial detection):**
-
-.. code-block:: sql
-
-   SELECT sourceId, objectId, psfFlux, psfFluxErr
-   FROM dp1.Source
-   WHERE centroid_flag = false
-     AND psfFlux_flag = false
-     AND pixelFlags_saturatedCenter = false
-     AND pixelFlags_edge = false
-     AND deblend_nChild = 0
-     AND deblend_skipped = false
-
-**ForcedSource photometry (light curve points):**
-
-.. code-block:: sql
-
-   SELECT objectId, visit, psfFlux, psfFluxErr
-   FROM dp1.ForcedSource
-   WHERE psfFlux_flag = false
-     AND pixelFlags_saturatedCenter = false
-     AND invalidPsfFlag = false
-
-**Completeness consideration:** For variables, use moderate reliability thresholds on DiaSources if using difference imaging, as very strict cuts may exclude real variables with unusual colors or morphologies.
-
-Number counts / luminosity functions
--------------------------------------
-
-**Goal:** Maximum completeness for statistical samples.
-
-**Recommended minimal cuts:**
-
-.. code-block:: sql
-
-   SELECT objectId, r_psfFlux, r_extendedness
-   FROM dp1.Object
-   WHERE r_psfFlux > 0                            -- Valid flux
-     AND r_psfFlux_flag = false                   -- Measurement succeeded
-     AND r_pixelFlags_saturatedCenter = false     -- Exclude saturated
-     AND r_pixelFlags_crCenter = false            -- Exclude CRs
-     AND r_invalidPsfFlag = false                 -- Valid PSF
-
-**Typical completeness:** ~95-98%
-
-**Trade-off:** Higher contamination from imperfect measurements; acceptable for statistical studies where systematics are well-understood.
-
-Flag statistics
-===============
-
-Analysis of flag occurrence rates in a representative DP1 Object table sample (0.05° radius cone search, ~10,000-50,000 objects depending on field density) provides insights into data quality:
-
-**Most common critical flags (r-band, typical field):**
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 20 40
-
-   * - **Flag**
-     - **Occurrence**
-     - **Impact**
-   * - ``r_pixelFlags_edge``
-     - 5-15%
-     - Objects near detector boundaries in input visits
-   * - ``r_pixelFlags_interpolatedCenter``
-     - 2-8%
-     - Core photometry affected by interpolation
-   * - ``r_psfFlux_flag``
-     - 3-10%
-     - PSF flux measurement failed
-   * - ``r_extendedness_flag``
-     - 1-5%
-     - Star/galaxy classification uncertain
-   * - ``r_pixelFlags_saturatedCenter``
-     - 0.5-3%
-     - Bright stars with saturated cores
-   * - ``r_cModel_flag``
-     - 5-15%
-     - Galaxy model fitting failed (often faint sources)
-
-**Cumulative impact:** Applying the recommended minimal flag set (saturated, CR, interpolated, sensor_edge at center + measurement flags) typically removes **10-20%** of objects, leaving a high-quality science sample.
-
-**Science impact of flag filtering:**
-
-- **Photometric precision:** Median SNR improves by ~5-10% after flag filtering
-- **Stellar locus width:** Color-magnitude diagram stellar locus becomes ~15-25% narrower (less scatter)
-- **Contamination reduction:** Artifact contamination decreases by ~80-90% with appropriate difference imaging flags
 
 Connection to image mask planes
 ================================
@@ -722,44 +540,4 @@ Each mask plane bit in the image (BAD, SAT, CR, INTRP, EDGE, etc.) propagates to
 For quality filtering, **center flags are typically more important** since they affect core photometry.
 
 See :ref:`images-visit-mask-planes` and :ref:`images-deep-coadd-mask-planes` for detailed mask plane descriptions.
-
-Best practices
-==============
-
-General recommendations
------------------------
-
-1. **Always check flags for quantities you use:** If you use ``psfFlux``, require ``psfFlux_flag = false``. If you use shapes, check shape flags. Don't assume all measurements are valid.
-
-2. **Start with minimal recommended cuts, then refine:** Begin with the critical flags (saturatedCenter, crCenter, interpolatedCenter, psfFlux_flag, invalidPsfFlag), then add stricter cuts based on your science requirements.
-
-3. **Document your flag selection:** Record which flags you applied and why, for reproducibility and to help others understand your sample selection.
-
-4. **Balance completeness and purity:** Aggressive flag cuts improve data quality but reduce sample size. Choose thresholds appropriate for your science (e.g., statistical studies can tolerate more contamination; precision measurements need stricter cuts).
-
-5. **Use deblending flags properly:** For Source table, always use ``deblend_nChild = 0`` to avoid counting parent blends as objects. Exclude ``deblend_skipped = true`` to remove failed complex blends.
-
-6. **Multi-band analyses require per-band flags:** Check flags independently in each band you use. An object may be clean in *r* but saturated in *g*.
-
-7. **Beware calibration flag limitations in DP1:** The ``calib_*`` flags are preliminary and not updated for final calibrations. Use them only if you understand their limitations.
-
-8. **Difference imaging: use isDipole and reliability:** For DiaSource, these are the most important filters. Dipoles are subtraction artifacts; reliability scores separate real from bogus.
-
-9. **ForcedSource/ForcedSourceOnDiaObject: filter per measurement:** When building light curves, apply quality cuts to each epoch individually rather than dropping entire objects.
-
-10. **Consult Science Pipelines code for advanced usage:** For sophisticated filtering, examine selector configurations in ``analysis_tools`` (e.g., ``CoaddPlotFlagSelector``) and ``meas_algorithms`` (e.g., ``ScienceSourceSelectorConfig``) to see Data Management team's internal quality criteria.
-
-
-Further reading
-===============
-
-- **DP1 Known Issues:** :doc:`/overview/known_issues_and_subtleties` (see sections on flag columns and calibration flags)
-- **Image mask planes:** :doc:`/products/images/mask_planes` (underlying pixel masks that generate pixelFlags)
-- **Object catalog:** :doc:`/products/catalogs/object` (full schema including all Object flags)
-- **Source catalog:** :doc:`/products/catalogs/source` (including deblending and single-visit flags)
-- **DiaSource catalog:** :doc:`/products/catalogs/dia_source` (difference imaging quality flags)
-- **ForcedSource catalog:** :doc:`/products/catalogs/forced_source` (forced photometry flags)
-- **Schema browser:** https://sdm-schemas.lsst.io/ (comprehensive flag definitions with descriptions)
-- **Analysis tools source code:** ``analysis_tools`` repository ``CoaddPlotFlagSelector`` for Data Management's internal flag selections
-- **Science Pipelines:** ``meas_algorithms`` repository ``ScienceSourceSelectorConfig`` for source selection criteria
 
