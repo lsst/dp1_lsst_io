@@ -8,7 +8,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-02-17
+**Last verified to run:** 2026-02-18
 
 **Learning objective:** Query Rubin DP1 images using the Simple Image Access (SIA) protocol with PyVO from a Python environment.
 
@@ -54,12 +54,15 @@ Copy the token to a secure location. The token will not be shown again.
 Install the required Python packages, ``PyVO`` and ``requests``, in the chosen environment (for example, in a local computer or in a Google Colab notebook).
 See `the PyVO homepage <https://pyvo.readthedocs.io/en/latest/>`_ and `the "requests" documentation <https://requests.readthedocs.io/en/latest/>`_ for download and install instructions.
 
+Note that in certain environments like Google Colab you may have to re-install these packages for each session.
+
 Import the required packages.
 
 .. code-block:: python
 
    import pyvo
    import requests
+   from pyvo.dal.adhoc import DatalinkResults
 
 3. Store the access token
 --------------------------
@@ -141,18 +144,24 @@ See the `SIA2Query documentation <https://pyvo.readthedocs.io/en/latest/api/pyvo
 8. Inspect the results
 ----------------------
 
-The results object contains a table of image metadata. Print the number of results and inspect the columns.
+The results object contains a table of image metadata. Convert the results to an Astropy table for easier manipulation.
+
+.. code-block:: python
+
+   table = results.to_table()
+
+Print the number of results and inspect the columns.
 
 .. code-block:: python
 
    print(f"Found {len(results)} images")
-   print(results.to_table().colnames)
+   print(table.colnames)
 
 Display the first few rows to see the available metadata:
 
 .. code-block:: python
 
-   results.to_table()[:5]
+   table[:5]
 
 The results table includes metadata such as:
 
@@ -162,18 +171,54 @@ The results table includes metadata such as:
 - ``dataproduct_subtype``: Type of image (e.g., lsst.deepCoadd)
 - ``access_url``: URL to access the image data
 
-9. Access individual images
-----------------------------
+9. Download an image file
+--------------------------
 
-To retrieve a specific image, use the ``access_url`` from the results. This URL points to a datalink service that provides various access methods for the image.
+To download a FITS file that can be opened locally with tools like DS9, use the DataLink service to obtain the direct download URL.
+
+First, retrieve the ``access_url`` from the results table. This URL points to a DataLink endpoint that provides various access methods for the image.
 
 .. code-block:: python
 
-   image_access_url = results[0].access_url
-   print(image_access_url)
+   datalink_url = table["access_url"][0]
+   print("DataLink URL:\n", datalink_url)
 
-The datalink service can be queried to obtain the direct download URL for the image file.
+Fetch and parse the DataLink response as a VOTable.
 
-For a complete example of downloading and displaying images using PyVO and the SIA service, see the notebook tutorial :doc:`/tutorials/notebook/103/notebook-103-2`.
+.. code-block:: python
+
+   dl = DatalinkResults.from_result_url(datalink_url, session=session)
+
+Inspect the available links.
+
+.. code-block:: python
+
+   dl_table = dl.to_table()
+   print("DataLink records:", len(dl_table))
+   dl_table[:10]
+
+Extract the direct download URL for the first record.
+
+.. code-block:: python
+
+   image_url = dl.getrecord(0).get("access_url")
+   print("Chosen file URL:\n", image_url)
+
+Download the FITS file to your local system.
+
+.. code-block:: python
+
+   r = session.get(image_url, stream=True)
+   r.raise_for_status()
+
+   out_path = "dp1_image.fits"
+   with open(out_path, "wb") as f:
+       for chunk in r.iter_content(chunk_size=1024 * 1024):
+           if chunk:
+               f.write(chunk)
+
+   print("Saved:", out_path)
+
+The downloaded FITS file can now be opened with FITS viewers such as DS9 or analyzed using Python libraries like ``astropy.io.fits``.
 
 For catalog queries using TAP, see the companion tutorial :doc:`api-102-1`.
