@@ -8,7 +8,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-01-15
+**Last verified to run:** 2026-02-18
 
 **Learning objective:** Query Rubin DP1 catalogs using the Table Access Protocol (TAP) with PyVO from a Python environment.
 
@@ -51,6 +51,8 @@ Copy the token to a secure location. The token will not be shown again.
 
 Install the required Python packages, ``PyVO`` and ``requests``, in the chosen environment (for example, in a local computer or in a Google Colab notebook).
 See `the PyVO homepage <https://pyvo.readthedocs.io/en/latest/>`_ and `the "requests" documentation <https://requests.readthedocs.io/en/latest/>`_ for download and install instructions.
+
+Note that in certain environments like Google Colab you may have to re-install these packages for each session.
 
 Import the required packages.
 
