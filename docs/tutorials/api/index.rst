@@ -6,7 +6,7 @@ API tutorials
 
 Tutorials for the API (Application Programming Interface) Aspect of the Rubin Science Platform at `data.lsst.cloud <https://data.lsst.cloud/>`_.
 
-See also the `API Aspect User Guide <https://rsp.lsst.io/guides/api/index.html>`_.
+See also the `API Aspect User Guide <https://rsp.lsst.io/guides/api/index.html>`_, and the tutorial notebook :doc:`/tutorials/notebook/101/notebook-101-3`.
 
 
 .. _api-100:
@@ -26,7 +26,6 @@ Short tutorials with a learning objective of how to use a single RSP function or
     api-101-1.rst
     api-101-2.rst
 
-See also the tutorial notebook :doc:`/tutorials/notebook/101/notebook-101-3`.
 
 102. Remote data access with PyVO
 ----------------------------------
