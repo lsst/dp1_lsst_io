@@ -36,6 +36,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
 
     api-102-1.rst
     api-102-2.rst
+    api-102-3.rst
 
 
 .. _api-es:
