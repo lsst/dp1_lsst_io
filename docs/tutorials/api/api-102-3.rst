@@ -22,13 +22,13 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 Introduction
 ------------
 
-This tutorial demonstrates how to create image cutouts from Rubin DP1 data programmatically using the API Aspect of the Rubin Science Platform. The tutorial uses the Python Virtual Observatory (PyVO) package to authenticate with the Rubin Simple Image Access (SIA) service, then uses the Server-side Operations for Data Access (SODA) protocol to request and retrieve image cutouts.
+This tutorial demonstrates how to create image cutouts from Rubin DP1 data programmatically using the API Aspect of the Rubin Science Platform. The tutorial uses the Python Virtual Observatory (PyVO) package to authenticate with the Rubin SODA cutout service and request spatial cutouts of images.
 
 SODA is a protocol of the International Virtual Observatory Alliance (IVOA) that provides server-side data processing capabilities, including spatial and spectral cutouts. Learn more in the `IVOA SODA documentation <https://www.ivoa.net/documents/SODA/>`_.
 
 This workflow is suitable for users who prefer scripted or automated access to Rubin data from a local Python environment or from cloud-based environments such as Google Colab. Familiarity with basic Python syntax is assumed.
 
-Related tutorials describe image access via the SIA protocol (:doc:`api-102-2`) and catalog access via TAP (:doc:`api-102-1`).
+Related tutorials describe full image downloads via SIA (:doc:`api-102-2`) and catalog access via TAP (:doc:`api-102-1`).
 
 1. Create an RSP access token
 ------------------------------
@@ -109,68 +109,19 @@ Create a persistent HTTP session and attach the access token using the ``Authori
 
 This session ensures that all requests are authenticated using the provided token.
 
-5. Connect to the Rubin SIA service
-------------------------------------
+5. Access the SODA cutout service
+-----------------------------------
 
-Define the `Rubin SIA service endpoint <https://data.lsst.cloud/api-aspect>`_ and initialize a PyVO SIA2Service object.
+Access the Rubin SODA cutout service using its DataLink endpoint. The cutout service endpoint is ``https://data.lsst.cloud/api/cutout/``.
 
-The endpoint for the DP1 SIA service is ``https://data.lsst.cloud/api/sia/dp1/query``.
-
-.. code-block:: python
-
-   rsp_sia_url = "https://data.lsst.cloud/api/sia/dp1/query"
-   sia_service = pyvo.dal.SIA2Service(
-       rsp_sia_url, session=session, check_baseurl=False
-   )
-
-The SIA service object represents the remote image service and manages query submission and result retrieval.
-
-Note that ``check_baseurl=False`` is required because the SIA endpoint includes the query path.
-
-6. Define the target coordinates
----------------------------------
-
-Define the target coordinates for the cutout. For this example, use RA, Dec = 53.076, -28.110 degrees.
+Fetch and parse the DataLink response from the cutout service.
 
 .. code-block:: python
 
-   target_ra = 53.076
-   target_dec = -28.110
+   cutout_url = "https://data.lsst.cloud/api/cutout/"
+   dl_result = DatalinkResults.from_result_url(cutout_url, session=session)
 
-7. Query for images
--------------------
-
-Execute a search query to retrieve images that overlap the target position. Search in a circular region with a radius of 0.05 degrees and limit the results to calibrated images.
-
-.. code-block:: python
-
-   circle = (target_ra, target_dec, 0.05)
-   results = sia_service.search(pos=circle, calib_level=2, maxrec=5)
-
-Convert the results to an Astropy table.
-
-.. code-block:: python
-
-   table = results.to_table()
-   print(f"Found {len(results)} images")
-
-8. Access the DataLink service
--------------------------------
-
-Retrieve the ``access_url`` from the first result. This URL points to a DataLink endpoint that provides access to the SODA cutout service.
-
-.. code-block:: python
-
-   datalink_url = results['access_url'][0]
-   print("DataLink URL:\n", datalink_url)
-
-Fetch and parse the DataLink response.
-
-.. code-block:: python
-
-   dl_result = DatalinkResults.from_result_url(datalink_url, session=session)
-
-9. Create a SODA cutout query
+6. Create a SODA cutout query
 ------------------------------
 
 Create a SODA query from the DataLink resource. The SODA service is identified by the ``cutout-sync`` service ID.
@@ -178,20 +129,28 @@ Create a SODA query from the DataLink resource. The SODA service is identified b
 .. code-block:: python
 
    sq = SodaQuery.from_resource(
-       dl_result,
-       dl_result.get_adhocservice_by_id("cutout-sync"),
-       session=session
+       dl_result, dl_result.get_adhocservice_by_id("cutout-sync"), session=session
    )
 
-Define the cutout region as a circle centered on the target coordinates with a radius of 0.01 degrees.
+7. Define the cutout parameters
+--------------------------------
+
+Define the target coordinates and cutout region. For this example, create a circular cutout centered at RA, Dec = 53.076, -28.110 degrees with a radius of 0.01 degrees.
 
 .. code-block:: python
 
+   target_ra = 53.076
+   target_dec = -28.110
    Radius = 0.01 * u.deg
+
+Set the circular cutout region on the SODA query.
+
+.. code-block:: python
+
    sq.circle = (target_ra * u.deg, target_dec * u.deg, Radius)
 
-10. Execute the cutout query
------------------------------
+8. Execute the cutout query
+----------------------------
 
 Execute the SODA query to retrieve the cutout image data.
 
@@ -212,8 +171,8 @@ Extract the image data from the first image extension.
 
    image_data = hdul[1].data
 
-11. Display the cutout image
------------------------------
+9. Display the cutout image
+----------------------------
 
 Display the cutout image using Matplotlib with appropriate scaling.
 
@@ -222,10 +181,10 @@ Display the cutout image using Matplotlib with appropriate scaling.
    plt.figure(figsize=(8, 8))
    plt.imshow(
        image_data,
-       cmap='gray',
-       origin='lower',
+       cmap="gray",
+       origin="lower",
        vmin=np.percentile(image_data, 5),
-       vmax=np.percentile(image_data, 95)
+       vmax=np.percentile(image_data, 95),
    )
    plt.title("Rubin Cutout Image")
    plt.colorbar()
