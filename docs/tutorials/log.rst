@@ -4,6 +4,13 @@
 Log of major tutorial updates
 #############################
 
+
+2026-02-25
+==========
+
+Released new Notebook tutorial 104.5 on image subsets with the Butler.
+
+
 2026-02-17
 ==========
 
