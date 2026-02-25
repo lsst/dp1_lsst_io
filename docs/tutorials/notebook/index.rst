@@ -74,6 +74,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     104/notebook-104-2.rst
     104/notebook-104-3.rst
     104/notebook-104-4.rst
+    104/notebook-104-5.rst
 
 
 105. Image reprocessing
