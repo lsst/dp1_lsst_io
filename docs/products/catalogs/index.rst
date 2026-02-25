@@ -84,16 +84,3 @@ Metadata for observations (visits and detectors) and the sky map (tracts and pat
     visit_table
     visit_detector_table
     coadd_patches
-
-
-Flag columns
-============
-
-Guidance on understanding and using boolean quality flag columns across all catalog tables.
-
-.. toctree::
-    :maxdepth: 1
-    :titlesonly:
-    :glob:
-
-    flags
