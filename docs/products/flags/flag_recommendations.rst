@@ -102,12 +102,12 @@ Essential quality filters for the Source table are listed below.
 .. code-block:: sql
 
    WHERE centroid_flag = 0               -- Centroid succeeded
-     AND psfFlux_flag = 0               -- PSF flux succeeded
-     AND pixelFlags_edge = 0            -- Not on CCD edge
+     AND psfFlux_flag = 0                -- PSF flux succeeded
+     AND pixelFlags_edge = 0             -- Not on CCD edge
      AND pixelFlags_saturatedCenter = 0  -- No saturation at center
-     AND pixelFlags_bad = 0             -- No bad pixels
-     AND deblend_nChild = 0             -- Not a parent (avoid double-counting)
-     AND deblend_skipped = 0            -- Deblending completed
+     AND pixelFlags_bad = 0              -- No bad pixels
+     AND deblend_nChild = 0              -- Not a parent (avoid double-counting)
+     AND deblend_skipped = 0             -- Deblending completed
 
 Additional quality filters.
 
@@ -163,17 +163,11 @@ High-confidence real astrophysical transients.
 .. code-block:: sql
 
    WHERE isDipole = 0                    -- Not a subtraction dipole artifact
-     AND reliability > 0.5              -- Likely real (adjust threshold)
-     AND psfFlux_flag = 0               -- Difference flux succeeded
-     AND pixelFlags_edge = 0            -- Not on edge
+     AND reliability > 0.5               -- Likely real (adjust threshold)
+     AND psfFlux_flag = 0                -- Difference flux succeeded
+     AND pixelFlags_edge = 0             -- Not on edge
      AND pixelFlags_saturatedCenter = 0  -- No saturation
-     AND pixelFlags_bad = 0             -- No bad pixels
-
-Reliability threshold guidance.
-
-- ``reliability > 0.5``: Balanced cut; removes most artifacts while retaining real variables.
-- ``reliability > 0.8``: High-purity sample; may lose some real faint variables.
-- ``reliability > 0.3``: Higher completeness; includes more potential artifacts.
+     AND pixelFlags_bad = 0              -- No bad pixels
 
 .. note::
 
