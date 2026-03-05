@@ -156,7 +156,7 @@ The general measurement failure flags are listed in the table below.
 
 Key points:
 
-- Measurement values when flagged: When a measurement flag is set to ``1``, the associated measurement value may be ``NaN`` (not a number) or may contain a numerical value that is unreliable. Always check the corresponding flag before using any measured quantity.
+- Measurement values when flagged: ``{band}_psfFlux_flag`` is set when the algorithm returns a non-finite flux or a flux error. When the flux is finite, a set flag could be related to other types of errors, such as ``pixelFlags_saturatedCenter = 1``.
 - Subflag pattern: Many algorithms provide detailed subflags explaining why the measurement failed (e.g., ``psfFlux_flag_edge``, ``psfFlux_flag_noGoodPixels``). If the general flag is set to ``1``, the specific failure reason may be in a subflag, but the general flag alone is sufficient to filter the measurement.
 - Usage rule: If a measured quantity (flux, shape, etc.) is used, the corresponding general flag should be required to be ``0``. For example, when using ``r_psfFlux``, require ``r_psfFlux_flag = 0``.
 
