@@ -4,6 +4,10 @@
 Log of major tutorial updates
 #############################
 
+2026-03-23
+==========
+
+Updated API tutorial 102.3 on how to get started with PyVO using SODA.
 
 2026-03-19
 ==========

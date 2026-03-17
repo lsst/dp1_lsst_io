@@ -146,9 +146,13 @@ Search for a calibrated image at the target position. For this example, search f
 
    circle = (target_ra, target_dec, 0.05)
 
-   results = sia_service.search(pos=circle, calib_level=2,
-                            dpsubtype='lsst.visit_image',
-                            band=eff_wl, time=(time1, time2))
+   results = sia_service.search(
+       pos=circle,
+       calib_level=2,
+       dpsubtype="lsst.visit_image",
+       band=eff_wl,
+       time=(time1, time2),
+   )
    print(len(results))
 
 Extract the DataLink access URL from the first result. This URL uniquely identifies the image and provides access to the SODA cutout service for that image.
