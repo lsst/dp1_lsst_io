@@ -8,7 +8,7 @@ For the API Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-02-18
+**Last verified to run:** 2026-03-17
 
 **Learning objective:** Create image cutouts from Rubin DP1 images using the Server-side Operations for Data Access (SODA) protocol with PyVO from a Python environment.
 
@@ -33,8 +33,6 @@ The Rubin SODA cutout service supports three service types that control how much
 - ``cutout-sync-exposure``: Returns the full set of image extensions, including the PSF and provenance planes. This is most useful within the RSP Notebook Aspect where the ``lsst.afw`` package can read the result as an ``ExposureF`` object (see :doc:`/tutorials/notebook/103/notebook-103-4`).
 
 The default ``cutout-sync`` mode improves performance by reducing data transfer, particularly for deep coadd images where the PSF and provenance planes can significantly increase the size of the results.
-
-Two spatial cutout shapes are supported: circle and polygon. The circle shape produces a square cutout with edge size equal to the circle diameter. The polygon shape produces rectangular cutouts defined by vertices ordered in the counter-clockwise direction.
 
 This workflow is suitable for users who prefer scripted or automated access to Rubin data from a local Python environment or from cloud-based environments such as Google Colab. Familiarity with basic Python syntax is assumed.
 
@@ -134,15 +132,24 @@ Define the SIA service endpoint and create a SIA service object.
        rsp_sia_url, session=session, check_baseurl=False
    )
 
-Search for a calibrated image at the target position. For this example, search for images in a circular region centered at RA, Dec = 53.076, -28.110 degrees.
+Search for a calibrated image at the target position. For this example, search for images in a circular region centered at RA, Dec = 53.1246023, -27.7404715 degrees.
 
 .. code-block:: python
 
-   target_ra = 53.076
-   target_dec = -28.110
-   results = sia_service.search(
-       pos=(target_ra, target_dec, 0.05), calib_level=2, maxrec=1
-   )
+   from astropy.time import Time
+
+   target_ra = 53.1246023
+   target_dec = -27.7404715
+   eff_wl = 622.1e-09
+   time1 = Time(60623.256, format="mjd", scale="tai")
+   time2 = Time(60623.259, format="mjd", scale="tai")
+
+   circle = (target_ra, target_dec, 0.05)
+
+   results = sia_service.search(pos=circle, calib_level=2,
+                            dpsubtype='lsst.visit_image',
+                            band=eff_wl, time=(time1, time2))
+   print(len(results))
 
 Extract the DataLink access URL from the first result. This URL uniquely identifies the image and provides access to the SODA cutout service for that image.
 
@@ -212,6 +219,12 @@ Extract the image data from the image extension and display the cutout.
 
 The cutout image is displayed with contrast adjusted using the 5th and 95th percentiles of the pixel values.
 
+.. figure:: images/SODA-cutout.png
+   :name: api-102-3-soda-cutout
+   :alt: Example of a SODA cutout image showing a portion of the sky from Rubin DP1 data.
+
+   Example of a SODA cutout image.
+
 8. Retrieve a cutout with mask and variance planes
 ----------------------------------------------------
 
@@ -240,70 +253,3 @@ Execute the query and inspect the FITS file structure.
 The result contains additional HDUs for the mask and variance planes, in addition to the image pixels.
 
 To retrieve the full set of image extensions including the PSF and provenance planes, use the ``cutout-sync-exposure`` service type instead. This mode is most useful within the RSP Notebook Aspect where the ``lsst.afw`` package can read the result as an ``ExposureF`` object (see :doc:`/tutorials/notebook/103/notebook-103-4`).
-
-9. Create a polygon cutout
-----------------------------
-
-Polygon cutouts enable rectangular cutout regions. Define the polygon vertices as pairs of RA, Dec coordinates in counter-clockwise order.
-
-Create a new SODA query and define a rectangular polygon cutout.
-
-.. code-block:: python
-
-   sq_poly = SodaQuery.from_resource(
-       dl_result,
-       dl_result.get_adhocservice_by_id("cutout-sync"),
-       session=session,
-   )
-
-   ra_edge = 0.02 * u.deg
-   de_edge = 0.005 * u.deg
-
-   sq_poly.polygon = (
-       target_ra * u.deg - ra_edge,
-       target_dec * u.deg - de_edge,
-       target_ra * u.deg - ra_edge,
-       target_dec * u.deg + de_edge,
-       target_ra * u.deg + ra_edge,
-       target_dec * u.deg + de_edge,
-       target_ra * u.deg + ra_edge,
-       target_dec * u.deg - de_edge,
-   )
-
-Execute the polygon cutout query and display the result.
-
-.. code-block:: python
-
-   cutout_bytes_poly = sq_poly.execute_stream().read()
-   sq_poly.raise_if_error()
-   hdul_poly = fits.open(io.BytesIO(cutout_bytes_poly))
-   image_poly = hdul_poly[1].data
-
-   plt.figure(figsize=(10, 4))
-   plt.imshow(
-       image_poly,
-       cmap="gray",
-       origin="lower",
-       vmin=np.percentile(image_poly, 5),
-       vmax=np.percentile(image_poly, 95),
-   )
-   plt.title("Rectangular Polygon Cutout")
-   plt.colorbar()
-   plt.show()
-
-.. note::
-
-   The circle shape definition accounts for cos(declination) automatically, but the polygon definition does not. To match the angular size of a circular cutout in the RA direction when using a polygon, divide the RA edge length by cos(dec):
-
-   .. code-block:: python
-
-      a = Angle(target_dec, u.deg)
-      cosd = np.cos(a.radian)
-      ra_edge_corrected = ra_edge / cosd
-
-10. Exercises for the learner
-------------------------------
-
-**10.1.** Retrieve a cutout centered at RA, Dec = 59.1, -48.8 degrees with a radius of 0.03 degrees. Display the result.
-
-**10.2.** Repeat the cutout from Step 7 using the ``cutout-sync-maskedimage`` service type and display the mask plane (the third HDU extension).
