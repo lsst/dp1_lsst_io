@@ -225,6 +225,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :glob:
 
     302/notebook-302-1.rst
+    302/notebook-302-2.rst
     302/notebook-302-3.rst
 
 
