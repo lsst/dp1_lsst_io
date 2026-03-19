@@ -9,6 +9,7 @@ Log of major tutorial updates
 ==========
 
 Updated Notebook tutorial 206.2 to use image subsets with the Butler and other minor updates.
+Released new Notebook tutorial 302.2 on stellar multi-color photometry.
 
 
 2026-02-25
