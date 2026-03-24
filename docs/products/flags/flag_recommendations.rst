@@ -18,8 +18,7 @@ Object table
 
 Guidance for the application of flags on the deep coadd measurements of static sky objects.
 
-Recommended quality filters for the Object table are listed below.
-Minimal quality cuts for r-band PSF photometry are shown; adjust the band prefix as needed.
+Cuts for r-band PSF photometry are shown; adjust the band prefix as needed.
 
 .. code-block:: sql
 
@@ -92,8 +91,6 @@ Source table
 
 Guidance for the application of flags on single-epoch visit detections.
 
-Recommended quality filters for the Source table are listed below.
-
 .. code-block:: sql
 
    WHERE centroid_flag = 0               -- Centroid succeeded
@@ -119,8 +116,6 @@ ForcedSource table
 
 Guidance for the application of flags on forced photometry at Object positions on single-epoch images.
 
-Recommended quality filters for ForcedSource are listed below (apply per measurement).
-
 .. code-block:: sql
 
    WHERE psfFlux_flag = 0                -- PSF flux succeeded
@@ -145,7 +140,6 @@ DiaSource table
 
 Guidance for the application of flags on transient/variable detections on difference images.
 
-Recommended quality filters for DiaSource are listed below.
 
 High-confidence real astrophysical transients.
 
@@ -171,7 +165,6 @@ ForcedSourceOnDiaObject table
 
 Guidance for the application of flags on forced photometry at DiaObject positions on difference images.
 
-Recommended quality filters for ForcedSourceOnDiaObject are listed below (apply per measurement).
 
 .. code-block:: sql
 
