@@ -8,7 +8,7 @@ Flag usage guidance by table
 ================================
 
 This section provides table-specific guidance on which flags to apply for typical science-quality selections.
-The flags listed under "essential quality filters" should be applied in most science analyses.
+The flags listed under "recommended quality filters" should be applied in most science analyses.
 Additional filters are provided as guidance for specific science cases and should be adapted based on the science requirements.
 
 .. _flags-object:
@@ -18,7 +18,7 @@ Object table
 
 Guidance for the application of flags on the deep coadd measurements of static sky objects.
 
-Essential quality filters for the Object table are listed below.
+Recommended quality filters for the Object table are listed below.
 Minimal quality cuts for r-band PSF photometry are shown; adjust the band prefix as needed.
 
 .. code-block:: sql
@@ -29,7 +29,6 @@ Minimal quality cuts for r-band PSF photometry are shown; adjust the band prefix
      AND r_pixelFlags_crCenter = 0            -- No cosmic ray at center
      AND r_pixelFlags_interpolatedCenter = 0  -- No interpolation at center
      AND r_pixelFlags_sensor_edgeCenter = 0   -- Not on detector edge
-     AND r_pixelFlags_inexact_psfCenter = 0   -- PSF model not discontinuous
      AND r_invalidPsfFlag = 0                 -- Valid PSF model
 
 Additional filters for specific science cases are described below.
@@ -60,10 +59,6 @@ Star samples (PSF photometry).
    The same caveats about the ``extendedness`` classifier apply as for galaxy samples above.
 
 Stars used and reserved in PSF modeling can also be identified using ``{band}_calib_psf_used`` and ``{band}_calib_psf_reserved`` in the Source table (see :ref:`calibration-flags`).
-
-Deblending filters for the Object table.
-Sources in the Object table are derived from the Source table deblending.
-To avoid contaminated photometry from blended parents, apply deblending filters when working with the Source table (see :ref:`flags-source`).
 
 High-precision Kron photometry.
 
@@ -97,7 +92,7 @@ Source table
 
 Guidance for the application of flags on single-epoch visit detections.
 
-Essential quality filters for the Source table are listed below.
+Recommended quality filters for the Source table are listed below.
 
 .. code-block:: sql
 
@@ -106,8 +101,6 @@ Essential quality filters for the Source table are listed below.
      AND pixelFlags_edge = 0             -- Not on CCD edge
      AND pixelFlags_saturatedCenter = 0  -- No saturation at center
      AND pixelFlags_bad = 0              -- No bad pixels
-     AND deblend_nChild = 0              -- Not a parent (avoid double-counting)
-     AND deblend_skipped = 0             -- Deblending completed
 
 Additional quality filters.
 
@@ -116,10 +109,6 @@ Additional quality filters.
    AND pixelFlags_crCenter = 0            -- No cosmic ray at center
    AND pixelFlags_interpolatedCenter = 0  -- No interpolation at center
    AND pixelFlags_suspectCenter = 0       -- No suspect pixels at center
-
-Deblending note: Always use ``deblend_nChild = 0`` to select isolated sources or deblended children.
-Parents (``deblend_nChild > 0``) represent blended groups and should not be treated as individual objects.
-Sources with ``deblend_skipped = 1`` are complex blends that failed deblending and should also be excluded.
 
 Calibration stars: If specifically selecting or excluding calibration stars, use ``calib_*`` flags (including ``calib_psf_used`` and ``calib_psf_reserved``), but note DP1 caveats (:ref:`calibration-flags`).
 
@@ -130,7 +119,7 @@ ForcedSource table
 
 Guidance for the application of flags on forced photometry at Object positions on single-epoch images.
 
-Essential quality filters for ForcedSource are listed below (apply per measurement).
+Recommended quality filters for ForcedSource are listed below (apply per measurement).
 
 .. code-block:: sql
 
@@ -156,26 +145,17 @@ DiaSource table
 
 Guidance for the application of flags on transient/variable detections on difference images.
 
-Essential quality filters for DiaSource are listed below.
+Recommended quality filters for DiaSource are listed below.
 
 High-confidence real astrophysical transients.
 
 .. code-block:: sql
 
    WHERE isDipole = 0                    -- Not a subtraction dipole artifact
-     AND reliability > 0.5               -- Likely real (adjust threshold)
      AND psfFlux_flag = 0                -- Difference flux succeeded
      AND pixelFlags_edge = 0             -- Not on edge
      AND pixelFlags_saturatedCenter = 0  -- No saturation
      AND pixelFlags_bad = 0              -- No bad pixels
-
-.. note::
-
-   The real/bogus classifier in DP1 is preliminary.
-   These threshold values are approximate suggestions and no purity/completeness characterization is currently available for DP1.
-   The classifier may assign lower scores to some real variables (especially variable stars) that did not match training expectations.
-   See the :ref:`DIA processing documentation <dia-source>` for more information on the reliability model.
-   Always consider the science tolerance for contamination versus completeness.
 
 Additional quality filters.
 
@@ -191,7 +171,7 @@ ForcedSourceOnDiaObject table
 
 Guidance for the application of flags on forced photometry at DiaObject positions on difference images.
 
-Essential quality filters for ForcedSourceOnDiaObject are listed below (apply per measurement).
+Recommended quality filters for ForcedSourceOnDiaObject are listed below (apply per measurement).
 
 .. code-block:: sql
 
