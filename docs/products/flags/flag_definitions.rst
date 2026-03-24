@@ -18,10 +18,10 @@ DP1 contains 660 flag columns distributed across five catalog tables, as listed 
      - Flag types
    * - :ref:`Object <catalogs-object>`
      - 512
-     - Pixel quality, measurement failure, extendedness, deblending, and calibration flags across 5 photometric bands (u, g, r, i, z).
+     - Pixel quality, measurement failure, extendedness, and calibration flags across 5 photometric bands (u, g, r, i, z).
    * - :ref:`Source <catalogs-source>`
      - 82
-     - Centroiding, photometry, deblending, and calibration flags.
+     - Centroiding, photometry, and calibration flags.
    * - :ref:`ForcedSource <catalogs-forced-source>`
      - 15
      - Pixel quality and forced photometry flags.
@@ -98,9 +98,6 @@ The most commonly used pixel quality flags are listed in the table below.
    * - ``pixelFlags_nodata``
      - Object, Source, DiaSource
      - No pixel data available (off coverage area).
-   * - ``pixelFlags_inexact_psfCenter``
-     - Object
-     - PSF model discontinuous at center (OR of CLIPPED, REJECTED, SENSOR_EDGE).
 
 Key points:
 
@@ -160,46 +157,6 @@ Key points:
 - Subflag pattern: Many algorithms provide detailed subflags explaining why the measurement failed (e.g., ``psfFlux_flag_edge``, ``psfFlux_flag_noGoodPixels``). If the general flag is set to ``1``, the specific failure reason may be in a subflag, but the general flag alone is sufficient to filter the measurement.
 - Usage rule: If a measured quantity (flux, shape, etc.) is used, the corresponding general flag should be required to be ``0``. For example, when using ``r_psfFlux``, require ``r_psfFlux_flag = 0``.
 
-Deblending flags
-----------------
-
-Purpose: Indicate status and quality of the deblending process (separating overlapping sources).
-
-The Source table deblending flags are listed in the table below.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 15 60
-
-   * - Flag name
-     - Tables
-     - Meaning when set to 1
-   * - ``deblend_nChild``
-     - Source
-     - Number of deblended children. If > 0, this is a parent (blended group) and should not be used as an independent object (to avoid double-counting). Require ``deblend_nChild = 0`` for science samples.
-   * - ``deblend_skipped``
-     - Source
-     - Deblender skipped this source (too complex, too many peaks, or footprint too large). This parent record contains flux from multiple objects. Exclude sources with ``deblend_skipped = 1`` to avoid contaminated photometry.
-   * - ``deblend_tooManyPeaks``
-     - Source
-     - Deblending skipped due to excessive peaks in footprint (often accompanies ``deblend_skipped``).
-   * - ``deblend_parentTooBig``
-     - Source
-     - Deblending skipped because parent footprint was too large.
-   * - ``deblend_deblendedAsPsf``
-     - Source
-     - Source treated as point source during deblending (informational; not a failure).
-   * - ``deblend_hasStrayFlux``
-     - Source
-     - Blend had unassigned "stray flux" not allocated to children; photometry may be incomplete.
-   * - ``deblend_masked``
-     - Source
-     - Majority of parent footprint was masked; often leads to ``deblend_skipped``.
-
-Typical science cut: ``deblend_nChild = 0 AND deblend_skipped = 0``.
-
-This ensures the sample includes only isolated sources or properly deblended children, excluding blended parents and complex cases.
-
 Difference imaging flags
 ------------------------
 
@@ -213,8 +170,6 @@ The DiaSource-specific flags are listed in the table below.
      - Meaning and recommendation
    * - ``isDipole``
      - Detection classified as dipole artifact (imperfect image subtraction). Exclude dipoles (``isDipole = 0``) for clean transient samples; these are typically subtraction residuals of bright stars.
-   * - ``reliability``
-     - Real/bogus score (0--1); higher = more likely real astrophysical source. **Note:** This is not a boolean flag; it is a continuous floating-point value. Apply a threshold (e.g., ``reliability > 0.5`` or ``> 0.8``) to remove artifacts (cosmic rays, ghosts, dipoles). The classifier is preliminary in DP1; use with awareness that it may filter some real variables.
    * - ``psfDiffFlux_flag``
      - PSF flux on difference image failed. Require ``0`` to use difference flux.
    * - ``forced_PsfFlux_flag``

@@ -5,7 +5,7 @@ Connection to image mask planes
 ####################################
 
 Catalog ``pixelFlags_*`` columns are directly derived from :ref:`image mask planes <images-mask-planes>`.
-Each mask plane bit in the image (BAD, SAT, CR, INTRP, EDGE, etc.) propagates to a corresponding pixel flag in the catalog.
+Each mask plane bit in the image (``BAD``, ``SAT``, ``CR``, ``INTRP``, ``EDGE``, etc.) propagates to a corresponding pixel flag in the catalog.
 
 The key mask plane to flag mappings are listed in the table below.
 
@@ -46,9 +46,6 @@ The key mask plane to flag mappings are listed in the table below.
    * - REJECTED
      - (propagates to CLIPPED)
      - Input visit excluded during coaddition.
-   * - INEXACT_PSF
-     - ``pixelFlags_inexact_psf``
-     - PSF model discontinuous (OR of CLIPPED, REJECTED, SENSOR_EDGE).
 
 Footprint vs center: Flags without ``Center`` suffix are set if any pixel in the source footprint has that mask bit.
 ``Center`` flags are set only if a pixel in the central 3x3 box has that bit.
