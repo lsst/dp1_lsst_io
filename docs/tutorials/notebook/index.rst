@@ -306,6 +306,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     :glob:
 
     309/notebook-309-1.rst
+    309/notebook-309-2.rst
 
 
 310. Photometric redshifts
