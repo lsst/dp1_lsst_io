@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-03-25
+==========
+
+Released Notebook tutorial 309.2, which demonstrates how to transform between DP1 photometry and other systems.
+
 2026-03-23
 ==========
 
