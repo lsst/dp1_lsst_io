@@ -18,7 +18,7 @@ DP1 contains 660 flag columns distributed across five catalog tables, as listed 
      - Flag types
    * - :ref:`Object <catalogs-object>`
      - 512
-     - Pixel quality, measurement failure, extendedness, and calibration flags across 5 photometric bands (u, g, r, i, z).
+     - Pixel quality, measurement failure, extendedness, and calibration flags across 6 photometric bands (u, g, r, i, z, y).
    * - :ref:`Source <catalogs-source>`
      - 82
      - Centroiding, photometry, and calibration flags.
@@ -187,6 +187,8 @@ The ForcedSourceOnDiaObject difference imaging flags are listed in the table bel
      - Forced PSF flux on difference image failed.
    * - ``diff_PixelFlags_nodataCenter``
      - Position outside difference image coverage (no template); difference flux invalid.
+   * - ``psfFlux_flag``
+     - Forced PSF flux on science image failed.
 
 Specialized flags
 -----------------

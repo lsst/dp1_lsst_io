@@ -163,7 +163,7 @@ Additional quality filters.
 ForcedSourceOnDiaObject table
 ------------------------------
 
-Guidance for the application of flags on forced photometry at DiaObject positions on difference images.
+Guidance for the application of flags on forced photometry at DiaObject positions on _difference_ images.
 
 
 .. code-block:: sql
@@ -173,5 +173,18 @@ Guidance for the application of flags on forced photometry at DiaObject position
      AND pixelFlags_saturatedCenter = 0    -- No saturation
      AND invalidPsfFlag = 0                -- PSF valid
 
-Apply these filters when building DiaObject light curves from forced photometry.
+Apply these filters when building DiaObject light curves from forced photometry on difference images.
+Similar to ForcedSource, filter per-measurement to remove bad epochs while keeping good ones.
+
+Guidance for the application of flags on forced photometry at DiaObject positions on _science_ images.
+
+
+.. code-block:: sql
+
+   WHERE psfFlux_flag = 0                  -- Science image flux succeeded
+     AND pixelFlags_bad = 0                -- No bad pixels
+     AND pixelFlags_saturatedCenter = 0    -- No saturation
+     AND invalidPsfFlag = 0                -- PSF valid
+
+Apply these filters when building DiaObject light curves from forced photometry on science images.
 Similar to ForcedSource, filter per-measurement to remove bad epochs while keeping good ones.
