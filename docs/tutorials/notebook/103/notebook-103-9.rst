@@ -1,8 +1,8 @@
-.. _notebook-103-4:
+.. _notebook-103-9:
 
 ##########################
-103.4. Cutout exposures
+103.9. Image stamps
 ##########################
 
 .. raw:: html
-    :file: 103_4_Cutout_exposures.html
+    :file: 103_9_Image_stamps.html
