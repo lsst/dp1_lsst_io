@@ -7,7 +7,7 @@ Log of major tutorial updates
 2026-03-30
 ==========
 
-Released Notebook tutorial 103.9, which demonstrates how to use the Rubin cutout service to generate bulk image stamps. 
+Released Notebook tutorial 103.9, which demonstrates how to use the Rubin cutout service to generate bulk image stamps.
 Updated Notebook tutorial 103.4, now called cutout exposures, to demonstrate image cutout changes to the Rubin cutout service.
 
 2026-03-25
