@@ -110,46 +110,9 @@ Upload tables and join them in ADQL statements.
 200. Data products definitions
 ==============================
 
-Tutorials for learning about the individual data products.
+Please refer to the :ref:`200-level notebook tutorials <notebook-200>` for a demonstration of the format and contents of the catalogs and images.
 
-201. Catalogs
--------------
-
-Tables of measurements made on detected sources, plus observational metadata.
-
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    201/portal-201-1.rst
-    201/portal-201-2.rst
-    201/portal-201-3.rst
-    201/portal-201-4.rst
-    201/portal-201-5.rst
-    201/portal-201-6.rst
-    201/portal-201-7.rst
-    201/portal-201-8.rst
-    201/portal-201-9.rst
-    201/portal-201-10.rst
-    201/portal-201-11.rst
-
-
-202. Images
------------
-
-Individual, difference, and coadded images of the sky in the six LSST filters.
-
-.. toctree::
-    :titlesonly:
-    :glob:
-
-    202/portal-202-1.rst
-    202/portal-202-2.rst
-    202/portal-202-3.rst
-    202/portal-202-4.rst
-    202/portal-202-5.rst
-
-
+Instructions for how to access and visualize catalog and image data with the Portal are provided in the 100-level tutorials above.
 
 
 .. _portal-300:
