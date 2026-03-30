@@ -61,6 +61,7 @@ Short tutorials with a learning objective of how to use a single RSP function or
     103/notebook-103-6.rst
     103/notebook-103-7.rst
     103/notebook-103-8.rst
+    103/notebook-103-9.rst
 
 
 104. Butler data access
