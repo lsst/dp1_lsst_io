@@ -320,6 +320,18 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     310/notebook-310-1.rst
 
 
+311. Interactive data visualization
+-----------------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    311/notebook-311-1.rst
+    311/notebook-311-2.rst
+    311/notebook-311-3.rst
+
+
 
 .. _notebook-es:
 

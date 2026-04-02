@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-04-01
+==========
+
+Released new notebook tutorial series 311 on the interactive data visualization.
+
 2026-03-30
 ==========
 
