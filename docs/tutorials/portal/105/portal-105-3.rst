@@ -64,8 +64,13 @@ Change its coordinate system to the Galactic coordinate by opening the "Layers" 
 Click the "Ruler" icon (E in Figure 1), click a starting point on the image, and drag to an endpoint.
 In the "Layers" pop-up window, check "Offset Calculation" under "Distance Tool", and set "Unit" to degrees.
 
-**7. Add a mask** (coming soon).
-Use of the "Mask" icon (F in Figure 1) will be added here at a later date.
+**7. Add a mask.**
+To display image mask planes, do not use the "Mask" icon (F in Figure 1), which does not work properly with Rubin images.
+Instead, click the "Layers" icon (B in Figure 1), and then click "Enable" in the lower-left corner next to where it says "Mask Layer found" (see Figure 2).
+A list of many mask planes will appear, starting with "BAD," "SAT," "INTRP," "CR," "EDGE," and so on.
+Click the toggle next to "bit # 5 - DETECTED" to display the mask for all pixels that are part of detected objects.
+At the right side, change the color of this mask plane to green by clicking on the "Color" button and selecting green.
+Turn the DETECTED mask display off by clicking the toggle at the left side.
 
 **8. Add a marker.**
 Click the "Marker" icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.
