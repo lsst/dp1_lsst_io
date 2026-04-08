@@ -74,7 +74,7 @@ Turn the DETECTED mask display off by clicking the toggle at the left side.
 
 **8. Add a marker.**
 Click the "Marker" icon (G in Figure 1) and select "Add Marker" to place a marker (a circle) on the image.
-Click and drag to move it to the lower-left corner of the image.
+Click and drag the marker to highlight an object of interest.
 Resize the marker by clicking and dragging one of the little four boxes that appear around it.
 Open the "Layers" window, set the label to "Object of interest", and change the label corner to "NE".
 
@@ -82,7 +82,7 @@ Open the "Layers" window, set the label to "Object of interest", and change the 
 Click the "Footprint" icon (G in Figure 1) and select "NIRCAM" from "Add JWST footprint".
 The footprint will appear in the center of the image.
 Move it by clicking and dragging any part of it.
-To rotate, click the Overlay icon and enter "45" for "Angle" under "Footprint: JWST NIRCAM", or drag the rotate handle by 45 degrees.
+To rotate, click the "Layers" icon and enter "45" for "Angle" under "Footprint: JWST NIRCAM", or drag the rotate handle by 45 degrees.
 
 .. figure:: images/portal-105-3-2.png
     :name: portal-105-3-2
