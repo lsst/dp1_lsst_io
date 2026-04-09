@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 6/27/2025
+**Last verified to run:** 2026-04-07
 
 **Learning objective:** Navigate the multi-panel interface for image data results.
 
@@ -22,10 +22,10 @@ Rubin staff will respond to all questions posted there.
 
 ----
 
-**1. Execute an ADQL query for visit images**
+**1. Execute an ADQL query for visit images.**
 Log in to the Portal Aspect, select the "DP1 Images" tab and click on "Edit ADQL" at upper right.
 Enter the following ADQL statement and click "Search" at lower left.
-This query will return all process visit images that overlap coordinates RA, Dec = 53.0, -28.0 degrees.
+This query will return all processed visit images that overlap coordinates RA, Dec = 53.0, -28.0 degrees.
 
 .. code-block:: SQL
 
@@ -43,45 +43,45 @@ This query will return all process visit images that overlap coordinates RA, Dec
 
 
 **2. Review the results interface for images.**
-As shown in Figure 1, the default layout displays the selected image at upper right,
-a default plot of RA vs. Dec at upper left, and the table with image metadata at the bottom.
+As shown in Figure 1, the default layout displays the selected image at upper left,
+a default plot of RA vs. Dec at upper right, and the table with image metadata at the bottom.
 
 .. figure:: images/portal-105-1-1.png
     :name: portal-105-1-1
     :alt: The Results tab after a query has been executed.
 
-    Figure 1: The results of the query above, which defaults to the screen split three ways:
+    Figure 1: The results of the query above, which defaults to the screen split three ways: the selected image is in the upper left panel, a plot of RA, Dec positions of the images is shown in the upper right, and the bottom portion of the screen contains a table with information about the query results.
 
 
 **3. Select a different image to display.**
 Click on another row of the table so that it is highlighted in orange, and it will display at upper left.
 
 **4. Subset images by filtering the table.**
-In the table column for ``lsst_band``, use the drop-down table in the header to select only *r*-band images (B in Figure 1).
-For column ``t_min`` enter ``< 60623.28`` to select only images for which the shutter opened before MJD 60623.26 (C in Figure 1).
+In the table column for ``lsst_band``, use the drop-down table in the header (labeled "B" in Figure 1) to select only *r*-band images.
+For column ``t_min`` enter ``< 60623.28`` to select only images for which the shutter opened before MJD 60623.28 (labeled "C" in Figure 1).
 This will filter the table down to 10 images.
 
 **5. Display multiple images.**
-To display up to eight images side-by-side, click on the icon displaying six little boxes above the single image (A in Figure 1).
+To display up to eight images side-by-side, click on the icon displaying six little boxes above the single image (labeled "A" in Figure 1).
 
 .. figure:: images/portal-105-1-2.png
     :name: portal-105-1-2
     :alt: The Results tab after a query has been executed but displaying multiple images.
 
-    Figure 2: The results of the query above, but displaying multiple images, corresponding to first eight entries in the table.
+    Figure 2: The results of the query above, but displaying multiple images, corresponding to the first eight entries in the table.
 
 
 **6. Hide the active chart (plot).**
 Open the left sidebar using the menu icon at upper left.
-Under "Results Layout", select a side-by-side view of the coverage/images panel and the tables panel, as in Figure 3.
+Under "Results Layout," select a side-by-side view of the coverage/images panel and the tables panel, as in Figure 3.
 The layout should now resemble Figure 4.
-Note that it might be necessary to choose the right tab in the left panel in order to see the images instead of the coverage map or active chart.
+Note that it might be necessary to choose a different tab in the left panel in order to see the images instead of the coverage map or active chart.
 
 .. figure:: images/portal-105-1-3.png
     :name: portal-105-1-3
     :alt: Sidebar of appearance options.
 
-    Figure 3: The Portal sidebar, under "Results Layout".
+    Figure 3: The Portal sidebar, under "Results Layout."
 
 
 .. figure:: images/portal-105-1-4.png
