@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-04-13
+==========
+
+Updated Notebook tutorial 105.6 for the description of using a local butler and the scratch folder, and made other minor adjustments.
+
 2026-04-01
 ==========
 
