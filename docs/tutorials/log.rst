@@ -4,10 +4,15 @@
 Log of major tutorial updates
 #############################
 
+2026-04-17
+==========
+
+Released new notebook tutorial on the DP1 extendedness parameters.
+
 2026-04-13
 ==========
 
-Updated Notebook tutorial 105.6 for the description of using a local butler and the scratch folder, and made other minor adjustments.
+Updated notebook tutorial 105.6 for the description of using a local butler and the scratch folder, and made other minor adjustments.
 
 2026-04-01
 ==========
@@ -17,13 +22,13 @@ Released new notebook tutorial series 311 on the interactive data visualization.
 2026-03-30
 ==========
 
-Released Notebook tutorial 103.9, which demonstrates how to use the Rubin cutout service to generate bulk image stamps.
-Updated Notebook tutorial 103.4, now called cutout exposures, to demonstrate image cutout changes to the Rubin cutout service.
+Released notebook tutorial 103.9, which demonstrates how to use the Rubin cutout service to generate bulk image stamps.
+Updated notebook tutorial 103.4, now called cutout exposures, to demonstrate image cutout changes to the Rubin cutout service.
 
 2026-03-25
 ==========
 
-Released Notebook tutorial 309.2, which demonstrates how to transform between DP1 photometry and other systems.
+Released notebook tutorial 309.2, which demonstrates how to transform between DP1 photometry and other systems.
 
 2026-03-23
 ==========
@@ -33,51 +38,43 @@ Updated API tutorial 102.3 on how to get started with PyVO using SODA.
 2026-03-19
 ==========
 
-Updated Notebook tutorial 206.2 to use image subsets with the Butler and other minor updates.
-Released new Notebook tutorial 302.2 on stellar multi-color photometry.
-
+Updated notebook tutorial 206.2 to use image subsets with the Butler and other minor updates.
+Released new notebook tutorial 302.2 on stellar multi-color photometry.
 
 2026-02-25
 ==========
 
-Released new Notebook tutorial 104.5 on image subsets with the Butler.
-
+Released new notebook tutorial 104.5 on image subsets with the Butler.
 
 2026-02-17
 ==========
 
 Released new API tutorial 102.2 on how to get started with PyVO using SIA.
 
-
 2026-02-10
 ==========
 
-Updated Notebook tutorial 101.3 to add Linux Nautlius for WebDAV.
-
+Updated notebook tutorial 101.3 to add Linux Nautlius for WebDAV.
 
 2026-01-30
 ==========
 
-Released new Notebook tutorial 201.12 on the ``CoaddPatches`` table and updated all Notebook tutorials in the 301 series to use this table in Section 2.3.
-
+Released new notebook tutorial 201.12 on the ``CoaddPatches`` table and updated all notebook tutorials in the 301 series to use this table in Section 2.3.
 
 2026-01-29
 ==========
 
-Released new Notebook tutorial 305.2 on identifying and characterizing variable stars.
-
+Released new notebook tutorial 305.2 on identifying and characterizing variable stars.
 
 2026-01-28
 ==========
 
-Released new Portal tutorial 301.2 on the Low Ecliptic Latitude Field, and a new Notebook tutorial 101.3 on how to remotely access files with WebDAV.
-
+Released new Portal tutorial 301.2 on the Low Ecliptic Latitude Field, and new notebook tutorial 101.3 on how to remotely access files with WebDAV.
 
 2026-01-16
 ==========
 
-Released Spanish versions of selected Notebook, Portal, and API tutorials, translated by the Argentinian in-kind contributor team.
-
+Released Spanish versions of selected notebook, Portal, and API tutorials, translated by the Argentinian in-kind contributor team.
 
 2026-01-02
 ==========
@@ -103,7 +100,6 @@ Released new notebook tutorial 202.6 on pixel mask planes.
 ==========
 
 Released new Portal tutorial 301.5 on Euclid Deep Field South.
-
 
 2025-11-28
 ==========
