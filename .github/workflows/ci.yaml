@@ -31,7 +31,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Run pre-commit hooks
-        uses: pre-commit/action@v3.0.1
+        uses: j178/prek-action@v2
 
   linkcheck:
     runs-on: ubuntu-latest
