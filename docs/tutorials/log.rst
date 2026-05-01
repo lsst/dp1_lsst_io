@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-04-30
+==========
+
+Released a new notebook tutorial in the 101-series that provides an overview of the data services.
+
 2026-04-17
 ==========
 
