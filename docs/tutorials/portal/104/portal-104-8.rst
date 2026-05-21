@@ -56,8 +56,8 @@ Add a new chart and select the "Heatmap" plot type. Use color (`g_psfMag`-`r_psf
 **3. Save the plot as a JSON file.**
 Click the floppy disk icon at the top of the plot interface, then select "JSON" from the format options to save the plot.
 
-.. figure:: images/portal-104-7-3.png
-    :name: portal-104-7-3
+.. figure:: images/portal-104-8-2.png
+    :name: portal-104-8-2
     :alt: Screenshot demonstrating how to save the plot as a JSON file
 
     Figure 2: Screenshot demonstrating how to save the plot as a JSON file.
