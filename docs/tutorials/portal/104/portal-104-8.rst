@@ -29,7 +29,7 @@ Rubin staff will respond to all questions posted there.
 **1. Log in to the Portal and execute a query.**
 Go to the Portal's DP1 Catalogs tab, switch to the ADQL interface (click on "Edit ADQL" tab), and enter the query below.
 Click the Search button at lower left.
-This step will return PSF photometry in $g,r$ bands for the point-like objects with signal-to-noise ratio $>$ 5 in both bands in the 47 Tuc field.
+This step will return PSF photometry in *g* and *r* bands for the point-like objects with signal-to-noise ratio > 5 in both bands in the 47 Tuc field.
 
 .. code-block:: SQL
 
@@ -48,13 +48,13 @@ Add a new chart and select the "Heatmap" plot type. Use color (``g_psfMag``-``r_
 .. figure:: images/portal-104-8-1.png
     :name: portal-104-8-1
     :width: 500
-    :alt: $g-r$ versus $r$ color-magnitude diagram for stars
+    :alt: g-r versus r color-magnitude diagram for stars
 
-    Figure 1: $g-r$ versus $r$ color-magnitude diagram for stars in the 47 Tuc field.
+    Figure 1: *g*-*r* versus *r* color-magnitude diagram for stars in the 47 Tuc field.
 
 
 **3. Save the plot as a JSON file.**
-Click the floppy disk icon at the top of the plot interface, then select "JSON" from the format options to save the plot.
+Click the floppy disk icon at the top of the plot interface, then select "JSON" from the format options to save the plot. The file will be saved to your local computer.
 
 .. figure:: images/portal-104-8-2.png
     :name: portal-104-8-2
