@@ -43,7 +43,7 @@ This step will return PSF photometry in $g,r$ bands for the point-like objects w
 
 
 **2. Plot a color-magnitude diagram.**
-Add a new chart and select the "Heatmap" plot type. Use color (`g_psfMag`-`r_psfMag`) on the x-axis and magnitude (`r_psfMag`) on the y-axis. Select 200 bins in X and 200 bins in Y. Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26. Select "reverse" under "Chart Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
+Add a new chart and select the "Heatmap" plot type. Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis. Select 200 bins in X and 200 bins in Y. Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26. Select "reverse" under "Chart Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
 .. figure:: images/portal-104-8-1.png
     :name: portal-104-8-1
