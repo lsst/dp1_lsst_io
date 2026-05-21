@@ -77,6 +77,7 @@ Interact with catalog data in the results interface (subset and plot).
     104/portal-104-5.rst
     104/portal-104-6.rst
     104/portal-104-7.rst
+    104/portal-104-8.rst
 
 
 105. Image data results interface
