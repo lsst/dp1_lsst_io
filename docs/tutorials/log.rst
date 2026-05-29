@@ -4,6 +4,13 @@
 Log of major tutorial updates
 #############################
 
+2026-05-29
+==========
+
+Released a new notebook tutorial 311.4 demonstrating how to manipulate figures with the plotly package.
+Released a new portal tutorial 104.8 demonstrating how to save a plot in JSON format.
+
+
 2026-04-30
 ==========
 

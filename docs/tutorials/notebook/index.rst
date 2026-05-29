@@ -332,6 +332,7 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     311/notebook-311-1.rst
     311/notebook-311-2.rst
     311/notebook-311-3.rst
+    311/notebook-311-4.rst
 
 
 
