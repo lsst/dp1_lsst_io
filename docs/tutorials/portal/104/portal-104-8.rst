@@ -8,7 +8,7 @@ For the Portal Aspect of the Rubin Science Platform at data.lsst.cloud.
 
 **Data Release:** DP1
 
-**Last verified to run:** 2026-05-21
+**Last verified to run:** 2026-05-29
 
 **Learning objective:** Make a color-magnitude diagram and save it as JSON file.
 
