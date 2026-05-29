@@ -43,7 +43,7 @@ This step will return PSF photometry in *g* and *r* bands for the point-like obj
 
 
 **2. Plot a color-magnitude diagram.**
-Add a new chart and select the "Heatmap" plot type. Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis. Select 200 bins in X and 200 bins in Y. Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26. Select "reverse" under "Chart Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
+Add a new chart (click on the plus sign) and select the "Heatmap" plot type. Use color (``g_psfMag``-``r_psfMag``) on the x-axis and magnitude (``r_psfMag``) on the y-axis. Select 200 bins in X and 200 bins in Y. Set the X Min, X Max values to -1, 3, and the Y Min, Y Max values to 16, 26. Select "reverse" under "Chart Options" for the y-axis to display brighter magnitudes (i.e., lower numbers) toward the top of the plot.
 
 .. figure:: images/portal-104-8-1.png
     :name: portal-104-8-1
@@ -54,7 +54,7 @@ Add a new chart and select the "Heatmap" plot type. Use color (``g_psfMag``-``r_
 
 
 **3. Save the plot as a JSON file.**
-Click the floppy disk icon at the top of the plot interface, then select "JSON" from the format options to save the plot. The file will be saved to your local computer.
+First, close the default (``g_psfMag`` vs. ``r_psfMag``) plot, and then click the floppy disk icon at the top of the plot interface, then select "JSON" from the format options to save the plot. The file will be saved to your local computer.
 
 .. figure:: images/portal-104-8-2.png
     :name: portal-104-8-2
