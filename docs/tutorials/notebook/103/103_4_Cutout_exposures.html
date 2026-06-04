@@ -7809,7 +7809,7 @@ a.anchor-link {
 Data Release: DP1 <br/>
 Container Size: large <br/>
 LSST Science Pipelines version: r29.2.0 <br/>
-Last verified to run: 2026-03-30 <br/>
+Last verified to run: 2026-06-04 <br/>
 Repository: <a href="https://github.com/lsst/tutorial-notebooks">github.com/lsst/tutorial-notebooks</a> <br/></p>
 </div>
 </div>
@@ -8103,7 +8103,7 @@ Define the band and the start and end times.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div><i>Table length=1</i>
-<table class="table-striped table-bordered table-condensed" id="table132775575964416">
+<table class="table-striped table-bordered table-condensed" id="table132225525509312">
 <thead><tr><th>dataproduct_type</th><th>dataproduct_subtype</th><th>facility_name</th><th>calib_level</th><th>target_name</th><th>obs_id</th><th>obs_collection</th><th>obs_publisher_did</th><th>access_url</th><th>access_format</th><th>s_resolution</th><th>s_xel1</th><th>s_xel2</th><th>t_xel</th><th>t_min</th><th>t_max</th><th>t_exptime</th><th>t_resolution</th><th>em_xel</th><th>em_min</th><th>em_max</th><th>em_res_power</th><th>em_filter_name</th><th>o_ucd</th><th>pol_xel</th><th>instrument_name</th><th>lsst_visit</th><th>lsst_detector</th><th>lsst_tract</th><th>lsst_patch</th><th>lsst_band</th><th>lsst_filter</th><th>obs_title</th><th>s_ra</th><th>s_dec</th><th>s_fov</th><th>s_region</th></tr></thead>
 <thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>arcsec</th><th></th><th></th><th></th><th>d</th><th>d</th><th>s</th><th>s</th><th></th><th>m</th><th>m</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>deg</th><th>deg</th><th>deg</th><th></th></tr></thead>
 <thead><tr><th>object</th><th>object</th><th>object</th><th>int32</th><th>object</th><th>object</th><th>object</th><th>object</th><th>object</th><th>object</th><th>float64</th><th>int64</th><th>int64</th><th>int64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>int64</th><th>float64</th><th>float64</th><th>float64</th><th>object</th><th>object</th><th>int64</th><th>object</th><th>int64</th><th>int64</th><th>int64</th><th>int64</th><th>object</th><th>object</th><th>object</th><th>float64</th><th>float64</th><th>float64</th><th>object</th></tr></thead>
@@ -8136,8 +8136,8 @@ Define the band and the start and end times.</p>
 <pre><code>SELECT dataproduct_type,dataproduct_subtype,calib_level,lsst_band,em_min,em_max,lsst_tract,lsst_patch,
        lsst_filter,lsst_visit,lsst_detector,t_exptime,t_min,t_max,s_ra,s_dec,s_fov,obs_id,
        obs_collection,o_ucd,facility_name,instrument_name,obs_title,s_region,access_url,
-       access_format
-FROM ivoa.ObsCore
+       access_format 
+FROM ivoa.ObsCore 
 WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
       AND obs_collection = 'LSST.DP1' AND calib_level = 2
       AND dataproduct_type = 'image' AND instrument_name = 'LSSTComCam'
@@ -8261,7 +8261,7 @@ WHERE CONTAINS(POINT('ICRS', 53.1567053, -27.7815854), s_region)=1
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="3.2.-Retrieve-the-cutout">3.2. Retrieve the cutout<a class="anchor-link" href="#3.2.-Retrieve-the-cutout">¶</a></h3><p>The cutout should be read into memory in the <code>ExposureF</code> format using LSST pipeline tools. To enable image display, first store the bytes from <code>mem</code> as an LSST <code>ExposureF</code> object. The image extension can then be accessed using the <code>.image</code> method. REPEATED BELOW FIX</p>
+<h3 id="3.2.-Retrieve-the-cutout">3.2. Retrieve the cutout<a class="anchor-link" href="#3.2.-Retrieve-the-cutout">¶</a></h3><p>The cutout should be read into memory in the <code>ExposureF</code> format using LSST pipeline tools. To enable image display, first store the bytes from <code>mem</code> as an LSST <code>ExposureF</code> object.</p>
 </div>
 </div>
 </div>
