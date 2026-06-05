@@ -163,7 +163,7 @@ Additional quality filters.
 ForcedSourceOnDiaObject table
 ------------------------------
 
-Guidance for the application of flags on forced photometry at DiaObject positions on _difference_ images.
+Guidance for the application of flags on forced photometry at DiaObject positions on *difference* images.
 
 
 .. code-block:: sql
@@ -176,7 +176,7 @@ Guidance for the application of flags on forced photometry at DiaObject position
 Apply these filters when building DiaObject light curves from forced photometry on difference images.
 Similar to ForcedSource, filter per-measurement to remove bad epochs while keeping good ones.
 
-Guidance for the application of flags on forced photometry at DiaObject positions on _science_ images.
+Guidance for the application of flags on forced photometry at DiaObject positions on *science* images.
 
 
 .. code-block:: sql
