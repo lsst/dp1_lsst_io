@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-06-09
+==========
+
+Released a new notebook tutorial 308.4 with guidance on photometric measures for solar system objects.
+
 2026-05-29
 ==========
 
