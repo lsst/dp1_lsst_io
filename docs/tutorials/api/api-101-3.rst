@@ -23,5 +23,145 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and SAOImageDS9.**
 
 See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
-Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_.
+Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_. Open both TOPCAT and DS9 software programs.
+
+
+**2. Verify TOPCAT and DS9**
+
+On the TOPCAT menu bar, click Interop, SAMP Status (See Figure 1) to verify TOPCAT and DS9 are properly configured.
+
+.. figure:: images/api-101-3-1.png
+    :name: api-101-3-1
+    :alt: A screenshot of the TOPCAT window with Interop menu selected.
+
+
+    Figure 1: TOPCAT window with Interop menu item selected.
+
+A pop up window will open (see Figure 2) showing SAMP Control active clients: Hub, topcat, and ds9.
+
+.. figure:: images/api-101-3-2.png
+    :name: api-101-3-2
+    :alt: SAMP Control window showing DS9 client is active.
+
+    Figure 2: SAMP Control window showing DS9 client is active.
+
+Close SAMP control window by clicking the “X” in the upper right-hand corner of the window.
+
+
+**2.1 Start a Simple Image Access (SIA) Query**
+
+In the main TOPCAT window, click the VO menu item, then select Simple Image Access (SIA) Query.
+
+.. figure:: images/api-101-3-3.png
+    :name: api-101-3-3
+    :alt: A screenshot of TOPCAT, VO, Simple Image Access (SIA) Query selection.
+
+    Figure 3: Open a SIA query dialog box.
+
+
+**2.2 Input search parameters**
+
+At the bottom of the window, in the SIA Parameters (See Figure 4) section of the Simple Image Access (SIA) Query window:
+
+-	 add https://data.lsst.cloud/api/sia/dp1/query into SIA URL:
+-	Change SIA Version:  to 2.0 by using the drop down menu
+-	Input 53.076 into the RA: box and -28.110 into the Dec: box
+-	Change Angular Size: to 0.5
+-	Click OK
+
+.. figure:: images/api-101-3-4.png
+    :name: api-101-3-4
+    :alt: A screenshot of SIA Parameters.
+
+    Figure 4: Open a SIA query dialog box with appropriate SIA Parameters.
+
+
+**2.3 Add authentication credentials**
+
+Add in the credentials created during API Tutorial 101, “How to get started with TOPCAT” (See figure 5). Press Authenticate.
+
+.. figure:: images/api-101-3-5.png
+    :name: api-101-3-5
+    :alt: Add authentication information obtained earlier.
+
+    Figure 5: Add authentication information obtained from tutorial “101.1 How to get started with TOPCAT”.
+
+**2.4 TOPCAT will load the ObsCore table**
+
+TOPCAT will retrieve the ObsCore table as shown in Figure 6.  This table has 18,118 rows and 37 columns.
+
+.. figure:: images/api-101-3-6.png
+    :name: api-101-3-6
+    :alt: Main TOPCAT window with data table loaded.
+
+    Figure 6: Main TOPCAT window with data table loaded.
+
+
+**2.5 Tell TOPCAT how to send data to ds9**
+
+Click the Dipslay actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (See Figure 7), to open the TOPCAT: Activation Actions window. 
+
+.. figure:: images/api-101-3-7.png
+    :name: api-101-3-7
+    :alt: Select Display activation actions.
+
+    Figure 7: Click “Display activation actions” button to open the activation actions window.
+
+
+**2.6  Click View URL**
+
+Click the “View URL option” (See Figure 8).
+
+.. figure:: images/api-101-3-8.png
+    :name: api-101-3-8
+    :alt: Select “View URL”.
+
+    Figure 8: Click “View URL”.
+
+
+**2.7 Click Display table cell data**
+
+Click on the Display table cell data button (See figure 9) to open the TOPCAT: Table Browser window (See figure 10).
+Use the scroll bar on the side to scroll down the table and select a row that has calibration level 2 for the ECDFS field.
+Row 6915 is selected in Figure 10.  A new window will open entitled View Datalink Table.
+
+.. figure:: images/api-101-3-9.png
+    :name: api-101-3-9
+    :alt: Click “Display table cell data” button.
+
+    Figure 9: Click “Display table cell data” button to open the TOPCAT: Table Browser.
+
+
+.. figure:: images/api-101-3-10.png
+    :name: api-101-3-10
+    :alt: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
+
+    Figure 10: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
+
+
+
+**2.8 Click “Send FITS Image” from the “Action:” drop down**
+
+Within the View Datalink Table window, click the dropdown menu for Action: (located at the bottom, see figure 11). Select “Send FITS Image”, then click Invoke.
+
+.. figure:: images/api-101-3-11.png
+    :name: api-101-3-11
+    :alt: Use the Action dropdown menu and select Send FITS Image.
+
+    Figure 11: Use the Action dropdown menu and select Send FITS Image.
+
+
+**2.9 Image sent to ds9, change scale to view**
+
+After clicking Invoke, the image will be sent to ds9 for display.
+Note: To improve image visibility, ``scale`` may need to be changed to ``zscale`` (See figure 12).
+Clicking on additional rows in the TOPCAT: Table Browser window will open additional images if Auto-Invoke is selected.
+
+
+.. figure:: images/api-101-3-12.png
+    :name: api-101-3-12
+    :alt: Click “scale” and “zscale” to view the image.
+
+    Figure 12: Click scale and zscale in the ds9 window to view the image.
+
 
