@@ -78,7 +78,7 @@ At the bottom of the window, in the SIA Parameters (Figure 4) section of the Sim
 
 **2.3 Add authentication credentials**
 
-Add in the credentials created during API Tutorial 101, “How to get started with TOPCAT” (Figure 5). Press Authenticate.
+Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (Figure 5). Press Authenticate.
 
 .. figure:: images/api-101-3-5.png
     :name: api-101-3-5
