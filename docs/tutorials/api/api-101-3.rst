@@ -1,0 +1,27 @@
+.. _api-101-3:
+
+#############################################################
+101.3. How to use TOPCAT and SIA to get DP9 and Aladin images
+#############################################################
+
+**Data Release:** DP1
+
+**Last verified to run:** 2026-06-12
+
+**Learning objective:** This tutorial provides a basic guide to using `TOPCAT <http://www.star.bris.ac.uk/~mbt/topcat/>`_ with the
+`Simple Image Access (SIA) <https://www.ivoa.net/documents/SIA/>`_ protocol and sending images directly to `SAOImageDS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin <https://aladin.cds.unistra.fr/>`_ to explore DP1 image data.
+
+**LSST data products:** The DP1 catalogs and image data products within the Rubin Science Platform (RSP).
+
+**Credit:** Based on tutorials developed by the Rubin Community Science team. Please consider acknowledging them if this
+tutorial is used for the preparation of journal articles, software releases, or other tutorials.
+
+**Get Support:** Everyone is encouraged to ask questions or raise issues in the `Support Category <https://community.lsst.org/c/support/6>`_
+of the Rubin Community Forum. Rubin staff will respond to all questions posted there.
+
+
+**1. Open TOPCAT and SAOImageDS9.**
+
+See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
+Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_.
+
