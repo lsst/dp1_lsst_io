@@ -105,7 +105,7 @@ Click the Dipslay actions invoked when rows are selected button (resembles a lad
     :name: api-101-3-7
     :alt: Select Display activation actions.
 
-    Figure 7: Click “Display activation actions” button to open the activation actions window.
+    Figure 7: Click “Display actions invoked” button to open the activation actions window.
 
 
 **2.6  Click View URL**
