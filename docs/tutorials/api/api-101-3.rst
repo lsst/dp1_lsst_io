@@ -123,7 +123,7 @@ Click the “View URL option” (Figure 8).
 
 Click on the Display table cell data button (Figure 9) to open the TOPCAT: Table Browser window (Figure 10).
 Use the scroll bar on the side to scroll down the table and select a row that has calibration level 2 for the ECDFS field.
-Row 6915 is selected in Figure 10.  A new window will open entitled View Datalink Table.
+Row 6915 is selected in Figure 10.  A new window will open entitled View Datalink Table (Figure 11).
 
 .. figure:: images/api-101-3-9.png
     :name: api-101-3-9
@@ -136,7 +136,7 @@ Row 6915 is selected in Figure 10.  A new window will open entitled View Datalin
     :name: api-101-3-10
     :alt: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
 
-    Figure 10: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window (Figure 11).
+    Figure 10: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
 
 
 
