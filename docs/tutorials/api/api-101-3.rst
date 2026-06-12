@@ -105,18 +105,18 @@ Click the Dipslay actions invoked when rows are selected button (resembles a lad
     :name: api-101-3-7
     :alt: Select Display activation actions.
 
-    Figure 7: Click “Display actions invoked” button to open the activation actions window.
+    Figure 7: Click Display actions invoked button to open the activation actions window.
 
 
 **2.6  Click View URL**
 
-Click the “View URL option” (Figure 8).
+Click the View URL option (Figure 8).
 
 .. figure:: images/api-101-3-8.png
     :name: api-101-3-8
-    :alt: Select “View URL”.
+    :alt: Select View URL.
 
-    Figure 8: Click “View URL”.
+    Figure 8: Click View URL.
 
 
 **2.7 Click Display table cell data**
@@ -129,7 +129,7 @@ Row 6915 is selected in Figure 10.  A new window will open entitled View Datalin
     :name: api-101-3-9
     :alt: Click “Display table cell data” button.
 
-    Figure 9: Click “Display table cell data” button to open the TOPCAT: Table Browser.
+    Figure 9: Click Display table cell data button to open the TOPCAT: Table Browser.
 
 
 .. figure:: images/api-101-3-10.png
