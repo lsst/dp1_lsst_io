@@ -23,7 +23,7 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and SAOImageDS9 or Aladin**
 
 See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
-Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
+Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin download <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
 
 
 **2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating**
@@ -99,7 +99,7 @@ TOPCAT will retrieve the ObsCore table as shown in Figure 6.  This table has 18,
 
 **2.5 Tell TOPCAT how to send data to ds9**
 
-Click the Dipslay actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window. 
+Click the Display actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window. 
 
 .. figure:: images/api-101-3-7.png
     :name: api-101-3-7
@@ -110,7 +110,7 @@ Click the Dipslay actions invoked when rows are selected button (resembles a lad
 
 **2.6  Click View URL**
 
-Click the View URL option (Figure 8).
+Click the View URL option (Figure 8). (Note: older versions of TOPCAT might need to use "Send FITS Image" or "View Datalink Table" options).
 
 .. figure:: images/api-101-3-8.png
     :name: api-101-3-8
