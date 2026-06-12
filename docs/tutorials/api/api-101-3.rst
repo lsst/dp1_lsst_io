@@ -37,7 +37,7 @@ On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT a
 
     Figure 1: TOPCAT window with Interop menu item selected.
 
-A pop up window will open (Figure 2) showing SAMP Control active clients: Hub, topcat, and ds9 (Figure 3).
+A pop up window will open (Figure 2) showing SAMP Control active clients: Hub, topcat, and ds9.
 
 .. figure:: images/api-101-3-2.png
     :name: api-101-3-2
