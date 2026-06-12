@@ -23,7 +23,7 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and SAOImageDS9 or Aladin**
 
 See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
-Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
+Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
 
 
 **2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating**
