@@ -99,7 +99,7 @@ TOPCAT will retrieve the ObsCore table as shown in Figure 6.  This table has 18,
 
 **2.5 Tell TOPCAT how to send data to ds9**
 
-Click the Display actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window. 
+Click the Display actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window.
 
 .. figure:: images/api-101-3-7.png
     :name: api-101-3-7
