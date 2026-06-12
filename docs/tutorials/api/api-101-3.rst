@@ -136,13 +136,13 @@ Row 6915 is selected in Figure 10.  A new window will open entitled View Datalin
     :name: api-101-3-10
     :alt: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
 
-    Figure 10: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window.
+    Figure 10: Use scroll bar on the right to find an image with calibration level 2 within the ECDFS field. Click a row to open the View Datalink Table window (Figure 11).
 
 
 
-**2.8 Click “Send FITS Image” from the “Action:” drop down**
+**2.8 Click Send FITS Image from the Action: drop down**
 
-Within the View Datalink Table window, click the dropdown menu for Action: (located at the bottom of Figure 11). Select “Send FITS Image”, then click Invoke.
+Within the View Datalink Table window, click the dropdown menu for Action: (located at the bottom of Figure 11). Select Send FITS Image, then click Invoke.
 
 .. figure:: images/api-101-3-11.png
     :name: api-101-3-11
