@@ -63,7 +63,7 @@ In the main TOPCAT window, click the VO menu item, then select Simple Image Acce
 
 At the bottom of the window, in the SIA Parameters (Figure 4) section of the Simple Image Access (SIA) Query window:
 
--	 add https://data.lsst.cloud/api/sia/dp1/query into SIA URL:
+-	 add `https://data.lsst.cloud/api/sia/dp1/query` into SIA URL:
 -	Change SIA Version:  to 2.0 by using the drop down menu
 -	Input 53.076 into the RA: box and -28.110 into the Dec: box
 -	Change Angular Size: to 0.5
