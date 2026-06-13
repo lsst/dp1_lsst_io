@@ -8738,12 +8738,12 @@ VANDELS sources missed by LBG selection: 24
 <span class="s2">        AND obs_collection = 'LSST.DP1'</span>
 <span class="s2">        AND CONTAINS(POINT('ICRS', </span><span class="si">{</span><span class="n">ra</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">dec</span><span class="si">}</span><span class="s2">), s_region) = 1</span>
 <span class="s2">        """</span>
-        
+
         <span class="n">job</span> <span class="o">=</span> <span class="n">tap_service</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">cutout_query</span><span class="p">)</span>
         <span class="n">job</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
         <span class="n">job</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
         <span class="n">coadds</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">fetch_result</span><span class="p">()</span><span class="o">.</span><span class="n">to_table</span><span class="p">()</span>
-        
+
         <span class="k">for</span> <span class="n">col_idx</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">filters</span><span class="p">):</span>
             <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">row_idx</span><span class="p">][</span><span class="n">col_idx</span><span class="p">]</span>
             <span class="n">band_match</span> <span class="o">=</span> <span class="n">coadds</span><span class="p">[</span><span class="n">coadds</span><span class="p">[</span><span class="s1">'lsst_band'</span><span class="p">]</span> <span class="o">==</span> <span class="n">f</span><span class="p">]</span>
@@ -9001,7 +9001,7 @@ Requesting cutouts for 5 sources: VANDELS high-z confirmations identified by Rub
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Among the VANDELS spectroscopic sample:
 69 out of 469 are color selected
-5 LBG candidates are confirmed low redshift interlopers, 
+5 LBG candidates are confirmed low redshift interlopers,
 indicating a  1.07% interloper fraction
 </pre>
 </div>
