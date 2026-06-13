@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-06-12
+==========
+
+Released a new notebook tutorial 303.3 about galaxy color selection.
+
 2026-06-09
 ==========
 
