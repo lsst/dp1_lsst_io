@@ -56,7 +56,7 @@ When high energy particles moving near the speed of light hit the CCD, the pixel
 Satellites
 ----------
 
-A description of how satellite constellations impact LSST, and mitigation strategies, a please see the `FAQ on artificial satellites and debris <https://rubinobservatory.org/for-scientists/frequently-asked-questions/leo-sats`_.
+A description of how satellite constellations impact LSST, and mitigation strategies, a please see the `FAQ on artificial satellites and debris <https://rubinobservatory.org/for-scientists/frequently-asked-questions/leo-sats>`_.
 
 Artificial objects in Earth's orbit, including satellites and debris, can appear as bright streaks and/or dotted or dashed lines across images.
 In general, shorter and thinner streaks (less than the width of one detector) are from objects in higher orbits, while longer and wider streaks (often crossing the whole field of view) are from objects in lower orbits.
