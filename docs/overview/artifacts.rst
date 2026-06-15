@@ -56,6 +56,8 @@ When high energy particles moving near the speed of light hit the CCD, the pixel
 Satellites
 ----------
 
+A description of how satellite constellations impact LSST, and mitigation strategies, a please see the `FAQ on artificial satellites and debris <https://rubinobservatory.org/for-scientists/frequently-asked-questions/leo-sats`_.
+
 Artificial objects in Earth's orbit, including satellites and debris, can appear as bright streaks and/or dotted or dashed lines across images.
 In general, shorter and thinner streaks (less than the width of one detector) are from objects in higher orbits, while longer and wider streaks (often crossing the whole field of view) are from objects in lower orbits.
 It is common for such features to vary in brightness along the track and exhibit flares or glint trails.
@@ -63,10 +65,6 @@ Pixel values are not erased, redacted, or otherwise altered in trailed regions, 
 If a streak is visually present in a difference image, it may set the STREAK mask plane, and any diaSource detected in such a region will have the ``pixelFlags_streak`` flag set in the corresponding catalog.
 In practice, it is challenging to distinguish "real" streaks from, e.g., diffraction spikes, and DP1 makes no promise of accuracy for the STREAK mask.
 In the future, STREAK mask information may be propagated into other catalogs, and trailed glints may also be detected and indicated.
-
-For a description of how satellite constellations impact LSST more generally, please see `ls.st/satcon <https://www.lsst.org/content/lsst-statement-regarding-increased-deployment-satellite-constellations>`_.
-
-
 
 .. figure:: images/artifacts-1-bleed.png
     :name: artifacts-1-bleed
