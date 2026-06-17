@@ -22,13 +22,13 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 
 **1. Open TOPCAT and SAOImageDS9 or Aladin**
 
-See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
+See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT). Obtain a token that uses **read: image**.
 Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin download <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
 
 
 **2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating**
 
-On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT and DS9 are properly configured.
+On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT and DS9 are connected.
 
 .. figure:: images/api-101-3-1.png
     :name: api-101-3-1
@@ -63,7 +63,7 @@ In the main TOPCAT window, click the VO menu item, then select Simple Image Acce
 
 At the bottom of the window, in the SIA Parameters (Figure 4) section of the Simple Image Access (SIA) Query window:
 
--	 add https\://data.lsst.cloud/api/sia/dp1/query into SIA URL:
+-	add https\://data.lsst.cloud/api/sia/dp1/query into SIA URL:
 -	Change SIA Version:  to 2.0 by using the drop down menu
 -	Input 53.076 into the RA: box and -28.110 into the Dec: box
 -	Change Angular Size: to 0.5
@@ -78,7 +78,7 @@ At the bottom of the window, in the SIA Parameters (Figure 4) section of the Sim
 
 **2.3 Add authentication credentials**
 
-Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (Figure 5). Press Authenticate.
+Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (linked above) (Figure 5). Press Authenticate.
 
 .. figure:: images/api-101-3-5.png
     :name: api-101-3-5
@@ -88,7 +88,7 @@ Add the credentials created during API Tutorial 101, “How to get started with 
 
 **2.4 TOPCAT will load the ObsCore table**
 
-TOPCAT will retrieve the ObsCore table as shown in Figure 6.  This table has 18,118 rows and 37 columns.
+TOPCAT will retrieve the relevant sections of the ObsCore table (Figure 6).  The table retrieved by TOPCAT has 18,118 rows and 37 columns.
 
 .. figure:: images/api-101-3-6.png
     :name: api-101-3-6
@@ -160,7 +160,7 @@ Clicking on additional rows in the TOPCAT: Table Browser window will open additi
 
 .. figure:: images/api-101-3-12.png
     :name: api-101-3-12
-    :alt: Click “scale” and “zscale” to view the image.
+    :alt: Click scale and zscale to view the image.
 
     Figure 12: Click scale and zscale in the ds9 window to view the image.
 
