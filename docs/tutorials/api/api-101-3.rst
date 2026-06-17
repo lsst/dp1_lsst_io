@@ -63,7 +63,7 @@ In the main TOPCAT window, click the VO menu item, then select Simple Image Acce
 
 At the bottom of the window, in the SIA Parameters (Figure 4) section of the Simple Image Access (SIA) Query window:
 
--	add https\://data.lsst.cloud/api/sia/dp1/query into SIA URL:
+-	 add https\://data.lsst.cloud/api/sia/dp1/query into SIA URL:
 -	Change SIA Version:  to 2.0 by using the drop down menu
 -	Input 53.076 into the RA: box and -28.110 into the Dec: box
 -	Change Angular Size: to 0.5
@@ -78,7 +78,7 @@ At the bottom of the window, in the SIA Parameters (Figure 4) section of the Sim
 
 **2.3 Add authentication credentials**
 
-Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (linked above) (Figure 5). Press Authenticate.
+Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (linked above) (Note: click `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_). Press Authenticate (Figure 5).
 
 .. figure:: images/api-101-3-5.png
     :name: api-101-3-5
