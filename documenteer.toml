@@ -30,6 +30,9 @@ ignore = [
     "https://apod.nasa.gov/apod/ap230119.html", #MLG: works fine but failing with linkchecker Tue Jun 9 2026
     "https://apod.nasa.gov/apod/ap240313.html", #MLG: works fine but failing with linkchecker Tue Jun 9 2026
     "https://fits.gsfc.nasa.gov/fits_wcs.html" #MLG: works fine but failing with linkchecker Tue Jun 9 2026
+    "https://data\.linea\.org\.br/en/sci_products/pzserver\.html" #CLA: gives a 404 error Wed Jun 17 2026
+]
+
 ]
 
 [sphinx.intersphinx.projects]
