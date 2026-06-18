@@ -23,16 +23,21 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 **1. Open TOPCAT and SAOImageDS9 or Aladin**
 
 See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
-Obtain a token that uses **read: image**.
+Obtain an authentication token that includes  **read: image**.
 Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin download <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_.
-Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
-Screenshots for this tutorial were generated using TOPCAT Version 4.10-7, SAOImageDS9 Verions 8.6, and Aladin (v 12.060).
-Access to image‑retrieval features may depend on running an up‑to‑date installation of the software.
+Screenshots for this tutorial were generated on a Windows computer using TOPCAT Version 4.10-7, SAOImageDS9 Verions 8.6, and Aladin (v 12.060).
+Access to image‑retrieval features may depend on running an up‑to‑date version of these software programs and problems encountered during the workflow may be related to installation version or outdated software.
+The steps within TOPCAT for viewing an image in **ds9** or **Aladin** are identical; the only difference is which viewer is opened at the start of the tutorial.
 
 
-**2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating**
+Open TOPCAT (minimum v4.10-4) and DS9 or TOPCAT and Aladin software programs.
 
-On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT and DS9 are connected.
+
+**2. Verify TOPCAT and DS9 or TOPCAT and Aladin are open and communicating**
+
+On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT and DS9 (or TOPCAT and Aladin) are connected.
+Note: for this tutorial, ds9 was used to generate all screenshots, except for section 4 where an image is displayed in Aladin.
+As stated before, TOPCAT commands are identical for either option.
 
 .. figure:: images/api-101-3-1.png
     :name: api-101-3-1
@@ -41,7 +46,8 @@ On the TOPCAT menu bar, click Interop, SAMP Status (Figure 1) to verify TOPCAT a
 
     Figure 1: TOPCAT window with Interop menu item selected.
 
-A pop up window will open (Figure 2) showing SAMP Control active clients: Hub, topcat, and ds9.
+A pop up window will open (Figure 2) showing SAMP Control active clients: Hub, topcat, and ds9, or Hub, topcat, and Aladin (depending on which software package was used).
+This step will verify TOPCAT has the ability to send information to ds9 or Aladin.
 
 .. figure:: images/api-101-3-2.png
     :name: api-101-3-2
@@ -49,7 +55,7 @@ A pop up window will open (Figure 2) showing SAMP Control active clients: Hub, t
 
     Figure 2: SAMP Control window showing DS9 client is active.
 
-Close SAMP control window by clicking the “X” in the upper right-hand corner of the window.
+If clients are active, no action is needed. Close SAMP control window by clicking the “X” in the upper right-hand corner of the window.
 
 
 **2.1 Start a Simple Image Access (SIA) Query**
@@ -105,7 +111,7 @@ TOPCAT will retrieve the relevant sections of the ObsCore table (Figure 6).  The
 
 **2.5 Tell TOPCAT how to send data to ds9**
 
-Click the Display actions invoked when rows are selected button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window.
+Click the "Display actions invoked when rows are selected" button (resembles a ladder with a lightning bolt) (Figure 7), to open the TOPCAT: Activation Actions window.
 
 .. figure:: images/api-101-3-7.png
     :name: api-101-3-7
@@ -157,7 +163,7 @@ Within the "View Datalink Table" window, click the dropdown menu for Action: (lo
     Figure 11: Use the Action dropdown menu and select Send FITS Image.
 
 
-**2.9 Image sent to ds9, change scale to view**
+**3. Image sent to ds9, change scale to view**
 
 After clicking “Invoke” and a brief retrieval delay, the image is forwarded to ds9 for display.
 Note: To improve image visibility, ``scale`` may need to be changed to ``zscale`` (Figure 12).
@@ -171,10 +177,9 @@ Clicking on additional rows in the TOPCAT: Table Browser window will open additi
     Figure 12: Click scale and zscale in the ds9 window to view the image.
 
 
-**3. View images with Aladin**
+**4. Image sent to Aladin**
 
-Follow the TOPCAT instructions listed in **2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating** and beyond but open Aladin instead of SAOImageDS9.
-After completing step 2.8 (listed above) the following image will appear in Aladin (Figure 13). Use Aladin controls to scale or zoom within the image.
+If using Aladin for image display, after completing step 2.8 (listed above), the following image will appear in Aladin (Figure 13). Use Aladin controls to scale or zoom within the image.
 
 
 .. figure:: images/api-101-3-13.png
