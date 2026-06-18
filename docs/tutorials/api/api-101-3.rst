@@ -22,8 +22,12 @@ of the Rubin Community Forum. Rubin staff will respond to all questions posted t
 
 **1. Open TOPCAT and SAOImageDS9 or Aladin**
 
-See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT). Obtain a token that uses **read: image**.
-Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin download <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_. Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
+See `API Tutorial 101-1 <https://dp1.lsst.io/tutorials/api/api-101-1.html>`_ for instructions on how to access Rubin DP1 data with "Tool for OPerations on Catalogues And Tables" (TOPCAT).
+Obtain a token that uses **read: image**.
+Follow download and install instructions at `DS9 <https://ds9.si.edu/doc/install.html>`_ and `Aladin download <https://aladin.cds.unistra.fr/AladinDesktop/#Download>`_.
+Open both TOPCAT and DS9 (instructions in section 2) or TOPCAT and Aladin (instructions in section 3) software programs.
+Screenshots for this tutorial were generated using TOPCAT Version 4.10-7, SAOImageDS9 Verions 8.6, and Aladin (v 12.060).
+Access to image‑retrieval features may depend on running an up‑to‑date installation of the software.
 
 
 **2. View images with SAOImageDS9: Verify TOPCAT and DS9 are open and communicating**
@@ -65,8 +69,8 @@ At the bottom of the window, in the SIA Parameters (Figure 4) section of the Sim
 
 -	 add https\://data.lsst.cloud/api/sia/dp1/query into SIA URL:
 -	Change SIA Version:  to 2.0 by using the drop down menu
--	Input 53.076 into the RA: box and -28.110 into the Dec: box
--	Change Angular Size: to 0.5
+-	Input 53.076 degrees into the RA: box and -28.110 degrees into the Dec: box (coordinates for the ECDFS field)
+-	Change Angular Size: to 0.5 degrees
 -	Click OK
 
 .. figure:: images/api-101-3-4.png
@@ -78,7 +82,9 @@ At the bottom of the window, in the SIA Parameters (Figure 4) section of the Sim
 
 **2.3 Add authentication credentials**
 
-Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (linked above) (Note: click `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_). Press Authenticate (Figure 5).
+Add the credentials created during API Tutorial 101, “How to get started with TOPCAT” (linked above)
+(Note: click `Creating user tokens webpage <https://rsp.lsst.io/guides/auth/creating-user-tokens.html>`_ for instructions to get a token and create a token with "read:images").
+Press Authenticate (Figure 5).
 
 .. figure:: images/api-101-3-5.png
     :name: api-101-3-5
@@ -110,7 +116,7 @@ Click the Display actions invoked when rows are selected button (resembles a lad
 
 **2.6  Click View URL**
 
-Click the View URL option (Figure 8). (Note: older versions of TOPCAT might need to use "Send FITS Image" or "View Datalink Table" options).
+Click the "View URL" option (Figure 8). (Note: older versions of TOPCAT might need to use "Send FITS Image" or "View Datalink Table" options).
 
 .. figure:: images/api-101-3-8.png
     :name: api-101-3-8
@@ -121,7 +127,7 @@ Click the View URL option (Figure 8). (Note: older versions of TOPCAT might need
 
 **2.7 Click Display table cell data**
 
-Click on the Display table cell data button (Figure 9) to open the TOPCAT: Table Browser window (Figure 10).
+Click on the "Display table cell data" button (Figure 9) to open the TOPCAT: Table Browser window (Figure 10).
 Use the scroll bar on the side to scroll down the table and select a row that has calibration level 2 for the ECDFS field.
 Row 6915 is selected in Figure 10.  A new window will open entitled View Datalink Table (Figure 11).
 
@@ -142,7 +148,7 @@ Row 6915 is selected in Figure 10.  A new window will open entitled View Datalin
 
 **2.8 Click Send FITS Image from the Action: drop down**
 
-Within the View Datalink Table window, click the dropdown menu for Action: (located at the bottom of Figure 11). Select Send FITS Image, then click Invoke.
+Within the "View Datalink Table" window, click the dropdown menu for Action: (located at the bottom of Figure 11). Select "Send FITS Image", then click "Invoke".
 
 .. figure:: images/api-101-3-11.png
     :name: api-101-3-11
@@ -153,7 +159,7 @@ Within the View Datalink Table window, click the dropdown menu for Action: (loca
 
 **2.9 Image sent to ds9, change scale to view**
 
-After clicking Invoke, the image will be sent to ds9 for display.
+After clicking “Invoke” and a brief retrieval delay, the image is forwarded to ds9 for display.
 Note: To improve image visibility, ``scale`` may need to be changed to ``zscale`` (Figure 12).
 Clicking on additional rows in the TOPCAT: Table Browser window will open additional images if Auto-Invoke is selected.
 
