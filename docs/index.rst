@@ -12,7 +12,7 @@ Data Preview 1 contains image and catalog products from Rubin Science Pipelines 
 
 *Dataset* |dataset_doi| [:download:`BibTeX <bib/dataset.bib>`] to be used when citing the DP1 dataset and this documentation (the link is self-referential).
 
-*Paper* |dp1_paper| `BibTeX <https://ui.adsabs.harvard.edu/abs/2026AJ....171..360V/exportcitation>`_
+*Paper* |dp1_paper| [`BibTeX <https://ui.adsabs.harvard.edu/abs/2026AJ....171..360V/exportcitation>`_]
 
 
 **Data Policy:** Only Rubin data rights holders may have an account in the Rubin Science Platform (RSP) and access to Data Preview 1.
