@@ -8,7 +8,7 @@ A high-level overview of the Data Release Processing (DRP) steps which generated
 
 All processing was done with the `LSST Science Pipelines <https://pipelines.lsst.io/>`_.
 
-For details see |dp1_paper| [:download:`BibTeX </bib/paper.bib>`].
+For details see |dp1_paper| [`BibTeX <https://ui.adsabs.harvard.edu/abs/2026AJ....171..360V/exportcitation>`_].
 
 
 .. _processing-summary:

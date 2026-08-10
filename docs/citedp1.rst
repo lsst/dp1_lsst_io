@@ -15,7 +15,7 @@ Data release and data products
 
 When citing this data release please reference the data release paper:
 
-|dp1_paper| [:download:`BibTeX </bib/paper.bib>`]
+|dp1_paper| [`BibTeX <https://ui.adsabs.harvard.edu/abs/2026AJ....171..360V/exportcitation>`_]
 
 When asked to cite the DP1 dataset as a whole please use:
 
