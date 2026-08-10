@@ -12,6 +12,9 @@ Data Preview 1 contains image and catalog products from Rubin Science Pipelines 
 
 *Dataset* |dataset_doi| [:download:`BibTeX <bib/dataset.bib>`] to be used when citing the DP1 dataset and this documentation (the link is self-referential).
 
+*Paper* |dp1_paper| [:download:`BibTeX <bib/paper.bib>`]
+
+
 **Data Policy:** Only Rubin data rights holders may have an account in the Rubin Science Platform (RSP) and access to Data Preview 1.
 All scientists and students in the US and Chile, plus named members of international in-kind teams, have Rubin data rights.
 `Learn more about the Rubin data policy <https://rubinobservatory.org/for-scientists/data-products/data-policy>`_.
