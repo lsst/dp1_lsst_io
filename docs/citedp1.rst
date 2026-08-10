@@ -13,7 +13,9 @@ DOI and publications
 Data release and data products
 ------------------------------
 
-When citing this data release please reference the data release paper: |dp1_paper| [:download:`BibTeX </bib/paper.bib>`].
+When citing this data release please reference the data release paper:
+
+|dp1_paper| [:download:`BibTeX </bib/paper.bib>`]
 
 When asked to cite the DP1 dataset as a whole please use:
 
