@@ -7,9 +7,9 @@
    :width: 15
    :alt: DOI Logo
 
-.. |dp1_paper| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); The Vera C. Rubin Observatory Data Preview 1 |doi_image| https://doi.org/10.71929/rubin/2570536
+.. |dp1_paper| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); The Vera C. Rubin Observatory Data Preview 1 |doi_image| https://doi.org/10.3847/1538-3881/ae521f
 
-.. |comcam_doi| replace:: *Citation*: **SLAC National Accelerator Laboratory and NSF-DOE Vera C. Rubin Observatory** (2024); LSST Commissioning Camera |doi_image| https://doi.org/10.3847/1538-3881/ae521f
+.. |comcam_doi| replace:: *Citation*: **SLAC National Accelerator Laboratory and NSF-DOE Vera C. Rubin Observatory** (2024); LSST Commissioning Camera |doi_image| https://doi.org/10.71929/rubin/2561361
 
 .. |osprae_doi| replace:: **Rubin Observatory Science Pipelines Developers** (2025); The LSST Science Pipelines Software: Optical Survey Pipeline Reduction and Analysis Environment |doi_image| https://doi.org/10.71929/rubin/2570545
 .. |tutorials_doi| replace:: *Citation*: **NSF-DOE Vera C. Rubin Observatory** (2025); Rubin Observatory LSST Tutorials |doi_image| https://doi.org/10.11578/rubin/dc.20250909.20
