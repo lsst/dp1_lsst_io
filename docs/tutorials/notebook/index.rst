@@ -340,6 +340,17 @@ Longer tutorials with a learning objective of executing an end-to-end scientific
     311/notebook-311-4.rst
 
 
+312. Low surface brightness
+---------------------------
+
+.. toctree::
+    :titlesonly:
+    :glob:
+
+    312/notebook-312-1.rst
+    312/notebook-312-2.rst
+    312/notebook-312-3.rst
+
 
 .. _notebook-es:
 
@@ -356,7 +367,6 @@ Traducciones al Español
     ES/notebook-es-102-2.rst
     ES/notebook-es-103-2.rst
     ES/notebook-es-301-0.rst
-
 
 
 
