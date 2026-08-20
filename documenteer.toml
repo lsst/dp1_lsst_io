@@ -31,6 +31,7 @@ ignore = [
     "https://apod.nasa.gov/apod/ap240313.html", #MLG: works fine but failing with linkchecker Tue Jun 9 2026
     "https://fits.gsfc.nasa.gov/fits_wcs.html", #MLG: works fine but failing with linkchecker Tue Jun 9 2026
     "https://data.linea.org.br/en/sci_products/pzserver.html#data-preview-1", #CLA: 404 failure Wed Jun 17 2026
+    "https://ui.adsabs.harvard.edu/.*", #405 Not Allowed from ADS for automated link checkers
 ]
 
 
