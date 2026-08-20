@@ -4,6 +4,13 @@
 Log of major tutorial updates
 #############################
 
+2026-08-20
+==========
+
+Released a new notebook tutorial 312.1 on choosing optimal stretch function for displaying low-surface-brightness emission.
+Released a new notebook tutorial 312.2 on applying binning and smoothing techiques to increase S/N of low-surface-brightness emission.
+Released a new notebook tutorial 312.3 demonstrating how to interactively mask tidal features and measure their SB distributions.
+
 2026-06-12
 ==========
 
