@@ -4,7 +4,7 @@
 Log of major tutorial updates
 #############################
 
-2026-08-20
+2026-07-06
 ==========
 
 Released a new notebook tutorial 312.1 on choosing optimal stretch function for displaying low-surface-brightness emission.
