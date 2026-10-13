@@ -157,7 +157,8 @@ This includes size measurements such as ``*_kronRad``, ``*_bdReB``, ``*_bdReD``.
 For DP1 the ``*_bdE1`` parameter contains incorrect values and ellipse estimators that use ``{e1, e2, r}`` should not be used.
 Further, ``*_bdE1`` and ``*_bdE2`` are unitless parameters.
 
-We expect to use angular units and consistent parameterization throughout in future data releases, with tooling provided to efficiently convert between the parameterization (which one is TBD) and those preferred by different subfields.
+DP2 provides ellipse parameters in angular units and with parameterizations appropriate for intended usage of each algorithm.
+Future data releases may further ds.
 
 PSF models leak memory
 ======================
