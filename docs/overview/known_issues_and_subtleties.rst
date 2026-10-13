@@ -157,8 +157,11 @@ This includes size measurements such as ``*_kronRad``, ``*_bdReB``, ``*_bdReD``.
 For DP1 the ``*_bdE1`` parameter contains incorrect values and ellipse estimators that use ``{e1, e2, r}`` should not be used.
 Further, ``*_bdE1`` and ``*_bdE2`` are unitless parameters.
 
+Due to a data entry error in the MultiProFit code that produced them, the ``sersic_reff_x``, ``sersic_reff_y`` size columns and corresponding error values are too small by a factor of 2ln(2), or about 1.3863.
+These values must be multiplied by this factor to yield the correct sizes in pixel units.
+
 DP2 provides ellipse parameters in angular units and with parameterizations appropriate for intended usage of each algorithm.
-Future data releases may further ds.
+Future data releases may further refine these outputs.
 
 PSF models leak memory
 ======================
