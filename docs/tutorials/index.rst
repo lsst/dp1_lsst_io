@@ -51,8 +51,10 @@ API Aspect
 Contributing
 ============
 
-Anyone from across the Rubin community is welcome to suggest a tutorial, or to volunteer to work with the Rubin Community Science team to contribute a tutorial, by posting a new topic in the Rubin Community Forum's `Support category <https://community.lsst.org/c/support/6>`_.
+All are welcome to suggest or request a tutorial, or to volunteer to work with the Rubin Community Science team to contribute a tutorial.
+Everyone is also welcome to generate and host their own sets of tutorials that run on Rubin data, e.g., in their own GitHub repositories.
 
+For details on contributing to the Rubin tutorial set, or on sharing user-generated tutorials, see the `For Scientists webpage for Tutorials <https://rubinobservatory.org/for-scientists/resources/tutorials>`_.
 
 
 .. _tutorials-cite:
