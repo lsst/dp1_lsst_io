@@ -54,7 +54,7 @@ Contributing
 All are welcome to suggest or request a tutorial, or to volunteer to work with the Rubin Community Science team to contribute a tutorial.
 Everyone is also welcome to generate and host their own sets of tutorials that run on Rubin data, e.g., in their own GitHub repositories.
 
-For details on contributing to the Rubin tutorial set, or on sharing user-generated tutorials, see the `For Scientists webpage for Tutorials <https://rubinobservatory.org/for-scientists/resources/tutorials>`_.
+For details on contributing to the Rubin tutorial set, or on sharing user-generated tutorials, see Rubin's `For Scientists webpage for Tutorials <https://rubinobservatory.org/for-scientists/resources/tutorials>`_.
 
 
 .. _tutorials-cite:
