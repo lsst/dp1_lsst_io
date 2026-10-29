@@ -34,6 +34,8 @@ ignore = [
     "https://ui.adsabs.harvard.edu/.*", #405 Not Allowed from ADS for automated link checkers
     "https://cdsweb.u-strasbg.fr/Dic/iau-spec.html", #CCW failing with linkchecker (perhaps PHP security fail?) Oct 29 2026
     "https://aladin.cds.unistra.fr/AladinDesktop/#Download", #CCW failing with linkchecker (perhaps PHP security fail?) Oct 29 2026
+    "https://aladin.cds.unistra.fr/", #CCW failing with linkchecker (perhaps PHP security fail?) Oct 29 2026
+    "http://cdsportal.u-strasbg.fr/?target=IC%202177", #CCW failing with linkchecker (perhaps PHP security fail?) Oct 29 2026
 ]
 
 
