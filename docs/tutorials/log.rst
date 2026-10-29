@@ -4,6 +4,11 @@
 Log of major tutorial updates
 #############################
 
+2026-10-29
+==========
+
+Updates to narrative and small fixes to notebook tutorial 103.4 on cutout exposures.
+
 2026-07-06
 ==========
 
